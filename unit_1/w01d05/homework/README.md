@@ -116,10 +116,10 @@ Please watch these videos:
 1. Watch [this video](https://www.youtube.com/watch?v=5axuSSBIMuQ&index=9&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about units of measure.
 1. Watch [this video](https://www.youtube.com/watch?v=ZfxNpQm6m2g&index=10&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) more about units of measure.
 
-## CSS/HTML Layout
+## CSS/HTML Layout - Required
 
 Complete [this CSS/HTML layout assignment](CSS_ECardly)
 
-## MOAR Layout
+## MOAR Layout - Required
 
 Complete [this other CSS/HTML layout assignment](oscar)

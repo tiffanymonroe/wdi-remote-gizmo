@@ -25,3 +25,9 @@ Layout [Oscar's website](https://www.hioscar.com/).
 - Don't worry about the fonts the site uses.  Just use `font-family: Arial` or `font-family: Times New Roman`
 - Don't worry about rounded corners of buttons.  If you can figure it out, great!
 - It's fine to guess at the colors
+
+**Commit 16** <br>
+<hr>
+&#x1F534; The commit message should read: <br>
+"Commit 16 - Oscar Site Layout"
+<hr>
