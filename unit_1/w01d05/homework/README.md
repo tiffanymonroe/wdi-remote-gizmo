@@ -119,3 +119,7 @@ Please watch these videos:
 ## CSS/HTML Layout
 
 Complete [this CSS/HTML layout assignment](CSS_ECardly)
+
+## MOAR Layout
+
+Complete [this other CSS/HTML layout assignment](oscar)
