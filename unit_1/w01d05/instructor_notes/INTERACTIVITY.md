@@ -63,13 +63,13 @@ alert('oh hai!');
 `prompt()` is like alert, but it opens up a window with a message AND a place to enter some text
 
 ```javascript
-var yourAnswer = prompt('Some question', 'A default value goes here');
+const yourAnswer = prompt('Some question', 'A default value goes here');
 ```
 
 You can keep getting input until a certain exists like so:
 
 ```javascript
-var action = null
+let action = null
 
 while(action !== "stop"){
     action = prompt("What do you want to do", "Your action");
@@ -96,10 +96,10 @@ Try not to have a function that "does" multiple things
 
 Good:
 ```javascript
-var func1 = function(){
+const func1 = function(){
     alert('hi');
 }
-var func2 = function(){
+const func2 = function(){
     alert('oh hai!!!!');
 }
 
@@ -109,13 +109,13 @@ func2();
 
 Meh:
 ```javascript
-var func1 = function(){
+const func1 = function(){
     alert('hi');
 }
 func1();
 //in the future might need to add func2() here before it's created
 
-var func2 = function(){
+const func2 = function(){
     alert('oh hai!!!!');
 }
 func2();
@@ -123,12 +123,12 @@ func2();
 
 Bad:
 ```javascript
-var func1 = function(){
+const func1 = function(){
     alert('hi');
 }
 func1();
 func2();
-var func2 = function(){
+const func2 = function(){
     alert('oh hai!!!!');
 }
 ```
@@ -138,13 +138,13 @@ var func2 = function(){
 You can call a function based on some input from the browser prompt
 
 ```javascript
-var greet = function(){
+const greet = function(){
     alert('Hi!');
 }
-var sayBye = function(){
+const sayBye = function(){
     alert('Bye!');
 }
-var answer = prompt('Are you arriving or leaving', 'Arriving or Leaving?');
+const answer = prompt('Are you arriving or leaving', 'Arriving or Leaving?');
 
 if(answer === "Arriving"){
     greet();
@@ -217,11 +217,11 @@ If executing a function multiple times, you don't need to define the function wi
 **GOOD**
 
 ```javascript
-var myFunc = function(){
-        console.log('hi');
+const myFunc = function(){
+    console.log('hi');
 }
 
-for(var i = 0; i < 10; i++){
+for(let i = 0; i < 10; i++){
     myFunc();
 }
 ```
@@ -229,9 +229,9 @@ for(var i = 0; i < 10; i++){
 **BAD**
 
 ```javascript
-for(var i = 0; i < 10; i++){
-    var myFunc = function(){
-            console.log('hi');
+for(let i = 0; i < 10; i++){
+    const myFunc = function(){
+        console.log('hi');
     }
 
     myFunc();
@@ -243,8 +243,8 @@ for(var i = 0; i < 10; i++){
 You can have loops within a function:
 
 ```javascript
-var manyGreetings = function(){
-    for(var i = 0; i < 10; i++){
+const manyGreetings = function(){
+    for(let i = 0; i < 10; i++){
         console.log('hi');
     }
 }
@@ -257,10 +257,10 @@ manyGreetings();
 You can have functions call other functions:
 
 ```javascript
-var func1 = function(){
+const func1 = function(){
     console.log('hello');
 }
-var func2 = function(){
+const func2 = function(){
     console.log('oh hai');
     func1();
 }
@@ -272,28 +272,28 @@ func2();
 Program execution happens in a branching structure.  List what the following logs.  See if you can diagram its execution:
 
 ```javascript
-var func1 = function(){
+const func1 = function(){
     console.log(1);
     func2(); //why can I call this now, even though the definition is below?
     func3();
     console.log('Finished!');
 }
-var func2 = function(){
+const func2 = function(){
     console.log(2);
     func4();
     func6();
 }
-var func3 = function(){
+const func3 = function(){
     console.log(3);
     func5();
 }
-var func4 = function(){
+const func4 = function(){
     console.log(4);
 }
-var func5 = function(){
+const func5 = function(){
     console.log(5);
 }
-var func6 = function(){
+const func6 = function(){
     console.log(6);
 }
 func1();
@@ -306,20 +306,20 @@ func1();
     - It should reset all values and begin process again
 
 ```javascript
-var apples;
-var money;
+let apples;
+let money;
 
-var start = function(){
+const start = function(){
     apples = 0;
     money = 20;
     askForAction();
 }
-var showStatus = function(){
+const showStatus = function(){
     alert("You have " + apples + " apples and $" + money);
 }
-var askForAction = function(){
+const askForAction = function(){
     showStatus();
-    var choice = prompt("What do you want to do?", "buy apple / eat apple / restart");
+    const choice = prompt("What do you want to do?", "buy apple / eat apple / restart");
     if(choice === 'buy apple'){
         buyApple();
     } else if (choice === 'eat apple'){
@@ -328,12 +328,12 @@ var askForAction = function(){
         start();
     }
 }
-var buyApple = function(){
+const buyApple = function(){
     apples++;
     money -= 1;
     askForAction();
 }
-var eatApple = function(){
+const eatApple = function(){
     apples--;
     askForAction();
 }
