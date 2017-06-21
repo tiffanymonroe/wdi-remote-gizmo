@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-GIZMO
 
 ---
 Title: Shortcuts & Setting You Up for Success <br>
@@ -114,4 +114,4 @@ When indenting your code, please use the tab button. Do not use your spacebar. L
 [Video](http://www.youtube.com/watch?feature=player_embedded&v=SsoOG6ZeyUI)
 
 <br>
-:computer: Additional [Atom commands](https://github.com/ga-students/wdi-remote-hopper/wiki/Atom-CheatSheet) can be found on our class wiki.
+:computer: Additional [Atom commands](https://github.com/ga-students/wdi-remote-gizmo/wiki/Atom-CheatSheet) can be found on our class wiki.

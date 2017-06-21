@@ -1,13 +1,13 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Landscaper Game<br>
 Type: Homework<br>
 Duration: "8:00"<br>
 Creator: Matt Huntington<br>
-    Course: WDIR-Hopper<br>
+    Course: WDIR-Gizmo<br>
 Competencies: Arrays, Loops, Conditionals <br>
 Prerequisites: JavaScript <br>
 
