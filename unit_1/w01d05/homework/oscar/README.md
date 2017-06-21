@@ -8,8 +8,8 @@ Type: Homework<br>
 Duration: "8:00"<br>
 Creator: Matt Huntington<br>
     Course: WDIR-Gizmo<br>
-Competencies: Arrays, Loops, Conditionals <br>
-Prerequisites: JavaScript <br>
+Competencies: CSS Layout <br>
+Prerequisites: HTML/CSS <br>
 
 ---
 
