@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-GIZMO
+# WDIR-Gizmo
 
 ---
 Title: Shortcuts & Setting You Up for Success <br>
@@ -33,9 +33,9 @@ Prerequisites: None<br>
 - You will find yourself having to re-run applications when testing your app or you will find yourself needing to retype certain lines over and over again. Be lazy! It will give you more energy for the important stuff.
 - Open your terminal and let's try out a few of these.
     <details><summary>Command Line Shortcuts</summary>
-    
+
     ![Command Line Shortcuts](http://i.imgur.com/Omz33nF.png)
-    
+
     </details>
 - Are you running the same command over and over again? Use the **up arrow** to show your previous commands. Hit **enter** to run them.
 
@@ -75,7 +75,7 @@ Or, you can drag a file and drop it where you want it (half vertical, half horiz
 
 
 ### Wrapping Text
-- You have a limited amount of visible space in your files, so wrapping your text will help you to see all the code in a line without needing to scroll horizontally. 
+- You have a limited amount of visible space in your files, so wrapping your text will help you to see all the code in a line without needing to scroll horizontally.
 1. Click on `Atom` and `Preferences`<br>
 
 ![Atom - Preferences](https://i.imgur.com/noPP18H.png)
