@@ -76,7 +76,7 @@ The commit message should read: <br>
 
 Watch [this video on HTML](https://www.youtube.com/watch?v=DxhXFpsN5I4&index=1&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J).
 
-## Part 3 - Resume Site
+## Part 3 - Fake Resume Site
 
 <details><summary>Setup your folder and files</summary>
 
