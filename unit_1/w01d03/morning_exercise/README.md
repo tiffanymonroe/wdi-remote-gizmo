@@ -22,15 +22,15 @@ Push your work and pull the most up-to-date information from our class repo.
 
 <hr>
 
-**What do you see?**
+### What do you see?
 
-1) You're good to go!
+#### You're good to go!
 
 ![up to date](https://i.imgur.com/3dVoZfD.png)
 
 <hr>
 
-2) You're probably in the wrong folder or your remotes are in the wrong place
+#### You're probably in the wrong folder or your remotes are in the wrong place
 
 ![wrong folder](https://i.imgur.com/rO1T95z.png)
 
@@ -39,12 +39,12 @@ Run `git remote -v` to confirm that you have your github repo connected to this 
 
 <hr>
 
-3) Untracked files
+#### Untracked files
 
 ![untracked files](https://i.imgur.com/D7q5kv1.png)
 
 
-#### If this is what yours looks like, run the following commands:
+##### If this is what yours looks like, run the following commands:
 >`git add .`
 *This tells **git** to track your work.*
 
