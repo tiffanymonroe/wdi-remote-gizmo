@@ -24,15 +24,14 @@ Push your work and pull the most up-to-date information from our class repo.
 
 ### What do you see?
 
-#### You're good to go!
-:+1:
+#### :+1: You're good to go!
+
 
 ![up to date](https://i.imgur.com/BGPy32T.png)
 
 <hr>
 
-#### You're probably in the wrong folder or your remotes are in the wrong place
-:space_invader:
+#### :space_invader: You're probably in the wrong folder or your remotes are in the wrong place
 
 ![wrong folder](https://i.imgur.com/rO1T95z.png)
 
@@ -41,15 +40,13 @@ Run `git remote -v` to confirm that you have your github repo connected to this 
 
 <hr>
 
-#### Untracked files
-:space_invader:
+#### :space_invader: Untracked files
 
 ![untracked files](https://i.imgur.com/0uKGo5d.png)
 
 OR 
 
-#### Uncommited files
-:space_invader:
+#### :space_invader: Uncommited files
 
 ![uncommited files](https://i.imgur.com/MRZhtI6.png)
 
@@ -67,8 +64,7 @@ OR
 <hr>
 
 
-#### Files are ahead on Github
-:space_invader:
+#### :space_invader: Files are ahead on Github
 
 ![ahead on github](https://i.imgur.com/ckNEnss.png)
 
@@ -82,8 +78,7 @@ You should now be able to push your local files to Github. Run `git status` to c
 
 <hr>
 
-### Once you see clean status message:
-:+1:
+### :+1: Once you see clean status message:
 
 If you see this message after typing `git status`:
 
