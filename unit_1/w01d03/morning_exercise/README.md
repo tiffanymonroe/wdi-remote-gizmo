@@ -13,7 +13,8 @@ Prerequisites: [Introduction to HTML](https://www.youtube.com/watch?v=DxhXFpsN5I
 
 ---
 
-## Part 1 - Git / Github Review :octocat:
+## Part 1
+#### Git / Github Review :octocat:
 
 Push your work and pull the most up-to-date information from our class repo.
 
@@ -99,12 +100,14 @@ You may see a response that looks something like this (but this won't be exact):
 
 <hr>
 
-## Part 2 - Any Questions About Submitting Homework?
+## Part 2
+#### Any Questions About Submitting Homework?
 
 If you had any questions about how to submit your homework, ask! We're here to help clarify.
 
 
-## Part 3 - Acitvity : UTF-8, HTML Boilerplate, Linking files in HTML via relative and absolute pathing (http/https only)
+## Part 3
+#### Acitvity: UTF-8, HTML Boilerplate, Linking files in HTML via relative and absolute pathing (http/https only)
 
 ### Morning Exercise
 
