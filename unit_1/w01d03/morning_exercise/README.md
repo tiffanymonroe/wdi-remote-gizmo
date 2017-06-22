@@ -15,6 +15,8 @@ Prerequisites: [Introduction to HTML](https://www.youtube.com/watch?v=DxhXFpsN5I
 
 ## Part 1 - Git / Github Review
 
+Push your work and pull the most up-to-date information from our class repo.
+
 1) Navigate to your `wdi-remote-gizmo` folder.
 2) Run the command `git status`
 
