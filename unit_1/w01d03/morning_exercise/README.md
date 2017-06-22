@@ -89,17 +89,22 @@ If you see this message after typing `git status`:
 >1) Pull down the newest class information for today:
 >`git pull upstream master`
 
+### :+1: After You've Pulled Successfully
+
+You may see a response that looks something like this (but this won't be exact):
+
+![successful pull](https://i.imgur.com/jBeokRw.png)
+
+1) Move on to **Part 3** of document.
 
 <hr>
 
-- Go over anything we've covered in the last two days
-  - git/github homework submission
-  - terminal
-  - homework
-  - anything else?
+## Part 2 - Any Questions About Submitting Homework?
+
+If you had any questions about how to submit your homework, ask! We're here to help clarify.
 
 
-## Part 1 - Acitvity : UTF-8, HTML Boilerplate, Linking files in HTML via relative and absolute pathing (http/https only)
+## Part 3 - Acitvity : UTF-8, HTML Boilerplate, Linking files in HTML via relative and absolute pathing (http/https only)
 
 ### Morning Exercise
 
