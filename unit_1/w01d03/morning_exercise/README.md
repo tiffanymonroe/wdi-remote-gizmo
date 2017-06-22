@@ -151,83 +151,66 @@ Other things to think about:
 
 
 ### Make a Boilerplate
-Create an HTML file with the above boilerplate elements
- - Make sure (in terminal) you are in today's folder on your local copy of our repo (Today is W01D03) and then go into the `morning-exercise folder`
- - `touch` `boilerplate.html`
- - `atom .`
- - Write your HMTL
- - Make sure the tags are in the correct order
- - Makes sure there is the appropriate amount of nesting for each tag
- - Make sure to include closing tags if a tag is not self-closing (What is a self-closing tag? Can you think of an example?)
 
- Important: be sure to indent appropriately and check for typos, especially for when you want to go back and reuse this code or check it as a reference
-
-### Create A project folder with boilerplate HTML, CSS and JS files
-
-There are usually a few other common elements that are included in most HTML sites, including folders (for organization), CSS files and JavaScript Files. Let's add them, so you can have a boilerplate ready to go whenever you start a new homework or project.
+There are usually a few common elements that are included in most HTML sites, including folders (for organization), CSS files and JavaScript files. Let's add them, so you can have a boilerplate ready to go whenever you start a new homework or project.
 
 <details><summary>File Structure</summary>
 ![file structure](boilerplate-file-structure.png)
 </details>
 
 #### Create files and folders
-Inside today's Morning Exercise folder, make a new folder (`mkdir`) called `project-boilerplate`
+Inside today's Morning Exercise folder:
+1) Make a new folder (`mkdir`) called `project-boilerplate`
+2) Navigate into the folder `cd project-boilerplate`
 
-- `cd` into `project-boilerplate`
+#### Make an HTML file
 
-#### Make HTML file
+1) touch `index.html`
 
-- touch `index.html`
-
-#### Make JavaScript file
-- touch `app.js`
-- open `app.js`
-- insert an `alert();` inside the `app.js `that gives you a message to know that when you load your `html` into the browser, the `app.js` file is linked. How/where will this alert show up?
- - Note: the text inside the alert must be a string (make sure the text is wrapped in single or double quotes)
-- insert a `console.log();`, with another message of your choice. How/where will this console.log show up?
-   - Note: the text inside the console.log must be a string(make sure the text is wrapped in single or double quotes)
+#### Make a JavaScript file
+1) touch `app.js`
+2) open `app.js` to edit the file in Atom `atom app.js`
+3) make a `console.log` in the JS file so that you can verify that it is hooked up. So, on line 1 of your `app.js` file, write the code `console.log("My app.js file is attached")`.
 
 Note: if you have more than one JavaScript file, it would be typical to put those files all in a folder called `js` (or a similar name  - see example with CSS)
 
-<hr>
 #### Make CSS folder and file
-- Now,  `mkdir css`
-- Inside that folder, touch `styles.css`
-- open `styles.css`
-- let's give the `body` a `background-color` [of any color of your choosing](http://htmlcolorcodes.com/)
+- Createa  new folder for your css `mkdir css`
+- Navigate inside the `css` folder and create a file called `style.css`
+- Use Atom to edit your `style.css` file.
+- Select the `body` and give it a `background-color` [of any color of your choosing](http://htmlcolorcodes.com/)
 - Take a moment to think about how you can tell if you have successfully linked your stylesheet.
 
 <hr>
-#### Start coding your HTML by adding your boilerplate and links to your CSS and JavaScript
-- Open `index.html`
-- Copy your boilerplate code from earlier( from `boilerplate.html`) into your `index.html` file
-
-
-- Add a link to your `app.js` (where does it go? In the head? in the body?)
-  - Check that it works by looking for the `alert` and `console.log` that you added
-    - Feel free to comment out or remove the alert once you are certain your files are linked
-- Add a link to your css (where does it go? In the head? in the body?)
-- Test it to be sure it works (how can you tell?)
-<hr>
+#### Connect Your Files
+1) Open your `index.html` in Atom (`atom index.html`)
+2) Write your HMTL code (see above and refrence the videos). HINT: Atom has a built-in way to create an HTML boilerplate! On line 1 of your `index.html` file, type `HTML` and hit `tab`. Note: make sure that you do not put a space after `HTML`.
+3) If you automatically made the tags, they should be tabbed and nested appropriately. If you wrote it from scratch, make sure to nest the tags to show the child / parent relationship.
+4) Add a link to your `app.js` (where does it go? In the head? in the body?)
+  - Check that it works by looking for the `console.log` that you added in the `Console` tab of your Inspector.
+5) Add a link to your css (where does it go? In the head? in the body?)
+  - Test it to be sure it works (how can you tell?)
 
 #### Add a few more common elements
 
 ##### Image tag
-- Find an image on the internet that brings you joy
-- Copy its URL
-- Add an image tag  `<img/>` inside the body that will display your image
- - You will need to ive the `<img/>` tag a src attribute and set it's value to the image's url.
- - It is good practice to also add an alt attribute to an `</img>` tag, why? What does this attribute do?
+1) Find an image on the internet that brings you joy
+2) Copy its URL
+3) Add an image tag  `<img/>` inside the body that will display your image
+4) You will need to give the `<img/>` tag an `src` attribute and set its value to the image's url.
+5) It is good practice to also add an alt attribute to an `</img>` tag. Why? What does this attribute do?
 
-##### H1 tag
-- Add an `<h1>` tag to describe the image you have added
+##### Heading Level 1 tag
+1) Add an `<h1>` tag to describe the image you have added
 
 ###### Anchor tag `<a>`
-- Add an anchor tag `<a>` that will link you back to your `boilerplate.html`
+1) Add an anchor tag `<a>` that links to a `#`. This will not take you anywhere, but gives the illusion of a link.
 
-###### Final question
-- Use a paragraph tag inside your html and write a short answer to the following: Why were `<b>` (bold) and  `<i>` (italics) tags replaced by `<strong>` (strong) and `<em>` (emphasis) tags as the new standard in HTML 5?
+###### Paragraph & Questions
+1) Use a paragraph tag inside your html and write a short answer to the following: Why were `<b>` (bold) and  `<i>` (italics) tags replaced by `<strong>` (strong) and `<em>` (emphasis) tags as the new standard in HTML 5?
 
 
+## Part 4
 ###### Get started on the video on HTML for tonight
+
 - [HTML 2](https://www.youtube.com/watch?v=KhbnrDhWDdE&index=2&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
