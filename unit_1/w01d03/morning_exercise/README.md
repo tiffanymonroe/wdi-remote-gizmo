@@ -107,42 +107,51 @@ If you had any questions about how to submit your homework, ask! We're here to h
 
 
 ## Part 3
-#### Acitvity: UTF-8, HTML Boilerplate, Linking files in HTML via relative and absolute pathing (http/https only)
+#### Acitvity: More about HTML Documents
 
-### Morning Exercise
+### Objectives:
+- UTF-8
+- HTML Boilerplate
+- Linking files in HTML via relative and absolute pathing (http/https only)
 
-- Prerequisites
+### Watch These Videos
+
  - [HTML Video 1]( https://www.youtube.com/watch?v=DxhXFpsN5I4&index=1&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)  ~ 14 minutes
+ - [UTF-8 : The Unicode Miracle](https://www.youtube.com/watch?v=MijmeoH9LT4) ~ 9.5 minutes
+ - [Why HTML seems to tolerate mistakes](https://www.youtube.com/watch?v=-csXdj4WVwA) ~ 10 minutes
 
-
-- Watch:
-  - [UTF-8 : The Unicode Miracle](https://www.youtube.com/watch?v=MijmeoH9LT4) ~ 9.5 minutes
-  - [Why HTML seems to tolerate mistakes](https://www.youtube.com/watch?v=-csXdj4WVwA) ~ 10 minutes
-
-## Create boilerplate html
-Boilerplate is defined as a standard template of any kind that can (and is often reused without much modification)
+### About HTML Boilerplates
+Boilerplate is defined as a standard template of any kind that can be used without much modification.
 
 **Lesson Objective**
 
 Rather than trying to memorize the boilerplate, build one on your own and take the time to understand each component's function.
 
 - HTML documents have some standard elements that are always included
-  - `<!DOCTYPE html>` - put at the top of the document, to declare that this is an HTML5 document
-  - Additional boilerplate tags include
-  - `<html>`
-  - `<head>`
-  - `<body>`
-  - `<meta charset="utf-8">`
-  - `<title>`
+  `<!DOCTYPE html>` 
+  *Put at the top of the document, to declare that this is an HTML5 document*
+  
+  **Additional boilerplate tags include**
+  
+  - `<html>`<br>
+  - `<head>`<br>
+  - `<body>`<br>
+  - `<meta charset="utf-8">`<br>
+  - `<title>`<br>
 
-Important: What is the function of the `<head>` and `<body>` tags? What kind of tags go inside each one? Where does the `<title>` tag go (`<head>` or `<body>`)? Where on the web page does the text inside the `<title>` tag appear?
+#### Ask Yourself:
+1) What is the function of the `<head>` and `<body>` tags? 
+2) What kind of tags go inside each one? 
+3) Where does the `<title>` tag go (`<head>` or `<body>`)? 
+4) Where on the web page does the text inside the `<title>` tag appear?
 
 Other things to think about:
-- What does `<meta charset="utf-8">` do? (hint see above video)
-- According to the above video about HTML, what could you guess would happen if you forgot the `<html>` tags?
+5) What does `<meta charset="utf-8">` do? (hint see above video)
+6) According to the above video about HTML, what could you guess would happen if you forgot the `<html>` tags?
 
 
-### Create an HTML file with the above boilerplate elements
+### Make a Boilerplate
+Create an HTML file with the above boilerplate elements
  - Make sure (in terminal) you are in today's folder on your local copy of our repo (Today is W01D03) and then go into the `morning-exercise folder`
  - `touch` `boilerplate.html`
  - `atom .`
