@@ -26,7 +26,7 @@ Push your work and pull the most up-to-date information from our class repo.
 
 #### You're good to go!
 
-![up to date](https://i.imgur.com/3dVoZfD.png)
+![up to date](https://i.imgur.com/BGPy32T.png)
 
 <hr>
 
@@ -41,7 +41,13 @@ Run `git remote -v` to confirm that you have your github repo connected to this 
 
 #### Untracked files
 
-![untracked files](https://i.imgur.com/D7q5kv1.png)
+![untracked files](https://i.imgur.com/0uKGo5d.png)
+
+OR 
+
+#### Uncommited files
+
+![uncommited files](https://i.imgur.com/MRZhtI6.png)
 
 
 ##### If this is what yours looks like, run the following commands:
@@ -56,11 +62,26 @@ Run `git remote -v` to confirm that you have your github repo connected to this 
 
 <hr>
 
+
+#### Files are ahead on Github
+
+![ahead on github](https://i.imgur.com/ckNEnss.png)
+
+##### Run the following commands:
+
+`git pull origin master`
+
+**NOTE** You may need to type `:wq` on the next screen to proceed.
+
+You should now be able to push your local files to Github. Run `git status` to confirm that your local files are up-to-date.
+
+<hr>
+
 ### Once you see clean status message:
 
 If you see this message after typing `git status`:
 
-![up to date](https://i.imgur.com/3dVoZfD.png)
+![up to date](https://i.imgur.com/BGPy32T.png)
 
 
 1) Pull down the newest class information for today:
