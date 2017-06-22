@@ -54,11 +54,9 @@ OR
 ##### If this is what yours looks like, run the following commands:
 >`git add .`
 *This tells **git** to track your work.*
-
->`git commit -m"message about your work"
+`git commit -m"message about your work"
 *This message will be associated with the works that have done since your last commit.*
-
->`git push origin master`
+`git push origin master`
 *This command tells git to push your work to the repository that you have listed as `origin` (this should be your forked version of the class repo on Github) and the `master` portion is referring to the master branch (the default for now)*
 
 <hr>
@@ -86,7 +84,7 @@ If you see this message after typing `git status`:
 
 1) Pull down the newest class information for today:
 
-`git pull upstream master`
+>`git pull upstream master`
 
 
 <hr>
