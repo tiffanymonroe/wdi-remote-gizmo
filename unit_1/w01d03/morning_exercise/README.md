@@ -13,7 +13,7 @@ Prerequisites: [Introduction to HTML](https://www.youtube.com/watch?v=DxhXFpsN5I
 
 ---
 
-## Part 1 - Git / Github Review
+## Part 1 - Git / Github Review :octocat:
 
 Push your work and pull the most up-to-date information from our class repo.
 
@@ -25,12 +25,14 @@ Push your work and pull the most up-to-date information from our class repo.
 ### What do you see?
 
 #### You're good to go!
+:+1:
 
 ![up to date](https://i.imgur.com/BGPy32T.png)
 
 <hr>
 
 #### You're probably in the wrong folder or your remotes are in the wrong place
+:space_invader:
 
 ![wrong folder](https://i.imgur.com/rO1T95z.png)
 
@@ -40,12 +42,14 @@ Run `git remote -v` to confirm that you have your github repo connected to this 
 <hr>
 
 #### Untracked files
+:space_invader:
 
 ![untracked files](https://i.imgur.com/0uKGo5d.png)
 
 OR 
 
 #### Uncommited files
+:space_invader:
 
 ![uncommited files](https://i.imgur.com/MRZhtI6.png)
 
@@ -64,6 +68,7 @@ OR
 
 
 #### Files are ahead on Github
+:space_invader:
 
 ![ahead on github](https://i.imgur.com/ckNEnss.png)
 
@@ -78,11 +83,11 @@ You should now be able to push your local files to Github. Run `git status` to c
 <hr>
 
 ### Once you see clean status message:
+:+1:
 
 If you see this message after typing `git status`:
 
 ![up to date](https://i.imgur.com/BGPy32T.png)
-
 
 1) Pull down the newest class information for today:
 
