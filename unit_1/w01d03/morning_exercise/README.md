@@ -37,6 +37,7 @@ Push your work and pull the most up-to-date information from our class repo.
 
 >##### WHAT TO DO:
 >Make sure that you are inside the class folder when you run your `git` commands. 
+>
 >Run `git remote -v` to confirm that you have your github repo connected to this folder.
 
 <hr>
