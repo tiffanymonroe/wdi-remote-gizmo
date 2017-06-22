@@ -3,15 +3,6 @@
 
 *Tags, Content, Attributes, & Semantic HTML*
 
-**NOTE** We will not be discussing all of the notes in this section, but they are here for your reference.
-
-## Lesson Objectives
-
-1. Describe what HTML is
-1. Describe what a tag is
-1. Describe what the content of a tag is
-1. List some common tags
-
 ## What is HTML?
 
 HTML stands for Hyper Text Markup Language.  It's a way to give structural meaning to text.  It allows computers and programmers to easily determine what the purpose of a chunk of text does.
