@@ -35,8 +35,9 @@ Push your work and pull the most up-to-date information from our class repo.
 
 ![wrong folder](https://i.imgur.com/rO1T95z.png)
 
+>##### WHAT TO DO:
 >Make sure that you are inside the class folder when you run your `git` commands. 
-Run `git remote -v` to confirm that you have your github repo connected to this folder.
+>Run `git remote -v` to confirm that you have your github repo connected to this folder.
 
 <hr>
 
@@ -51,13 +52,15 @@ OR
 ![uncommited files](https://i.imgur.com/MRZhtI6.png)
 
 
-##### If this is what yours looks like, run the following commands:
+>##### WHAT TO DO:
 >`git add .`
-*This tells **git** to track your work.*
-`git commit -m"message about your work"
-*This message will be associated with the works that have done since your last commit.*
-`git push origin master`
-*This command tells git to push your work to the repository that you have listed as `origin` (this should be your forked version of the class repo on Github) and the `master` portion is referring to the master branch (the default for now)*
+> - *This tells **git** to track your work.*
+>
+>`git commit -m"message about your work"
+>- *This message will be associated with the works that have done since your last commit.*
+>
+>`git push origin master`
+>- *This command tells git to push your work to the repository that you have listed as `origin` (this should be your forked version of the class repo on Github) and the `master` portion is referring to the master branch (the default for now)*
 
 <hr>
 
@@ -66,13 +69,12 @@ OR
 
 ![ahead on github](https://i.imgur.com/ckNEnss.png)
 
-##### Run the following commands:
-
-`git pull origin master`
-
-**NOTE** You may need to type `:wq` on the next screen to proceed.
-
-You should now be able to push your local files to Github. Run `git status` to confirm that your local files are up-to-date.
+>##### WHAT TO DO:
+>`git pull origin master`
+>
+>**NOTE** You may need to type `:wq` on the next screen to proceed.
+>
+>You should now be able to push your local files to Github. Run `git status` to confirm that your local files are up-to-date.
 
 <hr>
 
@@ -82,8 +84,8 @@ If you see this message after typing `git status`:
 
 ![up to date](https://i.imgur.com/BGPy32T.png)
 
-1) Pull down the newest class information for today:
-
+>##### WHAT TO DO:
+>1) Pull down the newest class information for today:
 >`git pull upstream master`
 
 
