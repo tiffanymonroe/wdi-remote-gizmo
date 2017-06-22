@@ -20,11 +20,15 @@ Push your work and pull the most up-to-date information from our class repo.
 1) Navigate to your `wdi-remote-gizmo` folder.
 2) Run the command `git status`
 
+<hr>
+
 **What do you see?**
 
 1) You're good to go!
 
 ![up to date](https://i.imgur.com/3dVoZfD.png)
+
+<hr>
 
 2) You're probably in the wrong folder or your remotes are in the wrong place
 
@@ -33,11 +37,14 @@ Push your work and pull the most up-to-date information from our class repo.
 >Make sure that you are inside the class folder when you run your `git` commands. 
 Run `git remote -v` to confirm that you have your github repo connected to this folder.
 
+<hr>
+
 3) Untracked files
 
 ![untracked files](https://i.imgur.com/D7q5kv1.png)
 
-If this is what yours looks like, run the following commands:
+
+#### If this is what yours looks like, run the following commands:
 >`git add .`
 *This tells **git** to track your work.*
 
@@ -46,6 +53,8 @@ If this is what yours looks like, run the following commands:
 
 >`git push origin master`
 *This command tells git to push your work to the repository that you have listed as `origin` (this should be your forked version of the class repo on Github) and the `master` portion is referring to the master branch (the default for now)*
+
+<hr>
 
 ### Once you see clean status message:
 
@@ -59,7 +68,7 @@ If you see this message after typing `git status`:
 `git pull upstream master`
 
 
-
+<hr>
 
 - Go over anything we've covered in the last two days
   - git/github homework submission
