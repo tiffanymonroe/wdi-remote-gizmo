@@ -57,7 +57,7 @@ OR
 >`git add .`
 > - *This tells **git** to track your work.*
 >
->`git commit -m"message about your work"
+>`git commit -m"message about your work"`
 >- *This message will be associated with the works that have done since your last commit.*
 >
 >`git push origin master`
