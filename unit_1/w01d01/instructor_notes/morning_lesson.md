@@ -15,28 +15,25 @@ Topics: Intro, Terminal, "Hello World"<br>
 
 Hello, you are reading the intro.
 
-Topics:
+Day to day:
 
-- lesson headers
-- markdown
-- sharing screen
-- screen real-estate: markdown, zoom, text editor, terminal, slack
-	- command-tab to cycle
-- muting
-- asking questions
-- visibility of instructor code
-- thumbsups
-
-<br>
-<hr>
-
-## Lesson Objectives
-
-_After this lesson, students will be able to:_
-
-* Use Terminal to navigate files and folders
-
-* Print a "Hello World" to the console
+- Lesson headers
+	- Headers will be posted for all lessons and labs with links to markdowns and the Zoom channel. 
+- Markdown
+	- Markdown contains reference material related to the lesson 
+- Sharing screen
+	- The instructor will screenshare for demonstration purposes. Double-click out of fullscreen. 
+- Screen real-estate: markdown, zoom, text editor, terminal, slack
+	- Command-tab to cycle applications
+- Muting
+	- Be muted unless speaking 
+- Asking questions
+	- Ask away! Either in Slack or out loud 
+- Visibility of instructor code 
+	- Speak up if the instructor's code is not visible (eg. too small).
+- Thumbsups
+	- We use the thumbsup emoji to gauge completeness of exercises. Click on the thumb when you are done with an exercise.
+	
 
 <br>
 <hr>
@@ -53,9 +50,27 @@ _After this lesson, students will be able to:_
 <br>
 <hr>
 
-12:17
+## Lesson Objectives
+
+_After this lesson, students will be able to:_
+
+* Use Terminal to navigate files and folders
+* Create files and folders on the command line
+* Navigate using relative pathing on the command line 
+* Print a "Hello World" to the console
+
+<br>
+<hr>
 
 ## Terminal
+
+&#x1F535; **Open Finder**
+
+In **Finder**, we can navigate our computer's folders and files: folders contain files and more folders:
+
+![](https://i.imgur.com/CR7PmAO.png)
+
+<br>
 
 &#x1F535; **Open Terminal**
 
@@ -86,7 +101,7 @@ Terminal provides a Command Line Interface (CLI) to the operating system. With i
 
 When terminal launches, it will start in your computer's home directory (whatever you named your computer). Your home directory is denoted by the tilde `~`.
 
-**Directories** are the same as **Folders**.
+In Terminal-land, **Directories** are the same as **Folders** (we just call them **Directories**).
 
 ![](https://i.imgur.com/tTyOkwV.png)
 
@@ -111,10 +126,6 @@ The Command Line understands commands written in the `bash scripting language`. 
 Directories (folders) can have directories within them, and there can be directories inside _those_ directories, ad infinitum. This creates a tree structure where directories can have many children with many different branches.
 
 ![](http://i.imgur.com/M6OgKZJ.png)
-
-This is the same structure you would see in **Finder**. Directories contain other directories and files:
-
-![](https://i.imgur.com/CR7PmAO.png)
 
 <br>
 <hr>
@@ -201,7 +212,7 @@ If you make a mistake, don't worry, just keep adding the right stuff to the righ
 <hr>
 12:50
 
-## RELATIVE PATHING
+## Navigation: RELATIVE PATHING
 
 Chain more directories to the current path with the `/` separator
 
@@ -291,7 +302,7 @@ We are going to:
 
 * From inside the `w1d1_student_examples` directory, open Atom from the command line with `atom .` (atom space dot)
 
-**NOTE** This might not work on some systems. If it is squirrely on your system, don't worry, we will get it sorted out in time. For now, Just open the directory from `File -> Open`, and open the `w1d1_student_examples` directory.
+**NOTE** This might not work on some systems. If not we will get it sorted out in time. For now, Just open the directory from `File -> Open`, and open the `w1d1_student_examples` directory.
 
 * When Atom opens, you should see the `w1d1_student_examples` directory and all the files inside the directory (in this case, just the `first_code.js` file.
 
