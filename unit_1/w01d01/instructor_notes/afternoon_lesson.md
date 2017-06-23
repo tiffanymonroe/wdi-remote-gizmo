@@ -538,12 +538,14 @@ for (let i=0; i <= 1000; i++) {
 
 4:05
 
-![](https://i.imgur.com/IKI9pN2.png)
+There are three parts to the 'control panel' of the loop, delimited by the semicolon:
 
-there are three parts to the 'control panel' of the loop.
+```javascript
+for (initial condition; while condition; mutation) {}
+``` 
 
 1. some initial code supplied to the loop -- usually a numerical starting value of the loop
-2. the condition under which the loop runs -- it will run while the expression is false
+2. the condition under which the loop runs -- it will run while the expression is true
 3. a repeating expression that runs at the end of each loop -- usually an instruction to increase the numerical starting value
 
 <br>
