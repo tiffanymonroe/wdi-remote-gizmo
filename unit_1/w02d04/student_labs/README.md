@@ -5,7 +5,7 @@
 Given, the following object, log the third element from the array
 
 ```javascript
-var fun = {
+const fun = {
     asdf: ["afd", "matt", 'sweet']
 }
 ```
@@ -13,7 +13,7 @@ var fun = {
 Given, the following object, log the elbow property
 
 ```javascript
-var body = {
+const body = {
     arm: {
         elbow: 'pointy'
     }
@@ -23,8 +23,8 @@ var body = {
 Given, the following object, call the jump method
 
 ```javascript
-var person = {
-    jump: function(){
+const person = {
+    jump(){
         console.log('fly!');
     }
 };
@@ -45,12 +45,12 @@ console.log(myArrays[2][4]);
 Call the function in the given code:
 
 ```javascript
-var awesome = [
+const awesome = [
     {
         asdf:'true'
     },
     3456.245,
-    function(){
+    ()=>{
         console.log('fun');
     },
     "buddy"
@@ -60,7 +60,7 @@ var awesome = [
 Loops over the following array, and print its values:
 
 ```javascript
-var refrigerator = {
+const refrigerator = {
     fruits: ['apple', 'pear', banana]
 }
 ```
@@ -68,7 +68,7 @@ var refrigerator = {
 Use two loops to loop over each array in the given "container" array
 
 ```javascript
-var container = [
+const container = [
     [1,5,7],
     ['bear', 'dog', 'cat'],
     [true, false, true]
@@ -96,9 +96,9 @@ console.log(createRobot().stats.weight);
 Call the drive method
 
 ```javascript
-var generateCar = function(){
+const generateCar = ()=>{
     return {
-        drive: function(){
+        drive(){
             console.log("Vroom");
         }
     }
@@ -114,8 +114,8 @@ createFunction()();
 Log the message attribute
 
 ```javascript
-var account = {
-    tweet: function(){
+const account = {
+    tweet(){
         return {
             message: "fun"
         }
@@ -126,8 +126,8 @@ var account = {
 Log the second element in the array
 
 ```javascript
-var me = {
-    foo: function(){
+const me = {
+    foo(){
         return {
             array: [2.5, 7, true]
         }
@@ -150,8 +150,8 @@ factory.createCar().startEngine();
 Run the inner function:
 
 ```javascript
-var matt = {
-    blink: function(){
+const matt = {
+    blink(){
         return foo(){
             console.log('hi')
         }
@@ -162,10 +162,10 @@ var matt = {
 Access the `foo` property:
 
 ```javascript
-var asdfasdf = [
+const asdfasdf = [
     true,
     false,
-    function(){
+    ()=>{
         return {
             foo: 'some value'
         }
@@ -189,13 +189,13 @@ console.log(foods[1]().anObject.color);
 Call the funStuff() method:
 
 ```javascript
-var list = [
+const list = [
     'dogs',
     false,
     3.5,
-    function(){
+    ()=>{
         return {
-            funStuff: function(){
+            funStuff(){
                 console.log('yaaassss');
             }
         }
@@ -206,13 +206,13 @@ var list = [
 Call the most inner function:
 
 ```javascript
-var foo = [
+const foo = [
     'asdfasdf',
     'matt',
     false,
     6,
-    function(){
-        return function(){
+    ()=>{
+        return ()=>{
             console.log('yes!');
         }
     },
