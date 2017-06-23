@@ -541,7 +541,7 @@ for (let i=0; i <= 1000; i++) {
 There are three parts to the 'control panel' of the loop, delimited by the semicolon:
 
 ```javascript
-for (initial condition; while condition; mutation) {}
+for (initial condition; while condition; repeating expression) {}
 ``` 
 
 1. some initial code supplied to the loop -- usually a numerical starting value of the loop
