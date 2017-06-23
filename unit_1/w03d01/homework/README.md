@@ -16,7 +16,7 @@ Prerequisites: JavaScript <br>
 
 ## Setup
 
-1. Make a file inside your `homework` folder for w02d03 called `answers.js`.
+1. Make a file inside your `homework` folder called `answers.js`.
 2. Write all of your code in `answers.js`.
 
 ## Constructor Functions
@@ -139,7 +139,7 @@ Create the following objects
     - https://www.youtube.com/watch?v=BsuCBmzLf_U&index=21&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J
     - https://www.youtube.com/watch?v=iQIj7Lu64M4&index=22&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J
     - https://www.youtube.com/watch?v=GYygtVolViM&index=23&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J
-    
+
 1. Take a look at [this image](https://blog.red-website-design.co.uk/wp-content/uploads/2016/12/7-Web-Design-UX-Trends-for-2017-Is-Your-Site-Up-to-Date-1.jpg) block out the different sections of it (which column goes where, etc)
     - To do this, create an `index.html` and `index.css` file.  Write your code in these files
     - The colors do not have to be exact (or even close)
