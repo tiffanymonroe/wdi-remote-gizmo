@@ -80,7 +80,7 @@ Correctly indent the following code:
 
 ```javascript
             if(true){
-    var a = 2 + 2;
+    const a = 2 + 2;
 console.log(a);
         }
 
@@ -102,7 +102,7 @@ if(false){
 Fix this variable to have a better name:
 
 ```javascript
-var c = [2, 4, 6, 8, 10];
+const c = [2, 4, 6, 8, 10];
 ```
 
 **Commit 5** <br>
@@ -117,12 +117,12 @@ Clean up this code, so that it works and has function definitions in the correct
 
 ```javascript
 bar();
-var bar = function(){
+const bar = ()=>{
     console.log('bar here');
 }
 foo();
 
-var foo = function(){
+const foo = ()=>{
     console.log('foo here');
 }
 ```
@@ -138,8 +138,8 @@ var foo = function(){
 Write your own comments for each line of code:
 
 ```javascript
-var addTwoNums = function(firstNum, secondNum){
-    var finalValue = firstNum + secondNum;
+const addTwoNums = (firstNum, secondNum)=>{
+    const finalValue = firstNum + secondNum;
     return finalValue;
 }
 ```
@@ -161,7 +161,7 @@ What is meant by the error this produces?
 ```javascript
 foo();
 
-var foo function(){
+const foo ()=>{
     console.log('hi');
 }
 ```
@@ -179,7 +179,7 @@ var foo function(){
     - Browser: load it into an html file and open the html file in the browser with the Chrome dev tools enabled (Inspect)
 
     ```javascript
-    var a = 2 + 2;
+    const a = 2 + 2;
     debugger
     console.log(a);
     debugger
@@ -201,7 +201,7 @@ var foo function(){
 Fix the following code so the log executes (don't change the `if` statement):
 
 ```javascript
-var b = '5'
+const b = '5';
 
 if(b === 5){ //will be false
     console.log('this line should execute');
@@ -211,7 +211,7 @@ if(b === 5){ //will be false
 Fix the following code so the value 10 is logged (change only the line that has the console.log on it):
 
 ```javascript
-var a = '5';
+const a = '5';
 console.log(5 + a);
 ```
 
@@ -232,8 +232,8 @@ In this homework we will be using basic HTML and CSS selectors to style a list o
 
 1. Make a folder inside your `homework` folder for w02d03 called `style_zoo`
 2. Make a file inside your `style_zoo` folder for called `index.html`.
-3. Write all of your HTML in `index.html`. 
-4. Create another file inside the `style_zoo` folder called `style.css`. 
+3. Write all of your HTML in `index.html`.
+4. Create another file inside the `style_zoo` folder called `style.css`.
 5. Connect the CSS file to your HTML file.
 6. Write all of your styling code inside this css file.
 
@@ -303,16 +303,16 @@ The commit message should read: <br>
 
 - Add a **background color** to the following animals:
 
-1. mouse: lightgray 
+1. mouse: lightgray
 1. canary: orangeRed  
-1. penguin: black 
+1. penguin: black
 1. salmon: salmon
-1. cat: sienna 
-1. goldfish: gold 
-1. dog: tan 
-1. sheep: steelBlue 
-1. parakeet: lime 
-1. tuna: purple 
+1. cat: sienna
+1. goldfish: gold
+1. dog: tan
+1. sheep: steelBlue
+1. parakeet: lime
+1. tuna: purple
 
 #### What yours should look like
 ![Answer2](http://i.imgur.com/fMfxMbu.png)
@@ -335,7 +335,7 @@ In addition, add a border (5px solid) with the specified color to your classes:
 
 #### What yours should look like</summary>
 ![Answer3](http://i.imgur.com/jQoE9dw.png)
-  
+
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
@@ -348,11 +348,11 @@ The commit message should read: <br>
 1. Make the mammals bold
 1. Make the birds italic
 1. Make the fish underlined
-1. Strikethrough your least favorite animal on the list. 
+1. Strikethrough your least favorite animal on the list.
 
 #### What yours should look like</summary>
 ![Answer4](http://i.imgur.com/13TCWa5.png)
-    
+
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
