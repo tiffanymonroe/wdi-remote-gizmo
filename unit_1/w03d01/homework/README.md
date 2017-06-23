@@ -1,13 +1,13 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Classes<br>
 Type: Homework<br>
 Duration: "4:00"<br>
 Creator: Matt Huntington<br>
-    Course: WDIR-Hopper<br>
+    Course: WDIR-Gizmo<br>
 Competencies: Classes<br>
 Prerequisites: JavaScript <br>
 
