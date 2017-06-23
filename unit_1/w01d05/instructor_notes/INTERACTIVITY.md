@@ -96,10 +96,10 @@ Try not to have a function that "does" multiple things
 
 Good:
 ```javascript
-const func1 = function(){
+const func1 = ()=>{
     alert('hi');
 }
-const func2 = function(){
+const func2 = ()=>{
     alert('oh hai!!!!');
 }
 
@@ -109,13 +109,13 @@ func2();
 
 Meh:
 ```javascript
-const func1 = function(){
+const func1 = ()=>{
     alert('hi');
 }
 func1();
 //in the future might need to add func2() here before it's created
 
-const func2 = function(){
+const func2 = ()=>{
     alert('oh hai!!!!');
 }
 func2();
@@ -123,12 +123,12 @@ func2();
 
 Bad:
 ```javascript
-const func1 = function(){
+const func1 = ()=>{
     alert('hi');
 }
 func1();
 func2();
-const func2 = function(){
+const func2 = ()=>{
     alert('oh hai!!!!');
 }
 ```
@@ -138,10 +138,10 @@ const func2 = function(){
 You can call a function based on some input from the browser prompt
 
 ```javascript
-const greet = function(){
+const greet = ()=>{
     alert('Hi!');
 }
-const sayBye = function(){
+const sayBye = ()=>{
     alert('Bye!');
 }
 const answer = prompt('Are you arriving or leaving', 'Arriving or Leaving?');
@@ -217,7 +217,7 @@ If executing a function multiple times, you don't need to define the function wi
 **GOOD**
 
 ```javascript
-const myFunc = function(){
+const myFunc = ()=>{
     console.log('hi');
 }
 
@@ -230,7 +230,7 @@ for(let i = 0; i < 10; i++){
 
 ```javascript
 for(let i = 0; i < 10; i++){
-    const myFunc = function(){
+    const myFunc = ()=>{
         console.log('hi');
     }
 
@@ -243,7 +243,7 @@ for(let i = 0; i < 10; i++){
 You can have loops within a function:
 
 ```javascript
-const manyGreetings = function(){
+const manyGreetings = ()=>{
     for(let i = 0; i < 10; i++){
         console.log('hi');
     }
@@ -257,10 +257,10 @@ manyGreetings();
 You can have functions call other functions:
 
 ```javascript
-const func1 = function(){
+const func1 = ()=>{
     console.log('hello');
 }
-const func2 = function(){
+const func2 = =>(){
     console.log('oh hai');
     func1();
 }
@@ -272,28 +272,28 @@ func2();
 Program execution happens in a branching structure.  List what the following logs.  See if you can diagram its execution:
 
 ```javascript
-const func1 = function(){
+const func1 = ()=>{
     console.log(1);
     func2(); //why can I call this now, even though the definition is below?
     func3();
     console.log('Finished!');
 }
-const func2 = function(){
+const func2 = ()=>{
     console.log(2);
     func4();
     func6();
 }
-const func3 = function(){
+const func3 = ()=>{
     console.log(3);
     func5();
 }
-const func4 = function(){
+const func4 = ()=>{
     console.log(4);
 }
-const func5 = function(){
+const func5 = ()=>{
     console.log(5);
 }
-const func6 = function(){
+const func6 = ()=>{
     console.log(6);
 }
 func1();
@@ -309,15 +309,15 @@ func1();
 let apples;
 let money;
 
-const start = function(){
+const start = ()=>{
     apples = 0;
     money = 20;
     askForAction();
 }
-const showStatus = function(){
+const showStatus = ()=>{
     alert("You have " + apples + " apples and $" + money);
 }
-const askForAction = function(){
+const askForAction = ()=>{
     showStatus();
     const choice = prompt("What do you want to do?", "buy apple / eat apple / restart");
     if(choice === 'buy apple'){
@@ -328,12 +328,12 @@ const askForAction = function(){
         start();
     }
 }
-const buyApple = function(){
+const buyApple = ()=>{
     apples++;
     money -= 1;
     askForAction();
 }
-const eatApple = function(){
+const eatApple = ()=>{
     apples--;
     askForAction();
 }
