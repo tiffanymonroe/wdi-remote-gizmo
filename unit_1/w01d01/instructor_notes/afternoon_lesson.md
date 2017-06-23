@@ -442,7 +442,7 @@ Each loop is taking the code between the curlies `{ ... }` and running that code
 
 Let's look at our loop again:
 
-```
+```javascript
 let num = 0;
 
 while (num <= 1000) {
@@ -530,7 +530,7 @@ _For loops_ are what we will use almost all of the time.
 
 _for_ loop that counts from 0 to 1000:
 
-```
+```javascript
 for (let i=0; i <= 1000; i++) {
 	console.log(i);
 }
