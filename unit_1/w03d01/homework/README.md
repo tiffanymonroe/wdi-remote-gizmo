@@ -3,12 +3,12 @@
 # WDIR-Hopper
 
 ---
-Title: Constructor Functions<br>
+Title: Classes<br>
 Type: Homework<br>
 Duration: "4:00"<br>
 Creator: Matt Huntington<br>
     Course: WDIR-Hopper<br>
-Competencies: Constructor Functions<br>
+Competencies: Classes<br>
 Prerequisites: JavaScript <br>
 
 ---
@@ -19,29 +19,30 @@ Prerequisites: JavaScript <br>
 1. Make a file inside your `homework` folder called `answers.js`.
 2. Write all of your code in `answers.js`.
 
-## Constructor Functions
+## Classes
 
 ### The constructor functions
 
-Create the following objects
+Create the following:
 
-1. Create a constructor function for a Pet
-    - public attributes
-        - owner - string
-        - name - string
-    - constructor function takes the pets name as a parameter and sets the public attribute
+1. Create a class for a Pet
+    - attributes
+        - name (the constructor takes one parameter and then sets this property on the instance to value of the parameter)
+        - owner (initially set to '' within constructor)
+    - methods
+        - setOwner(owner) - sets the owner property to the parameter passed into this function
 
     **Commit 1** <br>
     <hr>
     &#x1F534; The commit message should read: <br>
-    "Commit 1 - Created Pet Constructor Function"
+    "Commit 1 - Created Pet Class"
     <hr>
 
-1. Create a constructor function for a Dog
+1. Create a class for a Dog
     - this should inherit from Pet
-    - private attributes
-        - price - 20
-    - public methods
+    - attribute in addition to those of Pet
+        - price (the constructor takes a parameter in addition to that of Pet and then sets this property on the instance to the value of the additional parameter)
+    - methods
         - bark() - log "bark"
         - chaseTail() - log "oh boy oh boy oh boy"
         - getPrice() - return price
@@ -49,14 +50,14 @@ Create the following objects
     **Commit 2** <br>
     <hr>
     &#x1F534; The commit message should read: <br>
-    "Commit 2 - Created Dog Constructor Function"
+    "Commit 2 - Created Dog Class"
     <hr>
 
-1. Create a constructor function for a Cat
+1. Create a class for a Cat
     - this should inherit from Pet
-    - private attributes
-        - price - 10
-    - public methods
+    - attribute in addition to those of Pet
+        - price (the constructor takes a parameter in addition to that of Pet and then sets this property on the instance to the value of the additional parameter)
+    - methods
         - purr() - log "purrrrr"
         - clean() - log "cleaning"
         - getPrice() - return price
@@ -64,25 +65,25 @@ Create the following objects
     **Commit 3** <br>
     <hr>
     &#x1F534; The commit message should read: <br>
-    "Commit 3 - Created Cat Constructor Function"
+    "Commit 3 - Created Cat Class"
     <hr>
 
-1. Create a constructor function for a Person
-    - private attributes:
+1. Create a class for a Person
+    - attributes (set in constructor method):
         - name - set name from parameter in constructor method
         - age - initially 0
         - weight - initially 0
         - mood - integer starting at 0 initially
         - pets - empty array initially
         - bankAccount - initially set to 0
-    - public methods:
+    -  methods:
         - getName() - returns name
         - getAge() - returns age
         - getWeight() - returns weight
         - greet() - logs a message with person's name
         - eat() - increment weight, increment mood
         - exercise() - decrement weight
-        - age() - increment age, increment height, increment weight, decrement mood, increment bank acount by 10 (birthday money)
+        - age() - increment age, increment height, increment weight, decrement mood, increment bank account by 10 (birthday money)
         - buyPet(pet) - push the Pet object onto the pets array, increment mood by 10, decrement bankAccount by the value of the pet (hint: getPrice())
 
     **Commit 4** <br>
@@ -98,11 +99,11 @@ Create the following objects
 1. At this point Timmy's a little bummed.  As a precocious child, he feels he's "seen it all" already.  Have him eat five times.
 1. Now Timmy's a little heavier than he wants to be.  Kindergarten's coming up and he wants to look good.  Have him exercise five times
 1. Age Timmy 9 years
-1. Create a dog named "Lassie"
+1. Create a dog named "Lassie" with a price of 20
 1. Set Lassie's owner to the string "Timmy"
 1. Have Timmy "buy" Lassie
 1. Age Timmy 9 years
-1. Create a cat named "Scratchy"
+1. Create a cat named "Scratchy" with a price of 10
 1. Set Scratchy's owner to the string "Timmy"
 1. Have Timmy "buy" Scratchy
 1. Age Timmy 4 years
@@ -154,6 +155,6 @@ Create the following objects
 
 ## Hungry for more?
 
-1. Finish the [lab](https://github.com/ga-students/wdi-remote-hopper/blob/master/unit_1/w02d04/student_labs/README.md) from today
+1. Finish the [lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d01/student_labs/README.md) from today
 1. Use the material from the lab today to make a story like you did for Commit 5
-1. Complete [the Pokemon Card Game lab](https://github.com/ga-students/wdi-remote-hopper/tree/master/unit_1/w02d03/student_labs)
+1. Complete [the Pokemon Card Game lab](https://github.com/ga-students/wdi-remote-gizmo/tree/master/unit_1/w03d01/student_labs)
