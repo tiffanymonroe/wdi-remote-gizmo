@@ -221,3 +221,106 @@ const foo = [
     }
 ];
 ```
+
+## Afternoon Lab
+
+Log the following function:
+
+```javascript
+const foo = ()=>{
+    console.log('I have been invoked!');
+}
+```
+
+Call `foo`, passing in a function:
+
+```javascript
+const foo = (param)=>{
+    console.log(param);
+}
+```
+
+See if you can guess what this will log:
+
+```javascript
+const foo = (param, param2) => {
+    param(param2);
+}
+
+const bar = (param) => {
+    console.log(param);
+}
+
+foo(bar, 'hi');
+```
+
+See if you can guess what this will log:
+
+```javascript
+const foo = (param, param2) => {
+    param(param2, 'hello');
+}
+
+const bar = (param, param2) => {
+    console.log(param2);
+}
+
+foo(bar, 'hi');
+```
+
+Call the `someMethod` function, passing in `myFunc`.  It should log `About to invoke the callback` and then `I have been called!`
+
+```javascript
+const foo = {
+    someMethod(callback){
+        console.log('About to invoke the callback');
+        callback();
+    }
+}
+
+const myFunc = ()=>{
+    console.log('I have been called!');
+}
+```
+
+Alter the following code so that `myFunc` properly logs the `height` property of `foo`
+
+```javascript
+const foo = {
+    height:5,
+    someMethod(callback){
+        callback();
+    }
+}
+
+const myFunc = (param)=>{
+    console.log(param);
+}
+```
+
+Follow the following steps:
+
+    1. Create a function that takes a parameter and logs it
+    1. Create a second function that logs 'hi'
+    1. Invoke the first function, passing in the second function as a parameter
+    1. You should see a function reference being logged
+    1. Alter the first function so that it invokes its parameter
+    1. If you did these steps correctly, you should get a log of 'hi'
+
+Fix the last line of this snippet so it logs `this method was called`:
+
+```javascript
+const bar = {
+    someMethod(param){
+        param();
+    }
+}
+
+const foo = {
+    someMethod(){
+        console.log('this method was called');
+    }
+}
+
+bar.someMethod; //fix this line
+```
