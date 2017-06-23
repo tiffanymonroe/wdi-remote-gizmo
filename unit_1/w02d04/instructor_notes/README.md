@@ -12,7 +12,7 @@
 You can create a property for an object that is an array
 
 ```javascript
-var foo = {
+const foo = {
     someArray:[1,2,3]
 };
 foo.someArray[0]; //1
@@ -20,7 +20,7 @@ foo.someArray[0]; //1
 You can create a property for an object that is an object
 
 ```javascript
-var foo = {
+const foo = {
     someObject: {
         someProperty: 'oh hai!'
     }
@@ -28,11 +28,11 @@ var foo = {
 foo.someObject.someProperty; //oh hai!
 ```
 
-You can create a property for an object that is a function
+You can create a property for an object that is a function (method)
 
 ```javascript
-var foo = {
-    someMethod: function(){
+const foo = {
+    someMethod(){
         console.log('oh hai');
     }
 };
@@ -43,7 +43,7 @@ foo.someMethod();//logs 'oh hai!'
 You can store an object in an array
 
 ```javascript
-var foo = [{someProperty:'weee'}, 2, 3];
+const foo = [{someProperty:'weee'}, 2, 3];
 
 console.log(foo[0].someProperty);
 ```
@@ -51,7 +51,7 @@ console.log(foo[0].someProperty);
 You can store an array in an array
 
 ```javascript
-var foo = [
+const foo = [
     ["0,0", "0,1", "0,2"],
     ["1,0", "1,1", "1,2"],
     ["2,0", "2,1", "2,2"]
@@ -63,10 +63,10 @@ foo[1][2]; //1,2
 You can store a function in an array
 
 ```javascript
-var foo = [
+const foo = [
     1,
     "hi",
-    function(){
+    ()=>{
         console.log('fun');
     }
 ];
@@ -77,11 +77,11 @@ foo[2]();
 You can loop over an array in an object
 
 ```javascript
-var foo = {
+const foo = {
     someArray:[1,2,3]
 };
 
-for(var i = 0; i < foo.someArray.length; i++){
+for(let i = 0; i < foo.someArray.length; i++){
     console.log(foo.someArray[i]);
 }
 ```
@@ -89,14 +89,14 @@ for(var i = 0; i < foo.someArray.length; i++){
 You can loop over an array in an array.  Just add an additional [*index*] after the first [*index*]
 
 ```javascript
-var foo = [
+const foo = [
     ["0,0", "0,1", "0,2"],
     ["1,0", "1,1", "1,2"],
     ["2,0", "2,1", "2,2"]
 ];
 
-for(var i = 0; i < foo.length; i++){
-    for(var j = 0; j < foo[i].length; j++){
+for(let i = 0; i < foo.length; i++){
+    for(let j = 0; j < foo[i].length; j++){
         console.log(foo[i][j]);
     }
 }
@@ -107,7 +107,7 @@ for(var i = 0; i < foo.length; i++){
 You can create a function that returns an object.  Just add the `.` after the `()` since the return value of the function is an object
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     return {
         someProperty: 'hi!'
     }
@@ -119,7 +119,7 @@ foo().someProperty;//hi
 You can create a function that returns an array.  Just add `[index]` after the `()` since the return value of the function is an array
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     return ['apple','banana','pear'];
 };
 
@@ -129,7 +129,7 @@ foo()[1]; //banana
 You can create a function that returns an object that has an array
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     return {
         someArray: ['fun', 'awesome', 'sweet']
     }
@@ -141,7 +141,7 @@ foo().someArray[1]; //awesome
 You can create a function that returns an object that has an object
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     return {
         someObject: {
             someProperty: 'some value'
@@ -155,9 +155,9 @@ foo().someObject.someProperty; //some value
 You can create a function that returns an object that has a method
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     return {
-        someMethod: function(){
+        someMethod(){
             console.log('oh hai!');
         }
     }
@@ -169,8 +169,8 @@ foo().someMethod(); //logs 'oh hai!'
 You can create a function that returns a function.  Just add the `()` after the first `()` since the return value of the first function is another function
 
 ```javascript
-var foo = function(){
-    return function(){
+const foo = ()=>{
+    return ()=>{
         console.log('whaaaa?');
     }
 };
@@ -181,8 +181,8 @@ foo()(); //logs 'whaaaa?'
 You can create an object that has a method that returns an object
 
 ```javascript
-var foo = {
-    someMethod: function(){
+const foo = {
+    someMethod(){
         return {
             someProperty: 'some value'
         }
@@ -195,8 +195,8 @@ foo.someMethod().someProperty;
 You can create an object that has a method that returns an object that has an array
 
 ```javascript
-var foo = {
-    someMethod: function(){
+const foo = {
+    someMethod(){
         return {
             someArray: ['peach', 'apple', 'pear']
         }
@@ -209,8 +209,8 @@ foo.someMethod().someArray[2]; //pear
 You can create an object that has a method that returns an object that has an object
 
 ```javascript
-var foo = {
-    someMethod: function(){
+const foo = {
+    someMethod(){
         return {
             someObject: {
                 someProperty: 'some value'
@@ -225,10 +225,10 @@ foo.someMethod().someObject.someProperty; //some value
 You can create an object that has a method that returns an object that has another method
 
 ```javascript
-var foo = {
-    someMethod: function(){
+const foo = {
+    someMethod(){
         return {
-            someMethod: function(){
+            someMethod(){
                 console.log('both methods can have the same name!');
             }
         }
@@ -241,9 +241,9 @@ foo.someMethod().someMethod(); //logs 'both methods can have the same name!'
 You can create an object that has a method that returns a function
 
 ```javascript
-var foo = {
-    someMethod: function(){
-        return function(){
+const foo = {
+    someMethod(){
+        return ()=>{
             console.log('hi')
         }
     }
@@ -254,10 +254,10 @@ foo.someMethod()();//logs hi
 You can create an array that has a function that returns an object
 
 ```javascript
-var foo = [
+const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
             someProperty: 'some value'
         }
@@ -270,10 +270,10 @@ foo[2]().someProperty; //some value
 You can create an array that has a function that returns an object that has an array
 
 ```javascript
-var foo = [
+const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
             someArray: ['cat', 'dog', 'baboon']
         }
@@ -286,10 +286,10 @@ foo[2]().someArray[2]; //some value
 You can create an array that has a function that returns an object that has an object
 
 ```javascript
-var foo = [
+const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
             someObject: {
                 someProperty: 'some value'
@@ -304,12 +304,12 @@ foo[2]().someObject.someProperty; //some value
 You can create an array that has a function that returns an object that has a method
 
 ```javascript
-var foo = [
+const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
-            someMethod: function(){
+            someMethod(){
                 console.log('fun');
             }
         }
@@ -322,11 +322,11 @@ foo[2]().someMethod(); //logs fun
 You can create an array that has a function that returns a function
 
 ```javascript
-var foo = [
+const foo = [
     1,
     'apple',
-    function(){
-        return function(){
+    ()=>{
+        return ()=>{
             console.log('yes!');
         }
     }
@@ -340,7 +340,7 @@ foo[2]()(); //logs yes!
 Let's examine a variable that is a function
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     console.log("I'm the function 'foo'");
 }
 console.log(foo);
@@ -349,10 +349,10 @@ console.log(foo);
 We can pass a function into another function
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     console.log("I'm the function 'foo'");
 }
-var bar = function(param1){
+const bar = (param1)=>{
     console.log(param1);
 }
 bar(foo);
@@ -361,10 +361,10 @@ bar(foo);
 Once we've done this, we can execute the function that is passed in as a parameter (called a callback)
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     console.log("I'm the function 'foo'");
 }
-var bar = function(param1){
+const bar = (param1)=>{
     console.log("I'm about to execute a callback");
     param1();
 }
@@ -374,13 +374,13 @@ bar(foo);
 This is good because it allows us to perform some functionality and then do something unique once that's complete:
 
 ```javascript
-var foo = function(){
+const foo = ()=>{
     console.log("I'm the function 'foo'");
 }
-var awesome = function(){
+const awesome = ()=>{
     console.log("I'm the function 'awesome'");
 }
-var bar = function(param1){
+const bar = (param1)=>{
     console.log("I'm about to execute a callback");
     param1();
 }
@@ -391,14 +391,14 @@ bar(awesome);
 If we want, we don't even need to assign the functions to variables
 
 ```javascript
-var bar = function(param1){
+const bar = (param1)=>{
     console.log("I'm about to execute a callback");
     param1();
 }
-bar(function(){
+bar(()=>{
     console.log("I'm the function 'foo'");
 });
-bar(function(){
+bar(()=>{
     console.log("I'm the function 'awesome'");
 });
 ```
@@ -406,7 +406,7 @@ bar(function(){
 This last form is very common.  For instance:
 
 ```javascript
-setTimeout(function(){
+setTimeout(()=>{
     console.log('hi');
 }, 2000);
 ```
@@ -422,19 +422,19 @@ Always indent your code.  If a chunk of code is being execute under a certain co
 ```javascript
 //good
 if(true){
-    var a = 2 + 2;
+    const a = 2 + 2;
     console.log(a);
 }
 
 //bad
 if(true){
-    var a = 2 + 2;
+    const a = 2 + 2;
 console.log(a);
 }
 
 //bad
     if(true){
-    var a = 2 + 2;
+    const a = 2 + 2;
 console.log(a);
     }
 ```
@@ -455,18 +455,18 @@ if(true){
 - Better to have to copy/paste a long variable name than get confused later on.
 
 ```javascript
-var a = 1 + 2 + 3; //bad
-var sumOfThreeNumbers = 1 + 2 + 3; //good
+const a = 1 + 2 + 3; //bad
+const sumOfThreeNumbers = 1 + 2 + 3; //good
 ```
 
 ### Function definitions at the top of the scope
 
 Good:
 ```javascript
-var foo = function(){
+const foo = ()=>{
     console.log('foo here');
 }
-var bar = function(){
+const bar = ()=>{
     console.log('bar here');
 }
 
@@ -476,12 +476,12 @@ bar();
 
 Bad:
 ```javascript
-var foo = function(){
+const foo = ()=>{
     console.log('foo here');
 }
 foo();
 
-var bar = function(){
+const bar = ()=>{
     console.log('bar here');
 }
 bar();
@@ -497,9 +497,9 @@ bar();
 //params: name (string), age (int)
 //returns nothing
 //summary: console logs an english string consisting of the person's name and how old they are
-var describePerson = function(name, age){
-    var finalString = name + " is " + age + " years old."; //create the message
-    console.log(); //log the message
+const describePerson = (name, age)=>{
+    const finalString = name + " is " + age + " years old."; //create the message
+    console.log(finalString); //log the message
 }
 ```
 
@@ -534,7 +534,7 @@ Most important:
 A debugger allows you to stop execution of your program to examine variables at any point using the `debugger` keyword
 
 ```javascript
-var a = 2 + 2;
+const a = 2 + 2;
 debugger
 console.log(a);
 ```
@@ -563,7 +563,7 @@ Don't use `==`.  Use `===`
 When doing this, sometimes you'll need to change a variables datatype
 
 ```javascript
-var a = '1'
+const a = '1'
 
 if(a === 1){ //will be false
     console.log('should not execute');
@@ -586,7 +586,7 @@ In general, you can convert between data types like so:
 When using `+`, always make sure you know what your data types are
 
 ```javascript
-var a = "1";
+const a = "1";
 typeof a;
 ```
 

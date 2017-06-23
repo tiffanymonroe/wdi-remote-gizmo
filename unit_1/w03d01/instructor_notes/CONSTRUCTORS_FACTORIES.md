@@ -2,167 +2,300 @@
 
 ## Lesson Objectives
 
-1. Explain why we need constructor functions
-1. Create a constructor function to define the blueprint for creating objects
-1. Add public properties and methods to a constructor function and methods using this
-1. Add private properties and methods to a constructor function using regular variables
-1. Pass parameters into constructor function to make objects customisable
-1. Create static properties for a Class
+1. Explain why we need classes
+1. Create a class to define the blueprint for creating objects
+1. Add methods to a class
+1. Set properties on an instance of a class
+1. Make an instance of each class customizable
+1. Create methods to alter the properties of an instance
 1. Make a class inherit attributes from a "parent class"
+1. Create static properties for a class
 1. Create a factory
 
-## Explain why we need constructor functions
+## Explain why we need classes
 
 Sometimes we need to repetitively create new objects with the same attributes.  Imagine we wanted to create multiple people.  All people have the same basic attributes, so it would be great if we could create a blueprint for our person creation process.
 
-## Create a constructor function to define the blueprint for creating objects
+## Create a class to define the blueprint for creating objects
 
-We use normal functions to create a `class` or constructor function.  Think of this as our blueprint for creating people.  When saving the constructor function to a variable, it's custom to capitalise the first letter of the variable, so we know it's a `class` (constructor function).  This follows customs in other programming languages.
+When creating a class, it's custom to capitalize the first letter of the variable, so we know it's a `class`.  This follows customs in other programming languages.
 
 ```javascript
-var Person = function(){
+class Person {
 
 };
 ```
 
-Now we can "instantiate" or create new objects using this constructor function.  We do this by adding the `new` keyword before calling the constructor function.
+Now we can "instantiate" or create new objects using this class.  We do this by adding the `new` keyword before calling the class name like a function.
 
 ```javascript
-var me = new Person();
-var bob = new Person();
+const me = new Person();
+const bob = new Person();
 console.log(me);
 console.log(bob);
 console.log(typeof(me));
 console.log(typeof(bob));
 ```
 
-## Add public properties and methods to a constructor function and methods using this
+## Add methods to a class
 
-Right now, our object is blank, though.  Let's add some properties to it.  We do this by using the `this` keyword inside the constructor function.
+Right now, our object doesn't do anything.  Let's have it do some stuff;
 
 ```javascript
-var Person = function(){
-	this.name = 'Matt';
+class Person {
+	greet(){
+		console.log('hi!');
+	}
 };
-var me = new Person();
+const me = new Person();
+me.greet();
+```
+
+These methods can of course take parameters:
+
+```javascript
+class Person {
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+};
+const me = new Person();
+me.greet('bob');
+```
+
+If we have multiple methods, don't put commas between them:
+
+```javascript
+class Person {
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	jump(){
+		console.log('weeee!');
+	}
+};
+const me = new Person();
+me.greet('bob');
+me.jump();
+```
+
+## Set properties on an instance of a class
+
+If we log the instances of our class, we'll see they don't have any properties:
+
+```javascript
+class Person {
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	jump(){
+		console.log('weeee!');
+	}
+};
+const me = new Person();
 console.log(me);
 ```
 
-We can set values like normal now
+Let's add some properties with a constructor function.  This is a function that gets called once, each time an object is created:
 
 ```javascript
-me.name = "Matthew";
+class Person {
+	constructor(){
+		this.legs = 2;
+		this.arms = 2;
+		this.eyes = 'blue';
+		this.hair = 'blonde';
+	}
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	jump(){
+		console.log('weeee!');
+	}
+};
+const me = new Person();
 console.log(me);
 ```
 
-We can define methods:
+## Make an instance of each class customizable
+
+Of course, our constructor function can take params which we can use to alter the properties of the object instantiated.  This allows us to customize each instance:
 
 ```javascript
-var Person = function(){
-	this.name = 'Matt';
-	this.sayHello = function(){
-		console.log(this.name);
+class Person {
+	constructor(name, age, eyes, hair){
+		this.legs = 2;
+		this.arms = 2;
+		this.name = name;
+		this.age = age;
+		this.eyes = eyes;
+		this.hair = hair;
+	}
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	jump(){
+		console.log('weeee!');
 	}
 };
-var me = new Person();
-me.sayHello();
+const me = new Person('Matt', 36, 'blue', 'blonde');
+console.log(me);
 ```
 
-## Add private properties and methods to a constructor function using regular variables
+## Create methods to alter the properties of an instance
 
-Sometimes you don't want aspects of an object to be editable from outside the class definition (constructor function).  You can hide these using normal variables.
+We can of course, alter the properties of an instance, after it is created:
 
 ```javascript
-var Person = function(){
-	var name = 'Matt';
-	this.sayHello = function(){
-		console.log(name);
+me.hair = 'red';
+console.log(me);
+```
+
+But it's a nice practice to define a method that will alter that:
+
+```javascript
+class Person {
+	constructor(name, age, eyes, hair){
+		this.legs = 2;
+		this.arms = 2;
+		this.name = name;
+		this.age = age;
+		this.eyes = eyes;
+		this.hair = hair;
+	}
+	setHair(hairColor){
+		this.hair = hairColor;
+	}
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	jump(){
+		console.log('weeee!');
 	}
 };
-var me = new Person();
-me.sayHello();
+const me = new Person('Matt', 36, 'blue', 'blonde');
+console.log(me);
+me.setHair('red');
+console.log(me);
 ```
 
-## Pass parameters into constructor function to make objects customisable
-
-The beauty of constructor functions is that you can pass parameters into them, just like normal functions.  You can use these parameters to customise each object that you create.
-
-```javascript
-var Person = function(initialName){
-	var name = initialName;
-	this.sayHello = function(){
-		console.log(name);
-	}
-};
-var me = new Person('Matt');
-var bob = new Person('Bob');
-me.sayHello();
-bob.sayHello();
-```
-
-## Create static properties for a Class
-
-Functions are objects too!  Just look at the autocomplete options when you type
-
-```javascript
-var myFunction = function(){
-
-}
-myFunction.
-```
-
-So we can add properties and methods to a constructor function as well (these are called `static` properties).  These are generally reserved for attributes of the class, not of the objects that are being created.
-
-```javascript
-var Person = function(initialName){
-	var name = initialName;
-	this.sayHello = function(){
-		console.log(name);
-	}
-};
-Person.eyeColors = ['blue', 'green', 'brown']; //attributes of a class, but not an individual person
-
-var me = new Person('Matt');
-me.eyes = Person.eyeColors[0]; //this way we know we're setting the eye color to an appropriate color
-```
+- This way, everything is done with methods
+- Other developers can quickly scan the class definition to determine what you'd like them to be able to do with the class
 
 ## Make a class inherit attributes from a "parent class"
 
 Sometimes we want to have a "parent" class that will have some basic attributes that will be inherited by "child" classes.
 
 ```javascript
-var Person = function(initialName){
-	var name = initialName;
-	this.sayHello = function(){
-		console.log(name);
+class Person {
+	constructor(name, age, eyes, hair){
+		this.legs = 2;
+		this.arms = 2;
+		this.name = name;
+		this.age = age;
+		this.eyes = eyes;
+		this.hair = hair;
+	}
+	setHair(hairColor){
+		this.hair = hairColor;
+	}
+	greet(otherPerson){
+		console.log('hi ' + otherPerson + '!');
+	}
+	jump(){
+		console.log('weeee!');
 	}
 };
 
-var SuperHero = function(initialName, power){
-	Person.call(this, initialName);
-	this.activatePower = function(){
-		console.log("I'm using my ability to " + power + " to save world!");
-	}
+class SuperHero extends Person {
+
 };
-
-
-var superman = new SuperHero("Superman", "fly");
-superman.sayHello(); //sayHello is inherited from Person class
-superman.activatePower();
+const superman = new SuperHero('Clark Kent', 30, 'blue', 'black')
+console.log(superman);
 ```
 
-You could have the SuperHero override the parent class's sayHello function:
+We can now add additional functionality:
 
 ```javascript
-var SuperHero = function(initialName, power){
-	Person.call(this, initialName);
-	this.sayHello = function(){
-		console.log('Up and Atom!');
-	}
-	this.activatePower = function(){
-		console.log("I'm using my ability to " + power + " to save world!");
+class SuperHero extends Person {
+	fly(){
+		console.log('Up up and away!');
 	}
 };
+const superman = new SuperHero('Clark Kent', 30, 'blue', 'black')
+superman.fly();
+```
+
+And we can override previous functionality:
+
+```javascript
+class SuperHero extends Person {
+	fly(){
+		console.log('Up up and away!');
+	}
+	greet(otherPerson){
+		console.log('Greetings ' + otherPerson);
+	}
+};
+const superman = new SuperHero('Clark Kent', 30, 'blue', 'black')
+superman.greet('Bob');
+```
+
+We can even reference the parent class' method and extend its original functionality:
+
+```javascript
+class SuperHero extends Person {
+	fly(){
+		console.log('Up up and away!');
+	}
+	greet(otherPerson){
+		console.log('Greetings ' + otherPerson);
+	}
+	jump(){
+		super.jump();
+		this.fly();
+	}
+};
+const superman = new SuperHero('Clark Kent', 30, 'blue', 'black')
+superman.jump();
+```
+
+This is most useful on the constructor:
+
+```javascript
+class SuperHero extends Person {
+	constructor(name, age, eyes, hair){
+		super(name, age, eyes, hair);
+		this.superPowers = ['flight', 'superhuman strength', 'x-ray vision', 'heat vision', 'cold breath', 'super-speed', 'enhanced hearing', 'nigh-invulnerability']
+	}
+	fly(){
+		console.log('Up up and away!');
+	}
+	greet(otherPerson){
+		console.log('Greetings ' + otherPerson);
+	}
+	jump(){
+		super.jump();
+		this.fly();
+	}
+};
+const superman = new SuperHero('Clark Kent', 30, 'blue', 'black')
+console.log(superman);
+```
+
+## Create static properties for a class
+
+Sometimes you want to define properties that pertain to the class as a whole, not the instance.  This allows us to limit, somewhat, what the user of class can do.
+
+```javascript
+class Person {
+	static eyeColors(){
+		return ['blue', 'green', 'brown']
+	}
+	//rest of class definition here...
+}
+//more code...
+const superman = new SuperHero('Clark Kent', 30, Person.eyeColors()[0], 'black');
 ```
 
 ## Create a factory
@@ -173,20 +306,22 @@ var SuperHero = function(initialName, power){
 	- also called a singleton
 
 ```javascript
-var Car = function(serialNumber){
-	this.serialNumber = serialNumber;
-	this.drive = function(){
+class Car {
+	constructor(serialNumber){
+		this.serialNumber = serialNumber;
+	}
+	drive(){
 		console.log('Vroom');
 	}
 }
-var factory = {
+const factory = {
 	cars: [],
-	generateCar: function(){
-		var newCar = new Car(this.cars.length);
+	generateCar(){
+		const newCar = new Car(this.cars.length);
 		this.cars.push(newCar);
 		return newCar;
 	},
-	findCar: function(index){
+	findCar(index){
 		return this.cars[index];
 	}
 }
@@ -200,26 +335,33 @@ console.log(factory.findCar(1));
 You could also have a factory which is an instantiation of a class
 
 ```javascript
-var Car = function(maker, serialNumber){
-	this.maker = maker
-	this.serialNumber = serialNumber;
-	this.drive = function(){
+class Car {
+	constructor(maker, serialNumber){
+		this.maker = maker
+		this.serialNumber = serialNumber;
+	}
+	drive(){
 		console.log('Vroom');
 	}
 }
-var Factory = function(company){
-	this.cars = [];
-	this.generateCar = function(){
-		var newCar = new Car(company, this.cars.length);
+class Factory {
+	constructor(company){
+		this.company = company;
+		this.cars = [];
+	}
+	generateCar(){
+		const newCar = new Car(this.company, this.cars.length);
 		this.cars.push(newCar);
 		return newCar;
-	};
-	this.findCar = function(index){
+	}
+	findCar(index){
 		return this.cars[index];
-	};
+	}
 }
-var toyota = new Factory("Toyota");
-var bmw = new Factory("BMW");
+const toyota = new Factory("Toyota");
+const bmw = new Factory("BMW");
 toyota.generateCar();
 bmw.generateCar();
+console.log(bmw.findCar(0));
+console.log(toyota.findCar(0));
 ```

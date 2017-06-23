@@ -155,7 +155,16 @@ Other things to think about:
 There are usually a few common elements that are included in most HTML sites, including folders (for organization), CSS files and JavaScript files. Let's add them, so you can have a boilerplate ready to go whenever you start a new homework or project.
 
 <details><summary>File Structure</summary>
-![file structure](boilerplate-file-structure.png)
+
+What it looks like in your terminal:
+
+![terminal files](https://i.imgur.com/cpPf1gg.png)
+
+<br>
+
+What it looks like in your browser (GUI):
+
+![file structure](https://i.imgur.com/iCjicqR.png)
 </details>
 
 #### Create files and folders
