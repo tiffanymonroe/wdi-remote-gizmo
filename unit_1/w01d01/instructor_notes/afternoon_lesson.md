@@ -36,15 +36,16 @@ Loosely speaking, learning to "think like a programmer" involves learning:
 **Concepts**
 
 * For example, the concept of a "loop", something that repeats.
+	* Values might mutate with successive loops.
 
 **Syntax**
 
-* For example, precise spelling of variables and inclusion of parentheses, etc.
+* Precise spelling of variables and inclusion of parentheses, etc.
 	* Computers are stupid. They do not 'infer your meaning'.
 
 **Logic**
 
-* For example, the sequence of execution in a program, line by line. Problem-solving. How code interacts with other code.
+* The sequence of execution in a program, line by line. Problem-solving. How code interacts with other code.
 
 ## Why?
 
@@ -97,12 +98,15 @@ Errors are a **growth opportunity**. When you receive an error, yes it is an obs
 
 ## Comments / commenting out code
 
-`cmd + /`
+Atom: `⌘ + /`
 
-Providing comments in your code is great way to make your code comprehensible to others. But first, your code should be as self-evident as possible.
+'Comment out' code that doesn't need to run or that you save for later.
+
+Providing verbal comments within your code is great way to make your code comprehensible to others. But first, your code should be as self-evident as possible.
 
 <br>
 <hr>
+
 2:50
 
 <br>
@@ -112,15 +116,15 @@ Providing comments in your code is great way to make your code comprehensible to
 
 What we have so far:
 
-```
+```javascript
 console.log('Hello World');
 ```
 
-The data in quotes is a **string**. A string is just text. You can give a string either double or single quotes. If you want to include a quote inside a string, use an **escape character** `\` before the quote.
+The data in quotes is a **string**. A string is just text. You can give a string either double or single quotes. If you want to use single quotes and include a quote inside a string, use an **escape character** `\` before the quote.
 
 Example:
 
-```
+```javascript
 console.log('Whose is this? Is this Thom\'s?');
 ```
 
@@ -128,13 +132,13 @@ Along with strings we have **numbers**.
 
 We could send a number to the console:
 
-```
+```javascript
 console.log(100);
 ```
 
 We can do arithmetic with numbers:
 
-```
+```javascript
 console.log(100 + 100);
 ```
 
@@ -147,40 +151,34 @@ There are no quotes around numbers.
 <hr>
 2:55
 
-## Variables
+## Variables - `const` and `let`
 
-We can assign strings and numbers to variables. Using the assignment operator `=`, we can store data to memory:
+We can assign strings and numbers to variables. Using either `const` or `let` and the assignment operator `=`, we can store data to memory:
 
-```
-var item = 'chair';
+```javascript
+const phrase = 'In my room is a chair and a table';
 
-console.log(item);
-```
+let sum = 99 + 1;
 
-> => "chair"
-
-
-Now that 'chair' is saved to a variable, we can call it whenever.
-
-```
-console.log(item);
-console.log(item);
-console.log(item);
-console.log(item);
+console.log(phrase);
+console.log(sum);
 ```
 
-> => all 'chair'
+> => "In my room is a chair and a table"
 
-2:58
+> => 100
 
-### Anatomy of variable assignment
+Now that the phrase is saved to a variable, we can call it whenever.
 
+```javascript
+console.log(phrase);
+console.log(phrase);
+console.log(phrase);
+console.log(phrase);
+```
 
-![](https://i.imgur.com/kgJU34H.png)
+Same thing with sum.
 
-**assignment operator `=`** associate data with a variable.
-
-**var** declare a variable (and its scope)
 
 **Variable names**
 
@@ -194,18 +192,16 @@ console.log(item);
 
 - The interpreter needs the semicolons
 - Automatic Semicolon Insertion
-- You won't get a job if you don't write your semicolons
-- 'Minification' changes your code so you'd need 'em there
 
 
 **Variable re-assignment**
 
 You can re-assign variables:
 
-```
-var item = 'chair';
+```javascript
+let item = 'chair';
 
-var item = 'eclair';
+item = 'eclair';
 
 console.log(item);
 ```
@@ -214,10 +210,10 @@ console.log(item);
 >
 > Without running the following code, try to determine:
 
-```
-var a = 'gom jabbar';
-var b = 'feel the sting';
-var c = 'Baron';
+```javascript
+let a = '';
+let b = 'bongos';
+let c = 'get your';
 
 a = b;
 b = c;
@@ -239,7 +235,7 @@ At the end, what is the value of `c`?
 
 JavaScript allows us to add strings together with `+`:
 
-```
+```javascript
 console.log('hello' + ' world');
 ```
 
@@ -249,16 +245,16 @@ console.log('hello' + ' world');
 
 We can insert values of variables into our strings:
 
-```
-var adjective = 'beautiful';
+```javascript
+let adjective = 'beautiful';
 
 console.log('What a ' + adjective + ' day!!');
 ```
 
 > => "What a beautiful day!!"
 
-```
-var adjective = 'crummy';
+```javascript
+let adjective = 'crummy';
 
 console.log('What a ' + adjective + ' day!!');
 ```
@@ -277,7 +273,7 @@ console.log('What a ' + adjective + ' day!!');
 
 &#x1F535; **Extra**
 
-With the variable `var word = 'believe'`, replace the string "squeeze" by **interpolating** the `word` variable.
+With the variable `let word = 'believe'`, replace the string "squeeze" by **interpolating** the `word` variable.
 
 > => "Please believe the cheese"
 
@@ -305,8 +301,8 @@ Are we really going to write 1000 lines of code? Programmers are _lazy_ in a goo
 
 Here is an example of a **while loop**. We can use 6-ish lines of code to print 1000 lines of text. This is an application of **DRY.**
 
-```
-var num = 1;
+```javascript
+let num = 1;
 
 while (num <= 1000) {
 	console.log('The number is: ' + num);
@@ -320,60 +316,19 @@ while (num <= 1000) {
 
 # Loops
 
-Before, we talked about
-
-**Concept**
-
-**Syntax**
-
-**Logic**
-
-Let's look at each of these as we learn loops.
-
 ## Loop Concept
 
-What is a loop? A loop is a process that **repeats**. Along the way, the loop might accumulate or mutate value. For example, an analog clock works in a **loop**, and each loop increases the count of the hour-hand by 1. The hour-hand counts from 1 to 12, and after 12 loops, it starts counting again from 1.
+What is a loop? A loop is a process that **repeats**. Along the way, the loop might accumulate or mutate value. For example, an analog clock works in a **loop**, and each loop of the minute hand increases the count of the hour-hand by 1. The hour-hand counts from 1 to 12, and after 12 loops, it starts counting again from 1.
 
 [Clock loop](https://media.giphy.com/media/zzDDW60OOPm1y/giphy.gif)
 
-&#x1F535; **Ask**
 
-Any other examples of a 'loop' from _real life_?
-
-3:10
-
-# Loop Syntax - while loop
-
-&#x1F535; **Code along**
-
-Let's simulate the twelve loops of a clock with the **while loop** syntax.
-
-```
-var num = 1;
-
-while (num <= 12) {
-	console.log(num);
-	num++;
-}
-```
-
-Run the code with
-
-`node first_code.js`
-
-Let's 'reverse engineer' this thing to find out how it works.
-
-<br>
-<hr>
-
-3:15
-
-# Reverse engineer: While loop
+## Loop Syntax - while loop
 
 Here is the loop we used to DRY up our 1 to 1000 console.logs:
 
-```
-var num = 1;
+```javascript
+let num = 1;
 
 while (num <= 1000) {
 	console.log('The number is: ' + num);
@@ -381,9 +336,9 @@ while (num <= 1000) {
 }
 ```
 
-## `var num = 1;`
+## `let num = 1;`
 
-Before our while loop we used: `var num = 1;`
+Before our while loop we used: `let num = 1;`
 
 All we did was **declare a variable** and give it a value, in this case a **number**.
 
@@ -391,8 +346,8 @@ This is to set a **starting condition** for our loop. All we want is for our loo
 
 We could change this to whatever we want:
 
-```
-var zum = 90;
+```javascript
+let zum = 90;
 
 while (zum <= 1000) {
 	console.log('The current number is: ' + zum);
@@ -407,12 +362,11 @@ while (zum <= 1000) {
 
 ## `num <= 1000`
 
-In our while loop we used `num <= 1000`. This is a **BOOLEAN EXPRESSION** and will return either **true** or **false**.
+In our while loop we used `num <= 1000`. This is a **BOOLEAN EXPRESSION**. Under the hood, it evaluates either to **true** or **false**.
 
 The loop will run **while** the expression is true. As soon as the expression is false, the loop will end.
 
-
-```
+```javascript
 while (BOOLEAN_EXPRESSION) {
 	// code to repeat
 }
@@ -422,7 +376,7 @@ If the expression never became false, the loop would never end. This would be an
 
 Let's test out a boolean expression:
 
-```
+```javascript
 console.log(1 > 2);
 ```
 
@@ -441,7 +395,7 @@ There are other comparative operators:
 
 Using the **equality operator**:
 
-```
+```javascript
 console.log(1 == 2);
 ```
 
@@ -451,7 +405,7 @@ This is asking **is 1 equal to 2?**.
 
 Using the **inequality operator**
 
-```
+```javascript
 console.log(1 != 2);
 ```
 
@@ -489,9 +443,9 @@ Each loop is taking the code between the curlies `{ ... }` and running that code
 Let's look at our loop again:
 
 ```
-var num = 0;
+let num = 0;
 
-while (num <= 50) {
+while (num <= 1000) {
 	console.log(num);
 	num++;
 }
@@ -507,7 +461,7 @@ All that's left is to automate a change to the value of `num` each time the loop
 
 **We want to change the value of num so that the loop will eventually end**
 
-The loop will end when `num <= 50` is false. Let's increase the value of `num` by 1 each time the loop runs.
+The loop will end when `num <= 100` is false. Let's increase the value of `num` by 1 each time the loop runs.
 
 <br>
 <hr>
@@ -520,7 +474,7 @@ The **postfix** operator will increment the value of a variable by 1, and save t
 
 If we save a number to a variable:
 
-`var i = 100;`
+`let i = 100;`
 
 How can we save the value of that variable plus 1? We can do it this way:
 
@@ -547,17 +501,17 @@ We can also do _exactly the same thing_ with the **compound assignment operator*
 
 &#x1F535; **Activity**
 
-Write a _while_ loop that counts from 0 to 100.
+Write a _while_ loop that counts from 1 to 100.
 
 &#x1F535; **Extra Activity**
 
-Write another _while_ loop, but write it from from memory. Make the loop count from 0 to 1000.
+Write another _while_ loop, but write it from from memory. Make the loop count from 0 to 5000.
 
 &#x1F535; **Extra Activity**
 
 FIGURE IT OUT
 
-How can you get a while loop to count _backwards_? Use the postfix operator `i--` to make a loop count backwards from 100 to 1.
+How can you get a while loop to count _backwards_? Use the postfix operator `i--` to make a loop count backwards from 1000 to 1.
 
 <br>
 <hr>
@@ -577,7 +531,7 @@ _For loops_ are what we will use almost all of the time.
 _for_ loop that counts from 0 to 1000:
 
 ```
-for (var i=0; i <= 1000; i++) {
+for (let i=0; i <= 1000; i++) {
 	console.log(i);
 }
 ```
