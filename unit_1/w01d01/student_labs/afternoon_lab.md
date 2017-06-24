@@ -19,7 +19,7 @@ Today we had a look at
 
 * Terminal
 * Errors
-* Variables
+* Variables with `let` and `const`
 * DRY
 * Boolean expressions
 * While loops
@@ -49,9 +49,6 @@ Work through the following prompts in turn:
 
 Write the answers to the rest of this lab in the `first_lab.js` file.
 
-Run the code in Terminal with `node first_lab.js`
-
-
 Make sure you are in the same directory as the file, otherwise it won't run.
 
 Press the **up arrow** to retrieve the `node first_lab.js` command. That way, you don't have to type it each time to run the file.
@@ -77,7 +74,7 @@ Write
 
 Cut and paste:
 
-```
+```javascript
 console.log("Making your way in the world today takes everything you've got.");
 console.log("Taking a break from all your worries, sure would help a lot.");
 console.log("Wouldn't you like to get away?");
@@ -125,14 +122,14 @@ and the **equality operator** `==`
 <br>
 <hr>
 
-# While Loops
+# While Loops: reps and reps
 
 ## 1
 
 Write a *while* loop that will log in the console
 
 ```
-This is the song that never ends . . .
+'Ginger chocolate honey patties'
 ```
 
 1000 times. You can test it out with a smaller number first, such as 10, and when that works, use 1000.
@@ -168,7 +165,7 @@ Write another *while* loop that prints a message to the console _and_ interpolat
 
 <br>
 
-**NOTE:** You should not need to see the 'correct answers' for these loops. Either they work, or they don't. **Test** them thoroughly to make sure they are giving you the desired output.
+**NOTE:** You should not need to see the 'correct answers' in this markdown for these loops. Either they work, or they don't. **Test** them thoroughly to make sure they are giving you the desired output.
 
 <br>
 <hr>
@@ -182,8 +179,8 @@ Write another *while* loop that prints a message to the console _and_ interpolat
 * Write another **for loop** that counts from 7 to 635 (no more, no less!), and console.logs each number.
 
 # 3
-* Declare a variable `var start = 0`
-* Declare a variable `var limit = 100`
+* Declare a variable `let start = 0`
+* Declare a variable `const limit = 100`
 * Write a for loop that counts from the value of `start` to the value of `limit`, using those variables in the **control panel** of the loop.
 
 Test the loop thoroughly.
