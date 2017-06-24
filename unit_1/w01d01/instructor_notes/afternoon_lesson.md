@@ -158,7 +158,7 @@ We can assign strings and numbers to variables. Using either `const` or `let` an
 ```javascript
 const phrase = 'In my room is a chair and a table';
 
-let sum = 99 + 1;
+const sum = 99 + 1;
 
 console.log(phrase);
 console.log(sum);
