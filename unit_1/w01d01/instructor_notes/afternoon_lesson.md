@@ -153,20 +153,23 @@ There are no quotes around numbers.
 
 ## Variables - `const` and `let`
 
-We can assign strings and numbers to variables. Using either `const` or `let` and the assignment operator `=`, we can store data to memory:
+We can assign strings and numbers to variables using the assignment operator `=`. 
+
+```javascript
+var phrase = 'In my room is a chair and a table';
+```
+
+**phrase** can be anything we want (with some syntactical caveats), **sentence** for example, whatever makes semantic sense.
+
+**We will not be using `var`**, instead we will be using **`let`** and **`const`**.
+
+Let's use `const` here:
 
 ```javascript
 const phrase = 'In my room is a chair and a table';
 
 const sum = 99 + 1;
-
-console.log(phrase);
-console.log(sum);
 ```
-
-> => "In my room is a chair and a table"
-
-> => 100
 
 Now that the phrase is saved to a variable, we can call it whenever.
 
@@ -177,7 +180,19 @@ console.log(phrase);
 console.log(phrase);
 ```
 
-Same thing with sum.
+```javascript
+console.log(sum);
+console.log(sum);
+console.log(sum);
+console.log(sum);
+```
+
+>x4 => "In my room is a chair and a table"
+
+>x4 => 100
+
+
+Use `const` unless you intend for the value of the variable to change, then use `let`.
 
 
 **Variable names**
