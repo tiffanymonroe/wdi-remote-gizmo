@@ -272,7 +272,7 @@ console.log('hello' + ' world');
 We can insert values of variables into our strings:
 
 ```javascript
-let adjective = 'beautiful';
+const adjective = 'beautiful';
 
 console.log('What a ' + adjective + ' day!!');
 ```
@@ -280,7 +280,7 @@ console.log('What a ' + adjective + ' day!!');
 > => "What a beautiful day!!"
 
 ```javascript
-let adjective = 'crummy';
+const adjective = 'crummy';
 
 console.log('What a ' + adjective + ' day!!');
 ```
@@ -299,7 +299,7 @@ console.log('What a ' + adjective + ' day!!');
 
 &#x1F535; **Extra**
 
-With the variable `let word = 'believe'`, replace the string "squeeze" by **interpolating** the `word` variable.
+With the variable `const word = 'believe'`, replace the string "squeeze" by **interpolating** the `word` variable.
 
 > => "Please believe the cheese"
 
@@ -314,7 +314,7 @@ Don't Repeat Yourself
 
 What if we needed to write a program that counts from 1 up to 1000? We could set about doing this:
 
-```
+```javascript
 console.log('The number is: ' + 1);
 console.log('The number is: ' + 2);
 console.log('The number is: ' + 3);
