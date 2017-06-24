@@ -192,9 +192,6 @@ console.log(sum);
 >x4 => 100
 
 
-Use `const` unless you intend for the value of the variable to change, then use `let`.
-
-
 **Variable names**
 
 - cannot begin with a number or include special character
@@ -211,7 +208,21 @@ Use `const` unless you intend for the value of the variable to change, then use 
 
 **Variable re-assignment**
 
-You can re-assign variables:
+With `const`, you cannot reassign a variable. It is CONSTANT. 
+
+```javascript
+const item = ' chair';
+
+item = 'eclair';
+```
+
+> TypeError: Assignment to constant variable.
+
+Use `const` as your default declaration. This means your variable is safe from arbitary or accidental changes. However, _if you intend_ for the value of the variable to change, then use `let`.
+
+*Whenever you declare a variable, think first whether you intend to change it*
+
+You can re-assign variables with `let`:
 
 ```javascript
 let item = 'chair';
@@ -222,7 +233,11 @@ console.log(item);
 ```
 
 > => "eclair"
->
+
+<br>
+
+&#x1F535; **Activity**
+
 > Without running the following code, try to determine:
 
 ```javascript
@@ -235,11 +250,7 @@ b = c;
 c = a;
 ```
 
-At the end, what is the value of `a`?
-
-At the end, what is the value of `b`?
-
-At the end, what is the value of `c`?
+At the end, what are the values of `a`, `b`, and `c`?
 
 <br>
 <hr>
