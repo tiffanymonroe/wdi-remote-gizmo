@@ -325,7 +325,7 @@ What is a loop? A loop is a process that **repeats**. Along the way, the loop mi
 
 ## Loop Syntax - while loop
 
-Here is the loop we used to DRY up our 1 to 1000 console.logs:
+While loop examples:
 
 ```javascript
 let num = 1;
@@ -335,6 +335,29 @@ while (num <= 1000) {
 	num++;
 }
 ```
+
+```javascript
+let runProgram = true;
+
+while (runProgram) {
+	console.log('program is running');
+	runProgram = false;
+}
+```
+
+pseudo-code
+
+```
+initial condition
+
+while (BOOLEAN EXPRESSION) {
+ // run code in block
+ change condition
+}
+```
+
+Let's look at the different parts of the first example.
+
 
 ## `let num = 1;`
 
@@ -361,6 +384,8 @@ while (zum <= 1000) {
 3:20
 
 ## `num <= 1000`
+
+### BOOLEAN EXPRESSION
 
 In our while loop we used `num <= 1000`. This is a **BOOLEAN EXPRESSION**. Under the hood, it evaluates either to **true** or **false**.
 
@@ -505,7 +530,7 @@ Write a _while_ loop that counts from 1 to 100.
 
 &#x1F535; **Extra Activity**
 
-Write another _while_ loop, but write it from from memory. Make the loop count from 0 to 5000.
+Write another _while_ loop, but write it from from memory. Make the loop count from 0 to 5000 and print the square of each number. 
 
 &#x1F535; **Extra Activity**
 
@@ -518,7 +543,7 @@ How can you get a while loop to count _backwards_? Use the postfix operator `i--
 
 4:00
 
-## _FOR_ LOOP (2 mins)
+## _FOR_ LOOP
 
 A _for_ loop does the same thing as a while loop, but all the 'baggage' is conveniently compacted into the syntax, leaving less room for infinite loops. We don't have to declare any variables outside of the loop like we had to do with _while_ loops.
 
@@ -526,13 +551,15 @@ _For loops_ are what we will use almost all of the time.
 
 <br>
 
-&#x1F535; **Code along (4 min)**
+## Loop Syntax - for loop
 
-_for_ loop that counts from 0 to 1000:
+Examples:
+
+_for_ loop that counts from 1 to 1000:
 
 ```javascript
-for (let i=0; i <= 1000; i++) {
-	console.log(i);
+for (let i=1; i <= 1000; i++) {
+	console.log('The number is: ' + i);
 }
 ```
 
@@ -551,13 +578,23 @@ for (initial condition; while condition; repeating expression) {}
 <br>
 4:10
 
+&#x1F535; **Code along (4 min)**
+
+Write a _for_ loop that will count from 0 to 99
+
+```javascript
+for (let i=0; i <= 99; i++) {
+	console.log(i);
+}
+```
+
 &#x1F535; **Activity (5 min)**
 
-* Write a _for_ loop that counts from 0 to 100
+* Write a _for_ loop that counts from 999 to 9999.
 
 &#x1F535; **Extra Activity**
 
-* Write a _for loop_ that counts from 100 to 1000.
+* Write a _for loop_ that prints 'This is the song that never ends' to the console 100 times.
 
 &#x1F535; **Extra Activity (5 min)**
 
@@ -569,9 +606,3 @@ FIGURE IT OUT
 <hr>
 
 4:30
-
----
-
-Lab
-
----
