@@ -303,6 +303,11 @@ With the variable `const word = 'believe'`, replace the string "squeeze" by **in
 
 > => "Please believe the cheese"
 
+
+&#x1F535; **Extra**
+
+Output a console log "The sum of 5 and 10 is 15" where the values for 5 and 10 are saved to variables (interpolated), and where 15 comes from those variables being summed.
+
 <br>
 <hr>
 
