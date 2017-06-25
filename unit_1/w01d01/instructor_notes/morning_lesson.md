@@ -64,17 +64,9 @@ _After this lesson, students will be able to:_
 
 ## Terminal
 
-&#x1F535; **Open Finder**
-
-In **Finder**, we can navigate our computer's folders and files: folders contain files and more folders:
-
-![](https://i.imgur.com/CR7PmAO.png)
-
-<br>
-
 &#x1F535; **Open Terminal**
 
-- ⌘ (Command) + Space, or open Spotlight
+- `⌘ (Command) + Space`, or open Spotlight
 - "*Te*rminal"
 - `Enter`
 
@@ -104,6 +96,13 @@ When terminal launches, it will start in your computer's home directory (whateve
 In Terminal-land, **Directories** are the same as **Folders** (we just call them **Directories**).
 
 ![](https://i.imgur.com/tTyOkwV.png)
+
+
+In **Finder**, we can also navigate our computer's folders and files: folders contain files and more folders:
+
+![](https://i.imgur.com/CR7PmAO.png)
+
+<br>
 
 ## Bash Commands
 
@@ -142,8 +141,13 @@ We can navigate to other directories _relative_ to the current working directory
 	- `..` is shorthand for parent
 - `cd` will take you back home
 
+**Shortcuts**
+
 - letter[TAB]
-	- autocompletes
+	- autocompletes (case-sensitive)
+
+- up / down arrow
+	- cycle command history
 
 <br>
 
@@ -184,6 +188,21 @@ Example:
 
 <br>
 
+&#x1F535; **Code Along (4 min)**
+
+* Navigate home `cd`
+* Go to Documents
+* Make directory `exercise`
+* Go into the directory with autocomplete
+* Make two directories `example1` and `example3` and list them
+* Go into `example1` with autocomplete
+* Make two directories on a single line, `example3` and `example4`
+* Go into `example3` and make a file `file1.txt`
+* List the file
+* Navigate back to exercise
+
+<br>
+
 &#x1F535; **Activity (10 min)**
 
 **Construct a Labyrinth**
@@ -211,6 +230,31 @@ If you make a mistake, don't worry, just keep adding the right stuff to the righ
 <br>
 <hr>
 12:50
+
+## Interlude
+
+In the long term, reduce your reliance on the mouse.
+More Bash keyboard shortcuts:
+
+`⌘ K` Clear the Terminal window
+
+`option arrow` Move cursor by word
+
+`Ctrl A` Go to beginning of line
+
+`Ctrl E` Go to end of line
+
+
+`Ctrl K` Kill line to end
+
+`Ctrl U` Kill line to beginning
+
+`Ctrl Y` Yank clipboard to line
+
+
+`cd -` toggle previous directory
+
+<br>
 
 ## Navigation: RELATIVE PATHING
 
@@ -266,14 +310,38 @@ For each of these, write your command on one line, using full paths:
 <br>
 <hr>
 
-1:05
+## (Extra) Navigation: ABSOLUTE PATHING
 
+Move anywhere relative to the home directory: 
 
-5 min break
+`cd ~/` - the path starts in home directory
+
+Example:
+
+- `cd ~/Desktop/Labyrinth/stairway/escher_room`
+
+Navigates to the escher room _no matter where_ you are currently located in your filesystem
+
+> NOTE: You can combine absolute and relative pathing when copying or moving files from one location to another with `cp` and `mv`.
+
+<br>
+
+&#x1F535; **Activity (3 min)**
+
+**Navigate the Labyrinth**
+
+Using absolute pathing:
+
+* Navigate to the throne_room
+* Navigate to the ballroom
+* Navigate to the parlor
+
 
 1:15
+<br>
+<hr>
 
-## Code
+# Code
 
 We are going to:
 
