@@ -32,7 +32,7 @@ Day to day:
 - Visibility of instructor code 
 	- Speak up if the instructor's code is not visible (eg. too small).
 - Thumbsups
-	- We use the thumbsup emoji to gauge completeness of exercises. Click on the thumb when you are done with an exercise.
+	- We use the thumbsup emoji (or in this case the Gizmo / Gremlin emojis) to gauge completeness of exercises. Click on the thumb or Gizmo or Gremlin when you are done with an exercise.
 	
 
 <br>
