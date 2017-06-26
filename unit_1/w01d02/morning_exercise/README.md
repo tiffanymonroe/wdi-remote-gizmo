@@ -132,4 +132,4 @@ When indenting your code, please use the tab button. Do not use your spacebar. L
 [Video](http://www.youtube.com/watch?feature=player_embedded&v=SsoOG6ZeyUI)
 
 <br>
-:computer: Additional [Atom commands](https://github.com/ga-students/wdi-remote-gizmo/wiki/Atom-CheatSheet) can be found on our class wiki.
+:computer: Additional [Atom Commands](https://www.github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be found on our class wiki.
