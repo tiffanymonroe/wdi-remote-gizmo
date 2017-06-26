@@ -38,3 +38,4 @@ To copy your work into
 ## Stretch:
 
 1. Create/style the About page mentioned in the Stretch section of the HTML lab.
+2. Fix the margins, font, layout, etc. to make this site look more professional!
