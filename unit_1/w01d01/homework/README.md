@@ -429,7 +429,7 @@ Watch this video: https://www.youtube.com/watch?v=gvJAcElFMUU
 <hr>
 
 
-#Section 7
+# Section 7
 ## Set Up for Success
 1) Make sure that your correct first and last name are on Zoom so that we know who you are in class.
 2) Make sure that your correct first and last name are displaying in Slack.
