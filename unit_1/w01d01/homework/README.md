@@ -7,7 +7,7 @@
 Title: w01d01 Homework<br>
 Duration: 3 - 4 hrs approx.<br>
 Creator: Thom Page <br>
-Modified by: Kristyn bryan <br>
+Modified by: Kristyn Bryan <br>
 Topics: Terminal, boolean expressions, reading code, while loops, for loops<br>
 
 ---
