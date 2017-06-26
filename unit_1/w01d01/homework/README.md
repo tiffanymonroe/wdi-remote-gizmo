@@ -402,7 +402,7 @@ Already feeling comfortable with these commands and want an extra challenge? Try
 
 <hr>
 
-#Section 6
+# Section 6
 ## Readings & Videos
 
 ## Learning by Making Mistakes
