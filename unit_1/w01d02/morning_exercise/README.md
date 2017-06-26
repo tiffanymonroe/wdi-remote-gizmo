@@ -21,7 +21,28 @@ Prerequisites: None<br>
 :computer: Click on this link https://www.spectacleapp.com/ and download Spectacle.
 
 - Once it's downloaded, you should have little glasses ![spectacle](https://i.imgur.com/qyNXQn0.png) at the top, right of your screen.
-- Click on these glasses and select `Preferences`.
+
+- First change your computer's privacy settings to allow this application:
+- To do this, in your Spotlight, type **Security & Privacy** and you should see this:
+
+https://i.imgur.com/Dx1IrT4.png
+
+- Click on the lock in the bottom left:
+
+https://i.imgur.com/KfqESFZ.png
+
+- Click on Specticle to give it permission:
+
+https://i.imgur.com/atTt1fx.png
+
+- Click on the lock again to save the changes:
+
+https://i.imgur.com/BI6LBjA.png
+
+- Now, click on the glasses at the top of your screen and select `Preferences`.
+
+https://i.imgur.com/uMswWwW.png
+
 - Update your Spectacle Preferences to the following (Note especially: Full screen, right half, left half, bottom half)
 
     ![Spectacle Shortcuts](http://i.imgur.com/ewoNasQ.png)
