@@ -19,7 +19,7 @@ Prerequisite Videos: <br>
 ---
 
 ## Create This Mockup
- ![Mockup](mockup.png)
+ ![Mockup](https://i.imgur.com/XLnBkER.png)
 - Using what you learned about CSS, style the HTML lab so it looks like the mockup.
 
 ## Getting Started
