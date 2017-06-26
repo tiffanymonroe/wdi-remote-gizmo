@@ -434,7 +434,7 @@ Watch this video: https://www.youtube.com/watch?v=gvJAcElFMUU
 1) Make sure that your correct first and last name are on Zoom so that we know who you are in class.
 2) Make sure that your correct first and last name are displaying in Slack.
 3) Add a real photo of yourself in Slack so that we can put a face to a name.
-4) Setup your work space so that you can be successful! Today was day 1 and hopefully it gave you an opportunity to see if your workspace is going to cut it. Take a few minutes now to clean off your desk or rearrange your seat, order a new piece of equiptment that you need, etc.
+4) Setup your work space so that you can be successful and so we can **see your face in the camera**! Today was day 1 and hopefully it gave you an opportunity to see if your workspace is going to cut it. Take a few minutes now to clean off your desk, rearrange your seat / camera, order a new piece of equiptment that you need, etc.
 
 # Homework submission
 
