@@ -67,10 +67,8 @@ Prerequisites: None<br>
 
 ![keyboard shortcuts](http://i.imgur.com/DKCgCgM.png)
 
-    <details><summary>More Mac Shortcuts</summary>
-    https://support.apple.com/en-us/HT201236
-    </details>
-
+#### More Mac Shortcuts
+https://support.apple.com/en-us/HT201236
 
 ## Part 4 - Atom
 - Open Atom so that we can practice these
