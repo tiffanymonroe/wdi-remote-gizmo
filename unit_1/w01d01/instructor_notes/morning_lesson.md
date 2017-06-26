@@ -21,6 +21,7 @@ Day to day:
 	- Headers will be posted for all lessons and labs with links to markdowns and the Zoom channel. 
 - Markdown
 	- Markdown contains reference material related to the lesson 
+	- Slides from the markdown will be posted into Slack during the lesson
 - Sharing screen
 	- The instructor will screenshare for demonstration purposes. Double-click out of fullscreen. 
 - Screen real-estate: markdown, zoom, text editor, terminal, slack
