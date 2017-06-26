@@ -416,6 +416,10 @@ Read this article: http://www.psychotactics.com/art-retain-learning/
 
 ## Get to know Slack
 
+Download the Slack application on your computer and log in (please use the Slack app for class an not the in-browser application): https://slack.com/
+
+Download the Slack application on your phone and log in (if you have a smartphone). 
+
 Read this article: http://thenextweb.com/insider/2015/08/11/the-ultimate-guide-to-doing-anything-in-slack/#gref
 
 Watch this video: https://www.youtube.com/watch?v=gvJAcElFMUU
