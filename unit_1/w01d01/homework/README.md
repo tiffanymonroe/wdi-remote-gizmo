@@ -215,7 +215,7 @@ CHALLENGE
 
 * Figure out how to iterate over **every second** element of the `StarWars` array, starting with the first element.
 
-> => Han, R2D2, Anakin
+> => Han, R2D2, Leia
 
 Skip this challenge if you end up spending too much time on it.
 
