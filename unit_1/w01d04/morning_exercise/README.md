@@ -15,7 +15,10 @@ Prerequisites: Basic HTML <br>
 ---
 # Morning Exercise
 
-## HTML Refresher
+## HTML Refresher - Group Activity
+### Grumpy Cat
+
+![grumpy cat](http://s2.quickmeme.com/img/98/98f9148accd765ffd0e6d2dc052c83e05805138b05f5f85f462c6fb0413ef731.jpg)
 
 Let's use some common HTML tags to create a website about for Grumpy Cat.
 
