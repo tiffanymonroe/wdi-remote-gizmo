@@ -33,8 +33,6 @@ $ node functions.js
 <br>
 <hr>
 
-
-
 # FUNCTIONS
 
 ### BLOCK
@@ -58,7 +56,7 @@ while (BOOLEAN EXPRESSION) {
 We can also control the flow of our code with functions. Functions act like variables and **store** code within a block `{ ... } ` for use later, and for repeated uses.
 
 ```javascript
-var something = function() {
+const func = () => {
 	// code to execute later
 }
 ```
@@ -70,26 +68,30 @@ Using functions is another application of DRY. Don't Repeat Yourself. With a fun
 <br>
 <hr>
 
-11:35
+11:05
 
 ## DEFINING A FUNCTION
 
-&#x1F535; **Code-Along (3 min)**
+&#x1F535; **Watch**
 
 Write a function that logs "Boo!" to the console.
 
-```
-var printBoo = function() {
+```javascript
+const printBoo = () => {
+	console.log('======');
 	console.log('Boo!');
+	console.log('======');
 };
 ```
+
+The code will not run yet. The function needs to be **invoked**.
 
 <br>
 <hr>
 
 ## INVOKING A FUNCTION
 
-```
+```javascript
 printBoo();
 printBoo();
 printBoo();
@@ -103,8 +105,8 @@ The invocation comes **after** the function definition. If you write it beforeha
 
 This will work:
 
-```
-var printBoo = function() {
+```javascript
+const printBoo = () => {
 	console.log('Boo!');
 };
 
@@ -115,10 +117,10 @@ VS
 
 This will not:
 
-```
+```javascript
 printBoo();
 
-var printBoo = function() {
+const printBoo = () => {
 	console.log('Boo!');
 };
 ```
@@ -126,9 +128,36 @@ var printBoo = function() {
 <br>
 <hr>
 
-11:40
+11:15
+
+&#x1F535; **Activity**
+
+* Write a function `printSum` that will console.log the result of 10 + 10
+
+
+&#x1F535; **Extra**
+
+* Write a function `printTriangle` that will print these pound signs to the console (there are 5 console.logs inside the function):
+
+```
+#
+##
+###
+####
+#####
+```
+
+&#x1F535; **Extra**
+
+* Make it so that `printTriangle` will print the pound signs using a for loop (there is only 1 console.log inside the function).  
+
+<br>
+<hr>
+11:22
 
 ## NAMING FUNCTIONS
+
+Always use **const** to declare your functions. It would be a strange day when a function would need to be reassigned. 
 
 The variable you use for a function should contain a **verb**. Functions **do** something, most often:
 
@@ -141,8 +170,8 @@ If the purpose of your function is to check data, for example, use the verb `che
 
 Example function that contains a conditional:
 
-```
-var checkInputLength = function(input) {
+```javascript
+const checkInputLength = (input) => {
 	if (input.length > 10) {
 		console.log('input length is greater than 10)
 	} else {
@@ -155,14 +184,15 @@ Functions should try to do **one thing** and **do it well**.
 
 If a function, called `checkInputLength`, does more than just check input, or doesn't do it very well, then it is a poor function.
 
-Takeaway: Think about appropriate **verbs** to use in your function variable names.
+Takeaway: Think about appropriate **verbs** to use in your function variable names. The verns should indicate the **one thing** that the function does.
+
 <br>
 
-11:50
+11:25
 
 ## ARGUMENTS AND PARAMETERS
 
-The preceding function, `checkInputLength` had a parameter called, `input`.
+The preceding function, `checkInputLength` had a parameter called `input`.
 
 We can write functions that take in a type of variable called a **parameter**. By giving our functions some kind of variable input, we make them much more flexible.
 
@@ -172,66 +202,70 @@ In the below example, the parameter is arbitrarily called `name` (we can call ou
 
 Using **interpolation** I can put the input into a string:
 
-```
-var nameIt = function(name) {
+```javascript
+const sayName = (name) => {
 	console.log('Hello! My name is ' + name);
 }
 ```
 
 When we _invoke_ the function, we can specify the value of the parameter, this is called an **argument**:
 
-```
-nameIt("Leeroy");
+```javascript
+sayName("Frodo");
 ```
 
 We can continue to invoke the function with whatever **arguments** we want:
 
-```
-nameIt("Toblerone");
-nameIt("Jordan");
-nameIt("Tariq");
+```javascript
+sayName("Merry");
+sayName("Pippin");
+sayName("Sam");
 ```
 
 Each time, the output of the function will change to reflect the argument.
 
-11:55
+11:30
 
 ## Argument vs Parameter
 
 The **argument** is the input, the **parameter** is how the input is represented in the function.
 
-```
-var someFunc = function(PARAMETER) {
+```javascript
+const func = (PARAMETER) => {
 	// some code
 }
 
-someFunc(ARGUMENT);
+func(ARGUMENT);
 ```
 
 <br>
 
-&#x1F535; **Activity (8 min)**
+&#x1F535; **Activity (10 min)**
 
-* Write a function `printParameter` that takes a parameter. The function should simply console.log the value of the parameter.
+* Write a function `printParameter` that takes a parameter `input`. The function should simply console.log the value of the `input` parameter.
 * Invoke the function with an argument.
 
 &#x1F535; **Extra**
 
-* Write a function called `minusOne` that takes a parameter. Assuming the argument is a number, print the argument -1.
+* Write a function called `minusOne` that takes a parameter `num`. Assuming the argument is a number, print the argument -1.
 
+```javascript
+minusOne(10);        // 9
+minusOne(100);       // 99
+minusOne(Infinity);  // Infinity
 ```
-minusOne(10);
-```
-
-<br>
-
-> => 9
 
 &#x1F535; **Extra**
 
-* Write a function called `printElement` that takes a parameter.
+* Write a function called `getLastElement` that takes a parameter.
 * Invoke the function with an **array** as the argument.
 * The function should print the **last element** within the array.
+
+```javascript
+getLastElement([1, 2, 3, 4, 5, 6]);       // 6
+getLastElement(['a', 'b', 'c']);          // 'c'
+getLastElement([[1, 2, 3], [4, 5, 6]]);   // [4, 5, 6]
+```
 
 _Hint:_ `arr[arr.length - 1]`
 
