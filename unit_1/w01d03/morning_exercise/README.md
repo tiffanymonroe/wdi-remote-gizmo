@@ -191,6 +191,7 @@ Note: if you have more than one JavaScript file, it would be typical to put thos
 - Take a moment to think about how you can tell if you have successfully linked your stylesheet.
 
 <hr>
+
 #### Connect Your Files
 1) Open your `index.html` in Atom (`atom index.html`)
 2) Write your HMTL code (see above and refrence the videos). HINT: Atom has a built-in way to create an HTML boilerplate! On line 1 of your `index.html` file, type `HTML` and hit `tab`. Note: make sure that you do not put a space after `HTML`.
