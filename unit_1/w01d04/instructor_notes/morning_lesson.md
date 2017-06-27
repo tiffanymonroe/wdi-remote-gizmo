@@ -260,7 +260,7 @@ minusOne(Infinity);  // Infinity
 
 &#x1F535; **Extra**
 
-* Write a function called `getLastElement` that takes a parameter.
+* Write a function called `getLastElement` that takes a parameter `arr`.
 * Invoke the function with an **array** as the argument.
 * The function should print the **last element** within the array.
 
