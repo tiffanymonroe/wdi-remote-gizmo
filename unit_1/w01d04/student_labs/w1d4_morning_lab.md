@@ -5,38 +5,37 @@
 <hr>
 Title: Morning Lab<br>
 Creator: Thom Page<br>
-Topics: Functions<br>
+Topics: Problem solving with functions<br>
 <hr>
 
-## Morning Lab
+## Morning Lab - Problem solving
 
 ### printGreeting
 
-Write a function called `printGreeting` that has a string as an argument and returns a greeting with the argument **interpolated** into the greeting.
+Write a function called `printGreeting` with a parameter `name` that returns a greeting with the argument **interpolated** into the greeting.
 
-```
+```javascript
 console.log(printGreeting("Slimer"));
 ```
 
 > => Hello there, Slimer!
 
-
 <br>
 <hr>
 
-### reverseWord
+### reverseWordOrder
 
-Write a function `reverseWord` that accepts a single argument, a string. The function should return a string with the order of the words reversed. Don't worry about punctuation.
+Write a function `reverseWordOrder` that accepts a single argument, a string. The function should return a string with the order of the words reversed. Don't worry about punctuation.
 
-```
-console.log(reverseWord("Ishmael me Call"));
+```javascript
+console.log(reverseWordOrder("Ishmael me Call"));
 ```
 
 > => "Call me Ishmael"
 
 
 ```
-console.log(reverseWord("I use Lâncome on my comb"));
+console.log(reverseWordOrder("I use Lâncome on my comb"));
 ```
 
 > => "comb my on Lâncome use I"
@@ -59,13 +58,13 @@ If the function receives the string "sub" for the operation parameter, it will r
 
 Do the same thing for multiplication "mult", division "div", and exponent "exp" (where num2 is the exponent of num1).
 
-```
+```javascript
 console.log(calculate(4, 3, "sub"));
 
 => 1
 ```
 
-```
+```javascript
 console.log(calculate(4, 3, "exp"));
 
 => 64
