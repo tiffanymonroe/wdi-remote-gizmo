@@ -1,13 +1,13 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: CSS Mockup <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
 Creator: Matt Huntington<br>
-    Modified by: Karolin Rafalski <br>
+    Modified by: Kristyn Bryan <br>
 Competencies: CSS <br>
 Prerequisite Videos: <br>
 [Introduction to CSS](https://www.youtube.com/watch?v=xWiT2TWCFjc&index=3&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
@@ -17,6 +17,25 @@ Prerequisite Videos: <br>
 
 
 ---
+# CSS Refresher - Group Activity
+### Grumpy Cat
+
+![grumpy cat](http://s2.quickmeme.com/img/98/98f9148accd765ffd0e6d2dc052c83e05805138b05f5f85f462c6fb0413ef731.jpg)
+
+Let's use some CSS to improve our website for Grumpy Cat.
+
+1) Inside your `morning_exercise` folder, create a new directory called `grumpy_site`. 
+2) Navigate inside `grumpy_site` and let's copy the files that we worked on yesterday and save them to our current location:
+ `cp ../../w01d04/morning_exercise/index.html .`
+3) Create a new file called `style.css`
+4) How do we connect the CSS and HTML files?
+5) How can we check to make sure that they're connected?
+4) How do I make a header change the font for the header?
+5) What can I do to add some margins around the paragraph about our client?
+6) How can I change the size of the picture of the cat?
+7) How can I change the color to on the link that goes to the cat's Twitter? 
+
+# Activity
 
 ## Create This Mockup
  ![Mockup](https://i.imgur.com/XLnBkER.png)
