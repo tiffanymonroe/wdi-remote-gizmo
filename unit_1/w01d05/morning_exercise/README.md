@@ -33,7 +33,7 @@ Let's use some CSS to improve our website for Grumpy Cat.
 4) How do I change the font for the header?
 5) What can I do to add some margins around the paragraph about our client?
 6) How can I change the size of the picture of the cat?
-7) How can I change the color to on the link that goes to the cat's Twitter? 
+7) How can I change the color of the text for the link that goes to the cat's Twitter? 
 
 # Activity
 
