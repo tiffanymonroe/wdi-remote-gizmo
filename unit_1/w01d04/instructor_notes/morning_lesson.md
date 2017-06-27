@@ -33,8 +33,6 @@ $ node functions.js
 <br>
 <hr>
 
-
-
 # FUNCTIONS
 
 ### BLOCK
@@ -58,7 +56,7 @@ while (BOOLEAN EXPRESSION) {
 We can also control the flow of our code with functions. Functions act like variables and **store** code within a block `{ ... } ` for use later, and for repeated uses.
 
 ```javascript
-var something = function() {
+const func = () => {
 	// code to execute later
 }
 ```
@@ -70,26 +68,30 @@ Using functions is another application of DRY. Don't Repeat Yourself. With a fun
 <br>
 <hr>
 
-11:35
+11:05
 
 ## DEFINING A FUNCTION
 
-&#x1F535; **Code-Along (3 min)**
+&#x1F535; **Watch**
 
 Write a function that logs "Boo!" to the console.
 
-```
-var printBoo = function() {
+```javascript
+const printBoo = () => {
+	console.log('======');
 	console.log('Boo!');
+	console.log('======');
 };
 ```
+
+The code will not run yet. The function needs to be **invoked**.
 
 <br>
 <hr>
 
 ## INVOKING A FUNCTION
 
-```
+```javascript
 printBoo();
 printBoo();
 printBoo();
@@ -97,15 +99,17 @@ printBoo();
 
 Simply use the name of the variable and use **parentheses** to invoke the function.
 
-There is a huge difference between defining a function and invoking it. If the parentheses are not included, the function will not run.
+If the parentheses are not included, the function will not run.
 
 The invocation comes **after** the function definition. If you write it beforehand, it will be trying to invoke something that doesn't yet exist according to the interpreter.
 
 This will work:
 
-```
-var printBoo = function() {
+```javascript
+const printBoo = () => {
+	console.log('======');
 	console.log('Boo!');
+	console.log('======');
 };
 
 printBoo();
@@ -115,20 +119,48 @@ VS
 
 This will not:
 
-```
+```javascript
 printBoo();
 
-var printBoo = function() {
+const printBoo = () => {
+	console.log('======');
 	console.log('Boo!');
+	console.log('======');
 };
 ```
 
 <br>
 <hr>
 
-11:40
+11:15
+
+&#x1F535; **Activity**
+
+* Write a function `printSum` that will console.log the result of 10 + 10
+
+&#x1F535; **Extra**
+
+* Write a function `printTriangle` that will print these pound signs to the console (there are 5 console.logs inside the function):
+
+```
+#
+##
+###
+####
+#####
+```
+
+&#x1F535; **Challenge**
+
+* Make it so that `printTriangle` will print the pound signs using a for loop (there is only 1 console.log inside the function).  
+
+<br>
+<hr>
+11:22
 
 ## NAMING FUNCTIONS
+
+Always use **const** to declare your functions. It would be a strange day when a function would need to be reassigned. 
 
 The variable you use for a function should contain a **verb**. Functions **do** something, most often:
 
@@ -141,28 +173,29 @@ If the purpose of your function is to check data, for example, use the verb `che
 
 Example function that contains a conditional:
 
-```
-var checkInputLength = function(input) {
+```javascript
+const checkInputLength = (input) => {
 	if (input.length > 10) {
-		console.log('input length is greater than 10)
+		console.log('input length is greater than 10');
 	} else {
-		console.log('input length is not greater than 10'
+		console.log('input length is not greater than 10');
 	}
-}
+};
 ```
 
 Functions should try to do **one thing** and **do it well**.
 
 If a function, called `checkInputLength`, does more than just check input, or doesn't do it very well, then it is a poor function.
 
-Takeaway: Think about appropriate **verbs** to use in your function variable names.
+Takeaway: Think about appropriate **verbs** to use in your function variable names. The verns should indicate the **one thing** that the function does.
+
 <br>
 
-11:50
+11:25
 
 ## ARGUMENTS AND PARAMETERS
 
-The preceding function, `checkInputLength` had a parameter called, `input`.
+The preceding function, `checkInputLength` had a parameter called `input`.
 
 We can write functions that take in a type of variable called a **parameter**. By giving our functions some kind of variable input, we make them much more flexible.
 
@@ -172,109 +205,139 @@ In the below example, the parameter is arbitrarily called `name` (we can call ou
 
 Using **interpolation** I can put the input into a string:
 
-```
-var nameIt = function(name) {
+```javascript
+const sayName = (name) => {
 	console.log('Hello! My name is ' + name);
 }
 ```
 
 When we _invoke_ the function, we can specify the value of the parameter, this is called an **argument**:
 
-```
-nameIt("Leeroy");
+```javascript
+sayName("Frodo");
 ```
 
 We can continue to invoke the function with whatever **arguments** we want:
 
-```
-nameIt("Toblerone");
-nameIt("Jordan");
-nameIt("Tariq");
+```javascript
+sayName("Merry");
+sayName("Pippin");
+sayName("Sam");
 ```
 
 Each time, the output of the function will change to reflect the argument.
 
-11:55
+11:30
 
 ## Argument vs Parameter
 
 The **argument** is the input, the **parameter** is how the input is represented in the function.
 
-```
-var someFunc = function(PARAMETER) {
+```javascript
+const func = (PARAMETER) => {
 	// some code
 }
 
-someFunc(ARGUMENT);
+func(ARGUMENT);
 ```
 
 <br>
 
-&#x1F535; **Activity (8 min)**
+&#x1F535; **Activity (10 min)**
 
-* Write a function `printParameter` that takes a parameter. The function should simply console.log the value of the parameter.
+* Write a function `printParameter` that takes a parameter `input`. The function should simply console.log the value of the `input` parameter.
 * Invoke the function with an argument.
 
 &#x1F535; **Extra**
 
-* Write a function called `minusOne` that takes a parameter. Assuming the argument is a number, print the argument -1.
+* Write a function called `minusOne` that takes a parameter `num`. Assuming the argument is a number, print the argument -1.
 
+```javascript
+minusOne(10);        // 9
+minusOne(100);       // 99
+minusOne(Infinity);  // Infinity
 ```
-minusOne(10);
-```
-
-<br>
-
-> => 9
 
 &#x1F535; **Extra**
 
-* Write a function called `printElement` that takes a parameter.
+* Write a function called `getLastElement` that takes a parameter `arr`.
 * Invoke the function with an **array** as the argument.
 * The function should print the **last element** within the array.
+
+```javascript
+getLastElement([1, 2, 3, 4, 5, 6]);       // 6
+getLastElement(['a', 'b', 'c']);          // 'c'
+getLastElement([[1, 2, 3], [4, 5, 6]]);   // [4, 5, 6]
+```
 
 _Hint:_ `arr[arr.length - 1]`
 
 <br>
 <hr>
 
-12:10
+11:45
 
 ## Multiple Parameters
 
-We can also use multiple parameters in our functions. A function can take any number of parameters.
+We can use multiple parameters in our functions. A function can take any number of parameters.
 
-```
-var multiply = function(num1, num2) {
-	console.log(num1 * num2)
+```javascript
+const multiply = (num1, num2) => {
+	console.log(num1 * num2);
 }
 ```
+
 When you invoke the function, you generally want to supply the right number of arguments.
 
-```
+```javascript
 multiply(4, 4)
 
 => 16
 ```
+
+&#x1F535; **Activity**
+
+* Write a function `makeSentence` that takes **three** parameters and **interpolates** them into a fully formed sentence.
+
+```javascript
+makeSentence('I', 'want', 'chimichangas');
+```
+
+> => 'Oh boy, do I want chimichangas or what?'
+
+&#x1F535; **Extra**
+
+* Write a function `divideThreeNums` that takes **three** parameters and prints the third parameter divided by the result of the second parameter divided by the first.
+
+```javascript
+divideThreeNums(10, 5, 2)   // 4
+divideThreeNums(30, 2, 9)   // 135
+```
+
+
+<br>
+<hr>
+
+11:53
 
 ## RETURN
 
 * `return` gives a function its value.
 * `return` stops the function.
 
-## giving a function its value
+## return: give a function value
 
 We specify the output of a function with the `return` statement. The `return` statement is different from `console.log()` in that we can use the _return value_ of a function to pass as data, whereas we cannot with a `console.log()`.
 
 A contrived example:
 
-```
-var ten = function() {
+```javascript
+const ten = () => {
 	return 10;
 }
 ```
 
-```
+```javascript
 console.log(8 + ten());
 
 => 18
@@ -282,13 +345,13 @@ console.log(8 + ten());
 
 This is the main difference between `return` and `console.log()`. The output value of a function can not come from a console.log.
 
-```
-var ten = function() {
+```javascript
+const ten = () => {
 	console.log(10);
 }
 ```
 
-```
+```javascript
 console.log(8 + ten());
 
 => 10
@@ -299,66 +362,68 @@ This is because it is trying to add 8 to `undefined`.
 
 A function is only **defined** if it has a return value.
 
-```
-var multiply = function(num1, num2) {
+```javascript
+const multiply = function(num1, num2) {
 	return num1 * num2;
 }
 ```
 
 The `multiply` function has a **return value** of `num1` * `num2`. It does not just print to the console.
 
-## stopping a function
-
-**RETURN** sends the value of your function immediately. You can use **return** to terminate the function.
-
-Example:
-
-```
-var example = function(input) {
-
-	if (input == "none") {
-		return 0;
-	}
-
-	return 1;
-
-};
-```
-
-```
-example("none")
-=> 0
-
-example("two");
-=> 1
-```
-
-## console.log a function with a  return value
+## console.log a function with a return value
 
 Sometimes a returned value will not appear in your console. This is normal. **A return is not a console.log**. To see the return value of a function, you will want to console.log the invocation:
 
-```
-console.log(example("one"));
-
-=> 1
+```javascript
+console.log(multiply(2, 10));
 ```
 
-12:20
+> => 20
+
+- Since `multiply` **returns** a value, we can use the return value of `multiply` as an argument to an invocation of `multiply`.
+
+```javascript
+console.log(multiply(multiply(2, 3), multiply(9, 4)));
+```
+
+> => 216
+
+## return: stopping a function
+
+**RETURN** sends the value of your function immediately. You can use **return** to terminate the function.
+
+Example: will the function return 0 or 1? (It won't return both)
+
+```javascript
+const example = (input) => {
+	if (input == "none") return 0;
+	return 1;
+};
+```
+
+```javascript
+example("none")     // 0
+example("two");     // 1
+```
+
+12:05
+
+&#x1F535; **Activity**
+
+* Write a function `calculateArea` that takes two parameters `width` and `length` and multiplies them. This will give us the area of a rectangle.
+* Invoke the function a couple of times with different arguments each time
+
+&#x1F535; **Activity and Research**
+
+* Write a function that takes three parameters (numbers), sums them, converts the sum into a string and returns the string (eg. `"123"`)
+* Use your google-fu to research converting a number into a string
+* Invoke the function a couple of times with different arguments each time
+
 &#x1F535; **Extra**
 
-Write the following functions and test to make sure they work:
+* Write a function that takes two parameters (strings) and returns `true` (Boolean) if the two strings are identical, `false` if not.
 
-* Write a function called `calculateArea` that takes two parameters `width` and `length` and multiplies them. This will give us the area of a rectangle.
-* Invoke the function a couple of times with different arguments each time
-
-* Write a function that takes three parameters (numbers), sums them, and converts the sum into a string (eg. `"123"`)
-* Invoke the function a couple of times with different arguments each time
-
-EXTRA:
-
-* Write a function that takes two parameters (strings) and console.logs whether the two strings are identical
-
-EXPERIMENT
+&#x1F535; **Experiment**
 
 * What happens if you supply more arguments than there are parameters?
 * What happens if you supply fewer arguments than there are parameters?
@@ -366,11 +431,24 @@ EXPERIMENT
 <br>
 <hr>
 
+12:15
+
+# Problem-solving
+
+### Palindrome
+
+Writing a function to determine if a word is a Palindrome.
+
+Pseudo-code and work in layers, one layer at a time. Don't jump ahead until each piece has been tested and works.
+
+* reverse the word (how?)
+* check if the word is the same as the reverse (how?)
+* return true or false
 
 <br>
 <hr>
 
-11:05
+# Extra stuff: built-in methods
 
 ## String and array methods
 
