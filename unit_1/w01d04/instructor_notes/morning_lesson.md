@@ -176,11 +176,11 @@ Example function that contains a conditional:
 ```javascript
 const checkInputLength = (input) => {
 	if (input.length > 10) {
-		console.log('input length is greater than 10)
+		console.log('input length is greater than 10');
 	} else {
-		console.log('input length is not greater than 10'
+		console.log('input length is not greater than 10');
 	}
-}
+};
 ```
 
 Functions should try to do **one thing** and **do it well**.
