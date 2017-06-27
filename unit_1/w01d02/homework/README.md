@@ -92,9 +92,9 @@ The commit message should read: <br>
 
 #### Add some content to your site
 
-1. Insert a professional image of yourself ('img' tag); it should be placed right after your 'h1' tags<br>
+1. Insert a professional image of yourself or someone else ('img' tag); it should be placed right after your 'h1' tags<br>
 1. Insert an unordered list of your last three positions ('ul' tag)<br>
-1. Create links to your LinkedIn and Facebook/Twitter pages ('a' tag)<br>1. Use level-three heading tags to create headings before your positions and before your links<br>
+1. Create links to your (or someone's) LinkedIn and Facebook/Twitter pages ('a' tag)<br>1. Use level-three heading tags to create headings before your positions and before your links<br>
 
 <hr>
 &#x1F534; **Commit your work.** <br>
