@@ -7,7 +7,7 @@ Title: Morning Lesson<br>
 Type: Lesson<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page <br>
-Topics: Built-in Methods, Functions (Arrow Functions)<br>
+Topics: Functions (Arrow Functions)<br>
 
 ---
 
@@ -15,197 +15,33 @@ Topics: Built-in Methods, Functions (Arrow Functions)<br>
 
 _After this lesson students will be able to:_
 
-* Use built-in methods on Strings and Arrays
-* Chain methods together
-* Write a function with a parameter
-* Write a function with multiple parameters and a return value
+* Write an arrow function with a parameter
+* Write an arrow function with multiple parameters and a return value
 
 ---
 
 ## Setup
 
-In `w01d04/student_examples` make a file `morning_code.js`
+In `student_examples` for today, make a file `functions.js`
 
 Test that a console.log will appear in Terminal when you run the file.
 
 ```
-node morning_code.js
+$ node functions.js
 ```
 
 <br>
 <hr>
 
-11:05
 
-## String and array methods
 
-**Refresher**
-
-A method can be chained to a variable to perform an action. Example:
-
-```
-var message = "hello there";
-
-console.log(message.toUpperCase());
-```
-
-> => "HELLO THERE"
-
-`.toUpperCase()` is a **method**.
-
-<br>
-
-
-## Datatypes
-
-There are different methods for different **datatypes**.
-
-Strings have different methods than arrays. In general, you can't use array methods on strings and vice versa.
-
-Example of an **array** method:
-
-```
-var letters = ['A', 'B', 'C', 'D'];
-
-console.log(letters.join(''));
-```
-
-> => ABCD
-
-`.join()` is a **method**, but it is only for arrays.
-
-
-It will not work on a string:
-
-```
-var letters = "ABCD";
-
-console.log(letters.join(''));
-```
-
-![](https://i.imgur.com/Ire2ntQ.png)
-
-> Here, `letters.join` is not a function because `.join` is not a method you can use on strings. See: TypeError
-
-
-**.length is a method you can use on both strings and arrays**
-
-<br>
-
-## Methods can change the datatype
-
-If we use `.join('')` on an array as intended:
-
-```
-var letters = ['A', 'B', 'C', 'D'];
-
-console.log(letters.join(''));
-```
-
-It will however output a **string**. Be mindful of this when it comes to **chaining methods**.
-
-For example `.reverse()` is an **array** method.
-
-```
-console.log(letters.join.reverse());
-```
-
-![](https://i.imgur.com/NuPCUDB.png)
-
-It will not work because the result of `letters.join('')` is a string.
-
-<br>
-
-## Chaining methods
-
-You can chain methods together:
-
-```
-var str = "doodly doo";
-
-console.log(str.split('').length);
-```
-
-> => 10
-
-**Be mindful of datatypes**
-
-This will not work:
-
-```
-var str = "doodly doo";
-
-console.log(str.split('').toUpperCase);
-```
-
-![](https://i.imgur.com/LDYjytH.png)
-
-&#x1F535; **Why Not?**
-
-Notice the error says `TypeError`. This is a big indicator as to what the problem is.
-
-We are trying to use `.toUpperCase()` on the wrong type of data. In this case, we are trying to use it on an array, when it is not an array method. It is a string method.
-
-11:20
-
-&#x1F535; **Activity**
-
-RESEARCH
-
-How can you reverse a string?
-
-* Try to use `.reverse()` on a **string**. Does it work?
-
-* If it does not work, what is the error telling you?
-
-* Try to use `.reverse()` on an array instead. Does it work?
-
-There is no `.reverse()` method for strings, but there _is_ one for arrays.
-
-Using method chaining, figure out how to turn a string into an array, reverse the array, and turn the reversed array back into a string. This is one way to reverse a string. Chain the methods together on one line.
-
-[Some string methods](https://www.w3schools.com/js/js_string_methods.asp)
-
-[Some array methods](https://www.w3schools.com/js/js_array_methods.asp)
-
-<br>
-
-&#x1F535; **Extra**
-
-Look into `regular expressions` and the [.match()](https://www.w3schools.com/jsref/jsref_match.asp) method. Use `.match()` only to select parts of a reversed string that match a pattern.
-
-&#x1F535; **Extra**
-
-Start in on this [regular expressions](https://regexone.com/) exercise.
-
-<br>
-<hr>
-
-11:30
-<br>
-<hr>
-
-
-
-# CONTROL FLOW
-
-There are three kinds of **control flow**
-
-* Loops
-* Conditionals
-* Functions
-
-Functions are the third and final type of **control flow** along with conditionals and loops.
-
-Control flow is a means by which we can alter the flow of our code. The **executed** code will be in a different order than code we have **written**, which typically runs in a pedestrian line-by-line way.
-
-## Control Flow recap
+# FUNCTIONS
 
 ### BLOCK
 
 Conditionals _skip_ lines of code within a block `{ ... } ` if a condition is not true:
 
-```
+```javascript
 if (BOOLEAN EXPRESSION) {
 	// code might get skipped
 }
@@ -213,7 +49,7 @@ if (BOOLEAN EXPRESSION) {
 
 Loops _repeat_ lines of code within a block `{ ... }` according to our instructions:
 
-```
+```javascript
 while (BOOLEAN EXPRESSION) {
 	// code is repeated
 }
@@ -221,7 +57,7 @@ while (BOOLEAN EXPRESSION) {
 
 We can also control the flow of our code with functions. Functions act like variables and **store** code within a block `{ ... } ` for use later, and for repeated uses.
 
-```
+```javascript
 var something = function() {
 	// code to execute later
 }
@@ -235,8 +71,6 @@ Using functions is another application of DRY. Don't Repeat Yourself. With a fun
 <hr>
 
 11:35
-
-# FUNCTIONS
 
 ## DEFINING A FUNCTION
 
@@ -528,6 +362,159 @@ EXPERIMENT
 
 * What happens if you supply more arguments than there are parameters?
 * What happens if you supply fewer arguments than there are parameters?
+
+<br>
+<hr>
+
+
+<br>
+<hr>
+
+11:05
+
+## String and array methods
+
+**Refresher**
+
+A method can be chained to a variable to perform an action. Example:
+
+```javascript
+const message = "hello there";
+
+console.log(message.toUpperCase());
+```
+
+> => "HELLO THERE"
+
+`.toUpperCase()` is a **method**.
+
+<br>
+
+
+## Datatypes
+
+There are different methods for different **datatypes**.
+
+Strings have different methods than arrays. In general, you can't use array methods on strings and vice versa.
+
+Example of an **array** method:
+
+```javascript
+const letters = ['A', 'B', 'C', 'D'];
+
+console.log(letters.join(''));
+```
+
+> => ABCD
+
+`.join()` is a **method**, but it is only for arrays.
+
+
+It will not work on a string:
+
+```javascript
+const letters = "ABCD";
+
+console.log(letters.join(''));
+```
+
+![](https://i.imgur.com/Ire2ntQ.png)
+
+> Here, `letters.join` is not a function because `.join` is not a method you can use on strings. See: TypeError
+
+
+**.length is a method you can use on both strings and arrays**
+
+<br>
+
+## Methods can change the datatype
+
+If we use `.join('')` on an array as intended:
+
+```javascript
+const letters = ['A', 'B', 'C', 'D'];
+
+console.log(letters.join(''));
+```
+
+It will however output a **string**. Be mindful of this when it comes to **chaining methods**.
+
+For example `.reverse()` is an **array** method.
+
+```
+console.log(letters.join.reverse());
+```
+
+![](https://i.imgur.com/NuPCUDB.png)
+
+It will not work because the result of `letters.join('')` is a string.
+
+<br>
+
+## Chaining built-in methods
+
+You can chain methods together:
+
+```javascript
+const str = "doodly doo";
+
+console.log(str.split('').length);
+```
+
+> => 10
+
+**Be mindful of datatypes**
+
+This will not work:
+
+```javascript
+const str = "doodly doo";
+
+console.log(str.split('').toUpperCase);
+```
+
+![](https://i.imgur.com/LDYjytH.png)
+
+&#x1F535; **Why Not?**
+
+Notice the error says `TypeError`. This is a big indicator as to what the problem is.
+
+We are trying to use `.toUpperCase()` on the wrong type of data. In this case, we are trying to use it on an array, when it is not an array method. It is a string method.
+
+11:20
+
+&#x1F535; **Activity**
+
+RESEARCH
+
+How can you reverse a string?
+
+* Try to use `.reverse()` on a **string**. Does it work?
+
+* If it does not work, what is the error telling you?
+
+* Try to use `.reverse()` on an array instead. Does it work?
+
+There is no `.reverse()` method for strings, but there _is_ one for arrays.
+
+
+&#x1F535; **Activity**
+
+Using method chaining, figure out how to turn a string into an array, reverse the array, and turn the reversed array back into a string. This is one way to reverse a string. Chain the methods together on one line.
+
+[Some string methods](https://www.w3schools.com/js/js_string_methods.asp)
+
+[Some array methods](https://www.w3schools.com/js/js_array_methods.asp)
+
+<br>
+
+&#x1F535; **Extra**
+
+Look into `regular expressions` and the [.match()](https://www.w3schools.com/jsref/jsref_match.asp) method. Use `.match()` only to select parts of a reversed string that match a pattern.
+
+&#x1F535; **Extra**
+
+Start in on this [regular expressions](https://regexone.com/) exercise.
 
 <br>
 <hr>
