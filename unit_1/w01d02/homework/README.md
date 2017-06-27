@@ -92,9 +92,9 @@ The commit message should read: <br>
 
 #### Add some content to your site
 
-1. Insert a professional image of yourself ('img' tag); it should be placed right after your 'h1' tags<br>
+1. Insert a professional image of yourself or someone else ('img' tag); it should be placed right after your 'h1' tags<br>
 1. Insert an unordered list of your last three positions ('ul' tag)<br>
-1. Create links to your LinkedIn and Facebook/Twitter pages ('a' tag)<br>1. Use level-three heading tags to create headings before your positions and before your links<br>
+1. Create links to your (or someone's) LinkedIn and Facebook/Twitter pages ('a' tag)<br>1. Use level-three heading tags to create headings before your positions and before your links<br>
 
 <hr>
 &#x1F534; **Commit your work.** <br>
@@ -193,5 +193,5 @@ The commit message should read: <br>
 
  - Follow the instructions for submitting homework, found in [the wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Homework-Submission).
 
- - Submit your github issue sometime between 7 - 10pm EST so that you can ask the TA questions if you have them. You can continue to work on the homework and push your solutions, but as part of your homework tonight, you should submit the issue during TA hours.
+ - Submit your github issue sometime between **7 - 10pm EST** tonight so that you can ask the TA questions if you have them. You can continue to work on the homework and push your solutions, but as part of your homework tonight, you should submit the issue during TA hours.
  
