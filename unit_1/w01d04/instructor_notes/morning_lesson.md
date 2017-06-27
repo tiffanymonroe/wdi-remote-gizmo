@@ -275,17 +275,18 @@ _Hint:_ `arr[arr.length - 1]`
 <br>
 <hr>
 
-12:10
+11:45
 
 ## Multiple Parameters
 
-We can also use multiple parameters in our functions. A function can take any number of parameters.
+We can use multiple parameters in our functions. A function can take any number of parameters.
 
 ```
-var multiply = function(num1, num2) {
-	console.log(num1 * num2)
+const multiply = (num1, num2) => {
+	console.log(num1 * num2);
 }
 ```
+
 When you invoke the function, you generally want to supply the right number of arguments.
 
 ```
@@ -294,24 +295,49 @@ multiply(4, 4)
 => 16
 ```
 
+&#x1F535; **Activity**
+
+* Write a function `makeSentence` that takes **three** parameters and **interpolates** them into a fully formed sentence.
+
+```javascript
+makeSentence('I', 'want', 'chimichangas');
+```
+
+> => 'Oh boy, do I want chimichangas or what?'
+
+&#x1F535; **Extra**
+
+* Write a function `divideThreeNums` that takes **three** parameters and prints the third parameter divided by result of the second parameter divided by the first.
+
+```javascript
+divideThreeNums(10, 5, 2)   // 4
+divideThreeNums(30, 2, 9)   // 135
+```
+
+
+<br>
+<hr>
+
+11:53
+
 ## RETURN
 
 * `return` gives a function its value.
 * `return` stops the function.
 
-## giving a function its value
+## return: give a function value
 
 We specify the output of a function with the `return` statement. The `return` statement is different from `console.log()` in that we can use the _return value_ of a function to pass as data, whereas we cannot with a `console.log()`.
 
 A contrived example:
 
-```
-var ten = function() {
+```javascript
+const ten = () => {
 	return 10;
 }
 ```
 
-```
+```javascript
 console.log(8 + ten());
 
 => 18
@@ -319,13 +345,13 @@ console.log(8 + ten());
 
 This is the main difference between `return` and `console.log()`. The output value of a function can not come from a console.log.
 
-```
-var ten = function() {
+```javascript
+const ten = () => {
 	console.log(10);
 }
 ```
 
-```
+```javascript
 console.log(8 + ten());
 
 => 10
@@ -337,65 +363,67 @@ This is because it is trying to add 8 to `undefined`.
 A function is only **defined** if it has a return value.
 
 ```
-var multiply = function(num1, num2) {
+const multiply = function(num1, num2) {
 	return num1 * num2;
 }
 ```
 
 The `multiply` function has a **return value** of `num1` * `num2`. It does not just print to the console.
 
-## stopping a function
-
-**RETURN** sends the value of your function immediately. You can use **return** to terminate the function.
-
-Example:
-
-```
-var example = function(input) {
-
-	if (input == "none") {
-		return 0;
-	}
-
-	return 1;
-
-};
-```
-
-```
-example("none")
-=> 0
-
-example("two");
-=> 1
-```
-
-## console.log a function with a  return value
+## console.log a function with a return value
 
 Sometimes a returned value will not appear in your console. This is normal. **A return is not a console.log**. To see the return value of a function, you will want to console.log the invocation:
 
-```
-console.log(example("one"));
-
-=> 1
+```javascript
+console.log(multiply(2, 10));
 ```
 
-12:20
-&#x1F535; **Extra**
+> => 20
 
-Write the following functions and test to make sure they work:
+- Since `multiply` **returns** a value, we can use the return value of `multiply` as an argument to an invocation of `multiply`.
 
-* Write a function called `calculateArea` that takes two parameters `width` and `length` and multiplies them. This will give us the area of a rectangle.
+```javascript
+console.log(multiply(multiply(2, 3), multiply(9, 4)));
+```
+
+> => 216
+
+## return: stopping a function
+
+**RETURN** sends the value of your function immediately. You can use **return** to terminate the function.
+
+Example: will the function return 0 or 1? (It won't return both)
+
+```javascript
+const example = (input) => {
+	if (input == "none") return 0;
+	return 1;
+};
+```
+
+```javascript
+example("none")     // 0
+example("two");     // 1
+```
+
+12:05
+
+&#x1F535; **Activity**
+
+* Write a function `calculateArea` that takes two parameters `width` and `length` and multiplies them. This will give us the area of a rectangle.
 * Invoke the function a couple of times with different arguments each time
 
-* Write a function that takes three parameters (numbers), sums them, and converts the sum into a string (eg. `"123"`)
+&#x1F535; **Activity and Research**
+
+* Write a function that takes three parameters (numbers), sums them, converts the sum into a string and returns the string (eg. `"123"`)
+* Use your google-fu to research converting a number into a string
 * Invoke the function a couple of times with different arguments each time
 
-EXTRA:
+&#x1F535; **Activity**
 
-* Write a function that takes two parameters (strings) and console.logs whether the two strings are identical
+* Write a function that takes two parameters (strings) and returns `true` (Boolean) if the two strings are identical, `false` if not.
 
-EXPERIMENT
+&#x1F535; **Activity**
 
 * What happens if you supply more arguments than there are parameters?
 * What happens if you supply fewer arguments than there are parameters?
@@ -403,11 +431,24 @@ EXPERIMENT
 <br>
 <hr>
 
+12:15
+
+# Problem-solving
+
+### Palindrome
+
+Writing a function to determine if a word is a Palindrome.
+
+Work in layers, one layer at a time. Don't jump ahead until each piece has been tested and works.
+
+* reverse the word (how?)
+* check if the word is the same as the reverse (how?)
+* return true or false
 
 <br>
 <hr>
 
-11:05
+# Extra stuff: built-in methods
 
 ## String and array methods
 
