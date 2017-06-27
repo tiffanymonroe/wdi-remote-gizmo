@@ -99,7 +99,7 @@ printBoo();
 
 Simply use the name of the variable and use **parentheses** to invoke the function.
 
-There is a huge difference between defining a function and invoking it. If the parentheses are not included, the function will not run.
+If the parentheses are not included, the function will not run.
 
 The invocation comes **after** the function definition. If you write it beforehand, it will be trying to invoke something that doesn't yet exist according to the interpreter.
 
@@ -107,7 +107,9 @@ This will work:
 
 ```javascript
 const printBoo = () => {
+	console.log('======');
 	console.log('Boo!');
+	console.log('======');
 };
 
 printBoo();
@@ -121,7 +123,9 @@ This will not:
 printBoo();
 
 const printBoo = () => {
+	console.log('======');
 	console.log('Boo!');
+	console.log('======');
 };
 ```
 
@@ -133,7 +137,6 @@ const printBoo = () => {
 &#x1F535; **Activity**
 
 * Write a function `printSum` that will console.log the result of 10 + 10
-
 
 &#x1F535; **Extra**
 
@@ -147,7 +150,7 @@ const printBoo = () => {
 #####
 ```
 
-&#x1F535; **Extra**
+&#x1F535; **Challenge**
 
 * Make it so that `printTriangle` will print the pound signs using a for loop (there is only 1 console.log inside the function).  
 
