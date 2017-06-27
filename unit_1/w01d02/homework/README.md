@@ -183,15 +183,15 @@ The commit message should read: <br>
 
 #### Prep for Morning Review
 
-- Tomorrow's morning exercise will be a review, so come with questions prepared regarding git/github, terminal or anything else covered so far.
+1. Tomorrow's morning exercise will be a review, so come with questions prepared regarding git/github, terminal or anything else covered so far.
 
 #### Submission
 
- - Inside this folder (w01d02/homework), you should now have a file called `answers.md`, a file called `loops.js`, and a folder called `resume_page` which contains `index.html`, `projects.html`, and `style.css`.
+ 1. Inside this folder (w01d02/homework), you should now have a file called `answers.md`, a file called `loops.js`, and a folder called `resume_page` which contains `index.html`, `projects.html`, and `style.css`.
  
- - You should have been adding and committing along the way, but please type `git status` one last time to make sure that everything is commited. If it's not, please commit.
+ 2. You should have been adding and committing along the way, but please type `git status` one last time to make sure that everything is commited. If it's not, please commit.
 
- - Follow the instructions for submitting homework, found in [the wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Homework-Submission).
+ 3. Follow the instructions for submitting homework, found in [the wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Homework-Submission).
 
- - Submit your github issue sometime between **7 - 10pm EST** tonight so that you can ask the TA questions if you have them. You can continue to work on the homework and push your solutions, but as part of your homework tonight, you should submit the issue during TA hours.
+ 4. Submit your github issue sometime between **7 - 10pm EST** tonight so that you can ask the TA questions if you have them. You can continue to work on the homework and push your solutions, but as part of your homework tonight, you should submit the issue during TA hours.
  
