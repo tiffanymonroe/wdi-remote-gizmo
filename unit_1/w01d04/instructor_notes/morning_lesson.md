@@ -439,7 +439,7 @@ example("two");     // 1
 
 Writing a function to determine if a word is a Palindrome.
 
-Work in layers, one layer at a time. Don't jump ahead until each piece has been tested and works.
+Pseudo-code and work in layers, one layer at a time. Don't jump ahead until each piece has been tested and works.
 
 * reverse the word (how?)
 * check if the word is the same as the reverse (how?)
