@@ -281,7 +281,7 @@ _Hint:_ `arr[arr.length - 1]`
 
 We can use multiple parameters in our functions. A function can take any number of parameters.
 
-```
+```javascript
 const multiply = (num1, num2) => {
 	console.log(num1 * num2);
 }
@@ -289,7 +289,7 @@ const multiply = (num1, num2) => {
 
 When you invoke the function, you generally want to supply the right number of arguments.
 
-```
+```javascript
 multiply(4, 4)
 
 => 16
@@ -307,7 +307,7 @@ makeSentence('I', 'want', 'chimichangas');
 
 &#x1F535; **Extra**
 
-* Write a function `divideThreeNums` that takes **three** parameters and prints the third parameter divided by result of the second parameter divided by the first.
+* Write a function `divideThreeNums` that takes **three** parameters and prints the third parameter divided by the result of the second parameter divided by the first.
 
 ```javascript
 divideThreeNums(10, 5, 2)   // 4
@@ -362,7 +362,7 @@ This is because it is trying to add 8 to `undefined`.
 
 A function is only **defined** if it has a return value.
 
-```
+```javascript
 const multiply = function(num1, num2) {
 	return num1 * num2;
 }
@@ -419,11 +419,11 @@ example("two");     // 1
 * Use your google-fu to research converting a number into a string
 * Invoke the function a couple of times with different arguments each time
 
-&#x1F535; **Activity**
+&#x1F535; **Extra**
 
 * Write a function that takes two parameters (strings) and returns `true` (Boolean) if the two strings are identical, `false` if not.
 
-&#x1F535; **Activity**
+&#x1F535; **Experiment**
 
 * What happens if you supply more arguments than there are parameters?
 * What happens if you supply fewer arguments than there are parameters?
