@@ -30,7 +30,7 @@ Let's use some CSS to improve our website for Grumpy Cat.
 3) Create a new file called `style.css`
 4) How do we connect the CSS and HTML files?
 5) How can we check to make sure that they're connected?
-4) How do I make a header change the font for the header?
+4) How do I change the font for the header?
 5) What can I do to add some margins around the paragraph about our client?
 6) How can I change the size of the picture of the cat?
 7) How can I change the color to on the link that goes to the cat's Twitter? 
