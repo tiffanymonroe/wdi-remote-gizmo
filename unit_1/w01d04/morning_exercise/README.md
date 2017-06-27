@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: HTML Mockup <br>
@@ -15,9 +15,22 @@ Prerequisites: Basic HTML <br>
 ---
 # Morning Exercise
 
-<hr>
+## HTML Refresher - Group Activity
+### Grumpy Cat
 
+![grumpy cat](http://s2.quickmeme.com/img/98/98f9148accd765ffd0e6d2dc052c83e05805138b05f5f85f462c6fb0413ef731.jpg)
 
+Let's use some common HTML tags to create a website for Grumpy Cat.
+
+1) Inside your `morning_exercise` folder, let's create a file for this cat site. What should we name the file?
+2) How do I make add the boilerplate needed for an HTML file?
+3) How do I add a title to my file so that you can see the name on the browser tab?
+4) How do I make a header?
+5) What tag should I used to add a paragraph about our client?
+6) How can I add a picture of the cat? Here's the link that I want to use: 
+https://quelchenonsapevi.it/wp-content/uploads/2016/06/0000-3.jpeg
+7) How can I make a link to go to the cat's Twitter? Here's the link that the cat wants us to use: 
+https://twitter.com/realgrumpycat?lang=en
 
 # Activity
 

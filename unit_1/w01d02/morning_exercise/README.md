@@ -21,7 +21,28 @@ Prerequisites: None<br>
 :computer: Click on this link https://www.spectacleapp.com/ and download Spectacle.
 
 - Once it's downloaded, you should have little glasses ![spectacle](https://i.imgur.com/qyNXQn0.png) at the top, right of your screen.
-- Click on these glasses and select `Preferences`.
+
+- First change your computer's privacy settings to allow this application:
+- To do this, in your Spotlight, type **Security & Privacy** and you should see this:
+
+![security](https://i.imgur.com/Dx1IrT4.png)
+
+- Click on the lock in the bottom left:
+
+![lock](https://i.imgur.com/KfqESFZ.png)
+
+- Click on Specticle to give it permission:
+
+![permission](https://i.imgur.com/atTt1fx.png)
+
+- Click on the lock again to save the changes:
+
+![save changes](https://i.imgur.com/BI6LBjA.png)
+
+- Now, click on the glasses at the top of your screen and select `Preferences`.
+
+![preferences](https://i.imgur.com/uMswWwW.png)
+
 - Update your Spectacle Preferences to the following (Note especially: Full screen, right half, left half, bottom half)
 
     ![Spectacle Shortcuts](http://i.imgur.com/ewoNasQ.png)
@@ -32,11 +53,10 @@ Prerequisites: None<br>
 ### Be a lazy programmer
 - You will find yourself having to re-run applications when testing your app or you will find yourself needing to retype certain lines over and over again. Be lazy! It will give you more energy for the important stuff.
 - Open your terminal and let's try out a few of these.
-    <details><summary>Command Line Shortcuts</summary>
-
-    ![Command Line Shortcuts](http://i.imgur.com/Omz33nF.png)
-
-    </details>
+    
+#### Command Line Shortcuts
+![Command Line Shortcuts](http://i.imgur.com/Omz33nF.png)
+    
 - Are you running the same command over and over again? Use the **up arrow** to show your previous commands. Hit **enter** to run them.
 
 
@@ -47,10 +67,8 @@ Prerequisites: None<br>
 
 ![keyboard shortcuts](http://i.imgur.com/DKCgCgM.png)
 
-    <details><summary>More Mac Shortcuts</summary>
-    https://support.apple.com/en-us/HT201236
-    </details>
-
+#### More Mac Shortcuts
+https://support.apple.com/en-us/HT201236
 
 ## Part 4 - Atom
 - Open Atom so that we can practice these
@@ -114,4 +132,4 @@ When indenting your code, please use the tab button. Do not use your spacebar. L
 [Video](http://www.youtube.com/watch?feature=player_embedded&v=SsoOG6ZeyUI)
 
 <br>
-:computer: Additional [Atom commands](https://github.com/ga-students/wdi-remote-gizmo/wiki/Atom-CheatSheet) can be found on our class wiki.
+:computer: Additional [Atom Commands](https://www.github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet) can be found on our class wiki.
