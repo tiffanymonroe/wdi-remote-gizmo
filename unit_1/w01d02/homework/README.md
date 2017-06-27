@@ -193,5 +193,5 @@ The commit message should read: <br>
 
  - Follow the instructions for submitting homework, found in [the wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Homework-Submission).
 
- - Submit your github issue sometime between 7 - 10pm EST so that you can ask the TA questions if you have them. You can continue to work on the homework and push your solutions, but as part of your homework tonight, you should submit the issue during TA hours.
+ - Submit your github issue sometime between **7 - 10pm EST** tonight so that you can ask the TA questions if you have them. You can continue to work on the homework and push your solutions, but as part of your homework tonight, you should submit the issue during TA hours.
  
