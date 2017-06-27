@@ -20,7 +20,7 @@ Prerequisites: Basic HTML <br>
 
 ![grumpy cat](http://s2.quickmeme.com/img/98/98f9148accd765ffd0e6d2dc052c83e05805138b05f5f85f462c6fb0413ef731.jpg)
 
-Let's use some common HTML tags to create a website about for Grumpy Cat.
+Let's use some common HTML tags to create a website for Grumpy Cat.
 
 1) Inside your `morning_exercise` folder, let's create a file for this cat site. What should we name the file?
 2) How do I make add the boilerplate needed for an HTML file?
