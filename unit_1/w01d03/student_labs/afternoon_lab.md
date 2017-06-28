@@ -21,7 +21,7 @@ Use the file `afternoon_lab_solutions.js` to write arrays, loops, `if`, or `if, 
 1. Create an array that contains three quotes and store it in a variable called `quotes`.
 
 ### Random
-Given the following array `var randomThings = [1, 10, "Hello", true]`
+Given the following array `const randomThings = [1, 10, "Hello", true]`
 
 1. how do you access the 1st element in the array?
 
@@ -30,7 +30,7 @@ Given the following array `var randomThings = [1, 10, "Hello", true]`
 3. Check the value of the array to make sure it updated the array.
 
 ### We've Got Class
-Given the following array `var ourClass = ["Hopper", "Zoom", "Github", "Slack"]`
+Given the following array `const ourClass = ["Gizmo", "Zoom", "Github", "Slack"]`
 
 1. What would you write to access the 3rd element of the array?
 
@@ -39,7 +39,7 @@ Given the following array `var ourClass = ["Hopper", "Zoom", "Github", "Slack"]`
 3. Add a new element, "Cloud City" to the array.
 
 ### Mix It Up
-4. Given the following array `var myArray = [5 ,10 ,500, 20]`
+4. Given the following array `const myArray = [5 ,10 ,500, 20]`
 
 1. using the `push` method, add the string `"Egon"` to the end of the array.
 
@@ -72,7 +72,7 @@ Write an `if...else if...else` statement:
 Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript.
 
 ```javascript
-var kristynsCloset = [
+const kristynsCloset = [
   "left shoe",
   "cowboy boots",
   "right sock",
@@ -83,7 +83,7 @@ var kristynsCloset = [
 ];
 
 // Thom's closet is more complicated. Check out this nested data structure!!
-var thomsCloset = [
+const thomsCloset = [
   [
     // These are Thom's shirts
     "grey button-up",
