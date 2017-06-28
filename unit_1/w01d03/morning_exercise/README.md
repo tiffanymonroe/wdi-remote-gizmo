@@ -31,6 +31,10 @@ Push your work and pull the most up-to-date information from our class repo.
 
 ![up to date](https://i.imgur.com/BGPy32T.png)
 
+
+>##### WHAT TO DO:
+>`git pull upstream master`
+> - *This will pull any updated materials from the instructor's github repo.*
 <hr>
 
 #### :space_invader: You're probably in the wrong folder or your remotes are in the wrong place
@@ -169,6 +173,8 @@ What it looks like in your browser (GUI):
 </details>
 
 #### Create files and folders
+Note: I have a `boilerplate` folder already created within this morning's `morning_exercise` directory with the files and folders that you will need. Feel free to reference this.
+
 Inside today's Morning Exercise folder:
 1) Make a new folder (`mkdir`) called `project-boilerplate`
 2) Navigate into the folder `cd project-boilerplate`
