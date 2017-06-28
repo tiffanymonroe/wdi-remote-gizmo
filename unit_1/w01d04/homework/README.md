@@ -10,7 +10,7 @@ Topics: Problem solving with functions<br>
 <hr>
 
 # Setup
-in the `homework` folder for tonight, create a file `solutions.js`. Write your answers in this file.
+1) In the `homework` folder for tonight, create a file called `solutions.js`. Write your answers in this file.
 <br>
 
 # Functions
