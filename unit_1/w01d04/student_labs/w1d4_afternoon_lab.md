@@ -6,22 +6,25 @@
 
 
 #1 
+
 Write a function `printCool` that accepts one parameter, `name` as an argument. The function should print the name and a message saying that that person is cool.
 
 ```javascript
 console.log(printCool("Captain Reynolds"));
-
-=> "Captain Reynolds is cool";
 ```
 
+> => "Captain Reynolds is cool";
+
 #2
+
 Write a function `calculateCube` that takes a single number and prints the volume of a cube made from that number.
 
 ```javascript
 console.log(calculateCube(5));
-
-=> 125
 ```
+
+> => 125
+
 
 #3
 
@@ -29,9 +32,9 @@ Write a function `isAVowel` that takes a character (i.e. a string of length 1) a
 
 ```javascript
 console.log(isAVowel("a"));
-
-=> true
 ```
+
+> => true
 
 
 #4
@@ -40,9 +43,10 @@ Write a function `getTwoLengths` that accepts two parameters (strings). The func
 
 ```javascript
 console.log(getTwoLengths("Hank", "Hippopopalous"));
-
-=> [4, 13]
 ```
+
+> => [4, 13]
+
 
 #5 
 
@@ -51,9 +55,10 @@ Write a function `getMultipleLengths` that accepts a single parameter as an argu
 
 ```javascript
 console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]);
-
-=> [5, 4, 2, 2, 4]
 ```
+
+> => [5, 4, 2, 2, 4]
+
 
 # 6
 
@@ -61,9 +66,10 @@ Define a function `maxOfThree` that takes three numbers as arguments and returns
 
 ```javascript
 console.log(maxOfThree(6, 9, 1));
-
-=> 9
 ```
+
+> => 9
+
 
 # 7
 
@@ -71,9 +77,10 @@ Write a function `printLongestWord` that accepts a single argument, an **array**
 
 ```javascript
 console.log(printLongestWord(["BoJack", "Princess", "Diane", "a", "Max", "Peanutbutter", "big", "Todd"]));
-
-=> "Peanutbutter"
 ```
+
+> => "Peanutbutter"
+
 
 ## 8
 
@@ -86,9 +93,10 @@ power of 2` is 225.
 
 ```javascript
 console.log(transmogrify(5, 3, 2));
-
-=> 225
 ```
+
+> => 225
+
 
 ## 9
 
