@@ -1,15 +1,20 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
 # WDIR-Gizmo
+
 <hr>
 Title: Problem solving with functions<br>
 Type: Homework<br>
 Creator: Thom Page<br>
 Topics: Problem solving with functions<br>
 <hr>
+
 # Setup
 in the `homework` folder for tonight, create a file `solutions.js`. Write your answers in this file.
 <br>
+
 # Functions
+
 **Verbal questions**
 Write answers to the following questions as comments, eg. 
 ```
@@ -17,15 +22,20 @@ Write answers to the following questions as comments, eg.
 ```
 2. What is the difference between a **parameter** and an **argument**?
 3. Within a function, what is the difference between **return** and **console.log**?
+
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "Commit 1 - Verbal questions".
 <hr>
+
 <br>
+
 <hr>
+
 # Palindrome
 Write a function `checkPalindrome` that accepts a single argument, a string. The function should return true (Boolean) if the string is a palindrome, false if it is not. Make sure your function will give the correct answer for words with **capital letters**.
+
 ```javascript
 console.log(checkPalindrome("Radar"));
  
@@ -40,7 +50,9 @@ console.log(checkPalindrome("Borscht"));
 The commit message should read: <br>
 "Commit 2 - Palindrome".
 <hr>
+
 <br>
+
 <hr>
 # Digit Sum
 Write a function `sumDigits` that accepts a number and returns the sum of its digits.
@@ -53,8 +65,11 @@ console.log(sumDigits(42));
 The commit message should read: <br>
 "Commit 3 - Digit Sum".
 <hr>
+
 <br>
+
 <hr>
+
 # Pythagoras
 Write a function `calculateSide` that takes two arguments: `sideA` and `sideB`, and returns the solution for sideC using the Pythagorean theorem.
   
@@ -69,8 +84,11 @@ console.log(calculateSide(8, 6));
 The commit message should read: <br>
 "Commit 4 - Pythagoras".
 <hr>
+
 <br>
+
 <hr>
+
 # Sum Array
 Write a function `sumArray` that takes an **array** as an argument.
 The array should contain numbers. The function should return the sum of the numbers in the array.
@@ -90,41 +108,52 @@ console.log(sumArray([1, 2, 3, 4, 5, 6]);
 The commit message should read: <br>
 "Commit 5 - Sum Array".
 <hr>
+
 <br>
+
 <hr>
+
 # Prime Numbers
 A Prime number is a number that is not evenly divisible by another number except 1 and itself. If you want to read more deeply about it, [go here](https://en.wikipedia.org/wiki/Prime_number).
 To test whether a number is Prime, you only need to test as far as the **square root** of that number. This is advisable for optimization and testing large numbers.
+
 ### Step One
 Write a function called `checkPrime` that will test whether a number is Prime. The function will return true (Boolean) if Prime, false if not.
 _Hint:_ Check every number up to the square root. To do this, try a _for loop_.
+
 ### Step Two
 Write another function called `printPrimes` that will print (console log) all the Primes up to an arbitrary limit. For example, if you invoke your function with `printPrimes(97)`, it will print all the Prime numbers up to and including 97.
 This function can **call on** the previous `checkPrime` function.
 </details>
+
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "Commit 6 - Prime Numbers".
 <hr>
 <br>
+
 <hr>
+
 # Insert Dash
 Write a function `insertDash` that accepts a number as a parameter and returns a string with a dash inserted between any consecutive **odd numbers**. There should not be a dash at the end, it goes only between numbers.
 ```javascript
 console.log(insertDash(454793));
 ```
 > => 4547-9-3
+
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "Commit 7 - Insert Dash".
 <hr>
 <br>
+
 # Hungry for more
 [Project euler](https://projecteuler.net/archives)
 <br>
 <hr>
+
 # CSS
 Watch the following three videos on CSS:
 [First CSS video - 5 minutes](https://www.youtube.com/watch?v=xWiT2TWCFjc&index=3&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
