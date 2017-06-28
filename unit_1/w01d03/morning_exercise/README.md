@@ -31,6 +31,10 @@ Push your work and pull the most up-to-date information from our class repo.
 
 ![up to date](https://i.imgur.com/BGPy32T.png)
 
+
+>##### WHAT TO DO:
+>`git pull upstream master`
+> - *This will pull any updated materials from the instructor's github repo.*
 <hr>
 
 #### :space_invader: You're probably in the wrong folder or your remotes are in the wrong place
