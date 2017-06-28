@@ -96,8 +96,8 @@ Use `cd` to change directories and `atom filename` to open a file with Atom.
 3) Let's declare some variables with Boolean values.
 
 ```
-constsunny = true;
-constnotSunny = false;
+const sunny = true;
+const notSunny = false;
 ```
 
 4) Check the values of your variables by logging them and running your code.
@@ -161,6 +161,7 @@ Boolean(0);
 ```
 <br>
 
+
 ##### All other values are implicitly true
 
 ### Let's Practice :computer:
@@ -173,6 +174,32 @@ Boolean(true);
 
 <br>  
 <hr>
+
+
+There is a simple way of verifying the thruthyness or falsiness of a value. When you add `!` in front of a value, the returned value will be the inverse of the value in a boolean. So if you add two `!` then you'll get the boolean value of the original one:
+
+```javascript
+!!1
+//=> true
+
+!!0
+//=> false
+
+!!-1
+//=> true
+
+!![]
+//=> true
+
+!!{}
+//=> true
+
+!!null
+//=> false
+
+!!""
+//=> false
+```
 
 ## Equality operators
 
@@ -255,15 +282,24 @@ And with strings:
 
 <hr>
 
-## Relational operators
 
-`>` - greater than
+## Comparison Operators
 
-`<` - less than
+[Comparisons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`. These work for both strings and numbers. This is both useful, and can be the source of frustration for some developers, since most languages do not implicitly convert strings to numbers the way that JavaScript does.
 
-`>=` - greater than or equal to
+```javascript
+"A" > "a"
+//=> false
 
-`<=` - less than or equal to
+"b" > "a"
+//=> true
+
+12 > "12"
+//=> false
+
+12 >= "12"
+//=> true
+```
 
 
 ```
@@ -326,8 +362,8 @@ true && false
 ```
 
 ```
-consta = true;
-constb = false;
+const a = true;
+const b = false;
 
 a && b
 => false
@@ -382,6 +418,8 @@ constb = false;
 
 <br>
 <hr>
+
+
 
 ## IF Statements
 
@@ -494,6 +532,43 @@ for (let i = 0; i < cars.length; i++) {
     console.log(cars[i]);
 }
 ```
+
+
+Iterating is a way of incrementally repeating a task.
+
+#### for
+
+You can iterate over an array with:
+
+```javascript
+let a = [1, 2, 3, 4, 5];
+for (let i = 0; i < a.length; i++) {
+  console.log(i);
+}
+```
+
+#### for of (can use on strings and loops new es2015 syntax)
+
+`
+for (let chr of "jimbo") {
+  console.log(chr);
+}
+`
+
+`const food = ['apple', 'pear', 'taco']`
+
+`
+for (let value of food){
+  console.log(value)
+}
+`
+
+
+
+
+## Further Reading
+
+- [Control Flow](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Control_flow_and_error_handling)
 
 #### Conditionals within a for loop
 
