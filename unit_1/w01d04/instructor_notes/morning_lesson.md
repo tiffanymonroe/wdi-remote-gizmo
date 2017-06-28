@@ -448,7 +448,7 @@ Pseudo-code and work in layers, one layer at a time. Don't jump ahead until each
 <br>
 <hr>
 
-# Extra stuff: built-in methods
+# Extra stuff: more on built-in methods
 
 ## String and array methods
 
