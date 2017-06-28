@@ -169,6 +169,8 @@ What it looks like in your browser (GUI):
 </details>
 
 #### Create files and folders
+Note: I have a `boilerplate` folder already created within this morning's `morning_exercise` directory with the files and folders that you will need. Feel free to reference this.
+
 Inside today's Morning Exercise folder:
 1) Make a new folder (`mkdir`) called `project-boilerplate`
 2) Navigate into the folder `cd project-boilerplate`
