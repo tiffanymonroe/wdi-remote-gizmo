@@ -154,12 +154,6 @@ The commit message should read: <br>
 <hr>
 <br>
 
-# Hungry for more
-
-1. Complete the afternoon lab.
-2. [Project euler](https://projecteuler.net/archives)
-<br>
-<hr>
 
 # CSS
 Watch the following three videos on CSS:
@@ -169,3 +163,15 @@ Watch the following three videos on CSS:
 You will need to have watched these videos for tomorrow's lab.
 <br>
 <hr>
+
+# Hungry for more
+
+1. Complete the afternoon lab.
+2. [Project euler](https://projecteuler.net/archives)
+
+<hr>
+&#x1F534; **Commit your work.** <br>
+The commit message should read: <br>
+"Commit 8 - Hungry for More".
+<hr>
+<br>
