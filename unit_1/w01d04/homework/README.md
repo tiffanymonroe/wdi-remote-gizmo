@@ -9,13 +9,16 @@ Creator: Thom Page<br>
 Topics: Problem solving with functions<br>
 <hr>
 
-# Setup
+# Homework
+
+## Setup
 1) In the `homework` folder for tonight, create a file called `solutions.js`. Write your answers in this file.
 <br>
 
-# Functions
+## Functions
 
-**Verbal questions**
+### Verbal questions
+
 Write answers to the following questions as comments. As a reminder you can highlight your code and type `command` + `/` to turn your code into a comment.
 
 ```
@@ -34,7 +37,7 @@ The commit message should read: <br>
 
 <hr>
 
-# Palindrome
+## Palindrome
 Write a function `checkPalindrome` that accepts a single argument, a string. The function should return true (Boolean) if the string is a palindrome, false if it is not. Make sure your function will give the correct answer for words with **capital letters**.
 
 ```javascript
@@ -55,7 +58,7 @@ The commit message should read: <br>
 <br>
 
 <hr>
-# Digit Sum
+## Digit Sum
 Write a function `sumDigits` that accepts a number and returns the sum of its digits.
 ```
 console.log(sumDigits(42));
@@ -71,7 +74,7 @@ The commit message should read: <br>
 
 <hr>
 
-# Pythagoras
+## Pythagoras
 Write a function `calculateSide` that takes two arguments: `sideA` and `sideB`, and returns the solution for sideC using the Pythagorean theorem.
   
 _hint:_ discover the Pythagorean Theorem on a website called google.com  
@@ -90,7 +93,7 @@ The commit message should read: <br>
 
 <hr>
 
-# Sum Array
+## Sum Array
 Write a function `sumArray` that takes an **array** as an argument.
 The array should contain numbers. The function should return the sum of the numbers in the array.
 Use a _for loop_ within the function to iterate over the array and sum the contents.
@@ -114,7 +117,7 @@ The commit message should read: <br>
 
 <hr>
 
-# Prime Numbers
+## Prime Numbers
 A Prime number is a number that is not evenly divisible by another number except 1 and itself. If you want to read more deeply about it, [go here](https://en.wikipedia.org/wiki/Prime_number).
 To test whether a number is Prime, you only need to test as far as the **square root** of that number. This is advisable for optimization and testing large numbers.
 
@@ -136,7 +139,7 @@ The commit message should read: <br>
 
 <hr>
 
-# Insert Dash
+## Insert Dash
 Write a function `insertDash` that accepts a number as a parameter and returns a string with a dash inserted between any consecutive **odd numbers**. There should not be a dash at the end, it goes only between numbers.
 ```javascript
 console.log(insertDash(454793));
