@@ -7,7 +7,7 @@ Title: Afternoon Lesson<br>
 Type: Lesson<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page <br>
-Topics: Global, local, block scope, more functions, testing code in layers<br>
+Topics: Global, local, block scope<br>
 
 ---
 
@@ -15,145 +15,93 @@ Topics: Global, local, block scope, more functions, testing code in layers<br>
 
 _After this lesson students will be able to:_
 
-* Use the Math object
+* Use `const` and `let` for block-scoping
 * Differentiate between global and local scope
-* Invoke a function within a function
 
 ---
 
 ## Setup
 
-In `w01d04/student_examples` make a file `afternoon_code.js`
+In `student_examples` for today, make a file `scope.js`
 
 Test that a console.log will appear in Terminal when you run the file.
 
 ```
-node afternoon_code.js
+$ node scope.js
 ```
 
 <br>
 <hr>
 
 3:05
+# SCOPE
 
-## The Math object
+Scope is the restriction of where in your code your variables can be accessed. If you try to access a variable outside of its _scope_, it will be undefined.
 
-Javascript has a built-in object called **Math** that contains useful methods for performing mathematical operations.
 
-For example:
+## Block Scope
 
-```
-console.log(Math.PI);
-```
+**`let`** and **`const`** will scope your variables to the **block** in which they are declared.
 
-> => 3.141592653589793
+Example -- make a block and declare a variable within:
 
-```
-console.log(Math.floor(3.141592653589793));
-```
-
-> => 3
-
-```
-console.log(Math.floor(Math.PI));
+```javascript
+{
+	const item = 'spicy meatball';
+}
 ```
 
-> => 3
+`item` is available inside the block, but not available outside.
 
-#### Math.random()
+This works:
 
-- Get a random decimal between 0 and 1 (excluding 0 and 1)
-
-```
-Math.random();
-=> .229375290430
-```
-
-- Get a random decimal between 0 and 10 (excluding 0 and 10)
-
-```
-Math.random() * 10;
-=> 9.536103100981563
+```javascript
+{
+	const item = 'spicy meatball';
+	console.log(item);
+}
 ```
 
-- Get a **whole number** between 0 and 10 (including 0 and 10), rounding down with `Math.floor()`:
+> => "spicy meatball"
 
-```
-Math.floor( Math.random() * 11 );
-```
+This doesn't:
 
-- Get a whole number between 1 and 10 using `Math.floor()` to round down
+```javascript
+{
+	const item = 'spicy meatball';
+}
 
-```
-Math.floor( Math.random() * 10 ) + 1;
-```
-
-
-## Research
-
-Math docs on MDN:
-
-> [Math methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
-
-&#x1F535; **Research (5 min)**
-
-RESEARCH
-
-* Find and use a Math method to find the square root of a number.
-* Find the square root of PI.
-* Find and use a Math method to raise 5 to the power of 4 (exponentiation).
-* Use Math.Random to simulate a roll of two six-sided die. (2-12)
-
-
-## An aside on numbers
-
-Javascript is **not** good with numbers: it uses floating-point arithmetic which (in base-2 with hardware limitations), leaves us with rounding errors.
-
-```
-0.1 + 0.2
-=> 0.30000000000000004
+console.log(item);
 ```
 
-Javascript is considered accurate up to about 15 digits
+> ReferenceError: item is not defined
 
-16 digits:
 
+**`var`** by contrast will leak out of a block.
+
+```javascript
+{
+	var item = 'spicy meatball';
+}
+
+console.log(item);
 ```
-9999999999999999;
-=> 10000000000000000;
-```
 
-You can read more [here](http://floating-point-gui.de/)
+> => "spicy meatball"
+
+This is not so great. In general, we want to control our scope as tightly as possible. If we don't, we can end up with variable collisions. This is why we stick with `let` and `const`.
 
 <br>
 <hr>
 
-3:25
+3:15
+## Scope: functions
 
-# SCOPE
+Our variables will be scoped to blocks. This includes the curlies `{}` provided by while loops, for loops, conditionals, etc. It also includes the curlies `{}` provided by functions.  
 
-Scope is the restriction of where in your code your variables can be used. If you try to access a variable outside of its _scope_, it will be undefined.
-
-There are two scopes in Javascript:
-
-* Global scope
-* Local scope
-
-A variable defined in **global scope** is available everywhere.
-
-A variable defined in **local scope** is available only to the function in which the variable was defined.
-
-In addition, it will also be available to functions **defined within that function.**
-
-<br>
-
-## LOCAL SCOPE
-
-When variables are declared inside functions.
-
-```
-var setItem = function() {
-	var item = 'chair';
+```javascript
+const setItem = () => {
+	const item = 'spicy meatball';
 	return item;
 }
 ```
@@ -162,7 +110,12 @@ The value of the `item` variable is not accessible outside the function.
 
 If we try to access it outside of the function:
 
-```
+```javascript
+const setItem = () => {
+	const item = 'spicy meatball';
+	return item;
+}
+
 console.log(item);
 ```
 
@@ -170,19 +123,24 @@ console.log(item);
 
 We get a reference error, because `item` is not defined in the scope in which we used the console.log.
 
-If we run the function first, the value of `item` is not set outside of its scope:
+If we run the function first, the value of `item` is _still_ not set outside of its scope:
 
-```
+```javascript
 setItem();
 console.log(item);
 ```
 
-Functions cannot access variables stored in **sibling** functions. This is another application of local scope.
+As a natural consequence, functions cannot access variables stored in **sibling** functions.
 
 If we make another function:
 
-```
-var getItem = function() {
+```javascript
+const setItem = () => {
+	const item = 'spicy meatball';
+	return item;
+}
+
+const getItem = () => {
 	return item;
 }
 
@@ -191,18 +149,67 @@ console.log(getItem());
 
 ![](https://i.imgur.com/xNQ689Y.png)
 
-The `item` variable is not visible inside `getItem`, because it is locally scoped only to `setItem`.
-
-Functions are _exclusive_. They are like little prisons for your variables.  The technical term / jargon for this is **lexical scope**. We scope variables locally using functions.
-
-In **ES6** and greater, you can also scope to a block (block scope), but we are not concerning ourselves with that just yet.
+The `item` variable is not visible inside `getItem`, because it is scoped only to `setItem`.
 
 <br>
+<hr>
+3:25
+
+## Scope: Loops
+
+Using `let` within a for loop control panel scopes the variable to the block.
+
+```javascript
+for (let i=0; i < 100; i++) {
+	console.log('Inside the block: ', i);
+}
+
+console.log('Outside the block: ', i);
+```
+
+> Inside the block: 1
+>
+> Inside the block: 2
+>
+> etc.
+> 
+> Outside the block: Reference error: i is not defined
+
+<br>
+<hr>
 3:35
+## Scope: Conditionals
 
-## GLOBAL SCOPE
+Using `let` or `const` within conditional blocks will scope to the block (no surprises there).
 
-When variables are declared outside functions, the value of the variable is accessible to all functions (and all functions within those functions). There is no restriction or exclusivity.
+```javascript
+
+if (true) {
+	const num = 100;
+	console.log(num);
+}
+```
+> => 100
+
+```javascript
+if (true) {
+	const num = 100;
+}
+
+console.log(num);
+```
+
+> => Reference error: num is not defined
+
+
+What if we want multiple blocks to have access to a variable?
+
+<br>
+<hr>
+
+# GLOBAL SCOPE
+
+When variables are declared outside of any enclosing blocks, the value of the variable is accessible to all other blocks and functions (and all blocks and functions within those functions). There is no restriction or exclusivity.
 
 ```
 var globalMessage = "Defined globally";
@@ -249,7 +256,14 @@ Functions themselves are defined within a scope.
 
 In which scope have our functions so far been defined?
 
+<br>
+<hr>
+
 3:50
+## Local scope
+
+<br>
+<hr>
 
 ## Functions can call other functions
 
@@ -257,191 +271,26 @@ One result of scope is that functions can call other functions. A function may u
 
 Let's build two interacting functions from the ground up.
 
-* We will write a function `checkForLetterA` that will return "true" if its string input is the letter "A".
-
-* We will write a function `checkArrayOfLetters` that will iterate over an array of letters, and call on the `checkForLetterA` function for each letter.
-
-## Layering
-
-Let's do this step-by-step and use **best testing practices**.
-
-The idea is to test the code before moving on to the next step.
-
-First, define the `checkForLetterA` function.
-
-```
-var checkForLetterA = function() {
-
-}
-```
-
-![](https://i.imgur.com/VVFeWKu.png)
-
-<br>
-
-Next, let's just test that the function will run with a console.log.
-
-```
-var checkForLetterA = function() {
-  console.log("ok");
-}
-
-checkForLetterA();
-```
-
-![](https://i.imgur.com/3mG5scp.png)
-
-
-<br>
-
-Next, give our function a **parameter** and invoke it with a corresponding **argument**.
-
-```
-var checkForLetterA = function(letter) {
-  console.log(letter);
-}
-
-checkForLetterA("A");
-```
-
-![](https://i.imgur.com/qavgwAH.png)
-
-<br>
-
-What I want to do is check if the incoming data is an "A". For this I would use a **conditional**
-
-```
-var checkForLetterA = function(letter) {
-  if (letter == 'A') {
-    console.log("true");
-  }
-}
-
-checkForLetterA("A");
-```
-
-![](https://i.imgur.com/pioXTsD.png)
-
-<br>
-
-Next, I want my function to have a **value** and not just print to the console. For this I use **return** within the function. I want to return a **Boolean** not a string.
-
-To see the value of the function, I console.log the function invocation.
-
-```
-var checkForLetterA = function(letter) {
-  if (letter == 'A') {
-    return true;
-  }
-}
-
-console.log(checkForLetterA("A"));
-```
-
-![](https://i.imgur.com/0pwLUKz.png)
-
-<br>
-
-
-Next, I want the function to return `false` if the letter is not A.
-
-Since **return** will immediately end the function if the letter is A, I can just put **return false** at the end of the function.
-
-This function will **always return false** unless the letter is A.
-
-```
-var checkForLetterA = function(letter) {
-  if (letter == 'A') {
-    return true;
-  }
-  return false;
-}
-
-console.log(checkForLetterA("A"));
-```
-
-![](https://i.imgur.com/KizLA2R.png)
-
-
-<br>
-
-**Hooray!** Our function is complete using the layering technique.
-
-Underneath the `checkForLetterA` function, let's define another function, `checkArrayOfLetters` and just test it with a console.log
-
-```
-var checkArrayOfLetters = function() {
-  console.log("ok");
-}
-
-checkArrayOfLetters();
-```
-
-![](https://i.imgur.com/eUZYScl.png)
-
-<br>
-
-Let's give our function a parameter, and supply an array as the argument.
-
-```
-var checkArrayOfLetters = function(arr) {
-  console.log(arr);
-}
-
-checkArrayOfLetters(["A", "B", "C", "D", "A"]);
-```
-
-![](https://i.imgur.com/IwaqPoV.png)
-
-<br>
-
-What we want to do is iterate over the array and check each letter. Let's iterate first:
-
-```
-var checkArrayOfLetters = function(arr) {
-  	for (var i=0; i < arr.length; i++) {
-  		console.log(arr[i]);
-  	}
-}
-
-checkArrayOfLetters(["A", "B", "C", "D", "A"]);
-```
-
-![](https://i.imgur.com/FijHddf.png)
-
-
-<br>
-
-Last step: conveniently use our `checkForLetterA` function, which was defined in the **global scope**, within our `checkArrayOfLetters` function.
-
-We can pass _that_ function the currently-iterated array element as an **argument**.
-
-```
-var checkArrayOfLetters = function(arr) {
-  	for (var i=0; i < arr.length; i++) {
-  		console.log(checkForLetterA(arr[i]));
-  	}
-}
-
-checkArrayOfLetters(["A", "B", "C", "D", "A"]);
-```
-
-![](https://i.imgur.com/GT1xVFQ.png)
-
-<br>
-
-Both functions together:
-
-![](https://i.imgur.com/VlUrn8T.png)
-
-
-3:40
-
 &#x1F535; **Activity**
 
-* Write a function that will return **true** if a number is a **perfect square** AND is evenly divisible by 2.
+* Write a function that will return **true** if a number is a **perfect square** AND is evenly divisible by 3.
 
-* Write another function that will loop up to an arbitrary limit (say, 100), and console log whether each number is a perfect square. Call upon the previously defined function.
+* Write another function that will loop up to an arbitrary limit (say, 100), and console log whether each number is a perfect square and is evenly divisible by 3. Call upon the previously defined function.
+
+
+<br>
+<hr>
+
+## POLLUTION
+
+You do not want your global scope to be **polluted**. There are reason for not polluting your global scope.
+
+* Global variables can be overwritten or misconstrued elsewhere
+* Potentially causing unwanted, hard to track bugs
+* Namespace
+* Memory / garbage collection
+
+http://stackoverflow.com/questions/8862665/what-does-it-mean-global-namespace-would-be-polluted
 
 <br>
 <hr>
@@ -450,7 +299,7 @@ Both functions together:
 
 ## `var`
 
-`var` is what gives a variable its **lexical scope**. If you omit `var`, the variable will be automatically considered scope-less (It will behave as if it were global after it has been defined).
+`var` is what gives a variable its **function scope**. If you omit `var`, the variable will be automatically considered scope-less (It will behave as if it were global after it has been defined).
 
 Always use `var` to avoid weird scoping errors, including when setting the start parameter of your _for loops_. If you have a _for loop_ inside a function, you will want the values of the loop not to pollute the global scope.
 
@@ -585,19 +434,6 @@ always declare variables at the top of their scope (the top of global code and t
 <br>
 <hr>
 
-## POLLUTION
-
-You do not want your global scope to be **polluted**. There are reason for not polluting your global scope.
-
-* Global variables can be overwritten or misconstrued elsewhere
-* Potentially causing unwanted, hard to track bugs
-* Namespace
-* Memory / garbage collection
-
-http://stackoverflow.com/questions/8862665/what-does-it-mean-global-namespace-would-be-polluted
-
-<br>
-<hr>
 
 
 ## INVOKED VS REFERENCED FUNCTIONS
@@ -619,6 +455,98 @@ callFunc;
 ```
 
 We will learn more about _referenced_ functions we talk about **callbacks**. For now, invoke your functions to get them to work.
+
+<br>
+<hr>
+
+
+## The Math object
+
+Javascript has a built-in object called **Math** that contains useful methods for performing mathematical operations.
+
+For example:
+
+```
+console.log(Math.PI);
+```
+
+> => 3.141592653589793
+
+```
+console.log(Math.floor(3.141592653589793));
+```
+
+> => 3
+
+```
+console.log(Math.floor(Math.PI));
+```
+
+> => 3
+
+#### Math.random()
+
+- Get a random decimal between 0 and 1 (excluding 0 and 1)
+
+```
+Math.random();
+=> .229375290430
+```
+
+- Get a random decimal between 0 and 10 (excluding 0 and 10)
+
+```
+Math.random() * 10;
+=> 9.536103100981563
+```
+
+- Get a **whole number** between 0 and 10 (including 0 and 10), rounding down with `Math.floor()`:
+
+```
+Math.floor( Math.random() * 11 );
+```
+
+- Get a whole number between 1 and 10 using `Math.floor()` to round down
+
+```
+Math.floor( Math.random() * 10 ) + 1;
+```
+
+## Research
+
+Math docs on MDN:
+
+> [Math methods](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math)
+
+&#x1F535; **Research (5 min)**
+
+RESEARCH
+
+* Find and use a Math method to find the square root of a number.
+* Find the square root of PI.
+* Find and use a Math method to raise 5 to the power of 4 (exponentiation).
+* Use Math.Random to simulate a roll of two six-sided die. (2-12)
+
+
+## An aside on numbers
+
+Javascript is **not** good with numbers: it uses floating-point arithmetic which (in base-2 with hardware limitations), leaves us with rounding errors.
+
+```
+0.1 + 0.2
+=> 0.30000000000000004
+```
+
+Javascript is considered accurate up to about 15 digits
+
+16 digits:
+
+```
+9999999999999999;
+=> 10000000000000000;
+```
+
+You can read more [here](http://floating-point-gui.de/)
 
 <br>
 <hr>
