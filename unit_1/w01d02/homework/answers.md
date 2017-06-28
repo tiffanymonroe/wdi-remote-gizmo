@@ -17,3 +17,10 @@ Part 1:
 1. git branch
 2. git checkout
 3. You might want to use a branch, so that two people can work on the same code at the same time or to work on errors.
+
+=======
+
+1. Merging brings together the changes in branches into the master. Pulling allows the creator of the repository to decide if they want to merge changes.
+2. git checkout
+
+=======
