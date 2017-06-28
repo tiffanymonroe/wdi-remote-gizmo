@@ -28,6 +28,268 @@ JavaScript supports a compact set of statements, specifically control flow state
 
 <br>
 
+
+## Truthy & Falsy
+
+#### All of the following become false when converted to a Boolean
+
+- `false`
+- `0`
+- `""` (empty string)
+- `NaN`
+- `null`
+- `undefined`
+
+
+
+### Let's Practice :computer:
+
+JavaScript has a built-way to convert things to Booleans: `Boolean()`. Put the following inside the parenthesis of `console.log()` to see the result.
+
+```
+Boolean("");
+Boolean(null);
+Boolean(0);
+```
+<br>
+
+##### All other values are implicitly true
+
+### Let's Practice :computer:
+
+```
+Boolean("hi");
+Boolean(1);
+Boolean(true);
+```
+
+<br>  
+<hr>
+
+#### All other values become true when converted to a Boolean
+
+Do not confuse the primitive boolean values `true` and `false` with the true and false values of the Boolean object. For example:
+
+
+There is a simple way of verifying the thruthyness or falsiness of a value. When you add `!` in front of a value, the returned value will be the inverse of the value in a boolean. So if you add two `!` then you'll get the boolean value of the original one:
+
+```javascript
+!!1
+//=> true
+
+!!0
+//=> false
+
+!!-1
+//=> true
+
+!![]
+//=> true
+
+!!{}
+//=> true
+
+!!null
+//=> false
+
+!!""
+//=> false
+```
+
+
+
+## Boolean/Logical Operators
+
+[Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
+
+Logical operators will always return a boolean value `true` or `false`.
+
+There are two "binary" operators that require two values:
+
+- **AND**, denoted `&&`
+- **OR**, denoted `||`
+
+A third "unary" operatory requires only one value:
+
+* **NOT**, denoted `!`
+
+#### && (AND)
+
+The `&&` operator requires both left and right values to be `true` in order to return `true`:
+
+```javascript
+true && true
+//=> true
+```
+
+Any other combination is false.
+
+```javascript
+true && false
+//=> false
+
+false && false
+//=> false
+```
+
+#### || (OR)
+
+The `||` operator requires just one of the left or right values to be `true` in order to return true.
+
+```javascript
+true || false
+//=> true
+
+false || true
+//=> true
+
+false || false
+//=> false
+```
+
+
+Only `false || false` will return `false`
+
+The `!` takes a value and returns the opposite boolean value, i.e.
+
+```javascript
+!(true)
+//=> false
+```
+
+The `&&` and `||` operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes:
+
+
+
+
+```javascript
+var name = o && o.getName();
+```
+
+In this case, if the first operand `o` is false, then the second operand `o.getName()` will not be evaluated. The expression is basically saying "we already know the whole `&&` expression is false, because `o` is falsey. Why bother dealing with the second operand?"
+
+Or for setting default values:
+
+```javascript
+var name = otherName || o.getName();
+```
+
+In this case, if the first operand `otherName` is false, then we'll see that `"my name"` will be returned. If othername is truthy (e.g. it contains a value), it will get returned, and the second expression won't even be evaluated. The expression is basically saying "we already know the whole `||` expression is true, because `o` is truthy. Why bother dealing with the second operand?"
+
+
+### Let's Practice :computer:
+
+Try to guess the result before you check it. If it is not what you expected, try to find out why not
+
+* Check: `!false && true`
+* Check: `false || true`
+
+```
+consta = true;
+constb = false;
+```
+* Check: `a && a == b`
+* Check: `!true || !false && !false`
+* Check: `8 > 1 && true || false`
+
+<br>
+<hr>
+
+
+## Comparison Operators
+
+[Comparisons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`. These work for both strings and numbers. This is both useful, and can be the source of frustration for some developers, since most languages do not implicitly convert strings to numbers the way that JavaScript does.
+
+```javascript
+"A" > "a"
+//=> false
+
+"b" > "a"
+//=> true
+
+12 > "12"
+//=> false
+
+12 >= "12"
+//=> true
+```
+
+### Let's Practice :computer:
+
+1) Is -10 greater than or equal to -100?
+
+2) Is Infinity greater than or equal to -Infinity?
+
+3) Is "McDonald's" greater than "Burger King?"
+
+
+
+#### Equality Operator `==`
+
+Equality is a bit more complex. There are 2 ways in JavaScript to verify equality.
+
+When verifying equality using double equal `==`, JavaScript does a lot of the "type coercion" in the background. Like we mentioned above, if the operands have a different type (ie: the number `1` and the string `"1"`), JavaScript will try to change the type of both operands to check whether they are equal. This means that a lot of times, expressions will return equal more easily than if we were stricter about what things were equivalent. Some examples:
+
+```javascript
+"dog" == "dog";
+//=> true
+
+1 == true;
+//=> true
+```
+
+#### Equality Operator `===`
+
+To avoid type coercion and measure equality more strictly, **use the triple-equals operator**. Because `===` more truly measures actual equality, we'll use this far more often when checking whether too things are, in fact, the same thing.
+
+> **Note:** "Sameness" and "equality" have various definitions and can be somewhat "fuzzy". They can also differ by programming language. Because you'll often be measuring whether two things are equal, you should investigate the way this works carefully.
+
+Some examples:
+
+```javascript
+1 === true;
+//=> false
+
+true === true;
+//=> true
+
+"hello" === "hello"
+//=> true
+```
+
+
+### Let's Practice :computer:
+
+1) Is the number 1 equivalent to the number 1?
+
+2) Is the string "beans" equivalent to the string "soup"?
+
+3) Is (5 + 5 * 3) equivalent to ((5 + 5) * 3)?
+
+4) Is 9 strictly unequal to false?
+
+5) Is NaN equivalent to NaN?
+
+
+However, there are some incidents when it does not do what we expect, for example when working with empty objects or arrays:
+
+```javascript
+{} === {}
+//=> Uncaught SyntaxError: Unexpected token ===
+
+[] === []
+//=> false
+
+[1,7] === [1,7]
+//=> false
+```
+
+### Strict
+
+- `===` **strict equality**: same as equality, but does not coerce
+- `!==` **strict inequality**: same as inequality, but does not coerce
+
+
 #### Block Statements
 
 Statements meant to be executed after a control flow operation will be grouped into what is called a **block statement**. These statements are wrapped into a pair of curly braces:
@@ -98,185 +360,26 @@ if (x = 3) {
 }
 ```
 
+### Let's Practice :computer:
 
-## Truthy & Falsy
+#### Reporting for Duty
+_Strings as conditionals_
 
-#### All of the following become false when converted to a Boolean
+1) Make a variable called `name` and save a name to it.
 
-- `false`
-- `0`
-- `""` (empty string)
-- `NaN`
-- `null`
-- `undefined`
+3) Log the variable to confirm what you've stored.<br>
+`console.log(name);`
 
-#### All other values become true when converted to a Boolean
-
-Do not confuse the primitive boolean values `true` and `false` with the true and false values of the Boolean object. For example:
+4)Add a basic **if statement** to add control flow depending on a random input variable.
 
 
-There is a simple way of verifying the thruthyness or falsiness of a value. When you add `!` in front of a value, the returned value will be the inverse of the value in a boolean. So if you add two `!` then you'll get the boolean value of the original one:
 
-```javascript
-!!1
-//=> true
 
-!!0
-//=> false
 
-!!-1
-//=> true
 
-!![]
-//=> true
 
-!!{}
-//=> true
 
-!!null
-//=> false
 
-!!""
-//=> false
-```
-
-## Boolean/Logical Operators
-
-[Logical operators](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Logical_Operators)
-
-Logical operators will always return a boolean value `true` or `false`.
-
-There are two "binary" operators that require two values:
-
-- **AND**, denoted `&&`
-- **OR**, denoted `||`
-
-A third "unary" operatory requires only one value:
-
-* **NOT**, denoted `!`
-
-#### && (AND)
-
-The `&&` operator requires both left and right values to be `true` in order to return `true`:
-
-```javascript
-true && true
-//=> true
-```
-
-Any other combination is false.
-
-```javascript
-true && false
-//=> false
-
-false && false
-//=> false
-```
-
-#### || (OR)
-
-The `||` operator requires just one of the left or right values to be `true` in order to return true.
-
-```javascript
-true || false
-//=> true
-
-false || true
-//=> true
-
-false || false
-//=> false
-```
-
-Only `false || false` will return `false`
-
-The `!` takes a value and returns the opposite boolean value, i.e.
-
-```javascript
-!(true)
-//=> false
-```
-
-The `&&` and `||` operators use short-circuit logic, which means whether they will execute their second operand is dependent on the first. This is useful for checking for null objects before accessing their attributes:
-
-```javascript
-var name = o && o.getName();
-```
-
-In this case, if the first operand `o` is false, then the second operand `o.getName()` will not be evaluated. The expression is basically saying "we already know the whole `&&` expression is false, because `o` is falsey. Why bother dealing with the second operand?"
-
-Or for setting default values:
-
-```javascript
-var name = otherName || o.getName();
-```
-
-In this case, if the first operand `otherName` is false, then we'll see that `"my name"` will be returned. If othername is truthy (e.g. it contains a value), it will get returned, and the second expression won't even be evaluated. The expression is basically saying "we already know the whole `||` expression is true, because `o` is truthy. Why bother dealing with the second operand?"
-
-## Comparison Operators
-
-[Comparisons](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Operators/Comparison_Operators) in JavaScript can be made using `<`, `>`, `<=` and `>=`. These work for both strings and numbers. This is both useful, and can be the source of frustration for some developers, since most languages do not implicitly convert strings to numbers the way that JavaScript does.
-
-```javascript
-"A" > "a"
-//=> false
-
-"b" > "a"
-//=> true
-
-12 > "12"
-//=> false
-
-12 >= "12"
-//=> true
-```
-
-#### Equality Operator `==`
-
-Equality is a bit more complex. There are 2 ways in JavaScript to verify equality.
-
-When verifying equality using double equal `==`, JavaScript does a lot of the "type coercion" in the background. Like we mentioned above, if the operands have a different type (ie: the number `1` and the string `"1"`), JavaScript will try to change the type of both operands to check whether they are equal. This means that a lot of times, expressions will return equal more easily than if we were stricter about what things were equivalent. Some examples:
-
-```javascript
-"dog" == "dog";
-//=> true
-
-1 == true;
-//=> true
-```
-
-#### Equality Operator `===`
-
-To avoid type coercion and measure equality more strictly, **use the triple-equals operator**. Because `===` more truly measures actual equality, we'll use this far more often when checking whether too things are, in fact, the same thing.
-
-> **Note:** "Sameness" and "equality" have various definitions and can be somewhat "fuzzy". They can also differ by programming language. Because you'll often be measuring whether two things are equal, you should investigate the way this works carefully.
-
-Some examples:
-
-```javascript
-1 === true;
-//=> false
-
-true === true;
-//=> true
-
-"hello" === "hello"
-//=> true
-```
-
-However, there are some incidents when it does not do what we expect, for example when working with empty objects or arrays:
-
-```javascript
-{} === {}
-//=> Uncaught SyntaxError: Unexpected token ===
-
-[] === []
-//=> false
-
-[1,7] === [1,7]
-//=> false
-```
 
 ## Switch Statement
 
@@ -333,7 +436,7 @@ for (let value of food){
 }
 `
 
-Notice the placement of the comma and semi-colons.
+
 
 
 ## Further Reading
