@@ -1,0 +1,35 @@
+body {
+  font-family: 'Raleway', sans-serif;
+  color: #0B0F3B;
+}
+
+img {
+  height: 400px;
+  width: auto;
+  float: left;
+  padding: 30px;
+  margin: 20px;
+}
+
+aside {
+  float: right;
+  padding: 30px;
+  margin: 20px;
+}
+h1 {
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+  color: rgb(0,169,157);
+}
+
+h3 {
+  text-transform: uppercase;
+  font-weight: bold;
+  color: rgb(0,169,157);
+}
+
+div {
+  text-align: center;
+  padding: 30px;
+  margin-top: 30px;
+}
