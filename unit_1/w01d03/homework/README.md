@@ -265,4 +265,4 @@ Expected output:
 <hr>
 
 ## Reminder
-Remember to submit an issue to our class repository with your work by 10 am Eastern tomorrow morning! Need a reminder on how to submit? Check out the link in your [class wiki](https://github.com/ga-students/wdi-remote-hopper/wiki/Homework-Submission).
+Remember to submit an issue to our class repository with your work by 10 am Eastern tomorrow morning! Need a reminder on how to submit? Check out the link in your [class wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Homework-Submission).
