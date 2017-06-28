@@ -7,7 +7,7 @@ Title: Afternoon Lesson<br>
 Type: Lesson<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page <br>
-Topics: Global, local, block scope, more functions, testing code in layers<br>
+Topics: Global, local, block scope<br>
 
 ---
 
@@ -15,9 +15,8 @@ Topics: Global, local, block scope, more functions, testing code in layers<br>
 
 _After this lesson students will be able to:_
 
-* Differentiate between global and local scope
-* Invoke a function within a function
 * Use `const` and `let` for block-scoping
+* Differentiate between global and local scope
 
 ---
 
