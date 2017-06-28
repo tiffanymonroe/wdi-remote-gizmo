@@ -16,7 +16,8 @@ Topics: Problem solving with functions<br>
 # Functions
 
 **Verbal questions**
-Write answers to the following questions as comments, eg. 
+Write answers to the following questions as comments. As a reminder you can highlight your code and type `command` + `/` to turn your code into a comment.
+
 ```
 // my commented answer
 ```
