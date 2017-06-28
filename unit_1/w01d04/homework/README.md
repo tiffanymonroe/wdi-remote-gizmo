@@ -150,7 +150,9 @@ The commit message should read: <br>
 <br>
 
 # Hungry for more
-[Project euler](https://projecteuler.net/archives)
+
+1. Complete the afternoon lab.
+2. [Project euler](https://projecteuler.net/archives)
 <br>
 <hr>
 
