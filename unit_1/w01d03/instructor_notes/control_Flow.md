@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 <hr>
 Title: Conditionals<br>

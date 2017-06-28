@@ -40,11 +40,11 @@ Use the file `morning_lab_solutions.js` to write loops, `if`, or `if, else` stat
 - Using the provided variable definitions, replace the blanks with a mathematical or boolean operator that evaluates the expression to true. :wave:
 
 ```
-  var a = 4;
-  var b = 53;
-  var c = 57;
-  var d = 16;
-  var e = 'Kevin';
+  const a = 4;
+  const b = 53;
+  const c = 57;
+  const d = 16;
+  const e = 'Kevin';
 ```
 
 -  a _ b;
