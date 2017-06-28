@@ -69,19 +69,19 @@ section {
 
 #section_one {
   background-color: blue;
-  width: 20%;
+  width: 300px;
   height: auto;
 
 }
 
 #section_two {
   background-color: teal;
-  width: 20%;
+  width: 300px;
   height: auto;
 }
 
 #section_three {
   background-color: purple;
-  width: 20%;
+  width: 300px;
   height: auto;
 }
