@@ -24,3 +24,7 @@ Part 1:
 2. git checkout
 
 =======
+
+watched Matt's HTML video
+
+=======
