@@ -6,6 +6,7 @@
 Title: Review: git/github, terminal, and anything we've covered so far & HTML Boilerplate <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
+Modified by: Kristyn Bryan<br>
 Creator: Karolin Rafalski<br>
     Course: WDIR-Hopper <br>
 Competencies: git/github, terminal, html fundamentals <br>
