@@ -58,6 +58,7 @@ The commit message should read: <br>
 <br>
 
 <hr>
+
 ## Digit Sum
 Write a function `sumDigits` that accepts a number and returns the sum of its digits.
 ```
