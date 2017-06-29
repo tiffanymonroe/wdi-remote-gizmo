@@ -57,10 +57,6 @@ The commit message should read: <br>
 "Commit 2 - Palindrome".
 <hr>
 
-<br>
-
-<hr>
-
 ## Digit Sum
 Write a function `sumDigits` that accepts a number and returns the sum of its digits.
 ```
@@ -71,10 +67,6 @@ console.log(sumDigits(42));
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "Commit 3 - Digit Sum".
-<hr>
-
-<br>
-
 <hr>
 
 ## Pythagoras
@@ -90,10 +82,6 @@ console.log(calculateSide(8, 6));
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "Commit 4 - Pythagoras".
-<hr>
-
-<br>
-
 <hr>
 
 ## Sum Array
@@ -116,10 +104,6 @@ The commit message should read: <br>
 "Commit 5 - Sum Array".
 <hr>
 
-<br>
-
-<hr>
-
 ## Prime Numbers
 A Prime number is a number that is not evenly divisible by another number except 1 and itself. If you want to read more deeply about it, [go here](https://en.wikipedia.org/wiki/Prime_number).
 To test whether a number is Prime, you only need to test as far as the **square root** of that number. This is advisable for optimization and testing large numbers.
@@ -138,9 +122,6 @@ This function can **call on** the previous `checkPrime` function.
 The commit message should read: <br>
 "Commit 6 - Prime Numbers".
 <hr>
-<br>
-
-<hr>
 
 ## Insert Dash
 Write a function `insertDash` that accepts a number as a parameter and returns a string with a dash inserted between any consecutive **odd numbers**. There should not be a dash at the end, it goes only between numbers.
@@ -154,7 +135,6 @@ console.log(insertDash(454793));
 The commit message should read: <br>
 "Commit 7 - Insert Dash".
 <hr>
-<br>
 
 
 # CSS
@@ -166,9 +146,6 @@ Watch the following three videos on CSS:
 
 You will need to have watched these videos for tomorrow's lab.
 
-<br>
-<hr>
-
 # Hungry for more
 
 1. Complete the afternoon lab.
@@ -179,4 +156,3 @@ You will need to have watched these videos for tomorrow's lab.
 The commit message should read: <br>
 "Commit 8 - Hungry for More".
 <hr>
-<br>
