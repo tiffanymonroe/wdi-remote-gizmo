@@ -54,7 +54,7 @@ Write a function `getMultipleLengths` that accepts a single parameter as an argu
 
 
 ```javascript
-console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]);
+console.log(getMultipleLengths(["hello", "what", "is", "up", "dude"]));
 ```
 
 > => [5, 4, 2, 2, 4]

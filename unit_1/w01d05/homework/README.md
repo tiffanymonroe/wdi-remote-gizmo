@@ -14,7 +14,7 @@ Prerequisites: JavaScript <br>
 ---
 # Homework
 
-Create an browser based javascript app that simulates the following using `alert()` and `prompt()` to send messages to and get input from the user
+Create a browser-based javascript app that simulates the following using `alert()` and `prompt()` to send messages to and get input from the user
 
 1. You are starting a landscaping business, but all you have are your teeth.
 1. Using just your teeth, you can spend the day cutting lawns and make $1.  You can do this as much as you want.
