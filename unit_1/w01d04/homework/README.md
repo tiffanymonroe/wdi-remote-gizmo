@@ -35,10 +35,6 @@ The commit message should read: <br>
 "Commit 1 - Verbal questions".
 <hr>
 
-<br>
-
-<hr>
-
 ## Palindrome
 Write a function `checkPalindrome` that accepts a single argument, a string. The function should return true (Boolean) if the string is a palindrome, false if it is not. Make sure your function will give the correct answer for words with **capital letters**.
 
