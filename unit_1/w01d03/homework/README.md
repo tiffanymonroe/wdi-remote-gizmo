@@ -253,10 +253,8 @@ Expected output:
 "Commit 11 - Find the Median answered"
 <hr>
 
-<<<<<<< HEAD
-=======
 ## Still Hungry?
->>>>>>> eb1f7dfe4152c71bce1325dfcded2ab0698f3065
+
 1. Finish the questions from the morning lab
 
 2. Finish the questions from the afternoon lab
