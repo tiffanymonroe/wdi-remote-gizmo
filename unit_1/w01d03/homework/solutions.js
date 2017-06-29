@@ -1,33 +1,10 @@
-// ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
-//
-// # WDIR-Hopper
-//
+
 // ---
-// Title: Arrays, Loops, and Conditional Reps <br>
-// Type: Homework<br>
-// Duration: "4:00"<br>
-// Creator: WDI-Funke<br>
-//     Modified by: Kristyn Bryan<br>
-//     Course: WDIR-Hopper<br>
-// Competencies: Arrays, Loops, Conditionals <br>
-// Prerequisites: JavaScript <br>
-//
+// Title: SOLUTION: Arrays, Loops, and Conditional
 // ---
 // # Homework
 //
-// ## Directions
-// Create a javascript file inside this `homework` folder to record your answers. Feel free to copy and paste the headers of each section (comment them out) to keep things orgranized.
-//
-// TEST YOUR WORK! Make sure that your code works :elephant: `node name_of_your_file.js`.
-//
-// If you're stuck on something for "too long"  / get frustrated, make a comment, move on and then return to it later.
-//
-// After each section (even if you're not fully done with it), *add* and *commit* your work. Please use the commit messages that you see at the end of each section (modify it if you need to). We will see these messages in your Github. It will help us to see your progress. If you go back and fix a section, commit again with an updated message. When you are done with your homework, push it to your `origin` (this is your Github) and make an issue on our repo.
-//
-// Final note: You are not alone! Everyone else in the class is working on this as well. Send Slack messages, make a Zoom channel, or meet with the TA to discuss sticking points.
-//
-// ![Image of baby doing workout](http://www.sarahjm.net/wp-content/uploads/2013/09/SarahJM-funny-baby-510x301.jpg)
-//
+
 // ## Easy Going
 // 1. Write a for loop that will log the numbers 1 through 20.
 //
@@ -42,12 +19,6 @@ for (let i = 1; i <= 20; i ++){
 console.log("==============================================")
 // ==============================================
 
-// **Commit 1** <br>
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 1 -Easy Going answered"
-// <hr>
-//
 // ## Get Even
 // 1. Write a for loop that will log only the even numbers in 0 through 200.
 // >Hint: Think about the increment expression.
@@ -63,87 +34,34 @@ for (let i = 0; i <= 200; i += 2){
 console.log("==============================================")
 // ==============================================
 
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 2 - Get Even answered"
-// <hr>
+// ## Excited Kitten
+// 1. Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
 //
-// ## Triangles
+// 2. For every **even** number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.
 //
-// 1. Write a loop that console logs a **right isoscelese triangle** made of '#' that has the height and length of the argument.
+// >Hint: You will need to use Math.random()
 //
-// >Ex: argument is 7
-// ```
-// #
-// ##
-// ###
-// ####
-// #####
-// ######
-// #######
-// ```
-//
-// 2. Write a loop that console logs an **upside down right isosceles triangle** made of '#' that has the height and length of the argument.
-//
-// >Ex: argument is 6
-// ```
-// ######
-// #####
-// ####
-// ###
-// ##
-// #
-// ```
+// ![Image of cat with funny quote about dot](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRETGsssSXu2AS15GpQIBhuSgkhP2q_4JZcPopN4dFP-v85mAePGA)
 //
 
 // ==============================================
 // SOLUTION:
-console.log("answer for Triangles:")
+console.log("answer for Excited Kitten:")
 
-// right isoscelese triangle
-const height = 6;
-let buildTriangle = "";
+randomMessage = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
 
-for (let i = 0; i < height; i++){
-  buildTriangle += '#';
-  console.log(buildTriangle);
-};
+for (let i = 1; i <= 20; i ++){
+  if( i % 2 === 0) {
+    console.log(randomMessage[Math.floor(Math.random() * randomMessage.length - 1) + 1]);
 
-console.log("==============================================")
-
-// upside down right isosceles triangle
-const height = 6;
-
-for (let i = height; i > 0; i--){
-  console.log('#'.repeat(i));
-};
-
-// Documentation about repeat():https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
-
-console.log("==============================================")
-// Second Solution:
-
-const height = 8;
-let buildTriangle = [];
-
-while (height > 0){
-  buildTriangle = [];
-  for (const i = height; i > 0; i--){
-    buildTriangle.push('#');
-  };
-  console.log(buildTriangle.join(""));
-  height = height - 1;
+  } else {
+    console.log("Love me, pet me! HSSSSSS!");
+  }
 }
-
 
 console.log("==============================================")
 // ==============================================
 
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 3 - Triangles answered"
-// <hr>
-//
 // ## Fizz Buzz
 // 1. Write a javascript application that logs all numbers from 1 - 100.
 //
@@ -173,12 +91,8 @@ for (let i = 1; i <= 100; i ++){
 console.log("==============================================")
 // ==============================================
 
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 4 - Fizz Buzz answered"
-// <hr>
-//
 // ## Getting to Know You
+
 // Use the following arrays to answer the questions below (name, age, hometown):
 // ```
 // const thom = ["Thom", 1000, "Christchurch"]
@@ -228,11 +142,6 @@ console.log(kristyn);
 console.log("==============================================")
 // ==============================================
 
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 5 - Getting to Know You answered"
-// <hr>
-//
 // ## Yell at the Ninja Turtles
 // 1. Create an array with the members of the ninja turtles (Donatello, Leonardo, Raphael, Michaelangelo)
 //
@@ -252,120 +161,6 @@ for (let i = 0; i < ninjaTurtles.length; i++){
 console.log("==============================================")
 // ==============================================
 
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 6 - Yell at the Ninja Turtles answered"
-// <hr>
-//
-// ## Excited Kitten
-// 1. Write code that logs "Love me, pet me! HSSSSSS!" 20 times.
-//
-// 2. For every **even** number in your loop, log "...human...why you taking pictures of me?...", "...the catnip made me do it...", or "...why does the red dot always get away..." at random.
-//
-// >Hint: You will need to use Math.random()
-//
-// ![Image of cat with funny quote about dot](https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcRETGsssSXu2AS15GpQIBhuSgkhP2q_4JZcPopN4dFP-v85mAePGA)
-//
-
-// ==============================================
-// SOLUTION:
-console.log("answer for Excited Kitten:")
-
-randomMessage = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
-
-for (let i = 1; i <= 20; i ++){
-  if( i % 2 === 0) {
-    console.log(randomMessage[Math.floor(Math.random() * randomMessage.length - 1) + 1]);
-
-  } else {
-    console.log("Love me, pet me! HSSSSSS!");
-  }
-}
-
-console.log("==============================================")
-// ==============================================
-
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 7 - Excited Kittens answered"
-// <hr>
-//
-//
-// ## Find the Median
-// - Find the median number in the following `nums` array, then console.log that number.
-// -  _hint_ if you check the length of the array / 2, you might get not get a whole number. In which case, look into `Math.floor( // something )`
-//
-// ```
-// const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
-//
-// Expected output:
-// => 15
-// ```
-//
-// ==============================================
-// SOLUTION:
-console.log("answer for Find the Median")
-// To calculate the median of any set of numbers, you need to write the numbers in order. If there is an odd number of results, the median is the middle number. If there is an even number of results, the median will be the mean of the two central numbers.
-
-const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
-
-let median = 0;
-
-// Sort the array to get the numbers in ascending order
-nums.sort();
-console.log("Nums array after sort " + nums);
-console.log("How long is the array " + nums.length);
-
-// Check if the array has an even numbered of elements
-if (nums.length % 2 === 0){
-  const middleIndex1 = Math.floor((nums.length-1)/2);
-  const middleIndex2 = Math.ceil((nums.length-1)/2);
-  median = (nums[middleIndex1] + nums[middleIndex2])/2;
-} else {
-  median = nums[Math.floor(nums.length/2)];
-}
-
-console.log(median);
-console.log("==================================================")
- // ==================================================
-
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 8 - Find the Median answered"
-// <hr>
-//
-// ## Multiples of 3 and 5
-//
-// _Yes, you might have tackled this earlier, but try it again (don't look back at your other code :eyes:)_
-//
-// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
-//
-// Find the sum of all the multiples of 3 or 5 below 1000.
-//
-// :clap: You just solved [Project Euler](https://projecteuler.net/problem=1) problem 1! :clap:
-//
-
-// ==============================================
-// SOLUTION:
-console.log("answer for Multiples of 3 and 5:")
-
-let sum = 0;
-for (let i = 1; i < 1000; i ++ ){
-  if (i % 3 === 0 || i % 5 === 0) {
-    sum = sum + i;
-  }
-}
-console.log(sum);
-
-console.log("==============================================")
-// ==============================================
-
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 9 - Project Euler Problem 1 answered"
-// <hr>
-//
-//
 // ## Return of the Closets
 //
 // Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript. Use this data to answer the following questions.
@@ -504,33 +299,139 @@ console.log(thomsCloset[2]);
 console.log("==============================================")
 // ==============================================
 
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 11 - I loops through their closets".
-// <hr>
+// ## Multiples of 3 and 5
 //
-// ## HTML & CSS
+// _Yes, you might have tackled this earlier, but try it again (don't look back at your other code :eyes:)_
 //
-// Watch the following videos as a refresher on HTML and CSS. We recommend that you watch them once in the evening and again in the morning before class. You will be working on practicing HTML in your Morning Exercise.
+// If we list all the natural numbers below 10 that are multiples of 3 or 5, we get 3, 5, 6 and 9. The sum of these multiples is 23.
 //
-// [HTML Video 1](https://www.youtube.com/watch?v=DxhXFpsN5I4&index=1&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
+// Find the sum of all the multiples of 3 or 5 below 1000.
 //
-// [HTML Video 2](https://www.youtube.com/watch?v=KhbnrDhWDdE&index=2&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)
+// :clap: You just solved [Project Euler](https://projecteuler.net/problem=1) problem 1! :clap:
 //
-// <hr>
-//
+
+// ==============================================
+// SOLUTION:
+console.log("answer for Multiples of 3 and 5:")
+
+let sum = 0;
+for (let i = 1; i < 1000; i ++ ){
+  if (i % 3 === 0 || i % 5 === 0) {
+    sum = sum + i;
+  }
+}
+console.log(sum);
+
+console.log("==============================================")
+// ==============================================
+
 // ## Hungry for More
 //
-// 1. Finish the questions from the morning lab: https://github.com/ga-students/wdi-remote-hopper/blob/master/unit_1/w01d03/student_labs/morning_lab.md
+// ## Triangles
 //
-// 2. Finish the questions from the afternoon lab: https://github.com/ga-students/wdi-remote-hopper/blob/master/unit_1/w01d03/student_labs/afternoon_lab.md
+// 1. Write a loop that console logs a **right isoscelese triangle** made of '#' that has the height and length of the argument.
 //
-// 3. Finish the morning exercise: https://github.com/ga-students/wdi-remote-hopper/tree/w1d3_morning_exercise/unit_1/w01d03/morning_exercise
+// >Ex: argument is 7
+// ```
+// #
+// ##
+// ###
+// ####
+// #####
+// ######
+// #######
+// ```
 //
-// <hr>
-// &#x1F534; The commit message should read: <br>
-// "Commit 12 - Hungry for More: I tackled..."
-// <hr>
+// 2. Write a loop that console logs an **upside down right isosceles triangle** made of '#' that has the height and length of the argument.
 //
-// <hr>
-// Remember to submit an issue to our class repository with your work by 10 am Eastern tomorrow morning! Need a reminder on how to submit? Check out the link in your [class wiki](https://github.com/ga-students/wdi-remote-hopper/wiki/Homework-Submission).
+// >Ex: argument is 6
+// ```
+// ######
+// #####
+// ####
+// ###
+// ##
+// #
+// ```
+//
+
+// ==============================================
+// SOLUTION:
+// console.log("answer for Triangles:")
+//
+// // right isoscelese triangle
+// const height = 6;
+// let buildTriangle = "";
+//
+// for (let i = 0; i < height; i++){
+//   buildTriangle += '#';
+//   console.log(buildTriangle);
+// };
+
+console.log("==============================================")
+
+// upside down right isosceles triangle
+// let height = 6;
+//
+// for (let i = height; i > 0; i--){
+//   console.log('#'.repeat(i));
+// };
+
+// Documentation about repeat():https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/String/repeat
+
+console.log("==============================================")
+// Second Solution:
+
+let height = 8;
+let buildTriangle = [];
+
+while (height > 0){
+  buildTriangle = [];
+  for (let i = height; i > 0; i--){
+    buildTriangle.push('#');
+  };
+  console.log(buildTriangle.join(""));
+  height = height - 1;
+}
+
+
+console.log("==============================================")
+// ==============================================
+
+// ## Find the Median
+// - Find the median number in the following `nums` array, then console.log that number.
+// -  _hint_ if you check the length of the array / 2, you might get not get a whole number. In which case, look into `Math.floor( // something )`
+//
+// ```
+// const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+//
+// Expected output:
+// => 15
+// ```
+//
+// ==============================================
+// SOLUTION:
+console.log("answer for Find the Median")
+// To calculate the median of any set of numbers, you need to write the numbers in order. If there is an odd number of results, the median is the middle number. If there is an even number of results, the median will be the mean of the two central numbers.
+
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+
+let median = 0;
+
+// Sort the array to get the numbers in ascending order
+nums.sort();
+console.log("Nums array after sort " + nums);
+console.log("How long is the array " + nums.length);
+
+// Check if the array has an even numbered of elements
+if (nums.length % 2 === 0){
+  const middleIndex1 = Math.floor((nums.length-1)/2);
+  const middleIndex2 = Math.ceil((nums.length-1)/2);
+  median = (nums[middleIndex1] + nums[middleIndex2])/2;
+} else {
+  median = nums[Math.floor(nums.length/2)];
+}
+
+console.log(median);
+console.log("==================================================")
+ // ==================================================
