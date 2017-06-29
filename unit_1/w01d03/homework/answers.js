@@ -93,3 +93,6 @@ for (t=0; t < ninjaTurtles.length; t++) {
 }
 //can't figure out how to get them uppercase. I tried var str = "Hello World!";
 // var res = str.toUpperCase(); from https://www.w3schools.com/jsref/jsref_touppercase.asp
+
+
+//..............
