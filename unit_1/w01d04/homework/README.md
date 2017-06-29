@@ -2,13 +2,14 @@
 
 # WDIR-Gizmo
 
-<hr>
+---
 Title: Problem solving with functions<br>
 Duration: "3:00 - 4:00" <br>
 Type: Homework<br>
 Creator: Thom Page<br>
 Topics: Problem solving with functions<br>
-<hr>
+
+---
 
 # Homework
 
