@@ -80,4 +80,16 @@
 // kristyn.push("Brooklyn");
 // console.log(kristyn);
 
-//.........
+//.........Yell at the Ninja Turtles........
+
+//1.
+const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"]
+
+
+//2.
+
+for (t=0; t < ninjaTurtles.length; t++) {
+  console.log(ninjaTurtles[t]);
+}
+//can't figure out how to get them uppercase. I tried var str = "Hello World!";
+// var res = str.toUpperCase(); from https://www.w3schools.com/jsref/jsref_touppercase.asp
