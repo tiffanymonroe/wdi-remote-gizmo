@@ -254,6 +254,7 @@ Expected output:
 <hr>
 
 ## Still Hungry?
+
 1. Finish the questions from the morning lab
 
 2. Finish the questions from the afternoon lab
@@ -264,6 +265,7 @@ Expected output:
 &#x1F534; The commit message should read: <br>
 "Commit 12 - Hungry for More: I tackled..."
 <hr>
+
 
 # Reminder
 Remember to submit an issue to our class repository with your work by 10 am Eastern tomorrow morning! Need a reminder on how to submit? Check out the link in your [class wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Homework-Submission).
