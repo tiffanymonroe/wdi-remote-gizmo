@@ -40,9 +40,9 @@ Write a function `checkPalindrome` that accepts a single argument, a string. The
 
 ```javascript
 console.log(checkPalindrome("Radar"));
- 
  => true
 ```
+
 ```javascript
 console.log(checkPalindrome("Borscht"));
 => false
