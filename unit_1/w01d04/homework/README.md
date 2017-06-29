@@ -57,8 +57,9 @@ The commit message should read: <br>
 Write a function `sumDigits` that accepts a number and returns the sum of its digits.
 ```
 console.log(sumDigits(42));
+=> 6;
 ```
-> => 6;
+
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
