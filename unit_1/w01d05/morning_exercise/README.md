@@ -24,7 +24,7 @@ Prerequisite Videos: <br>
 
 Let's use some CSS to improve our website for Grumpy Cat.
 
-1) Inside your `morning_exercise` folder, create a new directory called `grumpy_site`. 
+1) Inside your `student_examples` folder, create a new directory called `grumpy_site`. 
 2) Navigate inside `grumpy_site` and let's copy the files that we worked on yesterday and save them to our current location:
  `cp ../../w01d04/morning_exercise/index.html .`
 3) Create a new file called `style.css`
@@ -50,7 +50,7 @@ Let's use some CSS to improve our website for Grumpy Cat.
  - navigate to your `/w01d05/student_examples` folder
  - create a new file called `morning_mockup`
  - navigate inside `morning_mockup`
- - from there type `cp ../../w01d04/morning_exercise/*.html .` NOTE: if you created more files than this (like a CSS file), you will also need to copy those files.
+ - from there type `cp ../../w01d04/morning_exercise/mockup_practice/*.html .` NOTE: if you created more files than this (like a CSS file), you will also need to copy those files.
  - This command will copy all `html` files from yesterday's folder into today's `student_exercise` folder
 
  Note: if you have created your files elsewhere, you will need to adjust the path.
