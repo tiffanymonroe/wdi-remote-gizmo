@@ -119,7 +119,7 @@ One of our students went above and beyond with her game:
 ![more options](https://i.imgur.com/YHLD4Sd.png)
 
 ![end](https://i.imgur.com/N9f7BkA.png)
-
+</details>
 
 ## CSS Videos
 
