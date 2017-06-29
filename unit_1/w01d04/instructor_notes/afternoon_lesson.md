@@ -34,12 +34,12 @@ $ node scope.js
 <hr>
 
 3:05
+
 # SCOPE
 
-Scope is the restriction of where in your code your variables can be accessed. If you try to access a variable outside of its _scope_, it will be undefined.
+Scope is the restriction of where in your code your variables can be accessed. If you try to access a variable outside of its _scope_, it will not be defined.
 
-
-## Block Scope
+## BLOCK SCOPE
 
 **`let`** and **`const`** will scope your variables to the **block** in which they are declared.
 
@@ -89,7 +89,7 @@ console.log(item);
 
 > => "spicy meatball"
 
-This is not so great. In general, we want to control our scope as tightly as possible. If we don't, we can end up with variable collisions. This is why we stick with `let` and `const`.
+This is not so great. In general, we want to control our scope as tightly as possible. If we don't, we can end up with variable collisions and accidental overwrites. This is why we stick with `let` and `const`.
 
 <br>
 <hr>
@@ -113,6 +113,7 @@ const words = 'that\'s a...';
 ```
 
 > => that's a...
+> 
 > => spicy meatball
 
 <br>
@@ -122,7 +123,7 @@ const words = 'that\'s a...';
 
 ## Scope flow: blocks within blocks
 
-Following the same logic, can we acces variables in a block that have been declared in an outside block?
+Following the same logic, can we access variables in a block that have been declared in an outside block?
 
 ```javascript
 
@@ -139,12 +140,48 @@ const words = 'that\'s a...';
 }
 ```
 
-3:30
+> => mama mia!
+> 
+> => that's a ...
+>
+> => spicy meatball
+
+3:20
+
+&#x1F535; **Activity (5 mins)**
+
+Declare a variable and try to access it from a scope where it **cannot** be accessed (verify that it cannot be accessed).
+
+&#x1F535; **Activity**
+
+What if ...? What if you omit `let` or `const` when declaring your variable? Run some tests on accessibility. Accessibility within a block, outside a block, etc.
+
+<br>
+<hr>
+
+3:25
 
 ## Scope: functions
 
 Our variables will be scoped to blocks. This includes the curlies `{}` provided by while loops, for loops, conditionals, etc. It also includes the curlies `{}` provided by functions.  
 
+
+If JavaScript works as expected, the `item` variable should flow into the `setItem` function:
+
+```javascript
+const item = 'spicy meatball';
+
+const setItem = () => {
+	return item;
+}
+
+console.log(setItem());
+```
+
+> => spicy meatball
+
+What if we put it inside? Is it accessible outside?
+ 
 ```javascript
 const setItem = () => {
 	const item = 'spicy meatball';
@@ -200,7 +237,7 @@ The `item` variable is not visible inside `getItem`, because it is scoped only t
 <br>
 <hr>
 
-3:40
+3:35
 
 ## Scope: Loops
 
@@ -224,6 +261,16 @@ console.log('Outside the block: ', i);
 
 <br>
 <hr>
+
+&#x1F535; **Activity (6 mins)**
+
+Write a for loop but use **var** instead of **let**. Verify: is the variable accessible outside the loop after it has run?
+
+Verify: is the variable accessible outside of the loop when you use neither **var** nor **let** ? (nor **const**).
+
+Verify: is the variable accessible outside of the loop with **let**?
+
+Verify: What about a **let** variable defined within the block of the loop?
 
 3:48
 
@@ -266,6 +313,8 @@ if (age < 21) {
 console.log(message);
 ```
 
+> => You can buy the beer
+
 <br>
 <hr>
 
@@ -273,71 +322,23 @@ console.log(message);
 
 # GLOBAL SCOPE
 
-When variables are declared outside of any enclosing blocks, the value of the variable is accessible to all other blocks and functions (and all blocks and functions within those functions). There is no restriction or exclusivity.
+When variables are declared outside of any enclosing blocks, the value of the variable is accessible to all other blocks and functions (and all blocks and functions within those functions). 
 
-```
-var globalMessage = "Defined globally";
+This is called **Global scope** and is generally speaking a bad thing.
 
-var getString = function() {
-	return globalMessage;
-}
+# LOCAL SCOPE
 
-console.log(getString());
-```
+When variables are declared inside a function or block, they are scoped **locally** to that particular function or block.
 
-> => "Defined globally"
-
-```
-var globalMessage = "Defined globally";
-
-var getString = function() {
-	return globalMessage;
-}
-
-var alsoGetString = function() {
-	return globalMessage;
-}
-
-
-console.log(getString());
-console.log(alsoGetString());
-```
-
-> => "Defined globally"
->
-> => "Defined globally";
-
-
-
-RECAP:
+Note: **var** scopes to functions only.
 
 * Global scope is the the part of your code _outside_ of any enclosing blocks or functions
-* Local scope is the parts of your code that are _inside_ blocks and functions
+* Local scope is the parts of your code that are _inside_ blocks and functions.
 
-GOTCHA:
-
-Functions themselves are defined within a scope.
+Everything is defined within a scope.
 
 In which scope have our functions so far been defined?
 
-<br>
-<hr>
-
-## Functions can call other functions
-
-One result of scope is that functions can call other functions. A function may use the **return value** of another function. This is a good strategy for compartmentalizing functionality.
-
-Let's build two interacting functions from the ground up.
-
-&#x1F535; **Activity**
-
-* Write a function that will return **true** if a number is a **perfect square** AND is evenly divisible by 3.
-
-* Write another function that will loop up to an arbitrary limit (say, 100), and console log whether each number is a perfect square and is evenly divisible by 3. Call upon the previously defined function.
-
-
-<br>
-<hr>
 
 ## POLLUTION
 
@@ -350,92 +351,61 @@ You do not want your global scope to be **polluted**. There are reason for not p
 
 http://stackoverflow.com/questions/8862665/what-does-it-mean-global-namespace-would-be-polluted
 
-<br>
-<hr>
-
-
-## ARGUMENTS
-
-If we supply fewer arguments than the function expects, the function will still run, but will result in `undefined` or result in errors related to undefined values.
-
-```
-var blep = function(param1, param2) {
-	console.log([param1, param2]);
-};
-```
-
-```
-blep("mlem");
-=> ["mlem", undefined]
-```
-
-If we supply more arguments than the functions expects, the function will still run, and will ignore the extra arguments.
-
-The upshot is that we can invoke a function with as many or as few arguments as we choose, and the function will run. Whether or not it _behaves_ correctly is up in the air.
-
-<br>
-
-&#x1F535; **Activity (7 min)**
-
-**Research**
-
-There is a way to list all of the arguments passed to a function. It is called `arguments`. Research `arguments` and use it to log the _number of arguments_ passed to a function.
 
 <br>
 <hr>
 
+4:03
 
-## PRIORITY
+## Functions can call other functions 
 
-What if you have a global variable with the same name as function parameter? Which one will the function use?
+Functions can call other functions that reside in an accessible scope. A function may use the **return value** of another function. This is a good strategy for compartmentalizing functionality.
 
-Example
+Let's build two interacting functions from the ground up, both will be defined in the global scope:
 
-```
-var name = "Thomas P";
+&#x1F535; **Activity**
 
-var printName = function(name) {
-	console.log(name);
+* Write a function `checkSquare` that will return **true** if a number is a **perfect square** (Check if the square root is a whole number).
+
+* Write function `checkToLimit` that will loop up to an arbitrary limit brought in as a param (say, 100), and console log whether each number is a perfect square. Call upon the previously defined `checkSquare` function.
+
+<br>
+<hr>
+
+4:15
+
+## ADVANCED: Functions can call themselves
+
+A function has access to **itself** because it is always declared in a scope accessible to itself.
+
+When a function invokes itself, this is called **recursion**.
+
+```javascript
+const func = () => {	
+	return func();
 }
-
-printName("Darth Vader");
 ```
 
-The argument passed to the function takes priority over the globally scoped `name` variable.
+This will create a **loop**. This particular loop is infinite because it has no **exit condition**.
 
-Locally scoped variables take priority in a function over globally scopes ones.
+This function has an exit condition and can safely call itself:
 
-always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are function scoped (local) and which are resolved on the scope chain.
+```javascript
+const countdown = (num) => {
+	if (num == 0) return;
+	console.log(num);
+	return countdown(num - 1);
+}
+```
+
+See if you can figure out how it works.
 
 <br>
 <hr>
 
+# EXTRA Stuff:
 
-## INVOKED VS REFERENCED FUNCTIONS
-
-If you try to run your function without a `()`, you will see the function itself appear.
-
-![referenced](https://i.imgur.com/48sQMnG.png)
-
-Invoked function, runs immediately:
-
-```
-callFunc();
-```
-
-Referenced function, does not run (yet):
-
-```
-callFunc;
-```
-
-We will learn more about _referenced_ functions we talk about **callbacks**. For now, invoke your functions to get them to work.
-
-<br>
-<hr>
-
-
-## The Math object
+## The Math object and numbers
 
 Javascript has a built-in object called **Math** that contains useful methods for performing mathematical operations.
 
