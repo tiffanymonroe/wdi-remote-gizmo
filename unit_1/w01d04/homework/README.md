@@ -92,8 +92,8 @@ that will **accumulate** value within the loop.
 Expected result:
 ```javascript
 console.log(sumArray([1, 2, 3, 4, 5, 6]);
+=> 21
 ```
-> => 21
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
