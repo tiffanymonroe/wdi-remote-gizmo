@@ -94,7 +94,53 @@ This is not so great. In general, we want to control our scope as tightly as pos
 <br>
 <hr>
 
+3:12
+
+## Scope flow: outside in
+
+We know if we declare a variable inside a block that it is not accessible outside.
+
+If we declare a variable outside a block, is it accessible inside?
+
+```javascript
+const words = 'that\'s a...';
+
+{
+	const item = 'spicy meatball';
+	console.log(words);
+	console.log(item);
+}
+```
+
+> => that's a...
+> => spicy meatball
+
+<br>
+<hr>
+
 3:15
+
+## Scope flow: blocks within blocks
+
+Following the same logic, can we acces variables in a block that have been declared in an outside block?
+
+```javascript
+
+const words = 'that\'s a...';
+
+{
+	const item = 'spicy meatball';
+	const start = 'mama mia!'
+	{
+		console.log(start);
+		console.log(words);
+		console.log(item);
+	}
+}
+```
+
+3:30
+
 ## Scope: functions
 
 Our variables will be scoped to blocks. This includes the curlies `{}` provided by while loops, for loops, conditionals, etc. It also includes the curlies `{}` provided by functions.  
@@ -106,7 +152,7 @@ const setItem = () => {
 }
 ```
 
-The value of the `item` variable is not accessible outside the function.
+The value of the `item` variable is not accessible outside the function (outside of the curlies `{}`).
 
 If we try to access it outside of the function:
 
@@ -153,7 +199,8 @@ The `item` variable is not visible inside `getItem`, because it is scoped only t
 
 <br>
 <hr>
-3:25
+
+3:40
 
 ## Scope: Loops
 
@@ -177,7 +224,9 @@ console.log('Outside the block: ', i);
 
 <br>
 <hr>
-3:35
+
+3:48
+
 ## Scope: Conditionals
 
 Using `let` or `const` within conditional blocks will scope to the block (no surprises there).
@@ -201,11 +250,26 @@ console.log(num);
 
 > => Reference error: num is not defined
 
+Knowing what we know about block scope, can we write code like this?
 
-What if we want multiple blocks to have access to a variable?
+```javascript
+
+const age = 21;
+let message = '';
+
+if (age < 21) {
+	message = 'You cannot buy the beer';
+} else {
+	message = 'You can buy the beer';
+}
+
+console.log(message);
+```
 
 <br>
 <hr>
+
+3:56
 
 # GLOBAL SCOPE
 
@@ -247,20 +311,14 @@ console.log(alsoGetString());
 
 RECAP:
 
-* Global scope is the the part of your code _outside_ of a function
-* Local scope is the parts of your code that are _inside_ functions
+* Global scope is the the part of your code _outside_ of any enclosing blocks or functions
+* Local scope is the parts of your code that are _inside_ blocks and functions
 
 GOTCHA:
 
 Functions themselves are defined within a scope.
 
 In which scope have our functions so far been defined?
-
-<br>
-<hr>
-
-3:50
-## Local scope
 
 <br>
 <hr>
@@ -295,88 +353,6 @@ http://stackoverflow.com/questions/8862665/what-does-it-mean-global-namespace-wo
 <br>
 <hr>
 
-# EXTRA STUFF
-
-## `var`
-
-`var` is what gives a variable its **function scope**. If you omit `var`, the variable will be automatically considered scope-less (It will behave as if it were global after it has been defined).
-
-Always use `var` to avoid weird scoping errors, including when setting the start parameter of your _for loops_. If you have a _for loop_ inside a function, you will want the values of the loop not to pollute the global scope.
-
-&#x1F535; **Code**
-
-```
-var list = function() {
-	for (var i=0; i < 10; i++) {
-		console.log(i);
-	}
-}
-
-list();
-
-// global scope
-console.log('Value of i: ', i);
-```
-
-Omit `var` and see the difference.
-
-<br>
-<hr>
-
-4:05
-
-## VAR AND HOISTING (7 mins)
-
-Why save a function to **var**? What about this alternative syntax:
-
-```
-function noVarHere() {
-	// stuff
-}
-```
-
-This syntax is called a **function declaration**. The reason why we are not using **function declarations** for now is due to _hoisting_.
-
-Hoisting is when Javascript moves all declarations to the top of the current scope, allowing you to _use_ code seemingly out of order. When you declare a function using the above syntax, the declaration is _hoisted_, meaning you can invoke the function before it has been defined:
-
-```
-outOfOrder();
-
-function outOfOrder() {
-	console.log("beans");
-}
-
-=> "beans"
-
-// the function can be invoked before it is defined
-```
-
-This is fine, but we want you to think about the sequence of your code. Let's write our functions as _function expressions_ for now, the way we have been doing:
-
-```
-funcExpression();
-
-var funcExpression = function(){
-  console.log("beans");  
-}
-
-=> TypeError: funcExpression is not a function
-
-// the function cannot be invoked before it is defined
-// better to keep things in order for now
-```
-
-If you are really interested in the fine details of function expressions vs declarations, have a read [here](http://stackoverflow.com/questions/336859/javascript-function-declaration-syntax-var-fn-function-vs-function-fn)
-
-<br>
-
-&#x1F535; **Activity (4 min)**
-
-* Write a simple function that can be invoked before it is defined
-* Change this function so that it cannot be invoked before it is defined
-
-<br>
-<hr>
 
 ## ARGUMENTS
 
@@ -433,7 +409,6 @@ always declare variables at the top of their scope (the top of global code and t
 
 <br>
 <hr>
-
 
 
 ## INVOKED VS REFERENCED FUNCTIONS
