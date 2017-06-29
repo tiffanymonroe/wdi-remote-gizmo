@@ -7,7 +7,7 @@ Title: Afternoon Lesson<br>
 Type: Lesson<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page <br>
-Topics: Global, local, block scope, more functions, testing code in layers<br>
+Topics: Global, local, block scope<br>
 
 ---
 
@@ -15,20 +15,19 @@ Topics: Global, local, block scope, more functions, testing code in layers<br>
 
 _After this lesson students will be able to:_
 
-* Use the Math object
+* Use `const` and `let` for block-scoping
 * Differentiate between global and local scope
-* Invoke a function within a function
 
 ---
 
 ## Setup
 
-In `w01d04/student_examples` make a file `afternoon_code.js`
+In `student_examples` for today, make a file `scope.js`
 
 Test that a console.log will appear in Terminal when you run the file.
 
 ```
-node afternoon_code.js
+$ node scope.js
 ```
 
 <br>
@@ -36,7 +35,377 @@ node afternoon_code.js
 
 3:05
 
-## The Math object
+# SCOPE
+
+Scope is the restriction of where in your code your variables can be accessed. If you try to access a variable outside of its _scope_, it will not be defined.
+
+## BLOCK SCOPE
+
+**`let`** and **`const`** will scope your variables to the **block** in which they are declared.
+
+Example -- make a block and declare a variable within:
+
+```javascript
+{
+	const item = 'spicy meatball';
+}
+```
+
+`item` is available inside the block, but not available outside.
+
+This works:
+
+```javascript
+{
+	const item = 'spicy meatball';
+	console.log(item);
+}
+```
+
+> => "spicy meatball"
+
+This doesn't:
+
+```javascript
+{
+	const item = 'spicy meatball';
+}
+
+console.log(item);
+```
+
+> ReferenceError: item is not defined
+
+
+**`var`** by contrast will leak out of a block.
+
+```javascript
+{
+	var item = 'spicy meatball';
+}
+
+console.log(item);
+```
+
+> => "spicy meatball"
+
+This is not so great. In general, we want to control our scope as tightly as possible. If we don't, we can end up with variable collisions and accidental overwrites. This is why we stick with `let` and `const`.
+
+<br>
+<hr>
+
+3:12
+
+## Scope flow: outside in
+
+We know if we declare a variable inside a block that it is not accessible outside.
+
+If we declare a variable outside a block, is it accessible inside?
+
+```javascript
+const words = 'that\'s a...';
+
+{
+	const item = 'spicy meatball';
+	console.log(words);
+	console.log(item);
+}
+```
+
+> => that's a...
+> 
+> => spicy meatball
+
+<br>
+<hr>
+
+3:15
+
+## Scope flow: blocks within blocks
+
+Following the same logic, can we access variables in a block that have been declared in an outside block?
+
+```javascript
+
+const words = 'that\'s a...';
+
+{
+	const item = 'spicy meatball';
+	const start = 'mama mia!'
+	{
+		console.log(start);
+		console.log(words);
+		console.log(item);
+	}
+}
+```
+
+> => mama mia!
+> 
+> => that's a ...
+>
+> => spicy meatball
+
+3:20
+
+&#x1F535; **Activity (5 mins)**
+
+Declare a variable and try to access it from a scope where it **cannot** be accessed (verify that it cannot be accessed).
+
+&#x1F535; **Activity**
+
+What if ...? What if you omit `let` or `const` when declaring your variable? Run some tests on accessibility. Accessibility within a block, outside a block, etc.
+
+<br>
+<hr>
+
+3:25
+
+## Scope: functions
+
+Our variables will be scoped to blocks. This includes the curlies `{}` provided by while loops, for loops, conditionals, etc. It also includes the curlies `{}` provided by functions.  
+
+
+If JavaScript works as expected, the `item` variable should flow into the `setItem` function:
+
+```javascript
+const item = 'spicy meatball';
+
+const setItem = () => {
+	return item;
+}
+
+console.log(setItem());
+```
+
+> => spicy meatball
+
+What if we put it inside? Is it accessible outside?
+ 
+```javascript
+const setItem = () => {
+	const item = 'spicy meatball';
+	return item;
+}
+```
+
+The value of the `item` variable is not accessible outside the function (outside of the curlies `{}`).
+
+If we try to access it outside of the function:
+
+```javascript
+const setItem = () => {
+	const item = 'spicy meatball';
+	return item;
+}
+
+console.log(item);
+```
+
+![](https://i.imgur.com/KJniVJ3.png)
+
+We get a reference error, because `item` is not defined in the scope in which we used the console.log.
+
+If we run the function first, the value of `item` is _still_ not set outside of its scope:
+
+```javascript
+setItem();
+console.log(item);
+```
+
+As a natural consequence, functions cannot access variables stored in **sibling** functions.
+
+If we make another function:
+
+```javascript
+const setItem = () => {
+	const item = 'spicy meatball';
+	return item;
+}
+
+const getItem = () => {
+	return item;
+}
+
+console.log(getItem());
+```
+
+![](https://i.imgur.com/xNQ689Y.png)
+
+The `item` variable is not visible inside `getItem`, because it is scoped only to `setItem`.
+
+<br>
+<hr>
+
+3:35
+
+## Scope: Loops
+
+Using `let` within a for loop control panel scopes the variable to the block.
+
+```javascript
+for (let i=0; i < 100; i++) {
+	console.log('Inside the block: ', i);
+}
+
+console.log('Outside the block: ', i);
+```
+
+> Inside the block: 1
+>
+> Inside the block: 2
+>
+> etc.
+> 
+> Outside the block: Reference error: i is not defined
+
+<br>
+<hr>
+
+&#x1F535; **Activity (6 mins)**
+
+Write a for loop but use **var** instead of **let**. Verify: is the variable accessible outside the loop after it has run?
+
+Verify: is the variable accessible outside of the loop when you use neither **var** nor **let** ? (nor **const**).
+
+Verify: is the variable accessible outside of the loop with **let**?
+
+Verify: What about a **let** variable defined within the block of the loop?
+
+3:48
+
+## Scope: Conditionals
+
+Using `let` or `const` within conditional blocks will scope to the block (no surprises there).
+
+```javascript
+
+if (true) {
+	const num = 100;
+	console.log(num);
+}
+```
+> => 100
+
+```javascript
+if (true) {
+	const num = 100;
+}
+
+console.log(num);
+```
+
+> => Reference error: num is not defined
+
+Knowing what we know about block scope, can we write code like this?
+
+```javascript
+
+const age = 21;
+let message = '';
+
+if (age < 21) {
+	message = 'You cannot buy the beer';
+} else {
+	message = 'You can buy the beer';
+}
+
+console.log(message);
+```
+
+> => You can buy the beer
+
+<br>
+<hr>
+
+3:56
+
+# GLOBAL SCOPE
+
+When variables are declared outside of any enclosing blocks, the value of the variable is accessible to all other blocks and functions (and all blocks and functions within those functions). 
+
+This is called **Global scope** and is generally speaking a bad thing.
+
+# LOCAL SCOPE
+
+When variables are declared inside a function or block, they are scoped **locally** to that particular function or block.
+
+Note: **var** scopes to functions only.
+
+* Global scope is the the part of your code _outside_ of any enclosing blocks or functions
+* Local scope is the parts of your code that are _inside_ blocks and functions.
+
+Everything is defined within a scope.
+
+In which scope have our functions so far been defined?
+
+
+## POLLUTION
+
+You do not want your global scope to be **polluted**. There are reason for not polluting your global scope.
+
+* Global variables can be overwritten or misconstrued elsewhere
+* Potentially causing unwanted, hard to track bugs
+* Namespace
+* Memory / garbage collection
+
+http://stackoverflow.com/questions/8862665/what-does-it-mean-global-namespace-would-be-polluted
+
+
+<br>
+<hr>
+
+4:03
+
+## Functions can call other functions 
+
+Functions can call other functions that reside in an accessible scope. A function may use the **return value** of another function. This is a good strategy for compartmentalizing functionality.
+
+Let's build two interacting functions from the ground up, both will be defined in the global scope:
+
+&#x1F535; **Activity**
+
+* Write a function `checkSquare` that will return **true** if a number is a **perfect square** (Check if the square root is a whole number).
+
+* Write function `checkToLimit` that will loop up to an arbitrary limit brought in as a param (say, 100), and console log whether each number is a perfect square. Call upon the previously defined `checkSquare` function.
+
+<br>
+<hr>
+
+4:15
+
+## ADVANCED: Functions can call themselves
+
+A function has access to **itself** because it is always declared in a scope accessible to itself.
+
+When a function invokes itself, this is called **recursion**.
+
+```javascript
+const func = () => {	
+	return func();
+}
+```
+
+This will create a **loop**. This particular loop is infinite because it has no **exit condition**.
+
+This function has an exit condition and can safely call itself:
+
+```javascript
+const countdown = (num) => {
+	if (num == 0) return;
+	console.log(num);
+	return countdown(num - 1);
+}
+```
+
+See if you can figure out how it works.
+
+<br>
+<hr>
+
+# EXTRA Stuff:
+
+## The Math object and numbers
 
 Javascript has a built-in object called **Math** that contains useful methods for performing mathematical operations.
 
@@ -88,7 +457,6 @@ Math.floor( Math.random() * 11 );
 Math.floor( Math.random() * 10 ) + 1;
 ```
 
-
 ## Research
 
 Math docs on MDN:
@@ -124,501 +492,6 @@ Javascript is considered accurate up to about 15 digits
 ```
 
 You can read more [here](http://floating-point-gui.de/)
-
-<br>
-<hr>
-
-3:25
-
-# SCOPE
-
-Scope is the restriction of where in your code your variables can be used. If you try to access a variable outside of its _scope_, it will be undefined.
-
-There are two scopes in Javascript:
-
-* Global scope
-* Local scope
-
-A variable defined in **global scope** is available everywhere.
-
-A variable defined in **local scope** is available only to the function in which the variable was defined.
-
-In addition, it will also be available to functions **defined within that function.**
-
-<br>
-
-## LOCAL SCOPE
-
-When variables are declared inside functions.
-
-```
-var setItem = function() {
-	var item = 'chair';
-	return item;
-}
-```
-
-The value of the `item` variable is not accessible outside the function.
-
-If we try to access it outside of the function:
-
-```
-console.log(item);
-```
-
-![](https://i.imgur.com/KJniVJ3.png)
-
-We get a reference error, because `item` is not defined in the scope in which we used the console.log.
-
-If we run the function first, the value of `item` is not set outside of its scope:
-
-```
-setItem();
-console.log(item);
-```
-
-Functions cannot access variables stored in **sibling** functions. This is another application of local scope.
-
-If we make another function:
-
-```
-var getItem = function() {
-	return item;
-}
-
-console.log(getItem());
-```
-
-![](https://i.imgur.com/xNQ689Y.png)
-
-The `item` variable is not visible inside `getItem`, because it is locally scoped only to `setItem`.
-
-Functions are _exclusive_. They are like little prisons for your variables.  The technical term / jargon for this is **lexical scope**. We scope variables locally using functions.
-
-In **ES6** and greater, you can also scope to a block (block scope), but we are not concerning ourselves with that just yet.
-
-<br>
-3:35
-
-## GLOBAL SCOPE
-
-When variables are declared outside functions, the value of the variable is accessible to all functions (and all functions within those functions). There is no restriction or exclusivity.
-
-```
-var globalMessage = "Defined globally";
-
-var getString = function() {
-	return globalMessage;
-}
-
-console.log(getString());
-```
-
-> => "Defined globally"
-
-```
-var globalMessage = "Defined globally";
-
-var getString = function() {
-	return globalMessage;
-}
-
-var alsoGetString = function() {
-	return globalMessage;
-}
-
-
-console.log(getString());
-console.log(alsoGetString());
-```
-
-> => "Defined globally"
->
-> => "Defined globally";
-
-
-
-RECAP:
-
-* Global scope is the the part of your code _outside_ of a function
-* Local scope is the parts of your code that are _inside_ functions
-
-GOTCHA:
-
-Functions themselves are defined within a scope.
-
-In which scope have our functions so far been defined?
-
-3:50
-
-## Functions can call other functions
-
-One result of scope is that functions can call other functions. A function may use the **return value** of another function. This is a good strategy for compartmentalizing functionality.
-
-Let's build two interacting functions from the ground up.
-
-* We will write a function `checkForLetterA` that will return "true" if its string input is the letter "A".
-
-* We will write a function `checkArrayOfLetters` that will iterate over an array of letters, and call on the `checkForLetterA` function for each letter.
-
-## Layering
-
-Let's do this step-by-step and use **best testing practices**.
-
-The idea is to test the code before moving on to the next step.
-
-First, define the `checkForLetterA` function.
-
-```
-var checkForLetterA = function() {
-
-}
-```
-
-![](https://i.imgur.com/VVFeWKu.png)
-
-<br>
-
-Next, let's just test that the function will run with a console.log.
-
-```
-var checkForLetterA = function() {
-  console.log("ok");
-}
-
-checkForLetterA();
-```
-
-![](https://i.imgur.com/3mG5scp.png)
-
-
-<br>
-
-Next, give our function a **parameter** and invoke it with a corresponding **argument**.
-
-```
-var checkForLetterA = function(letter) {
-  console.log(letter);
-}
-
-checkForLetterA("A");
-```
-
-![](https://i.imgur.com/qavgwAH.png)
-
-<br>
-
-What I want to do is check if the incoming data is an "A". For this I would use a **conditional**
-
-```
-var checkForLetterA = function(letter) {
-  if (letter == 'A') {
-    console.log("true");
-  }
-}
-
-checkForLetterA("A");
-```
-
-![](https://i.imgur.com/pioXTsD.png)
-
-<br>
-
-Next, I want my function to have a **value** and not just print to the console. For this I use **return** within the function. I want to return a **Boolean** not a string.
-
-To see the value of the function, I console.log the function invocation.
-
-```
-var checkForLetterA = function(letter) {
-  if (letter == 'A') {
-    return true;
-  }
-}
-
-console.log(checkForLetterA("A"));
-```
-
-![](https://i.imgur.com/0pwLUKz.png)
-
-<br>
-
-
-Next, I want the function to return `false` if the letter is not A.
-
-Since **return** will immediately end the function if the letter is A, I can just put **return false** at the end of the function.
-
-This function will **always return false** unless the letter is A.
-
-```
-var checkForLetterA = function(letter) {
-  if (letter == 'A') {
-    return true;
-  }
-  return false;
-}
-
-console.log(checkForLetterA("A"));
-```
-
-![](https://i.imgur.com/KizLA2R.png)
-
-
-<br>
-
-**Hooray!** Our function is complete using the layering technique.
-
-Underneath the `checkForLetterA` function, let's define another function, `checkArrayOfLetters` and just test it with a console.log
-
-```
-var checkArrayOfLetters = function() {
-  console.log("ok");
-}
-
-checkArrayOfLetters();
-```
-
-![](https://i.imgur.com/eUZYScl.png)
-
-<br>
-
-Let's give our function a parameter, and supply an array as the argument.
-
-```
-var checkArrayOfLetters = function(arr) {
-  console.log(arr);
-}
-
-checkArrayOfLetters(["A", "B", "C", "D", "A"]);
-```
-
-![](https://i.imgur.com/IwaqPoV.png)
-
-<br>
-
-What we want to do is iterate over the array and check each letter. Let's iterate first:
-
-```
-var checkArrayOfLetters = function(arr) {
-  	for (var i=0; i < arr.length; i++) {
-  		console.log(arr[i]);
-  	}
-}
-
-checkArrayOfLetters(["A", "B", "C", "D", "A"]);
-```
-
-![](https://i.imgur.com/FijHddf.png)
-
-
-<br>
-
-Last step: conveniently use our `checkForLetterA` function, which was defined in the **global scope**, within our `checkArrayOfLetters` function.
-
-We can pass _that_ function the currently-iterated array element as an **argument**.
-
-```
-var checkArrayOfLetters = function(arr) {
-  	for (var i=0; i < arr.length; i++) {
-  		console.log(checkForLetterA(arr[i]));
-  	}
-}
-
-checkArrayOfLetters(["A", "B", "C", "D", "A"]);
-```
-
-![](https://i.imgur.com/GT1xVFQ.png)
-
-<br>
-
-Both functions together:
-
-![](https://i.imgur.com/VlUrn8T.png)
-
-
-3:40
-
-&#x1F535; **Activity**
-
-* Write a function that will return **true** if a number is a **perfect square** AND is evenly divisible by 2.
-
-* Write another function that will loop up to an arbitrary limit (say, 100), and console log whether each number is a perfect square. Call upon the previously defined function.
-
-<br>
-<hr>
-
-# EXTRA STUFF
-
-## `var`
-
-`var` is what gives a variable its **lexical scope**. If you omit `var`, the variable will be automatically considered scope-less (It will behave as if it were global after it has been defined).
-
-Always use `var` to avoid weird scoping errors, including when setting the start parameter of your _for loops_. If you have a _for loop_ inside a function, you will want the values of the loop not to pollute the global scope.
-
-&#x1F535; **Code**
-
-```
-var list = function() {
-	for (var i=0; i < 10; i++) {
-		console.log(i);
-	}
-}
-
-list();
-
-// global scope
-console.log('Value of i: ', i);
-```
-
-Omit `var` and see the difference.
-
-<br>
-<hr>
-
-4:05
-
-## VAR AND HOISTING (7 mins)
-
-Why save a function to **var**? What about this alternative syntax:
-
-```
-function noVarHere() {
-	// stuff
-}
-```
-
-This syntax is called a **function declaration**. The reason why we are not using **function declarations** for now is due to _hoisting_.
-
-Hoisting is when Javascript moves all declarations to the top of the current scope, allowing you to _use_ code seemingly out of order. When you declare a function using the above syntax, the declaration is _hoisted_, meaning you can invoke the function before it has been defined:
-
-```
-outOfOrder();
-
-function outOfOrder() {
-	console.log("beans");
-}
-
-=> "beans"
-
-// the function can be invoked before it is defined
-```
-
-This is fine, but we want you to think about the sequence of your code. Let's write our functions as _function expressions_ for now, the way we have been doing:
-
-```
-funcExpression();
-
-var funcExpression = function(){
-  console.log("beans");  
-}
-
-=> TypeError: funcExpression is not a function
-
-// the function cannot be invoked before it is defined
-// better to keep things in order for now
-```
-
-If you are really interested in the fine details of function expressions vs declarations, have a read [here](http://stackoverflow.com/questions/336859/javascript-function-declaration-syntax-var-fn-function-vs-function-fn)
-
-<br>
-
-&#x1F535; **Activity (4 min)**
-
-* Write a simple function that can be invoked before it is defined
-* Change this function so that it cannot be invoked before it is defined
-
-<br>
-<hr>
-
-## ARGUMENTS
-
-If we supply fewer arguments than the function expects, the function will still run, but will result in `undefined` or result in errors related to undefined values.
-
-```
-var blep = function(param1, param2) {
-	console.log([param1, param2]);
-};
-```
-
-```
-blep("mlem");
-=> ["mlem", undefined]
-```
-
-If we supply more arguments than the functions expects, the function will still run, and will ignore the extra arguments.
-
-The upshot is that we can invoke a function with as many or as few arguments as we choose, and the function will run. Whether or not it _behaves_ correctly is up in the air.
-
-<br>
-
-&#x1F535; **Activity (7 min)**
-
-**Research**
-
-There is a way to list all of the arguments passed to a function. It is called `arguments`. Research `arguments` and use it to log the _number of arguments_ passed to a function.
-
-<br>
-<hr>
-
-
-## PRIORITY
-
-What if you have a global variable with the same name as function parameter? Which one will the function use?
-
-Example
-
-```
-var name = "Thomas P";
-
-var printName = function(name) {
-	console.log(name);
-}
-
-printName("Darth Vader");
-```
-
-The argument passed to the function takes priority over the globally scoped `name` variable.
-
-Locally scoped variables take priority in a function over globally scopes ones.
-
-always declare variables at the top of their scope (the top of global code and the top of function code) so it's clear which variables are function scoped (local) and which are resolved on the scope chain.
-
-<br>
-<hr>
-
-## POLLUTION
-
-You do not want your global scope to be **polluted**. There are reason for not polluting your global scope.
-
-* Global variables can be overwritten or misconstrued elsewhere
-* Potentially causing unwanted, hard to track bugs
-* Namespace
-* Memory / garbage collection
-
-http://stackoverflow.com/questions/8862665/what-does-it-mean-global-namespace-would-be-polluted
-
-<br>
-<hr>
-
-
-## INVOKED VS REFERENCED FUNCTIONS
-
-If you try to run your function without a `()`, you will see the function itself appear.
-
-![referenced](https://i.imgur.com/48sQMnG.png)
-
-Invoked function, runs immediately:
-
-```
-callFunc();
-```
-
-Referenced function, does not run (yet):
-
-```
-callFunc;
-```
-
-We will learn more about _referenced_ functions we talk about **callbacks**. For now, invoke your functions to get them to work.
 
 <br>
 <hr>

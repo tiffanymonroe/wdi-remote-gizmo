@@ -7,7 +7,7 @@
 Title: w01d01 Homework<br>
 Duration: 3 - 4 hrs approx.<br>
 Creator: Thom Page <br>
-Modified by: Kristyn bryan <br>
+Modified by: Kristyn Bryan <br>
 Topics: Terminal, boolean expressions, reading code, while loops, for loops<br>
 
 ---
@@ -215,7 +215,7 @@ CHALLENGE
 
 * Figure out how to iterate over **every second** element of the `StarWars` array, starting with the first element.
 
-> => Han, R2D2, Anakin
+> => Han, R2D2, Leia
 
 Skip this challenge if you end up spending too much time on it.
 

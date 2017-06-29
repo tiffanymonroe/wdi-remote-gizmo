@@ -6,6 +6,7 @@
 Title: Review: git/github, terminal, and anything we've covered so far & HTML Boilerplate <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
+Modified by: Kristyn Bryan<br>
 Creator: Karolin Rafalski<br>
     Course: WDIR-Hopper <br>
 Competencies: git/github, terminal, html fundamentals <br>
@@ -30,6 +31,10 @@ Push your work and pull the most up-to-date information from our class repo.
 
 ![up to date](https://i.imgur.com/BGPy32T.png)
 
+
+>##### WHAT TO DO:
+>`git pull upstream master`
+> - *This will pull any updated materials from the instructor's github repo.*
 <hr>
 
 #### :space_invader: You're probably in the wrong folder or your remotes are in the wrong place
@@ -168,6 +173,8 @@ What it looks like in your browser (GUI):
 </details>
 
 #### Create files and folders
+Note: I have a `boilerplate` folder already created within this morning's `morning_exercise` directory with the files and folders that you will need. Feel free to reference this.
+
 Inside today's Morning Exercise folder:
 1) Make a new folder (`mkdir`) called `project-boilerplate`
 2) Navigate into the folder `cd project-boilerplate`
@@ -191,6 +198,7 @@ Note: if you have more than one JavaScript file, it would be typical to put thos
 - Take a moment to think about how you can tell if you have successfully linked your stylesheet.
 
 <hr>
+
 #### Connect Your Files
 1) Open your `index.html` in Atom (`atom index.html`)
 2) Write your HMTL code (see above and refrence the videos). HINT: Atom has a built-in way to create an HTML boilerplate! On line 1 of your `index.html` file, type `HTML` and hit `tab`. Note: make sure that you do not put a space after `HTML`.
