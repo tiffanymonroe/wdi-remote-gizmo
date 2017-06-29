@@ -35,7 +35,7 @@
 // SOLUTION:
 console.log("answer for Easy Going:")
 
-for (var i = 1; i <= 20; i ++){
+for (let i = 1; i <= 20; i ++){
   console.log(i);
 }
 
@@ -56,7 +56,7 @@ console.log("==============================================")
 // SOLUTION:
 console.log("answer for Get Even:")
 
-for (var i = 0; i <= 200; i += 2){
+for (let i = 0; i <= 200; i += 2){
   console.log(i);
 }
 
@@ -101,10 +101,10 @@ console.log("==============================================")
 console.log("answer for Triangles:")
 
 // right isoscelese triangle
-var height = 6;
-var buildTriangle = "";
+const height = 6;
+let buildTriangle = "";
 
-for (var i = 0; i < height; i++){
+for (let i = 0; i < height; i++){
   buildTriangle += '#';
   console.log(buildTriangle);
 };
@@ -112,9 +112,9 @@ for (var i = 0; i < height; i++){
 console.log("==============================================")
 
 // upside down right isosceles triangle
-var height = 6;
+const height = 6;
 
-for (var i = height; i > 0; i--){
+for (let i = height; i > 0; i--){
   console.log('#'.repeat(i));
 };
 
@@ -123,12 +123,12 @@ for (var i = height; i > 0; i--){
 console.log("==============================================")
 // Second Solution:
 
-var height = 8;
-var buildTriangle = [];
+const height = 8;
+let buildTriangle = [];
 
 while (height > 0){
   buildTriangle = [];
-  for (var i = height; i > 0; i--){
+  for (const i = height; i > 0; i--){
     buildTriangle.push('#');
   };
   console.log(buildTriangle.join(""));
@@ -158,7 +158,7 @@ console.log("==============================================")
 // SOLUTION:
 console.log("answer for Fizz Buzz:")
 
-for (var i = 1; i <= 100; i ++){
+for (let i = 1; i <= 100; i ++){
   if( i % 3 === 0 && i % 5 === 0 ) {
     console.log('fizzbuzz')
   } else if( i % 3 === 0 ) {
@@ -181,10 +181,10 @@ console.log("==============================================")
 // ## Getting to Know You
 // Use the following arrays to answer the questions below (name, age, hometown):
 // ```
-// var thom = ["Thom", 1000, "Christchurch"]
-// var karolin = ["Karolin", 16, "New York"]
-// var kristyn = ["Kristyn", 5, "Pittsburgh"]
-// var matt = ["Matt H", 186, "Philadelphia"]
+// const thom = ["Thom", 1000, "Christchurch"]
+// const karolin = ["Karolin", 16, "New York"]
+// const kristyn = ["Kristyn", 5, "Pittsburgh"]
+// const matt = ["Matt H", 186, "Philadelphia"]
 // ```
 // 1. Matt H. decides that Thom. can't be named "Thom" anymore. Remove "Thom" from the `thom` array and replace it with "Gameboy".
 //
@@ -199,10 +199,10 @@ console.log("==============================================")
 // SOLUTION:
 console.log("answer for Getting to Know You:")
 
-var thom = ["Thom", 1000, "Christchurch"];
-var karolin = ["Karolin", 16, "New York"];
-var kristyn = ["Kristyn", 5, "Pittsburgh"];
-var matt = ["Matt H", 186, "Philadelphia"];
+const thom = ["Thom", 1000, "Christchurch"];
+const karolin = ["Karolin", 16, "New York"];
+const kristyn = ["Kristyn", 5, "Pittsburgh"];
+const matt = ["Matt H", 186, "Philadelphia"];
 
 // 1.
 thom[0] = "Gameboy";
@@ -243,9 +243,9 @@ console.log("==============================================")
 // SOLUTION:
 console.log("answer for Yell at the Ninja Turtles:")
 
-var ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
+const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"];
 
-for (var i = 0; i < ninjaTurtles.length; i++){
+for (let i = 0; i < ninjaTurtles.length; i++){
   console.log(ninjaTurtles[i].toUpperCase());
 };
 
@@ -273,7 +273,7 @@ console.log("answer for Excited Kitten:")
 
 randomMessage = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
 
-for (var i = 1; i <= 20; i ++){
+for (let i = 1; i <= 20; i ++){
   if( i % 2 === 0) {
     console.log(randomMessage[Math.floor(Math.random() * randomMessage.length - 1) + 1]);
 
@@ -296,7 +296,7 @@ console.log("==============================================")
 // -  _hint_ if you check the length of the array / 2, you might get not get a whole number. In which case, look into `Math.floor( // something )`
 //
 // ```
-// var nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+// const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 //
 // Expected output:
 // => 15
@@ -307,9 +307,9 @@ console.log("==============================================")
 console.log("answer for Find the Median")
 // To calculate the median of any set of numbers, you need to write the numbers in order. If there is an odd number of results, the median is the middle number. If there is an even number of results, the median will be the mean of the two central numbers.
 
-var nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
+const nums = [14,11,16,15,13,16,15,17,19,11,12,14,19,11,15,17,11,18,12,17,12,71,18,15,12];
 
-var median = 0;
+let median = 0;
 
 // Sort the array to get the numbers in ascending order
 nums.sort();
@@ -318,8 +318,8 @@ console.log("How long is the array " + nums.length);
 
 // Check if the array has an even numbered of elements
 if (nums.length % 2 === 0){
-  var middleIndex1 = Math.floor((nums.length-1)/2);
-  var middleIndex2 = Math.ceil((nums.length-1)/2);
+  const middleIndex1 = Math.floor((nums.length-1)/2);
+  const middleIndex2 = Math.ceil((nums.length-1)/2);
   median = (nums[middleIndex1] + nums[middleIndex2])/2;
 } else {
   median = nums[Math.floor(nums.length/2)];
@@ -349,8 +349,8 @@ console.log("==================================================")
 // SOLUTION:
 console.log("answer for Multiples of 3 and 5:")
 
-var sum = 0;
-for (var i = 1; i < 1000; i ++ ){
+let sum = 0;
+for (let i = 1; i < 1000; i ++ ){
   if (i % 3 === 0 || i % 5 === 0) {
     sum = sum + i;
   }
@@ -371,7 +371,7 @@ console.log("==============================================")
 // Below, we've given you examples of Kristyn and Thom's closets modeled as data in JavaScript. Use this data to answer the following questions.
 //
 // ```javascript
-var kristynsCloset = [
+const kristynsCloset = [
   "left shoe",
   "cowboy boots",
   "right sock",
@@ -382,7 +382,7 @@ var kristynsCloset = [
 ];
 //
 // // Thom's closet is more complicated. Check out this nested data structure!!
-var thomsCloset = [
+const thomsCloset = [
   [
     // These are Thom's shirts
     "grey button-up",
@@ -433,7 +433,7 @@ console.log("==============================================")
 console.log("answer for Dress Us Up:")
 
 // 3 outfits for Kristyn
-for (var i = 1; i <=3; i++){
+for (let i = 1; i <=3; i++){
 
   // Random number the max is the length of the array
   kristynRandomNum = Math.floor((Math.random() * (kristynsCloset.length - 1)));
@@ -444,7 +444,7 @@ for (var i = 1; i <=3; i++){
 console.log("++++++++++++++++++++");
 
 // 3 outfits for Thom
-for (var i = 1; i <=3; i++){
+for (let i = 1; i <=3; i++){
 
   thomRandomShirtNum = Math.floor(Math.random() * (thomsCloset[0].length - 1));
 
@@ -473,16 +473,16 @@ console.log("==============================================")
 // SOLUTION:
 console.log("answer for Dirty Laundry:")
 
-for (var i = 0; i < kristynsCloset.length - 1; i ++){
+for (let i = 0; i < kristynsCloset.length - 1; i ++){
   console.log("WHIRR: Now washing " + kristynsCloset[i]);
 }
 
 console.log("++++++++++++++++++++");
 
-for (var i = 0; i < thomsCloset.length; i ++){
-  var closetSection = thomsCloset[i];
+for (let i = 0; i < thomsCloset.length; i ++){
+  let closetSection = thomsCloset[i];
 
-  for (var j = 0; j < closetSection.length; j ++){
+  for (let j = 0; j < closetSection.length; j ++){
     console.log("WHIRR: Now washing " + closetSection[j]);
   }
 }
