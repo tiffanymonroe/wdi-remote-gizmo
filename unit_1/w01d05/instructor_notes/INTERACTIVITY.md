@@ -265,7 +265,7 @@ You can have functions call other functions:
 const func1 = ()=>{
     console.log('hello');
 }
-const func2 = =>(){
+const func2 = ()=>{
     console.log('oh hai');
     func1();
 }
