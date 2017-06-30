@@ -17,7 +17,7 @@ Prerequisites: Basic HTML <br>
 
 
 ## Directions
-Look at the image below and create this webpage using HTML. 
+Look at the mockup below and create this webpage's HTML. We will work on the CSS tomorrow.
 
 ## Setup
 1. Navigate to your `student_examples` folder for today (`w02d01`).
@@ -33,7 +33,7 @@ Your folder structure will look like:
 ![Mockup](mockup.jpg)
 
 ## The Resources
-1. Images are located in the `img` folder inside this `morning_exercise` folder. You can either reference to this foldeder or copy the `img` to your `morning_mockup` and reference from there.
+1. Images are located in the `img` folder inside this `morning_exercise` folder. You can either reference them from this folder **or** copy the `img` folder to your `morning_mockup` folder and reference from there.
     
 1. For the "GET IN TOUCH" section, don't worry about creating form elements for name, email, subject, message, send.  Just use standard elements that we've learned about (maybe divs?) and then style them appropriately.
 
