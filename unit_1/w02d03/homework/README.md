@@ -43,5 +43,5 @@ Your folder structure will look like:
 1. Connect a CSS file to the HTML file and start changing the background colors.
 1. Don't worry about matching the fonts exactly, but check out some [standard fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family) in CSS or [Google Fonts](https://fonts.google.com/).
 
-_Images from: http://wwww.rowanmersh.com/gallery-category_
+_Images from: http://wwww.rowanmersh.com/gallery-category/2017/_
 
