@@ -2,13 +2,14 @@
 
 # WDIR-Gizmo
 
-<hr>
+---
 Title: Problem solving with functions<br>
 Duration: "3:00 - 4:00" <br>
 Type: Homework<br>
 Creator: Thom Page<br>
 Topics: Problem solving with functions<br>
-<hr>
+
+---
 
 # Homework
 
@@ -34,18 +35,14 @@ The commit message should read: <br>
 "Commit 1 - Verbal questions".
 <hr>
 
-<br>
-
-<hr>
-
 ## Palindrome
 Write a function `checkPalindrome` that accepts a single argument, a string. The function should return true (Boolean) if the string is a palindrome, false if it is not. Make sure your function will give the correct answer for words with **capital letters**.
 
 ```javascript
 console.log(checkPalindrome("Radar"));
- 
  => true
 ```
+
 ```javascript
 console.log(checkPalindrome("Borscht"));
 => false
@@ -56,24 +53,17 @@ The commit message should read: <br>
 "Commit 2 - Palindrome".
 <hr>
 
-<br>
-
-<hr>
-
 ## Digit Sum
 Write a function `sumDigits` that accepts a number and returns the sum of its digits.
 ```
 console.log(sumDigits(42));
+=> 6;
 ```
-> => 6;
+
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "Commit 3 - Digit Sum".
-<hr>
-
-<br>
-
 <hr>
 
 ## Pythagoras
@@ -91,10 +81,6 @@ The commit message should read: <br>
 "Commit 4 - Pythagoras".
 <hr>
 
-<br>
-
-<hr>
-
 ## Sum Array
 Write a function `sumArray` that takes an **array** as an argument.
 The array should contain numbers. The function should return the sum of the numbers in the array.
@@ -106,17 +92,13 @@ let sum = 0;
 that will **accumulate** value within the loop.
 Expected result:
 ```javascript
-console.log(sumArray([1, 2, 3, 4, 5, 6]);
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
+=> 21
 ```
-> => 21
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
 "Commit 5 - Sum Array".
-<hr>
-
-<br>
-
 <hr>
 
 ## Prime Numbers
@@ -137,9 +119,6 @@ This function can **call on** the previous `checkPrime` function.
 The commit message should read: <br>
 "Commit 6 - Prime Numbers".
 <hr>
-<br>
-
-<hr>
 
 ## Insert Dash
 Write a function `insertDash` that accepts a number as a parameter and returns a string with a dash inserted between any consecutive **odd numbers**. There should not be a dash at the end, it goes only between numbers.
@@ -153,7 +132,6 @@ console.log(insertDash(454793));
 The commit message should read: <br>
 "Commit 7 - Insert Dash".
 <hr>
-<br>
 
 
 # CSS
@@ -165,9 +143,6 @@ Watch the following three videos on CSS:
 
 You will need to have watched these videos for tomorrow's lab.
 
-<br>
-<hr>
-
 # Hungry for more
 
 1. Complete the afternoon lab.
@@ -178,4 +153,3 @@ You will need to have watched these videos for tomorrow's lab.
 The commit message should read: <br>
 "Commit 8 - Hungry for More".
 <hr>
-<br>
