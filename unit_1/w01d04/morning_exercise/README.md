@@ -25,7 +25,7 @@ Let's use some common HTML tags to create a website for Grumpy Cat.
 1) Inside your `morning_exercise` folder, let's create a file for this cat site. What should we name the file?
 2) How do I make add the boilerplate needed for an HTML file?
 3) How do I add a title to my file so that you can see the name on the browser tab?
-4) How do I make a header?
+4) How do I make a heading?
 5) What tag should I used to add a paragraph about our client?
 6) How can I add a picture of the cat? Here's the link that I want to use: 
 https://quelchenonsapevi.it/wp-content/uploads/2016/06/0000-3.jpeg
