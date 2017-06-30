@@ -23,7 +23,7 @@ _After this lesson, students will be able to:_
 
 ## SETUP
 
-* In the `student_examples` folder for `w2d1`
+* In the `student_examples` folder
 * Make a file `objects.js`
 * Add a console.log for testing purposes
 * Run the file in Terminal with `node objects.js` -- you should see the console.log appear
@@ -36,6 +36,7 @@ _After this lesson, students will be able to:_
 ### Arrays and Objects
 
 We have seen the following datatypes:
+
 * String
 * Number
 * Boolean
@@ -47,8 +48,8 @@ Arrays are also **data structure**. We use them to organize our data: in the cas
 
 * We can use arrays to store multiple pieces of data as a sequential list:
 
-```
-var vehicle = ["blue", 4000, 1989];
+```javascript
+const vehicle = ["blue", 4000, 1989];
 ```
 
 * Each element has a corresponding index, in sequence.
@@ -66,8 +67,8 @@ But with the array above, we don't know what the values mean. Does "blue" refer 
 
 Key-value pair syntax:
 
-```
-var car = { color: "blue", hp: 4000, year: 1989 }
+```javascript
+const car = { color: "blue", hp: 4000, year: 1989 }
 ```
 
 * Unlike arrays, objects use _named keys_ rather than ordered indexes. Each piece of data is _bound_ to its key, rather than assigned an index. The data is not _sequential_.
@@ -76,19 +77,24 @@ var car = { color: "blue", hp: 4000, year: 1989 }
 
 We can console.log the entire object:
 
-```
+```javascript
 console.log(car);
 ```
 
+<br>
+<hr>
+
+### Access values
+
 We can access the values stored in key using dot notation:
 
-```
+```javascript
 console.log(car.color)
 ```
 
 Or bracket-quote notation:
 
-```
+```javascriptr
 console.log(car['color']);
 ```
 
@@ -116,6 +122,7 @@ A key is really a string but we can omit the quotes.
 A **value** is what a key _refers to_, and can be any datatype.
 
 <br>
+<hr>
 
 11:20
 
@@ -127,8 +134,8 @@ Build an object again in detail, demonstrating that:
 * We do not put semicolons after our values.
 * We separate our key-value pairs with a comma
 
-```
-var person = {}
+```javascript
+const person = {}
 ```
 
 Ask the class for properties to add to the person object.
@@ -186,46 +193,48 @@ You can easily add more properties to a previously declared object:
 
 Building a house:
 
-```
-var house = {
+```javascript
+const house = {
 	doors: 9
 }
 
 console.log(house)
-=> { doors: 9 }
 ```
+
+> => { doors: 9 }
+
 
 Add properties to the `house` object by simply adding a key using dot notation and the value using an equals `=`. Our house has no windows. Let's add some in _without_ writing them straight into the object:
 
-```
+```javascript
 house.windows = 30
 ```
 
 When we do it this way, the `windows` key is added to the object.
 
-```
+```javascript
 console.log(house);
 
 => Object { doors: 9, windows: 30 }
 ```
 
-Add another property `squareFootage`:
+Add another property `hasGarden`:
 
-```
-house.squareFootage = 300
+```javascript
+house.hasGarden = true;
 ```
 
 &#x1F535; **Changing properties**
 
 Changing the value of an existing key has the same syntax as creating a new key-value pair:
 
-```
-var bicycle = {
+```javascript
+const bicycle = {
 	isATricycle: false
 }
 ```
 
-```
+```javascript
 bicycle.isATricycle = true
 ```
 
@@ -267,6 +276,87 @@ After each key-value addition, console.log the `macros` object to make sure the 
 
 11:50
 
+# Why use an object instead of an array?
+
+**data modeling**
+
+When designing your programs, it up to you to **choose** how to model your data. We can represent real-life things with our datatypes, but it's a matter of choosing the appropriate datatypes.
+
+If the thing you want to model is just a list, use an **array**.
+
+If the thing want to model has properties, use an **object**.
+
+Using what we know about datatypes so far, which datatype would we use to model:
+
+1. The name of your cat
+2. The age of your cat
+3. Your cat's favorite things
+4. Whether your cat can speak French
+5. Whether your cat can solve a Rubik's cube
+6. Your cat
+
+<br>
+<hr>
+
+11:55
+
+## Referenced datatypes
+### objects and arrays with `const`
+
+`const` only prevents you from reassigning a variable, it doesn't prevent you from adding or changing elements of arrays or properties of objects.
+
+Can do this:
+
+```javascript
+const mogwai  = {}
+
+mogwai.name = 'Gizmo';
+```
+
+Cannot do this:
+
+```javascript
+const mogwai = {}
+
+mogwai = { name: 'Gizmo' }
+```
+
+<br>
+<hr>
+
+## Object literal shorthand
+
+If variable names outside the object will correspond to the keys in the object, you can write shorthand like this for the `mogwai` object:
+
+```javascript
+const name = 'Gizmo';
+const age = 1;
+
+const mogwai = { name, age }
+
+console.log(mogwai);
+```
+
+> => { name: 'Gizmo', age: 1 }
+
+
+This is equivalent to the longhand:
+
+```javascript
+
+const name = 'Gizmo';
+const age = 1;
+
+const mogwai = { name: name, age: age }
+
+console.log(mogwai);
+```
+
+> => { name: 'Gizmo', age: 1 }
+
+<br>
+<hr>
+
 ## OBJECT ERRATA
 
 &#x1F534; **KEYS ARE UNIQUE (5 mins)**
@@ -275,14 +365,14 @@ It just makes sense that keys ought to be unique within an object. Values, howev
 
 An object can not have more than one key with the same name. If it does, the value will default to the last key with the same name, and the prior properties will be excluded on creation.
 
-```
-var borough = {
+```javascript
+const borough = {
 	name: "Brooklyn",
 	name: "The Bronx"
 }
 ```
 
-```
+```javascript
 console.log(borough);
 
 => Object { name: "The Bronx" }
@@ -295,19 +385,19 @@ Conclusion: keys should be unique within an object. Values, however, are not uni
 
 You can create and access any key with square brackets and quotes.
 
-```
-var goblin = { badGuy: true }
+```javascript
+const goblin = { badGuy: true }
 ```
 
-```
+```javascript
 console.log(goblin['badGuy']);
 => true
 ```
 
 With square brackets and quotes, you can make key names with spaces and special characters, because the key is _coerced_ into a string. _But_ you then have to access the value from here on out with square brackets and quotes.
 
-```
-var strangeObj = {}
+```javascript
+const strangeObj = {}
 
 strangeObj['a key with spaces'] = 999;
 
@@ -317,7 +407,7 @@ console.log(strangeObj)
 
 You would need also to access that key with the square brackets and quotes:
 
-```
+```javascript
 console.log(strangeObj['a key with spaces'])
 
 => 999
@@ -332,24 +422,24 @@ TEST IT OUT!
 
 If a key is just a number, that number will be coerced into a string, which is fine.
 
-```
-var obj = {
+```javascript
+const obj = {
 	1: "one",
 }
 ```
 
-```
+```javascript
 console.log(obj);
 => Object { '1': 'one' }
 ```
 
 But, you cannot access, add, or change numbered keys with dot notation.
 
-```
+```javascript
 console.log(obj.1)
 ```
 
-```
+```javascript
 obj.2 = "hey"
 
 console.log(obj2);
@@ -369,31 +459,6 @@ TEST IT OUT!
 * Give test object a key called `2` with the value "I'm just messing around with objects"
 	* Console.log the value of the key `2`
 
-
-
-<br>
-<hr>
-
-# Why use an object instead of an array?
-
-**data modeling**
-
-When designing your programs, it up to you to **choose** how to model your data.
-
-If the thing you want to model is just a list, use an **array**.
-
-If the thing want to model has properties, use an **object**.
-
-Using what we know about datatypes so far, which datatype would we use to model:
-
-
-1. The name of your cat
-2. The age of your cat
-3. Your cat's favorite things
-4. Whether your cat can speak French
-5. Whether your cat can solve a Rubik's cube
-6. Your cat
-
 <br>
 <hr>
 
@@ -402,7 +467,7 @@ Using what we know about datatypes so far, which datatype would we use to model:
 
 ### Using a conditional to select an object property
 
-```
+```javascript
 if (obj.whatevs == "hi") {
 	console.log('ok');
 }
@@ -410,7 +475,7 @@ if (obj.whatevs == "hi") {
 
 ### if value is a boolean
 
-```
+```javascript
 if (obj.something) {
 	console.log('ok');
 }

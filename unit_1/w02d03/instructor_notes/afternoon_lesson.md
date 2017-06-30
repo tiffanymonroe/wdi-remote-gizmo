@@ -17,6 +17,7 @@ _After this lesson students will be able to:_
 * Nest data inside an object
 * Use an array inside an object
 * Use an object within an object
+* Use an array of objects
 
 <br>
 <hr>
