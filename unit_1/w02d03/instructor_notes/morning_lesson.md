@@ -94,7 +94,7 @@ console.log(car.color)
 
 Or bracket-quote notation:
 
-```javascriptr
+```javascript
 console.log(car['color']);
 ```
 
@@ -214,9 +214,9 @@ When we do it this way, the `windows` key is added to the object.
 
 ```javascript
 console.log(house);
-
-=> Object { doors: 9, windows: 30 }
 ```
+
+> => { doors: 9, windows: 30 }
 
 Add another property `hasGarden`:
 
