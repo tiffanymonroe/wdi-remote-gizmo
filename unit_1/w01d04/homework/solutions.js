@@ -39,10 +39,23 @@
 
 //  Pythagoras
 
-const calculateSide = (sideA, sideB) => {
-  let sideC = Math.sqrt(sideA**2 + sideB**2);
-  return sideC
-}
-console.log(calculateSide(8, 6));
+// const calculateSide = (sideA, sideB) => {
+//   let sideC = Math.sqrt(sideA**2 + sideB**2);
+//   return sideC
+// }
+// console.log(calculateSide(8, 6));
 
-//  
+//  Sum Array
+
+const sumArray = (input) => {
+  const array = [];
+  for (let a=0; a < input.length; a++) {
+    array.push(input[a].length);
+  }
+  return array
+}
+
+
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
+
+// ** I got stuck here. I can't figure out how to make them integers instead of undefined strings. **
