@@ -23,3 +23,18 @@
 
 // ** most of the code from my class notes **
 // ** toLowerCase from Stack overflow **
+
+//  Digit Sum
+
+// const sumDigits = (num) => {
+//   let string = num.toString();
+//   let digits = string.split('');
+//   for (let i=0; i < digits.length; i++){
+//     console.log(digits[i]0;
+//   }
+// }
+// console.log(sumDigits(42));
+//
+// ** totally stuck on this one! how do I get the string back to numbers? I could only find parseInt() **
+
+//
