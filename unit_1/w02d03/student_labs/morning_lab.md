@@ -35,14 +35,15 @@ Example:
 
 The object would look something like this if we console logged it:
 
-```
+```javascript
 console.log(me);
-
-=> {name: "Kristyn", age: 98, email: "kristyn@foo.bar"}
 ```
+
+> => {name: "Kristyn", age: 98, email: "kristyn@foo.bar"}
+
 
 3. Using dot notation, access the **name** property in your object.<br>
-4. Without writing directly into the objectm update the value of **age** to be 1000 years old.<br>
+4. Without writing directly into the object, update the value of **age** to be 1000 years old.<br>
 5. Using dot notation, verify that **age** has been updated.<br>
 6. Add a key to this object called: "place of residence" and give it a value of your hometown. Note that the key has spaces, therefore you cannot use dot notation.
 6. Access the value of "place of residence"<br>
@@ -53,7 +54,7 @@ console.log(me);
 ## Slimer
 
 ```javascript
-const obj = {
+const monster = {
    name: "Slimer",
    color: "greenish",
    type: "plasm or ghost or something"
@@ -62,7 +63,7 @@ const obj = {
 
 * Given the **slimer** object:
     - What would you write to access the `name` and console.log it?
-    - What would you write to change the `type` to 'creature' (without changing it inside the object)
+    - What would you write to change the `type` to 'mystery meat' (without changing it inside the object)
     - What would you write to add a key to the object called `age`, and set the age to 6?
     - console.log the object to make sure `type` is creature, and `age` is 6
 
@@ -222,7 +223,7 @@ You have decided to add your user's location to the data that you want to collec
 You can add an object to an existing object in the same way that you can add any new key/value pair.
 If we want to give our user a `friend` with a `name` and `age`, we could write:
 
-```
+```javascript
 user.friend = {
 	name: "Grace Hopper",
 	age: 85
