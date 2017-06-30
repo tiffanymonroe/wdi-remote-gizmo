@@ -22,8 +22,8 @@
 
 ### More  on Functions
 
-1. Loops and Functions
 1. Basic Functions review
+1. Loops and Functions
 1. When/How to use a function in a program
 1. Running a function from browser input
 
@@ -222,6 +222,17 @@ start();
 
 ## More on Functions
 
+### Basic Functions review
+
+Functions encapsulate (isolate) a set of commands pertaining to one set of functionality
+
+1. Get a users name
+1. Add an item to your cart
+1. Shoot the lizard creature
+1. etc
+
+Try not to have a function that "does" multiple things
+
 ### Loops and Functions
 
 #### When to use which?
@@ -270,17 +281,6 @@ const manyGreetings = ()=>{
 
 manyGreetings();
 ```
-
-### Basic Functions review
-
-Functions encapsulate (isolate) a set of commands pertaining to one set of functionality
-
-1. Get a users name
-1. Add an item to your cart
-1. Shoot the lizard creature
-1. etc
-
-Try not to have a function that "does" multiple things
 
 ### When/How to use a function in a program
 
