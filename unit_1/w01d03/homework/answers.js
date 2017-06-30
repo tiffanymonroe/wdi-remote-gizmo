@@ -18,12 +18,17 @@
 //2.
 //help from https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Math/random
 
-// let getRandom = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
+let kittySays = ["...human...why you taking pictures of me?...", "...the catnip made me do it...", "...why does the red dot always get away..."];
 //
-// for (d=1; d <= 20; d++)
-// if (d % 2 === 0) {
-//   console.log(getRandom[0])
-// }
+for (d=1; d <= 20; d++)
+if (d % 2 === 0) {
+  let getRandom = Math.floor(Math.random() * kittySays.length - 1) + 1;
+  console.log(kittySays[getRandom]);
+}
+else {
+  console.log("Love me, pet me! HSSSSSS!");
+}
+
 // confused about Math.random()
 
 //........Fizz Buzz.........
@@ -83,14 +88,14 @@
 //.........Yell at the Ninja Turtles........
 
 //1.
-const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"]
-
-
-//2.
-
-for (t=0; t < ninjaTurtles.length; t++) {
-  console.log(ninjaTurtles[t]);
-}
+// const ninjaTurtles = ["Donatello", "Leonardo", "Raphael", "Michaelangelo"]
+//
+//
+// //2.
+//
+// for (t=0; t < ninjaTurtles.length; t++) {
+//   console.log(ninjaTurtles[t].toUpperCase());
+// }
 //can't figure out how to get them uppercase. I tried var str = "Hello World!";
 // var res = str.toUpperCase(); from https://www.w3schools.com/jsref/jsref_touppercase.asp
 

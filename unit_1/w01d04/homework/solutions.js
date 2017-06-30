@@ -52,7 +52,7 @@ const sumArray = (input) => {
   for (let a=0; a < input.length; a++) {
     array.push(input[a].length);
   }
-  return array
+  return array;
 }
 
 
