@@ -92,7 +92,7 @@ let sum = 0;
 that will **accumulate** value within the loop.
 Expected result:
 ```javascript
-console.log(sumArray([1, 2, 3, 4, 5, 6]);
+console.log(sumArray([1, 2, 3, 4, 5, 6]));
 => 21
 ```
 <hr>
