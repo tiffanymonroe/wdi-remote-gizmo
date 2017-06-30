@@ -263,6 +263,8 @@ const someVar = 'name';
 console.log(monster[someVar]);  // same as monster['name'];
 ```
 
+> => 'Slimer'
+
 <br>
 <hr>
 
@@ -272,7 +274,7 @@ There are two way to loop over objects. You can use either way. Both ways involv
 
 Let's say we have a movie object:
 
-```
+```javascript
 const movie = { title: "L'Avventura", director: "Michelangelo Antonioni", year: 1960 }
 ```
 
