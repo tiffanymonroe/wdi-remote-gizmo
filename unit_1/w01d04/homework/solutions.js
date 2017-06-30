@@ -37,4 +37,12 @@
 //
 // ** totally stuck on this one! how do I get the string back to numbers? I could only find parseInt() **
 
-//
+//  Pythagoras
+
+const calculateSide = (sideA, sideB) => {
+  let sideC = Math.sqrt(sideA**2 + sideB**2);
+  return sideC
+}
+console.log(calculateSide(8, 6));
+
+//  
