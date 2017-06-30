@@ -16,13 +16,13 @@
 
 ### Problem solving for a bigger program
 
-1. Loops and Functions
 1. Nested function invocations
 1. Sequence of execution
 1. Reset state
 
 ### More  on Functions
 
+1. Loops and Functions
 1. Basic Functions review
 1. When/How to use a function in a program
 1. Running a function from browser input
@@ -131,55 +131,6 @@ while(action !== "stop"){
 
 ## Problem solving for a bigger program
 
-### Loops and Functions
-
-#### When to use which?
-
-- A loop is used whenever you do something repeatedly
-- A function is used to simplify something more complex (e.g. Take the orange out of the fridge)
-
-#### Functions in Loops
-
-If executing a function multiple times, you don't need to define the function within the loop.  Instead put it at the top
-
-**GOOD**
-
-```javascript
-const myFunc = ()=>{
-    console.log('hi');
-}
-
-for(let i = 0; i < 10; i++){
-    myFunc();
-}
-```
-
-**BAD**
-
-```javascript
-for(let i = 0; i < 10; i++){
-    const myFunc = ()=>{
-        console.log('hi');
-    }
-
-    myFunc();
-}
-```
-
-#### Loops in Functions
-
-You can have loops within a function:
-
-```javascript
-const manyGreetings = ()=>{
-    for(let i = 0; i < 10; i++){
-        console.log('hi');
-    }
-}
-
-manyGreetings();
-```
-
 ### Nested function invocations
 
 You can have functions call other functions:
@@ -270,6 +221,55 @@ start();
 ```
 
 ## More on Functions
+
+### Loops and Functions
+
+#### When to use which?
+
+- A loop is used whenever you do something repeatedly
+- A function is used to simplify something more complex (e.g. Take the orange out of the fridge)
+
+#### Functions in Loops
+
+If executing a function multiple times, you don't need to define the function within the loop.  Instead put it at the top
+
+**GOOD**
+
+```javascript
+const myFunc = ()=>{
+    console.log('hi');
+}
+
+for(let i = 0; i < 10; i++){
+    myFunc();
+}
+```
+
+**BAD**
+
+```javascript
+for(let i = 0; i < 10; i++){
+    const myFunc = ()=>{
+        console.log('hi');
+    }
+
+    myFunc();
+}
+```
+
+#### Loops in Functions
+
+You can have loops within a function:
+
+```javascript
+const manyGreetings = ()=>{
+    for(let i = 0; i < 10; i++){
+        console.log('hi');
+    }
+}
+
+manyGreetings();
+```
 
 ### Basic Functions review
 
