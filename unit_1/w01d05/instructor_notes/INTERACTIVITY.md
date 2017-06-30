@@ -14,18 +14,18 @@
 1. Send a message to the user in the browser
 1. Get user input in the browser
 
-### More  on Functions
-
-1. Basic Functions review
-1. When/How to use a function in a program
-1. Running a function from browser input
-
 ### Problem solving for a bigger program
 
 1. Loops and Functions
 1. Nested function invocations
 1. Sequence of execution
 1. Reset state
+
+### More  on Functions
+
+1. Basic Functions review
+1. When/How to use a function in a program
+1. Running a function from browser input
 
 ## Thinking Programmatically
 
@@ -126,83 +126,6 @@ let action = null
 
 while(action !== "stop"){
     action = prompt("What do you want to do", "Your action");
-}
-```
-
-## More on Functions
-
-### Basic Functions review
-
-Functions encapsulate (isolate) a set of commands pertaining to one set of functionality
-
-1. Get a users name
-1. Add an item to your cart
-1. Shoot the lizard creature
-1. etc
-
-Try not to have a function that "does" multiple things
-
-### When/How to use a function in a program
-
-- If you can try to have your functions defined at the top of the javascript file
-- At the bare minimum, make sure you create your functions before calling them
-
-Good:
-```javascript
-const func1 = ()=>{
-    alert('hi');
-}
-const func2 = ()=>{
-    alert('oh hai!!!!');
-}
-
-func1();
-func2();
-```
-
-Meh:
-```javascript
-const func1 = ()=>{
-    alert('hi');
-}
-func1();
-//in the future might need to add func2() here before it's created
-
-const func2 = ()=>{
-    alert('oh hai!!!!');
-}
-func2();
-```
-
-Bad:
-```javascript
-const func1 = ()=>{
-    alert('hi');
-}
-func1();
-func2();
-const func2 = ()=>{
-    alert('oh hai!!!!');
-}
-```
-
-### Running a function from browser input
-
-You can call a function based on some input from the browser prompt
-
-```javascript
-const greet = ()=>{
-    alert('Hi!');
-}
-const sayBye = ()=>{
-    alert('Bye!');
-}
-const answer = prompt('Are you arriving or leaving', 'Arriving or Leaving?');
-
-if(answer === "Arriving"){
-    greet();
-} else if(answer === "Leaving") {
-    sayBye();
 }
 ```
 
@@ -344,4 +267,81 @@ const eatApple = ()=>{
 }
 
 start();
+```
+
+## More on Functions
+
+### Basic Functions review
+
+Functions encapsulate (isolate) a set of commands pertaining to one set of functionality
+
+1. Get a users name
+1. Add an item to your cart
+1. Shoot the lizard creature
+1. etc
+
+Try not to have a function that "does" multiple things
+
+### When/How to use a function in a program
+
+- If you can try to have your functions defined at the top of the javascript file
+- At the bare minimum, make sure you create your functions before calling them
+
+Good:
+```javascript
+const func1 = ()=>{
+    alert('hi');
+}
+const func2 = ()=>{
+    alert('oh hai!!!!');
+}
+
+func1();
+func2();
+```
+
+Meh:
+```javascript
+const func1 = ()=>{
+    alert('hi');
+}
+func1();
+//in the future might need to add func2() here before it's created
+
+const func2 = ()=>{
+    alert('oh hai!!!!');
+}
+func2();
+```
+
+Bad:
+```javascript
+const func1 = ()=>{
+    alert('hi');
+}
+func1();
+func2();
+const func2 = ()=>{
+    alert('oh hai!!!!');
+}
+```
+
+### Running a function from browser input
+
+You can call a function based on some input from the browser prompt
+
+```javascript
+const greet = ()=>{
+    alert('Hi!');
+}
+const sayBye = ()=>{
+    alert('Bye!');
+}
+const answer = prompt('Are you arriving or leaving', 'Arriving or Leaving?');
+
+if(answer === "Arriving"){
+    greet();
+} else if(answer === "Leaving") {
+    sayBye();
+}
 ```
