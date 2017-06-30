@@ -250,6 +250,22 @@ for (let i=0; i < movies.length; i++) {
 
 **After afternoon lab**
 
+## VARIABLES AND ACCESSING VALUES
+
+```javascript
+const monster =  {
+	name: 'Slimer',
+	age: 6
+}
+
+const someVar = 'name';
+
+console.log(monster[someVar]);  // same as monster['name'];
+```
+
+<br>
+<hr>
+
 ## LOOPING OVER OBJECTS
 
 There are two way to loop over objects. You can use either way. Both ways involve looping over the object's **keys**.
