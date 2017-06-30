@@ -39,8 +39,8 @@ Object keys can have any data type as a value. Let's examine the ramifications o
 
 Let's model an adventurer who has belongings (a list)
 
-```
-var adventurer = {
+```javascript
+const adventurer = {
 	name: "Timothy",
 	hitpoints: 10,
 	belongings: ["sword", "potion", "Tums"]
@@ -49,20 +49,20 @@ var adventurer = {
 
 Access all values in the player.belongings array:
 
-```
+```javascript
 console.log(adventurer.belongings)
 ```
 
 Access a specific item in the belongings array:
 
-```
+```javascript
 console.log(adventurer.belongings[0])
 ```
 
 #### Iterate over an array that is within an object
 
-```
-for (var i=0; i < obj.belongings.length; i++) {
+```javascript
+for (let i=0; i < obj.belongings.length; i++) {
 	console.log(obj.belongings[i]);
 }
 ```
@@ -93,8 +93,8 @@ Our adventurer now has a companion! Our companion, a **bat**, is an object with 
 
 Add the `companion` object to the `adventurer` object:
 
-```
-var adventurer = {
+```javascript
+const adventurer = {
 	name: Timothy,
 	hitpoints: 10,
 	belongings: ["sword", "potion", "Tums"],
@@ -107,7 +107,7 @@ var adventurer = {
 
 Access the companion object:
 
-```
+```javascript
 console.log(adventurer.companion)
 ```
 
@@ -115,7 +115,7 @@ console.log(adventurer.companion)
 
 Access the companion's name:
 
-```
+```javascript
 console.log(adventurer.companion.name)
 ```
 
@@ -123,7 +123,7 @@ console.log(adventurer.companion.name)
 
 Access the companion's type:
 
-```
+```javascript
 console.log(adventurer.companion.type)
 ```
 
@@ -159,8 +159,8 @@ Velma the bat also has a companion, a magical **parasite** called Tim.
 
 Let's add **Tim** to our data:
 
-```
-var adventurer = {
+```javascript
+const adventurer = {
 	name: Timothy,
 	hitpoints: 10,
 	belongings: ["sword", "potion", "Tums"],
@@ -186,8 +186,8 @@ Tim has a **bag of holding** and can carry an infinite number of belongings.
 Let's add an array of belongings to Tim:
 
 
-```
-var adventurer = {
+```javascript
+const adventurer = {
 	name: Timothy,
 	hitpoints: 10,
 	belongings: ["sword", "potion", "Tums"],
@@ -215,7 +215,7 @@ A common pattern you will start to see everywhere (especially in Unit 2 and onwa
 
 An array of objects can look like this:
 
-```
+```javascript
 var movies = [ { title: "Tokyo Story" },  { title: "Paul Blart: Mall Cop" }, { title: "L'Avventura" } ];
 ```
 
@@ -223,20 +223,20 @@ These objects have no names, they are just anonymous objects packed into an arra
 
 You could reference them with indexes as usual:
 
-```
+```javascript
 console.log(movies[0]);
 ```
 
 You could reference the properties by first asking for the index, then the property:
 
-```
+```javascript
 console.log(movies[0].title);
 ```
 
 You could loop over the array and just print all of the titles:
 
-```
-for (var i=0; i < movies.length; i++) {
+```javascript
+for (let i=0; i < movies.length; i++) {
 	console.log(movies[i].title);
 }
 ```
@@ -257,7 +257,7 @@ There are two way to loop over objects. You can use either way. Both ways involv
 Let's say we have a movie object:
 
 ```
-var movie = { title: "L'Avventura", director: "Michelangelo Antonioni", year: 1960 }
+const movie = { title: "L'Avventura", director: "Michelangelo Antonioni", year: 1960 }
 ```
 
 <br>
@@ -266,8 +266,8 @@ var movie = { title: "L'Avventura", director: "Michelangelo Antonioni", year: 19
 
 Print each key:
 
-```
-for (var key in movie) {
+```javascript
+for (let key in movie) {
 	console.log(key);
 }
 ```
@@ -286,8 +286,8 @@ Print each value:
 
 To do this, use the key as a **variable** within the square brackets.
 
-```
-for (var key in movie) {
+```javascript
+for (let key in movie) {
 	console.log(movie[key]);
 }
 ```
@@ -306,7 +306,7 @@ for (var key in movie) {
 
 Object.keys() will return an **array of keys**
 
-```
+```javascript
 console.log(Object.keys(movie));
 ```
 
@@ -314,8 +314,8 @@ console.log(Object.keys(movie));
 
 To print the values, use the key as a **variable** within square brackets.
 
-```
-var keys = Object.keys(movie);
+```javascript
+const keys = Object.keys(movie);
 
 for (var i=0; i < keys.length; i++) {
 	console.log(movie[keys[i]]);
@@ -324,8 +324,8 @@ for (var i=0; i < keys.length; i++) {
 
 Unre-factored version:
 
-```
-for (var i=0; i < Object.keys(movie).length; i++) {
+```javascript
+for (let i=0; i < Object.keys(movie).length; i++) {
 	console.log(movie[Object.keys(movie)[i]]);
 }
 ```
@@ -338,8 +338,8 @@ for (var i=0; i < Object.keys(movie).length; i++) {
 
 Give the following movie:
 
-```
-var movie = { title: "Eraserhead", director: "David Lynch", year: 1978 }
+```javascript
+const movie = { title: "Eraserhead", director: "David Lynch", year: 1978 }
 ```
 
 &#x1F535; **Activity**
@@ -353,8 +353,8 @@ CHALLENGE
 
 With the following array of movie objects:
 
-```
-var movies = [
+```javascript
+const movies = [
                { title: "L'Avventura", director: "Michelangelo Antonioni", year: 1960 },
                { title: "Eraserhead", director: "David Lynch", year: 1978 },
                { title: "Dayereh", director: "Jafar Panahi", year: 2000 },
