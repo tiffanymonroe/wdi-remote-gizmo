@@ -46,16 +46,20 @@
 // console.log(calculateSide(8, 6));
 
 //  Sum Array
-
-const sumArray = (input) => {
-  const array = [];
-  for (let a=0; a < input.length; a++) {
-    array.push(input[a].length);
+//
+const sumArray = (array) => {
+  let sum = 0;
+  for (let a=0; a < array.length; a++) {
+    // my version > array.push(input[a].length);
+    sum += sum[a];
   }
-  return array;
+  return sum;
 }
 
 
 console.log(sumArray([1, 2, 3, 4, 5, 6]));
 
 // ** I got stuck here. I can't figure out how to make them integers instead of undefined strings. **
+
+
+//  Prime numbers
