@@ -3,6 +3,11 @@
 # WDI-GIZMO
 
 ---
+Title: The solar system<br>
+Creator: Thom Page<br>
+Topics: Accessing arrays of objects and object properties
+
+---
 
 # Afternoon Lab
 
@@ -16,8 +21,8 @@
 
 The following data structure, `solarSystem`, is a common data structure: an **array** of **objects**. You will see this particular data structure more and more as you venture into JSON and servers. This one is an **array** of **objects** which also contains **arrays**. Given the following data structure of arrays and objects:
 
-```
-var solarSystem = [
+```javascript
+const solarSystem = [
 	{ name: "Mercury", ringSystem: false, moons: [] },
 	{ name: "Venus", ringSystem: false, moons: [] },
 	{ name: "Earth", ringSystem: false, moons: ["The Moon"] },
@@ -32,11 +37,12 @@ var solarSystem = [
 
 Write Javascript that does the following:
 
-```
 EXAMPLE:
 - Print the boolean for Mercury's ringSystem
 
 ANSWER
+
+```javascript
 console.log(solarSystem[0].ringSystem)
 ```
 
@@ -75,8 +81,8 @@ Example:
 
 unsorted array:
 
-```
-var movies = [
+```javascript
+const movies = [
                { title: "L'Avventura", director: "Michelangelo Antonioni", year: 1960 },
                { title: "Eraserhead", director: "David Lynch", year: 1978 },
                { title: "Dayereh", director: "Jafar Panahi", year: 2000 }
@@ -85,7 +91,7 @@ var movies = [
 
 sorted by 'title':
 
-```
+```javascript
 [ { title: 'Dayereh', director: 'Jafar Panahi', year: 2000 },
   { title: 'Eraserhead', director: 'David Lynch', year: 1978 },
   { title: 'L\'Avventura', director: 'Michelangelo Antonioni', year: 1960 } ]
@@ -105,13 +111,13 @@ CHALLENGE
 
 Example of sorting the movies array:
 
-```
+```javascript
 console.log(sortArrayOfObjects(movies, "title"));
 ```
 
 Result sorted by title:
 
-```
+```javascript
 [ { title: 'Dayereh', director: 'Jafar Panahi', year: 2000 },
   { title: 'Eraserhead', director: 'David Lynch', year: 1978 },
   { title: 'L\'Avventura', director: 'Michelangelo Antonioni', year: 1960 } ]
@@ -119,13 +125,13 @@ Result sorted by title:
 
 Example of sorting the movies array:
 
-```
+```javascript
 console.log(sortArrayOfObjects(movies, "year"));
 ```
 
 Result sorted by year:
 
-```
+```javascript
 [ { title: 'L\'Avventura',
     director: 'Michelangelo Antonioni',
     year: 1960 },
@@ -135,13 +141,13 @@ Result sorted by year:
 
 Example of sorting the movies array:
 
-```
+```javascript
 console.log(sortArrayOfObjects(movies, "director"))
 ```
 
 Result sorted by director:
 
-```
+```javascript
 [ { title: 'Eraserhead', director: 'David Lynch', year: 1978 },
   { title: 'Dayereh', director: 'Jafar Panahi', year: 2000 },
   { title: 'L\'Avventura',

@@ -3,11 +3,8 @@
 # WDI-GIZMO
 
 ---
-Title: Morning Lab
-Creator:<br>
-    Original creators: WDI-Archer<br>
-    Adapted by: Kristyn Bryan<br>
-    Then, Adapted by: Thom Page<br>
+Title: Morning Lab<br>
+Contributors: Kristyn Bryan and Thom Page<br>
 Topics: JavaScript objects
 
 ---
@@ -20,7 +17,7 @@ Make a file `morning_lab.js` in your `student_labs` directory for today. Write y
 
 ## Syntax
 
-List and describe each individual piece of syntax that we use to construct an object. Don't leave anything out!
+List and describe each individual piece of syntax that we use to construct an object. Don't leave anything out! The list is finite.
 
 Example:
 
@@ -38,14 +35,15 @@ Example:
 
 The object would look something like this if we console logged it:
 
-```
+```javascript
 console.log(me);
-
-=> {name: "Kristyn", age: 98, email: "kristyn@foo.bar"}
 ```
+
+> => {name: "Kristyn", age: 98, email: "kristyn@foo.bar"}
+
 
 3. Using dot notation, access the **name** property in your object.<br>
-4. Update the value of **age** to be 1000 years old.<br>
+4. Without writing directly into the object, update the value of **age** to be 1000 years old.<br>
 5. Using dot notation, verify that **age** has been updated.<br>
 6. Add a key to this object called: "place of residence" and give it a value of your hometown. Note that the key has spaces, therefore you cannot use dot notation.
 6. Access the value of "place of residence"<br>
@@ -55,8 +53,8 @@ console.log(me);
 
 ## Slimer
 
-```
-var obj = {
+```javascript
+const monster = {
    name: "Slimer",
    color: "greenish",
    type: "plasm or ghost or something"
@@ -65,7 +63,7 @@ var obj = {
 
 * Given the **slimer** object:
     - What would you write to access the `name` and console.log it?
-    - What would you write to change the `type` to 'creature'
+    - What would you write to change the `type` to 'mystery meat' (without changing it inside the object)
     - What would you write to add a key to the object called `age`, and set the age to 6?
     - console.log the object to make sure `type` is creature, and `age` is 6
 
@@ -121,7 +119,7 @@ Write a function `combineCats` that has two parameters `mama`, and `papa`. The f
 
 Example:
 
-```
+```javascript
 combineCats(cat1, cat2)
 ```
 
@@ -134,7 +132,7 @@ combineCats(cat1, cat2)
 
 You could also invoke the `combineCats` function by writing the objects straight into the parentheses:
 
-```
+```javascript
 combineCats({ name: "Craig", age: 20, breed: "unknown" }, { name: "Linda", age: 20, breed: "undefined" });
 ```
 <br>
@@ -147,8 +145,8 @@ combineCats({ name: "Craig", age: 20, breed: "unknown" }, { name: "Linda", age: 
 
 Example:
 
-```
-console.log(combineCats(cat1, cat2)
+```javascript
+console.log(combineCats(cat1, cat2));
 ```
 
 Result:
@@ -170,7 +168,7 @@ Take a second to stew on that . . .
 
 What is the result of:
 
-```
+```javascript
 console.log(combineCats(combineCats(cat1, cat2), combineCats(cat1, cat2)));
 ```
 
@@ -225,7 +223,7 @@ You have decided to add your user's location to the data that you want to collec
 You can add an object to an existing object in the same way that you can add any new key/value pair.
 If we want to give our user a `friend` with a `name` and `age`, we could write:
 
-```
+```javascript
 user.friend = {
 	name: "Grace Hopper",
 	age: 85

@@ -1,0 +1,21 @@
+body {
+  background-color: pink;
+}
+
+#title-heading {
+  font-family: fantasy;
+}
+
+.info-paragraphs {
+  margin-left: 10%;
+  margin-right: 10%;
+}
+
+#main-pic {
+  height: 300px;
+  width: auto;
+}
+
+.social-media-links {
+  color: red;
+}

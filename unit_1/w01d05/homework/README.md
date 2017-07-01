@@ -105,6 +105,21 @@ Create a browser-based javascript app that simulates the following using `alert(
 
 </details>
 
+<details><summary>Landscaper Inspiration</summary>
+One of our students went above and beyond with her game:
+
+![first screen](https://i.imgur.com/ekQLWtZ.png)
+
+![options](https://i.imgur.com/txAHwK0.png)
+
+![more options](https://i.imgur.com/o8Dc5tF.png)
+
+![buying tools](https://i.imgur.com/2olGG6o.png)
+
+![more options](https://i.imgur.com/YHLD4Sd.png)
+
+![end](https://i.imgur.com/N9f7BkA.png)
+</details>
 
 ## CSS Videos
 
