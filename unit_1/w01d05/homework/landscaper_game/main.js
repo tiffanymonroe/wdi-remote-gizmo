@@ -6,47 +6,49 @@ let tool;
 
 const start = () => {
   money = 0
-  tool = " and your teeth."
+  tool = "your teeth"
   askForAction();
 }
 
 const showStatus = () => {
-  alert("You have $ " + money + tool)
+  alert("You have $" + money + " " + tool + ".")
 }
+
+const buyTool = () => {
+  if (money < 5) {
+    prompt("You can only use your teeth.")
+    }
+    else if (money >= 5) {
+    prompt("You can buy rusty scissors for $5 and earn $5 a day, or you can continue to use your teeth.")
+    money -=5;
+    tool = "rusty scissors"}
+    askForAction();
+    }
+
+const useTool = () => {
+    if (tool === "your teeth")
+    {money++;}
+    else if (tool === "scissors") {money +=5}
+    askForAction();
+    }
 
 const askForAction = () => {
   showStatus();
   const choice = prompt("What would you like to do?", "use tool / buy tool / restart");
-  if (choice === 'use tool'){
-    useTool();}
-    else if (choice === 'buy tool'){
-    buyTool();}
-    else if (choice === 'restart') {
-    start();}
-    }
-    }
-
-const endGame = () => {
-  showStatus();
-  prompt("Congratulations! Your landscaper business is a big success!")
-}
-const useTool = () => {
   if (choice === 'use tool') {
-    if (money < 5)
-    tool = teeth;
-    money++;
-  }
-  askForAction();
-}
+    useTool();}
+    else if (choice === 'buy tool') {
+    buyTool();}
+    else if (choice === 'restart')
+    start();
+    }
 
-const buyTool = () => {
-  if (choice === 'buy tool') {
-  if (money < 5) {
-    prompt("You can only use your teeth.")}
+start();
+askForAction();
 
-}
-  askForAction();
-}
+// const endGame = () =>
+//   {prompt("Congratulations! Your landscaper business is a big success!")}
+
 
 
 
@@ -64,7 +66,3 @@ const buyTool = () => {
 // *if* you have students, you can earn $250/day.
 //
 // *when* user reaches $1000 message user.
-
-
-start();
-askForAction();
