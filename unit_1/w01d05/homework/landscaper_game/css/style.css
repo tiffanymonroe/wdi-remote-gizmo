@@ -1,0 +1,7 @@
+html {
+  background-image: url("file:///Users/tiffanymonroe/dev/wdi-remote-gizmo/unit_1/w01d05/homework/landscaper_game/flowers-garden-watering-can.jpg");
+  background-repeat: no-repeat;
+  background-position: 0 0;
+  /*position info from stack overflow*/
+  background-size: cover;
+}
