@@ -19,7 +19,11 @@ Topics: Accessing arrays of objects and object properties
 
 ## The solar system, part 1
 
-The following data structure, `solarSystem`, is a common data structure: an **array** of **objects**. You will see this particular data structure more and more as you venture into JSON and servers. This one is an **array** of **objects** which also contains **arrays**. Given the following data structure of arrays and objects:
+The following data structure, `solarSystem`, is a common data structure: an **array** of **objects**. You will see this particular data structure more and more as you venture into JSON and servers. This one is an **array** of **objects** which also contains **arrays**.
+
+Note that the objects do not have names. They are just anynmous objects listed in an array. 
+
+Given the following data structure of arrays and objects:
 
 ```javascript
 const solarSystem = [
