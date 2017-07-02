@@ -33,6 +33,11 @@ const buyTool = () => {
     money -=250;
     tool = "battery-powered lawnmower"
     }
+  else if (money >= 500) {
+    prompt("You can hire a team of starving students for $500 and earn $250 a day, or you can continue to use your battery-powered lawnmower.")
+    money -=500;
+    tool = "team of starving students";
+    }
     askForAction();
     }
 
