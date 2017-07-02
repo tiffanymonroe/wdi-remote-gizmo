@@ -6,7 +6,8 @@ let tool;
 
 const start = () => {
   money = 0
-  tool = "your teeth"
+  currentTool = i[0];
+  console.log(currentTool);
   askForAction();
 }
 
@@ -16,7 +17,7 @@ const showStatus = () => {
 
 const buyTool = () => {
   if (money < 5) {
-    prompt("You can only use your teeth.")
+    prompt("You can only use your teeth. Keep chompin!")
     }
     else if (money >= 5) {
     prompt("You can buy rusty scissors for $5 and earn $5 a day, or you can continue to use your teeth.")
@@ -29,6 +30,7 @@ const useTool = () => {
     if (tool === "your teeth")
     {money++;}
     else if (tool === "scissors") {money +=5}
+    }
     askForAction();
     }
 
@@ -46,8 +48,8 @@ const askForAction = () => {
 start();
 askForAction();
 
-// const endGame = () =>
-//   {prompt("Congratulations! Your landscaper business is a big success!")}
+const endGame = () =>
+  {prompt("Congratulations! Your landscaper business is a big success!")}
 
 
 
