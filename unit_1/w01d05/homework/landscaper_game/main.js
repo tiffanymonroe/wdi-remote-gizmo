@@ -49,6 +49,11 @@ const useTool = () => {
         prompt("You earn $50 a day.")
         money +=50;
       }
+      else if (tool === "battery-powered lawnmower") {
+        prompt("Wow! You earn $100 a day.")
+        money +=100;
+      }
+      askForAction();
     }
 
 const askForAction = () => {
