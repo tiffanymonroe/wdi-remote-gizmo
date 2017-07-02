@@ -28,6 +28,11 @@ const buyTool = () => {
     money -=25;
     tool = "old-timey push lawnmower";
     }
+  else if (money >= 250) {
+    prompt("You can buy a battery-powered lawnmower and earn $100 a day, or you can continue to use your old-timey lawnmower.")
+    money -=250;
+    tool = "battery-powered lawnmower"
+    }
     askForAction();
     }
 
