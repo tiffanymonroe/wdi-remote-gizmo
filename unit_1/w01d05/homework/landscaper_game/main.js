@@ -19,10 +19,13 @@ const buyTool = () => {
   if (money < 5) {
     prompt("You can only use your teeth. Keep chompin!")
     }
-    else if (money >= 5) {
+  else if (money >= 5) {
     prompt("You can buy rusty scissors for $5 and earn $5 a day, or you can continue to use your teeth.")
     money -=5;
     tool = "rusty scissors"}
+  else if (money >= 25) {
+    prompt("You can buy an old-timey lawnmower for $25 and earn $50 a day, or you can continue to use your scissors.")
+    money -=25; }
     askForAction();
     }
 
