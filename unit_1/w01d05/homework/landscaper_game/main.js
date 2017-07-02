@@ -80,8 +80,8 @@ const askForAction = () => {
 const endGame = () => {
   if (money === 1000) {
   prompt("Congratulations! Your landscaper business is a big success!")}
-  else (askForAction();)
-
+  else askForAction();
+}
 start();
 askForAction();
 
