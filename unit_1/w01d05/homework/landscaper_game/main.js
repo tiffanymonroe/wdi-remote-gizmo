@@ -58,6 +58,10 @@ const useTool = () => {
         prompt("Wow! You earn $100 a day.")
         money +=100;
       }
+      else if (tool === "team of starving students") {
+        prompt("Holy smokes! You earn $250 a day! To win, you only need $1000. Get those students to work.")
+        money +=250;
+      }
       askForAction();
     }
 
@@ -73,8 +77,10 @@ const askForAction = () => {
     }
 
 
-const endGame = () =>
-  {prompt("Congratulations! Your landscaper business is a big success!")}
+const endGame = () => {
+  if (money === 1000) {
+  prompt("Congratulations! Your landscaper business is a big success!")}
+  else (askForAction();)
 
 start();
 askForAction();
