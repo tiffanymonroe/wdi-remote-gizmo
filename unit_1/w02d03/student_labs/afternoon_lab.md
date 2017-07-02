@@ -232,7 +232,7 @@ Write the commands you would use to do the following:
 ### Planet X
 Outside of any of these predefined solar system objects, make your own object called **PlanetX**. Give PlanetX the same properties as a planet within `system` (eg. density, tilt, mass) and give it made-up values.
 
-Without directly altering either the `system` object or the `planetX` object, include planetX as a property of system. (Your planetX object is a planet within the system).
+Without directly altering either the `system` object or the `PlanetX` object, include planetX as a property of system. (Your planetX object is a planet within the system).
 
 When you `console.log(system)`, planetX should be appear as a planet in the system.
 
