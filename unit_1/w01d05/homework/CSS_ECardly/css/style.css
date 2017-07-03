@@ -41,7 +41,13 @@ BASE STYLE
 -----------------------------------------------------------------------------*/
 
 
-/*Enter your code here*/
+body {
+  background: url('images/background.jpg') repeat-x #d6d6d6;
+  /*not sure why the background image isn't showing up*/
+  font-family: helvetica;
+  font-size: 12px;
+  line-height: 1.7;
+}
 
 
 /*-----------------------------------------------------------------------------
