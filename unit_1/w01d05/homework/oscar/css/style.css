@@ -1,0 +1,42 @@
+
+/*fonts
+
+font-family: 'Quicksand', sans-serif;
+font-family: 'Abril Fatface', cursive;*/
+body {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+}
+
+h1#logo {
+  font-family: 'Quicksand', sans-serif;
+  font-size-adjust: auto;
+  color: #0031E2;
+  width: 105px;
+  height: 24px;
+}
+
+h1 {
+  font-family:'Abril Fatface', cursive;
+  font-size: 48px;
+
+
+}
+
+h2 {
+  font-family: 'Quicksand', sans-serif;
+  font-weight: lighter;
+  color: #0031E2;
+}
+
+.left-image, .faq {
+  float: left;
+  display: block;
+  overflow: auto;
+}
+
+.right-text, aside, .links {
+  float: left;
+  display: block;
+  overflow: auto;
+}
