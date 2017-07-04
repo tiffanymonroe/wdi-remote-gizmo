@@ -17,7 +17,7 @@ body {
   display: inline-block;
   background-color: white;
   overflow: visible;
-  padding: 10px;
+  padding: 0 10px 10px 10px;
 }
 
 .container h1 {
@@ -39,7 +39,7 @@ body {
   padding-right: 15px;
 }
 
-.container h6 {
+#business {
   text-align: center;
   font-weight: bold;
   background-color: #F9F9F9;
@@ -51,7 +51,7 @@ body {
 .button {
   background-color: #26CFA2;
   color: white;
-  font-size: 18px;
+  font-size: 16px;
   text-align: center;
   padding: 15px 23.5px;
   width: 151.25px;
@@ -79,10 +79,6 @@ h2 {
 
 
 
-#hi {
-  color: grey;
-}
-
 .experience, .plans, .network {
   height: 600px;
   width: 100%;
@@ -102,19 +98,33 @@ h2 {
   background-color: white;
 }
 
-.intro section {
-  width: 40%;
+
+#welcome {
+  width: 35%;
+  float: left;
+  display: inline-block;
+  overflow: auto;
+}
+
+#hi {
+  color: #9B9B9B;
+}
+
+#image-container {
+  width: 55%;
   float: left;
   display: inline-block;
   padding: 15px;
 }
 
-.intro img {
-  width: 400px;
+#image-container img {
+  width: 550px;
   height: auto;
-  margin-left: 50%;
-  float: left;
-  display: inline-block;
+}
+
+img {
+  width: 200px;
+  height: auto;
 }
 
 .left-image {
@@ -124,10 +134,6 @@ h2 {
   overflow: auto;
 }
 
-img {
-  width: 200px;
-  height: auto;
-}
 
 .right-text {
   width: 60%;
@@ -215,5 +221,17 @@ a#more {
 }
 
 footer {
-text-align: left;
+width: 100%;
+background-color: pink;
+}
+
+
+footer ul, footer li {
+  float: left;
+  display: inline-block;
+  padding: 5px;
+  font-size: 14px;
+  color: white;
+  list-style: none;
+  background-color: purple;
 }
