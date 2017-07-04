@@ -1,26 +1,74 @@
 
-/*fonts
+/*specifications from Oscar website*/
 
-font-family: 'Quicksand', sans-serif;
-font-family: 'Abril Fatface', cursive;*/
 body {
   font-family: 'Quicksand', sans-serif;
   font-weight: lighter;
+  font-size: 18px;
 }
 
-h1#logo {
+.container {
+  position: fixed;
   font-family: 'Quicksand', sans-serif;
-  font-size-adjust: auto;
-  color: #0031E2;
-  width: 105px;
-  height: 24px;
+  color: black;
+  width: 100%;
+  height: 125px;
+  float: left;
+  display: inline-block;
+  background-color: white;
+  overflow: visible;
+  padding: 10px;
 }
+
+.container h1 {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+  color: #0031E2;
+  width: 75%;
+  padding-left: 15px;
+  float: left;
+  display: inline-block;
+}
+
+.container li {
+  font-size: 20px;
+  width: auto;
+  float: left;
+  display: inline-block;
+  list-style: none;
+  padding-right: 15px;
+}
+
+.container h6 {
+  text-align: center;
+  font-weight: bold;
+  background-color: #F9F9F9;
+  line-height: 50px;
+  font-size: 12px;
+  width: inherit;
+}
+
+.button {
+  background-color: #26CFA2;
+  color: white;
+  font-size: 18px;
+  text-align: center;
+  padding: 15px 23.5px;
+  width: 151.25px;
+  /*dimensions from Oscar website*/
+  height: 21px;
+  float: left;
+  margin: 20px;
+  border-radius: .4rem;
+  /*border-radius from W3 schools*/
+
+}
+
 
 h1 {
   font-family:'Abril Fatface', cursive;
   font-size: 48px;
-
-
+  font-weight: lighter;
 }
 
 h2 {
@@ -29,14 +77,143 @@ h2 {
   color: #0031E2;
 }
 
-.left-image, .faq {
+
+
+#hi {
+  color: grey;
+}
+
+.experience, .plans, .network {
+  height: 600px;
+  width: 100%;
+  display: inline-block;
+  padding: 30px;
+  margin: 30px;
+  background-color: white;
+}
+
+.intro {
+  height: 600px;
+  width: 100%;
+  padding: 15px;
+  padding-top: 150px;
+  margin: 20px;
+  margin-top: auto;
+  background-color: white;
+}
+
+.intro section {
+  width: 40%;
   float: left;
-  display: block;
+  display: inline-block;
+  padding: 15px;
+}
+
+.intro img {
+  width: 400px;
+  height: auto;
+  margin-left: 50%;
+  float: left;
+  display: inline-block;
+}
+
+.left-image {
+  width: 30%;
+  float: left;
+  display: inline-block;
   overflow: auto;
 }
 
-.right-text, aside, .links {
+img {
+  width: 200px;
+  height: auto;
+}
+
+.right-text {
+  width: 60%;
   float: left;
-  display: block;
-  overflow: auto;
+  display: inline;
+}
+
+
+a:active, a:hover, a:link, a:visited {
+  text-decoration: none;
+  color: inherit;
+}
+
+ol {
+  float: left;
+  display: in-block;
+}
+
+li {
+  float: left;
+  display: in-block;
+  margin: 10px;
+  padding: 10px;
+  width: 25%;
+}
+
+.info {
+  color: white;
+  height: 600px;
+  width: 100%;
+  background-color: #0031E2;
+  padding: 15px;
+}
+
+.info h2 {
+  width: 20%;
+  height: auto;
+  padding: 15px;
+  float: left;
+  display: inline-block;
+  color: white;
+}
+
+.info ul {
+  width: 70%;
+  float: left;
+  display: inline-block;
+}
+
+.info li {
+    list-style: none;
+    width: 70%;
+    float: left;
+    display: inline-block;
+}
+
+a#more {
+  font-size: 12px;
+  color: #26CFA2;
+}
+
+#oscar {
+  font-family: 'Quicksand', sans-serif;
+  font-size: 32px;
+  font-weight: bold;
+  color: white;
+  width: 20%;
+  padding-left: 15px;
+  float: left;
+  display: inline-block;
+}
+
+.links {
+  height: 600px;
+  width: 70%;
+  font-size: 16px;
+  color: white;
+  float: left;
+  display: inline-block;
+}
+
+.links li {
+  width: 20%;
+  padding: 15px;
+}
+
+footer {
+text-align: left;
 }
