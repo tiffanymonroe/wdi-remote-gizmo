@@ -362,9 +362,23 @@ The commit message should read: <br>
 <hr>
 
 # CSS Videos
+ 
+#### Advanced Selectors
 
-1. Watch [this video on float](https://www.youtube.com/watch?v=-4Yy3WNmvmg&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=11)
-1. Watch [this video on calc](https://www.youtube.com/watch?v=nIHRRZe9xvs&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=12)
+1. Watch [this video](https://www.youtube.com/watch?v=Zudl-fCDSdM&index=14&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about family selectors.
+1. Watch [this video](https://www.youtube.com/watch?v=PuF0drOMN3E&index=15&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about attribute selectors.
+
+#### Responsive Design
+
+1. Watch [this video](https://www.youtube.com/watch?v=BsuCBmzLf_U&index=21&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) an introduction to responsive design.
+1. Watch [this video](https://www.youtube.com/watch?v=iQIj7Lu64M4&index=22&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about mobile first design using min/max-width/height
+1. Watch [this video](https://www.youtube.com/watch?v=GYygtVolViM&index=23&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about media queries.
+
+# Reading
+Please read these quick articles to prepare for an exercise using pair programming:
+
+1. http://www.wikihow.com/Pair-Program
+2. https://www.thoughtworks.com/insights/blog/10-ways-improve-your-pairing-experience
 
 # Readings:
 Please read these quick articles to prepare for an exercise using pair programming:
