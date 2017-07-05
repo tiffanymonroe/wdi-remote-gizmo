@@ -13,8 +13,8 @@ Topics: Accessing arrays of objects and object properties
 
 ### Nested data: Arrays of Objects
 
-* Make a file `arrays_of_objects.js` in your student_labs directory for today
-* Do your work in the `arrays_of_objects.js` file
+* Make a file `solar_system.js` in your student_labs directory for today
+* Do your work in the `solar_system.js` file
 
 
 ## The solar system, part 1
@@ -150,7 +150,7 @@ const system = {
      rotationperiod: 9.92,
      period: 11.86,
      radiuse: 71490,
-     satellites: '>28 ',
+     satellites: '69',
      au: 5.203,
      eccentricity: 0.048,
      velocity: 13.06,

@@ -95,7 +95,7 @@ Add the `companion` object to the `adventurer` object:
 
 ```javascript
 const adventurer = {
-	name: Timothy,
+	name: "Timothy",
 	hitpoints: 10,
 	belongings: ["sword", "potion", "Tums"],
 	companion: {
