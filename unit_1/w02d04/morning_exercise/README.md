@@ -29,23 +29,25 @@ Prerequisite Videos: <br>
 
 **Note:** Because you want to copy the files that are inside a folder, we'll have to use the `-r` flag on our `cp` command:
 
-- In terminal:
+### Copy the files from your folder
+#### In terminal:
  - navigate to **today's** `morning_exercise` folder `/w02d04/morning_exercise` folder.
  - **create a new folder** here to hold your work called `morning_mockup_continued`
  - navigate **inside** this new folder `w02d04/morning_exercise/morning_mockup_continued`
  - from there, copy your files over from yesterday: `cp -r ../../../w02d03/student_examples/morning_mockup .`
  - `ls` to confirm that the files have been copied into your new folder.
- 
-**Note:** Do you have your images?
+
+ Note: if you have created your files elsewhere, you will need to adjust the path.
+
+***Do you have your images?***
  - if you had not already copied the image folder into your `morning_mockup` folder, you'll have to bring the images over now:
- 
- - In terminal:
+
+### Copy the images (if they weren't already in your folder)
+#### In terminal:
   -  **create a new folder** here (in your `morning_mockup_continued` folder) to hold your images called `img`
   - navigate **inside** this new folder `w02d04/morning_exercise/morning_mockup_continued/img`
   - from there, copy your files over from yesterday: `cp -r ../../../../w02d03/morning_exercise/img .`
   - `ls` to confirm that the files have been copied into your new folder.
-
- Note: if you have created your files elsewhere, you will need to adjust the path.
 
 
 ## Use this Mockup
