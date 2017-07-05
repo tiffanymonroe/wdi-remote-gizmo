@@ -56,11 +56,12 @@ Prerequisite Videos: <br>
 
 ## Stretch:
 
-1. Match the colors exactly by figuring out what they are with a "color picker" extension.
+1. Match the colors exactly by figuring out what they are with a "color picker" Chrome extension.
 1. Choose fonts that are as close as possible to the original fonts.
 
 <details>
 <summary>CSS Notes</summary>
+
 # CSS - The Box Model and Element Spacing
 
 ## Lesson Objectives
