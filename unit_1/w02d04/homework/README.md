@@ -369,8 +369,8 @@ The commit message should read: <br>
 # Readings:
 Please read these quick articles to prepare for an exercise using pair programming:
 
-http://www.wikihow.com/Pair-Program
-https://www.thoughtworks.com/insights/blog/10-ways-improve-your-pairing-experience
+- http://www.wikihow.com/Pair-Program
+- https://www.thoughtworks.com/insights/blog/10-ways-improve-your-pairing-experience
 
 
 # Hungry for more?
