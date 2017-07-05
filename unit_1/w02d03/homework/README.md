@@ -6,8 +6,8 @@
 Title: JS Datatypes<br>
 Type: Homework<br>
 Duration: "4:00"<br>
-Creator: Matt Huntington<br>
-    Course: WDIR-Hopper<br>
+Creator: Thom Page & Matt Huntington<br>
+    Course: WDIR-Hopper, WDI-Lettuce<br>
 Modified by: Kristyn Bryan<br>
 Competencies: Objects, Arrays, Loops <br>
 Prerequisites: JavaScript <br>
