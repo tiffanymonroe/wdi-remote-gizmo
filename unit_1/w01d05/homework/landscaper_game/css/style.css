@@ -28,13 +28,3 @@ h3 {font-family: 'Amatic SC', cursive;
       }
 p {font-family: 'Open Sans', sans-serif;
     }
-button {font-family: 'Amatic SC', cursive;
-        font-size: 24px;
-        font-weight: bolder;
-        background: #8CC63E;
-        color: white;
-        width: 60px;
-        margin: auto;
-        align-self: center;
-        border-color: #8CC63E;
-        }
