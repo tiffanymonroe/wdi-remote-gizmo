@@ -150,7 +150,7 @@ const system = {
      rotationperiod: 9.92,
      period: 11.86,
      radiuse: 71490,
-     satellites: '>28 ',
+     satellites: '69',
      au: 5.203,
      eccentricity: 0.048,
      velocity: 13.06,

@@ -1,0 +1,43 @@
+* {
+  font-family: avenir-regular, Helvetica, sans-serif;
+}
+
+#experience {
+  /*just for development*/
+  border: 1px solid red;
+
+  position: relative;
+  width: 100%;
+}
+
+#experience-img{
+  /*just for development*/
+  /*border: 1px dashed blue;*/
+
+  max-width: 300px;
+  display: inline-block
+}
+
+#experience-content {
+  /*just for development*/
+  /*border: 2px dotted green;*/
+
+  max-width: 800px;
+  padding: 0 4rem 0 0;
+  display: inline-block;
+  position: absolute;
+}
+
+#experience-content ul {
+  padding-left: 0px;
+}
+
+#experience-content ul li {
+  /*for development*/
+  /*border: 1px solid red;*/
+
+  display: inline-block;
+  vertical-align: top;
+  padding-right: 20px;
+  width: 30%;
+}
