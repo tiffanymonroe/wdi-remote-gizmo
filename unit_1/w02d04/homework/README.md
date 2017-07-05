@@ -361,10 +361,17 @@ The commit message should read: <br>
 
 <hr>
 
-## CSS Videos
+# CSS Videos
 
 1. Watch [this video on float](https://www.youtube.com/watch?v=-4Yy3WNmvmg&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=11)
 1. Watch [this video on calc](https://www.youtube.com/watch?v=nIHRRZe9xvs&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J&index=12)
+
+# Readings:
+Please read these quick articles to prepare for an exercise using pair programming:
+
+http://www.wikihow.com/Pair-Program
+https://www.thoughtworks.com/insights/blog/10-ways-improve-your-pairing-experience
+
 
 # Hungry for more?
 
