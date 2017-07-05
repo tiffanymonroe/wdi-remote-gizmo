@@ -13,8 +13,8 @@ Topics: Accessing arrays of objects and object properties
 
 ### Nested data: Arrays of Objects
 
-* Make a file `arrays_of_objects.js` in your student_labs directory for today
-* Do your work in the `arrays_of_objects.js` file
+* Make a file `solar_system.js` in your student_labs directory for today
+* Do your work in the `solar_system.js` file
 
 
 ## The solar system, part 1

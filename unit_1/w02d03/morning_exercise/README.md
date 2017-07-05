@@ -17,10 +17,10 @@ Prerequisites: Basic HTML <br>
 
 
 ## Directions
-Look at the mockup below and create a webpage **with this layout** using HTML and the images provided (note, the images provided are not the same as the ones in the mockup). 
+Look at the mockup below and create a webpage **with this layout** using HTML and the images provided (note, the images provided are not the same as the ones in the mockup).
 
 **Important for today:**
-- Get your HTML elements on the page. 
+- Get your HTML elements on the page.
 - Think about which semantic tags you can use (`section`, `main`, `header`, `footer`, `paragraph`, which heading tags should you use?).
 
 NOTE: This is a 2-day exercise.
@@ -30,7 +30,7 @@ NOTE: This is a 2-day exercise.
 2. **Create a folder**  called `morning_mockup`.
 3. Navigate inside the `morning_mockup` folder and create an `index.html` file.
 
-Your folder structure will look like: 
+Your folder structure will look like:
 `unit_01/w02d03/student_examples/morning_mockup/index.html`
 
 **IMPORTANT** As you code, make sure to check your work in the browser.
@@ -46,3 +46,5 @@ Your folder structure will look like:
 1. Connect a CSS file to the HTML file and start changing the background color, moving images, etc.
 1. Research form elements and add them in to match the mockup
 1. Don't worry about matching the fonts exactly, but check out some [standard fonts](https://developer.mozilla.org/en-US/docs/Web/CSS/font-family) in CSS or [Google Fonts](https://fonts.google.com/).
+
+_Images from: http://wwww.rowanmersh.com/gallery-category/2017/_

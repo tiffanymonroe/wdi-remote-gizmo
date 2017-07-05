@@ -63,7 +63,7 @@ const monster = {
 
 * Given the **slimer** object:
     - What would you write to access the `name` and console.log it?
-    - What would you write to change the `type` to 'mystery meat' (without changing it inside the object)
+    - What would you write to change the `type` to 'creature' (without changing it inside the object)
     - What would you write to add a key to the object called `age`, and set the age to 6?
     - console.log the object to make sure `type` is creature, and `age` is 6
 
