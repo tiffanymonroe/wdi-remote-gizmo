@@ -222,7 +222,6 @@ a#more {
 
 footer {
 width: 100%;
-background-color: pink;
 }
 
 
@@ -233,5 +232,4 @@ footer ul, footer li {
   font-size: 14px;
   color: white;
   list-style: none;
-  background-color: purple;
 }
