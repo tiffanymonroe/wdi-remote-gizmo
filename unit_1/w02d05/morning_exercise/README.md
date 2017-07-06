@@ -29,19 +29,18 @@ Prerequisite Videos:
 
 1. Navigate inside today's `student_examples` folder `w02d05/student_examples`
 2. Create a folder called `responsive_mockups`
-3. Navigate inside the `responsive_mockups` folder we need to create *three* folders that each have two files:
- - `index.html`
- - `style.css`
+3. Navigate inside the `responsive_mockups` folder we need to create *three* folders that each have *two* files:
+   >Folders: `responsive_one`, `responsive_two`, `responsive_three`
+    
+   >Files (for each): `index.html`, `style.css`
 
 Let's do this in **two** lines from inside the `responsive_mockups` directory:
 
-```
-//1. Create the folders
-mkdir responsive_one responsive_two responsive_three
-```
+1. Create the folders
+`mkdir responsive_one responsive_two responsive_three`
 
+2. Create the files
 ```
-//2. Create the files
 touch responsive_one/index.html responsive_one/style.css  responsive_two/index.html responsive_two/style.css responsive_three/index.html responsive_three/style.css
 ```
 
