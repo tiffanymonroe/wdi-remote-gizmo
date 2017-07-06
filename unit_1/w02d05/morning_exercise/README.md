@@ -48,7 +48,7 @@ Let's do this in **two** lines from inside the `responsive_mockups` directory:
 
 2. Only 1 of your will be writing code today (we'll go over this below), and that person should share the code with their parter in a direct message *as a Snippet in Slack* (or via Github) after the exercise has ended.
 
-Note: Each mockup has a full screen view and a mobile view.
+Note: Each mockup has a **full screen** view and a **mobile** view.
 
 ![Mockup](https://i.imgur.com/NZ0moP0.png)
 
