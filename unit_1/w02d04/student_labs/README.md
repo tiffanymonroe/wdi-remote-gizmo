@@ -61,7 +61,7 @@ Loops over the following array, and print its values:
 
 ```javascript
 const refrigerator = {
-    fruits: ['apple', 'pear', banana]
+    fruits: ['apple', 'pear', 'banana']
 }
 ```
 
@@ -135,6 +135,69 @@ const me = {
 }
 ```
 
+## Use the instruments object to print the following.
+1.  `"telecastor"`
+2.  `"santa cruz"`
+3.  `"washburn"`
+4.  `"weber"`
+
+```
+const instruments = {
+  banjo: ["1920 gibson", "deering", "washburn"],
+  guitar: {
+    acoustic: ["martin", "taylor", "santa cruz", "gibson"],
+    electric: ["fender Strat", "telecastor", "PRS", "languedoc"],
+    nylon: ["baldwin", "cordoba"]
+  },
+  mandolin: ["eastman", "weber", "collings"]
+}
+```
+
+1.  Using the instruments object loop through all
+the electric guitars and print them to the console.
+
+2.  Add a property to the instruments object, that includes
+a list of your favourite singers.
+
+
+### Using crazy object print the following
+
+1.  `"omg my mouth is burning"`
+2.  `"Pretty pretty prettayyyyy good"`
+3.  `"Swearing at Larry and Jeff"`
+4.  `"Chicken Teriyaki Boyyyyyy"`
+5.  `"The object the contains the name funkhauser"`
+
+```
+const crazyObject = {
+  taco: [{meat: 'steak',
+         cheese: ['panela', 'queso', 'chihuahua']},
+         {meat: 'chicken',
+          salsa: ["pico", "hot", "hotter", "really hot", "really really hot", "omg my mouth is burning"]},
+        ],
+  larry: {
+    nicknames: ["LD", "Chicken Teriyaki Boyyyyyy"],
+    quotes: ["Pretty pretty prettayyyyy good", "Is that a parkinson's thing?", "women love a self confident bald man", "I'm a walking talking enigma"],
+    characters: [{
+      name: "Jeff",
+      occupation: "manager"
+    },
+    {
+      name: "funkhauser",
+      occupation: "tv dude"
+    },
+    {
+      name: "susie",
+      occupation: "jeffs wife",
+      favouriteHobby: "Swearing at Larry and Jeff"
+    }
+    ]
+  }
+}
+```
+
+
+
 Create a data structure such that the following code logs "boat":
 
 ```javascript
@@ -152,7 +215,7 @@ Run the inner function:
 ```javascript
 const matt = {
     blink(){
-        return foo(){
+        return ()=>{
             console.log('hi')
         }
     }
@@ -221,6 +284,14 @@ const foo = [
     }
 ];
 ```
+
+
+
+
+
+
+
+
 
 ## Afternoon Lab
 
@@ -298,6 +369,30 @@ const myFunc = (param)=>{
 }
 ```
 
+Create a method called combineColor on the shirtColor object that combines all the elements of the color array into a string
+
+```
+const shirtColor = {
+  color: ["red", 'blue, 'green', 'white', 'pink'],
+}
+```
+Expected Output:  ```"red, green, white, pink"```
+
+
+Follow the following steps:
+   1.  Create a function called `wordReverse` that reverses a string.
+   2.  Create a function called `toUpperCase` that capitalizes every letter in a string.
+   3.  Write a function, called `repMaster`, that accepts two arguments, input and a function. Input should be able to be used with the function.  The function used as an argument must return a string.  `repMaster` should take the result of the string, passed as an argument to the argument function, and return this result with `' proves that I am the rep MASTER!'` concatenated to it.  
+
+   Expected Output:  
+
+   ```javascript
+      repMaster("Never give your heart to a blockhead", wordReverse) # =>
+      "blockhead a to heart your give never proves that I am the rep MASTER!"
+      repMaster("I finished this practice", toUpperCase);
+      "I FINISHED THIS PRACTICE proves that I am the rep MASTER!"
+  ```
+
 Follow the following steps:
 
     1. Create a function that takes a parameter and logs it
@@ -324,3 +419,7 @@ const foo = {
 
 bar.someMethod; //fix this line
 ```
+
+## Hungry for More?
+
+Read the [Tips and Tricks Notes](../instructor_notes/TIPS.md) and ask the instructors any questions that come to mind
