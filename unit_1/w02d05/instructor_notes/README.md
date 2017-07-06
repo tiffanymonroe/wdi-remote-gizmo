@@ -51,6 +51,11 @@ Edit the following properties:
 1.  change the `alive` property to true using dot notation with the object
 2.  change the `quote` property to 'Everybody just be nice to each other' using bracket notation
 
+Add a method
+
+1.  add a method to the `garcia` object named speak that logs out "Heyy, Thats a good song!"
+2.  add a method to the `garcia` object named letsPlay that logs out "La daaa da da, La daa, da, da"
+
 
 
 ### ```this```
