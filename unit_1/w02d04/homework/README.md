@@ -237,12 +237,10 @@ In this homework we will be using basic HTML and CSS selectors to style a list o
 
 ## Setup
 
-1. Make a folder inside your `homework` folder for w02d03 called `style_zoo`
-2. Make a file inside your `style_zoo` folder for called `index.html`.
-3. Write all of your HTML in `index.html`.
-4. Create another file inside the `style_zoo` folder called `style.css`.
+1. Make a folder inside your `homework` folder for today called `style_zoo`
+2. Navigate inside your `style_zoo` folder and **create a file** called `index.html`.
+4. **Create another file** inside the `style_zoo` folder called `style.css`.
 5. Connect the CSS file to your HTML file.
-6. Write all of your styling code inside this css file.
 
 #### Need a refresher on how to connect your CSS to your HTML?
    - Place a link tag inside the `head` section of your HTML file that refers to your css file:    
