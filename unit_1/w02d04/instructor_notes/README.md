@@ -80,8 +80,8 @@ const foo = {
     someArray:[1,2,3]
 };
 
-for(let i = 0; i < foo.someArray.length; i++){
-    console.log(foo.someArray[i]);
+for(element of foo.someArray){
+    console.log(element);
 }
 ```
 
@@ -94,9 +94,9 @@ const foo = [
     ["2,0", "2,1", "2,2"]
 ];
 
-for(let i = 0; i < foo.length; i++){
-    for(let j = 0; j < foo[i].length; j++){
-        console.log(foo[i][j]);
+for(row of foo){
+    for(element of row){
+        console.log(element);
     }
 }
 ```

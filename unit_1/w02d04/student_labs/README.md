@@ -61,7 +61,7 @@ Loops over the following array, and print its values:
 
 ```javascript
 const refrigerator = {
-    fruits: ['apple', 'pear', banana]
+    fruits: ['apple', 'pear', 'banana']
 }
 ```
 
