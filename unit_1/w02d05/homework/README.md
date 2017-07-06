@@ -129,6 +129,8 @@ Make an object called `atm` which has two properties:
 
 # Iterators
 
+![iterators cats](http://www.pellissippiveterinaryhospital.com/wp-content/uploads/2013/05/Capture.jpg)
+
 ## Setup
 
 1. Make a file inside your `homework` folder for w02d05 called `iterator_answers.js`.
