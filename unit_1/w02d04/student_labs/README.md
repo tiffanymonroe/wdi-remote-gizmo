@@ -152,7 +152,7 @@ Run the inner function:
 ```javascript
 const matt = {
     blink(){
-        return foo(){
+        return ()=>{
             console.log('hi')
         }
     }
