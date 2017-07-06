@@ -1,0 +1,46 @@
+body {
+  background: #F7EEE5;
+  font-family: 'Montserrat', sans-serif;
+  text-transform: uppercase;
+}
+
+#page {
+  background: white;
+  margin: 13%;
+  box-shadow: 3px 3px 3px 3px #A7A195;
+}
+
+
+.intro {
+  background-image: url('../img/close_white.jpg');
+  background-size: cover;
+  height: 400px;
+  width: auto;
+  text-align: center;
+
+}
+
+header {
+  padding: 5%;
+  height: 100px;
+  text-align: center;
+}
+
+
+nav {
+  display: inline-block;
+  margin: 10px;
+  padding: 10px;
+}
+
+.intro h2 {
+  width: 300px;
+  margin: auto;
+  border: 3px solid black;
+}
+
+#img-block {
+  margin: auto;
+  position: relative;
+  border: 1px dashed purple;
+}
