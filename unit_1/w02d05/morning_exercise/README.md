@@ -46,11 +46,11 @@ Let's do this in **two** lines from inside the `responsive_mockups` directory:
 
 1. **In pairs** create these three mockups.
 
+2. Only 1 of your will be writing code today (we'll go over this below), and that person should share the code with their parter in a direct message *as a Snippet in Slack* (or via Github) after the exercise has ended.
+
 Note: Each mockup has a full screen view and a mobile view.
 
 ![Mockup](https://i.imgur.com/NZ0moP0.png)
-
-2. Only 1 of your will be writing code today (we'll go over this below), and that person should share the code with their parter in a direct message *as a Snippet in Slack* (or via Github) after the exercise has ended.
 
 ## Pair Programming
 You will be pair-programming to solve today's morning exercise. Note that we will be doing this multiple times throughout the cohort, so you will all get a chance to be a driver and an navigator. Embrace the position that you have in the moment.
