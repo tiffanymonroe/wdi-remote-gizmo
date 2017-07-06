@@ -14,7 +14,7 @@ Prerequisites: JavaScript <br>
 ---
 # Homework
 
-Before starting this homework, please read this set of [Tips and Tricks Notes](../instructor_notes/TIPS.md)
+Before starting this homework, please read this set of [Tips and Tricks](../instructor_notes/TIPS.md)
 
 ## Combine objects, arrays, and functions
 
