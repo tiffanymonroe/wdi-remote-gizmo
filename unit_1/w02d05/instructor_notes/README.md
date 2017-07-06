@@ -13,6 +13,44 @@
 2. Inside the `oop_objects` directory, add an `index.html` and an `app.js` inside a javascripts folder and link them together.
 3.  Add a `console.log()` to your `app.js` and check to see that it is loading in your chrome console.
 
+### Object quick review
+
+```
+  const garcia = {
+      albums: ['shady grove', 'run for the roses', 'hooteroll', 'Garcia', 'Reflections'],
+      instruments: ['Vocals', 'pedal steel', 'electric guitar', 'acoustic guitar', 'banjo'],
+      alive: false,
+      quote: 'Im shopping around for something to do that no one will like',
+      friends: [{
+        name: 'Bobby weir',
+        hobby: 'guitar'
+      },
+      {
+        name: 'Bob Dylan',
+        hobby: 'writing songs'
+      },
+      {
+        name: 'Allen Ginsberg',
+        hobby: 'writing poems'
+      },
+      {
+        name: 'Phil Lesh',
+        hobby: 'Playing dope bass lines'
+      }]
+  }
+```
+
+Print the following:
+1. 'hooteroll'
+2. 'Bobby weir'
+3. 'writing poems'
+4. 'banjo'
+
+Edit the following properties:
+
+1.  change the `alive` property to true using dot notation with the object
+2.  change the `quote` property to 'Everybody just be nice to each other' using bracket notation
+
 
 
 ### ```this```
@@ -57,8 +95,8 @@ const taco = () => {
 ```
 1.  What is `this` referring to now.
 
-### Lets play with Intervals
 
+### Lets play with Intervals
 
 
 ```
