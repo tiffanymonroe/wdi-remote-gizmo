@@ -117,12 +117,24 @@ const bondFilms = [
   // console.log(bondTitles);
 
 
-  const oddBonds = [];
-  for (let i=0; i < bondFilms.length; i++) {
-    if (bondFilms[i]["year"] % 2 != 0 ) {
-       oddBonds.push(bondFilms[i]);
-        }
-      }
+  // const oddBonds = [];
+  // for (let i=0; i < bondFilms.length; i++) {
+  //   if (bondFilms[i]["year"] % 2 != 0 ) {
+  //      oddBonds.push(bondFilms[i]);
+  //       }
+  //     }
+  //
+  //
+  // console.log(oddBonds);
 
+  // const bondMoney = [];
+  //   for (let i=0; i < bondFilms.length; i++) {
+  //     bondMoney.push(bondFilms[i]["gross"]);
+  //     }
+  //
+  //
+  // const totalBond = bondMoney.replace();
+  //
+  // console.log(totalBond);
 
-  console.log(oddBonds);
+  //halp! I can't get them from strings to numbers, so that I can add them :/
