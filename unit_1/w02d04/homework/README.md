@@ -18,7 +18,8 @@ Before starting this homework, please read this set of [Tips and Tricks](../inst
 
 ## Setup
 
-Create a file called `answers.js` inside your `homework` folder for today.
+1. Create a file called `answers.js` inside your `homework` folder for today.
+2. Copy the questions that you are answering into your file (and comment it out) and write the answer below the question.
 
 ## Combine objects, arrays, and functions
 
