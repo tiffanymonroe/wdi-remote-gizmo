@@ -16,6 +16,11 @@ Prerequisites: JavaScript <br>
 
 Before starting this homework, please read this set of [Tips and Tricks](../instructor_notes/TIPS.md)
 
+## Setup
+
+1. Create a file called `answers.js` inside your `homework` folder for today.
+2. Copy the questions that you are answering into your file (and comment it out) and write the answer below the question.
+
 ## Combine objects, arrays, and functions
 
 **COMPLETE ANY 3**
@@ -232,12 +237,10 @@ In this homework we will be using basic HTML and CSS selectors to style a list o
 
 ## Setup
 
-1. Make a folder inside your `homework` folder for w02d03 called `style_zoo`
-2. Make a file inside your `style_zoo` folder for called `index.html`.
-3. Write all of your HTML in `index.html`.
-4. Create another file inside the `style_zoo` folder called `style.css`.
+1. Make a folder inside your `homework` folder for today called `style_zoo`
+2. Navigate inside your `style_zoo` folder and **create a file** called `index.html`.
+4. **Create another file** inside the `style_zoo` folder called `style.css`.
 5. Connect the CSS file to your HTML file.
-6. Write all of your styling code inside this css file.
 
 #### Need a refresher on how to connect your CSS to your HTML?
    - Place a link tag inside the `head` section of your HTML file that refers to your css file:    
@@ -250,16 +253,16 @@ In this homework we will be using basic HTML and CSS selectors to style a list o
 - Make a list of animals!
 - Create an HTML file with a boilerplate.
 - Add an unordered list of the following animals:  
-    1. mouse  
-    2. canary  
-    3. penguin  
-    4. salmon  
-    5. cat  
-    6. goldfish  
-    7. dog  
-    8. sheep  
-    9. parakeet  
-    10. tuna  
+    * mouse  
+    * canary  
+    * penguin  
+    * salmon  
+    * cat  
+    * goldfish  
+    * dog  
+    * sheep  
+    * parakeet  
+    * tuna  
 
 <hr>
 &#x1F534; **Commit your work.** <br>
