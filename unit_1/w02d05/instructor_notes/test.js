@@ -25,10 +25,7 @@ const taco = () => {
 let t = () => {
   console.log(this, 'djaklfjdlks')
 }
-// const count = () => {
-//   console.log(this)
-//   return 'hi';
-// }
+
 taco()
 
 console.log(this, 'this is this')

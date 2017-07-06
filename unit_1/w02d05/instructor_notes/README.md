@@ -19,17 +19,18 @@
 
 1.  ```this``` refers to the object that is invoking the method.
 
-
+```
 const foo = {
   value: 12,
   getValue() {
     return this.value;
   }
 }
+```
 
-console.log(foo.getValue());
+```console.log(foo.getValue());```
 
-output = '12'
+output = `'12'`
 
 question:  What object is `this` in getValue referring too.
 
@@ -45,11 +46,16 @@ In the the Chrome console, we can type this, and ask: To what object does everyt
 
 The result is the `window` object. 
 
+
+
 Try this out:
 
-```const taco = () => {
-  console.log(this, ' this is with arrow functions')
-}```
+```
+const taco = () => {
+  console.log(this, ' this is with arrow functions');
+}
+```
+1.  What is `this` referring to now.
 
 ### Lets play with Intervals
 
