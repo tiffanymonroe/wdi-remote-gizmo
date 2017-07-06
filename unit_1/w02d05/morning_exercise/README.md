@@ -40,9 +40,7 @@ Let's do this in **two** lines from inside the `responsive_mockups` directory:
 `mkdir responsive_one responsive_two responsive_three`
 
 2. Create the files
-```
-touch responsive_one/index.html responsive_one/style.css  responsive_two/index.html responsive_two/style.css responsive_three/index.html responsive_three/style.css
-```
+`touch responsive_one/index.html responsive_one/style.css  responsive_two/index.html responsive_two/style.css responsive_three/index.html responsive_three/style.css`
 
 ## Directions
 
