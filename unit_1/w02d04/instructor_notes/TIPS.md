@@ -83,6 +83,8 @@ const sumOfThreeNumbers = 1 + 2 + 3; //good
 
 ## Define Functions at the Top of the File
 
+It might work for you to have you functions group together at the top.  This way you know all your functions will be defined before they're called.
+
 Good:
 ```javascript
 const foo = ()=>{
@@ -180,17 +182,17 @@ In general, you can convert between data types like so:
 
 ### Combining values
 
-When using `+`, always make sure you know what your data types are
-
-```javascript
-const a = "1";
-typeof a;
-```
-
 - Weird things happen when you accidentally combine values together that are not the same data type
 - Always convert values to the correct data type and then combine.  Don't leave it up to javascript to guess what you want
 
 ```javascript
 console.log(5 + '5'); //'55'
 console.log(5 + parseInt('5')); //10
+```
+
+Always make sure you know what your data types are:
+
+```javascript
+const a = "1";
+typeof a;
 ```
