@@ -16,6 +16,10 @@ Prerequisites: JavaScript <br>
 
 Before starting this homework, please read this set of [Tips and Tricks](../instructor_notes/TIPS.md)
 
+## Setup
+
+Create a file called `answers.js` inside your `homework` folder for today.
+
 ## Combine objects, arrays, and functions
 
 **COMPLETE ANY 3**
