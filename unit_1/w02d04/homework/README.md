@@ -385,13 +385,6 @@ Please read these quick articles to prepare for an exercise using pair programmi
 1. http://www.wikihow.com/Pair-Program
 2. https://www.thoughtworks.com/insights/blog/10-ways-improve-your-pairing-experience
 
-# Readings:
-Please read these quick articles to prepare for an exercise using pair programming:
-
-- http://www.wikihow.com/Pair-Program
-- https://www.thoughtworks.com/insights/blog/10-ways-improve-your-pairing-experience
-
-
 # Hungry for more?
 
 - Go back and complete all problems for Section 1 (Combine objects, arrays, and functions)
