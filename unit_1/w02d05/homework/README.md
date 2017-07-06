@@ -400,13 +400,6 @@ Let's put our intervals inside out `tamagotchi1` object.
 1. Watch [this video](https://www.youtube.com/watch?v=iQIj7Lu64M4&index=22&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about mobile first design using min/max-width/height
 1. Watch [this video](https://www.youtube.com/watch?v=GYygtVolViM&index=23&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about media queries.
 
-# Reading
-Please read these quick articles to prepare for an exercise using pair programming:
-
-1. http://www.wikihow.com/Pair-Program
-2. https://www.thoughtworks.com/insights/blog/10-ways-improve-your-pairing-experience
-
-
 # Hungry for More (Iterators)?
 
 ## forEach
