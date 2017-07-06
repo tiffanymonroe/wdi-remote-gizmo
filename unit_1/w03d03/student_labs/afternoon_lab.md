@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDI-HOPPER
+# WDI-GIZMO
 
 ---
 Title: jQuery practice<br>

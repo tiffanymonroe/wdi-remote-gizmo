@@ -1,12 +1,14 @@
 ## JQUERY CHEAT SHEET
 
+by Thom P.
+
 ![](https://i.imgur.com/WiUrxnG.png)
 
 <br>
 
 ## Window Onload
 
-```
+```javascript
 $(function() {
 	// put jQuery in here
 });

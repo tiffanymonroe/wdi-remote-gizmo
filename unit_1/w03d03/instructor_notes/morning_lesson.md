@@ -80,11 +80,7 @@ In the console, we are in JavasSript-land and can interact with our page using J
 
 The HTML can be considered a 'recipe' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
 
-Let's interact with those objects in the console.
-
-First, let's look at our `context` within the browser. Context is not to be confused with scope. Context shows us which object we are currently in.
-
-`this` gives us the `Window` object, the top-level context. There is no 'parent' outside of this object. All of the DOM objects are nested inside of the `Window` object.
+Let's interact with those objects in the console. First, let's look at our `context` within the browser. Context is not to be confused with scope. Context shows us which object we are currently in.
 
 ##### the Window object
 
@@ -92,23 +88,29 @@ First, let's look at our `context` within the browser. Context is not to be conf
 - Location property is the URL of the page.
 - The `window` object contains the `document` object where the HTML is represented.
 
+
+
+`this` gives us the `Window` object, the top-level context. There is no 'parent' outside of this object. All of the DOM objects are nested inside of the `Window` object.
+
+
+
 ### The document object
 
 In object terminology, the document is a property of the Window.
 
-```
+```javascript
 window.document
 ```
 
 Shorthand:
 
-```
+```javascript
 document
 ```
 
 The document looks like HTML in the console, but is really objects.
 
-```
+```javascript
 document.body
 ```
 
@@ -139,13 +141,13 @@ For retrieving child nodes, `document` contains a bunch of useful methods for ac
 
 When you select an element from the DOM, save it a variable for handy reference.
 
-```
-var someImg = document.querySelector('#first-img');
+```javascript
+const someImg = document.querySelector('#first-img');
 ```
 
 Change the attribute `src`
 
-```
+```javascript
 someImg.src="http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
 ```
 **Create an element**
@@ -154,34 +156,34 @@ Created elements will not show until they are **appended** to the DOM.
 
 * create an element
 
-```
-var someElement = document.createElement('div');
+```javascript
+const someElement = document.createElement('div');
 ```
 
 * append it to the body of the page
 
-```
+```javascript
 document.body.appendChild(someElement);
 ```
 
 **Perform further operations on an element before appending it**
 
-```
-var someElement = document.createElement('div');
+```javascript
+const someElement = document.createElement('div');
 ```
 
-```
+```javascript
 someElement.innerText = "This is some non-descriptive text";
 ```
 
-```
+```javascript
 document.body.appendChild(someElement);
 ```
 
 **We can create any tag we want, such as a 'p'**
 
-```
-var someP = document.createElement('p');
+```javascript
+const someP = document.createElement('p');
 
 someP.innerText = "What we have here is a p."
 
@@ -202,8 +204,8 @@ Include the script file as usual, but be mindful of the following:
 
 * If the script is put in the head:
 
-```
-var catElem = document.getElementById('first-img');
+```javascript
+const catElem = document.getElementById('first-img');
 
 console.log(catElem);
 ```
@@ -214,7 +216,7 @@ console.log(catElem);
 
 * For now, place the script at the bottom of, and within, the **body** tag. That way, the HTML will have loaded before the script tries to reference it.
 
-```
+```javascript
     <script type="text/javascript" src="app.js"></script>
   </body>
 </html>
@@ -244,8 +246,8 @@ Be aware of datatypes. Do you get back a single element or an array of elements?
 
 * Get all the elements with the class 'info': it is an array, not a single element.
 
-```
-var infoElements = document.getElementsByClassName('info');
+```javascript
+const infoElements = document.getElementsByClassName('info');
 
 infoElements.innerText = "ahoy there!";
 ```
@@ -295,7 +297,7 @@ We will only need a small handful of these commands for now. Here is a sample:
 
 ---
 
-Do the [DOM commands lab](https://github.com/ga-students/wdi-remote-hopper/blob/master/unit_1/w03d01/student_labs/w3d1_morning_lab.md)
+Do the [DOM commands lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/student_labs/morning_lab.md)
 
 You are not expected to remember these JS commands. This is just an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
 
@@ -369,9 +371,9 @@ jQuery commands always begin with the `$` symbol
 We can put our jQuery inside a closure so that it will wait until the DOM has loaded.
 
 
-* jQuery closure - waits for all the HTML to be parsed
+* jQuery window.onload - waits for all the HTML to be parsed
 
-```
+```javascript
 $(function() {
 	// stuff
 }
@@ -379,8 +381,8 @@ $(function() {
 
 * **Grab an element by id**
 
-```
-var elem = $('#idName');
+```javascript
+const elem = $('#idName');
 ```
 
 Is translated into `document.querySelector` under the hood.
@@ -389,8 +391,8 @@ Is translated into `document.querySelector` under the hood.
 
 * **Generate an element**
 
-```
-var newElem = $('<div>');
+```javascript
+const newElem = $('<div>');
 ```
 
 Is translated into `document.createElement()` under the hood.
@@ -400,7 +402,7 @@ Is translated into `document.createElement()` under the hood.
 * **Append an element to the body**
 
 
-```
+```javascript
 $('body').append(newElem);
 ```
 
@@ -410,7 +412,7 @@ Is translated into `document.body.appendChild(newElem)`
 
 **Add text to an element**
 
-```
+```javascript
 newElem.text('the square of the hypotenuse is equal to the sum of the squares of the other two sides');
 ```
 
