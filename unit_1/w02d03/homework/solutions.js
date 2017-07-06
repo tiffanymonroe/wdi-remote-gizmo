@@ -181,6 +181,22 @@ console.log(oddBonds);
 
 console.log(" -------------------------cumulativeGross - SOLUTION: -------------------------");
 // * Determine the total cumulative gross of the Bond franchise, and console.log the result. _hint_ To make the grosses into usable numbers, look into the `.replace` Javascript method (there are many ways to do this, however). Look into `parseInt` also.
+
+// Solution 1:
+let cumulativeGross = 0;
+
+for (let i = 0; i < bondFilms.length; i++) {
+  bondFilms[i].gross = bondFilms[i].gross.replace(/\$/, "");
+  bondFilms[i].gross = bondFilms[i].gross.replace(/,/g, "");
+  bondFilms[i].gross = parseInt(bondFilms[i].gross);
+  console.log(bondFilms[i].gross);
+  cumulativeGross += bondFilms[i].gross;
+}
+
+console.log("------This is the cumulativeGross: -----")
+console.log(cumulativeGross);
+
+// Solution 2:
 let cumulativeGross = 0;
 
 for (let i = 0; i < bondFilms.length; i++){
