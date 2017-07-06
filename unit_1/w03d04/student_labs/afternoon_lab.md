@@ -1,3 +1,16 @@
+![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
+# WDI-GIZMO
+
+---
+Title: Click to get stuff<br>
+Type: Lab <br>
+Duration: 45 - 60 mins<br>
+Creator: Thom Page <br>
+Topics: jQuery, JS control flow<br>
+
+---
+
 # Random Imgur
 
 * Using jQuery, make a square div with the text "Add random image". Add a class to make the div square. Give it some color.
@@ -28,10 +41,11 @@ We can run any procedure we like we like with our clicks:
 
 * Construct a horrible digital quilt
 * Construct a pyramid made from triangles
-* Render a rolodex, and add data to the rolodex
 
-EXTRA RESEARCH CHALLENGE
+1. EXTRA RESEARCH CHALLENGE: Add an input box and a button to your page. When the button is clicked, grab the value of the text inside the input box, and use that value as an argument in your `generateQuilt(NUM)` and `generatePyramid(NUM)` functions.
 
-Add an input box and a button to your page.
+2. Make the **Virtual Rolodex** from the morning lesson if you haven't done so.
 
-When the button is clicked, grab the value of the text inside the input box, and use that value as an argument in your `generateQuilt(NUM)` and `generatePyramid(NUM)` functions.
+<br>
+<hr>
+<hr>
