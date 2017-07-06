@@ -189,8 +189,8 @@ const crazyObject = {
     {
       name: "susie",
       occupation: "jeffs wife",
-      favourtieHobby: "Swearing at Larry and Jeff"
-    },
+      favouriteHobby: "Swearing at Larry and Jeff"
+    }
     ]
   }
 }
