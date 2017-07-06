@@ -253,16 +253,16 @@ In this homework we will be using basic HTML and CSS selectors to style a list o
 - Make a list of animals!
 - Create an HTML file with a boilerplate.
 - Add an unordered list of the following animals:  
-    1. mouse  
-    2. canary  
-    3. penguin  
-    4. salmon  
-    5. cat  
-    6. goldfish  
-    7. dog  
-    8. sheep  
-    9. parakeet  
-    10. tuna  
+    * mouse  
+    * canary  
+    * penguin  
+    * salmon  
+    * cat  
+    * goldfish  
+    * dog  
+    * sheep  
+    * parakeet  
+    * tuna  
 
 <hr>
 &#x1F534; **Commit your work.** <br>
