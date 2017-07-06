@@ -1,3 +1,5 @@
+![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
 # Combining data types and Callbacks
 
 ## Lesson Objectives
@@ -53,8 +55,8 @@ Edit the following properties:
 
 Add a method
 
-1.  add a method to the `garcia` object named speak that logs out "Heyy, Thats a good song!"
-2.  add a method to the `garcia` object named letsPlay that logs out "La daaa da da, La daa, da, da"
+1.  add a method to the `garcia` object named `speak `that logs out "Heyy, Thats a good song!"
+2.  add a method to the `garcia` object named `letsPlay` that logs out "La daaa da da, La daa, da, da"
 
 
 

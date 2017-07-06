@@ -6,7 +6,7 @@ Type: Lab<br>
 Duration: 3 hr<br>
 Creator: WDI-Archer, WDI-Funke <br>
 Modified by: Jim Haff<br>
-Topics: Using objects, the keyword `this` and methods to create a game while focusing on OOP.<br>
+Topics: Using objects, the keyword `this` and methods to create a game while focusing on OOP, array filter<br>
 <hr>
 
 ![pokemon cards](https://i.ytimg.com/vi/5pDthGSHo58/maxresdefault.jpg)
