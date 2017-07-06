@@ -126,13 +126,30 @@ Keep these five things in mind when planning and coding your game:
 
 4. When you have a piece of functionality tested and working, **commit it**. Try not to commit broken code. Unsure of when to commit? **Commit when something works**. You want to save working code.
 
-## &#x1F47E; Code quality
+<br>
+<hr>
+
+# &#x1F47E; &#x1F47E; &#x1F47E; Code quality and code sharing
+
+At around 4 - 4:30pm you will stop work on your Space Battle and share it with a partner from class.
+
+From the beginning, you will be writing your code **for other developers.**
+
+Your partner will read your code. You will read your partner's code. Having to read and understand another developer's code is common practice. Get used to it now!
+
+You will then debug each other's code if there are any errors. In the 'real world', you will be in a position where you inherit someone else's code-base and are told to 'fix it'.
+
+If you manage to 'fix' your partner's code, you will then set about adding a feature. 
+
+Remember that you are writing code **for other developers**. What does this mean for your coding practices? 
 
 - use proper indentation
-- comment parts of your code that are not self-evident
+- comment the heck out of your code
 - use semantic variable and function names
 
 Your code should be as coherent to another developer as possible.
+
+_make an issue on the class repo and tag your partner with an @_
 
 <br>
 <hr>
