@@ -46,34 +46,41 @@ A game round would look like this:
 
 - If you destroy the ship, you have the option to **attack** the next ship or to **retreat**
 
-- If you retreat, the game is over, perhaps leaving it open to battle another day
+- If you retreat, the game is over, perhaps leaving the game open for further developments or options.
 
-- You win the game if you destroy all of the aliens
-- You lose the game if you are destroyed
+- You win the game if you destroy all of the aliens.
+
+- You lose the game if you are destroyed.
 
 #### Ship Properties
 
+* **hull** is the same as hitpoints. If hull reaches `0` or less, the ship is destroyed.
+
+* **firepower** is the amount of damage done to the **hull** of the target with a successful hit.
+
+* **accuracy** is the chance between 0 and 1 that the ship will hit its target.
+
 **Your spaceship, the USS Schwarzenegger** should have the following properties:
 
-* hull - `20`
-* firepower - `5`
-* accuracy: - `.7`
+* **hull** - `20`
+* **firepower** - `5`
+* **accuracy** - `.7`
 
-**The alien ships** should each have the following ranged properties determined randomly:
+**The alien ships** should each have the following _ranged_ properties determined randomly:
 
 * hull - between `3` and `6`
 * firepower - between `2` and `4`
 * accuracy - between `.6` and `.8`
 
-You could be battling six alien ships each with unique values.
+You could be battling six alien ships each with unique values. 
 
+Example use of **accuracy** to determine a hit:
 
-
-* **hull** is the same as hitpoints. If hull reaches `0` or less, the ship is destroyed.
-
-* **firepower** is the amount of damage done to the **hull** with a successful hit.
-
-* **accuracy** is the chance between 0 and 1 that the ship will hit its target.
+```javascript
+if (Math.random() < alien[0].accuracy) {
+	console.log('Youy have been hit!');
+}
+```
 
 <br>
 <hr>
@@ -101,37 +108,48 @@ Use **pseudo code** to get a sketch of your game first.
 
 Often, beginning something is an act of **creative inspiration** to find the **simplest possible case**. The first step is not necessarily a matter of logical deduction. Once you have a few 'clues' you can follow the trail of crumbs to a logical conclusion.
 
-A good rule of thumb is start with the **actors** and then the **actions**. What actors do we need? In this case, we need our spaceship and the alien spaceships. An action these ships can take is to attack something. A repeating action in the game is that these ships attack each other until one of them has been destroyed.
+## &#x1F47E; Actors and then actions
 
-* Begin even simpler than the specifications suggest. In this case, how about we just start with one alien ship instead of many alien ships, and get the code for one ship working first.
+A good rule of thumb is start with the **actors** and then the **actions**. What actors do we need? In this case, we need our spaceship and the alien spaceships. An action these ships can take is to attack something. Perhaps a ship object (an actor) could therefore have an **attack** method (an action). 
 
-* Root out any 'gotchas' that you really ought to foresee. In this case, will we really want nested loops -- one for a battle, one for iterating over aliens)? How will we exit one loop and then exit the parent loop? Perhaps keeping it to one loop somehow will help us avoid unnecessary difficulties.
+A repeating action in the game is that these ships attack each other until one of them has been destroyed. This might necessitate a loop or multiple loops.
 
-* When coding, form a solid and testable foundation before building upon it with more functionality. In this case, is there a bug where an alien can attack _after_ it has been destroyed? Better fix that bug before increasing the complexity of the code.
+## &#x1F47E; Start simpler than the instructions suggest
 
-* When you have a piece of functionality tested and working, **commit it**. Try not to commit broken code.
+Keep these five things in mind when planning and coding your game:
 
-# &#x1F47E; &#x1F47E; &#x1F47E; Code sharing
+1. Begin even simpler than the specifications suggest. In this case, how about we just start with one alien ship instead of many alien ships, and get the code for one ship working first.
+
+2. Root out any 'gotchas' that you really ought to foresee. In this case, will we really want nested loops -- one for a battle, one for iterating over aliens)? How will we exit one loop and then exit the parent loop? Perhaps keeping it to one loop somehow will help us avoid unnecessary difficulties.
+
+3. When coding, form a solid and testable foundation before building upon it with more functionality. In this case, is there a bug where an alien can attack _after_ it has been destroyed? Better fix that bug before increasing the complexity of the code.
+
+4. When you have a piece of functionality tested and working, **commit it**. Try not to commit broken code. Unsure of when to commit? **Commit when something works**. You want to save working code.
+
+<br>
+<hr>
+
+# &#x1F47E; &#x1F47E; &#x1F47E; Code quality and code sharing
 
 At around 4 - 4:30pm you will stop work on your Space Battle and share it with a partner from class.
 
 From the beginning, you will be writing your code **for other developers.**
 
-_to do this, make an issue on the class repo and tag your partner with an @_
-
 Your partner will read your code. You will read your partner's code. Having to read and understand another developer's code is common practice. Get used to it now!
 
 You will then debug each other's code if there are any errors. In the 'real world', you will be in a position where you inherit someone else's code-base and are told to 'fix it'.
 
-If you manage to 'fix' your partner's code, you will then set about adding a feature.
+If you manage to 'fix' your partner's code, you will then set about adding a feature. 
 
-Remember that you are writing code **for other developers**. What does this mean for your coding practices?
+Remember that you are writing code **for other developers**. What does this mean for your coding practices? 
 
 - use proper indentation
 - comment the heck out of your code
 - use semantic variable and function names
 
 Your code should be as coherent to another developer as possible.
+
+_make an issue on the class repo and tag your partner with an @_
 
 <br>
 <hr>
@@ -211,13 +229,21 @@ Make it so the attacks will keep occuring until someone's hull is at 0. Isolate 
 
 <hr>
 
-Make many alien ships with an object constructor. Make each object slightly different . . .
+Make many alien ships with a Class. Make each object slightly different . . .
 
-hull between 3 and 6, firepower between 2 and 4, accuracy between 0.6 and 0.8 (can do this by selecting a random array element)
+hull between 3 and 6, firepower between 2 and 4, accuracy between 0.6 and 0.8.
 
-Make a loop that generates alien ships with the constructor, and push those constructed objects in an array. Start with 6 ships
+**HUGE CLUE / ANSWER:**
 
-Try out the game with the first alien ship in the array
+```javascript
+this.hull = Math.floor(Math.random() * 4) + 3;
+this.firepower = Math.floor(Math.random() * 3) + 2;
+this.accuracy = (Math.floor(Math.random() * 3) + 6) / 10;
+```
+
+Make a loop that calls the Class and generates alien ships. Push those constructed objects into a predefined array. Start with 6 ships (the loop should run 6 times).
+
+Try out the game with the first alien ship in the array.
 
 Run the battle with all ships in turn.
 
