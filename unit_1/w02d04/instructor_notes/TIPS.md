@@ -2,13 +2,17 @@
 
 ## Lesson Objectives
 
-1. Describe some tips and tricks
+1. Use Proper Indentation
+1. Name Variables Semantically
+1. Define Functions at the Top of the File
+1. Comment Code Properly
+1. Use Common Programming Principles
+1. Describe How to Read Errors
+1. Use the Javascript Debugger in Node
+1. Use the Javascript Debugger in the Browser
+1. Coerce Data Types
 
-## Describe some tips and tricks
-
-### Describe some ways to maintain clean code
-
-### Indentation
+## Use Proper Indentation
 
 Always indent your code.  If a chunk of code is being execute under a certain condition (if/else, loops, functions), that condition owns that chunk of code.  Show ownership with indentation
 
@@ -42,7 +46,7 @@ if(true){
 }
 ```
 
-### Semantic naming of variables
+## Name Variables Semantically
 
 - Be descriptive with variable names
 - Better to have to copy/paste a long variable name than get confused later on.
@@ -52,7 +56,7 @@ const a = 1 + 2 + 3; //bad
 const sumOfThreeNumbers = 1 + 2 + 3; //good
 ```
 
-### Function definitions at the top of the scope
+## Define Functions at the Top of the File
 
 Good:
 ```javascript
@@ -80,7 +84,7 @@ const bar = ()=>{
 bar();
 ```
 
-### Commenting code
+## Comment Code Properly
 
 - Comment every line!
 - Users should be able to know how everything works just by reading comments
@@ -96,7 +100,7 @@ const describePerson = (name, age)=>{
 }
 ```
 
-### Describe some common programming principles
+## Use Common Programming Principles
 
 This has some great principles.
 
@@ -117,12 +121,12 @@ Most important:
     - Keep things compartmentalised
     - One chunk of functionality should do only its job and not have to know about or do anything else
 
-### Describe how to read errors
+## Describe How to Read Errors
 
 - In general, look at the line number specified and any variables mentioned
 - Look above the line number mentioned too for syntax errors
 
-### Using the Javascript Debugger in Node
+## Use the Javascript Debugger in Node
 
 A debugger allows you to stop execution of your program to examine variables at any point using the `debugger` keyword
 
@@ -138,7 +142,7 @@ console.log(a);
     - Type `repl` to examine variables
 
 
-### Using the Javascript Debugger in the Browser
+## Use the Javascript Debugger in the Browser
 
 1. Right click on page and choose Inspect
 1. Click on sources (you may need to refresh the page to have files show up)
@@ -147,9 +151,9 @@ console.log(a);
 
 ![browser debugger](https://i.imgur.com/C0F2tTB.png)
 
-### Coerce data types
+## Coerce Data Types
 
-#### Equality
+### Equality
 
 Don't use `==`.  Use `===`
 
@@ -174,7 +178,7 @@ In general, you can convert between data types like so:
 - `.toString()` can be appended to pretty much whatever to turn it into a string
 - `isNaN()` will tell you if you have a value that is NaN (e.g. 0/0 and other weird math)
 
-#### Combining values
+### Combining values
 
 When using `+`, always make sure you know what your data types are
 
