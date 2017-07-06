@@ -69,6 +69,23 @@ const game = {
 2.  edit the start method to decrease the value of `time` every second by the value of 1.
 3.  add a conditional inside of the `setInterval` that checks to see if the value has reached 0, if it has `console.log` the `"gameover"`.  Then clear the interval.  Hint: "look up how do I stop an interval or 'clear!' an interval".
 
+## activity
+
+1. Create a player object 
+2. Add properties of score, name, and lives.
+3. Make the `score` a value of ten.
+4. use prompt to get the users name in the `name` property.
+5. set the `lives` property equal to 3.
+6. Add a method that increases the persons score.
+7. Add a method that will either decrease or increase the `health` depending on an argument you pass that method.
+8. Access all the properties using dot notation, and bracket notation.  
+
+
+### Amazon model
+
+1. Lets model an object after a amazon clothing page.
+
+
 
 
 
