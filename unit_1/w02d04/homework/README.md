@@ -14,6 +14,8 @@ Prerequisites: JavaScript <br>
 ---
 # Homework
 
+Before starting this homework, please read this set of [Tips and Tricks](../instructor_notes/TIPS.md)
+
 ## Combine objects, arrays, and functions
 
 **COMPLETE ANY 3**
@@ -362,7 +364,7 @@ The commit message should read: <br>
 <hr>
 
 # CSS Videos
- 
+
 #### Advanced Selectors
 
 1. Watch [this video](https://www.youtube.com/watch?v=Zudl-fCDSdM&index=14&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) about family selectors.

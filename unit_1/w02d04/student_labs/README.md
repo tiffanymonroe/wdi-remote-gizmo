@@ -152,7 +152,7 @@ Run the inner function:
 ```javascript
 const matt = {
     blink(){
-        return foo(){
+        return ()=>{
             console.log('hi')
         }
     }
@@ -324,3 +324,7 @@ const foo = {
 
 bar.someMethod; //fix this line
 ```
+
+## Hungry for More?
+
+Read the [Tips and Tricks Notes](../instructor_notes/TIPS.md) and ask the instructors any questions that come to mind
