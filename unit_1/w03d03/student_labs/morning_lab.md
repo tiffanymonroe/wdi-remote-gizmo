@@ -1,3 +1,14 @@
+![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
+# WDI-GIZMO
+
+---
+Title: 'Vanilla' DOM commands<br>
+Type: Lab <br>
+Duration: 45 - 60 mins<br>
+Creator: Thom Page <br>
+Topics: 'Vanilla' DOM intro<br>
+
 ## JS DOM commands
 
 You are not expected to remember these commands. This is an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
