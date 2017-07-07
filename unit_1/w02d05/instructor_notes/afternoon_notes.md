@@ -58,10 +58,10 @@ This higher-order function is like a `for loop`. The difference from a `for loop
 &#x1F535; **Code Along**
 **For Loop**
 ```
-var numbers = [1, 2, 3, 4];
-var newNumbers = [];
+const numbers = [1, 2, 3, 4];
+const newNumbers = [];
 
-for(var i = 0; i < numbers.length; i++) {
+for(let i = 0; i < numbers.length; i++) {
     newNumbers[i] = numbers[i] * 2;
 }
 
@@ -74,7 +74,7 @@ You can use `map` and specify what to do to your array:
 ```
 const numbers = [1, 2, 3, 4];
 
-const newNumbers = numbers.map(function(number){
+const newNumbers = numbers.map((number) => {
     return number * 2;
 });
 
@@ -86,7 +86,7 @@ console.log("The doubled numbers are", newNumbers); // [2, 4, 6, 8]
 ```
 const numbers = [1, 2, 3, 4];
 
-const newNumbers = numbers.map(function(number){
+const newNumbers = numbers.map((number) =>{
     return number * 2;
 }).map(function(number){
     return number + 1;
@@ -112,7 +112,7 @@ Every number is now doubled and has 1 added to it.
 ```
 const numbers = [1, 2, 3, 4];
 
-const oddNumbers = numbers.filter(function(number){
+const oddNumbers = numbers.filter((number) => {
     return (number % 2 !== 0);
 });
 
@@ -145,7 +145,7 @@ console.log("The doubled numbers are", newNumbers); // [2, 6]
 ```
 var numbers = [1, 2, 3, 4];
 
-var newNumbers = numbers.filter(function(number){
+var newNumbers = numbers.filter((number) => {
     return (number % 2 !== 0);
 }).map(function(number){
     return number * 2;
@@ -198,7 +198,7 @@ Or you can set your array as a variable and call reduce on the variable:
 ```
 nums = [0, 1, 2, 3];
 
-var sum = nums.reduce(function(a, b) {
+var sum = nums.reduce((a, b) => {
   return a + b;
 }, 0);
 // sum is 6
@@ -262,7 +262,7 @@ It works like this:
 &#x1F535; **Code Along**
 
 ```javascript
-const flattened = [[0, 1], [2, 3], [4, 5]].reduce(function(a, b) {
+const flattened = [[0, 1], [2, 3], [4, 5]].reduce((a, b) => {
   return a.concat(b);
 }, []);
 // flattened is [0, 1, 2, 3, 4, 5]
@@ -294,7 +294,7 @@ console.log("The total number is", totalNumber); // 20
 ```
 var numbers = [1, 2, 3, 4];
 
-var totalNumber = numbers.map(function(number){
+var totalNumber = numbers.map((number) => {
     return number * 2;
 }).reduce(function(total, number){
     return total + number;
