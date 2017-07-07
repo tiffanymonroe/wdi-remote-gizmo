@@ -102,4 +102,20 @@
 
 //semantic naming
 
-const evenNumbers = [2, 4, 6, 8, 10];
+// const evenNumbers = [2, 4, 6, 8, 10];
+
+//======================================================
+
+//function definition placement
+
+
+const bar = ()=>{
+    console.log('bar here');
+}
+
+const foo = ()=>{
+    console.log('foo here');
+}
+
+foo(bar);
+bar(foo);
