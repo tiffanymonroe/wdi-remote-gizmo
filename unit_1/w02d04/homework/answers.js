@@ -73,12 +73,27 @@
 
 //callback
 
-const funFunction = ()=>{
-  console.log("I'm a fun function!");
+// const funFunction = ()=>{
+//   console.log("I'm a fun function!");
+// }
+//
+// const callBack = (parameter)=>{
+//   console.log("I'm going to callback to funFunction. Oh, yeah!");
+// }
+//
+// callBack(funFunction);
+
+//======================================================
+
+//indentation
+
+if(true){
+  const a = 2 + 2;
+    console.log(a);
 }
 
-const callBack = (parameter)=>{
-  console.log("I'm going to callback to funFunction. Oh, yeah!");
+if(true){
+  if(false){
+    console.log('hi');
+  }
 }
-
-callBack(funFunction);
