@@ -26,7 +26,7 @@ console.log(foo.someObject.someProperty);
 
 ```javascript
 const foo = {
-    someMethod: function(){
+    someMethod: (){
         console.log('oh hai');
     }
 };
@@ -60,7 +60,7 @@ console.log(foo[1][2]);
 const foo = [
     1,
     "hi",
-    function(){
+    ()=>{
         console.log('fun');
     }
 ];
@@ -167,7 +167,7 @@ foo().someMethod(); //logs 'oh hai!'
 
 ```javascript
 const foo = () => {
-    return function(){
+    return ()=>{
         console.log('whaaaa?');
     }
 };
@@ -180,7 +180,7 @@ foo()(); //logs 'whaaaa?'
 
 ```javascript
 const foo = {
-    someMethod: = () => {
+    someMethod(){
         return {
             someProperty: 'some value'
         }
@@ -194,7 +194,7 @@ console.log(foo.someMethod().someProperty);
 
 ```javascript
 const foo = {
-    someMethod: = () => {
+    someMethod(){
         return {
             someArray: ['peach', 'apple', 'pear']
         }
@@ -208,7 +208,7 @@ console.log(foo.someMethod().someArray[2]);
 
 ```javascript
 const foo = {
-    someMethod: = () => {
+    someMethod(){
         return {
             someObject: {
                 someProperty: 'some value'
@@ -224,9 +224,9 @@ console.log(foo.someMethod().someObject.someProperty);
 
 ```javascript
 const foo = {
-    someMethod: = () => {
+    someMethod(){
         return {
-            someMethod: function(){
+            someMethod(){
                 console.log('both methods can have the same name!');
             }
         }
@@ -240,8 +240,8 @@ foo.someMethod().someMethod(); //logs 'both methods can have the same name!'
 
 ```javascript
 const foo = {
-    someMethod: function(){
-        return function(){
+    someMethod(){
+        return ()=>{
             console.log('hi')
         }
     }
@@ -255,7 +255,7 @@ foo.someMethod()();//logs hi
 const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
             someProperty: 'some value'
         }
@@ -271,7 +271,7 @@ console.log(foo[2]().someProperty);
 const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
             someArray: ['cat', 'dog', 'baboon']
         }
@@ -287,7 +287,7 @@ console.log(foo[2]().someArray[2]);
 const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
             someObject: {
                 someProperty: 'some value'
@@ -305,9 +305,9 @@ console.log(foo[2]().someObject.someProperty);
 const foo = [
     1,
     'apple',
-    function(){
+    ()=>{
         return {
-            someMethod: function(){
+            someMethod(){
                 console.log('fun');
             }
         }
@@ -323,8 +323,8 @@ foo[2]().someMethod(); //logs fun
 const foo = [
     1,
     'apple',
-    function(){
-        return function(){
+    ()=>{
+        return ()=>{
             console.log('yes!');
         }
     }
@@ -338,27 +338,27 @@ foo[2]()(); //logs yes!
 1. Define two functions and set them to variables
 
 ```javascript
-const foo = function(){
+const foo = () => {
 }
-const bar = function(){
+const bar = () => {
 }
 ```
 
 1. The second function takes a parameter
 
 ```javascript
-const foo = function(){
+const foo = () => {
 }
-const bar = function(param1){
+const bar = (param1) => {
 }
 ```
 
 1. Call the second function, passing in the variable that references the first function as the parameter
 
 ```javascript
-const foo = function(){
+const foo = () => {
 }
-const bar = function(param1){
+const bar = (param1) => {
 }
 bar(foo);
 ```
@@ -366,9 +366,9 @@ bar(foo);
 1. In the definition of the second function, invoke (call) the parameter that is being passed into it.  Remember, this parameter is a function
 
 ```javascript
-const foo = function(){
+const foo = () => {
 }
-const bar = function(param1){
+const bar = (param1) => {
     param1();
 }
 bar(foo);
@@ -398,10 +398,10 @@ const arrayOfEvenNums = [2, 4, 6, 8, 10];
 ## Function definition placement
 
 ```javascript
-const foo = function(){
+const foo = () => {
     console.log('foo here');
 }
-const bar = function(){
+const bar = () => {
     console.log('bar here');
 }
 bar();
@@ -415,7 +415,7 @@ foo();
 //firstNum: int
 //secondNum: int
 //returns: sum of two numbers (int)
-const addTwoNums = function(firstNum, secondNum){ //set the var to a function
+const addTwoNums = (firstNum, secondNum) => { //set the var to a function
     let finalValue = firstNum + secondNum; //add the two nums together
     return finalValue; // return the sum of the two nums
 }
