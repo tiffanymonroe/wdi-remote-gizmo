@@ -87,19 +87,13 @@
 
 //indentation
 
-// if(true){
-//   const a = 2 + 2;
-//     console.log(a);
-// }
-//
-// if(true){
-//   if(false){
-//     console.log('hi');
-//   }
-// }
+if(true){
+  const a = 2 + 2;
+    console.log(a);
+}
 
-//======================================================
-
-//semantic nameing
-
-const evenNumbers = [2, 4, 6, 8, 10];
+if(true){
+  if(false){
+    console.log('hi');
+  }
+}
