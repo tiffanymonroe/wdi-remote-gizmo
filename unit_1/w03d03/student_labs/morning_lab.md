@@ -38,7 +38,9 @@ You are not expected to remember these commands. This is an exercise to get you 
 
 ## Find / retrieve an element
 
-Use `document.querySelector()` to find an element in the DOM. Use `document.querySelectorAll()` to find a collection of elements in the DOM.
+Use `document.querySelector()` to find an element in the DOM.
+
+ Use `document.querySelectorAll()` to find a collection of elements in the DOM.
 
 **querySelector and querySelectorAll commands:**
 
@@ -82,21 +84,30 @@ And **not this** (a single element)
 
 We can assign the return value of `document.querySelector()` to a variable.
 
+EXAMPLE:
+
 ```javascript
-var foundDiv = document.querySelector('div');
+const foundDiv = document.querySelector('div');
 ```
 
-- The return value of querySelector, and therefore the variable `foundDiv` is itself an object which has properties
-- We can change the content of a DOM element (and therefore the HTML in the web page) by altering the .innerHTML property
+- The return value of querySelector, and therefore the variable `foundDiv` is itself an object which has properties.
+- We can change the content of a DOM element (and therefore the HTML in the web page) by altering the .innerHTML property of that object.
 
 ```javascript
-var foundDiv = document.querySelector('div');
+const foundDiv = document.querySelector('div');
+
 foundDiv.innerHTML = 'awesome';
 ```
 
-&#x1F535; Get the first `p` element from the page using querySelector and save it to a variable.
+> => will change the div text to read 'awesome'.
 
-&#x1F535; Change the innerText of that element to "I have modified this"
+**PROMPTS**
+
+&#x1F535; Get the first `p` element from the page using querySelector and save it to a variable `firstP`.
+
+&#x1F535; Change the innerText of that element to 'Jamboree sandwich at the Jambo-ree'
+
+![](https://i.imgur.com/kqej9qt.png)
 
 <br>
 
