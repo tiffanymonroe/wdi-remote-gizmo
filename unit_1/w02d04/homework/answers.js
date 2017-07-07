@@ -124,10 +124,49 @@
 
 //commenting code
 
-const addTwoNums = (firstNum, secondNum)=>{
-  //function named addTwoNums has two parameters: the first number and the second number
-    const finalValue = firstNum + secondNum;
-    //this function, named finalValue, will add the arguments that user(?) inserts.
-    return finalValue;
-    //returns the sum of the two numbers
-}
+// const addTwoNums = (firstNum, secondNum)=>{
+//   //function named addTwoNums has two parameters: the first number and the second number
+//     const finalValue = firstNum + secondNum;
+//     //this function, named finalValue, will add the arguments that user(?) inserts.
+//     return finalValue;
+//     //returns the sum of the two numbers
+// }
+
+
+//======================================================
+
+//error reading
+
+// foo();
+//
+// const foo ()=>{
+//     console.log('hi');
+//
+// }
+
+//error message:
+// SyntaxError: Missing initializer in const declaration
+//
+// foo is being called before it's been declared.
+
+//======================================================
+
+//debugger
+
+// const a = 2 + 2;
+// debugger
+// console.log(a);
+// debugger
+// a *= 2;
+// debugger
+// a--;
+
+//
+
+// const b = '5';
+//
+// if(b === 5){ //will be false
+//     console.log('this line should execute');
+// }
+
+//running out of time! will work on debugging.
