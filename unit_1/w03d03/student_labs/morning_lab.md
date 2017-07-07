@@ -222,15 +222,17 @@ document.body.appendChild(someP);
 
 ## Create an element and give it an id
 
+EXAMPLE
+
 ```
-var newDiv = document.createElement('div');
+const newDiv = document.createElement('div');
 
 newDiv.id = "party-time-excellent"
 
 document.body.appendChild(newDiv);
 ```
 
-&#x1F535; Create an element, give it an id, and append it to the body
+&#x1F535; Create a `section` element, give it an id of `butterfly`, and append it to the body.
 
 <br>
 
