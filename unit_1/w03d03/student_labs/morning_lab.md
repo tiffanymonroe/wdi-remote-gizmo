@@ -121,15 +121,20 @@ Notice that the string is parsed as **strong** element.
 
 ## Create a new element
 
-The `document` object also has a `.createElement()` method which allows us to create an element
+The `document` object also has a `.createElement()` method which allows us to create an element out of thin air.
 
+EXAMPLE
 ```javascript
-var newElement = document.createElement('div');
+const newElement = document.createElement('div');
 ```
 
 - The element has not been added to the DOM yet, though.  It's just floating out in space.
 
-&#x1F535; Create a `div` element and save it to a variable.
+&#x1F535; Create a `div` element and save it to a variable `newDiv`.
+
+console.log the div. It should just look like this:
+
+![](https://i.imgur.com/waFr7qR.png)
 
 <br>
 
@@ -143,7 +148,11 @@ To append straight to the body of the document, you can use:
 document.body.appendChild(someElementVariable)
 ```
 
-&#x1F535; Append your previously created div to the body of the document.
+&#x1F535; Append your previously created div to the body of the document. 
+
+You should see your `<div></div>` in the **elements** tab, located within the body tag:
+
+![](https://i.imgur.com/jQfXFm2.png)
 
 <br>
 
