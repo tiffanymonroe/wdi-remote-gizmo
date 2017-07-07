@@ -128,7 +128,7 @@ const game = {
 4. use prompt to get the users name in the `name` property.
 5. set the `lives` property equal to 3.
 6. Add a method that increases the persons score.
-7. Add a method that will either decrease or increase the `health` depending on an argument you pass that method.
+7. Add a method that will either decrease or increase the `lives` depending on an argument you pass that method.
 8. Access all the properties using dot notation, and bracket notation.  
 
 
