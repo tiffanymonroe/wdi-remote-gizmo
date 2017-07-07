@@ -111,7 +111,7 @@ Make it so the bottom container has the following HTML structure, and displays a
 
 <br>
 
-* change the second square to black
+* change the second square to black using the jQuery `.css()` method on the element.
 
 ![](https://i.imgur.com/nVhgVnr.png)
 
@@ -123,7 +123,9 @@ Make it so the bottom container has the following HTML structure, and displays a
 
 <br>
 
-* swap the positions of the top container and the bottom container
+# BONUS Challenge
+
+* swap the positions of the top container and the bottom container. This is probably simpler to do than you think! When you append an existing element, it is not copied, it is moved.
 
 _Make sure that one is not inside the other in the Elements tab_
 
