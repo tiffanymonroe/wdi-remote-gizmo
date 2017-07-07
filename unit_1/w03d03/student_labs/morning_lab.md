@@ -21,28 +21,60 @@ You are not expected to remember these commands. This is an exercise to get you 
 
 * Open up the `dom_example` folder in your students_examples directory for today.
 
-* Load the index.html file into the browser.
+* Load the index.html file into the browser. You should see a kitten and a bungalow:
 
-* Include your script file as usual, but be mindful of the following:
+![](https://i.imgur.com/XRNN2TE.png)
+
+* Include a 'script' tag to link your JavaScript file in the html. Be mindful of the following:
 
 * The DOM must be loaded before the script can reference any elements that already exist on the page. For now, place the script at the bottom of, and within, the **body** tag.
 
+# ⌘R
+
+⌘R, or Command-R will **reload** your webpage. Try not to click the reload button. Reloading works as long as you have **saved** your files. 
+
+<br>
+<hr>
+
 ## Find / retrieve an element
 
-Use `document.querySelector()` to find an element in the DOM
+Use `document.querySelector()` to find an element in the DOM. Use `document.querySelectorAll()` to find a collection of elements in the DOM.
+
+**querySelector and querySelectorAll commands:**
 
 - e.g. `document.querySelector('div');` will give us the first div that's available to us.
 - starts at the root element (`<html>`) and performs a depth first search
 	- looks at children of current element and their children before moving onto a sibling of the current element
 - `document.querySelector('#someId')` will give the element with an id `someId`. Note the use of the pound sign to query for id.
-- `document.querySelector('.someClass')` will give us an array of elements with the class `someClass`. Note the use of the period to query for class.
+- `document.querySelectorAll('.someClass')` will give us an **array of elements** with the class `someClass`. Note the use of the period to query for class.
 
+**PROMPTS**
 	
-&#x1F535; Get the element with the id of `container` and save it to a variable. Console.log that variable.
+&#x1F535; Get the element with the id of `container` and save it to a variable `container`. Console.log that variable.
 
-&#x1F535; Get the element with the id of `second-img` and save it to a variable. Console.log that variable.
+**Make sure** you get the container element logged in the console:
 
-&#x1F535; Get all of the elements with the class `info` and save them to a variable. Console.log that variable.
+![](https://i.imgur.com/1ocG4tc.png)
+
+&#x1F535; Get the element with the id of `second-img` and save it to a variable `secondImg`. Console.log that variable.
+
+**Make sure** you get the element logged in the console:
+
+![](https://i.imgur.com/8bw69Aj.png)
+
+&#x1F535; Practice checking the HTML: If there is an element with the id of `third-img` that already exists in the HTML, save it to a variable `thirdImg` and console.log it.
+
+If there is no element with the id `third-img`, move on to the next question. 
+
+&#x1F535; Get all of the elements with the class `info` and save them to a variable `infoElements`. Console.log that variable.
+
+**Make sure** you get this (an array):
+
+![](https://i.imgur.com/Ahh8J0C.png)
+
+And **not this** (a single element)
+
+![](https://i.imgur.com/2YLSvzd.png)
 
 <br>
 
