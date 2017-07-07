@@ -29,11 +29,9 @@ Topics: DOM manipulation with jQuery<br>
 
 * Get your css connected via the `link` tag. Put it in the `head`. Change the body background to `azure` to test it. 
 
-* Get the jquery library connected. Get the script tag with the **minified** version copied to your clipboard. `https://code.jquery.com/`
+* Get the jquery library connected. Get the script tag with the **minified** version copied to your clipboard. `https://code.jquery.com/`. Put it in the `head`. But does it go above or below your app.js script tag? The order is crucial.
 
-Put it in the `head`. But does it go above or below your app.js script tag? The order is crucial.
-
-Test if the jquery library is available to your app.js by writing in a `$`.
+Test if the jquery library is available to your `app.js` by writing a `$` into `app.js`.
 
 ![](https://i.imgur.com/5VCwOrN.png)
 
