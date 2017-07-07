@@ -66,7 +66,19 @@
 //     }
 //   }
 // ];
-// 
+//
 // array[2]()();
 
 //======================================================
+
+//callback
+
+const funFunction = ()=>{
+  console.log("I'm a fun function!");
+}
+
+const callBack = (parameter)=>{
+  console.log("I'm going to callback to funFunction. Oh, yeah!");
+}
+
+callBack(funFunction);
