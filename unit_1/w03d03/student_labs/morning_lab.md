@@ -31,7 +31,7 @@ You are not expected to remember these commands. This is an exercise to get you 
 
 # ⌘R
 
-⌘R, or Command-R will **reload** your webpage if your OS has focus on the browser. Try not to click the reload button on the browser. Reloading works as long as you have **saved** your files. 
+⌘R, or Command-R will **reload** your webpage after you have made changes to your html, css, or js files (if your OS has focus on the browser). Try not to click the reload button on the browser. Reloading works as long as you have **saved** your files. 
 
 <br>
 <hr>
