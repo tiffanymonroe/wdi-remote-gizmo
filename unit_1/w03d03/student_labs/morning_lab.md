@@ -109,6 +109,14 @@ foundDiv.innerHTML = 'awesome';
 
 ![](https://i.imgur.com/kqej9qt.png)
 
+&#x1F535;  Make it so the first paragraph's text is parsed as HTML so that you can use tags within it. Use `innerHTML` instead of `innerText`.
+
+`.innerHTML = '<strong>Put your hands where I can see \'em, so they look like 12pm</strong>'`
+
+Notice that the string is parsed as **strong** element.
+
+![](https://i.imgur.com/GztpOUX.png)
+
 <br>
 
 ## Create a new element
