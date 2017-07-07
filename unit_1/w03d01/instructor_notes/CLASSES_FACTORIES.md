@@ -1,4 +1,4 @@
-# JavaScript - Constructor Functions, and Factories
+# JavaScript - Classes and Factories
 
 ## Lesson Objectives
 
