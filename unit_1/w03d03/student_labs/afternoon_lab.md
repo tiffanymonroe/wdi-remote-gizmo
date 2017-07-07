@@ -117,7 +117,7 @@ Make it so the bottom container has the following HTML structure, and displays a
 
 <br>
 
-* change the third square to orange, and change the title to reflect the colors:
+* change the third square to orange using the `.css()` method on the element, and change the title to reflect the colors:
 
 ![](https://i.imgur.com/Dx6ZgCn.png)
 
