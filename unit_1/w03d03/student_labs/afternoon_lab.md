@@ -11,18 +11,43 @@ Topics: DOM manipulation with jQuery<br>
 
 ---
 
-### Create a website from scratch using just jQuery
+# Create a website from scratch using just jQuery
 
-* In `student_labs` for today, make a folder `jquery_practice`
+### Setup
 
-* Inside `jquery_practice`, make files for:
+* In **student_labs** for today, make a folder **jquery_practice**
+
+* Inside **jquery_practice**, make files for:
 
 * `index.html`, `app.js`, and `style.css`
 
-* create the boilerplate HTML code `html [TAB]`
+* create the boilerplate HTML code in your`index.html`
 
+* Get your app.js connected via the `script` tag. Put it in the `head`. Make sure a console.log will appear in Chrome console to test. (Open up Chrome js tools with `option ⌘ j`)
 
-# Directions
+* Get your css connected via the `link` tag. Put it in the `head`. Change the body background to `azure` to test it. 
+
+* Get the jquery library connected. Get the script tag with the **minified** version copied to your clipboard. `https://code.jquery.com/`
+
+Put it in the `head`. But does it go above or below your app.js script tag? The order is crucial.
+
+Test if the jquery library is available to your app.js by writing in a `$`.
+
+![](https://i.imgur.com/5VCwOrN.png)
+
+Not connected / unavailable:
+
+![](https://i.imgur.com/iv21joq.png)
+
+There will be no error if jQuery is available to your app.js.
+
+EXAMPLE SETUP:
+
+![](https://i.imgur.com/BqbubXw.png)
+<br>
+<hr>
+
+### Directions
 
 Without writing any more code in your `index.html`, make a website with the following HTML structure using jQuery:
 
