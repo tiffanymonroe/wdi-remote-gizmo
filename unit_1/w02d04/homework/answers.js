@@ -109,13 +109,25 @@
 //function definition placement
 
 
-const bar = ()=>{
-    console.log('bar here');
-}
+// const bar = ()=>{
+//     console.log('bar here');
+// }
+//
+// const foo = ()=>{
+//     console.log('foo here');
+// }
+//
+// foo(bar);
+// bar(foo);
 
-const foo = ()=>{
-    console.log('foo here');
-}
+//======================================================
 
-foo(bar);
-bar(foo);
+//commenting code
+
+const addTwoNums = (firstNum, secondNum)=>{
+  //function named addTwoNums has two parameters: the first number and the second number
+    const finalValue = firstNum + secondNum;
+    //this function, named finalValue, will add the arguments that user(?) inserts.
+    return finalValue;
+    //returns the sum of the two numbers
+}
