@@ -13,7 +13,9 @@ Topics: DOM manipulation with jQuery<br>
 
 # Create a website from scratch using just jQuery
 
-### Setup
+<br>
+
+# Setup
 
 * In **student_labs** for today, make a directory **jquery_practice**
 
@@ -44,6 +46,7 @@ There will be no error if jQuery is available to your app.js.
 EXAMPLE SETUP:
 
 ![](https://i.imgur.com/BqbubXw.png)
+
 <br>
 <hr>
 
@@ -68,20 +71,22 @@ This is jQuery's way of saying: this element does not exist.
 ![](https://i.imgur.com/454zPmf.png)
 
 <br>
+<hr>
 
-### Top container
+# Top container
 
-Inside the top container, create the following structure:
+* Inside the top container, create the following structure:
 
 ![](https://i.imgur.com/zMgb7ex.png)
 
-By either adding classes or by using `.css()`, make it so the three divs are red, white, and blue, with a width and height of 200px each, and inline block.
+* Next, by either adding classes or by using `.css()`, make it so the three divs are red, white, and blue, with a width and height of 200px each, and inline block.
 
 ![](https://i.imgur.com/l4ZQcMo.png)
 
 <br>
+<hr>
 
-### Bottom container
+# Bottom container
 
 Make it so the bottom container has the following HTML structure, and displays any picture (from the internet) of 'Lumpy Space Princess'
 
@@ -91,7 +96,7 @@ Make it so the bottom container has the following HTML structure, and displays a
 
 <br>
 
-## Continuing with jQuery:
+# Continuing with jQuery:
 
 * change the 'trois coulers' title to English
 
