@@ -19,7 +19,7 @@ You are not expected to remember these commands. This is an exercise to get you 
 
 * `git pull upstream master`
 
-* Open up the `dom_example` folder in your students_examples directory for today.
+* Open up the `dom_example` folder in your `student_examples` directory for today.
 
 * Load the index.html file into the browser. You should see a kitten and a bungalow:
 
