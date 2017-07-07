@@ -47,13 +47,29 @@ EXAMPLE SETUP:
 <br>
 <hr>
 
-### Directions
+# Directions
 
-Without writing any more code in your `index.html`, make a website with the following HTML structure using jQuery:
+**Using jQuery**, without writing any more code in your `index.html`, make a website with the following HTML structure as visible in the **Elements** tab:
 
-![](https://i.imgur.com/ik5R07E.png)
+![](https://i.imgur.com/6TkVSlS.png)
 
 Remember the ids.
+
+**Question:** If your script is in the head, and you do not use a window onload, can you get the document body using js? The script will have loaded before the document body.
+
+**Answer:** No. If you console.log `$('body')` You will get this:
+
+![](https://i.imgur.com/EOIj3pK.png)
+
+This is jQuery's way of saying: this element does not exist.
+
+**Solution:** Add in the window onload, and put your js in there. Your js will wait to run until the DOM has loaded.
+
+![](https://i.imgur.com/454zPmf.png)
+
+<br>
+
+### Top container
 
 Inside the top container, create the following structure:
 
@@ -64,6 +80,8 @@ By either adding classes or by using `.css()`, make it so the three divs are red
 ![](https://i.imgur.com/l4ZQcMo.png)
 
 <br>
+
+### Bottom container
 
 Make it so the bottom container has the following HTML structure, and displays any picture (from the internet) of 'Lumpy Space Princess'
 
