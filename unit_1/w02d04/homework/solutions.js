@@ -104,7 +104,7 @@ for(let i = 0; i < foo.length; i++){
 1. Create a function that returns an object.  Log a property of that object (hint: call the function and then call a property on the return value).
 
 ```javascript
-const foo = function(){
+const foo = () => {
     return {
         someProperty: 'hi!'
     }
@@ -116,7 +116,7 @@ console.log(foo().someProperty);
 1. Create a function that returns an array.  Log an element of the array.
 
 ```javascript
-const foo = function(){
+const foo = () => {
     return ['apple','banana','pear'];
 };
 
@@ -126,7 +126,7 @@ console.log(foo()[1]);
 1. Create a function that returns an object that has an array.  Log one of the elements of that array.
 
 ```javascript
-const foo = function(){
+const foo = () => {
     return {
         someArray: ['fun', 'awesome', 'sweet']
     }
@@ -138,7 +138,7 @@ console.log(foo().someArray[1]);
 1. Create a function that returns an object that has an object.  Log one of the properties of the inner object.
 
 ```javascript
-const foo = function(){
+const foo = () => {
     return {
         someObject: {
             someProperty: 'some value'
@@ -152,7 +152,7 @@ console.log(foo().someObject.someProperty);
 1. Create a function that returns an object that has a method.  Call that inner function (method).
 
 ```javascript
-const foo = function(){
+const foo = () => {
     return {
         someMethod: function(){
             console.log('oh hai!');
@@ -166,7 +166,7 @@ foo().someMethod(); //logs 'oh hai!'
 1. Create a function that returns a function.  Call that inner function
 
 ```javascript
-const foo = function(){
+const foo = () => {
     return function(){
         console.log('whaaaa?');
     }
@@ -180,7 +180,7 @@ foo()(); //logs 'whaaaa?'
 
 ```javascript
 const foo = {
-    someMethod: function(){
+    someMethod: = () => {
         return {
             someProperty: 'some value'
         }
@@ -194,7 +194,7 @@ console.log(foo.someMethod().someProperty);
 
 ```javascript
 const foo = {
-    someMethod: function(){
+    someMethod: = () => {
         return {
             someArray: ['peach', 'apple', 'pear']
         }
@@ -208,7 +208,7 @@ console.log(foo.someMethod().someArray[2]);
 
 ```javascript
 const foo = {
-    someMethod: function(){
+    someMethod: = () => {
         return {
             someObject: {
                 someProperty: 'some value'
@@ -224,7 +224,7 @@ console.log(foo.someMethod().someObject.someProperty);
 
 ```javascript
 const foo = {
-    someMethod: function(){
+    someMethod: = () => {
         return {
             someMethod: function(){
                 console.log('both methods can have the same name!');
