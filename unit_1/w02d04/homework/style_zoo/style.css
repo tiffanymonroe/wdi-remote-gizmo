@@ -1,13 +1,20 @@
+li {
+  margin: 10px;
+}
+
 .mammal {
   color: red;
+  border: 5px solid paleVioletRed;
 }
 
 .bird {
   color: blue;
+  border: 5px solid CornflowerBlue;
 }
 
 .fish {
   color: orange;
+  border: 5px solid DarkSlateGray;
 }
 
 #mouse {background: lightgray;}
