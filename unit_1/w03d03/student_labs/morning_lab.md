@@ -162,44 +162,61 @@ Append an element to another element that you have retrieved from the DOM.
 
 Get an element from the page:
 
-```
-var mainElement = querySelector('#someID');
+EXAMPLE
+
+```javascript
+const container = querySelector('#container');
 ```
 
 Create an element and append it to the retrieved element:
 
+```javascript
+const newElem = document.createElement('div');
+
+container.appendChild(newElem);
 ```
-var newElem = document.createElement('div');
 
-mainElement.appendChild(newElem);
-```
+> => The container div now has a child div.
 
-&#x1F535; Get the element with id `first-img`
+**PROMPTS**
 
-&#x1F535;  Create a `p` element and append it to the element with id `first-img` 
+&#x1F535; Get the first `section` element from the page and save it to a variable `firstSection`.
+
+&#x1F535;  Create a `p` element and save it to a variable `someP`.
+
+&#x1F535; Append it to the section. 
+
+**Check in the Elements tab**, the section should have an extra set of `p` tags hanging around.
+
+![](https://i.imgur.com/yj2ZKEG.png)
 
 
 <br>
 
 ## Create an element and give it an attribute before appending it
 
-- We can alter this element using .innerHTML, .src, .classList, etc just like any other element
+- We can give a new element properties like `.innerHTML`, `.src`, `.classList`, etc.
 
-```
-var someP = document.createElement('p');
+```javascript
+const newP = document.createElement('p');
 
-someP.innerText = "I have been to Baffin.";
+newP.innerText = "I have been to Baffin. It was cold.";
 
 document.body.appendChild(someP);
 ```
 
 
-&#x1F535; Create an `img` element and save it to a variable.
+&#x1F535; Create an `img` element and save it to a variable `newImg`.
 
-&#x1F535; Give the `img` element a `src` of some image you find on the internet.
+&#x1F535; Give the `img` element a `src` of some image you find on the internet. `.src` is a property like `.innerText`, therefore, you would give it a value with the assignment operator `=`.
 
 &#x1F535; Append the `img` to the document body.
 
+**Make sure** you see the image appear at the bottom of your webpage.
+
+**Check in elements** and see that your `.src` property has translated into an html `src` attribute:
+
+![](https://i.imgur.com/e4QIXVN.png)_
 
 <br>
 
@@ -222,12 +239,17 @@ document.body.appendChild(newDiv);
 
 We can see the different classes on an element with the `.classList` property
 
+EXAMPLE
+
 ```javascript
-var foundDiv = document.querySelector('div');
-var divClasses = foundDiv.classList;
+const foundDiv = document.querySelector('div');
+
+const divClasses = foundDiv.classList;
 ```
 
-&#x1F535; Get the first `section` element, then get the list of classes given to the first `section` element.
+&#x1F535; You should already have the first `section` element. Get the list of classes given to the first `section` element (there is only one class in this particular class list).
+
+![](https://i.imgur.com/Kx18BZi.png)
 
 <br>
 
@@ -235,12 +257,18 @@ var divClasses = foundDiv.classList;
 
 We can add classes to an element using the `.add()` method of the classList property of an element
 
+EXAMPLE
+
 ```javascript
-var foundDiv = document.querySelector('div');
+const foundDiv = document.querySelector('div');
+
 foundDiv.classList.add('awesome-class');
 ```
 
-&#x1F535; Add the class `wdi-remote-hopper` to the first section element.
+&#x1F535; Add the class `wdi-remote-gizmo` to the first section element.
+
+![](https://i.imgur.com/dAvSaNE.png)
+
 
 <br>
 
@@ -250,83 +278,34 @@ The .classList property of an element is not a simple array, though.  It's actua
 
 We can use the `.contains()` method of the classList property of an element to see if that element has a class added to it
 
+EXAMPLE
+
 ```javascript
-var foundDiv = document.querySelector('div');
-var divClasses = foundDiv.classList;
+const foundDiv = document.querySelector('div');
+const divClasses = foundDiv.classList;
 divClasses.contains('awesome-class');
 ```
 
-&#x1F535; Check if the first section tag has the class `wdi-remote-hopper`.
+&#x1F535; Check if the first section tag has the class `wdi-remote-gizmo`.
+
+![](https://i.imgur.com/sZOJz1d.png)
 
 <br>
 
 ## Remove a class from an element
 
-To remove a class, if it exists, use the `.remove()` method of the classList property of an element
+To remove a class, if it exists, use the `.remove()` method of the `classList` property of an element.
+
+EXAMPLE
 
 ```javascript
-var foundDiv = document.querySelector('div');
+const foundDiv = document.querySelector('div');
 foundDiv.classList.remove('awesome-class');
 ```
 
-&#x1F535; Remove the class `wdi-remote-hopper` from the first section element.
+&#x1F535; Remove the class `wdi-remote-gizmo` from the first section element.
+
+![](https://i.imgur.com/qkYVLhc.png)
 
 <br>
-
-## Remove a child of an element
-
-To remove a DOM element, first find it, find its parent, and then call `.removeChild()` on the parent, passing in the child that needs to be removed
-
-```javascript
-var parent = document.querySelector('section');
-
-var child = document.querySelector('section div');
-parent.removeChild(child);
-```
-
-&#x1F535; Remove the `p` element from the first section element.
-
-<br>
-
-## Perform querySelector on a DOM node
-
-- Each DOM node has a `.querySelector()` property on it
-- You can perform a search just within a given DOM node
-- This can be helpful later on in situations where you're programmatically looping through elements and want to find something within a current element without having to know the name of it
-
-```javascript
-var parent = document.querySelector('section');
-var child = parent.querySelector('div'); //search just within the section tag
-```
-
-&#x1F535; Retrieve the img that belongs to the first section element.
-
-<br>
-
-
-## Find multiple elements in the DOM
-
-- Up until now, we've only been finding one element with querySelector.
-- We can find multiple results using `document.querySelectorAll()`
-	- this essentially returns an array
-- We can perform bulk actions by looping through the results of querySelectorAll
-
-```javascript
-var allDivs = document.querySelectorAll('div');
-
-for(var i = 0; i < allDivs.length; i++){
-	allDivs[i].setAttribute('foo', 'bar');//do anything to the current element
-}
-```
-
-&#x1F535; Retrieve all sections from the document.
-
-&#x1F535; Loop over the sections and give each an innerText of "This text has taken over"
-
-<br>
-
-
-
-
-
 
