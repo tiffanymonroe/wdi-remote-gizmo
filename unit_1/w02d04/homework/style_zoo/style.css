@@ -4,20 +4,24 @@ li {
 
 .mammal {
   color: red;
+  font-weight: bold;
   border: 5px solid paleVioletRed;
 }
 
 .bird {
   color: blue;
   border: 5px solid CornflowerBlue;
+  font-style: italic;
 }
 
 .fish {
   color: orange;
   border: 5px solid DarkSlateGray;
+  text-decoration: underline;
 }
 
-#mouse {background: lightgray;}
+#mouse {background: lightgray;
+text-decoration: line-through;}
 
 #canary {background: orangeRed;}
 
