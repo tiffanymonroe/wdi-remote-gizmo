@@ -13,7 +13,7 @@ Topics: 'Vanilla' DOM intro<br>
 
 You are not expected to remember these commands. This is an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
 
-**Check the results of your commands in the Elements tab** (some divs won't have text, etc. but you can see the element appearing in the DOM in the elements tab.)
+**Check the results of your commands in the Elements tab and in the Console** (some divs won't have text, etc. but you can see the element appearing in the DOM in the elements tab.)
 
 ## Setup
 
@@ -31,7 +31,7 @@ You are not expected to remember these commands. This is an exercise to get you 
 
 # ⌘R
 
-⌘R, or Command-R will **reload** your webpage. Try not to click the reload button. Reloading works as long as you have **saved** your files. 
+⌘R, or Command-R will **reload** your webpage if your OS has focus on the browser. Try not to click the reload button on the browser. Reloading works as long as you have **saved** your files. 
 
 <br>
 <hr>
