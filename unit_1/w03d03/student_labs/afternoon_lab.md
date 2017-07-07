@@ -79,9 +79,16 @@ This is jQuery's way of saying: this element does not exist.
 
 ![](https://i.imgur.com/zMgb7ex.png)
 
-* Next, by either adding classes or by using `.css()`, make it so the three divs are red, white, and blue, with a width and height of 200px each, and inline block.
+* Next, by adding/adjusting the `couleur` class in the css file, make it so the three divs are `dimgrey` with a width and height of 200px each, and inline block.
 
-![](https://i.imgur.com/l4ZQcMo.png)
+![](https://i.imgur.com/26L1nQP.png)
+
+
+* Next, by adding more classes, make it so the three divs are red, white, and blue.
+
+![](https://i.imgur.com/jSbUCGQ.png)
+
+Note: colors used in the example are **firebrick**, **ivory**, and **cornflowerblue**.
 
 <br>
 <hr>
