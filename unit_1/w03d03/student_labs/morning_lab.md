@@ -224,7 +224,7 @@ document.body.appendChild(someP);
 
 EXAMPLE
 
-```
+```javascript
 const newDiv = document.createElement('div');
 
 newDiv.id = "party-time-excellent"
