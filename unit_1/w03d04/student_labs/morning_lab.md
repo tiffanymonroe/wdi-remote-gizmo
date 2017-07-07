@@ -44,7 +44,7 @@ Row one will have one triangle, row two will have two triangles ... row twenty w
 
 When it is complete, you can have a result like this:
 
-```
+```javascript
 generatePyramid(16)
 ```
 
@@ -52,7 +52,7 @@ generatePyramid(16)
 
 Triangle CSS:
 
-```
+```css
 .triangle {
   display: inline-block;
 	width: 0;
@@ -65,7 +65,7 @@ Triangle CSS:
 
 You can use `text-align: center` on each row to center the triangles:
 
-```
+```css
 .row {
   text-align: center;
 }

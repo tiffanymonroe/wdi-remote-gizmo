@@ -18,7 +18,6 @@ _After this lesson students will be able to:_
 * Use JavaScript control flow with jQuery commands
 * Append to the DOM using a function
 * Generate elements in a loop
-* Append elements with data from an array
 
 <br>
 <hr>
@@ -45,8 +44,8 @@ We can use JavaScript control flow patterns with jQuery. That means **functions*
 
 Write a function that will add an `h2` with the text "Just getting started" to the body of the page.
 
-```
-  var addH2 = function() {
+```javascript
+  const addH2 = () => {
     $h2 = $('<h2>').text("Just getting started");
     $('body').append($h2);
   }
@@ -62,13 +61,13 @@ Write a function that will add an `h2` with the text "Just getting started" to t
 
 Write a function that will change the existing `h2` to have the text "Getting warmed up"
 
-```
-  var addH2 = function() {
+```javascript
+  const addH2 = () => {
     $h2 = $('<h2>').text("Just getting started");
     $('body').append($h2);
   }
 
-  var changeH2 = function() {
+  const changeH2 = () => {
     $('h2').text("Getting warmed up");
   }
 
@@ -97,7 +96,7 @@ What we are aiming at is this:
 
 ![](https://i.imgur.com/QZjQHT3.png)
 
-Eventually, we would like to invoke a function `generateQuilt()` that will build the quilt on the page. We would like to specify how many squares the quilt has: `generateQuilt(1000)` would build a quilt with 1000 squares.
+Eventually, we would like to invoke a function `generateQuilt()` that will build the quilt on the page. We would like to specify how many squares the quilt has: `generateQuilt(1000)` would build a quilt with 1000 randomly-colored squares.
 
 ### Setup
 
@@ -113,7 +112,7 @@ Create a new file called `quilt.js` and link it to the `index.html`
 * Write a for loop that counts from 1 to 1000
 
 ```javascript
-  for (var i=1; i <= 1000; i++) {
+  for (let i=1; i <= 1000; i++) {
     console.log(i);
   }
 ```
@@ -122,11 +121,11 @@ Create a new file called `quilt.js` and link it to the `index.html`
 
 
 ```javascript
-  var $square = $('<div>').addClass('square');
+  const $square = $('<div>').addClass('square');
   $('body').append($square);
 ```
 
-```
+```javascript
 .square {
   height: 50px;
   width: 50px;
@@ -138,9 +137,9 @@ Create a new file called `quilt.js` and link it to the `index.html`
 * Combine the two and generate many squares, appended to the body each time the loop runs
 
 ```javascript
-  for (var i=1; i <= 1000; i++) {
+  for (let i=1; i <= 1000; i++) {
     console.log(i);
-    var $square = $('<div>').addClass('square');
+    const $square = $('<div>').addClass('square');
     $('body').append($square);
   }
 ```
@@ -157,11 +156,11 @@ I would like to be able to generate these squares with a chosen number of square
 
 We can wrap this process in a function:
 
-```
-var generateSquares = function() {
-  for (var i=1; i <= 1000; i++) {
+```javascript
+const generateSquares = () => {
+  for (let i=1; i <= 1000; i++) {
     console.log(i);
-    var $square = $('<div>').addClass('square');
+    const $square = $('<div>').addClass('square');
     $('body').append($square);
   }
 }
@@ -171,7 +170,7 @@ generateSquares();
 
 Run it multiple times for fun:
 
-```
+```javascript
 generateSquares();
 generateSquares();
 generateSquares();
@@ -184,11 +183,11 @@ generateSquares();
 
 * Provide the function with a parameter and argument, and run the loop that many times:
 
-```
-var generateSquares = function(numberOfSquares) {
-  for (var i=1; i <= numberOfSquares; i++) {
+```javascript
+const generateSquares = (numberOfSquares) => {
+  for (let i=1; i <= numberOfSquares; i++) {
     console.log(i);
-    var $square = $('<div>').addClass('square');
+    const $square = $('<div>').addClass('square');
     $('body').append($square);
   }
 }
@@ -204,7 +203,7 @@ generateSquares(1000);
 
 We can use rgb values for our colors
 
-```
+```javascript
 background-color: rgb(25, 241, 84);
 ```
 
@@ -219,10 +218,10 @@ background-color: rgb(25, 241, 84);
 Let's use it in the loop with `.css()` jquery method:
 
 ```javascript
-var generateSquares = function(numberOfSquares) {
-  for (var i=1; i <= numberOfSquares; i++) {
+const generateSquares = (numberOfSquares) => {
+  for (let i=1; i <= numberOfSquares; i++) {
     console.log(i);
-    var $square = $('<div>').addClass('square');
+    const $square = $('<div>').addClass('square');
     $square.css('background-color', 'rgb(23, 240, 83)';
     $('body').append($square);
   }
@@ -236,21 +235,21 @@ Let's make a function that will return a **string** with **random rgb values**.
 We will generate random values for red, green, and blue, and interpolate them into a return string.
 
 ```javascript
-var randColorRGB = function() {
-	 var red = Math.floor( Math.random() * 256 );
-    var green = Math.floor( Math.random() * 256 );
-    var blue = Math.floor( Math.random() * 256 );
+const randColorRGB = () => {
+	 const red = Math.floor( Math.random() * 256 );
+    const green = Math.floor( Math.random() * 256 );
+    const blue = Math.floor( Math.random() * 256 );
     return "rgb(" + red + "," + green + "," + blue + ")";
 }
 ```
 
 ```javascript
-console.log(randColorRGB());`
+console.log(randColorRGB());
 ```
 
 Now we can use the return value of this function in our `.css()` method:
 
-```
+```javascript
 $square.css('background-color', randColorRGB());
 ```
 
@@ -264,11 +263,11 @@ The quilt is not quite ugly enough. Let's put some numbers in each square.
 
 * Display the number in each square from 1 to 1000 with `$square.text(i)`
 
-```
-var generateSquares = function() {
-  for (var i=1; i <= 1000; i++) {
+```javascript
+const generateSquares = () => {
+  for (let i=1; i <= 1000; i++) {
     console.log(i);
-    var $square = $('<div>').addClass('square');
+    const $square = $('<div>').addClass('square');
  	 $square.css('background-color', randColorRGB());
     $square.text(i);
     $('body').append($square);
@@ -310,6 +309,8 @@ var generateSquares = function() {
 <br>
 <hr>
 
+# EXTRAS 
+
 # Virtual Rolodex
 
 Here is a rolodex with people's names and addresses:
@@ -329,7 +330,7 @@ In `index.html`, comment out the `quilt.js` script and make and link a `rolodex.
 
 * Add the **array of objects**
 
-```
+```javascript
 var data = [
   { name: "Megatron", address: "Cybertron" },
   { name: "Some guy", address: "Some street" },

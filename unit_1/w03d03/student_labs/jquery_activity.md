@@ -5,7 +5,7 @@ Official jQuery docs: `http://api.jquery.com/`
 
 Refer to the jQuery Cheat Sheet
 
-* Comment out your existing jQuery code except for the closure.
+* Comment out your existing jQuery code except for the window onload.
 * Remove the html within the body tags (except your scripts, if you have them there).
 * Make and link a CSS file to your `index.html`
 
@@ -13,7 +13,7 @@ In `index.html`
 
 * Write in two divs, an outer and an inner div. Only the inner div will have an id:
 
-```
+```javascript
 <div>
 	<div id="inner-div"></div>
 </div>

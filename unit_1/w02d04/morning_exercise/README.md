@@ -31,9 +31,9 @@ Prerequisite Videos: <br>
 
 ### Copy the files from your folder
 #### In terminal:
- - navigate to **today's** `morning_exercise` folder `/w02d04/morning_exercise` folder.
+ - navigate to **today's** `student_examples` folder `/w02d04/student_examples` folder.
  - **create a new folder** here to hold your work called `morning_mockup_continued`
- - navigate **inside** this new folder `w02d04/morning_exercise/morning_mockup_continued`
+ - navigate **inside** this new folder `w02d04/student_examples/morning_mockup_continued`
  - from there, copy your files over from yesterday: `cp -r ../../../w02d03/student_examples/morning_mockup .`
  - `ls` to confirm that the files have been copied into your new folder.
 

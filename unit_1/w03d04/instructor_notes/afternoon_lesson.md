@@ -64,14 +64,14 @@ We need:
 
 Make a button in the html:
 
-```
+```javascript
 <button id="btn">Click me<button>
 ```
 
 Grab the button in the JS (DOM element):
 
-```
-var $btn = $('#btn');
+```javascript
+const $btn = $('#btn');
 ```
 <br>
 
@@ -81,7 +81,7 @@ Set an event listener:
 
 Use `.on()` [.on() documentation](http://api.jquery.com/on/)
 
-```
+```javascript
 $btn.on('click');
 ```
 
@@ -95,8 +95,8 @@ The event listener takes a string as an argument. There are just a few strings t
 
 Add a _function_ that runs what we want to have happen. This function is what _handles_ the event and is called an _event handler_:
 
-```
-$btn.on('click', function() {
+```javascript
+$btn.on('click', () => {
 	console.log('button was clicked!!');
 });
 ```
@@ -105,7 +105,7 @@ Notice that we have supplied a function as an argument. The jargon for using a f
 
 pseudo code for an event listener
 
-```
+```javascript
 elem.on(STRING, CALLBACK);
 ```
 
@@ -113,8 +113,8 @@ elem.on(STRING, CALLBACK);
 
 **ADD TEXT TO THE PAGE ON CLICK**
 
-```
-$btn.on('click', function() {
+```javascript
+$btn.on('click', () => {
 
 	$('body').append("It seems as if it has been clicked!");
 
@@ -137,13 +137,13 @@ $btn.on('click', function() {
 
 Create a paragraph inside the click handler:
 
-```
-var $p = ('<p>').text("Here is some text!!!!!");
+```javascript
+const $p = ('<p>').text("Here is some text!!!!!");
 ```
 
 Append the paragraph to the page:
 
-```
+```javascript
 $('body').append($p);
 ```
 
@@ -178,15 +178,15 @@ The _handler_  that we used for our click was _anonymous_. It was a function tha
 
 Here is the pattern we have already seen:
 
-```
+```javascript
 <button id="btn">Click for message</button>
 ```
 
-```
-var $btn = $('#btn');
+```javascript
+const $btn = $('#btn');
 
-$btn.on('click', function() {
-	var $p = $('<p>').text("THE EARTH IS AN OBLATE SPHEROID");
+$btn.on('click', () => {
+	const $p = $('<p>').text("THE EARTH IS AN OBLATE SPHEROID");
 	$('body').append($p);
 });
 ```
@@ -199,16 +199,16 @@ We can abstract the anonymous function out and give it a name:
 
 Separate function, not inside the listener:
 
-```
-var addText = function() {
-	var $p = $('<p>').text("THE EARTH IS AN OBLATE SPHEROID");
+```javascript
+const addText = () => {
+	const $p = $('<p>').text("THE EARTH IS AN OBLATE SPHEROID");
 	$('body').append($p);
 }
 ```
 
 We can then reference it in the event Listener:
 
-```
+```javascript
 $btn.on('click', addText);
 ```
 
@@ -225,7 +225,7 @@ Note that we do not invoke the function with parentheses. We do not want to invo
 
 Here the function is invoked and will run immediately:
 
-```
+```javascript
 $btn.on('click', addText());
 ```
 
@@ -233,11 +233,11 @@ We don't want this! We only want the function to run when the user has clicked o
 
 Complete code:
 
-```
-var $btn = $('#btn');
+```javascript
+const $btn = $('#btn');
 
-var addText = function() {
-	var $p = ('<p>').text("THE EARTH IS AN OBLATE SPHEROID");
+const addText = () => {
+	const $p = ('<p>').text("THE EARTH IS AN OBLATE SPHEROID");
 	$('body').append($p);
 }
 
@@ -247,7 +247,7 @@ $btn.on('click', addText);
 Let's do something fancier, and toggle the background-color of the page using `.toggleClass()`
 
 ```javascript
-var changeClass = function() {
+const changeClass = () => {
   $('body').toggleClass('black');
 }
 
@@ -256,7 +256,7 @@ $('#btn').on('click', changeClass);
 
 CSS
 
-```
+```css
 .black {
   background-color: black;
 }
@@ -298,11 +298,11 @@ Make it so each time click the button, that background-color of the page will to
 <br>
 <hr>
 
-### mouseenter and mouseleave
+### EXTRA: mouseenter and mouseleave
 
 There is a special jQuery method for hover. We can replicate it using `.on()` by making an event for `mouseenter` and a separate event for `mouseleave`
 
-```
+```javascript
   $('#some-div').on('mouseenter', function() {
     $('body').css('background-color', 'red');
   });

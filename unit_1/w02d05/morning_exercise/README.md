@@ -29,19 +29,28 @@ Prerequisite Videos:
 
 1. Navigate inside today's `student_examples` folder `w02d05/student_examples`
 2. Create a folder called `responsive_mockups`
-3. Navigate inside the `responsive_mockups` folder and create two files:
- - `index.html`
- - `style.css`
+3. Navigate inside the `responsive_mockups` folder we need to create *three* folders that each have *two* files:
+   >Folders: `responsive_one`, `responsive_two`, `responsive_three`
+    
+   >Files (for each): `index.html`, `style.css`
+
+Let's do this in **two** lines from inside the `responsive_mockups` directory:
+
+1. Create the folders
+`mkdir responsive_one responsive_two responsive_three`
+
+2. Create the files
+`touch responsive_one/index.html responsive_one/style.css  responsive_two/index.html responsive_two/style.css responsive_three/index.html responsive_three/style.css`
 
 ## Directions
 
 1. **In pairs** create these three mockups.
 
-Note: Each mockup has a full screen view and a mobile view.
+2. Only 1 of your will be writing code today (we'll go over this below), and that person should share the code with their parter in a direct message *as a Snippet in Slack* (or via Github) after the exercise has ended.
+
+Note: Each mockup has a **full screen** view and a **mobile** view.
 
 ![Mockup](https://i.imgur.com/NZ0moP0.png)
-
-2. Only 1 of your will be writing code today (we'll go over this below), and that person should share the code with their parter in a direct message *as a Snippet in Slack* (or via Github) after the exercise has ended.
 
 ## Pair Programming
 You will be pair-programming to solve today's morning exercise. Note that we will be doing this multiple times throughout the cohort, so you will all get a chance to be a driver and an navigator. Embrace the position that you have in the moment.

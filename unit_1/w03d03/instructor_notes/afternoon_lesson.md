@@ -18,11 +18,11 @@ _after this lesson, students will be able to__
 
 ---
 
-# WINDOW ONLOAD\
+# WINDOW ONLOAD
 
 If you include the jQuery window onload in your script file, it will wait until the DOM has loaded before the script runs:
 
-```
+```javascript
 $(function() {
 
 	// code here will execute after the DOM has loaded
@@ -32,9 +32,7 @@ $(function() {
 
 Using this technique, otherwise known as a `window onload`, you can place your scripts in the `head` of your `index.html`
 
-You can either do this or put the script at the bottom, it doesn't matter too much at this stage.
-
-One reason why we might want to do this is to protect the scope.
+You can either do this or put the script at the bottom, it doesn't matter too much at this stage. We want to do this, however, to protect the scope of our jQuery code.
 
 <br>
 
@@ -52,8 +50,8 @@ Additionally, there is a risk of 'mixing datatypes' and coming up with annoying 
 
 Adding a class to a div:
 
-```
-var div = $('<div>');
+```javascript
+const div = $('<div>');
 
 div.classList.add('class');
 
@@ -75,14 +73,14 @@ To make it explicit that your variables refer to jQuery objects, add a `$` in fr
 
 Creating a div:
 
-```
-var $div = $('<div>');
+```javascript
+const $div = $('<div>');
 ```
 
 Grabbing all elements with class of 'square':
 
-```
-var $classOfInfo = $('.info');
+```javascript
+const $classOfInfo = $('.info');
 ```
 
 <br>
@@ -122,20 +120,20 @@ To select all elements of a particular class, use CSS syntax again
 
 In this HTML:
 
-```
+```html
 <div id="myDiv">Hello world!</div>
 ```
 
 Here is a `vanilla` JS command:
 
-```
-var divToManipulate = document.getElementById('myDiv');
+```javascript
+const divToManipulate = document.getElementById('myDiv');
 divToManipulate.innerHTML = "Goodbye world!";
 ```
 
 In jQuery, this is a one-liner:
 
-```
+```javascript
 $('#myDiv').html("Goodbye world!");
 ```
 
@@ -151,9 +149,9 @@ There are two things about the example above that make jQuery easier to use:
 
 If we want to add a new DIV with a P within it, that also has some text within it, our vanilla JavaScript would have to be:
 
-```
-    var myDiv = document.getElementById('container');
-    var newP = document.createElement('p');
+```javascript
+    const myDiv = document.getElementById('container');
+    const newP = document.createElement('p');
 
     newP.innerHTML = "Hello complicated, multi-step world of adding an element to the DOM!";
     myDiv.appendChild(newP);
@@ -161,7 +159,7 @@ If we want to add a new DIV with a P within it, that also has some text within i
 
 And in jQuery, it looks like this:
 
-```
+```javascript
 	$('#container').append("<p>").append("Hello simple insertion using jQuery chaining");
 ```
 
@@ -175,7 +173,7 @@ In this case, `append()` created the `p` for us.
 
 You can do more than select elements and modify content. You can also create or update CSS style attributes in jQuery using the `.css()` method
 
-```
+```javascript
 $("#container").css("color", "red");
 ```
 
@@ -183,7 +181,7 @@ The code above will change the color of all text inside the DIV with id="contain
 
 Or, if we have a bunch of elements that all have the same class (in this example, it's class="info"), we can use the class selector to modify the color of all of them at once:
 
-```
+```javascript
 $(".info").css("color", "blue");
 ```
 
@@ -193,7 +191,7 @@ $(".info").css("color", "blue");
 
 To use `.css()` with more than one line of CSS to add, the syntax is slightly different. We put all of our CSS commands into an object:
 
-```
+```javascript
 $("#container").css({ 'background-color':'cornflowerblue', 'font-size':'30px' });
 ```
 
@@ -204,7 +202,7 @@ However, it's usually better to change the css of an element by adding an existi
 
 An existing class within `style.css`
 
-```
+```javascript
 .hotpink {
   font-size: 90px;
   color: #ff69b4;
@@ -214,7 +212,7 @@ An existing class within `style.css`
 
 Add it with jQuery:
 
-```
+```javascript
   $("#container").addClass('hotpink');
 ```
 
@@ -271,38 +269,38 @@ Let's make a third 'section' like this:
 
 * Make a section and give it a class 'info'
 
-```
-var $section = $('<section>').addClass('info');
+```javascript
+const $section = $('<section>').addClass('info');
 ```
 
 * Make a p and give it some text
 
-```
-var $p = $('<p>').text('Here be some drainage');
+```javascript
+const $p = $('<p>').text('Here be some drainage');
 ```
 
 * Make an img and give it an attribute `src` with the property of the image url
 
-```
-var $img = $('<img>').attr('src', 'http://www.calgary.ca/CSPS/ABS/PublishingImages/2010-1155_00013525_10790.jpg');
+```javascript
+const $img = $('<img>').attr('src', 'http://www.calgary.ca/CSPS/ABS/PublishingImages/2010-1155_00013525_10790.jpg');
 ```
 
 * Append the p and the img to the section
 
-```
+```javascript
 $section.append($p);
 $section.append($img);
 ```
 
 * Append the $section the container
 
-```
+```javascript
 $('#container').append($section);
 ```
 
 * Oops! We forgot the give the img an id:
 
-```
+```javascript
 $img.attr('id', 'third-image');
 ```
 
