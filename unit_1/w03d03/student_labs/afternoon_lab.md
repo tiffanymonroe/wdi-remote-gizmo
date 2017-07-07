@@ -15,11 +15,13 @@ Topics: DOM manipulation with jQuery<br>
 
 ### Setup
 
-* In **student_labs** for today, make a folder **jquery_practice**
+* In **student_labs** for today, make a directory **jquery_practice**
 
 * Inside **jquery_practice**, make files for:
 
-* `index.html`, `app.js`, and `style.css`
+	* `index.html`
+	* `app.js`
+	* `style.css`
 
 * create the boilerplate HTML code in your`index.html`
 
