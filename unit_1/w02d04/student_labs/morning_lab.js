@@ -69,10 +69,24 @@
 // ;
 // console.log(generateShoppingList()[3]);
 
-const createRobot = () => {
-  stats: {
-    weight: "20lbs"
-  }
-};
+// const createRobot = () => {
+//   stats: {
+//     weight: "20lbs"
+//   }
+// };
+//
+// console.log(createRobot().stats.weight);
 
-console.log(createRobot().stats.weight);
+const generateCar = ()=> {
+  return {
+    drive(){
+      console.log('Vroom');
+    }
+  }
+}
+
+console.log(generateCar);
+
+
+
+// BRAIN IS TOO TIRED!!!

@@ -67,14 +67,39 @@
 //   console.log(animal);
 // }
 
-const foo = [
-  ["0,0", "0,1", "0,2"],
-  ["1,0", "1.1", "1,2"],
-  ["2,0", "2,1", "2,2"]
-];
+// const foo = [
+//   ["0,0", "0,1", "0,2"],
+//   ["1,0", "1.1", "1,2"],
+//   ["2,0", "2,1", "2,2"]
+// ];
+//
+// for(row of foo) {
+//   for(column of foo) {
+//     console.log(column);
+//   }
+// }
 
-for(row of foo) {
-  for(column of foo) {
-    console.log(column);
-  }
-}
+// const foo = ()=> {
+//   console.log("I'm the function 'foo'");
+// }
+//
+// const bar = (param1)=> {
+//   console.log(param1);
+// }
+//
+// bar(foo);
+
+// const bar = (param1)=>{
+//   console.log("I'm about to execute a callback");
+//   param1();
+// }
+// bar(()=> {
+//   console.log("I'm the funtion foo");
+// });
+// bar(()=> {
+//   console.log("I'm the function 'awesome'");
+// });
+
+setTimeout(()=>{
+  console.log('hi');
+}, 2000;)

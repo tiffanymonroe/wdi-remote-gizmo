@@ -127,14 +127,20 @@ const bondFilms = [
   //
   // console.log(oddBonds);
 
-  // const bondMoney = [];
-  //   for (let i=0; i < bondFilms.length; i++) {
-  //     bondMoney.push(bondFilms[i]["gross"]);
-  //     }
-  //
-  //
-  // const totalBond = bondMoney.replace();
-  //
-  // console.log(totalBond);
+  let cumulativeGross = 0;
 
-  //halp! I can't get them from strings to numbers, so that I can add them :/
+    for (let i=0; i < bondFilms.length; i++) {
+      bondFilms[i].gross = bondFilms[i].gross.replace("$", "");
+      bondFilms[i].gross =
+      bondFilms[i].gross.replace(/,/g, "");
+      bondFilms[i].gross = parseInt(bondFilms[i].gross);
+      cumulativeGross += bondFilms[i].gross;
+}
+
+  console.log(cumulativeGross);
+//First, replace() to remove $ and the ,
+//then parseInt () to change the strings into integers
+
+
+
+  // halp! I can't get them from strings to numbers, so that I can add them :/

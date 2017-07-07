@@ -1,7 +1,7 @@
 body {
-  background: #F7EEE5;
+  background: #C2CFD7;
   font-family: 'Montserrat', sans-serif;
-  text-transform: uppercase;
+  font-size: 16px;
 }
 
 #page {
@@ -10,6 +10,9 @@ body {
   box-shadow: 3px 3px 3px 3px #A7A195;
 }
 
+h1, h2, h3 {
+  text-transform: uppercase;
+}
 
 .intro {
   background-image: url('../img/close_white.jpg');
@@ -21,26 +24,102 @@ body {
 }
 
 header {
-  padding: 5%;
-  height: 100px;
+  height: 200px;
   text-align: center;
 }
 
+header h1 {
+  padding-top: 10%;
+}
 
 nav {
   display: inline-block;
-  margin: 10px;
-  padding: 10px;
+  font-size: 16px;
 }
 
+
+header ul li {
+  font-size: 14px;
+  text-transform: uppercase;
+  display: inline-block;
+  padding-right: 40px;
+}
 .intro h2 {
-  width: 300px;
+  width: 15em;
+  border: 2px solid black;
+  position: relative;
   margin: auto;
-  border: 3px solid black;
+}
+
+.images {
+  height: 800px;
+  text-align: center;
+  text-transform: uppercase;
+  padding: 5%;
+  border: 1px dotted red;
+}
+
+.images p {
+  font-size: 14px;
+  font-weight: lighter;
+}
+
+a, a:visited {
+  text-decoration: none;
+  color: black;
+}
+
+a:hover {
+  font-weight: bolder;
 }
 
 #img-block {
   margin: auto;
   position: relative;
   border: 1px dashed purple;
+}
+
+.our-story {
+  background-color: #F7EEE5;
+  padding: 10%;
+}
+
+.our-story h2 {
+  text-align: center;
+
+}
+
+.our-story h3 {
+  font-size: 14px;
+  font-weight: lighter;
+  text-align: center;
+}
+
+.our-story p {
+  font-size: 12px;
+  padding: 10px;
+}
+
+.blog {
+  height: 200px;
+  background-image: url('../img/close_white.jpg');
+  background-size: cover;
+  }
+
+  .blog h2 {
+  text-align: center;
+  vertical-align: middle;
+  margin: auto;
+  top: 40%;
+  position: relative;
+  width: 10em;
+  border: 2px solid black;
+}
+
+.contact, .about{
+  padding: 10%;
+}
+
+#about-us {
+  font-size: 12px;
 }
