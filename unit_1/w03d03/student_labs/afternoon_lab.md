@@ -79,9 +79,16 @@ This is jQuery's way of saying: this element does not exist.
 
 ![](https://i.imgur.com/zMgb7ex.png)
 
-* Next, by either adding classes or by using `.css()`, make it so the three divs are red, white, and blue, with a width and height of 200px each, and inline block.
+* Next, by adding/adjusting the `couleur` class in the css file, make it so the three divs are `dimgrey` with a width and height of 200px each, and inline block.
 
-![](https://i.imgur.com/l4ZQcMo.png)
+![](https://i.imgur.com/26L1nQP.png)
+
+
+* Next, by adding more classes, make it so the three divs are red, white, and blue.
+
+![](https://i.imgur.com/jSbUCGQ.png)
+
+Note: colors used in the example are **firebrick**, **ivory**, and **cornflowerblue**.
 
 <br>
 <hr>
@@ -104,19 +111,21 @@ Make it so the bottom container has the following HTML structure, and displays a
 
 <br>
 
-* change the second square to black
+* change the second square to black using the jQuery `.css()` method on the element.
 
 ![](https://i.imgur.com/nVhgVnr.png)
 
 <br>
 
-* change the third square to orange, and change the title to reflect the colors:
+* change the third square to orange using the `.css()` method on the element, and change the title to reflect the colors:
 
 ![](https://i.imgur.com/Dx6ZgCn.png)
 
 <br>
 
-* swap the positions of the top container and the bottom container
+# BONUS Challenge
+
+* swap the positions of the top container and the bottom container. This is probably simpler to do than you think! When you append an existing element, it is not copied, it is moved.
 
 _Make sure that one is not inside the other in the Elements tab_
 
