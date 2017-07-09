@@ -10,9 +10,13 @@ const tamagotchi = {
     console.log("Waaaaaa!!!");
   },
   puke: ()=> {
-    console.log("Bleeeeh :O~~)");
+    console.log("Bleeeeh :On )");
+  },
+  yawn: ()=> {
+    console.log("Yaaaawwwwn!");
   }
 }
 
 tamagotchi.cry();
 tamagotchi.puke();
+tamagotchi.yawn();
