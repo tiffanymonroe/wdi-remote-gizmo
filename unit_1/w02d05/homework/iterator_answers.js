@@ -27,31 +27,31 @@
 
 // Chaining
 
-const sheepShearers = [
-    {
-        name: "Tim",
-        age: 20,
-        sheepCount: 18
-    },
-    {
-        name: "C3PO",
-        age: 200,
-        sheepCount: 320
-    },
-    {
-        name: "Cousin It",
-        age: Infinity,
-        sheepCount: 2900
-    }
-];
-
-const totalSheers = sheepShearers.map((array)=>{
-    let sheers = array.sheepCount;
-    //will log sheers correctly, but I can't get .reduce() to run.
-  }).reduce((total, sheers){
-    return total + sheers;
-    console.log(total + sheers);
-  }, 0);
-
-
-console.log(totalSheers);
+// const sheepShearers = [
+//     {
+//         name: "Tim",
+//         age: 20,
+//         sheepCount: 18
+//     },
+//     {
+//         name: "C3PO",
+//         age: 200,
+//         sheepCount: 320
+//     },
+//     {
+//         name: "Cousin It",
+//         age: Infinity,
+//         sheepCount: 2900
+//     }
+// ];
+//
+// const totalSheers = sheepShearers.map((array)=>{
+//     let sheers = array.sheepCount;
+//     //will log sheers correctly, but I can't get .reduce() to run.
+//   }).reduce((total, sheers){
+//     return total + sheers;
+//     console.log(total + sheers);
+//   }, 0);
+//
+//
+// console.log(totalSheers);
