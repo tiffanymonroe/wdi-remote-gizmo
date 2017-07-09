@@ -58,25 +58,43 @@
 
 //Collecting Strings
 
-const stringCollector = {
-  collection: [],
-  collect: (string)=>{
-      let reverseString = string.split("").reverse().join("");
-      stringCollector.collection.push(reverseString);
-      console.log(reverseString);
-    },
-  admireCollection: ()=>{
-    for (i=0; i < stringCollector.collection.length; i++) {
-      console.log(stringCollector.collection[i]);
+// const stringCollector = {
+//   collection: [],
+//   collect: (string)=>{
+//       let reverseString = string.split("").reverse().join("");
+//       stringCollector.collection.push(reverseString);
+//       console.log(reverseString);
+//     },
+//   admireCollection: ()=>{
+//     for (i=0; i < stringCollector.collection.length; i++) {
+//       console.log(stringCollector.collection[i]);
+//     }
+//   }
+// };
+//
+//
+// stringCollector.collect("these")
+// stringCollector.collect("words")
+// stringCollector.collect("are")
+// stringCollector.collect("backwards")
+
+
+//ATM
+
+const atm  = {
+  totalCash: 10000,
+  dispenseTwenties: (numberOfTwenties)=> {
+    let requestedAmount = numberOfTwenties * 20;
+    if (requestedAmount < atm.totalCash) {
+    let totalCash =  atm.totalCash - requestedAmount
+    return totalCash;
+    }
+    else {
+      return null;
     }
   }
 };
 
-
-stringCollector.collect("these")
-stringCollector.collect("words")
-stringCollector.collect("are")
-stringCollector.collect("backwards")
-
+console.log(atm.dispenseTwenties(7));
 
 //
