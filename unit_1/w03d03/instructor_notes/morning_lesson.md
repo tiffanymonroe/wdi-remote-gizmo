@@ -72,13 +72,11 @@ We can see the HTML structure in the elements tab.
 
 [example](https://github.com/ga-students/wdi-remote-hopper/blob/master/unit_1/w03d01/student_examples/dom_example/index.html)
 
-### Console
+### Console `Ctrl ⌘ J`
 
-`ctrl + command + J`
+In the console, we are in JavaScript-land and can interact with our page using JavaScript.
 
-In the console, we are in JavasSript-land and can interact with our page using JavaScript.
-
-The HTML can be considered a 'recipe' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
+The HTML can be considered 'ingredients' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
 
 Let's interact with those objects in the console. First, let's look at our `context` within the browser. Context is not to be confused with scope. Context shows us which object we are currently in.
 
@@ -108,7 +106,7 @@ Shorthand:
 document
 ```
 
-The document looks like HTML in the console, but is really objects.
+The document looks like HTML in the console, but is an object that contains more objects.
 
 ```javascript
 document.body
@@ -198,7 +196,9 @@ document.body.appendChild(someP);
 ## Manipulate the DOM from a script file
 
 
-Include the script file as usual, but be mindful of the following:
+Include the script file as usual, but be mindful of load order.
+
+### Load order
 
 * The DOM must be loaded before the script can reference any elements that already exist on the page.
 
@@ -342,6 +342,13 @@ Type `$` in the Chrome console.
 
 ![](https://i.imgur.com/L6uuz1A.png)
 
+**Check if jquery is installed AND is available to your script**
+
+Write `$` in your script file. If you get an error, jQuery is not available to your script, and you will have to debug the reason why.
+
+Usually this is because you have placed your script file before your jquery file. 
+
+jQuery file goes first. It makes sense that the jQuery code has to be loaded before you can use it.
 
 <br>
 <hr>
@@ -365,19 +372,23 @@ jQuery commands always begin with the `$` symbol
 
 ![](https://i.imgur.com/WiUrxnG.png)
 
+## window onload function 
 
-**You can put your scripts in the head if you use a closure in the code**
+**You can put your scripts in the head if you use a window onload**
 
-We can put our jQuery inside a closure so that it will wait until the DOM has loaded.
+We can put our javascript code inside a window onload function so that it will wait until the DOM has loaded.
 
+**Scope protection:** The window onload also doubles as a protection layer for the global scope. Nothing written in the window onload function is global.
 
 * jQuery window.onload - waits for all the HTML to be parsed
 
 ```javascript
-$(function() {
+$(() => {
 	// stuff
 }
 ```
+
+<br>
 
 * **Grab an element by id**
 
@@ -449,46 +460,6 @@ REFER TO THE JQUERY CHEAT SHEET
 
 <br>
 <hr>
-
-# EXTRA INFO - 'Vanilla JS'
-
-#### load order
-
-Here's what happens when a browser loads a website:
-
-1. It makes a request for and fetches the HTML page (e.g. index.html)
-2. Starts parsing the HTML i.e. building the dom.
-3. The parser sees a `<script>` tag referencing an external script file.
-4. The browser makes a second request for the script file. Meanwhile, the parser stops and waits. This called Blocking.
-5. Once the script is downloaded and executed the parser continues parsing the rest of the HTML document.
-
-There are several more advanced techniques for loading our JS but for now we can just make sure our script tag is at the end of the html so the DOM loads before our script runs.
-
-<br>
-
-#### window.onload
-
-There is a pattern we can follow to help our page load properly and execute in the right order.
-
-We can surround our Javascript in a function called `window.onload = function() {}`. This function will wait until the entire window/dom is loaded before allowing any of our Javascript to run.
-
-In your `script.js` file, wrap your Javascript code in the following function:
-
-```js
-window.onload = function() {
-  // alerts and prompts
-  // go in here!
-}
-```
-
-### Everything is a Node
-In the HTML DOM (Document Object Model), everything is a node:
-
-* The document itself is a document node
-* All HTML elements are element nodes
-* All HTML attributes are attribute nodes
-* Text inside HTML elements are text nodes
-
 
 ## References
 
