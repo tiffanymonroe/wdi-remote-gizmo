@@ -81,20 +81,43 @@
 
 //ATM
 
-const atm  = {
-  totalCash: 10000,
-  dispenseTwenties: (numberOfTwenties)=> {
-    let requestedAmount = numberOfTwenties * 20;
-    if (requestedAmount < atm.totalCash) {
-    let totalCash =  atm.totalCash - requestedAmount
-    return totalCash;
+// const atm  = {
+//   totalCash: 10000,
+//   dispenseTwenties: (numberOfTwenties)=> {
+//     let requestedAmount = numberOfTwenties * 20;
+//     if (requestedAmount < atm.totalCash) {
+//     let totalCash =  atm.totalCash - requestedAmount
+//     return totalCash;
+//     }
+//     else {
+//       return null;
+//     }
+//   }
+// };
+//
+// console.log(atm.dispenseTwenties(7));
+
+//HUNGRY TURTLES
+
+const leonardo = {
+  name: "Leonardo",
+  color: "blue",
+  weapon: "Katana",
+  pizzaEaten: false,
+  eatPizza: ()=> {
+    if (leonardo.pizzaEaten === true) {
+      leonardo.pizzaEaten = false
+      console.log("Leonardo has already eaten pizza");
     }
     else {
-      return null;
+      leonardo.pizzaEaten = true
+      console.log("Leonardo is eating pizza");
     }
   }
-};
+}
 
-console.log(atm.dispenseTwenties(7));
+leonardo.eatPizza();
+
+leonardo.eatPizza();
 
 //
