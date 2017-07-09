@@ -121,29 +121,30 @@
 
 //CALCULATOR
 
-const calculator = {
-  output: 0,
-  multiplication: (int1, int2)=> {
-    output = int1 * int2;
-    console.log(output);
-  },
-  division:  (int1, int2)=> {
-    output = int1 / int2;
-    console.log(output);
-  },
-  addition:  (int1, int2)=> {
-    output = int1 + int2;
-    console.log(output);
-  },
-  subtraction:  (int1, int2)=> {
-      output = int1 - int2;
-      console.log(output);
-  }
-};
-
-calculator.multiplication(10, 2);
-calculator.division(-2, 8);
-calculator.addition(2, 2);
-calculator.subtraction(7, 4)
-
+// const calculator = {
+//   output: 0,
+//   multiplication: (int1, int2)=> {
+//     output = int1 * int2;
+//     console.log(output);
+//   },
+//   division:  (int1, int2)=> {
+//     output = int1 / int2;
+//     console.log(output);
+//   },
+//   addition:  (int1, int2)=> {
+//     output = int1 + int2;
+//     console.log(output);
+//   },
+//   subtraction:  (int1, int2)=> {
+//       output = int1 - int2;
+//       console.log(output);
+//   }
+// };
 //
+// calculator.multiplication(10, 2);
+// calculator.division(-2, 8);
+// calculator.addition(2, 2);
+// calculator.subtraction(7, 4);
+// calculator.subtraction(11, 7);
+//
+// 
