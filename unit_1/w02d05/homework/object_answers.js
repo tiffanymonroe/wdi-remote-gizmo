@@ -40,20 +40,43 @@
 //Greeter
 
 
-const greeter = {
-  hello: (name)=>{
-    console.log("Hey, " + name + ".");
-  },
-  goodbye: (name)=>{
-    console.log("Goodbye, " + name + ".");
-  },
-  whoAreYou: (name)=>{
-    console.log("Oh right! " + name +  " how could i forget...!");
-  }
-}
+// const greeter = {
+//   hello: (name)=>{
+//     console.log("Hey, " + name + ".");
+//   },
+//   goodbye: (name)=>{
+//     console.log("Goodbye, " + name + ".");
+//   },
+//   whoAreYou: (name)=>{
+//     console.log("Oh right! " + name +  " how could i forget...!");
+//   }
+// }
+//
+// greeter.hello("Jude");
+// greeter.goodbye("Earl");
+// greeter.whoAreYou("Rumpelstiltskin");
 
-greeter.hello("Jude");
-greeter.goodbye("Earl");
-greeter.whoAreYou("Rumpelstiltskin");
+//Collecting Strings
+
+const stringCollector = {
+  collection: [],
+  collect: (string)=>{
+      let reverseString = string.split("").reverse().join("");
+      stringCollector.collection.push(reverseString);
+      console.log(reverseString);
+    },
+  admireCollection: ()=>{
+    for (i=0; i < stringCollector.collection.length; i++) {
+      console.log(stringCollector.collection[i]);
+    }
+  }
+};
+
+
+stringCollector.collect("these")
+stringCollector.collect("words")
+stringCollector.collect("are")
+stringCollector.collect("backwards")
+
 
 //
