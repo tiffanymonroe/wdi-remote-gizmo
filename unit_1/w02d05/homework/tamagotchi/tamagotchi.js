@@ -8,7 +8,11 @@ const tamagotchi = {
   health: 10,
   cry: ()=> {
     console.log("Waaaaaa!!!");
+  },
+  puke: ()=> {
+    console.log("Bleeeeh :O~~)");
   }
 }
 
 tamagotchi.cry();
+tamagotchi.puke();
