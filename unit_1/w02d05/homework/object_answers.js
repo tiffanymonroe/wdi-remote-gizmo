@@ -99,25 +99,51 @@
 
 //HUNGRY TURTLES
 
-const leonardo = {
-  name: "Leonardo",
-  color: "blue",
-  weapon: "Katana",
-  pizzaEaten: false,
-  eatPizza: ()=> {
-    if (leonardo.pizzaEaten === true) {
-      leonardo.pizzaEaten = false
-      console.log("Leonardo has already eaten pizza");
-    }
-    else {
-      leonardo.pizzaEaten = true
-      console.log("Leonardo is eating pizza");
-    }
+// const leonardo = {
+//   name: "Leonardo",
+//   color: "blue",
+//   weapon: "Katana",
+//   pizzaEaten: false,
+//   eatPizza: ()=> {
+//     if (leonardo.pizzaEaten === true) {
+//       leonardo.pizzaEaten = false
+//       console.log("Leonardo has already eaten pizza");
+//     }
+//     else {
+//       leonardo.pizzaEaten = true
+//       console.log("Leonardo is eating pizza");
+//     }
+//   }
+// }
+//
+// leonardo.eatPizza();
+// leonardo.eatPizza();
+
+//CALCULATOR
+
+const calculator = {
+  output: 0,
+  multiplication: (int1, int2)=> {
+    output = int1 * int2;
+    console.log(output);
+  },
+  division:  (int1, int2)=> {
+    output = int1 / int2;
+    console.log(output);
+  },
+  addition:  (int1, int2)=> {
+    output = int1 + int2;
+    console.log(output);
+  },
+  subtraction:  (int1, int2)=> {
+      output = int1 - int2;
+      console.log(output);
   }
-}
+};
 
-leonardo.eatPizza();
-
-leonardo.eatPizza();
+calculator.multiplication(10, 2);
+calculator.division(-2, 8);
+calculator.addition(2, 2);
+calculator.subtraction(7, 4)
 
 //
