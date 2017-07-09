@@ -5,8 +5,9 @@
 ---
 Title: Intro to the DOM<br>
 Duration: 1.5 hrs<br>
-Contributors: Shawn Johnson, Marc Wright, Colin Hart, Thom Page<br>
+Creator: Thom Page<br>
 Topics: the DOM, DOM manipulation with jQuery<br>
+Associated files: `instructor_examples/dom_example`<br>
 
 ---
 
@@ -20,65 +21,51 @@ _after this lesson, students will be able to__
 * Use just a few jQuery commands to interact with the DOM
 
 ---
+# Let's start from the beginning
 
-## What is the DOM?
+**demo** `instructor_examples/dom_example`
 
-The DOM, or [**D**ocument **O**bject **M**odel](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction), is the browser's intepretation of the HTML. Your browser creates **javascript objects** out of the HTML elements.
+# HTML
 
+![](https://i.imgur.com/sO1tnrq.png)
 
-A browser receives a page as HTML and creates a **representation** of that page as **nested objects**. This representation is stored in memory as the Document Object Model. This allows us to interact with the page using JavaScript.
+This is HTML. You have seen it many times before. HTML is text that provides structure to webpages.
 
+<br>
 
-The nested objects form a tree-like structure, a.k.a. the DOM tree.
+![](https://i.imgur.com/tkr1fjg.png)
+
+This is the simple webpage that results from the HTML. There is a kitten and a bungalow. Those images are structurally placed within section tags which are placed within a container div which is placed within the body, etc.
+
+The browser reads the text from our file and interprets it to display this structure.
+
+<br>
+
+![](https://i.imgur.com/wy6fXDP.png)
+
+The browser has loaded our text, but what does the browser's version of our text look like? We can see the HTML text that the browser has loaded in the **Elements** tab. It's exactly the same text that we loaded in from the text editor.
+
+<br>
+<hr>
+
+11:15
+
+# DOM
+
+Your browser also creates **javascript objects** out of the HTML elements. This is an **abstraction**. Why does it do this? Because HTML is just text, and we want a handy way to perform JavaScript operations on the text.
+
+> A browser receives a page as HTML and creates a **representation** of that page as **nested objects**. This representation is stored in memory as the [**D**ocument **O**bject **M**odel](https://developer.mozilla.org/en-US/docs/Web/API/Document_Object_Model/Introduction). This allows us to interact with the page using JavaScript.
+
+The nested objects form a tree-like structure -- the DOM tree.
 
 ![DOM Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
 
-<br>
+### Console `Ctrl ⌘ J`
 
-Or this:
+In the console, we are in JavaScript-land and can interact with our page using JavaScript.
 
-```
-html
-└── head
-│   ├──title
-│   ├──meta
-│   ├──link[rel="stylesheet"]
-|   └──script[type="text/javascript"]
-|
-└── body
-    ├── header
-    │   ├── h1
-    │   └── nav
-    └── section.simplicity
-    |   └── h2
-    │   └── article
-    ├── section.life
-    |   └── h2
-    │   └── article
-    │       └── block_quote
-    │       └── block_quote
-    └── footer
-```
-
-
-11:15
-
-## HTML vs Document Object Model
-
-### Elements tab
-
-We can see the HTML structure in the elements tab.
-
-[example](https://github.com/ga-students/wdi-remote-hopper/blob/master/unit_1/w03d01/student_examples/dom_example/index.html)
-
-### Console
-
-`ctrl + command + J`
-
-In the console, we are in JavasSript-land and can interact with our page using JavaScript.
-
-The HTML can be considered a 'recipe' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
+The HTML can be considered 'ingredients' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
 
 Let's interact with those objects in the console. First, let's look at our `context` within the browser. Context is not to be confused with scope. Context shows us which object we are currently in.
 
@@ -108,7 +95,7 @@ Shorthand:
 document
 ```
 
-The document looks like HTML in the console, but is really objects.
+The document looks like HTML in the console, but is an object that contains more objects.
 
 ```javascript
 document.body
@@ -120,6 +107,8 @@ Shows us all the objects within the body tag.
 11:25
 
 ## DOM commands
+
+In Chrome console
 
 The `document` is the object on which we will perform all of our DOM commands.
 
@@ -135,7 +124,9 @@ For retrieving child nodes, `document` contains a bunch of useful methods for ac
 
 11:30
 
-## Save a DOM element to a variable
+## Common pattern: Save a DOM element to a variable
+
+In Chrome console
 
 **Select an element**
 
@@ -154,13 +145,13 @@ someImg.src="http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png
 
 Created elements will not show until they are **appended** to the DOM.
 
-* create an element
+* **create** an element first ...
 
 ```javascript
 const someElement = document.createElement('div');
 ```
 
-* append it to the body of the page
+* then **append** it to the body of the page
 
 ```javascript
 document.body.appendChild(someElement);
@@ -170,13 +161,9 @@ document.body.appendChild(someElement);
 
 ```javascript
 const someElement = document.createElement('div');
-```
 
-```javascript
 someElement.innerText = "This is some non-descriptive text";
-```
 
-```javascript
 document.body.appendChild(someElement);
 ```
 
@@ -197,8 +184,7 @@ document.body.appendChild(someP);
 
 ## Manipulate the DOM from a script file
 
-
-Include the script file as usual, but be mindful of the following:
+### Load order
 
 * The DOM must be loaded before the script can reference any elements that already exist on the page.
 
@@ -224,7 +210,8 @@ console.log(catElem);
 
 <br>
 
-**Let's have another look at the general patterns we use for DOM manipulation**
+### Patterns of DOM manipulation
+**Basics / common patterns**
 
 * Get the element with id 'container', save it to a variable, and console.log it.
 
@@ -242,6 +229,11 @@ We can add elements to elements we have created.
 
 * Append the p to the new div.
 
+<br>
+<hr>
+
+**Datatypes - arrays vs single elements**
+
 Be aware of datatypes. Do you get back a single element or an array of elements?
 
 * Get all the elements with the class 'info': it is an array, not a single element.
@@ -258,6 +250,8 @@ This will not display any changes on the page. You would want to change the inne
 
 * Change the innerHTML of that element.
 
+<br>
+<hr>
 
 ## We won't be using very many DOM commands
 
@@ -302,195 +296,3 @@ Do the [DOM commands lab](https://github.com/ga-students/wdi-remote-gizmo/blob/m
 You are not expected to remember these JS commands. This is just an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
 
 ---
-
-1:00
-
-# jQuery library
-
-These DOM commands are rather cumbersome, and we will not be using them. We are using them just to demonstrate that the HTML is represented as **JavaScript objects with useful methods on them** in the browser, and that there is a pattern to interacting with the DOM.
-
-We can make our lives easier by using a **library** that will simplify these commands for us.
-
-A **library** is just some third-party code we can reference in our projects. We don't ever need to look at the library code or tinker with it. It just sits there invisibly.
-
-
-## Add jQuery Library to a project
-
-**CDN**
-
-`https://code.jquery.com/`
-
-* Select the minified version of the latest jQuery
-* Copy the whole script tag in the popup
-* Place it _before_ your application script - that way, the jQuery code will have loaded before we try to use it.
-
-**Main page - select minified jQuery**
-
-![](https://i.imgur.com/ZZXZetR.png)
-
-**Copy the jQuery script tag and src**
-
-![](https://i.imgur.com/t7hdQsv.png)
-
-**jQuery script placed before app.js in index.html**
-
-![](https://i.imgur.com/HU9p8BK.png)
-
-**Check if jquery is installed**
-
-Type `$` in the Chrome console.
-
-![](https://i.imgur.com/L6uuz1A.png)
-
-
-<br>
-<hr>
-
-## What is jQuery
-
-jQuery:
-
-* Provides a _shorthand_ method of manipulating DOM elements.
-* Is a _library_ of code that you include in the same way you include your own js scripts
-* The browser loads in the jQuery code, which will allow us to use jQuery commands to interact with the DOM
-* The library will **translate** our jQuery commands into ones that the browser will recognize as 'vanilla' js commands.
-
-<br>
-
-## Use jQuery
-
-When we write jQuery commands, the jQuery library translates our commands into ones that the browser will recognize as 'vanilla' JS. jQuery is a layer on top of the vanilla commands.
-
-jQuery commands always begin with the `$` symbol
-
-![](https://i.imgur.com/WiUrxnG.png)
-
-
-**You can put your scripts in the head if you use a closure in the code**
-
-We can put our jQuery inside a closure so that it will wait until the DOM has loaded.
-
-
-* jQuery window.onload - waits for all the HTML to be parsed
-
-```javascript
-$(function() {
-	// stuff
-}
-```
-
-* **Grab an element by id**
-
-```javascript
-const elem = $('#idName');
-```
-
-Is translated into `document.querySelector` under the hood.
-
-<br>
-
-* **Generate an element**
-
-```javascript
-const newElem = $('<div>');
-```
-
-Is translated into `document.createElement()` under the hood.
-
-<br>
-
-* **Append an element to the body**
-
-
-```javascript
-$('body').append(newElem);
-```
-
-Is translated into `document.body.appendChild(newElem)`
-
-<br>
-
-**Add text to an element**
-
-```javascript
-newElem.text('the square of the hypotenuse is equal to the sum of the squares of the other two sides');
-```
-
-<br>
-
-&#x1F535; **Activity (7 min)**
-
-
-REFER TO THE JQUERY CHEAT SHEET
-
-* Add the jQuery library to your project
-* Test that it is installed with `$`
-* Write in the jQuery closure if your scripts are in the head
-
-&#x1F535; **Activity**
-
-* Create a div with jQuery
-* Give the div some text with jQuery
-* Append the div to the body of the page
-
-&#x1F535; **Extra Activity**
-
-* Create a `p` with jQuery
-* Give the `p` a class of 'test-class' with jQuery
-* Append the `p` to the previously created div (check in elements tab that it appended)
-
-&#x1F535; **Extra Activity**
-
-* Use jQuery to apply CSS to the `div`: make the div red using just jQuery
-
-&#x1F535; **Extra Activity**
-
-* Give the `p` an id of `test-id` using jQuery
-
-<br>
-<hr>
-
-# EXTRA INFO - 'Vanilla JS'
-
-#### load order
-
-Here's what happens when a browser loads a website:
-
-1. It makes a request for and fetches the HTML page (e.g. index.html)
-2. Starts parsing the HTML i.e. building the dom.
-3. The parser sees a `<script>` tag referencing an external script file.
-4. The browser makes a second request for the script file. Meanwhile, the parser stops and waits. This called Blocking.
-5. Once the script is downloaded and executed the parser continues parsing the rest of the HTML document.
-
-There are several more advanced techniques for loading our JS but for now we can just make sure our script tag is at the end of the html so the DOM loads before our script runs.
-
-<br>
-
-#### window.onload
-
-There is a pattern we can follow to help our page load properly and execute in the right order.
-
-We can surround our Javascript in a function called `window.onload = function() {}`. This function will wait until the entire window/dom is loaded before allowing any of our Javascript to run.
-
-In your `script.js` file, wrap your Javascript code in the following function:
-
-```js
-window.onload = function() {
-  // alerts and prompts
-  // go in here!
-}
-```
-
-### Everything is a Node
-In the HTML DOM (Document Object Model), everything is a node:
-
-* The document itself is a document node
-* All HTML elements are element nodes
-* All HTML attributes are attribute nodes
-* Text inside HTML elements are text nodes
-
-
-## References
-
-* [DOM Reference](https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference)
-* [DOM CheatSheet](http://christianheilmann.com/stuff/JavaScript-DOM-Cheatsheet.pdf)
