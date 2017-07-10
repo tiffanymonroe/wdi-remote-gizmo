@@ -113,11 +113,13 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
 
 ## CSS
 
-1. Please watch these videos
+1. Watch the following CSS videos:
 
-    - https://www.youtube.com/watch?v=BsuCBmzLf_U&index=21&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J
-    - https://www.youtube.com/watch?v=iQIj7Lu64M4&index=22&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J
-    - https://www.youtube.com/watch?v=GYygtVolViM&index=23&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J
+* [Units of Measure](https://www.youtube.com/watch?v=W3ygf9igwSM&index=32&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) 8:38
+* [Intro to Flex Boxes](https://www.youtube.com/watch?v=tqdqEiTlqF0&index=33&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) 7:52
+* [More Flex Box](https://www.youtube.com/watch?v=7d8aAw8mzjI&index=34&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) 11:45
+* [Even more Flex Box](https://www.youtube.com/watch?v=zDYAbI78dzc&index=35&list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J) 7:42
+
 
 2. Setup a new folder and files:
   - Create a new folder called `layout_practice` inside your `homework` folder.
