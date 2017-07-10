@@ -111,23 +111,6 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
 "Commit 5 - Created and coded a story"
 <hr>
 
-## Factories
-
-1. Create a single factory object to generate shoes
-    - The factory should have an array of shoes that it has generated
-    - A shoe should have a serial number, based on what index it is in the factory's shoes array
-
-2. Create a constructor function for a mall_store.
-    - A mall_store should have a name method that creates a new store that takes the store name as a parameter  ("Abercrombie", "Build-a-Bear", "Payless Shoes") which is set by passing a parameter into the constructor function.
-    - The factory should keep track of how many stores that were created.
-    - A shop should have a serial number attribute, based on the order that it was created in the factory.
-
-**Commit 6** <br>
-<hr>
-&#x1F534; The commit message should read: <br>
-"Commit 6 - Factories"
-<hr>
-
 ## CSS
 
 1. Please watch these videos
@@ -151,10 +134,27 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
 **Commit 7** <br>
 <hr>
 &#x1F534; The commit message should read: <br>
-"Commit 7 - Layout Practice"
+"Commit 6 - Layout Practice"
 <hr>
 
 ## Hungry for more?
+
+## Factories
+
+1. Create a single factory object to generate shoes
+    - The factory should have an array of shoes that it has generated
+    - A shoe should have a serial number, based on what index it is in the factory's shoes array
+
+2. Create a constructor function for a mall_store.
+    - A mall_store should have a name method that creates a new store that takes the store name as a parameter  ("Abercrombie", "Build-a-Bear", "Payless Shoes") which is set by passing a parameter into the constructor function.
+    - The factory should keep track of how many stores that were created.
+    - A shop should have a serial number attribute, based on the order that it was created in the factory.
+
+**Commit 6** <br>
+<hr>
+&#x1F534; The commit message should read: <br>
+"Commit 7 - Factories"
+<hr>
 
 1. Finish the [lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d01/student_labs/README.md) from today
 1. Use the material from the lab today to make a story like you did for Commit 5
