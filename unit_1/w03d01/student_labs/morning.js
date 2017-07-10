@@ -1,130 +1,123 @@
-// class Person {
-//   constructor(name, age, eyes, hair){
-//     this.name = name;
-//     this.age = age;
-//     this.eyes = eyes;
-//     this.hair = hair;
-//   }
-// }
-//
-// class Pet {
-//   constructor(name, age, animal, breed, color) {
-//     this.name = name;
-//     this.age = age;
-//     this.animal = animal;
-//     this.breed = breed;
-//     this.color = color;
-//   }
-// }
-//
-// class Boat {
-//   constructor(size, color, type){
-//     this.size = size;
-//     this.color = color;
-//     this.type = type;
-//   }
-// }
-//
-// class Artist {
-//   constructor(name, location, medium){
-//     this.name = name;
-//     this.location = location;
-//     this.medium = medium;
-//   }
-// }
-//
-//
-// class Robot {
-//   constructor(name, skill, discription){
-//     this.name = name;
-//     this.skill = skill,
-//     this.discription = discription;
-//   }
-// }
-//
-// class Computer {
-//   constructor(model, brand, memory, storage){
-//     this.model = model;
-//     this.brand = brand;
-//     this.memory = memory;
-//     this.storage = storage;
-//   }
-// }
-//
-// class Dog {
-//   constructor(name, breed, color, sex){
-//     this.name = name;
-//     this.breed = breed;
-//     this.color = color;
-//     this.sex = sex;
-//   }
-// }
-//
-// class Painter {
-//   constructor(name, location, medium){
-//   this.name = name;
-//   this.location = location;
-//   this.medium = medium;
-//   }
-// }
-//
-// class Car {
-//   constructor(year, make, model){
-//     this.year = year;
-//     this.make = make;
-//     this.model = model;
-//   }
-// }
-//
-// class Laptop {
-//   constructor(brand, model, memory, storage, size) {
-//     this.brand = brand;
-//     this.model = model;
-//     this.memory = memory;
-//     this.storage = storage;
-//     this.size = size;
-//   }
-// }
-//
-// class Humvee {
-//   constructor(year, make, model){
-//     this.year = year;
-//     this.make = make;
-//     this.model = model;
-//   }
-// }
-//
-// class SmartPhone {
-//   constructor(brand, model) {
-//     this.brand = brand;
-//     this.model = model;
-//   }
-// }
-//
-// class Baby {
-//   constructor(birthdate, gender, weight, length){
-//     this.birthdate = birthdate;
-//     this.gender = gender;
-//     this.weight = weight;
-//     this.length = length;
-//   }
-// }
-//
-// class FireTruck {
-//   constructor(year, department, color){
-//     this.year = year;
-//     this.department = department;
-//     this.color = color;
-//   }
-// }
-//
-// class Bird {
-//   constructor(species, class){
-//     this.species = species;
-//     this.class = class;
-//   }
-// }
+class Person {
+  constructor(name, age, eyes, hair){
+    this.name = name;
+    this.age = age;
+    this.eyes = eyes;
+    this.hair = hair;
+  }
+}
 
+class Pet {
+  constructor(name, age, animal, breed, color) {
+    this.name = name;
+    this.age = age;
+    this.animal = animal;
+    this.color = color;
+  }
+}
+
+class Boat {
+  constructor(size, color, type){
+    this.size = size;
+    this.color = color;
+    this.type = type;
+  }
+}
+
+class Artist extends Person {
+  constructor(name, location, medium){
+    this.name = name;
+    this.location = location;
+    this.medium = medium;
+  }
+}
+
+
+class Robot {
+  constructor(name, skill, discription){
+    this.name = name;
+    this.skill = skill,
+    this.discription = discription;
+  }
+}
+
+class Computer {
+  constructor(model, brand, memory, storage){
+    this.model = model;
+    this.brand = brand;
+    this.memory = memory;
+    this.storage = storage;
+  }
+}
+
+class Dog extends Pet {
+  constructor(name, breed, color, sex){
+    this.breed = breed;
+    this.color = color;
+    this.sex = sex;
+  }
+}
+
+class Painter extends Artist {
+  constructor(name, location, medium, genre){
+    this.genre;
+  }
+}
+
+class Car {
+  constructor(year, make, model){
+    this.year = year;
+    this.make = make;
+    this.model = model;
+  }
+}
+
+class Laptop extends Computer {
+  constructor(brand, model, memory, storage, size) {
+    this.size = size;
+  }
+}
+
+class Humvee extends Car {
+  constructor(year, make, model){
+    this.year = year;
+    this.make = make;
+    this.model = model;
+  }
+}
+
+class SmartPhone extends Computer {
+  constructor(brand, model) {
+    this.brand = brand;
+    this.model = model;
+  }
+}
+
+class Baby extends Person {
+  constructor(birthdate, gender, weight, length){
+    this.birthdate = birthdate;
+    this.gender = gender;
+    this.weight = weight;
+    this.length = length;
+  }
+}
+
+class FireTruck {
+  constructor(year, department, color){
+    this.year = year;
+    this.department = department;
+    this.color = color;
+  }
+}
+
+class Bird extends Pet {
+  constructor(species, class){
+    this.species = species;
+    this.class = class;
+  }
+}
+
+//============================
 // const factory = {
 //   robots: [],
 //   generateRobots(){
