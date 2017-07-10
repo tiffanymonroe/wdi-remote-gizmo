@@ -5,14 +5,15 @@
 ---
 Title: jQuery<br>
 Duration: 1.5 hrs<br>
-Contributors: Gerry Mathe, Elie Schoppik, Colin Hart, Thom Page<br>
+Contributors: Colin Hart, Thom Page<br>
 Topics: DOM manipulation with jQuery<br>
+Associated files: `instructor_examples/dom_example`
 
 ---
 
 # Lesson Objectives
 
-_after this lesson, students will be able to__
+_after this lesson, students will be able to_
 
 * Use jQuery commands to interact with the DOM
 
@@ -23,7 +24,7 @@ _after this lesson, students will be able to__
 If you include the jQuery window onload in your script file, it will wait until the DOM has loaded before the script runs:
 
 ```javascript
-$(function() {
+$(() => {
 
 	// code here will execute after the DOM has loaded
 
@@ -35,6 +36,7 @@ Using this technique, otherwise known as a `window onload`, you can place your s
 You can either do this or put the script at the bottom, it doesn't matter too much at this stage. We want to do this, however, to protect the scope of our jQuery code.
 
 <br>
+<hr>
 
 # DATATYPES
 
@@ -48,21 +50,25 @@ Additionally, there is a risk of 'mixing datatypes' and coming up with annoying 
 
 **jQuery objects are not native js objects**. You cannot mix your datatypes: 'vanilla' js commands cannot be performed on jQuery objects and vice versa.
 
-Adding a class to a div:
+**Example: Adding a class to a div:**
+
 
 ```javascript
 const div = $('<div>');
 
 div.classList.add('class');
+```
 
-// this will not work because div is jquery object, but classList.add is native js.
+This will not work because div variable is assigned to a jquery object, but classList.add is native js.
 
-// this will work:
+
+```javascript
+const div = $('<div>');
 
 div.addClass('class')
-
-// .addClass is a jQuery method, and 'div' is a jQuery object. Match made.
 ```
+
+This will work because `.addClass` is a jQuery method, and 'div' is a jQuery object. Match made.
 
 <br>
 
@@ -77,6 +83,8 @@ Creating a div:
 const $div = $('<div>');
 ```
 
+`$('<div>')` is a jQuery object, so we will use a `$` in the variable name: `$div`.
+
 Grabbing all elements with class of 'square':
 
 ```javascript
@@ -87,7 +95,7 @@ const $classOfInfo = $('.info');
 <hr>
 
 
-#### Selecting an element with jQuery should not be confused with creating one
+## Selecting an element with jQuery should not be confused with creating one
 
 
 This is the basic syntax for jQuery selections
@@ -98,13 +106,17 @@ To select a particular element by tag
 
 <br>
 
-Not to be confused with:
+This is the basic syntax for jQuery creations
+`$('<  >')`
 
-`$('<section>')` which **creates** an element. Note the use of the pointies.
+`$('<section>')` **creates** an element. Note the use of the pointies.
+
+Not to be confused with each other!
 
 <br>
+<hr>
 
-### Selection Recap
+## Selection Recap
 
 To select by ID, you use the same syntax as CSS selectors
 `$('#first-img') // Would select the element with id="first-img"`
@@ -116,7 +128,7 @@ To select all elements of a particular class, use CSS syntax again
 <br>
 
 
-#### Selecting an element and changing its content
+#### Selecting an element and changing its content - vanilla vs jQuery
 
 In this HTML:
 
@@ -141,7 +153,7 @@ There are two things about the example above that make jQuery easier to use:
 
   1. jQuery is using the same syntax as CSS to select elements
 
-  2. jQuery allows us to chain methods together to accomplish our goals (i.e., $().html(...) ), making code shorter and easier to understand
+  2. jQuery allows us to chain methods together to accomplish our goals (i.e., $`().html(...)` ), making code shorter and easier to understand
 
 <br>
 
@@ -153,19 +165,17 @@ If we want to add a new DIV with a P within it, that also has some text within i
     const myDiv = document.getElementById('container');
     const newP = document.createElement('p');
 
-    newP.innerHTML = "Hello complicated, multi-step world of adding an element to the DOM!";
+    newP.innerText = "Hello complicated, multi-step world of adding an element to the DOM!";
     myDiv.appendChild(newP);
 ```
 
 And in jQuery, it looks like this:
 
 ```javascript
-	$('#container').append("<p>").append("Hello simple insertion using jQuery chaining");
+	$('#container').append("<p>").text("Hello simple insertion using jQuery chaining");
 ```
 
 In the jQuery code example above, we first select the DIV with `id="container"`, then we append a new paragraph element (automatically created using core jQuery selector function), and then we append the text we want to insert to the new paragraph element we just created.
-
-In this case, `append()` created the `p` for us.
 
 <br>
 
@@ -234,17 +244,17 @@ When you return a jQuery object that contains many other jQuery objects, such as
 But _be careful_ because if you try to access it like an ordinary array using brackets, the object will revert to a 'vanilla' one.
 
 ```
-  var infoElements = $('.info');
+  const infoElements = $('.info');
 
   infoElements[0].text("Heeey!");
 ```
 
 ![](https://i.imgur.com/hhCogRU.png)
 
-To main its 'status' as a jQuery object (and not convert it to a 'vanilla' one), use `.eq()`.
+To maintain its 'status' as a jQuery object (and not convert it to a 'vanilla' one), use `.eq()`.
 
 ```
-var infoElements = $('.info');
+const infoElements = $('.info');
 
 infoElements.eq(0).text("Heeyeeee");
 ```
@@ -254,9 +264,9 @@ infoElements.eq(0).text("Heeyeeee");
 <br>
 <hr>
 
-## Creating a complicated DOM object
+# Creating a complicated DOM object
 
-### Set attributes with `.attr()`
+**Code Along / demo** `instructor_examples/dom_example`
 
 Let's reinforce our DOM creation pattern.
 
@@ -292,7 +302,7 @@ $section.append($p);
 $section.append($img);
 ```
 
-* Append the $section the container
+* Append the section to the container
 
 ```javascript
 $('#container').append($section);
