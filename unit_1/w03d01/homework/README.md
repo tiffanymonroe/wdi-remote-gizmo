@@ -111,11 +111,11 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
     - The factory should have an array of shoes that it has generated
     - A shoe should have a serial number, based on what index it is in the factory's shoes array
 
-2. Create a constructor function for coat factories
-    - A factory should have a name attribute which is set by passing a parameter into the constructor function for the factory
-    - A factory should have an array of coats that it has generated
-    - A coat should have a serial number attribute, based on what index it is in the factory's coat array
-    - A coat should have a maker name attribute, which the factory sets during generation
+2. Create a constructor function for a clothing store.
+    - A clothing store should have an item type (shoe, hat, sock, shirt) which is set by passing a parameter into the constructor function.
+    - The clothng store should have a variable called `stock` that is an array of clothing items for the specific store.
+    - A clothing item should have a serial number attribute, based on what index it is in the store's `stock` array
+    - An item should have a `brand` name attribute, which the clothing store sets during generation (the clothing store only has items of their own brand).
 
 **Commit 6** <br>
 <hr>
