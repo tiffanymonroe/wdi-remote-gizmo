@@ -140,7 +140,7 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
 ## Hungry for more?
 
 ## Factories
-### Reference notes from the lecture to complete these:
+### Reference [notes](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d01/instructor_notes/CLASSES_FACTORIES.md) from the lecture to complete these:
 
 1. Create a single factory object to generate shoes
     - The factory should have an array of shoes that it has generated
