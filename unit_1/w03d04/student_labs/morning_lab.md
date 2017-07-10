@@ -11,40 +11,52 @@ Topics: jQuery, JS control flow<br>
 
 ---
 
-# CHECKERBOARD
+# GRIDS
 
-In `student_labs` make a directory `checkerboard`. Make your files in `checkerboard`.
+In `student_labs` make a directory `grids`. Make your files in `grids`.
 
 * index.html
 * app.js
+* style.css
 
 Use jQuery.
 
-Run a function that generates a checkerboard
+#1 
 
-![](http://math.hws.edu/eck/cs124/javanotes3/c3/checkerboard.gif)
+Run a function that generates 64 squares that alternate colors:
 
-The board does not have to be in a perfect grid, just as long as there are 64 square divs with alternating colors.
+![](https://i.imgur.com/y2p7C6N.png)
 
 You can perform these steps in order:
 
 * Generate 64 divs
 * Give each div a class that will provide size and color
 * Give each alternating div a different class somehow
+* Constrain the number of squares on each row by putting them all in a container of fixed width.
 
-BONUS:
 
-Make it a perfect 8 x 8 grid
+#2 - challenge
+
+Make your grid a perfect checkerboard
+
+![](https://i.imgur.com/7UfIlHR.png)
+
+* Remove the whitespace between rows.
+
+* The checkerboard alternates colors on each row _and_ each column.
+
+
 
 <br>
 <hr>
 
-# PYRAMID
+# BONUS: PYRAMID
 
 In `student_labs` make a directory `pyramid`. Make your files in `pyramid`.
 
 * index.html
 * app.js
+* styles.css
 
 Use jQuery.
 
