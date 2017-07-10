@@ -10,10 +10,12 @@ const tamagotchi = {
     console.log("Waaaaaa!!!");
   },
   puke: ()=> {
-    console.log("Bleeeeh :On )");
+    console.log("Bleeeeh :O~~~~ )");
   },
   yawn: ()=> {
-    console.log("Yaaaawwwwn!");
+    console.log(this.name + " says, 'Yaaaawwwwn!''");
+    console.log(tamagotchi.name + " says, 'Yaaaawwwwn!''");
+    //why doesn't this.name work, but tamagotchi.name does?
   }
 }
 
