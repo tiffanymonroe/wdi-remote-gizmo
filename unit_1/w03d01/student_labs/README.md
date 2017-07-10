@@ -1,4 +1,4 @@
-# Lab - Classes (Constructor Functions)
+# Lab - Classes
 
 ## Easy
 
