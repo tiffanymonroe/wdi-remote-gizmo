@@ -153,4 +153,4 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
 
 1. Finish the [lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d01/student_labs/README.md) from today
 1. Use the material from the lab today to make a story like you did for Commit 5
-1. Complete [the Pokemon Card Game lab](https://github.com/ga-students/wdi-remote-gizmo/tree/master/unit_1/w03d01/student_labs)
+1. Keep solving problems from [Project Euler](https://projecteuler.net/) or [CodeWars](https://www.codewars.com/) 
