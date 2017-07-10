@@ -24,9 +24,9 @@ Work on a new mockup in a breakout room. Or stay in the main room and do a code-
 
 
 
-1. Inside your morning exercise folder, create a folder called `mockup_NAME OF MOCKUP`<br>
-2. Inside your new `mockup_NAME OF MOCKUP` folder, create an `index.html` file.<br>
-2. Inside your `mockup_NAME OF MOCKUP` folder, create a `style.css` file.<br>
+1. Inside your morning exercise folder, create a folder called `supply`<br>
+2. Inside your new `supply` folder, create an `index.html` file.<br>
+2. Inside your `supply` folder, create a `style.css` file.<br>
 3. Add the boilerplate to your html file.<br>
 4. Connect your CSS file to your HTML file and make sure that it is attached (hint: give the body a background color temporarily)<br>
 
