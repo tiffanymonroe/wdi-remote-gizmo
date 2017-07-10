@@ -41,16 +41,14 @@ Make your grid a perfect checkerboard
 
 ![](https://i.imgur.com/7UfIlHR.png)
 
-* Remove the whitespace between rows.
-
 * The checkerboard alternates colors on each row _and_ each column.
 
-
+* Remove the whitespace between rows (if it exists).
 
 <br>
 <hr>
 
-# BONUS: PYRAMID
+# BONUS: PYRAMIDS
 
 In `student_labs` make a directory `pyramid`. Make your files in `pyramid`.
 
@@ -98,10 +96,5 @@ You can use `text-align: center` on each row to center the triangles:
 ```
 
 <br>
-
-**Major Spoiler - do not read if you want to do this on your own**
-
-Use a _for loop_ to generate the rows. Inside this loop, use another _for loop_ to generate the triangles (the quantity of which will be determined by that triangle's row number).
-
-<br>
+<hr>
 <hr>
