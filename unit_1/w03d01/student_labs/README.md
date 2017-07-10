@@ -27,7 +27,7 @@
 1. Create a single factory object to generate robots
     - The factory should have an array of robots that it has generated
     - A robot should have a serial number, based on what index it is in the factory's robots array
-1. Create a constructor function for computer factories
+1. Create a class for computer factories
     - A factory should have a name attribute which is set by passing a parameter into the constructor for the factory
     - A factory should have an array of computers that it has generated
     - A computer should have a serial number attribute, based on what index it is in the factory's computers array
