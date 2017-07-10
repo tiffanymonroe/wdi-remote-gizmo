@@ -11,7 +11,14 @@ Topics: jQuery, JS control flow<br>
 
 ---
 
-# REPS
+# CHECKERBOARD
+
+In `student_labs` make a directory `checkerboard`. Make your files in `checkerboard`.
+
+* index.html
+* app.js
+
+Use jQuery.
 
 Run a function that generates a checkerboard
 
@@ -33,6 +40,13 @@ Make it a perfect 8 x 8 grid
 <hr>
 
 # PYRAMID
+
+In `student_labs` make a directory `pyramid`. Make your files in `pyramid`.
+
+* index.html
+* app.js
+
+Use jQuery.
 
 Make a six-tiered pyramid made out of triangles that looks like this:
 
