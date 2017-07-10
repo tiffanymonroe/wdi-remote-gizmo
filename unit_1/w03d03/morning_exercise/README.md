@@ -4,7 +4,7 @@
 
 ---
 
-Title: Mockup - VSSL or Supply<br>
+Title: Mockup - Supply<br>
 Type: Morning Exercise <br>
 Duration: "0:45"<br>
 Creator:<br>
