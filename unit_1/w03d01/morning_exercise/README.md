@@ -27,9 +27,10 @@ Prerequisite Videos:
 2. Create a folder called `ecardly_responsive_site`
 3. See additional directions below for file setup.
 
-## Make ECardly Responsive
+## Option 1:
+### Make ECardly Responsive
 
-Your task this morning is to take the ECardly site (that you saw this weekend) and make it responsive.
+Your task this morning is to take the ECardly site (that you saw this weekend) and make it responsive. You will **copy** the files provided for and write your code there.
 
 Use this responsive design layout for inspiration. You and your partner can decide the point at which the site changes. Make at least **one** media query in your CSS.
 
@@ -38,6 +39,11 @@ Use this responsive design layout for inspiration. You and your partner can deci
 Note: the code for the ECardly site is being provided for you in the `ECardly_not_responsive` folder in today's `morning_exercise` directory. You and your partner should work together to copy this over to your `ecardly_responsive_site` directory before you begin.
 
 You can write your CSS in the `style.css` file that you copy into your `ecardly_responsive_site` folder.
+
+
+## Option 2: 
+### Continue building the 3 Responsive Designs:
+https://github.com/ga-students/wdi-remote-gizmo/tree/master/unit_1/w02d05/morning_exercise
 
 ## Hungry for More?
 1. Add another media query specifically for iPhone 6 and adjust the design to fit nicely on that phone view.
