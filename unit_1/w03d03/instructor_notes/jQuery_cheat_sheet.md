@@ -9,7 +9,7 @@ by Thom P.
 ## Window Onload
 
 ```javascript
-$(function() {
+$(() => {
 	// put jQuery in here
 });
 ```
