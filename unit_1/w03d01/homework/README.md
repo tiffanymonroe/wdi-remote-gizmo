@@ -92,7 +92,7 @@ Prerequisites: JavaScript <br>
     **Commit 4** <br>
     <hr>
     &#x1F534; The commit message should read: <br>
-    "Commit 4 - Created Person Constructor Function"
+    "Commit 4 - Created Person Class"
     <hr>
 
 ## Create a Story
@@ -131,7 +131,7 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
   - The fonts do not matter
   - The images can be any image
 
-**Commit 7** <br>
+**Commit 6** <br>
 <hr>
 &#x1F534; The commit message should read: <br>
 "Commit 6 - Layout Practice"
@@ -140,17 +140,20 @@ Timmy is 5 years old. He's sad and wants a new pet. On his birthday, he buys a c
 ## Hungry for more?
 
 ## Factories
+### Reference notes from the lecture to complete these:
 
 1. Create a single factory object to generate shoes
     - The factory should have an array of shoes that it has generated
     - A shoe should have a serial number, based on what index it is in the factory's shoes array
 
-2. Create a constructor function for a mall_store.
-    - A mall_store should have a name method that creates a new store that takes the store name as a parameter  ("Abercrombie", "Build-a-Bear", "Payless Shoes") which is set by passing a parameter into the constructor function.
-    - The factory should keep track of how many stores that were created.
-    - A shop should have a serial number attribute, based on the order that it was created in the factory.
-
-**Commit 6** <br>
+2. Create Malls & Stores
+    - Create a Store class. It should have a constructor method that is called when a new store is created. It will take, as parameters, mallName and serialNumber.   
+    - Create a Mall class. A Mall should have a constructor method that is called when a new mall is created. It takes the mallName as a parameter  ("Mall of America", "Tanger Outlets", etc.).
+    - The Mall should have a `generateStore` method that creates instances of class Store. When creating an instance of class Store, it passes in its mallName as the mallName parameter to Store.
+    - The Mall should keep track of how many stores are created; passing in this number as the serialNumber to the store.
+    - Create a couple of instances of a Store to verify that it's working.
+    
+**Commit 7** <br>
 <hr>
 &#x1F534; The commit message should read: <br>
 "Commit 7 - Factories"
