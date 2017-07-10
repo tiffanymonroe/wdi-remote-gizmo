@@ -44,6 +44,8 @@ Prerequisites: JavaScript <br>
         - `chaseTail()` - log "oh boy oh boy oh boy"
         - `getPrice()` - return price
 
+1. Create an instance of Dog called "Sparky" and set add all the details that need to be added to make a "complete" Dog. Run the methods to ensure that everything works.
+
     **Commit 2** <br>
     <hr>
     &#x1F534; The commit message should read: <br>
@@ -58,6 +60,8 @@ Prerequisites: JavaScript <br>
         - `purr()` - log "purrrrr"
         - `clean()` - log "cleaning"
         - `getPrice()` - return price
+
+1. Create an instance of Cat called "Sprinkles" and set add all the details that need to be added to make a "complete" Cat. Run the methods to ensure that everything works.
 
     **Commit 3** <br>
     <hr>
@@ -82,6 +86,8 @@ Prerequisites: JavaScript <br>
         - `exercise()` - decrement weight
         - `age()` - increment age, increment weight, decrement mood, increment bank account by 10 (birthday money)
         - `buyPet(pet)` - push the pet object onto the `pets` array, increment mood by 10, decrement bankAccount by the value of the pet (hint: getPrice())
+
+1. Create an instance of Person called "Jill" and set add all the details that need to be added to make a "complete" Person. Run the methods to ensure that everything works.
 
     **Commit 4** <br>
     <hr>
