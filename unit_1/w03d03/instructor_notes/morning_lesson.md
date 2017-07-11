@@ -7,7 +7,8 @@ Title: Intro to the DOM<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page<br>
 Topics: the DOM, DOM manipulation with jQuery<br>
-Associated files: `instructor_examples/dom_example`<br>
+Instructor files: `instructor_examples/dom_example`<br>
+Student files: `student_examples/dom_example`
 
 ---
 
@@ -22,8 +23,6 @@ _after this lesson, students will be able to__
 
 ---
 # Let's start from the beginning
-
-**demo** `instructor_examples/dom_example`
 
 # HTML
 
