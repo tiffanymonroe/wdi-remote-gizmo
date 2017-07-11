@@ -18,8 +18,6 @@ _after this lesson, students will be able to__
 
 * Explain the difference between HTML and the Document Object Model
 * Use DOM commands to interact with a page
-* Include the jQuery library in a project
-* Use just a few jQuery commands to interact with the DOM
 
 ---
 # Let's start from the beginning
