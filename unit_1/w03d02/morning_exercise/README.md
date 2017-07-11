@@ -91,6 +91,7 @@ We will be building cards that just have a single letter on them. As we build we
 - ![stater index.html apperance](https://i.imgur.com/A6nxcmv.png)
 - The buttons should add and remove a letter `card`
 - `atom main.css` to open the `main.css` file that you will be coding in. 
+- Set up your workflow. Set up all the different windows you will be working in, in a way that helps you have a smooth work flow, so you are limiting the amount you have to minimize and resize your work and you can instead just focus on coding, ,Here is my layout for this lesson. Different layouts will work with different lessons. But always take a minute to try to find a good workflow. ![Karolin's workflow](https://i.imgur.com/gsk0jCz.png)
 
 #### Flexing the cards
 - Let's add a border to all of our elements so we can see their sizes and layouts. Add the following to the `main.css` file:
