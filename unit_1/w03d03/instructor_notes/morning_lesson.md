@@ -22,6 +22,10 @@ _after this lesson, students will be able to__
 ---
 # Let's start from the beginning
 
+* `git pull upstream master`
+* open `student_examples/dom_example` 
+* load `index.html` in the browser
+
 # HTML
 
 ![](https://i.imgur.com/sO1tnrq.png)
