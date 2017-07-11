@@ -42,9 +42,9 @@ Flexbox, currently has near universal support from all major modern browsers. Yo
 }
 ```
 
-In this course we are only worrying about modern browsers (we don't worry about supporting any version of IE, and currently Safari is in version 10.1+, so you owuld only need the vendor prefixes above **IF** you needed to support older browsers). 
+In this course we are only worrying about modern browsers (we don't worry about supporting any version of IE, and currently Safari is in version 10.1+, so you would only need the vendor prefixes above **IF** you needed to support older browsers). 
 
-TLDR; - we don't need to write any vendor prefixes or worry about flexbox support for this lesson/class. 
+TLDR; - we don't need to write any vendor prefixes for flexbox for this lesson because everything we are going to do is supported by Chrome. 
 
 ### Flexbox is its own thing
 Flexbox is built with its own logic, seperate from floats and other layout properties. Rather than noodling around with numbers, flexbox properties are more descriptive like `justify-content: space-between;` or `flex-direction: column;` with the spacing and resizing being calculated under the hood for you. This resizing happens live on browser resizing or even rotating a mobile device. See the seciont [Basics & Terminology](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
