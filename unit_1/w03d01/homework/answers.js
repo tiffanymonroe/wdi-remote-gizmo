@@ -26,9 +26,9 @@ class Dog extends Pet {
   }
 }
 
-const sparky = new Dog('Sparky', 'Victor', 150);
-console.log(sparky);
-console.log(sparky.getPrice());
+// const sparky = new Dog('Sparky', 'Victor', 150);
+// console.log(sparky);
+// console.log(sparky.getPrice());
 
 
 //======================================================
@@ -49,9 +49,9 @@ class Cat extends Pet {
   }
 }
 
-const sprinkles = new Cat ('Sprinkles', 'Weird Girl', 75)
-console.log(sprinkles);
-console.log(sprinkles.getPrice());
+// const sprinkles = new Cat ('Sprinkles', 'Weird Girl', 75)
+// console.log(sprinkles);
+// console.log(sprinkles.getPrice());
 
 //======================================================
 
@@ -96,10 +96,49 @@ class Person {
   }
 }
 
-const jill = new Person ("Jill");
-jill.age = 42;
-jill.weight = 140;
-jill.mood = 10;
-jill.pets = "Marshmallow";
-jill.bankAccount = 5000;
-console.log(jill);
+// const jill = new Person ("Jill");
+// jill.age = 42;
+// jill.weight = 140;
+// jill.mood = 10;
+// jill.pets = "Marshmallow";
+// jill.bankAccount = 5000;
+// console.log(jill);
+
+//======================================================
+
+// Rose Nylund loved animals, since she was a child on the family farm. She met Blanche Devereaux while trying to find a new home for herself and a stray cat named Mr. Whiskers. One year, Rose's friends, Blanche, Dorothy, and Sophia, give her a dog named Jake for her birthday.
+
+//
+
+const rose = new Person ("Rose");
+const blanche = new Person ("Blanche");
+const dorothy = new Person ("Dorothy");
+const sophia = new Person ("Sophia");
+const whiskers = new Cat ("Mr. Whiskers");
+const jake = new Dog ("Jake");
+
+rose.age = 60;
+
+rose.pets = [jake, whiskers];
+rose.mood = 100;
+rose.weight = 120;
+rose.bankAccount = 25000;
+console.log(rose);
+
+console.log(rose.name
+   + " loved animals, since she was a child on the family farm. She met "
+   + blanche.name
+   + " while trying to find a new home for herself and a stray cat named, "
+   + whiskers.name
+   + ". "
+   + rose.name
+   + "'s friends, "
+   + blanche.name
+   + ", "
+   + dorothy.name
+   + ", and "
+   + sophia.name
+   + " give her a dog named "
+   + jake.name
+   + " for her birthday."
+ );
