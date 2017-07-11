@@ -45,7 +45,11 @@ Wide:
 Narrow:
 ![cards in online shopping cole haan small example](https://i.imgur.com/LwYtndU.png)
 
-There are certain desired layout patterns: even spacing between shoe cards, The number of shoe cards wraps to another row if it doesn't fit the width. The cards are all the same size. The first and last element align with other elements on the page to provide uniformity and overal page layout cohesion. No matter the width, the cards behave in a certain way that is expected and generally desired. 
+Here are some commonly desired layout patterns: 
+- even spacing between cards
+- The number of cards wraps to another row if it doesn't fit the width
+- The cards are all the same size
+- The first and last element align with other elements on the page to provide uniformity and overal page layout cohesion. No matter the width, the cards behave in a certain way that is expected and generally desired. 
 
 ### What We Are Building Today
 We will be building cards that just have a single letter on them. As we build we will learn about some properties of Flexbox and their behavoirs. 
