@@ -1,0 +1,64 @@
+body {
+  background-color: black;
+}
+
+.color-block {
+  display: flex;
+  flex-direction: column;
+  width: 80%;
+  margin: 0 auto;
+}
+
+#title {
+  background-color: white;
+  height: 100vh;
+}
+
+#grey {
+  background-color: #505050;
+  height: 70vh;
+}
+
+#purple {
+  background-color: #AF5EC4;
+  height: 70vh;
+}
+
+#blue {
+  background-color: #0195FF;
+  height: 70vh;
+}
+
+#orange {
+  background-color: #FFA300;
+  height: 70vh;
+ }
+
+
+#pro-tip {
+  background: #AEE108;
+  width: 76%;
+  height: 20vh;
+  border: 1em solid white;
+  padding: 10px;
+  margin: 0 auto;
+}
+
+#pink {
+  background-color: #EF9DCD
+  height: 70vh;
+ }
+
+#red {
+  background-color: #FF6160;
+  height: 70vh;
+}
+
+#green {
+  background-color: #00BD87;
+  height: 70vh;
+}
+
+#footer {
+  background: white;
+}
