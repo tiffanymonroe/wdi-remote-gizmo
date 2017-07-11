@@ -40,7 +40,7 @@ button:active {
   color: #40A69A;
 }
 
-.container {
+.btn-container {
   width: 90%;
   margin: auto;
   display:flex;
