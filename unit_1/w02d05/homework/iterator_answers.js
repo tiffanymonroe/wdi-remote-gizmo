@@ -55,3 +55,9 @@
 //
 //
 // console.log(totalSheers);
+
+const totalSheers = sheepShearers.map((array)=>{
+    return array.sheepCount;
+  }).reduce((sum, newValue)=>{
+    return sum + newValue;
+  }, 0);

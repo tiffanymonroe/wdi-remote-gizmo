@@ -57,7 +57,8 @@ theCards = [
 
   {name: "Weedle",
   damage:40}
-],
+]
+// ,
 //
 // //key
 //
@@ -90,11 +91,12 @@ theCards = [
 // },
 //
 // //key
-// dealCards: ()=> {
-//   Math.floor(Math.random() * game.theCards.length -1) + 1;
-//   console.log(dealCards);
-// }
-//
+dealCards: ()=> {
+  Math.floor(Math.random() * game.theCards.length -1) + 1;
+  
+  console.log(dealCards);
+}
+
 // //key
 //
 // winnerOfPlay: //if statement
