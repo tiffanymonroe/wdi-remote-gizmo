@@ -61,42 +61,22 @@ The nested objects form a tree-like structure -- the DOM tree.
 
 ![DOM Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
+The HTML can be considered 'ingredients' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
 
 ### Console `Ctrl ⌘ J`
 
-In the console, we are in JavaScript-land and can interact with our page using JavaScript.
-
-The HTML can be considered 'ingredients' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
-
-Let's interact with those objects in the console. First, let's look at our `context` within the browser. Context is not to be confused with scope. Context shows us which object we are currently in.
-
-##### the Window object
-
-- The Window contains methods and properties. Type in `window.` to see a list of all properties and methods.
-- Location property is the URL of the page.
-- The `window` object contains the `document` object where the HTML is represented.
-
-
-
-`this` gives us the `Window` object, the top-level context. There is no 'parent' outside of this object. All of the DOM objects are nested inside of the `Window` object.
-
+In the console, we are in JavaScript-land and can interact with those JavaScript objects that were cooked up from the HTML.
 
 
 ### The document object
 
-In object terminology, the document is a property of the Window.
-
-```javascript
-window.document
-```
-
-Shorthand:
+Get all of the objects that Chrome has cooked up:
 
 ```javascript
 document
 ```
 
-The document looks like HTML in the console, but is an object that contains more objects.
+The document looks like HTML in the console, but is an object that contains more objects. The HTML document has child `<body>`, and there is a corresponding object:
 
 ```javascript
 document.body
@@ -104,24 +84,26 @@ document.body
 
 Shows us all the objects within the body tag.
 
+There is a `<div>` that is a child of `<body>`.
 
-11:25
+We cannot just grab `document.body.div`, but `document` contains a bunch of useful methods for accessing and manipulating the DOM.
 
-## DOM commands
+In Chrome console:
 
-In Chrome console
+```javascript
+document.querySelector('#container');
+```
 
-The `document` is the object on which we will perform all of our DOM commands.
+Will give us the element with id 'container'.
 
-`document.head`
-`document.body`
+```javascript
+document.querySelectorAll('.info');
+```
 
-We cannot just grab `document.body.div`, but we can ask for the childNodes of `document.body`
+Will give us all elements with class 'info'
 
-`document.body.childNodes`
-
-For retrieving child nodes, `document` contains a bunch of useful methods for accessing and manipulating the DOM.
-
+<br>
+<hr>
 
 11:30
 
