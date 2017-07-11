@@ -30,10 +30,28 @@ Once upon a time, monitors were square and monochrome. As display technology adv
 
 Flexbox was introduced as part of CSS3, it has been around since ~2008. Despite being a technology that has been around for nearly ten years, it lacked consistent browser support (until recently) and thus developers have often had to fall back on floats and relative positioning to solve the kind of layout challenges that flexbox was built to solve.
 
+### Can I use flexbox?
+Flexbox, currently has near universal support from all major modern browsers. You can find out what browsers support by going to [caniuse.com](http://caniuse.com/) , this website also documents support for just about anything else you might want to put in the browser, inclulding HTML and JavaScript. If you are wondering if you should be using `vendor prefixes` (looks like the code below) and how to write them, a great resourse is [shouldiprefix](http://shouldiprefix.com/):
+
+```
+.page-wrap {
+  display: -webkit-box;  /* OLD - iOS 6-, Safari 3.1-6, BB7 */
+  display: -ms-flexbox;  /* TWEENER - IE 10 */
+  display: -webkit-flex; /* NEW - Safari 6.1+. iOS 7.1+, BB10 */
+  display: flex;         /* NEW, Spec - Firefox, Chrome, Opera */
+}
+```
+
+In this course we are only worrying about modern browsers (we don't worry about supporting any version of IE, and currently Safari is in version 10.1+, so you owuld only need the vendor prefixes above **IF** you needed to support older browsers). 
+
+TLDR; - we don't need to write any vendor prefixes or worry about flexbox support for this lesson/class. 
+
 ### Flexbox is its own thing
 Flexbox is built with its own logic, seperate from floats and other layout properties. Rather than noodling around with numbers, flexbox properties are more descriptive like `justify-content: space-between;` or `flex-direction: column;` with the spacing and resizing being calculated under the hood for you. This resizing happens live on browser resizing or even rotating a mobile device. See the seciont [Basics & Terminology](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
 
 Flexbox has just two types of elements. Parent, or better known as `flex container` elements and children, or better known as `flex items`. Each have their own properties.
+
+
 
 ### Use Case for Flexbox 
 One great use case for flexbox is a layout pattern that is often reffered to as `cards`. Cards are often used for online shopping. 
