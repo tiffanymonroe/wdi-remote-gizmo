@@ -119,7 +119,7 @@ When you select an element from the DOM, save it a variable for handy reference.
 const someImg = document.querySelector('#first-img');
 ```
 
-Change the attribute `src`
+Change the attribute `src`, which is **property** of the object:
 
 ```javascript
 someImg.src="http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
@@ -134,21 +134,24 @@ Created elements will not show until they are **appended** to the DOM.
 const someElement = document.createElement('div');
 ```
 
+* change a property (text within the element)
+
+```javascript
+someElement.innerText = 'Let there be light'
+```
+
+Still will not show up ...
+
 * then **append** it to the body of the page
 
 ```javascript
 document.body.appendChild(someElement);
 ```
 
-**Perform further operations on an element before appending it**
+You can see in the **Elements** tab whether the element has appended:
 
-```javascript
-const someElement = document.createElement('div');
+![](https://i.imgur.com/2mJQ9Dl.png)
 
-someElement.innerText = "This is some non-descriptive text";
-
-document.body.appendChild(someElement);
-```
 
 **We can create any tag we want, such as a 'p'**
 
