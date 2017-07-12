@@ -178,3 +178,15 @@ The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
 * **[jQuery Docs](http://api.jquery.com)** _(if you're using jQuery)_
 * **[GitHub Pages](https://pages.github.com)** _(for hosting your game)_
 * **[Trello](trello.com)** _(for organizing your project)_
+
+
+## Inspiration - Projects by Previous Students
+
+* [Blackjack](https://cardosi.github.io/)
+* [Piggy](https://shreiya.github.io/piggy/)
+* [Tic Tac Toe](http://sepowitz.github.io/tic-tac-toe/)
+* [Connect Four](http://katiezhou.github.io/connectfour.html)
+* [Blackjack pixel art](http://kwwalter.github.io/retro-blackjack/)
+* [Snake](https://awdriggs.github.io/snake/)
+
+Project 1 varies from cohort to cohort, but the material learned during the unit is the same. You will have an opportunity to put your HTML, CSS, and JS knowledge together in creative ways. 
