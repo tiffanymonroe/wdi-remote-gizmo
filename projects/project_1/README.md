@@ -78,10 +78,10 @@ Work with your instructor to determine your stretch goals
 
 By the time the project is over, we will expect the following from you:
 
-* A **working game, that meets MVP, built by you**, hosted on the internet
+* A **working game, that meets MVP, built by you**, hosted on GithubPages.
 * A **link to your hosted working app**
-* A **git repository hosted on Github**  NOT inside your class repository. Frequent commits dating back to the very beginning of the project
-* **A `readme.md file** with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc.
+* A **git repository hosted on Github**  NOT inside your class repository. Frequent commits, minimum once per day, but recommend **many** per day, dating back to the very beginning of the project
+* **A `readme.md` file** with explanations of the technologies used, the approach taken, a link to your live site, installation instructions, unsolved problems, etc.
 
 Most importantly a **technical demonstration** of your app which:
 
@@ -103,7 +103,7 @@ As a student you should be doing the following things:
 - **User Experience planning** What **layout** will your project have on the page (wireframes)? Check out `https://wireframe.cc/` for an in-browser wireframer, or just make a sketch and upload the image somewhere. Write *user stories* from the perspective of the user: "As a user I want to be able to click on x and have y happen". Sign up for Trello `https://trello.com/`, a handy to-do list style project planner.
 
 - **Version Control**  
-  Use **git** and **github** for version control, and make frequent incremental commits to prevent large scale implosions. Make a fresh repo outside the class repo for your project.
+  Use **git** and **github** for version control, and make frequent incremental commits to prevent large scale implosions. You should be commiting at least once per day, but more frequent are recommended. Make a fresh repo outside the class repo for your project.
 
 - **Hosting**  
   Host your application on **githubpages**, or something similar so the class and instructors can use it. Your game must be in its own repo (not in the class repo) in order to have it hosted.
@@ -122,7 +122,7 @@ Did you deliver a project that met all the technical requirements? Given what th
 Did you add a personal spin or creative element into your project submission? Did you deliver something of value to the end user?
 
 - **Code Quality**  
-Did you follow code style guidance and best practices covered in class, such as spacing, modularity, and semantic naming? Did you comment your code as your instructors have in class?
+Did you follow code style guidance and best practices covered in class, such as spacing, indentation, modularity, and semantic naming? Did you comment your code as your instructors have in class?
 
 - **Problem Solving**  
 Are you able to defend why you implemented your solution in a certain way? Can you demonstrate that you thought through alternative implementations?
