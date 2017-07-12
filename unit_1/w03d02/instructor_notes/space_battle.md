@@ -245,3 +245,27 @@ Run the battle with all ships in turn.
 Move functions into the game object.
 
 Move on to the bonuses.
+
+<br>
+<hr>
+
+# Style the console
+
+Output in Chrome console: 
+
+![](https://i.imgur.com/ehyNTL0.png)
+
+You can use CSS in your Chrome console messages. Above is a simple example where messages are easier to differentiate.
+
+Formula, use `%c` in the first argument to console log, and provide CSS to the second argument:
+
+```javascript
+console.log('%c spacebattle', 'font-size: 40px');
+```
+
+Use multiple CSS properties:
+
+```javascript
+console.log('%c You have done ' + player.firepower + ' damage ', 'font-style: italic; background: azure; border: 1px solid grey;');
+```
+

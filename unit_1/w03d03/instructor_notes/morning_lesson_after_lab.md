@@ -8,6 +8,7 @@ Title: Intro to jQuery<br>
 Duration: 30 mins<br>
 Creator: Thom Page<br>
 Topics: DOM manipulation with jQuery<br>
+Associated files: `dom_example`
 
 ---
 
@@ -25,7 +26,7 @@ _after this lesson, students will be able to__
 
 # jQuery library
 
-These DOM commands are rather cumbersome, and we will not be using them. We are using them just to demonstrate that the HTML is represented as **JavaScript objects with useful methods on them** in the browser, and that there is a pattern to interacting with the DOM.
+The vanilla DOM commands are rather cumbersome, and we will not be using them. We are using them just to demonstrate that the HTML is represented as **JavaScript objects with useful methods on them** in the browser, and that there is a pattern to interacting with the DOM.
 
 We can make our lives easier by using a **library** that will simplify these commands for us.
 
@@ -75,10 +76,10 @@ jQuery file goes first. It makes sense that the jQuery code has to be loaded bef
 
 jQuery:
 
-* Provides a _shorthand_ method of manipulating DOM elements.
 * Is a _library_ of code that you include in the same way you include your own js scripts
 * The browser loads in the jQuery code, which will allow us to use jQuery commands to interact with the DOM
 * The library will **translate** our jQuery commands into ones that the browser will recognize as 'vanilla' js commands.
+* Provides a _shorthand_ method of manipulating DOM elements.
 
 <br>
 
@@ -90,28 +91,22 @@ jQuery commands always begin with the `$` symbol
 
 ![](https://i.imgur.com/WiUrxnG.png)
 
-## window onload function 
-
-**You can put your scripts in the head if you use a window onload**
-
-We can put our javascript code inside a window onload function so that it will wait until the DOM has loaded.
-
-**Scope protection:** The window onload also doubles as a protection layer for the global scope. Nothing written in the window onload function is global.
-
-* jQuery window.onload - waits for all the HTML to be parsed
-
-```javascript
-$(() => {
-	// stuff
-}
-```
-
 <br>
 
 * **Grab an element by id**
 
 ```javascript
-const elem = $('#idName');
+$('#idName');
+```
+
+Is translated into `document.querySelector` under the hood.
+
+<br>
+
+* **Grab an element by class**
+
+```javascript
+$('.someClass');
 ```
 
 Is translated into `document.querySelector` under the hood.
@@ -121,7 +116,7 @@ Is translated into `document.querySelector` under the hood.
 * **Generate an element**
 
 ```javascript
-const newElem = $('<div>');
+$('<div>');
 ```
 
 Is translated into `document.createElement()` under the hood.
@@ -132,29 +127,27 @@ Is translated into `document.createElement()` under the hood.
 
 
 ```javascript
-$('body').append(newElem);
+$('body').append(someElement);
 ```
 
-Is translated into `document.body.appendChild(newElem)`
+Is translated into `document.body.appendChild(someElement)`
 
 <br>
 
 **Add text to an element**
 
 ```javascript
-newElem.text('the square of the hypotenuse is equal to the sum of the squares of the other two sides');
+someElement.text('the square of the hypotenuse is equal to the sum of the squares of the other two sides');
 ```
 
 <br>
 
 &#x1F535; **Activity (7 min)**
 
-
-REFER TO THE JQUERY CHEAT SHEET
+REFER TO THE [JQUERY CHEAT SHEET](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/instructor_notes/jQuery_cheat_sheet.md)
 
 * Add the jQuery library to your project
-* Test that it is installed with `$`
-* Write in the jQuery window onload if your scripts are in the head
+* Test that it is installed with `$` (refer to notes if necessary)
 
 &#x1F535; **Activity**
 
@@ -178,8 +171,3 @@ REFER TO THE JQUERY CHEAT SHEET
 
 <br>
 <hr>
-
-## References
-
-* [DOM Reference](https://developer.mozilla.org/en-US/docs/DOM/DOM_Reference)
-* [DOM CheatSheet](http://christianheilmann.com/stuff/JavaScript-DOM-Cheatsheet.pdf)

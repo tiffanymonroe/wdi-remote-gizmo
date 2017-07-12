@@ -33,7 +33,9 @@ $(() => {
 
 Using this technique, otherwise known as a `window onload`, you can place your scripts in the `head` of your `index.html`
 
-You can either do this or put the script at the bottom, it doesn't matter too much at this stage. We want to do this, however, to protect the scope of our jQuery code.
+You can either do this or put the script at the bottom, it doesn't matter too much at this stage. 
+
+We might want to do this, however, to protect the **global scope** and move our code out of it. Code inside the window onload is not in the global scope.
 
 <br>
 <hr>
@@ -59,7 +61,7 @@ const div = $('<div>');
 div.classList.add('class');
 ```
 
-This will not work because div variable is assigned to a jquery object, but classList.add is native js.
+This will not work because div variable is assigned to a jquery object, but classList.add is vanilla js.
 
 
 ```javascript
@@ -70,9 +72,13 @@ div.addClass('class')
 
 This will work because `.addClass` is a jQuery method, and 'div' is a jQuery object. Match made.
 
+* **vanilla js methods will not work on jQuery objects**
+
+* **jQuery methods will not work on vanilla js objects**
+
 <br>
 
-## Add a `$` in front of jQuery variables
+# Add a `$` in front of jQuery variables
 
 
 To make it explicit that your variables refer to jQuery objects, add a `$` in front of the variable. _This does not make it a jQuery object_, it merely clarifies, for us, that it is pointing to one:
@@ -95,34 +101,136 @@ const $classOfInfo = $('.info');
 <hr>
 
 
-## Selecting an element with jQuery should not be confused with creating one
 
+# jQuery commands - research!
 
-This is the basic syntax for jQuery selections
-`$(' ')`
+Use the [jquery cheat sheet](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/instructor_notes/jQuery_cheat_sheet.md)
 
-To select a particular element by tag
-`$('section') // selects all section elements`
+OR Google, OR the [official docs](https://api.jquery.com/)
 
-<br>
+Answer and test - what jQuery command would I use to:
 
-This is the basic syntax for jQuery creations
-`$('<  >')`
+* Get all elements with class 'info'
 
-`$('<section>')` **creates** an element. Note the use of the pointies.
+* Create an 'img' element
 
-Not to be confused with each other!
+* Give my 'img' a 'src' attribute
+
+* Append my 'img' to the body of my page
+
+* Give my 'img' an id of 'example'
+
+* Give all elements with class 'info' an additional class of 'red'
+
+* Get an element with an id of 'container'
+
+* Remove an element with id of 'container'
 
 <br>
 <hr>
 
+# DOM patterns
+
+**Demo - do not code along**
+
+Let's reinforce our DOM creation patterns.
+
+Let's make a third 'section' like this:
+
+![](https://i.imgur.com/W9l21Ir.png)
+
+![](https://i.imgur.com/RThOwoR.png)
+
+
+**Create my elements first**
+
+* Make a section and give it a class 'info'
+
+```javascript
+const $section = $('<section>').addClass('info');
+```
+
+* Make a p and give it some text
+
+```javascript
+const $p = $('<p>').text('Here be some drainage');
+```
+
+* Make an img and give it an attribute `src` with the property of the image url
+
+```javascript
+const $img = $('<img>').attr('src', 'http://www.calgary.ca/CSPS/ABS/PublishingImages/2010-1155_00013525_10790.jpg');
+```
+
+**Then put the elements together**
+
+* Append the p and the img to the section
+
+```javascript
+$section.append($p);
+$section.append($img);
+```
+
+* Append the section to the container
+
+```javascript
+$('#container').append($section);
+```
+
+* Oops! We forgot the give the img an id:
+
+```javascript
+$img.attr('id', 'third-image');
+```
+
+**Give it some zhoozh**
+
+* Change the css
+
+```javascript
+$('#container').css('background', 'firebrick');
+```
+
+```javascript
+$('.info').css('color', 'white');
+``` 
+
+<br>
+
+**Activity**
+
+Using your folder and files from this morning, do the following:
+
+* Add a section to the page with jQuery.
+* The section should have a class of 'info'
+* The section should contain a `p` with text
+* The section should contain an `img` with an id `third-img`
+
+* Change the css of the container so that the background-color is `firebrick`
+
+* Change the css of the `info` boxes so that font has color `white`
+
+<br>
+<hr>
+
+# NOTES
+
 ## Selection Recap
 
 To select by ID, you use the same syntax as CSS selectors
-`$('#first-img') // Would select the element with id="first-img"`
+
+```javascript
+$('#first-img');
+```
+> Select the element with id="first-img"`
 
 To select all elements of a particular class, use CSS syntax again
-`$('.info') // Selects all elements of the class "info"`
+
+```javascript
+$('.info')
+```
+
+> Selects all elements of the class "info"`
 
 
 <br>
@@ -208,7 +316,7 @@ $("#container").css({ 'background-color':'cornflowerblue', 'font-size':'30px' })
 However, it's usually better to change the css of an element by adding an existing class.
 
 
-### Adding a class
+#### Adding a class
 
 An existing class within `style.css`
 
@@ -235,9 +343,8 @@ Add it with jQuery:
 `.empty()` will remove all the content from an element, but the element will remain.
 
 <br>
-<hr>
 
-## jQuery arrays and `.eq()`
+#### jQuery arrays and `.eq()`
 
 When you return a jQuery object that contains many other jQuery objects, such as a list of elements with same class, you will get back an array.
 
@@ -262,72 +369,22 @@ infoElements.eq(0).text("Heeyeeee");
 * Use `.eq()` to select jQuery 'array' elements.
 
 <br>
-<hr>
 
-# Creating a complicated DOM object
-
-**Code Along / demo** `instructor_examples/dom_example`
-
-Let's reinforce our DOM creation pattern.
-
-Let's make a third 'section' like this:
-
-![](https://i.imgur.com/W9l21Ir.png)
-
-![](https://i.imgur.com/RThOwoR.png)
+#### Selecting an element with jQuery should not be confused with creating one
 
 
-* Make a section and give it a class 'info'
+This is the basic syntax for jQuery selections: `$(' ')`
 
-```javascript
-const $section = $('<section>').addClass('info');
-```
+To select a particular element by tag
 
-* Make a p and give it some text
+`$('section') // selects all section elements`
 
-```javascript
-const $p = $('<p>').text('Here be some drainage');
-```
+This is the basic syntax for jQuery creations: `$('<  >')`
 
-* Make an img and give it an attribute `src` with the property of the image url
+`$('<section>')` **creates** an element. Note the use of the pointies.
 
-```javascript
-const $img = $('<img>').attr('src', 'http://www.calgary.ca/CSPS/ABS/PublishingImages/2010-1155_00013525_10790.jpg');
-```
-
-* Append the p and the img to the section
-
-```javascript
-$section.append($p);
-$section.append($img);
-```
-
-* Append the section to the container
-
-```javascript
-$('#container').append($section);
-```
-
-* Oops! We forgot the give the img an id:
-
-```javascript
-$img.attr('id', 'third-image');
-```
-
-<br>
-
-**Activity**
-
-Using your folder and files from this morning, do the following:
-
-* Add a section to the page with jQuery.
-* The section should have a class of 'info'
-* The section should contain a `p` with text
-* The section should contain an `img` with an id `third-img`
-
-* Change the css of the container so that the background-color is `firebrick`
-
-* Change the css of the `info` boxes so that font has color `white`
+Not to be confused with each other!
 
 <br>
 <hr>
+

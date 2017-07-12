@@ -30,6 +30,7 @@ Work on a new mockup in a breakout room. Or stay in the main room and do a code-
 3. Add the boilerplate to your html file.<br>
 4. Connect your CSS file to your HTML file and make sure that it is attached (hint: give the body a background color temporarily)<br>
 
+Before diving in: Learn or review what Wireframing is and how to use it for building a layout with HTML and CSS. [Guide to Wireframes](https://webdesign.tutsplus.com/articles/a-beginners-guide-to-wireframing--webdesign-7399)
 
 
 ## Flexbox:
