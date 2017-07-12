@@ -13,7 +13,7 @@ const USS_Schwarzenegger = {
   firepower: 5,
   accuracy: .7,
   attack(){
-    if (Math.random() * (.8 - 0) + 0 < // ) {
+    if (Math.random() * (.8 - 0) + 0 < ) {
       this.hull--;
       this.firepower--;
       console.log("You have been hit!");
@@ -90,8 +90,7 @@ const game = {
   }
 
 
-
-
-
   console.log(alien.randomShip());
   console.log(alien.randomAccuracy());
+
+//figure out how to set up game to use randomize functions. where should the loop go?
