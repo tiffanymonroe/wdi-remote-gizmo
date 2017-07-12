@@ -15,7 +15,7 @@ Associated files: `dom_example`
 
 _after this lesson, students will be able to__
 
-* Load jQuery from a CDN
+* Load jQuery from a CDN (Content Delivery Network)
 * Perform basic jQuery commands
 
 <br>
@@ -23,17 +23,12 @@ _after this lesson, students will be able to__
 
 3:00
 
-### Setup
-
-Open up `student_examples/dom_example` in text editor
-
-Load `index.html` in browser
-
 # Bye, vanilla DOM
 
-The vanilla DOM commands are rather cumbersome, and we will not be using them. We have used them so far them just to - 
+The 'vanilla' DOM commands are rather cumbersome, and we will not be using them. We have used them so far them just to - 
 
 * Demonstrate that the HTML is represented as **JavaScript objects with useful methods on them** in the browser.
+* Show you the DOM commands that are native to the browser
 * Get you familiar with common patterns for interacting with the DOM.
 
 We will be using the same patterns with jQuery, but we will be using a different syntax.
