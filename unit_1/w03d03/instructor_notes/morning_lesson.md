@@ -116,13 +116,13 @@ In Chrome console
 When you select an element from the DOM, save it a variable for handy reference.
 
 ```javascript
-const someImg = document.querySelector('#first-img');
+const kitten = document.querySelector('#first-img');
 ```
 
 Change the attribute `src`, which is **property** of the object:
 
 ```javascript
-someImg.src="http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
+kitten.src="http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
 ```
 **Create an element**
 
@@ -131,13 +131,13 @@ Created elements will not show until they are **appended** to the DOM.
 * **create** an element first ...
 
 ```javascript
-const someElement = document.createElement('div');
+const elem = document.createElement('div');
 ```
 
 * change a property (text within the element)
 
 ```javascript
-someElement.innerText = 'Let there be light'
+elem.innerText = 'Let there be light'
 ```
 
 Still will not show up ...
@@ -145,7 +145,7 @@ Still will not show up ...
 * then **append** it to the body of the page
 
 ```javascript
-document.body.appendChild(someElement);
+document.body.appendChild(elem);
 ```
 
 You can see in the **Elements** tab whether the element has appended:
@@ -177,9 +177,9 @@ document.body.appendChild(someP);
 * If the script is put in the head:
 
 ```javascript
-const catElem = document.getElementById('first-img');
+const kitten = document.getElementById('first-img');
 
-console.log(catElem);
+console.log(kitten);
 ```
 
 > => null
@@ -194,29 +194,47 @@ console.log(catElem);
 </html>
 ```
 
+We can now work on the DOM, and like before, change any properties on existing elements.
+
+```javascript
+kitten.src = "http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
+```
+
+![](https://i.imgur.com/CkjLVtP.png)
+
 <br>
 
-### Patterns of DOM manipulation
-**Basics / common patterns**
+**Prompts**
 
-* Get the element with id 'container', save it to a variable, and console.log it.
+&#x1F535; Get the element with id 'container', save it to a variable, and console.log it.
 
-* Create a div, saving it to a variable.
+![](https://i.imgur.com/0IvO1kd.png)
 
-* Give the div some text.
+&#x1F535; Create a div, saving it to a variable.
 
-We can append not just to the body, but also to elements that we have previously retrieved. The new elements will show if something in the chain exists in the body (either already-exisiting in the body or has been appended to the body).
+&#x1F535; Give the div some text with `.innerText =`.
 
-* Append the div to the element with id 'container' -- we have already retrieved it, no need to retrieve it again.
+**Append to previously retrieved element:**
 
-We can add elements to elements we have created.
+&#x1F535; Append the new div to the element with id 'container' -- we have already retrieved it, no need to retrieve it again. `.appendChild()`.
 
-* Create a p.
+Confirm that new div is **inside** container div (it is a sibling of the **section**s):
 
-* Append the p to the new div.
+![](https://i.imgur.com/5UwEaWD.png)
 
 <br>
 <hr>
+
+---
+12:00
+
+Do the [DOM commands lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/student_labs/morning_lab.md)
+
+You are not expected to remember these JS commands. This is just an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
+
+---
+
+# Notes
 
 **Datatypes - arrays vs single elements**
 
@@ -239,7 +257,7 @@ This will not display any changes on the page. You would want to change the inne
 <br>
 <hr>
 
-## We won't be using very many DOM commands
+**We won't be using many commands**
 
 DOM commands fall into a few broad categories:
 
@@ -273,12 +291,3 @@ We will only need a small handful of these commands for now. Here is a sample:
   * node.firstChild
 
 
-12:00
-
----
-
-Do the [DOM commands lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/student_labs/morning_lab.md)
-
-You are not expected to remember these JS commands. This is just an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
-
----
