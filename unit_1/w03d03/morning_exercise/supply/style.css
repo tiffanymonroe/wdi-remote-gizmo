@@ -1,0 +1,44 @@
+/** {
+  border: 1px solid teal;
+}*/
+
+.container {
+  margin: auto;
+  margin-top: 1.5em;
+}
+
+.col-1 {
+  flex-basis: 30%;
+  align-items: center;
+  justify-content: center;
+}
+nav img {
+  width: 50%;
+  opacity: .5;
+}
+/**************************************************column 2*
+**************************************************/
+
+
+.row-1 img {
+  width: 90%;
+}
+
+.row-2, .row-3 {
+  display: flex;
+}
+
+.row-2 img {
+  width: 30%;
+  height: 30%;
+}
+
+.row-3 img {
+  width: 45%;
+  height: 45%;
+}
+
+.container {
+  display: flex;
+  justify-content: space-around;
+}
