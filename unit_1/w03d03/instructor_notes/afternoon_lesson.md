@@ -23,11 +23,24 @@ _after this lesson, students will be able to__
 
 3:00
 
+### Setup
+
+Open up `student_examples/dom_example` in text editor
+
+Load `index.html` in browser
+
+# Bye, vanilla DOM
+
+The vanilla DOM commands are rather cumbersome, and we will not be using them. We have used them so far them just to - 
+
+* Demonstrate that the HTML is represented as **JavaScript objects with useful methods on them** in the browser.
+* Get you familiar with common patterns for interacting with the DOM.
+
+We will be using the same patterns with jQuery, but we will be using a different syntax.
+
+We can make our lives easier by using a **library** that will simplify the syntax for us.
+
 # jQuery library
-
-The vanilla DOM commands are rather cumbersome, and we will not be using them. We are using them just to demonstrate that the HTML is represented as **JavaScript objects with useful methods on them** in the browser, and that there is a pattern to interacting with the DOM.
-
-We can make our lives easier by using a **library** that will simplify these commands for us.
 
 A **library** is just some third-party code we can reference in our projects. We don't ever need to look at the library code or tinker with it. It just sits there invisibly.
 
@@ -141,6 +154,12 @@ someElement.text('the square of the hypotenuse is equal to the sum of the square
 
 <br>
 
+### Activity Setup
+
+Open up `student_examples/dom_example` in text editor
+
+Load `index.html` in browser
+
 &#x1F535; **Activity (7 min)**
 
 REFER TO THE [JQUERY CHEAT SHEET](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/instructor_notes/jQuery_cheat_sheet.md)
@@ -181,7 +200,7 @@ $(() => {
 
 	// code here will execute after the DOM has loaded
 
-}
+})
 ```
 
 Using this technique, otherwise known as a `window onload`, you can place your scripts in the `head` of your `index.html`
