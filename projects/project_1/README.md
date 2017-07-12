@@ -7,7 +7,7 @@
 Your project is due on Monday, July 24th at 10:00 am Eastern. You will present your project and show your code to classmates and instructors.
 
 **How to Submit Your Project**<br>
-Submit an issue (as you normally do for homework) with a link to **your** repo AND a link to your live site. You will be presenting your projects in front of the class. The title for your issue should be `Your Name - Project 1`
+Submit an issue (as you normally do for homework) with a link to **your** repo AND a link to your live site. The title for your issue should be `Your Name - Project 1`
 
 ## Make a new repo
 Before you begin, make a new github repo for your project. **Do not** begin your project within the class repo. For project 1, you will be using [GitHub Pages](https://pages.github.com/) - be sure to follow the directions on how to set up a GitHub Pages repo.
