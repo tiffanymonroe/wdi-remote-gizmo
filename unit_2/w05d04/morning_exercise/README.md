@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Bootstrap - CSS Frameworks <br>
@@ -37,16 +37,18 @@ You can use Bootstrap to jazz up your projects, but we also want you to be famil
 ## Setup
 
 1. Use the files inside the `bootstrap_example` folder to code along with this morning's exercise.
+2. I recommend that you navigate into your `student_examples` folder and make a new folder called `bootstrap_practice`.
+3. Copy the contents of the `bootstrap_example` folder into your `bootstrap_practice` folder.
 
 ## Let's Look at Bootstrap
 
 Bootstrap's website catalogs everything that you can use to style your application. Note that their styles are responsive. You can download a file and keep it in your application or use a link to their CDN.
 
-Bootstrap is a very robust framework! It has pretty much everything that you need (plus more). After this lesson, take some time to explore the site to see more of the offerings. Consider using it in your homeworks or projects.
+Bootstrap is a very robust framework! It has pretty much everything that you need (plus more). After this lesson, take some time to explore the site to see more of the offerings. Consider using it in your homework or projects.
 
 ## Code along:
 
-1. Navigate inside your `bootstrap_example` folder.
+1. Navigate inside your `bootstrap_practice` folder.
 
 2. Open the index.html file in your browser `open index.html`
 
