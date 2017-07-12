@@ -1,4 +1,4 @@
-// console.log("That's no moon!");
+console.log("That's no moon!");
 
 
 
@@ -13,7 +13,7 @@ const USS_Schwarzenegger = {
   firepower: 5,
   accuracy: .7,
   attack(){
-    if (Math.random() * (.7 - 0) + 0 < alien.accuracy ) {
+    if (Math.random() * (.8 - 0) + 0 < // ) {
       this.hull--;
       this.firepower--;
       console.log("You have been hit!");
@@ -26,12 +26,6 @@ const USS_Schwarzenegger = {
     }
     showStatus();
   }
-}
-
-const alien = {
-  hull: [3, 4, 5, 6],
-  firepower: [2, 3, 4],
-  accuracy: .6,
 }
 
 
@@ -74,5 +68,21 @@ const game = {
 }
 
 
-
   game.start();
+
+  //Trying to get the alien ships to randomize.
+
+  const alien = {
+    ships: [1, 2, 3, 4, 5, 6],
+    hull: [3, 4, 5, 6],
+    firepower: [2, 3, 4],
+    accuracy: [.6, .7, .8],
+  }
+
+
+  randomShip = () =>{
+    for (let i=0; i < alien.ships.length; i++){
+      return Math.floor(Math.random() * (alien.ships[5] - alien.ships[0])) + alien.ships[0];
+    }
+  }
+  randomShip();
