@@ -103,7 +103,7 @@ As a student you should be doing the following things:
 - **User Experience planning** What **layout** will your project have on the page (wireframes)? Check out `https://wireframe.cc/` for an in-browser wireframer, or just make a sketch and upload the image somewhere. Write *user stories* from the perspective of the user: "As a user I want to be able to click on x and have y happen". Sign up for Trello `https://trello.com/`, a handy to-do list style project planner.
 
 - **Version Control**  
-  Use **git** and **github** for version control, and make frequent incremental commits to prevent large scale implosions. You should be commiting at least once per day, but more frequent are recommended. Make a fresh repo outside the class repo for your project.
+  Use **git** and **github** for version control, and make frequent incremental commits to prevent large scale implosions. You should be commiting at least once per day, but multiple commits per day (after each feature / function) are recommended. Make a fresh repo outside the class repo for your project.
 
 - **Hosting**  
   Host your application on **githubpages**, or something similar so the class and instructors can use it. Your game must be in its own repo (not in the class repo) in order to have it hosted.
