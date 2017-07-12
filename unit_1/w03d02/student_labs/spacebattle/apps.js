@@ -13,7 +13,7 @@ const USS_Schwarzenegger = {
   firepower: 5,
   accuracy: .7,
   attack(){
-    if (Math.random() * (.8 - 0) + 0 < ) {
+    if (Math.random() * (.8 - 0) + 0 < // use randomShip and randomAccuracy ? {
       this.hull--;
       this.firepower--;
       console.log("You have been hit!");
