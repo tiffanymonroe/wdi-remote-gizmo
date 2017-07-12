@@ -4,7 +4,7 @@
 # Project Week
 
 ## Project due date
-Your project is due on Monday, July 24th. You will present your project and show your code to classmates and instructors.
+Your project is due on Monday, July 24th at 10:00 am Eastern. You will present your project and show your code to classmates and instructors.
 
 **How to Submit Your Project**<br>
 Submit an issue (as you normally do for homework) with a link to **your** repo AND a link to your live site. You will be presenting your projects in front of the class. The title for your issue should be `Your Name - Project 1`
