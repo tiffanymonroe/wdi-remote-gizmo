@@ -1,12 +1,14 @@
 // console.log("That's no moon!");
-// const player_action = () => {
-//
-// }
+
 
 
 const showStatus = () => {
-  alert('Your hull is ' + USS_Schwarzenegger.hull + " and your firepower is " + USS_Schwarzenegger.firepower + ".")
-  USS_Schwarzenegger.attack();
+  alert('Your hull is ' + USS_Schwarzenegger.hull + " and your firepower is " + USS_Schwarzenegger.firepower + ".");
+  const choice =
+  prompt('Attack again? (y/n)')
+  if (choice === 'y'){
+    game.play();
+  }
 };
 
 
@@ -19,6 +21,7 @@ const USS_Schwarzenegger = {
       this.hull--;
       this.firepower--;
       console.log("You have been hit!");
+
     }
     else {
       this.hull++;
@@ -49,12 +52,12 @@ const game = {
     if (alien.hull === 0 || alien.firepower === 0){
       prompt("Alien ship destroyed!")
     }
+    else if (USS_Schwarzenegger.hull === 0 || USS_Schwarzenegger.firepower === 0) {
+      end();
+    }
   },
   end(){
-      if (USS_Schwarzenegger.hull === 0 || USS_Schwarzenegger.firepower === 0){
-        break
         console.log("Game over!");
-  }
   }
 }
 
