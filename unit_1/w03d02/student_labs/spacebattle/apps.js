@@ -4,11 +4,7 @@
 
 const showStatus = () => {
   alert('Your hull is ' + USS_Schwarzenegger.hull + " and your firepower is " + USS_Schwarzenegger.firepower + ".");
-  const choice =
-  prompt('Attack again? (y/n)')
-  if (choice === 'y'){
-    game.play();
-  }
+  game.play();
 };
 
 
@@ -49,14 +45,30 @@ const game = {
         console.log("Retreat!");
     },
   play(){
-    if (alien.hull === 0 || alien.firepower === 0){
-      prompt("Alien ship destroyed!")
+    const nextMove =
+    prompt('attack / retreat')
+    if (nextMove === 'attack'){
+      USS_Schwarzenegger.attack();
+    }
+    else if (nextMove === 'retreat'){
+      this.end();
+    }
+    else if (alien.hull === 0 || alien.firepower === 0){
+      prompt("Alien ship destroyed! There's another one coming. attack / retreat?" )
+      if (nextMove === 'attack'){
+        USS_Schwarzenegger.attack();
+      }
+      else if (nextMove === 'retreat'){
+        this.end();
+      }
+
     }
     else if (USS_Schwarzenegger.hull === 0 || USS_Schwarzenegger.firepower === 0) {
       end();
     }
   },
   end(){
+        break
         console.log("Game over!");
   }
 }
