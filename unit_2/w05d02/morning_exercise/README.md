@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Clock Hand Angle Calculator <br>
@@ -18,7 +18,8 @@ Prerequisites: Javascript <br>
 # Morning Exercise
 
 ## Setup
-1. Use the provided `clock_hands.js` file to write your code for this morning's exercise.
+1. Navigate into your `student_examples` folder for today.
+2. Create a file called `clock_hands.js` file to write your code for this morning's exercise.
 
 ## CLOCK HAND ANGLE CALCULATOR
 
@@ -69,3 +70,5 @@ clock(500, 34)
 
 => "out of range"
 ```
+
+Hint: Drawing the outputs with pencil and paper may help you understand and solve the problem.
