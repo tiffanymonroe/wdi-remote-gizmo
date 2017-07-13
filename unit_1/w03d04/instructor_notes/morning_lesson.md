@@ -3,7 +3,7 @@
 # WDI-GIZMO
 
 ---
-Title: Control flow and jQuery<br>
+Title: DOM manipulation<br>
 Type: Lesson<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page <br>
@@ -24,8 +24,8 @@ _After this lesson students will be able to:_
 
 # Setup
 
-* In `student_examples` for today, create a folder `jquery_and_control_flow`
-* Inside `jquery_and_control_flow`, touch 
+* In `student_examples` for today, create a folder `dom_manipulation`
+* Inside `dom_manipulation`, touch 
 	* `app.js`
 	* `index.html`
 	* `style.css`
