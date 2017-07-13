@@ -27,10 +27,18 @@ $(() => {
 We're going to review DOM Events and `this` in order to create a simple sentence game.
 
 
+
 ### Objective
 
 1. A user should be able to click on a word, and append that word to the right of `sentence:`.
 
+
+### Setup 
+
+1.  Open up in up jqueryThisWordPlay in the student_examples folder
+2.  Read over the html, and css
+3.  make sure the javascript is connected `console.log('djslfjds')`
+s
 
 #### Let's get started
 First, lets create the sentence object inside of the onload.  What properties and method might this need?
@@ -138,6 +146,7 @@ const sentenceObject = {
      // use the .text method to add the value of the current value of the sentence property
      $finalSentence.text(this.sentence);
   }
+}
 
 ```
 
