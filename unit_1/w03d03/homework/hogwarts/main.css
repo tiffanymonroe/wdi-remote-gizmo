@@ -7,6 +7,12 @@ body {
 
 }
 
+#container {
+  width: 80%;
+  height: auto;
+  border: 2px solid aqua;
+}
+
 .pet {
   font-family: fantasy;
 }
@@ -17,4 +23,12 @@ body {
 
 ul li {
   list-style: none;
+}
+
+table, th, td {
+  border: gray 1px solid;
+};
+
+table {
+  margin: 0 auto;
 }

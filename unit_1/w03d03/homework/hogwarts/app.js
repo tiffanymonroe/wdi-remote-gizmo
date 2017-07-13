@@ -5,6 +5,7 @@
 $(() => {
 
   const $container = $('div');
+  $container.attr('id', 'container')
   console.log($container);
 
   const $h1 = $('<h1>');
@@ -22,12 +23,15 @@ $(() => {
 
   const $pet = $('<h4>');
   $pet.addClass('pet');
-  $pet.text('Pet: Tink, Dog')
+  $pet.text('Pet: Nigel, Owl')
   $container.append($pet);
 
   const $wand = $('<h4>');
   $wand.text('Wand: Hornbeam with Dragon Heartstring Core');
   $container.append($wand);
+
+
+// ************** storage container **********
 
   const $storage = $('<ul>');
   $container.append($storage);
@@ -60,6 +64,84 @@ $(() => {
   const $jellyBeans = $('<li>');
   $jellyBeans.text("Bertie Bott's Every Flavor Jelly Beans");
   $storage.append($jellyBeans);
+
+// ***********class schedule**************
+
+
+  const $schedule = $('<h5>');
+  $schedule.text('Spring 2017');
+  $container.append($schedule);
+
+  const $table = $('<table>');
+  $container.append($table);
+
+  const $thead = $('<thead>');
+  $table.append($thead);
+
+  const $tr = $('<tr>');
+  $thead.append($tr);
+
+  const $day = $('<th>');
+  $day.text('Day');
+  $tr.append($day);
+
+  const $monday = $('<td>');
+  $monday.text('Monday');
+  $day.append($monday);
+
+  const $tuesday = $('<td>');
+  $tuesday.text('Tuesday');
+  $day.append($tuesday);
+
+  const $wednesday = $('<td>');
+  $wednesday.text('Wednesday');
+  $day.append($wednesday);
+
+  const $thursday = $('<td>');
+  $thursday.text('Thursday');
+  $day.append($thursday);
+
+  const $friday = $('<td>');
+  $friday.text('Friday');
+  $day.append($friday);
+
+  const $classes = $('<th>');
+  $classes.text('Classes');
+  $thead.append($classes);
+
+  const $herbology = $('<td>');
+  $herbology.text('Herbology');
+  $monday.append($herbology);
+
+  const $divination = $('<td>');
+  $divination.text('Divination');
+  $monday.append($divination);
+
+  const $historyOfMagic = $('<td>');
+  $historyOfMagic.text('History of Magic');
+  $tuesday.append($historyOfMagic);
+
+  const $charms = $('<td>');
+  $charms.text('Charms');
+  $tuesday.append($charms);
+
+  const $defense = $('<td>');
+  $defense.text('Defense Against the Dark Arts');
+  $wednesday.append($defense);
+
+  const $potions = $('<td>');
+  $potions.text('Potions');
+  $wednesday.append($potions);
+
+  const $transfiguration = $('<td>');
+  $transfiguration.text('Transfiguration');
+  $thursday.append($transfiguration);
+
+  const $magicalCreatures = $('<td>');
+  $magicalCreatures.text('Care of Magical Creatures');
+  $friday.append($magicalCreatures);
+
+
 
 
 });
