@@ -142,6 +142,23 @@ $(() => {
   $friday.append($magicalCreatures);
 
 
+// ********************** playing with the DOM ********************
 
+$storage.prepend($wand);
+$butterBeer.remove();
+
+
+
+$storage.append($wand)
+$wand.text('Hawthorn Wand with Dragon Heartstring Core');
+$wand.css('color', 'silver');
+
+$magicalCreatures.append($pet);
+
+$pet.remove();
+
+const $nigel = $('<h4>')
+$nigel.text('Nigel, pet owl');
+$container.append($nigel);
 
 });
