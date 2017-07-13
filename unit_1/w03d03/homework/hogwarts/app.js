@@ -142,7 +142,7 @@ $(() => {
   $friday.append($magicalCreatures);
 
 
-// ********************** playing with the DOM ********************
+// ********************** year 5 ********************
 
 $storage.prepend($wand);
 $butterBeer.remove();
@@ -160,5 +160,17 @@ $pet.remove();
 const $nigel = $('<h4>')
 $nigel.text('Nigel, pet owl');
 $container.append($nigel);
+
+// ********************** year 6 ********************
+
+$('.secret').hide('slow').delay(2000);
+$('.secret').show('slow');
+
+$leash.addClass('cabbage');
+$leash.removeClass('cabbage');
+
+
+
+
 
 });
