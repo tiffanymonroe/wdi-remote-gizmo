@@ -5,7 +5,7 @@
 <hr>
 Title: jQuery click events<br>
 Type: Lesson<br>
-Duration: 2 hrs<br>
+Duration: 1.5 hrs<br>
 Creator: Thom Page<br>
 Topics: jQuery click events<br>
 <hr>
