@@ -158,6 +158,9 @@ Eventually, we would like to invoke a function `generateQuilt()` that will build
 
 ### Let's begin
 
+&#X1F440; **Observe**
+
+
 * Write a for loop that counts from 1 to 1000
 
 ```javascript
@@ -199,7 +202,17 @@ This is a DRY way to make a grid of 1000 divs.
 
 <br>
 
+&#x1F535; **Activity - Make your own quilt**
+
+* Generate 1000 square divs (inline-block) using a loop, appending each to the body
+* Your squares won't be visible unless you give them a background color or border
+
+<br>
+
+
 ### Put the loop into a function
+
+&#X1F440; **Observe**
 
 I would like to be able to generate these squares with a chosen number of squares.
 
@@ -228,7 +241,15 @@ generateSquares();
 
 <br>
 
+&#x1F535; **Activity - function**
+
+* Put the loop into a function - when you invoke the function, the loop will run
+
+<br>
+
 ### Give the function an argument
+
+&#X1F440; **Observe**
 
 * Provide the function with a parameter and argument, and run the loop that many times:
 
@@ -246,7 +267,15 @@ generateSquares(1000);
 
 <br>
 
+&#x1F535; **Activity - function**
+
+* When you invoke the function with the number of desired squares as an argument, the loop will generate the desired number of squares.
+
+<br>
+
 ## Color the squares
+
+&#X1F440; **Observe**
 
 ### RGB
 
@@ -306,7 +335,15 @@ Since it is inside a loop, it will run each time the loop runs, giving us a rand
 
 <br>
 
+
+
+* Give each square a random rgb color
+
+<br>
+
 ### Add text to each square
+
+&#X1F440; **Observe**
 
 The quilt is not quite ugly enough. Let's put some numbers in each square.
 
@@ -326,34 +363,27 @@ const generateSquares = () => {
 
 <br>
 
+&#x1F535; **Activity - Fill the squares**
+
+* Make each square display a number according to its place in the loop
+
+<br>
+
 ### For fun, give each square an id, the same as its number
+
+&#X1F440; **Observe**
 
 `$square.attr('id', 'square' + i);`
 
 <br>
-<hr>
-
-**End of Horrible Digital Quilt**
-
-<br>
-<hr>
-
-&#x1F535; **Activity - Make your own quilt**
-
-* Generate 1000 square divs (inline-block) using a loop, appending each to the body
-
-&#x1F535; **Activity - function**
-
-* Put the loop into a function such that you invoke the function with the number of desired squares
-
-&#x1F535; **Activity - Fill the squares**
-
-* Give each square a random rgb color
-* Make each square display a number according to its place in the loop
 
 &#x1F535; **Activity - Interpolate an id**
 
 * Make each square display a number according to its place in the loop. In Elements tab: `id="square1"` etc.
+
+<br>
+
+**End of Horrible Digital Quilt**
 
 <br>
 <hr>
