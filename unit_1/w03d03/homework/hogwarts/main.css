@@ -10,3 +10,11 @@ body {
 .pet {
   font-family: fantasy;
 }
+
+.secret {
+  opacity: 0.5;
+}
+
+ul li {
+  list-style: none;
+}
