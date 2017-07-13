@@ -1,38 +1,64 @@
 body {
-  background-image: url('http://4.bp.blogspot.com/-_bni1oYZMrY/Uvhef5YG0pI/AAAAAAAAGhc/U3iwLQAzeCA/s1600/Harry-Potter-And-The-Prisoner-Of-Azkaban-Blu-Ray-harry-potter-17169528-1920-800.jpg');
+  font-family: 'Fresca', serif;
+  color: black;
+}
+
+
+img {
   width: 100%;
   height: auto;
-  text-align: center;
-  color: #F8F7FF;
-
+  display: flex;
 }
-
 #container {
-  width: 80%;
+  width: 70%;
   height: auto;
-  border: 2px solid aqua;
+  display: inline-block;
+  margin: 0 auto;
+  margin-left: 15%;
+  margin-right: 15%;
 }
 
-.pet {
-  font-family: fantasy;
-}
-
-.secret {
+/*.secret {
   opacity: 0.5;
-}
+}*/
 
 ul li {
   list-style: none;
 }
 
-table, th, td {
-  border: gray 1px solid;
-};
+
 
 table {
   margin: 0 auto;
+  text-align: justify;
 }
 
-.cabbage {
+/*.cabbage {
   color:CHARTREUSE;
+}*/
+
+h1 {
+  font-family: 'Princess Sofia', cursive;
+  color: black;
+  font-size: 48px;
+  text-align: center;
+}
+
+h3, h3, h4, h5 {
+  font-size: 1em;
+  padding: 1em;
+}
+
+h3, h5 {
+  font-weight: bold;
+}
+
+tr, th, td {
+  align-items: center;
+  vertical-align: top;
+}
+
+th {
+  font-size: 1em;
+  font-weight: bold;
 }

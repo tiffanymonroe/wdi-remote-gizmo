@@ -144,32 +144,45 @@ $(() => {
 
 // ********************** year 5 ********************
 
-$storage.prepend($wand);
-$butterBeer.remove();
+// $storage.prepend($wand);
+// $butterBeer.remove();
+//
 
 
+// $storage.append($wand)
+// $wand.text('Hawthorn Wand with Dragon Heartstring Core');
+// // $wand.css('color', 'silver');
+//
+// $magicalCreatures.append($pet);
+//
+// $pet.remove();
 
-$storage.append($wand)
-$wand.text('Hawthorn Wand with Dragon Heartstring Core');
-$wand.css('color', 'silver');
-
-$magicalCreatures.append($pet);
-
-$pet.remove();
-
-const $nigel = $('<h4>')
-$nigel.text('Nigel, pet owl');
-$container.append($nigel);
+// const $nigel = $('<h4>')
+// $nigel.text('Nigel, pet owl');
+// $container.append($nigel);
 
 // ********************** year 6 ********************
 
 $('.secret').hide('slow').delay(2000);
 $('.secret').show('slow');
 
-$leash.addClass('cabbage');
-$leash.removeClass('cabbage');
+// $leash.addClass('cabbage');
+// $leash.removeClass('cabbage');
 
 
+
+
+
+
+// ********************** year 7 ********************
+
+$schedule.text('Fall 2018');
+
+// const $moreButterBeer = $('<li>');
+// $moreButterBeer.text('butter beer');
+// ('trunk').append($moreButterBeer);
+
+// confused about the trunk vs storage part
 
 
 
