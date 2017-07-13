@@ -1,1 +1,6 @@
-body {background-color: #F8F7FF}
+body {
+  background-image: url('http://4.bp.blogspot.com/-_bni1oYZMrY/Uvhef5YG0pI/AAAAAAAAGhc/U3iwLQAzeCA/s1600/Harry-Potter-And-The-Prisoner-Of-Azkaban-Blu-Ray-harry-potter-17169528-1920-800.jpg');
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
