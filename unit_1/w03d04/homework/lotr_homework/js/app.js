@@ -112,6 +112,7 @@ const makeBaddies = () => {
 
   // 2. give each of the baddies a class of "baddy"
 
+  // 3. remember to append them to Mordor
 };
 
 // COMMIT YOUR WORK
