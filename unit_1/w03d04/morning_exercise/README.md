@@ -32,5 +32,5 @@ Prerequisites: CSS, HTML <br>
 3. Text - Feel free to use `lorem` in place of this real text. As for the font, save this for *last* step. You don't need the exact font - just choose something that looks similar.
 
 ## Flexbox:
-[A Complete Guide to Flexbox (CSS Tricks](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) <br>
+[A Complete Guide to Flexbox (CSS Tricks)](https://css-tricks.com/snippets/css/a-guide-to-flexbox/) <br>
 [Equidistance Spacing- examples of failed attempts and wins](https://css-tricks.com/equidistant-objects-with-css/)
