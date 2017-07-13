@@ -1,4 +1,5 @@
-/********************************** General
+/********************************** 
+General
 *********************************/
 body {
   background-color: snow;
@@ -26,7 +27,9 @@ body {
     align-items: center;
     justify-content: center;
 }
-/********************************** Newspaper details
+
+/********************************** 
+Newspaper details
 *********************************/
 h1, h3 {
   display: inline-block;
@@ -68,9 +71,6 @@ p {
 p:first-child:first-letter {
   color: red;
 }
-
-/********************************** Add animations here
-*********************************/
 .newspaper {
   background-color:ivory;
   border-radius: 5% 5% 1% 1%;
@@ -91,3 +91,8 @@ p:first-child:first-letter {
   justify-content: center;
 
 }
+
+/********************************** 
+Add animations here
+*********************************/
+
