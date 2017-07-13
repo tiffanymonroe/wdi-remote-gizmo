@@ -24,9 +24,19 @@ _After this lesson students will be able to:_
 
 # Setup
 
-* In `student_examples` for today, create a folder `jquery_control_flow`
-* Inside `jquery_control_flow`, create an `app.js`, `index.html`, and `style.css`
-* Link them together, and include jQuery `https://code.jquery.com/`
+* In `student_examples` for today, create a folder `jquery_and_control_flow`
+* Inside `jquery_and_control_flow`, touch 
+	* `app.js`
+	* `index.html`
+	* `style.css`
+
+* Open `index.html` in the browser.
+
+* Link style.css. Make your body background 'azure' to test the css.
+
+* Add app.js script. Test with a console.log that shows up in Chrome.
+
+* Include jQuery `https://code.jquery.com/`. Test with `$` in your `app.js`
 
 <br>
 <hr>
@@ -52,6 +62,39 @@ Write a function that will add an `h2` with the text "Just getting started" to t
 
   addH2();
 ```
+
+If nothing shows up when you run the function, why might that be? Hint: has the DOM loaded before the script runs?
+
+```javascript
+$(() => {
+  const addH2 = () => {
+    $h2 = $('<h2>').text("Just getting started");
+    $('body').append($h2);
+  }
+
+  addH2();
+});
+```
+
+We can add the window onload function. Question: does the following code work? Why or why not:
+
+```javascript
+// Code is loaded before DOM loaded
+console.log('hi');
+ 
+const addh2 = () => {
+  $newH2 = $('<h2>').text('GOOD MORNING GIZMO!');
+  $('body').append($newH2);
+}
+
+// Code is loaded after DOM loaded                                                            
+$(() => {
+
+  addh2();
+
+});
+```
+
 
 &#x1F535; **Activity**
 
@@ -79,6 +122,12 @@ Write a function that will change the existing `h2` to have the text "Getting wa
 
 * Write a function that will change the text of the existing H2
 
+&#x1F535; **Activity**
+
+* Write a function that will remove the H2, and replace it with an image of "Oyster Smiling"
+
+![](http://i.imgur.com/k6y31P8.png)
+
 <br>
 <hr>
 
@@ -100,9 +149,9 @@ Eventually, we would like to invoke a function `generateQuilt()` that will build
 
 ### Setup
 
-Comment out the `app.js` script from your `index.html`
-
-Create a new file called `quilt.js` and link it to the `index.html`
+* Close `app.js`
+* Remove the `app.js` script from your `index.html`
+* Create a new file called `quilt.js` and link it to the `index.html`
 
 <br>
 <hr>
