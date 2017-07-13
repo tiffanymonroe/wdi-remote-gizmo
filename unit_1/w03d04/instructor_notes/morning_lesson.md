@@ -36,7 +36,7 @@ _After this lesson students will be able to:_
 
 * Add app.js script. Test with a console.log that shows up in Chrome.
 
-* Include jQuery `https://code.jquery.com/`. Test with `$` in your `app.js`
+* Include jQuery `https://code.jquery.com/`. Place it **before** app.js. Test with `$` in your `app.js`
 
 <br>
 <hr>
@@ -177,7 +177,7 @@ Eventually, we would like to invoke a function `generateQuilt()` that will build
   $('body').append($square);
 ```
 
-```javascript
+```css
 .square {
   height: 50px;
   width: 50px;
@@ -214,7 +214,7 @@ This is a DRY way to make a grid of 1000 divs.
 
 &#X1F440; **Observe**
 
-I would like to be able to generate these squares with a chosen number of squares.
+I would like a convenient way to generate more squares.
 
 We can wrap this process in a function:
 
@@ -300,13 +300,26 @@ const generateSquares = (numberOfSquares) => {
   for (let i=1; i <= numberOfSquares; i++) {
     console.log(i);
     const $square = $('<div>').addClass('square');
-    $square.css('background-color', 'rgb(23, 240, 83)';
+    $square.css('background-color', 'rgb(23, 240, 83)');
     $('body').append($square);
   }
 }
 ```
 
 The **rgb** value is a **string** within the `.css()` method.
+
+<br>
+
+&#x1F535; **Activity - Fill the squares**
+
+* Give the squares a random rgb color
+
+<br>
+
+## Color each square with a random color
+
+
+&#X1F440; **Observe**
 
 Let's make a function that will return a **string** with **random rgb values**.
 
@@ -335,7 +348,7 @@ Since it is inside a loop, it will run each time the loop runs, giving us a rand
 
 <br>
 
-
+&#x1F535; **Activity - Fill the squares**
 
 * Give each square a random rgb color
 
