@@ -41,7 +41,9 @@ _After this lesson students will be able to:_
 <br>
 <hr>
 
-# Control flow and jQuery
+# DOM Manipulation
+
+**jQuery and control flow**
 
 jQuery **is** JavaScript, it just looks different to the regular JS.
 
