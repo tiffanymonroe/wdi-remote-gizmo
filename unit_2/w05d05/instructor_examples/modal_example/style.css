@@ -1,0 +1,67 @@
+body {
+	background-image: url("https://img.clipartfox.com/e9c350a78039ac9f7a69c6dcd7b98aee_bridge-card-game-funny-quotes-clipart-bridge-card-game_820-533.jpeg");
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+	background-position: center;
+}
+
+#modal {
+
+	position: fixed;
+	top: 0;
+	left: 0;
+
+	height: 100%;
+	width: 100%;
+
+	z-index: 1;
+
+	background-color: rgba(0,0,0,0.4);
+
+	overflow: auto;
+
+	/*Start this off with "none" and this will change dynamically when we click on the About the Game button and the Close button*/
+	display: none;
+}
+
+#modal-text-box {
+	background-color: white;
+
+	height: 350px;
+	width: 550px;
+	border-radius: 2px;
+
+	margin: 150px auto;
+	border-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
+
+	padding: 2%;
+
+	line-height: 120%;
+}
+
+#modal-header {
+	font-family: "Arial Black";
+	padding-bottom: 15px;
+}
+
+#modal-body {
+	font-family: arial;
+}
+
+#modal-footer {
+	font-family: arial;
+	text-align: right;
+}
+
+.modal-buttons {
+	padding: 14px 18px;
+	background-color: #677996;
+	border: none;
+	outline: none;
+	border-radius: 2px;
+
+	color: white;
+	font-family: arial;
+
+	cursor: pointer;
+}
