@@ -38,7 +38,7 @@ We're going to review DOM Events and `this` in order to create a simple sentence
 1.  Open up in up jqueryThisWordPlay in the student_examples folder
 2.  Read over the html, and css
 3.  make sure the javascript is connected `console.log('djslfjds')`
-s
+
 
 #### Let's get started
 First, lets create the sentence object inside of the onload.  What properties and method might this need?
@@ -91,7 +91,7 @@ This object will hold our sentence which will appear in the `p` tag next to the 
 
 ```
 
-4. Now we have the current text, what must we do now?
+4. Now that we have the current text, what must we do now?
 
 * concat the selected word with the property `sentence` on the `sentenceObject`
 
