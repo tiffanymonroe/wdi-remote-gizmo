@@ -1,0 +1,26 @@
+* {
+  border: 1px solid teal;
+}
+
+#container {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+}
+
+.row-1, .row-2, .row-3 {
+  width: 94%;
+  height: 28%;
+  flex-direction: row;
+  margin: auto;
+}
+
+.row-1 img {
+  width: 100%;
+  height: auto;
+}
+
+.row-2 p {
+  font-size: 36px;
+  padding: 25%;
+}
