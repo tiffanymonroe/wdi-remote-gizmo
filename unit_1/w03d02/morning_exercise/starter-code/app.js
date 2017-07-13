@@ -1,5 +1,5 @@
 //document ready - do not load/run until html is fully loaded
-$( function() {
+$( ()=> {
 
   //select buttons
   const plusBtn = $( ".plus" );
