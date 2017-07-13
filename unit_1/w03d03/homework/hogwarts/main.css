@@ -3,4 +3,10 @@ body {
   width: 100%;
   height: auto;
   text-align: center;
+  color: #F8F7FF;
+
+}
+
+.pet {
+  font-family: fantasy;
 }
