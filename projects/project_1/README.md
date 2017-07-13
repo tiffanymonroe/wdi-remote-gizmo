@@ -182,10 +182,13 @@ The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
 
 ## Inspiration - Projects by Previous Students
 
+* [Egghunt](https://j-hha.github.io/egg_hunt/)
 * [Blackjack](https://cardosi.github.io/)
 * [Piggy](https://shreiya.github.io/piggy/)
 * [Tic Tac Toe](http://sepowitz.github.io/tic-tac-toe/)
+* [Overwatch](http://jerricabobadilla.me/payload/)
 * [Connect Four](http://katiezhou.github.io/connectfour.html)
+* [Core Defense](https://dnialwill.github.io/project_1/)
 * [Blackjack pixel art](http://kwwalter.github.io/retro-blackjack/)
 * [Snake](https://awdriggs.github.io/snake/)
 
