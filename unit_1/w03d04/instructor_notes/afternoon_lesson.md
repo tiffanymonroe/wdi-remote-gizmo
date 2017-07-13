@@ -8,6 +8,10 @@ Type: Lesson<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page<br>
 Topics: jQuery click events<br>
+Instructor demo code: `instructor_example/events_example` <br>
+Student starter code:
+`student_examples/events`
+
 <hr>
 
 ### LESSON OBJECTIVES
@@ -19,17 +23,7 @@ _after this lesson, students will be able to:_
 
 <hr>
 
-### SETUP
 
-* In the `student_examples` directory for today
-* Make a _directory_ called `click_events`
-* Inside the `click_events` directory, make: `index.html`, `app.js`, and `style.css`
-* Link them together
-* Include the jQuery CDN from `https://code.jquery.com/`
-* Write a console.log into `app.js`
-* Load the `index.html` into your browser
-* Check in the developer console that the console.log appears and that the files are linked together
-* Check that jQuery has installed with `$`
 
 <br>
 <hr>
@@ -40,6 +34,11 @@ _after this lesson, students will be able to:_
 
 # BROWSER EVENTS
 
+&#x1F535; **Demo** 
+
+Interacting with the page (`events_example`)
+
+
 Every kind of interactivity in the browser is an event: clicks, mouseovers, key presses, scrolling, resizing, loading the page, and more.
 
 When you interact with the browser it checks to see if there is a _listener_ for that interaction.
@@ -47,6 +46,15 @@ When you interact with the browser it checks to see if there is a _listener_ for
 If there is a _listener_ present, the browser will try to run any _handlers_ for those interactions.
 
 A _handler_ is just a function that runs a desired procedure.
+
+<br>
+<hr>
+
+### SETUP
+
+* `git pull upstream master`
+* Go to `student_examples`
+* Open up the `events` directory. Inside it is the usual setup.
 
 <br>
 <hr>
