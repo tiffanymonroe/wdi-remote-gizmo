@@ -187,9 +187,11 @@ const leaveTheShire = () => {
   console.log('Leaving the Shire');
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 
-  const $rivendell = $('#The-Shire').children();
+  const $rivendell = $('#The-Shire').children().eq(1);
   $rivendell.remove('#The-Shire');
   $('#Rivendell').append($rivendell);
+
+  //I looked at Brooke's code because Rivendell and The Shire kept switching places. I didn't know about the .eq.
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -202,10 +204,17 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
-
+  console.log('Introducing Aragorn');
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
+  $('aside').children().eq(3).text('Aragorn');
+
+  //Used the earlier help from Brooke's code
+
+
   // hint: You can get a list of elements by tag name, such as 'aside'
+
+
 
 };
 
