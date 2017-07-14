@@ -2,11 +2,20 @@
 
 ## Lesson Objectives
 
+1. Describe what a web server is
 1. Install Node packages
 1. Set up a basic Express server
 1. Set up a basic GET route
 1. Use nodemon to restart your sever when your code changes
 1. Save a record of what packages your application uses
+
+## Describe what a web server is
+
+A server is just a computer that is always on and connected to the internet.  Other computers can try to connect to it to retrieve information
+
+![Request Response Cycle](https://cdn.zapier.com/storage/photos/9ec65c79de8ae54080c1b417540469a6.png)
+
+A web server is just a server that sends dynamic HTML pages, meaning that the HTML is pretty much the same for every page, but is altered slightly depending on the data that is requested.  Think of amazon.com where one book's page looks pretty similar to another book's page, just with different text.
 
 ## Install Node packages
 
