@@ -83,7 +83,17 @@ const makeHobbits = () => {
 
   // 1. display an unordered list of the hobbits in the shire.
 
+  const $hobbitList = $('<ul>');
+  $('#The-Shire').append($hobbitList);
+
   // 2. give each hobbit a class of "hobbit"
+
+  for (let i=0; i < hobbits.length; i++){
+
+
+    $hobbitList.append('<li>' + hobbits[i] + '</li>');
+    $('li').addClass('hobbit');
+  }
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
@@ -100,8 +110,13 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+  const $theRing = $('<div>').attr('id', 'the-ring');
 
   // 2. add the ring as a child of Frodo
+
+  const $hobbits = $('.hobbit').toArray();
+  console.log($hobbits);
+  $hobbits[0].append($theRing);
 
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
