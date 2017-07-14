@@ -1,0 +1,51 @@
+body {
+  border-top: 5px solid magenta;
+  border-bottom: 5px solid magenta;
+}
+
+h1 {
+  text-align: center;
+  font-family: fantasy;
+  text-transform: uppercase;
+}
+
+h3 {
+  color: pink;
+}
+
+body {
+  padding: 1em;
+}
+
+nav {
+    margin-bottom: 25px;
+}
+
+nav a {
+  text-decoration: none;
+  color: green;
+  padding: 1em;
+}
+
+nav a:hover {
+  background-color: lime;
+}
+
+.project {
+  float: left;
+  width: 30%;
+  padding: 1%;
+}
+
+.piggy {
+  border-radius: 500px;
+}
+
+img {
+  width: 25%;
+  border: 1px solid black;
+}
+
+table, tr, td, th {
+  border: 1px dotted black;
+}

@@ -1,0 +1,35 @@
+html, body {
+  height:100%;
+}
+
+body {
+  background-image: url(images/grass.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
+/*https://pixabay.com/en/dew-morning-meadow-bokeh-morgentau-1507498/*/
+
+h1 {
+  color: white;
+  font-size: 6em;
+  text-align: center;
+  position: sticky;
+  top: 20%;
+  text-shadow: 5px 2px #000000;
+}
+
+#howToPlay {
+  background-color: rgba(255,255,255,.7);
+  border-radius: 10px;
+  margin-left: 10%;
+  margin-right: 10%;
+  text-align: center;
+  position: sticky;
+  top: 35%;
+  padding: 10px;
+}
+
+.note {
+  color: green;
+}

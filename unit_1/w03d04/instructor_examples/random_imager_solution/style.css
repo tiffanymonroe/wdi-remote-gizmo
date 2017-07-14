@@ -1,0 +1,16 @@
+body {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  font-family: Verdana;
+}
+
+.square {
+  display: flex;
+  height: 100px; width: 100px;
+  background: dimgrey;
+  color: white;
+  align-items: center;
+  text-align: center;
+  cursor:pointer;
+}

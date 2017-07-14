@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 const adventurer = {
   name: "Beowulf",
   hitpoints: 1000,
@@ -23,3 +24,20 @@ adventurer.companion = {
 adventurer.companion.name = "Susan"
 
 adventurer.companion2 = "insect"
+=======
+// console.log('objects2.js');
+
+const adventurer = {
+  name: 'Bilbo',
+  hitpoints: 100,
+  happy: true,
+  belongings: ['The One Ring', 'scroll', 'jerk-chicken'],
+  companion: {
+    name: 'Frodo',
+    feet: 'hairy'
+  }
+};
+
+adventurer.companion.name = "Sam";
+console.log(adventurer.companion);
+>>>>>>> 0c820cbd9a77f6606120f80cb43a0125d8f04fc0
