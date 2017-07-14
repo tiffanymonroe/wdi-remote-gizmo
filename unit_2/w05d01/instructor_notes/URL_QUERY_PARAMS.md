@@ -4,7 +4,6 @@
 
 1. Read URL parameters
 1. Place routes in correct order
-1. Read Query Parameters
 
 ## Read URL parameters
 
@@ -69,27 +68,6 @@ app.get('/fruits/:index', (req, res) => {
 });
 
 app.listen(3000,() => {
-    console.log('listening');
-});
-```
-
-## Read Query Parameters
-
-You can pass parameters into your application from the browser via query parameters:
-
-http://localhost:3000/?username=matt&password=foo
-
-We can read this from within our route handler callback:
-
-```javascript
-const express = require('express');
-const app = express();
-
-app.get('/', (req, res) => {
-    res.send(req.query);
-});
-
-app.listen(3000, () => {
     console.log('listening');
 });
 ```
