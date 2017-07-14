@@ -17,6 +17,8 @@ A server is just a computer that is always on and connected to the internet.  Ot
 
 A web server is just a server that sends dynamic HTML pages, meaning that the HTML is pretty much the same for every page, but is altered slightly depending on the data that is requested.  Think of amazon.com where one book's page looks pretty similar to another book's page, just with different text.
 
+In this unit, we'll be writing web applications that a computer will run that will allow the computer to respond to other computers that try to connect to it.  We'll write this code in JavaScript using Node.js, which allows us to write computer applications using JavaScript.
+
 ## Install Node packages
 
 - People will write code and make it available online for others to use
@@ -48,7 +50,7 @@ let's install the library `express`:
 npm install express
 ```
 
-Express.js is a framework that makes it easier to build web-servers
+Express.js is a framework that makes it easier to build web-applications
 
 ## Set up a basic Express server
 
