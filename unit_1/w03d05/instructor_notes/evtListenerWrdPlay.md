@@ -10,6 +10,12 @@ Competencies: jQuery, Javascript, DOM <br>
 
 ---
 
+## setup
+1.  open up wordplayss
+2. make sure everything is linked correctly
+3. take a few minutes to read the code
+
+
 ## Add the window onload function to our code
 
 ```
