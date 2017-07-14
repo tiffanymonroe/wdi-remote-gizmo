@@ -130,9 +130,9 @@ const keepItSecretKeepItSafe = () => {
 // ============
 // Chapter 4
 // ============
-console.log('Make baddies');
-const makeBaddies = () => {
 
+const makeBaddies = () => {
+  console.log('Make baddies');
   // 1. display an unordered list of baddies in Mordor
 
   const $baddyList = $('<ul>');
@@ -158,10 +158,11 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
-
+  console.log("Make buddies");
   // 1. create an aside tag and append it to middle-earth below mordor
 
   const $buddyList = $('<aside>');
+  $('#Mordor').append($buddyList);
 
   // 2. display an unordered list of buddies in the aside
 
@@ -173,7 +174,7 @@ const makeBuddies = () => {
 
   $buddyList.children().addClass('buddy');
   }
-  
+
 };
 
 // COMMIT YOUR WORK
@@ -183,8 +184,12 @@ const makeBuddies = () => {
 // Chapter 6
 // ============
 const leaveTheShire = () => {
-
+  console.log('Leaving the Shire');
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+
+  const $rivendell = $('#The-Shire').children();
+  $rivendell.remove('#The-Shire');
+  $('#Rivendell').append($rivendell);
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
