@@ -129,4 +129,21 @@ Suggested functionality:
 -----------
 W_DE__A_D
 ```
-0
+5. Get crazy and hook it up to the DOM!
+
+<hr>
+<details><summary>Project 1 Inspiration</summary>
+
+Inspiration - Projects by Previous Students
+
+* [Egghunt](https://j-hha.github.io/egg_hunt/)
+* [Blackjack](https://cardosi.github.io/)
+* [Piggy](https://shreiya.github.io/piggy/)
+* [Tic Tac Toe](http://sepowitz.github.io/tic-tac-toe/)
+* [Overwatch](http://jerricabobadilla.me/payload/)
+* [Connect Four](http://katiezhou.github.io/connectfour.html)
+* [Core Defense](https://dnialwill.github.io/project_1/)
+* [Blackjack pixel art](http://kwwalter.github.io/retro-blackjack/)
+* [Snake](https://awdriggs.github.io/snake/)
+
+</details>
