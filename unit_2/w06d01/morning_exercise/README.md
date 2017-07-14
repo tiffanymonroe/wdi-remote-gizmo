@@ -6,7 +6,6 @@
 Title: Caesar Cipher <br>
 Type: Morning Exercise<br>
 Original Creator:  WDIR-Panthalassa - Thom Page<br>
-    Course: WDIR-Hopper<br>
 Competencies: CS, JavaScript
 
 ---
