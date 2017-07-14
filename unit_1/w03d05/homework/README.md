@@ -114,6 +114,11 @@ Suggested functionality:
    * if `true` call overMessage()
    * if `false` call playGame() **caution** this may cause an infinite loop without the correct logic
 
+# CSS Videos
+
+[CSS Transform](https://youtu.be/Gu-HBBZLyjg?list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
+[CSS Transitions](https://youtu.be/Xu3SrQhtBqw?list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
+[CSS Animations](https://youtu.be/9RfHG3K8U_Q?list=PLdnONIhPScST0Vy4LrIZiYKpFNoxgyH7J)<br>
 
 # Hungry for More?
 
