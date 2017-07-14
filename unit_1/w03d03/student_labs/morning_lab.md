@@ -19,9 +19,9 @@ You are not expected to remember these commands. This is an exercise to get you 
 
 * `git pull upstream master`
 
-* Open up the `dom_example` folder in your `student_examples` directory for today.
+* Open up the `dom_example` folder in your `student_labs` directory for today.
 
-* Load the index.html file into the browser. You should see a kitten and a bungalow:
+* Load the `index.html` file into the browser. You should see a kitten and a bungalow:
 
 ![](https://i.imgur.com/XRNN2TE.png)
 
@@ -40,15 +40,21 @@ You are not expected to remember these commands. This is an exercise to get you 
 
 Use `document.querySelector()` to find an element in the DOM.
 
- Use `document.querySelectorAll()` to find a collection of elements in the DOM.
+Use `document.querySelectorAll()` to find a collection of elements in the DOM.
 
 **querySelector and querySelectorAll commands:**
 
-- e.g. `document.querySelector('div');` will give us the first div that's available to us.
-- starts at the root element (`<html>`) and performs a depth first search
-	- looks at children of current element and their children before moving onto a sibling of the current element
+- `document.querySelector('div');` will give us the first div that's available to us.
 - `document.querySelector('#someId')` will give the element with an id `someId`. Note the use of the pound sign to query for id.
 - `document.querySelectorAll('.someClass')` will give us an **array of elements** with the class `someClass`. Note the use of the period to query for class.
+
+We can save the results of our search to a variable:
+
+```javascript
+const elem = document.querySelector('#someId');
+
+console.log(elem);       // the element with id 'someId'
+```
 
 **PROMPTS**
 	
@@ -82,7 +88,7 @@ And **not this** (a single element)
 
 ## Alter an element's HTML
 
-We can assign the return value of `document.querySelector()` to a variable.
+As we have seen, we can assign the value of `document.querySelector()` to a variable.
 
 EXAMPLE:
 
@@ -90,13 +96,13 @@ EXAMPLE:
 const foundDiv = document.querySelector('div');
 ```
 
-- The return value of querySelector, and therefore the variable `foundDiv` is itself an object which has properties.
-- We can change the content of a DOM element (and therefore the HTML in the web page) by altering the .innerHTML property of that object.
+- The value of the variable `foundDiv` is an object with properties.
+- We can change the content of a DOM element (and therefore the HTML in the web page) by altering the `.innerText` property of that object.
 
 ```javascript
 const foundDiv = document.querySelector('div');
 
-foundDiv.innerHTML = 'awesome';
+foundDiv.innerText = 'awesome';
 ```
 
 > => will change the div text to read 'awesome'.

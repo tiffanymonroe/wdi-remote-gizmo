@@ -3,7 +3,7 @@
 # WDI-GIZMO
 
 ---
-Title: Control flow and jQuery<br>
+Title: DOM manipulation<br>
 Type: Lesson<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page <br>
@@ -24,14 +24,26 @@ _After this lesson students will be able to:_
 
 # Setup
 
-* In `student_examples` for today, create a folder `jquery_control_flow`
-* Inside `jquery_control_flow`, create an `app.js`, `index.html`, and `style.css`
-* Link them together, and include jQuery `https://code.jquery.com/`
+* In `student_examples` for today, create a folder `dom_manipulation`
+* Inside `dom_manipulation`, touch 
+	* `app.js`
+	* `index.html`
+	* `style.css`
+
+* Open `index.html` in the browser.
+
+* Link style.css. Make your body background 'azure' to test the css.
+
+* Add app.js script. Test with a console.log that shows up in Chrome.
+
+* Include jQuery `https://code.jquery.com/`. Place it **before** app.js. Test with `$` in your `app.js`
 
 <br>
 <hr>
 
-# Control flow and jQuery
+# DOM Manipulation
+
+**jQuery and control flow**
 
 jQuery **is** JavaScript, it just looks different to the regular JS.
 
@@ -52,6 +64,39 @@ Write a function that will add an `h2` with the text "Just getting started" to t
 
   addH2();
 ```
+
+If nothing shows up when you run the function, why might that be? Hint: has the DOM loaded before the script runs?
+
+```javascript
+$(() => {
+  const addH2 = () => {
+    $h2 = $('<h2>').text("Just getting started");
+    $('body').append($h2);
+  }
+
+  addH2();
+});
+```
+
+We can add the window onload function. Question: does the following code work? Why or why not:
+
+```javascript
+// Code is loaded before DOM loaded
+console.log('hi');
+ 
+const addh2 = () => {
+  $newH2 = $('<h2>').text('GOOD MORNING GIZMO!');
+  $('body').append($newH2);
+}
+
+// Code is loaded after DOM loaded                                                            
+$(() => {
+
+  addh2();
+
+});
+```
+
 
 &#x1F535; **Activity**
 
@@ -79,6 +124,12 @@ Write a function that will change the existing `h2` to have the text "Getting wa
 
 * Write a function that will change the text of the existing H2
 
+&#x1F535; **Activity**
+
+* Write a function that will remove the H2, and replace it with an image of "Oyster Smiling"
+
+![](http://i.imgur.com/k6y31P8.png)
+
 <br>
 <hr>
 
@@ -100,14 +151,17 @@ Eventually, we would like to invoke a function `generateQuilt()` that will build
 
 ### Setup
 
-Comment out the `app.js` script from your `index.html`
-
-Create a new file called `quilt.js` and link it to the `index.html`
+* Close `app.js`
+* Remove the `app.js` script from your `index.html`
+* Create a new file called `quilt.js` and link it to the `index.html`
 
 <br>
 <hr>
 
 ### Let's begin
+
+&#X1F440; **Observe**
+
 
 * Write a for loop that counts from 1 to 1000
 
@@ -125,7 +179,7 @@ Create a new file called `quilt.js` and link it to the `index.html`
   $('body').append($square);
 ```
 
-```javascript
+```css
 .square {
   height: 50px;
   width: 50px;
@@ -150,9 +204,19 @@ This is a DRY way to make a grid of 1000 divs.
 
 <br>
 
+&#x1F535; **Activity - Make your own quilt**
+
+* Generate 1000 square divs (inline-block) using a loop, appending each to the body
+* Your squares won't be visible unless you give them a background color or border
+
+<br>
+
+
 ### Put the loop into a function
 
-I would like to be able to generate these squares with a chosen number of squares.
+&#X1F440; **Observe**
+
+I would like a convenient way to generate more squares.
 
 We can wrap this process in a function:
 
@@ -179,7 +243,15 @@ generateSquares();
 
 <br>
 
+&#x1F535; **Activity - function**
+
+* Put the loop into a function - when you invoke the function, the loop will run
+
+<br>
+
 ### Give the function an argument
+
+&#X1F440; **Observe**
 
 * Provide the function with a parameter and argument, and run the loop that many times:
 
@@ -197,7 +269,15 @@ generateSquares(1000);
 
 <br>
 
+&#x1F535; **Activity - function**
+
+* When you invoke the function with the number of desired squares as an argument, the loop will generate the desired number of squares.
+
+<br>
+
 ## Color the squares
+
+&#X1F440; **Observe**
 
 ### RGB
 
@@ -222,13 +302,26 @@ const generateSquares = (numberOfSquares) => {
   for (let i=1; i <= numberOfSquares; i++) {
     console.log(i);
     const $square = $('<div>').addClass('square');
-    $square.css('background-color', 'rgb(23, 240, 83)';
+    $square.css('background-color', 'rgb(23, 240, 83)');
     $('body').append($square);
   }
 }
 ```
 
 The **rgb** value is a **string** within the `.css()` method.
+
+<br>
+
+&#x1F535; **Activity - Fill the squares**
+
+* Give the squares a random rgb color
+
+<br>
+
+## Color each square with a random color
+
+
+&#X1F440; **Observe**
 
 Let's make a function that will return a **string** with **random rgb values**.
 
@@ -257,7 +350,15 @@ Since it is inside a loop, it will run each time the loop runs, giving us a rand
 
 <br>
 
+&#x1F535; **Activity - Fill the squares**
+
+* Give each square a random rgb color
+
+<br>
+
 ### Add text to each square
+
+&#X1F440; **Observe**
 
 The quilt is not quite ugly enough. Let's put some numbers in each square.
 
@@ -277,34 +378,27 @@ const generateSquares = () => {
 
 <br>
 
+&#x1F535; **Activity - Fill the squares**
+
+* Make each square display a number according to its place in the loop
+
+<br>
+
 ### For fun, give each square an id, the same as its number
+
+&#X1F440; **Observe**
 
 `$square.attr('id', 'square' + i);`
 
 <br>
-<hr>
-
-**End of Horrible Digital Quilt**
-
-<br>
-<hr>
-
-&#x1F535; **Activity - Make your own quilt**
-
-* Generate 1000 square divs (inline-block) using a loop, appending each to the body
-
-&#x1F535; **Activity - function**
-
-* Put the loop into a function such that you invoke the function with the number of desired squares
-
-&#x1F535; **Activity - Fill the squares**
-
-* Give each square a random rgb color
-* Make each square display a number according to its place in the loop
 
 &#x1F535; **Activity - Interpolate an id**
 
 * Make each square display a number according to its place in the loop. In Elements tab: `id="square1"` etc.
+
+<br>
+
+**End of Horrible Digital Quilt**
 
 <br>
 <hr>
