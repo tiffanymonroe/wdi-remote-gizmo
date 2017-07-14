@@ -1,0 +1,19 @@
+body {
+  font-family: 'Roboto Condensed', sans-serif;
+}
+
+ul li{
+  display: inline-block;
+  border: 2px solid black;
+  padding: 1em;
+}
+
+
+#sentence h5 {
+  color: purple;
+  display: inline-block;
+}
+
+#sentence p {
+  display: inline-block;
+}

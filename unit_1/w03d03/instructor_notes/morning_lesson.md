@@ -6,8 +6,9 @@
 Title: Intro to the DOM<br>
 Duration: 1.5 hrs<br>
 Creator: Thom Page<br>
-Topics: the DOM, DOM manipulation with jQuery<br>
-Associated files: `instructor_examples/dom_example`<br>
+Topics: Intro to the DOM<br>
+Instructor files: `instructor_examples/dom_example`<br>
+Student files: `student_examples/dom_example`
 
 ---
 
@@ -17,13 +18,13 @@ _after this lesson, students will be able to__
 
 * Explain the difference between HTML and the Document Object Model
 * Use DOM commands to interact with a page
-* Include the jQuery library in a project
-* Use just a few jQuery commands to interact with the DOM
 
 ---
 # Let's start from the beginning
 
-**demo** `instructor_examples/dom_example`
+* `git pull upstream master`
+* open `student_examples/dom_example` 
+* load `index.html` in the browser
 
 # HTML
 
@@ -60,42 +61,22 @@ The nested objects form a tree-like structure -- the DOM tree.
 
 ![DOM Tree](http://www.webstepbook.com/supplements/slides/images/dom_tree.gif)
 
+The HTML can be considered 'ingredients' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
 
 ### Console `Ctrl ⌘ J`
 
-In the console, we are in JavaScript-land and can interact with our page using JavaScript.
-
-The HTML can be considered 'ingredients' from which the DOM is 'cooked'. We interact with the HTML structure by using the objects cooked-up by the browser.
-
-Let's interact with those objects in the console. First, let's look at our `context` within the browser. Context is not to be confused with scope. Context shows us which object we are currently in.
-
-##### the Window object
-
-- The Window contains methods and properties. Type in `window.` to see a list of all properties and methods.
-- Location property is the URL of the page.
-- The `window` object contains the `document` object where the HTML is represented.
-
-
-
-`this` gives us the `Window` object, the top-level context. There is no 'parent' outside of this object. All of the DOM objects are nested inside of the `Window` object.
-
+In the console, we are in JavaScript-land and can interact with those JavaScript objects that were cooked up from the HTML.
 
 
 ### The document object
 
-In object terminology, the document is a property of the Window.
-
-```javascript
-window.document
-```
-
-Shorthand:
+Get all of the objects that Chrome has cooked up:
 
 ```javascript
 document
 ```
 
-The document looks like HTML in the console, but is an object that contains more objects.
+The document looks like HTML in the console, but is an object that contains more objects. The HTML document has child `<body>`, and there is a corresponding object:
 
 ```javascript
 document.body
@@ -103,24 +84,26 @@ document.body
 
 Shows us all the objects within the body tag.
 
+There is a `<div>` that is a child of `<body>`.
 
-11:25
+We cannot just grab `document.body.div`, but `document` contains a bunch of useful methods for accessing and manipulating the DOM.
 
-## DOM commands
+In Chrome console:
 
-In Chrome console
+```javascript
+document.querySelector('#container');
+```
 
-The `document` is the object on which we will perform all of our DOM commands.
+Will give us the element with id 'container'.
 
-`document.head`
-`document.body`
+```javascript
+document.querySelectorAll('.info');
+```
 
-We cannot just grab `document.body.div`, but we can ask for the childNodes of `document.body`
+Will give us all elements with class 'info'
 
-`document.body.childNodes`
-
-For retrieving child nodes, `document` contains a bunch of useful methods for accessing and manipulating the DOM.
-
+<br>
+<hr>
 
 11:30
 
@@ -133,13 +116,13 @@ In Chrome console
 When you select an element from the DOM, save it a variable for handy reference.
 
 ```javascript
-const someImg = document.querySelector('#first-img');
+const kitten = document.querySelector('#first-img');
 ```
 
-Change the attribute `src`
+Change the attribute `src`, which is **property** of the object:
 
 ```javascript
-someImg.src="http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
+kitten.src="http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
 ```
 **Create an element**
 
@@ -148,24 +131,27 @@ Created elements will not show until they are **appended** to the DOM.
 * **create** an element first ...
 
 ```javascript
-const someElement = document.createElement('div');
+const elem = document.createElement('div');
 ```
+
+* change a property (text within the element)
+
+```javascript
+elem.innerText = 'Let there be light'
+```
+
+Still will not show up ...
 
 * then **append** it to the body of the page
 
 ```javascript
-document.body.appendChild(someElement);
+document.body.appendChild(elem);
 ```
 
-**Perform further operations on an element before appending it**
+You can see in the **Elements** tab whether the element has appended:
 
-```javascript
-const someElement = document.createElement('div');
+![](https://i.imgur.com/2mJQ9Dl.png)
 
-someElement.innerText = "This is some non-descriptive text";
-
-document.body.appendChild(someElement);
-```
 
 **We can create any tag we want, such as a 'p'**
 
@@ -191,9 +177,9 @@ document.body.appendChild(someP);
 * If the script is put in the head:
 
 ```javascript
-const catElem = document.getElementById('first-img');
+const kitten = document.getElementById('first-img');
 
-console.log(catElem);
+console.log(kitten);
 ```
 
 > => null
@@ -208,29 +194,47 @@ console.log(catElem);
 </html>
 ```
 
+We can now work on the DOM, and like before, change any properties on existing elements.
+
+```javascript
+kitten.src = "http://doughnutkitten.com/PNGs/1_doughnut_kitten_Tania_Hennessy.png"
+```
+
+![](https://i.imgur.com/CkjLVtP.png)
+
 <br>
 
-### Patterns of DOM manipulation
-**Basics / common patterns**
+**Prompts**
 
-* Get the element with id 'container', save it to a variable, and console.log it.
+&#x1F535; Get the element with id 'container', save it to a variable, and console.log it.
 
-* Create a div, saving it to a variable.
+![](https://i.imgur.com/0IvO1kd.png)
 
-* Give the div some text.
+&#x1F535; Create a div, saving it to a variable.
 
-We can append not just to the body, but also to elements that we have previously retrieved. The new elements will show if something in the chain exists in the body (either already-exisiting in the body or has been appended to the body).
+&#x1F535; Give the div some text with `.innerText =`.
 
-* Append the div to the element with id 'container' -- we have already retrieved it, no need to retrieve it again.
+**Append to previously retrieved element:**
 
-We can add elements to elements we have created.
+&#x1F535; Append the new div to the element with id 'container' -- we have already retrieved it, no need to retrieve it again. `.appendChild()`.
 
-* Create a p.
+Confirm that new div is **inside** container div (it is a sibling of the **section**s):
 
-* Append the p to the new div.
+![](https://i.imgur.com/5UwEaWD.png)
 
 <br>
 <hr>
+
+---
+12:00
+
+Do the [DOM commands lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/student_labs/morning_lab.md)
+
+You are not expected to remember these JS commands. This is just an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
+
+---
+
+# Notes
 
 **Datatypes - arrays vs single elements**
 
@@ -253,7 +257,7 @@ This will not display any changes on the page. You would want to change the inne
 <br>
 <hr>
 
-## We won't be using very many DOM commands
+**We won't be using many commands**
 
 DOM commands fall into a few broad categories:
 
@@ -287,12 +291,3 @@ We will only need a small handful of these commands for now. Here is a sample:
   * node.firstChild
 
 
-12:00
-
----
-
-Do the [DOM commands lab](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_1/w03d03/student_labs/morning_lab.md)
-
-You are not expected to remember these JS commands. This is just an exercise to get you familiar with the concept of the DOM and the pattern of how we interact with it. We will be using jQuery commands in the future.
-
----

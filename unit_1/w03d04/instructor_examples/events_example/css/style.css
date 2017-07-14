@@ -1,0 +1,21 @@
+#click-me {
+  height: 100px; width: 400px;
+  background-color: firebrick;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  font-size: 30px;
+}
+
+#message-box {
+  width: 400px; height: 400px;
+  border: 1px solid black;
+  border-radius: 10px;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.message-box-blue {
+  background-color: blue;
+}
