@@ -92,7 +92,7 @@ const makeHobbits = () => {
 
 
     $hobbitList.append('<li>' + hobbits[i] + '</li>');
-    $('li').addClass('hobbit');
+    $hobbitList.children().addClass('hobbit');
   }
 
   // hint: create a 'ul' outside the loop upon which to append the 'li's
@@ -140,7 +140,8 @@ const makeBaddies = () => {
   // 2. give each of the baddies a class of "baddy"
 
   for (let i=0; i < baddies.length; i++){
-  $baddyList.append('<li>' + baddies[i] + '</li>').addClass('baddy');
+  $baddyList.append('<li>' + baddies[i] + '</li>');
+  $baddyList.children().addClass('baddy');
   }
 
 
@@ -160,10 +161,19 @@ const makeBuddies = () => {
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
+  const $buddyList = $('<aside>');
+
   // 2. display an unordered list of buddies in the aside
+
+  for (let i=0; i < buddies.length; i++){
+  $buddyList.append('<li>' + buddies[i] + '</li>');
+
 
   // 3. give each of the buddies a class of "buddy"
 
+  $buddyList.children().addClass('buddy');
+  }
+  
 };
 
 // COMMIT YOUR WORK
