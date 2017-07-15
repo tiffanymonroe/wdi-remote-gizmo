@@ -1,17 +1,9 @@
 class Person {
   constructor(name, age, eyes, hair) {
-<<<<<<< HEAD
+
     this.name = name;
     this.legs =2;
     this.arms =2;
-=======
-    //properties for all
-    this.legs = 2;
-    this.arms = 2;
-
-    //instance properties (with params)
-    this.name = name;
->>>>>>> 0c820cbd9a77f6606120f80cb43a0125d8f04fc0
     this.age = age;
     this.eyes = eyes;
     this.hair = hair;
