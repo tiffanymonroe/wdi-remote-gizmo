@@ -1,4 +1,4 @@
-# CRUD App with Mongoose - Delete and Update
+(req, res)=># CRUD App with Mongoose - Delete and Update
 
 ## Lesson Objectives
 
@@ -40,7 +40,7 @@ In your index.ejs file
 ## Create a Delete Route
 
 ```javascript
-app.delete('/fruits/:id', function(req, res){
+app.delete('/fruits/:id', (req, res)=>{
     res.send('deleting...');
 });
 ```
@@ -59,7 +59,7 @@ Now, in our server.js file, add:
 
 ```javascript
 //include the method-override package
-var methodOverride = require('method-override');
+const methodOverride = require('method-override');
 //...
 //after app has been defined
 //use methodOverride.  We'll be adding a query parameter to our delete form named _method
@@ -77,8 +77,8 @@ Now go back and set up our delete form to send a DELETE request to the appropria
 Also, have it redirect back to the fruits index page when deletion is complete
 
 ```javascript
-app.delete('/fruits/:id', function(req, res){
-    Fruits.findByIdAndRemove(req.params.id, function(err, data){
+app.delete('/fruits/:id', (req, res)=>{
+    Fruits.findByIdAndRemove(req.params.id, (err, data)=>{
         res.redirect('/fruits');//redirect back to fruits index
     });
 });
@@ -97,8 +97,8 @@ In your `index.ejs` file:
 First the route:
 
 ```javascript
-app.get('/fruits/:id/edit', function(req, res){
-    Fruits.findById(req.params.id, function(err, foundFruit){ //find the fruit
+app.get('/fruits/:id/edit', (req, res)=>{
+    Fruits.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
         res.render(
     		'edit.ejs',
     		{
@@ -140,7 +140,7 @@ Now the EJS:
 ## Create an PUT route
 
 ```javascript
-app.put('/fruits/:id', function(req, res){
+app.put('/fruits/:id', (req, res)=>{
     if(req.body.readyToEat === 'on'){
         req.body.readyToEat = true;
     } else {
@@ -161,14 +161,14 @@ In the `edit.ejs`
 ## Make the PUT Route Update the Model in MongoDB
 
 ```javascript
-app.put('/fruits/:id', function(req, res){
+app.put('/fruits/:id', (req, res)=>{
     if(req.body.readyToEat === 'on'){
         req.body.readyToEat = true;
     } else {
         req.body.readyToEat = false;
     }
     //{new: true} tells mongoose to send the updated model into the callback
-    Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, updatedModel){
+    Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
         res.send(updatedModel);
     });
 });
@@ -179,7 +179,7 @@ We need to pass in {new: true} to tell mongoose to send the updated model into t
 ## Make the PUT Route Redirect Back to the Index Page
 
 ```javascript
-Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, function(err, updatedModel){
+Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
     res.redirect('/fruits');
 });
 ```
