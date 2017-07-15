@@ -14,6 +14,19 @@ const chooseWord = () => {
 
 //Local scope
 
+const game = {
+  guesses: 0,
+  guessedLetters: []
+}
 
+const startGame = () => {
+  game.guesses = 10,
+  guessedLetters = [""],
+  chooseWord();
+}
+
+startGame();
+
+$('#word').append(chooseWord())
 
 }); //end window.onload
