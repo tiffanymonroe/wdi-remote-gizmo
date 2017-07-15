@@ -6,5 +6,20 @@ h1{
   font-family: 'Luckiest Guy';
   font-size: 5em;
 }
+
+#container {
+  width: 70%;
+  height: 500px;
+  margin: auto;
+  display: flex;
+  border: 1px solid red;
+}
+
+img {
+  max-width: 640px;
+  max-height: 110px;
+  display: inline-block;
+  margin: 0 auto;
+}
    cursive;
 /*font-family: 'Indie Flower', cursive;*/
