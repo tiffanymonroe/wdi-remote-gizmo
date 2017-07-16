@@ -9,15 +9,17 @@ const chooseWord = () => {
   return words[randomIndex];
 }
 
+let guesses = 0;
+let guessedLetters = [];
 // console.log(chooseWord());
 
 
 //Local scope
 
-const game = {
-  guesses: 0,
-  guessedLetters: []
-}
+// const game = {
+//   guesses: 0,
+//   guessedLetters: [""]
+// }
 
 const Letter = {
   constructor(value, hidden){
@@ -48,14 +50,12 @@ const Letter = {
 console.log(Letter.hidden);
 
 const startGame = () => {
-  game.guesses = 10,
-  guessedLetters = [],
+  guesses = 10,
+  guessedLetters = [$('input').val()],
   chooseWord();
 }
 
 startGame();
-
-Letter.test('x');
 
 $('#word').append(chooseWord());
 
@@ -67,6 +67,9 @@ $('input').on('keypress', ()=> {
   $('button').on('click', ()=>{
     let letter = $('input').val();
     console.log(letter);
+    guessedLetters.push(letter);
+    //how do I get letter to the array if push() doesn't work?
+
   })
 });
 
