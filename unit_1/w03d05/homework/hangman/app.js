@@ -11,15 +11,14 @@ const chooseWord = () => {
 
 let guesses = 0;
 let guessedLetters = [];
-// console.log(chooseWord());
+for (let i=0; i < chooseWord.length; i++){
+  console.log(chooseWord()[i]);
+};
+
 
 
 //Local scope
 
-// const game = {
-//   guesses: 0,
-//   guessedLetters: [""]
-// }
 
 const Letter = {
   constructor(value, hidden){
@@ -31,20 +30,26 @@ const Letter = {
   },
   display(){
     if (this.hidden === true){
-      return "_"
-    }
+      $('#word').hide();
+      }
     else
-    return chooseWord.charAt(chooseWord[i]).val
-  },
+    console.log(chooseWord.charAt(chooseWord[i]).val())
+  }
+}
+
+const Word = {
+  letters: [],
+  isFound(){},
   test(letter){
-    for (let i=0; i < chooseWord.length; i++)
     if (letter === chooseWord().charAt(chooseWord()[i]).val){
       show();
     }
     else {
       console.log("this letter doesn't match any in the word");
     }
-  }
+  },
+  render(){}
+
 }
 
 console.log(Letter.hidden);
@@ -60,19 +65,18 @@ startGame();
 $('#word').append(chooseWord());
 
 
+
 //Event listeners
 
 $('input').on('keypress', ()=> {
   console.log('the key had been pressed');
   $('button').on('click', ()=>{
-    let letter = $('input').val();
-    console.log(letter);
-    guessedLetters.push(letter);
+  let letter = $('input').val();
+  guessedLetters.push(letter);
+  console.log(guessedLetters);
     //how do I get letter to the array if push() doesn't work?
-
   })
 });
-
 
 
 }); //end window.onload
