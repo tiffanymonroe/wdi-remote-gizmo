@@ -1,3 +1,7 @@
+/** {
+  border: 1px solid hotpink;
+}*/
+
 h1  {
   text-align: center;
   font-family: 'Luckiest Guy', cursive;
@@ -6,12 +10,12 @@ h1  {
 
 #container {
   width: 70%;
-  height: 500px;
+  height: 900px;
   margin: auto;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  justify-content: space-around;
+
 }
 
 #display {
@@ -23,6 +27,7 @@ img {
   max-height: 110px;
   display: inline-block;
   margin: 0 auto;
+  padding: 2em;
 }
 
 
@@ -30,7 +35,28 @@ img {
   font-family: 'Indie Flower', cursive;
   font-size: 3em;
   text-align: center;
+  align-content: center;
+  justify-content: center;
   display: inline-block;
-  flex-grow: 2;
+  /*flex-grow: 2;*/
   letter-spacing: .3em;
+
+}
+
+input, h5 {
+  flex-direction: column;
+  height: 1.5em;
+  width: auto;
+  display: inline-block;
+  font-family: 'Indie Flower', cursive;
+  text-align: center;
+  justify-content: center;
+}
+
+input {
+  font-size: 1.5em;
+}
+
+h5 {
+  font-size: 2em;
 }
