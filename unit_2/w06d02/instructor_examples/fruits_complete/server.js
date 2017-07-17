@@ -1,21 +1,21 @@
-var express = require('express');
-var app = express();
-var mongoose = require('mongoose');
-var db = mongoose.connection;
-var bodyParser = require('body-parser');
-var methodOverride = require('method-override');
+const express = require('express');
+const app = express();
+const mongoose = require('mongoose');
+const db = mongoose.connection;
+const bodyParser = require('body-parser');
+const methodOverride = require('method-override');
 
 app.use(bodyParser.urlencoded({extended:true}));
 app.use(methodOverride('_method'));
 
-var fruitsController = require('./controllers/fruits.js');
+const fruitsController = require('./controllers/fruits.js');
 app.use('/fruits', fruitsController);
 
 mongoose.connect('mongodb://localhost:27017/basiccrud');
-db.once('open', function() {
+db.once('open', ()=> {
     console.log('connected to mongo');
 });
 
-app.listen(3000, function(){
+app.listen(3000, ()=>{
     console.log('listening');
 });
