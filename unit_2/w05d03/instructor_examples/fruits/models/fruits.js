@@ -1,4 +1,4 @@
-var fruits = [
+const fruits = [
     {
         name:'apple',
         color: 'red',

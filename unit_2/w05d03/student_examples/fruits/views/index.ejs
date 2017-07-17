@@ -6,7 +6,7 @@
     </head>
     <body>
         <h1>Fruits Index Page</h1>
-        <% for(var i = 0; i < allFruits.length; i++) { %>
+        <% for(let i = 0; i < allFruits.length; i++) { %>
             <a href="/fruits/<%=i%>"><%=allFruits[i].name%></a>
         <% } %>
     </body>

@@ -1,10 +1,10 @@
-var express = require('express');
-var app = express();
-var bodyParser = require('body-parser');
+const express = require('express');
+const app = express();
+const bodyParser = require('body-parser');
 
-var fruits = require('./models/fruits.js')
+const fruits = require('./models/fruits.js')
 
-// app.use(function(req, res, next){
+// app.use((req, res, next)=>{
 //     console.log("run this every time");
 //     next();
 // });
@@ -12,17 +12,17 @@ var fruits = require('./models/fruits.js')
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'))
 
-app.get('/fruits/', function(req, res){
+app.get('/fruits/', (req, res)=>{
     res.render('index.ejs', {
         fruits: fruits
     });
 });
 
-app.get('/fruits/new', function(req, res){
+app.get('/fruits/new', (req, res)=>{
     res.render('new.ejs');
 });
 
-app.post('/fruits', function(req, res){
+app.post('/fruits', (req, res)=>{
     if(req.body.readyToEat === 'on'){
         req.body.readyToEat = true;
     } else {
@@ -32,12 +32,12 @@ app.post('/fruits', function(req, res){
     res.redirect('/fruits');
 });
 
-app.get('/fruits/:index', function(req, res){
+app.get('/fruits/:index', (req, res)=>{
     res.render('show.ejs', {
         fruit: fruits[req.params.index]
     });
 });
 
-app.listen(3000,function(){
+app.listen(3000,()=>{
     console.log('listening');
 });
