@@ -2,12 +2,22 @@
 
 ## Lesson Objectives
 
+1. Describe what a web server is
 1. Install Node packages
-1. Use installed node packages in your code
 1. Set up a basic Express server
 1. Set up a basic GET route
 1. Use nodemon to restart your sever when your code changes
 1. Save a record of what packages your application uses
+
+## Describe what a web server is
+
+A server is just a computer that is always on and connected to the internet.  Other computers can try to connect to it to retrieve information
+
+![Request Response Cycle](https://cdn.zapier.com/storage/photos/9ec65c79de8ae54080c1b417540469a6.png)
+
+A web server is just a server that sends dynamic HTML pages, meaning that the HTML is pretty much the same for every page, but is altered slightly depending on the data that is requested.  Think of amazon.com where one book's page looks pretty similar to another book's page, just with different text.
+
+In this unit, we'll be writing web applications that a computer will run that will allow the computer to respond to other computers that try to connect to it.  We'll write this code in JavaScript using Node.js, which allows us to write computer applications using JavaScript.
 
 ## Install Node packages
 
@@ -34,68 +44,56 @@ To install (download) a package, first you must know its name (each name is uniq
 npm install package-name
 ```
 
-let's install the library `cowsay`:
+let's install the library `express`:
 
 ```
-npm install cowsay
+npm install express
 ```
 
-## Use installed node packages in your code
+Express.js is a framework that makes it easier to build web-applications
+
+## Set up a basic Express server
 
 Now that the library has been installed (downloaded), we can use it in our code, by using the `require()` function
 
 ```javascript
-var cowsay = require('cowsay');
+const express = require('express');
 ```
 
 - The `require()` function takes whatever code was written for the specified library and returns it
     - We'll typically store the return value of `require()` in a variable of the same name
         - Think of the variable as the library itself
-- By reading [the documentation](https://www.npmjs.com/package/cowsay), we can figure out that `cowsay` is a variable that is an object that has a method that takes an object
-
-```javascript
-var cowsay = require('cowsay');
-
-var text = cowsay.say({
-    text:'oh hai'
-});
-
-console.log(text);
-```
-
-## Set up a basic Express server
-
-Express.js is a framework that makes it easier to build web-servers
+- By reading [the documentation](https://www.npmjs.com/package/express), we can figure out how to use what is returned by  `require('express')`
 
 1. Install it: `npm install express`
 1. Create a file called server.js
 1. Inside server.js, write the following
 
     ```javascript
-    var express = require('express'); //from documentation: express is function
-    var app = express();//app is an object
+    const express = require('express'); //from documentation: express is function
+    const app = express();//app is an object
 
-    app.listen(3000, function(){
+    app.listen(3000, ()=>{
         console.log("I am listening");
     });
     ```
 
 1. Start the app by executing `node server.js` in the command line
-1. Visit http://localhost:3000/ in your browser
+1. Visit http://localhost:3000/ in your browser.  You've successfully created a basic web server!  This will serve dynamic pages to web browsers.
 
 ## Set up a basic GET route
 
 Now we'll create a basic GET route so that visitors to (clients of) our web-server can retrieve some information from it
 
 ```javascript
-var express = require('express'); //from documentation: express is function
-var app = express();//app is an object
+const express = require('express'); //from documentation: express is function
+const app = express();//app is an object
 
-app.get('/somedata', function(request, response){
+app.get('/somedata', (request, response) => {
     response.send('here is your information');
 });
 
-app.listen(3000, function(){
+app.listen(3000, () => {
     console.log("I am listening");
 });
 ```
@@ -118,7 +116,7 @@ An NPM package called `nodemon` allows us to run code just like `node`, but it w
 ## Save a record of what packages your application uses
 
 - In general, we don't want to store our package code in our repositories, because it increases the size of the repo unnecessarily
-- We can install our packages like normal but keep track of what packages were installed in a package.json file.
+- We can install our packages like normal but keep track of what packages were installed in a `package.json` file.
     - Then when other users download our code
         1. They simply call `npm install`
         1. NPM will then look in the package.json file to see what packages need to be installed and install them without requiring the user to type `npm install some-package` for each package the app depends on (dependency)
@@ -134,11 +132,10 @@ Let's test this out:
 1. `rm -r node_modules`
 1. `npm init`
 1. `npm install express --save`
-1. `npm install cowsay --save`
 1. `rm -r node_modules`
     - simulates another developer downloading your code
 1. `npm install`
-1. Look inside the `node_mdules` directory to see if both express and cowsay were installed
+1. Look inside the `node_mdules` directory to see if `express` was installed
 
 In general, we can tell git to ignore `node_modules` directories so that they don't get added accidentally
 
@@ -151,3 +148,5 @@ We can also edit package.json so that we don't need specify the script that we'r
     - when it says `entry point: (index.js)`, specify which file you want to use (e.g. server.js)
 - Edit package.json
     - where it says `"main": "index.js",` change the file name (e.g. server.js)
+
+Now we can simply run `nodemon` without specifying the file name
