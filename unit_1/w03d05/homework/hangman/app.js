@@ -11,10 +11,6 @@ const chooseWord = () => {
 
 let guesses = 0;
 let guessedLetters = [];
-for (let i=0; i < chooseWord.length; i++){
-  console.log(chooseWord()[i]);
-};
-
 
 
 //Local scope
@@ -30,10 +26,10 @@ const Letter = {
   },
   display(){
     if (this.hidden === true){
-      $('#word').hide();
+      chooseWord.charAt().replaceWith('_');
       }
-    else
-    console.log(chooseWord.charAt(chooseWord[i]).val())
+    else Letter.show();
+    console.log(chooseWord.charAt().val());
   }
 }
 
@@ -41,7 +37,7 @@ const Word = {
   letters: [],
   isFound(){},
   test(letter){
-    if (letter === chooseWord().charAt(chooseWord()[i]).val){
+    if (letter === chooseWord().charAt().val()){
       show();
     }
     else {
@@ -52,11 +48,10 @@ const Word = {
 
 }
 
-console.log(Letter.hidden);
+
 
 const startGame = () => {
   guesses = 10,
-  guessedLetters = [$('input').val()],
   chooseWord();
 }
 
@@ -74,9 +69,12 @@ $('input').on('keypress', ()=> {
   let letter = $('input').val();
   guessedLetters.push(letter);
   console.log(guessedLetters);
-    //how do I get letter to the array if push() doesn't work?
   })
 });
+//looks for the user to enter a letter (keypress), pushes value of the letter to the guessedLetters array.
+
+
+
 
 
 }); //end window.onload

@@ -1,0 +1,36 @@
+body {
+  background-color: lightblue;
+  font-family: fantasy;
+  text-align: center;
+};
+
+.secret {
+  opacity: 0.5;
+}
+
+ul {
+  list-style: none;
+  padding-left: 0
+}
+
+table, th, td{
+  border: 1px solid gray;
+}
+
+table {
+  margin: 0 auto;
+}
+
+.cabbage{
+  color: chartreuse;
+}
+
+h1 {
+  font-size: 56px;
+  margin-bottom: 5px;
+  color: gold;
+}
+
+.wand {
+  text-shadow: 7px -6px 10px rgba(255, 255, 255, 0.5);
+}

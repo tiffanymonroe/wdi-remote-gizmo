@@ -10,6 +10,12 @@ Competencies: jQuery, Javascript, DOM <br>
 
 ---
 
+## setup
+1.  open up wordplayss in the student_examples folder
+2.  Read over the html, and css
+3.  make sure the javascript is connected `console.log('djslfjds')`
+
+
 ## Add the window onload function to our code
 
 ```
@@ -31,13 +37,6 @@ We're going to review DOM Events and `this` in order to create a simple sentence
 ### Objective
 
 1. A user should be able to click on a word, and append that word to the right of `sentence:`.
-
-
-### Setup 
-
-1.  Open up in up jqueryThisWordPlay in the student_examples folder
-2.  Read over the html, and css
-3.  make sure the javascript is connected `console.log('djslfjds')`
 
 
 #### Let's get started
