@@ -1,0 +1,25 @@
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+.squares div {
+  width:  5vh;
+  height: 5vh;
+  margin-right: 1%;
+  display: inline-block;
+  background-color: blue;
+}
+
+header {
+  width: 100%;
+  display: block;
+  height: 100px;
+  background-color: pink;
+  margin-bottom: 1%;
+  padding-bottom: 1%;
+  padding-left: 1.5%;
+}
+
+button {
+  float: right;
+  margin-right: 50%;
+}

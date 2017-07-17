@@ -7,7 +7,7 @@
     <body>
         <h1>Fruits index page</h1>
         <ul>
-            <% for(var i = 0; i < fruits.length; i++){ %>
+            <% for(let i = 0; i < fruits.length; i++){ %>
                 <li>
                     The <a href="/fruits/<%=fruits[i].id; %>"><%=fruits[i].name; %></a> is  <%=fruits[i].color; %>.
                     <% if(fruits[i].readyToEat === true){ %>
