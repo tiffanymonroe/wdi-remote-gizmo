@@ -42,7 +42,7 @@ User stories are a great way to break down what the different features of the we
 
 ## Setup
 
-1. Create a directory in your `morning` student lab folder called `calculator`.
+1. Create a directory in your `student_labs` student lab folder called `calculator`.
 
 2. Create 3 files. a javascript file, a css file, and an html file (you choose the names).
 
