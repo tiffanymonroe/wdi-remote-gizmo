@@ -1,49 +1,49 @@
-var express = require('express');
-var Author = require('../models/authors.js');
-var router = express.Router();
+const express = require('express');
+const Author = require('../models/authors.js');
+const router = express.Router();
 
-router.get('/', function(req, res){
-	Author.find({}, function(err, foundAuthors){
+router.get('/', (req, res)=>{
+	Author.find({}, (err, foundAuthors)=>{
 		res.render('authors/index.ejs', {
 			authors: foundAuthors
 		});
 	})
 });
 
-router.post('/', function(req, res){
-	Author.create(req.body, function(err, createdAuthor){
+router.post('/', (req, res)=>{
+	Author.create(req.body, (err, createdAuthor)=>{
 		res.redirect('/authors');
 	});
 });
 
-router.get('/new', function(req, res){
+router.get('/new', (req, res)=>{
 	res.render('authors/new.ejs');
 });
 
-router.get('/:id', function(req, res){
-	Author.findById(req.params.id, function(err, foundAuthor){
+router.get('/:id', (req, res)=>{
+	Author.findById(req.params.id, (err, foundAuthor)=>{
 		res.render('authors/show.ejs', {
 			author: foundAuthor
 		});
 	});
 });
 
-router.delete('/:id', function(req, res){
-	Author.findByIdAndRemove(req.params.id, function(){
+router.delete('/:id', (req, res)=>{
+	Author.findByIdAndRemove(req.params.id, ()=>{
 		res.redirect('/authors');
 	});
 });
 
-router.get('/:id/edit', function(req, res){
-	Author.findById(req.params.id, function(err, foundAuthor){
+router.get('/:id/edit', (req, res)=>{
+	Author.findById(req.params.id, (err, foundAuthor)=>{
 		res.render('authors/edit.ejs', {
 			author: foundAuthor
 		});
 	});
 });
 
-router.put('/:id', function(req, res){
-	Author.findByIdAndUpdate(req.params.id, req.body, function(){
+router.put('/:id', (req, res)=>{
+	Author.findByIdAndUpdate(req.params.id, req.body, ()=>{
 		res.redirect('/authors');
 	});
 });

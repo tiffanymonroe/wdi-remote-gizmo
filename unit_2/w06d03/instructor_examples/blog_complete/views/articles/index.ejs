@@ -21,7 +21,7 @@
 		<main>
 			<h2>List of Articles</h2>
 			<ul>
-				<% for(var i = 0; i < articles.length; i++){ %>
+				<% for(let i = 0; i < articles.length; i++){ %>
 					<li>
 						<a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
 					</li>
