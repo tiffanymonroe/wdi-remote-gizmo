@@ -1,7 +1,6 @@
 {
   "name": "blog_complete",
   "version": "1.0.0",
-  "description": "",
   "main": "server.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
@@ -15,5 +14,7 @@
     "express": "^4.15.3",
     "method-override": "^2.3.9",
     "mongoose": "^4.11.3"
-  }
+  },
+  "devDependencies": {},
+  "description": ""
 }

@@ -1,10 +1,10 @@
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var articleSchema = mongoose.Schema({
+const articleSchema = mongoose.Schema({
 	title:String,
 	body:String
 });
 
-var Article = mongoose.model('Article', articleSchema);
+const Article = mongoose.model('Article', articleSchema);
 
 module.exports = Article;
