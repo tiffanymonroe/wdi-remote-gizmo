@@ -1,6 +1,6 @@
-## JQUERY CHEAT SHEET
+## JQUERY CHEAT SHEET - intro
 
-by Thom P.
+[Official docs](https://api.jquery.com/)
 
 ![](https://i.imgur.com/WiUrxnG.png)
 
@@ -15,7 +15,7 @@ $(() => {
 ```
 
 
-## Search
+## Search / Retrieval
 
 - select all elements of type: `$('div')`, `$('p')`, etc.
 
@@ -58,9 +58,13 @@ $(() => {
 
 ## Setting and checking
 
+- set any attribute on an element (example -- src): `someImg.attr('src', 'someURL')`
+
 - set id on element: `jQueryElement.attr('id', 'idName')`
 
 - set class on element: `jQueryElement.addClass('className')`
+
+
 
 - set text inside element: `jQueryElement.text("some text")`
 
@@ -70,3 +74,5 @@ $(() => {
 - set a css property on an element: `jQueryElement.css('property', 'value')`
 
 - remove a class from an element: `jQueryElement.removeClass('someClass');`
+
+by Thom P.
