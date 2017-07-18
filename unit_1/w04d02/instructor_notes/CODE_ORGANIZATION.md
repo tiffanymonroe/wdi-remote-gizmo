@@ -59,15 +59,15 @@ You could put all of your event handlers into an object:
 
 ```javascript
 const EventHandlers = {
-	onClickDoSomething() {},
-	onClickDoThis() {}
+    onClickDoSomething() {},
+    onClickDoThis() {}
 }
 ```
 
 You could look in your EventHandlers cubby hole and pick the right one for the right listener:
 
 ```javascript
-$('button').on('click', EventHandlers.onClickDoThis)`
+$('button').on('click', EventHandlers.onClickDoThis)
 ```
 
 ### User Interface
@@ -76,8 +76,8 @@ You could put functions that update the DOM into an object:
 
 ```javascript
 const UI = {
-	addTextToDiv() {},
-	changeImgSize() {} 
+    addTextToDiv() {},
+    changeImgSize() {} 
 }
 ```
 
@@ -86,10 +86,10 @@ const UI = {
 You can put your application logic -- data, processes, operations that do not affect the DOM, into an object:
 
 ```javascript
-var App = {
-	gameOver: false,
-	generateRandomNumber() {},
-	shuffleArray() {}
+const App = {
+    gameOver: false,
+    generateRandomNumber() {},
+    shuffleArray() {}
 }
 ```
 
@@ -102,10 +102,10 @@ var App = {
 * You could combine event handlers and DOM updates into one object if you don't think they need to be separated.
 
 ```javascript
-var Display = {
-	onClickAddParagraph() {
-		$('body').append('<p>hi</p>');
-	}
+const Display = {
+    onClickAddParagraph() {
+        $('body').append('<p>hi</p>');
+    }
 }
 ```
 
