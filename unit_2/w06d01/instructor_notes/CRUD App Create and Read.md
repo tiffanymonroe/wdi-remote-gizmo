@@ -1,4 +1,4 @@
-# CRUD App with Mongoose - Create and Read
+()=># CRUD App with Mongoose - Create and Read
 
 ## Lesson Objectives
 
@@ -27,10 +27,10 @@
 ## Start express
 
 ```javascript
-var express = require('express');
-var app = express();
+const express = require('express');
+const app = express();
 
-app.listen(3000, function(){
+app.listen(3000, ()=>{
     console.log('listening');
 });
 ```
@@ -38,7 +38,7 @@ app.listen(3000, function(){
 ## Create New Route
 
 ```javascript
-app.get('/fruits/new', function(req, res){
+app.get('/fruits/new', (req, res)=>{
     res.send('new');
 });
 ```
@@ -70,7 +70,7 @@ app.get('/fruits/new', function(req, res){
 Render the view
 
 ```javascript
-app.get('/fruits/new', function(req, res){
+app.get('/fruits/new', (req, res)=>{
     res.render('new.ejs');
 });
 ```
@@ -78,7 +78,7 @@ app.get('/fruits/new', function(req, res){
 ## Create Create Route
 
 ```javascript
-app.post('/fruits/', function(req, res){
+app.post('/fruits/', (req, res)=>{
     res.send('received');
 });
 ```
@@ -87,7 +87,7 @@ app.post('/fruits/', function(req, res){
 1. Use body parser in server.js:
 
 ```javascript
-var bodyParser = require('body-parser');
+const bodyParser = require('body-parser');
 
 app.use(bodyParser.urlencoded({extended:true}));
 ```
@@ -95,7 +95,7 @@ app.use(bodyParser.urlencoded({extended:true}));
 Check to see if req.body works:
 
 ```javascript
-app.post('/fruits/', function(req, res){
+app.post('/fruits/', (req, res)=>{
     res.send(req.body);
 });
 ```
@@ -103,7 +103,7 @@ app.post('/fruits/', function(req, res){
 Format data properly
 
 ```javascript
-app.post('/fruits/', function(req, res){
+app.post('/fruits/', (req, res)=>{
     if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
         req.body.readyToEat = true;
     } else { //if not checked, req.body.readyToEat is undefined
@@ -119,12 +119,12 @@ app.post('/fruits/', function(req, res){
 1. Inside server.js:
 
 ```javascript
-var mongoose = require('mongoose');
-var db = mongoose.connection;
+const mongoose = require('mongoose');
+const db = mongoose.connection;
 
 //... and then farther down the file
 mongoose.connect('mongodb://localhost:27017/basiccrud');
-db.once('open', function() {
+db.once('open', ()=> {
     console.log('connected to mongo');
 });
 ```
@@ -136,16 +136,16 @@ db.once('open', function() {
 1. Create the fruit schema
 
 ```javascript
-var mongoose = require('mongoose');
-var Schema = mongoose.Schema;
+const mongoose = require('mongoose');
+const Schema = mongoose.Schema;
 
-var fruitSchema = new Schema({
+const fruitSchema = new Schema({
 	name:  { type: String, required: true },
     color:  { type: String, required: true },
 	readyToEat: Boolean
 });
 
-var Fruit = mongoose.model('Fruit', fruitSchema);
+const Fruit = mongoose.model('Fruit', fruitSchema);
 
 module.exports = Fruit;
 ```
@@ -155,15 +155,15 @@ module.exports = Fruit;
 Inside server.js:
 
 ```javascript
-var Fruits = require('./models/fruits.js');
+const Fruits = require('./models/fruits.js');
 //... and then farther down the file
-app.post('/fruits/', function(req, res){
+app.post('/fruits/', (req, res)=>{
     if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
         req.body.readyToEat = true;
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.readyToEat = false;
     }
-    Fruits.create(req.body, function(){
+    Fruits.create(req.body, ()=>{
         res.send('fruit created');
     });
 });
@@ -172,7 +172,7 @@ app.post('/fruits/', function(req, res){
 ## Create Index Route
 
 ```javascript
-app.get('/fruits', function(req, res){
+app.get('/fruits', (req, res)=>{
     res.send('index');
 });
 ```
@@ -195,7 +195,7 @@ app.get('/fruits', function(req, res){
 Render the ejs file
 
 ```javascript
-app.get('/fruits', function(req, res){
+app.get('/fruits', (req, res)=>{
     res.render('index.ejs');
 });
 ```
@@ -203,8 +203,8 @@ app.get('/fruits', function(req, res){
 ## Have Index Route Render All Fruits
 
 ```javascript
-app.get('/fruits', function(req, res){
-    Fruits.find({}, function(error, allFruits){
+app.get('/fruits', (req, res)=>{
+    Fruits.find({}, (error, allFruits)=>{
         res.render('index.ejs', {
             fruits: allFruits
         });
@@ -224,7 +224,7 @@ Update the ejs file:
     <body>
         <h1>Fruits index page</h1>
         <ul>
-            <% for(var i = 0; i < fruits.length; i++){ %>
+            <% for(let i = 0; i < fruits.length; i++){ %>
                 <li>
                     The <%=fruits[i].name; %> is  <%=fruits[i].color; %>.
                     <% if(fruits[i].readyToEat === true){ %>
@@ -252,7 +252,7 @@ Add a link to the create page:
 Inside the create route
 
 ```javascript
-Fruits.create(req.body, function(){
+Fruits.create(req.body, ()=>{
     res.redirect('/fruits');
 });
 ```
@@ -260,8 +260,8 @@ Fruits.create(req.body, function(){
 ## Create Show Route
 
 ```javascript
-app.get('/fruits/:id', function(req, res){
-    Fruits.findById(req.params.id, function(err, fruit){
+app.get('/fruits/:id', (req, res)=>{
+    Fruits.findById(req.params.id, (err, fruit)=>{
         res.send(fruit);
     });
 });
@@ -310,8 +310,8 @@ app.get('/fruits/:id', function(req, res){
 Render the ejs
 
 ```javascript
-app.get('/fruits/:id', function(req, res){
-    Fruits.findById(req.params.id, function(err, foundFruit){
+app.get('/fruits/:id', (req, res)=>{
+    Fruits.findById(req.params.id, (err, foundFruit)=>{
         res.render('show.ejs', {
             fruit:foundFruit
         });

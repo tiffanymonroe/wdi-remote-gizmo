@@ -16,7 +16,7 @@ let guessedLetters = [];
 //Local scope
 
 
-const Letter = {
+class Letter = {
   constructor(value, hidden){
     this.value = value;
     this.hidden = true;
@@ -33,7 +33,7 @@ const Letter = {
   }
 }
 
-const Word = {
+class Word = {
   letters: [],
   isFound(){},
   test(letter){

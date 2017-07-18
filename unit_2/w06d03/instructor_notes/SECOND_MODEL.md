@@ -50,10 +50,10 @@ views/articles.ejs:
 controllers/articles.js:
 
 ```javascript
-var express = require('express');
-var router = express.Router();
+const express = require('express');
+const router = express.Router();
 
-router.get('/', function(req, res){
+router.get('/', (req, res)=>{
 	res.render('articles/index.ejs');
 });
 
@@ -63,7 +63,7 @@ module.exports = router;
 Use the controller in server.js:
 
 ```javascript
-var articlesController = require('./controllers/articles.js');
+const articlesController = require('./controllers/articles.js');
 app.use('/articles', articlesController);
 ```
 
@@ -107,7 +107,7 @@ app.use('/articles', articlesController);
 create route in `controllers/articles.js`
 
 ```javascript
-router.get('/new', function(req, res){
+router.get('/new', (req, res)=>{
 	res.render('articles/new.ejs');
 });
 ```
@@ -117,14 +117,14 @@ router.get('/new', function(req, res){
 1. `touch models/articles.js`
 
 ```javascript
-var mongoose = require('mongoose');
+const mongoose = require('mongoose');
 
-var articleSchema = mongoose.Schema({
+const articleSchema = mongoose.Schema({
 	title:String,
 	body:String
 });
 
-var Article = mongoose.model('Article', articleSchema);
+const Article = mongoose.model('Article', articleSchema);
 
 module.exports = Article;
 ```
@@ -134,11 +134,11 @@ module.exports = Article;
 controllers/articles.js
 
 ```javascript
-var Article = require('../models/articles.js');
+const Article = require('../models/articles.js');
 //...
 //...farther down the page
-router.post('/', function(req, res){
-	Article.create(req.body, function(err, createdArticle){
+router.post('/', (req, res)=>{
+	Article.create(req.body, (err, createdArticle)=>{
 		res.redirect('/articles');
 	});
 });
@@ -149,8 +149,8 @@ router.post('/', function(req, res){
 controllers/articles.js:
 
 ```javascript
-router.get('/', function(req, res){
-	Article.find({}, function(err, foundArticles){
+router.get('/', (req, res)=>{
+	Article.find({}, (err, foundArticles)=>{
 		res.render('articles/index.ejs', {
 			articles: foundArticles
 		});
@@ -164,7 +164,7 @@ views/articles/index.ejs:
 <main>
 	<h2>List of Articles</h2>
 	<ul>
-		<% for(var i = 0; i < articles.length; i++){ %>
+		<% for(let i = 0; i < articles.length; i++){ %>
 			<li>
 				<a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
 			</li>
@@ -211,8 +211,8 @@ towards the bottom controllers/articles.js:
 
 ```javascript
 //avoid this handling /new by placing it towards the bottom of the file
-router.get('/:id', function(req, res){
-	Article.findById(req.params.id, function(err, foundArticle){
+router.get('/:id', (req, res)=>{
+	Article.findById(req.params.id, (err, foundArticle)=>{
 		res.render('articles/show.ejs', {
 			article: foundArticle
 		});
@@ -225,8 +225,8 @@ router.get('/:id', function(req, res){
 controllers/articles.js:
 
 ```javascript
-router.delete('/:id', function(req, res){
-	Article.findByIdAndRemove(req.params.id, function(){
+router.delete('/:id', (req, res)=>{
+	Article.findByIdAndRemove(req.params.id, ()=>{
 		res.redirect('/articles');
 	});
 });
@@ -255,8 +255,8 @@ Create a link on views/articles/show.ejs:
 controllers/articles.js
 
 ```javascript
-router.get('/:id/edit', function(req, res){
-	Article.findById(req.params.id, function(err, foundArticle){
+router.get('/:id/edit', (req, res)=>{
+	Article.findById(req.params.id, (err, foundArticle)=>{
 		res.render('articles/edit.ejs', {
 			article: foundArticle
 		});
@@ -304,8 +304,8 @@ router.get('/:id/edit', function(req, res){
 controllers/articles.js:
 
 ```javascript
-router.put('/:id', function(req, res){
-	Article.findByIdAndUpdate(req.params.id, req.body, function(){
+router.put('/:id', (req, res)=>{
+	Article.findByIdAndUpdate(req.params.id, req.body, ()=>{
 		res.redirect('/articles');
 	});
 });

@@ -1,25 +1,56 @@
+
 html, body {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Cabin Sketch', cursive;
 }
+
+.container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  width: 75%;
+  margin: 0 auto;
+}
+
+h1 {
+  display: inline-block;
+  align-items: center;
+  width: 100%;
+  text-align: center;
+}
+
+#scoreboard {
+  text-align: left;
+}
+
+
 .squares div {
   width:  5vh;
   height: 5vh;
   margin-right: 1%;
   display: inline-block;
-  background-color: blue;
+  background-color: navy;
 }
 
 header {
   width: 100%;
-  display: block;
+  display: inline-block;
   height: 100px;
-  background-color: pink;
   margin-bottom: 1%;
   padding-bottom: 1%;
   padding-left: 1.5%;
+
 }
 
 button {
   float: right;
   margin-right: 50%;
+  font-family: 'Cabin Sketch', cursive;
+  background: white;
+  font-size: 1em;
+  border: 1px solid black;
+  color: black;
 }
+
+
+/*animations*/

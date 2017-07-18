@@ -22,10 +22,10 @@ const checkValidPoke = (square) => {
   console.log(square, typeof square);
   const colors = square.substring(4, square.length-1).split(" ");
   //the 4 moves it over 4 places by character, to count only the numbers in the string.
-  const blue = parseInt(colors[2]);
-  console.log(blue);
+  const navy = parseInt(colors[2]);
+  console.log(navy);
   //parseInt removes the string and changes into numbers. [2] is the 3rd color in the array
-  if (blue === 255) {
+  if (teal === 128) {
     score++;
     updateScore();
   } else {
@@ -39,18 +39,18 @@ const applyRandomColor = (square) => {
   const randNum = Math.floor(Math.random() * 3) + 1
 
   if (randNum === 1) {
-    square.css('background-color', 'red')
+    square.css('background-color', 'teal')
   }
   else if (randNum === 2) {
-    square.css('background-color', 'blue')
+    square.css('background-color', 'navy')
   }
-  else square.css('background-color', 'green')
+  else square.css('background-color', 'darkmagenta')
 }
 
 
 
 const updateScore = () => {
-  $('h1').text('scoreboard: ' + score)
+  $('#scoreboard').text('scoreboard: ' + score)
 }
 
 const setTimer = () => {

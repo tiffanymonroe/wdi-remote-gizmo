@@ -1,4 +1,4 @@
-/********************************** 
+/**********************************
 General
 *********************************/
 body {
@@ -28,7 +28,7 @@ body {
     justify-content: center;
 }
 
-/********************************** 
+/**********************************
 Newspaper details
 *********************************/
 h1, h3 {
@@ -89,10 +89,14 @@ p:first-child:first-letter {
   display: flex;
   align-items: center;
   justify-content: center;
-
 }
 
-/********************************** 
+/**********************************
 Add animations here
 *********************************/
 
+@keyframes size-in  {
+  0% {transform: rotate(7200deg) scale(0);}
+  50% {transform: rotate(3600deg) scale(1);}
+  100% {transform: rotate(720degs) scale(1);}
+}
