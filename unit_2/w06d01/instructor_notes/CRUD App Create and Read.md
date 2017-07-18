@@ -140,9 +140,13 @@ const mongoose = require('mongoose');
 const Schema = mongoose.Schema;
 
 const fruitSchema = new Schema({
+<<<<<<< HEAD
 	name:  { type: String, required: true },
+=======
+    name:  { type: String, required: true },
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
     color:  { type: String, required: true },
-	readyToEat: Boolean
+    readyToEat: Boolean
 });
 
 const Fruit = mongoose.model('Fruit', fruitSchema);

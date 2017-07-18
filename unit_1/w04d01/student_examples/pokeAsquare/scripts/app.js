@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 $(()=>{
 
 console.log('js connected');
@@ -95,3 +96,6 @@ $('button').on('click', (e)=> {
 })
 
 }); //end window.onload
+=======
+
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622

@@ -1,11 +1,11 @@
-var mongoose = require('mongoose');
-var Article = require('./articles.js');
+const mongoose = require('mongoose');
+const Article = require('./articles.js');
 
-var authorSchema = mongoose.Schema({
+const authorSchema = mongoose.Schema({
 	name: String,
 	articles: [Article.schema]
 });
 
-var author = mongoose.model('Author', authorSchema);
+const author = mongoose.model('Author', authorSchema);
 
 module.exports = author;

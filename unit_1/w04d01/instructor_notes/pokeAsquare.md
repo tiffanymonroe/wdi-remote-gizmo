@@ -153,7 +153,11 @@ Competencies: jQuery, Javascript, DOM <br>
 ```
 
 -  One way to do it is like the following
+<<<<<<< HEAD
 
+=======
+```
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
   const checkValidPoke = (square) => {
     console.log(square, typeof square)
     const colors = square.substring(4, square.length-1).split(" ");
@@ -168,7 +172,11 @@ Competencies: jQuery, Javascript, DOM <br>
     }
 
   }
+<<<<<<< HEAD
 
+=======
+```
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
   - substring lets us take out part of a string.
   - then we are splitting the string by the places so we can get an array number of strings then we are parsing the second index item in the newly created array because we only care about the blue value in rgb
 

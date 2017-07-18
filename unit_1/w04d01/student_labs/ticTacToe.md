@@ -8,7 +8,11 @@ Type: Lab<br>
 Duration: 1+ hr<br>
 Creator: Thom Page, WDI-Matrix<br>
 Modified by: Jim haff<br>
+<<<<<<< HEAD
 Topics: Using loops to create multiple elements, Setting a click listener within the loop, Setting a click handler that will target the clicked element with `$(this)`.<br>
+=======
+Topics: Using loops to create multiple elements, Setting a click listener within the loop, Setting a click handler that will target the clicked element with `$(e.currentTarget)`.<br>
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 <hr>
 
 ### SETUP

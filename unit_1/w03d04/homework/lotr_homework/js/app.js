@@ -49,6 +49,7 @@ const makeMiddleEarth = () => {
   // 1. create a section tag with an id of middle-earth
 <<<<<<< HEAD
 <<<<<<< HEAD
+<<<<<<< HEAD
   const $section = $('<section>').attr('id', 'middle-earth');
 
   // 2. append the section to the body of the DOM.
@@ -73,6 +74,8 @@ const makeMiddleEarth = () => {
 =======
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 
   // 2. append the section to the body of the DOM.
 
@@ -86,9 +89,12 @@ const makeMiddleEarth = () => {
 
   //   3d. appends each land to the middle-earth section
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9eef5363174e51c71e6519858a1c235c86454a1b
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 
 };
 
@@ -104,6 +110,7 @@ const makeHobbits = () => {
 
   // 1. display an unordered list of the hobbits in the shire.
 
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const $hobbitList = $('<ul>');
@@ -126,6 +133,10 @@ const makeHobbits = () => {
   // 2. give each hobbit a class of "hobbit"
 
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+  // 2. give each hobbit a class of "hobbit"
+
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
   // hint: create a 'ul' outside the loop upon which to append the 'li's
 
   // hint: get 'The-Shire' by using its id
@@ -141,6 +152,7 @@ const makeHobbits = () => {
 const keepItSecretKeepItSafe = () => {
 
   // 1. create an empty div with an id of 'the-ring'
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   const $theRing = $('<div>').attr('id', 'the-ring');
@@ -161,6 +173,11 @@ const keepItSecretKeepItSafe = () => {
   // 2. add the ring as a child of Frodo
 
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+
+  // 2. add the ring as a child of Frodo
+
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
   // hint: Frodo does not have an id, but there is a command to retrieve all elements with a certain class. This should give you an array for you to access . . .
 
   // when you think you have given Frodo the ring, check in your Elements tab
@@ -173,6 +190,7 @@ const keepItSecretKeepItSafe = () => {
 // ============
 // Chapter 4
 // ============
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
 
@@ -197,6 +215,8 @@ const makeBaddies = () => {
 =======
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 const makeBaddies = () => {
 
   // 1. display an unordered list of baddies in Mordor
@@ -205,9 +225,12 @@ const makeBaddies = () => {
 
   // 3. remember to append them to Mordor
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9eef5363174e51c71e6519858a1c235c86454a1b
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 };
 
 // COMMIT YOUR WORK
@@ -217,6 +240,7 @@ const makeBaddies = () => {
 // Chapter 5
 // ============
 const makeBuddies = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   console.log("Make buddies");
@@ -239,6 +263,8 @@ const makeBuddies = () => {
 =======
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 
   // 1. create an aside tag and append it to middle-earth below mordor
 
@@ -247,9 +273,12 @@ const makeBuddies = () => {
   // 3. give each of the buddies a class of "buddy"
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9eef5363174e51c71e6519858a1c235c86454a1b
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 };
 
 // COMMIT YOUR WORK
@@ -259,6 +288,7 @@ const makeBuddies = () => {
 // Chapter 6
 // ============
 const leaveTheShire = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   console.log('Leaving the Shire');
@@ -277,6 +307,10 @@ const leaveTheShire = () => {
 
   // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+
+  // 1. grab the hobbits (the ul in which they reside) and move them to Rivendell
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 
   // hint: the hobbits ul is a childNode of The-Shire-- there is way to get a list of childNodes
 
@@ -289,6 +323,7 @@ const leaveTheShire = () => {
 // Chapter 7
 // ============
 const beautifulStranger = () => {
+<<<<<<< HEAD
 <<<<<<< HEAD
 <<<<<<< HEAD
   console.log('Introducing Aragorn');
@@ -306,15 +341,20 @@ const beautifulStranger = () => {
 =======
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 
   // 1. change the buddy 'Strider' textnode to "Aragorn"
 
   // hint: You can get a list of elements by tag name, such as 'aside'
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 >>>>>>> 9eef5363174e51c71e6519858a1c235c86454a1b
 =======
 >>>>>>> d0136b880f1d334673792c6a6e45235a7b2bfe53
+=======
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 };
 
 // COMMIT YOUR WORK

@@ -22,7 +22,7 @@
 			<h2>Article Attributes:</h2>
 			<form action="/articles/<%=article._id%>?_method=PUT" method="post">
 				<select name="authorId">
-                    <% for(var i = 0; i < authors.length; i++) { %>
+                    <% for(let i = 0; i < authors.length; i++) { %>
                         <option
 							value="<%=authors[i]._id%>"
 							<% if(authors[i]._id.toString() === articleAuthor._id.toString()){ %>

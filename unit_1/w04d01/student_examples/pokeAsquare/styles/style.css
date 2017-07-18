@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 
 html, body {
   font-family: 'Cabin Sketch', cursive;
@@ -24,27 +25,46 @@ h1 {
 }
 
 
+=======
+html, body {
+  font-family: 'Open Sans', sans-serif;
+}
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 .squares div {
   width:  5vh;
   height: 5vh;
   margin-right: 1%;
   display: inline-block;
+<<<<<<< HEAD
   background-color: navy;
+=======
+  background-color: blue;
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 }
 
 header {
   width: 100%;
+<<<<<<< HEAD
   display: inline-block;
   height: 100px;
   margin-bottom: 1%;
   padding-bottom: 1%;
   padding-left: 1.5%;
 
+=======
+  display: block;
+  height: 100px;
+  background-color: pink;
+  margin-bottom: 1%;
+  padding-bottom: 1%;
+  padding-left: 1.5%;
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
 }
 
 button {
   float: right;
   margin-right: 50%;
+<<<<<<< HEAD
   font-family: 'Cabin Sketch', cursive;
   background: white;
   font-size: 1em;
@@ -54,3 +74,6 @@ button {
 
 
 /*animations*/
+=======
+}
+>>>>>>> c9aea904efde0f98292097c6e8097a246e370622
