@@ -101,6 +101,9 @@ app.get('/greeting/:name', (req, res) => {
 "Commit 3: Magic 8 Ball express application created."
 <hr>
 
+# Intro to the Internet
+Read these [notes](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_2/w05d01/instructor_notes/INTRO_TO_INTERNET.md)
+Watch this [video](https://www.youtube.com/watch?v=7_LPdttKXPc) about the internet AND this [video](https://www.youtube.com/watch?v=xIuBmOufbls) about packets travel on the internet.
 
 # Hungry for more?
 
