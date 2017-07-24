@@ -1,3 +1,4 @@
+
 # Lab - MVC: Index
 
 1. Extend the app we've built in class so that the index route uses EJS to render all the fruits into HTML
