@@ -124,7 +124,8 @@ An NPM package called `nodemon` allows us to run code just like `node`, but it w
 1. In the terminal, type: `npm init`
 1. Keep hitting enter, until the program finishes
     - you should now have a package.json file
-1. Install a package with `npm install some-package`
+1. Install a package with `npm install some-package --save`
+    - The `--save` tells npm to keep a record inside `pacakge.json` that the application depends on the package installed
 
 Let's test this out:
 
