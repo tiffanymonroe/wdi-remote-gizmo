@@ -143,7 +143,8 @@ Output => 5
 "Commit 5: Hungry for more: Fibonacci application extended."
 <hr>
 
-2. Sign up for HackerRank: https://www.hackerrank.com/. Solve a few of the problems (this will help get you prepared for interviews! A lot of companies use this site for pre-screening interviews.)
+## HackerRank
+Sign up for HackerRank: https://www.hackerrank.com/. Solve a few of the problems (this will help get you prepared for interviews! A lot of companies use this site for pre-screening interviews.)
 
 # CSS Videos
 
