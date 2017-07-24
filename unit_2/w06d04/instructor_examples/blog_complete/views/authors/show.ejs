@@ -28,7 +28,7 @@
 			<section>
 				<h2>Articles Written By This Author:</h2>
 				<ul>
-					<% for(var i = 0; i < author.articles.length; i++){ %>
+					<% for(let i = 0; i < author.articles.length; i++){ %>
 						<li><a href="/articles/<%=author.articles[i]._id%>"><%=author.articles[i].title%></a></li>
 					<% } %>
 				</ul>
