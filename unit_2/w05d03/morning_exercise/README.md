@@ -80,7 +80,7 @@ There is a more middle of the road alternative that lets you stand on the should
 Bootstrap is great. It's used in a lot of places. But it can be overkill, especially for small projects/quick builds. Skeleton has just a handful of handy features that you don't have to code from scratch:
 - mobile in mind: responsive design that makes sense
 - 12 column fluid grid iwth a max-width of 960px
-- all type is set with `rems` and thus can be responsively sized with ease, default font is Google's Raleway
+- all type is set with `rems` and thus can be responsively sized with ease, default font is Google's Raleway. [rems info](https://css-tricks.com/theres-more-to-the-css-rem-unit-than-font-sizing/)
 - Buttons are designed in two styles that look modern and clean with comfortable amount of padding
 - Forms are designed in a clean and nice style
 - Lists are adjusted to look more modern
@@ -111,8 +111,13 @@ All the html content is there
 
 You will need to:
 1. Connect the `main.css` file.
-2. Download and include `normalize.css` [normalize](https://necolas.github.io/normalize.css/)
-3. Download and include `skeleton.css` [skeleton](http://getskeleton.com/)
+2. Connect the `normalize.css` file
+3. Connect the `skeleton.css` file
+
+
+**Reference:**
+- Download and include `normalize.css` [normalize](https://necolas.github.io/normalize.css/)
+- Download and include `skeleton.css` [skeleton](http://getskeleton.com/)
 
  **Important** - does the order that you place the links to the the three css files in the html matter?
 
