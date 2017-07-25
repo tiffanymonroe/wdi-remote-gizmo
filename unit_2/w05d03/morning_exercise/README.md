@@ -111,8 +111,13 @@ All the html content is there
 
 You will need to:
 1. Connect the `main.css` file.
-2. Download and include `normalize.css` [normalize](https://necolas.github.io/normalize.css/)
-3. Download and include `skeleton.css` [skeleton](http://getskeleton.com/)
+2. Connect the `normalize.css` file
+3. Connect the `skeleton.css` file
+
+
+**Reference:**
+- Download and include `normalize.css` [normalize](https://necolas.github.io/normalize.css/)
+- Download and include `skeleton.css` [skeleton](http://getskeleton.com/)
 
  **Important** - does the order that you place the links to the the three css files in the html matter?
 
