@@ -233,7 +233,7 @@ body {
 </details>
 
 ### Hungry for more?
-
+1.  FINISH THE LAB!
 
 1. Use EJS partials! Create a partial for the head, and include it in both your views. [Nice walkthrough can be found here (starts about 1/4 of the way down)](https://scotch.io/tutorials/use-ejs-to-template-your-node-application)
 
