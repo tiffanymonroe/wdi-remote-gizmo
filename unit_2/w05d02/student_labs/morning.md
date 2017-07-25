@@ -6,7 +6,7 @@
 1. Create a new directory inside your labs dir called "superheroes"
 1. cd into superheroes
 1. perform an npm init, specify server.js as your entry
-1. install express, tell npm to save express as a dependency in package.json
+1. install express
 1. create a server.js file
 1. inside server.js, require express and save it to a variable named `express`
 1. create a variable named app, and set it equal to `express()`
