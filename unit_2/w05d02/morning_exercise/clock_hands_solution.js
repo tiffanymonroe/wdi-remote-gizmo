@@ -3,7 +3,7 @@ const clock = function(hour, minutes){
   // If input is out of range, quit the function
   if ((hour > 12 || hour < 1) || (minutes < 0 || minutes > 59)) {return "out of range"};
 
-  // convert hours to minutes an hour times five equals the same position on the clock in minutes
+  // convert hours to minutes. An hour times five equals the same position on the clock in minutes
   // Example: Hour 6 is at the 30 minute position. 6 * 5 = 30.
   const hoursToMinutes = (hour * 5);
 
@@ -35,8 +35,8 @@ const clock = function(hour, minutes){
 // Testing numbers
 // console.log(clock(6, 00));
 // console.log(clock(12, 00));
-// console.log(clock(12, 15));
+console.log(clock(12, 15));
 // console.log(clock(9, 45));
-console.log(clock(1, 59));
+// console.log(clock(1, 59));
 
 // Original solution by Thom Page. Updated by Kristyn Bryan
