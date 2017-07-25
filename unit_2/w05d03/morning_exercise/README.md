@@ -118,25 +118,17 @@ You will need to:
 
 4. Go through the [skeleton documentation](http://getskeleton.com/) and add the appropriate classes in the html file to match these views:
 
-Top:
-![Old Glory top of page](https://i.imgur.com/HWSEuW1.png)
+Desktop:
+![Old Glory desktop](./old-glory-desktop.png)
 
-Middle:
-![Old Glory middle of page](https://i.imgur.com/YQLi3Gm.png)
 
-Bottom:
-![Old Glory bottom of page](https://i.imgur.com/rhWmAsw.png)
 
 <hr>
 Mobile views:
 
-![Old Glory top of page - mobile](https://i.imgur.com/sCKFrVC.png)
+![Old Glory mobile](./old-glory-mobile.png)
 
-Middle:
-![Old Glory middle of page - mobile](https://i.imgur.com/eFYlyPp.png)
-
-Bottom:
-![Old Glory bottom of page - mobile](https://i.imgur.com/xRM4OC0.png)
+<hr>
 
 
 [Extra special thanks to SNL for the content and  inspiration](http://www.nbc.com/saturday-night-live/video/old-glory-insurance/n10766?snl=1)
