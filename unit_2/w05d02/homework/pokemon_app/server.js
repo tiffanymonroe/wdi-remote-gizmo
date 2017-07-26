@@ -8,7 +8,7 @@ app.get('/', (req, res) => {
 });
 
 app.get('/pokemon', (req, res) => {
-  res.send(pokemon);
+  res.render('index.ejs');
 });
 
 app.listen(3000, () => {
