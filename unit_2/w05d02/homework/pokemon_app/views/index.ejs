@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html>
   <head>
@@ -15,6 +16,12 @@
   </style>
   <body>
     <h1>See All The Pokemon!</h1>
-
+    <ul>
+      <% for(let i=0; i < pokemon.length; i++) { %>
+        <li> <a href=<%='/pokemon/' + i%>>
+          <%= pokemon[i].name %> </a> </li>
+      <% } %>
+    </ul>
+    <%# I got help with the syntax li section from Sarah Anderson%>
   </body>
 </html>
