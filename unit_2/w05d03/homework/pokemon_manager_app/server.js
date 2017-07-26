@@ -4,16 +4,26 @@ const pokemon = require('./models/pokemon.js');
 
 // INDEX
 
-app.get('/', (req, res) => {
-  res.render('index.ejs', {data: pokemon});
+app.get('/pokemon', (req, res) => {
+  res.render('index.ejs', {
+    pokemon: pokemon
+  });
 });
 
 
 // SHOW
 
-app.get('/:id', (req, res) => {
-  res.render('show.edj', {data: pokemon[req.params.id]})
+app.get('/pokemon/:id', (req, res) => {
+  res.render('show.ejs', {
+    pokemon: pokemon[req.params.id]
+  });
 });
+
+// NEW
+
+// app.get('/pokemon/new', (req, res) => {
+//
+// })
 
 //Port
 
