@@ -17,8 +17,8 @@
   <body>
     <h1>See All The Pokemon!</h1>
     <ul>
-      <% for(let i=0; i < pokemon.length; i++) { %>
-        <li> <a href=<%='/pokemon/' + i%>>
+      <% for(let i=0; i < pokemon.length; i++) { let x = i%>
+        <li> <a href=<%='/pokemon/' + x%>>
           <%= pokemon[i].name %> </a> </li>
       <% } %>
     </ul>
