@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
+    <title>Pokemon</title>
+  </head>
+  <style type="text/css">
+      body {
+          color: blanchedalmond;
+          background-color: steelblue;
+          font-family: 'Roboto', sans-serif;
+      }
+  </style>
+  <body>
+    <h1>Gotta Catch 'Em All'</h1>
+    <h2> <%=pokemon.name %> </h2>
+    <img src=<%= pokemon.img %> >
+    <ul>
+      <% for(let i=0; i < pokemon.length; i++) { let x = i%>
+        <li> <a href=<%='/pokemon/' + x%>>
+          <%= pokemon[i].name %> </a> </li>
+      <% } %>
+    </ul>
+    <%# I got help with the syntax li section from Sarah Anderson%>
+    <a href=<%='/pokemon'%>>back</a>
+  </body>
+</html>
