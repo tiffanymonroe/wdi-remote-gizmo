@@ -42,7 +42,9 @@ You can use Bootstrap to jazz up your projects, but we also want you to be famil
 
 ## Let's Look at Bootstrap
 
-Bootstrap's website catalogs everything that you can use to style your application. Note that their styles are responsive. You can download a file and keep it in your application or use a link to their CDN.
+Bootstrap's website catalogs everything that you can use to style your application. Note that their styles are responsive. 
+
+To use Bootstrap, you can download a file and keep it in your application or use a link to their CDN.
 
 Bootstrap is a very robust framework! It has pretty much everything that you need (plus more). After this lesson, take some time to explore the site to see more of the offerings. Consider using it in your homework or projects.
 
