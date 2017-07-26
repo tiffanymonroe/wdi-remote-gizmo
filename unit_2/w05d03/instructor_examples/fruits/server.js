@@ -3,7 +3,11 @@ const app = express();
 const fruits = require('./models/fruits.js');
 const bodyParser = require('body-parser');
 
+//make req.body available to all routes
 app.use(bodyParser.urlencoded({extended:false}));
+
+//set a static files dir to public dir
+app.use(express.static('public'));
 
 app.get('/fruits', (req, res)=>{
     res.render('index.ejs', {
@@ -11,14 +15,21 @@ app.get('/fruits', (req, res)=>{
     });
 });
 
+app.post('/products', (req, res)=>{
+    console.log('create route accessed');
+    console.log(req.body);
+    res.send(req.body);
+});
+
 app.post('/fruits', (req, res)=>{
+    //data manipulation
     if(req.body.readyToEat === 'on'){
         req.body.readyToEat = true;
     } else {
         req.body.readyToEat = false;
     }
     fruits.push(req.body);
-    res.redirect('/fruits');
+    res.redirect('/fruits'); //redirect
 });
 
 //new route
