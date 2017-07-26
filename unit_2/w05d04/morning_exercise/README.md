@@ -33,6 +33,12 @@ You can use Bootstrap to jazz up your projects, but we also want you to be famil
 [Bootstrap](http://getbootstrap.com/)<br>
   _Probably the most popular framework out there right now. Originally created by some guys who were working at Twitter._
 
+## Activity
+We're going to style this page using Bootstrap:
+![unstyled page](https://i.imgur.com/7RqYXn6.png)
+
+To look something like this:
+![styled page](https://i.imgur.com/ICSRu3R.png)
 
 ## Setup
 
