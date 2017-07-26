@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Awesomesauce Products</title>
+  </head>
+  <body>
+    <h1>Products</h1>
+    <ul>
+      <% for (let i=0; i < products.length; i++) { %>
+          <li><a href='/products' <%= + i %>>
+          <%= products.name %></a></li>
+      <%}%>
+  </ul>
+  </body>
+</html>

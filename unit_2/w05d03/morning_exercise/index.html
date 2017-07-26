@@ -3,29 +3,36 @@
 <head>
   <meta charset="utf-8">
   <title>Old Glory Insurance</title>
-  <!-- add links to other css stylesheets -->
-  <!-- hint : -->
-  <!-- <link rel="stylesheet" href="./css/main.css"> -->
+  <link rel="stylesheet" href="./css/normalize.css">
+  <link rel="stylesheet" href="./css/skeleton.css">
+  <link rel="stylesheet" href="./css/main.css">
 </head>
 <body>
   <!-- add skeleton classes (check skeleton documentation below) to get the look of the mockup -->
-  <div class="">
-    <div id="star-five"></div>
-    <h1>OLD GLORY <span>Insurance Comapny</span></h1>
-    <section>
-      <article>
-      </article>
-      <article>
-        <h5>The Threat of Robots is Everywhere!</h5>
-        <ul>
-          <li>Robots have innately nefarious agendas!</li>
-          <li>They eat expensive prescription medicine for fuel!</li>
-          <li>They have strong metal claws that are made of metal!</li>
-          <li>No one understands why the scientists made them in the first place!</li>
-          <li>Robots can strike at any time!</li>
-        </ul>
-      </article>
-      <article>
+  <div class="container">
+    <div class="row">
+        <div class="eleven columns">
+            <div id="star-five"></div>
+            <h1>OLD GLORY <span>Insurance Company</span></h1>
+    </div>
+  </div>
+
+  <section class="row">
+
+        <article class="six columns">
+          <h5>The Threat of Robots is Everywhere!</h5>
+          <ul>
+            <li>Robots have innately nefarious agendas!</li>
+            <li>They eat expensive prescription medicine for fuel!</li>
+            <li>They have strong metal claws that are made of metal!</li>
+            <li>No one understands why the scientists made them in the first place!</li>
+            <li>Robots can strike at any time!</li>
+          </ul>
+        </article>
+
+
+
+      <article class="six columns">
         <br>
         <p>
           As a modern citizen, you're probably aware of the <strong>threat</strong> that robots pose!
@@ -41,9 +48,11 @@
         </p>
       </article>
     </section>
+
+
     <hr>
-    <section>
-      <article>
+    <section class="row">
+      <article class="eleven columns">
         <table>
           <thead>
             <th>Insurance</th>
@@ -82,14 +91,15 @@
           </caption>
         </table>
       </article>
-      <article>
+      <article class="one column">
         <h3>Warning</h3>
         <p>Persons denying the existence of robots may be robots themselves!</p>
       </article>
     </section>
-    <section>
+
+    <section class="row">
       <h4>Don't cower on under your snuggie any longer! Make a choice now!</h4>
-      <form>
+      <form class="eleven columns">
         <div>
           <div>
             <label for="email">Your email</label>

@@ -20,6 +20,23 @@ app.get('/products', function(req, res) {
   res.send(products);
 });
 
+//views route
+app.get('/products', (req, res) => {
+  res.render('index.ejs');
+});
+
+app.post('/products/new', (req, res) => {
+    products.push(req.body);
+    console.log(products);
+    res.send('Thank you!');
+});
+
+app.post('/products', (req, res)=>{
+    console.log('Create route accessed!');
+    console.log('Req.body is: ', req.body);
+    res.send(req.body);
+});
+
 // show route
 app.get('/products/:id', function(req, res) {
   res.send(products[req.params.id]);

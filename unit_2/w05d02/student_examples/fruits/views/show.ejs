@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <h1>This is the Fruits page!</h1>
+    The <%= fruit.name%> is <%= fruit.color %>.
+    <br>
+    <% if(fruit.readyToEat === true){ %>
+      The <%= fruit.name%> is ready for consumption!!!
+    <%} else { %>
+      The <%= fruit.name%> will kill you if you eat it!
+    <% } %>
+  </body>
+</html>

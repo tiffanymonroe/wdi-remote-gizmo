@@ -1,4 +1,4 @@
-module.exports = [
+const products = [
   { name: "Car", price: 20000, img: "http://www.gowithgo.net/wp-content/uploads/2011/07/Flintstone_Mobile-150x150.jpg"},
   { name: "Cat", price: 100, img: "http://animagehub.com/wp-content/uploads/2016/10/Pink-panther-vector-5-150x150.jpg"},
   { name: "Crab", price: 2, img: "http://scontent.cdninstagram.com/t51.2885-19/s150x150/13402342_1111471978911960_1380878568_a.jpg"},
@@ -12,5 +12,7 @@ module.exports = [
   { name: "Cillian Murphy", price: 400, img: "http://static.buzznet.com/uploads/2012/03/msg-133176055505-150x150.jpg"},
   { name: "Climate Change", price: 9, img: "http://scitechdaily.com/images/Detailed-Global-Climate-Change-Projections-150x150.jpg" }
 ];
+
+module.exports = products;
 
 // all imgs are 150 x 150px
