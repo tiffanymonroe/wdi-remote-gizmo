@@ -37,11 +37,11 @@ You can use Bootstrap to jazz up your projects, but we also want you to be famil
 
 We're going to style this page using Bootstrap:
 
-![unstyled page](https://i.imgur.com/7RqYXn6.png)
+![unstyled page](https://i.imgur.com/sdRQg2x.png)
 
 To look something like this:
 
-![styled page](https://i.imgur.com/ICSRu3R.png)
+![styled page](https://i.imgur.com/9imBki4.png)
 
 ## Setup
 
