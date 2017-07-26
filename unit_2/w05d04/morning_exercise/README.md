@@ -77,7 +77,7 @@ http://getbootstrap.com/components/#nav
 
 1. Add the `class="nav"` to the `ul` of your nav bar.
 
-2. You can add additional styling to this. Let's add `class="nav-tabs"` to adjust the formatting and make our link into tabs.
+2. You can add additional styling to this. Let's add `class="nav-tabs"` to adjust the formatting and turn our links into navigation tabs.
 
 ![nav](https://i.imgur.com/zRsVdwm.png)
 
