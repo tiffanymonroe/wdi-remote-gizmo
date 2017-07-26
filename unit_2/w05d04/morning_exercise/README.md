@@ -33,6 +33,15 @@ You can use Bootstrap to jazz up your projects, but we also want you to be famil
 [Bootstrap](http://getbootstrap.com/)<br>
   _Probably the most popular framework out there right now. Originally created by some guys who were working at Twitter._
 
+## Activity
+
+We're going to style this page using Bootstrap:
+
+![unstyled page](https://i.imgur.com/sdRQg2x.png)
+
+To look something like this:
+
+![styled page](https://i.imgur.com/9imBki4.png)
 
 ## Setup
 
@@ -42,7 +51,9 @@ You can use Bootstrap to jazz up your projects, but we also want you to be famil
 
 ## Let's Look at Bootstrap
 
-Bootstrap's website catalogs everything that you can use to style your application. Note that their styles are responsive. You can download a file and keep it in your application or use a link to their CDN.
+Bootstrap's website catalogs everything that you can use to style your application. Note that their styles are responsive. 
+
+To use Bootstrap, you can download a file and keep it in your application or use a link to their CDN.
 
 Bootstrap is a very robust framework! It has pretty much everything that you need (plus more). After this lesson, take some time to explore the site to see more of the offerings. Consider using it in your homework or projects.
 
@@ -75,7 +86,7 @@ http://getbootstrap.com/components/#nav
 
 1. Add the `class="nav"` to the `ul` of your nav bar.
 
-2. You can add additional styling to this. Let's add `class="nav-tabs"` to adjust the formatting and make our link into tabs.
+2. You can add additional styling to this. Let's add `class="nav-tabs"` to adjust the formatting and turn our links into navigation tabs.
 
 ![nav](https://i.imgur.com/zRsVdwm.png)
 
