@@ -4,17 +4,43 @@
   <head>
     <meta charset="utf-8">
     <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
-
     <title>Pokemon</title>
   </head>
   <style type="text/css">
       body {
-          color: blanchedalmond;
-          background-color: steelblue;
+          color: #2F6CB5;
+          background-color: white;
           font-family: 'Roboto', sans-serif;
+          display: inline-block;
+          margin-top: 5%;
+          margin-left: 33%;
       }
+
+      li {
+        list-style: none;
+        font-size: 1.5em;
+      }
+
+      a, a:visited {
+        text-decoration: none;
+        color: #2F6CB5;
+
+      }
+
+      a:hover {
+        color: #FFCB09;
+      }
+
+      img {
+        width: 50%;
+        height: auto;
+        display: block;
+      }
+
   </style>
   <body>
+    <img src="https://vignette2.wikia.nocookie.net/logopedia/images/1/1c/Pok%C3%A9mon_Gotta_Catch_%27Em_All_2.png/revision/latest/scale-to-width-down/640?cb=20130917213343">
+
     <h1>See All The Pokemon!</h1>
     <ul>
       <% for(let i=0; i < pokemon.length; i++) { let x = i%>

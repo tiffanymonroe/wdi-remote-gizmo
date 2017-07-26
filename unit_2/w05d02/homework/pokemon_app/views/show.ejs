@@ -8,14 +8,26 @@
     <title>Pokemon</title>
   </head>
   <style type="text/css">
-      body {
-          color: blanchedalmond;
-          background-color: steelblue;
-          font-family: 'Roboto', sans-serif;
-      }
+  body {
+    color: #2F6CB5;
+    background-color: white;
+    font-family: 'Roboto', sans-serif;
+    display: inline-block;
+    margin-top: 5%;
+    margin-left: 33%;
+  }
+  a, a:visited {
+    text-decoration: none;
+    color: #2F6CB5;
+  }
+
+  a:hover {
+    color: #FFCB09;
+  }
+
   </style>
   <body>
-    <h1>Gotta Catch 'Em All'</h1>
+    <h1>Gotta Catch 'Em All</h1>
     <h2> <%=pokemon.name %> </h2>
     <img src=<%= pokemon.img %> >
     <ul>
