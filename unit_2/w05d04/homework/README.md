@@ -75,7 +75,7 @@ The app will use RESTful Routes:
 ```
 // server.js
 
-var express    = require('express'),
+const express    = require('express'),
     app        = express(),
     Pokemon    = require('../models/pokemon.js');
 
