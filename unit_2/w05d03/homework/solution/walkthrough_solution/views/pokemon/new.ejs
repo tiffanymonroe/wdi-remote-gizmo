@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon Manager - New Page</title>
+    <link rel="stylesheet" href="/style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <h1>
+      Pokemon Manager - Make a new Pokemon
+      <a class="link-as-button" href="/pokemon">Go Home</a>
+    </h1>
+
+    <form action="/pokemon" method="POST">
+      <input type="text" name="name" placeholder="Name"/>
+      <input type="text" name="type" placeholder="Type (ex: grass, rock)"/>
+      <input type="text" name="damages" placeholder="Damage (ex: wind:4, fire:2)"/>
+      <input type="text" name="img" placeholder="Image address"/>
+
+      <button class="link-as-button" type="Submit">Make my Pokemon</button>
+    </form>
+
+  </body>
+</html>

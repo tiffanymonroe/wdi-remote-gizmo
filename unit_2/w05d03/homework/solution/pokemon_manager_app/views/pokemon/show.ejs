@@ -16,22 +16,17 @@
       <img src="<%= poke.img %>">
 
       <h3>Type</h3>
-      <% console.log("===============================") %>
-      <% console.log("Pokemon type: " + poke.type); %>
 
-      <% for (var i = 0; i < poke.type.length; i++){%>
+      <% for (let i = 0; i < poke.type.length; i++){%>
         <li><%= poke.type[i] %></li>
       <% } %>
 
       <h3>Damages</h3>
 
-      <% var damageObj = poke.damages || poke.moves.damages; %>
-      <% console.log("===============================") %>
-      <% console.log("Pokemon damages: "); %>
-      <% console.log(damageObj); %>
+      <% let damageObj = poke.damages || poke.moves.damages; %>
 
       <table>
-      <% for (var damage in damageObj){%>
+      <% for (let damage in damageObj){%>
         <tr>
           <td><%= damage + ':' %></td>
           <td><%= damageObj[damage] %></td>
