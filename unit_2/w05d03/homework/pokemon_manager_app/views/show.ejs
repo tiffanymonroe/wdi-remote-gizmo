@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Gotta Catch 'em All!'</title>
+  </head>
+  <body>
+      <img src= <%= pokemon.img %> >
+    <h2>  <%= pokemon.name %> </h2>
+
+    <ul><h3>Type</h3>
+      <li> <%= pokemon.type %> </li>
+    </ul>
+    <ul><h3>Stats</h3>
+        <li>Hit Points: <%= pokemon.stats.hp %>
+        <li>Attack: <%= pokemon.stats.attack %>
+        <li>Defense: <%= pokemon.stats.defense %>
+        <li>Speed Attack: <%= pokemon.stats.spattack %>
+        <li>Speed Defense: <%= pokemon.stats.spdefense %>
+        <li>Speed: <%= pokemon.stats.speed %>
+    <ul>
+  </body>
+</html>
