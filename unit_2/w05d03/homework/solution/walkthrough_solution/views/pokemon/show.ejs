@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon Manager - Show Page</title>
+    <link rel="stylesheet" href="../style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <h1>
+      Pokemon Manager - Check Out This Pokemon
+      <a class="link-as-button" href="/pokemon">Go Home</a>
+    </h1>
+
+      <!-- 1. Display the individual name -->
+      <h2><%= poke.name %></h2>
+
+      <!-- 2. Display the individual image -->
+      <img src=<%= poke.img %> />
+
+      <!-- 3. Display the individual type -->
+      <h3>Type</h3>
+
+      <table>
+        <% for (let i = 0; i < poke.type.length; i++){ %>
+          <tr>
+            <td><%= poke.type[i] %></td>
+          </tr>
+        <% } %>
+      </table>
+
+      <!-- 4. Display the individual damages -->
+      <h3>Damages</h3>
+
+      <% const damageObj = poke.damages || poke.moves.damages  %>
+
+      <table>
+
+        <% for (let key in damageObj){ %>
+          <tr>
+            <!-- get they key -->
+            <td><%= key %>:</td>
+
+            <!-- get the value -->
+            <td><%= damageObj[key] %></td>
+          </tr>
+        <% } %>
+      </table>
+
+  </body>
+</html>
