@@ -3,14 +3,34 @@
   <head>
     <meta charset="utf-8">
     <title>Pokemon Manager</title>
+
+          <!-- Mobile Specific Metas
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+          <!-- FONT
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+          <!-- CSS
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <link rel="stylesheet" href="public/normalize.css">
+          <link rel="stylesheet" href="public/skeleton.css">
   </head>
   <body>
-    <h1>Pokemon Manager</h1>
-    <div>
-    <% for (let i=0; i < pokemon.length; i++) { %>
-      <img src=
-      <%= pokemon[i].img %> >
-    <% } %>
+    <div class="container">
+      <div class="row">
+      <h1 class="eleven columns">Pokemon Manager</h1>
+      <div class="row">
+        <div class="one column">
+          <% for (let i=0; i < pokemon.length; i++) { %>
+            <img src=
+            <%= pokemon[i].img %> >
+          <% } %>
+          <br>
+          <a href="pokemon/new">Create Your Own</a>
+        </div>
+      </div>
+    </div>
   </div>
   </body>
 </html>

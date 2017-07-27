@@ -3,14 +3,32 @@
   <head>
     <meta charset="utf-8">
     <title>Create Your Own Pokemon!</title>
+
+          <!-- Mobile Specific Metas
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <meta name="viewport" content="width=device-width, initial-scale=1">
+
+          <!-- FONT
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+          <!-- CSS
+          –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+          <link rel="stylesheet" href="public/normalize.css">
+          <link rel="stylesheet" href="public/skeleton.css">
   </head>
   <body>
-    <h1>Create Your Own Pokemon</h1>
+    <div class="container">
+    <div class="row"><h1>Create Your Own Pokemon</h1>
+      <div class="eleven columns"
     <form action="/pokemon" method="post"> <br>
       Name<br> <input type="text" name="name"/> <br>
       Type<br><input type="text" name="type"/> <br>
       Stats<br><input type="text" name="stats"/> <br>
       Image <input type="file" name="image"/> <br>
       <input type="button" value="Create My Pokemon"/>
+    </div>
+    </div>
+    </div>
   </body>
 </html>

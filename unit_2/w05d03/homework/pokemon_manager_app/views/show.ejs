@@ -3,21 +3,47 @@
   <head>
     <meta charset="utf-8">
     <title>Gotta Catch 'em All!'</title>
-  </head>
-  <body>
-      <img src= <%= pokemon.img %> >
-    <h2>  <%= pokemon.name %> </h2>
 
-    <ul><h3>Type</h3>
-      <li> <%= pokemon.type %> </li>
-    </ul>
-    <ul><h3>Stats</h3>
-        <li>Hit Points: <%= pokemon.stats.hp %>
-        <li>Attack: <%= pokemon.stats.attack %>
-        <li>Defense: <%= pokemon.stats.defense %>
-        <li>Speed Attack: <%= pokemon.stats.spattack %>
-        <li>Speed Defense: <%= pokemon.stats.spdefense %>
-        <li>Speed: <%= pokemon.stats.speed %>
-    <ul>
+      <!-- Mobile Specific Metas
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- FONT
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link href="//fonts.googleapis.com/css?family=Raleway:400,300,600" rel="stylesheet" type="text/css">
+
+      <!-- CSS
+      –––––––––––––––––––––––––––––––––––––––––––––––––– -->
+      <link rel="stylesheet" href="public/normalize.css">
+      <link rel="stylesheet" href="public/skeleton.css">
+
+  </head>
+  <style>
+    ul {
+      list-style: none;
+    }
+  </style>
+  <body>
+    <div class="container">
+      <div class="row">
+        <img class="two columns" src= <%= pokemon.img %> >
+        <h2> <%= pokemon.name %> </h2>
+      </div>
+      <div class="row">
+        <ul class="six columns"><h3>Type</h3>
+          <li> <%= pokemon.type %> </li>
+        </ul>
+      </div>
+      <div class="row">
+        <ul class="six columns"><h3>Stats</h3>
+            <li>Hit Points: <%= pokemon.stats.hp %>
+            <li>Attack: <%= pokemon.stats.attack %>
+            <li>Defense: <%= pokemon.stats.defense %>
+            <li>Speed Attack: <%= pokemon.stats.spattack %>
+            <li>Speed Defense: <%= pokemon.stats.spdefense %>
+            <li>Speed: <%= pokemon.stats.speed %>
+        <ul>
+      </div>
+    </div>
   </body>
 </html>
