@@ -1,9 +1,13 @@
+body {
+  background: white;
+  font-family: 'Open Sans', sans-serif;
 
+}
 
 /*totally stole Kristyn's image style*/
 img {
-  height: 60px;
-  width: 60px;
+  height: 100px;
+  width: 100px;
   padding: 20px;
   margin: 10px;
   background: white;

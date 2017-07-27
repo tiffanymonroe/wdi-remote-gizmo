@@ -2,6 +2,7 @@
 <html>
   <head>
     <%#----CSS---%>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
     <link rel="stylesheet" href="style.css"/>
     <meta charset="utf-8">
     <title>Pokédex</title>
@@ -11,7 +12,9 @@
     <div>
       <section>
           <% for (let i=0; i < pokemon.length; i++){ %>
-            <img src=<%= pokemon[i].img %> />
+            <a href="/pokemon/<%= i %>"> 
+            <img src=<%= pokemon[i].img %>>
+            </a>
           <% } %>
 
     </section>
