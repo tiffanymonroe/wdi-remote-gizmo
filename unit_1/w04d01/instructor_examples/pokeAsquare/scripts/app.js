@@ -19,6 +19,25 @@ $(() => {
   let score = 0;
   let time  = 5;
   let round = 1;
+  let name = '';
+
+  $('#modalButton').on('click', (e) => {
+     name = $('input').val()
+     console.log(name)
+     // e.currentTarget is the button
+     $(e.currentTarget).parent().css('display', 'none');
+
+     showWelcomeMessage();
+  })
+
+  const showWelcomeMessage = () => {
+    // create a div or span to put our welcome message in
+    const $messageDiv = $('<div/>');
+    $messageDiv.text('Welcome to poke a square ' + name + '!');
+
+    $('header').append($messageDiv)
+
+  }
 
   const createSquares = (numOfSquares) => {
     for (let i = 0; i < numOfSquares; i++){

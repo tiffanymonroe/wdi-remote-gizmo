@@ -23,3 +23,13 @@ button {
   float: right;
   margin-right: 50%;
 }
+
+#modal {
+  /*// box shadow to make gray out*/
+  position: absolute;
+  background-color: purple;
+  height: 200px;
+  width: 200px;
+  left: 39%;
+  box-shadow:
+}

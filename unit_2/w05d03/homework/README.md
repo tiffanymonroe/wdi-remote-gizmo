@@ -64,7 +64,7 @@ The app should use RESTful Routes:
 ```
 // server.js
 
-var express    = require('express'),
+const express    = require('express'),
     app	       = express(),
     Pokemon    = require('/pokemon.js');
 
