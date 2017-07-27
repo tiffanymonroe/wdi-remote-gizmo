@@ -10,6 +10,10 @@ app.get('/pokemon', (req, res) => {
   });
 });
 
+app.get('/pokemon/new', (req, res) => {
+    res.render('new.ejs');
+  });
+
 
 // SHOW
 
@@ -19,14 +23,8 @@ app.get('/pokemon/:id', (req, res) => {
   });
 });
 
-// NEW
-
-// app.get('/pokemon/new', (req, res) => {
-//
-// })
-
 //Port
 
 app.listen (3000, () => {
   console.log("Go Catch 'em All!'");
-})
+});
