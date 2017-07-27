@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokemon Manager - Index Page</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+  </head>
+  <body>
+    <h1>
+      Pokemon Manager
+      <a class="link-as-button" href="/pokemon/new">Add a Pokemon!</a>
+    </h1>
+
+    <section>
+    <% for (var i = 0; i < pokemon.length; i++){%>
+
+      <a href="/pokemon/<%= i %>">
+        <img src="<%= pokemon[i].img %>">
+      </a>
+
+    <% } %>
+    </section>
+
+
+
+  </body>
+</html>
