@@ -33,6 +33,11 @@ app.get('/pokemon', (req, res) => {
   res.render('index.ejs', {pokemon: pokemon});
 });
 
+//-------New Route-------
+app.get('/pokemon/new', (req, res) => {
+  res.render('new.ejs');
+});
+
 //-------Show Route-------
 app.get('/pokemon/:id', (req, res) => {
   res.render('show.ejs', {

@@ -12,6 +12,12 @@
     <div>
       <section>
         <img src=<%= poke.img%>>
+
+        <%=poke.id%>
+        <% for (let i=0; i < poke.type.length; i++){ %>
+          <%=poke.type[i]%>
+        <% } %>
+
       </section>
   </div>
   </body>

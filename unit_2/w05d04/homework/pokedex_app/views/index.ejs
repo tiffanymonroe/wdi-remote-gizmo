@@ -3,16 +3,17 @@
   <head>
     <%#----CSS---%>
     <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
-    <link rel="stylesheet" href="style.css"/>
+    <link rel="stylesheet" href="../style.css"/>
     <meta charset="utf-8">
     <title>Pokédex</title>
   </head>
   <body>
     <h1>Pokédex</h1>
+    <h2><a href="/pokemon/new">Make Your Own</a></h2>
     <div>
       <section>
           <% for (let i=0; i < pokemon.length; i++){ %>
-            <a href="/pokemon/<%= i %>"> 
+            <a href="/pokemon/<%= i %>">
             <img src=<%= pokemon[i].img %>>
             </a>
           <% } %>
