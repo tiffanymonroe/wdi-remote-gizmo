@@ -4,7 +4,7 @@ const app = express();
 const bodyParser = require('body-parser');
 
 //Data
-let pokemon = require('./data/pokemon.js');
+const pokemon = require('./data/pokemon.js');
 
 //Listener
 const port = 3000;
@@ -27,17 +27,17 @@ app.get('/data', (req, res) => {
   res.send(pokemon);
 })
 
-// Index Route
+// ----------- Index Route -----------
 app.get('/pokemon', (req, res) => {
   res.render('pokemon/index.ejs', {pokemon: pokemon});
 })
 
-//New Route
+//----------- New Route -----------
 app.get('/pokemon/new', (req, res) => {
   res.render('pokemon/new.ejs');
 })
 
-// Create Route
+// ----------- Create Route -----------
 app.post('/pokemon', (req, res) => {
 
 //We can run the user input of `type`, that is currently a string, through a function to turn it into an array so that it's treated the same as the other Pokemon `type` data.
@@ -81,7 +81,7 @@ app.post('/pokemon', (req, res) => {
 });
 
 
-//Show Route
+//----------- Show Route -----------
 app.get('/pokemon/:id', (req, res) => {
   res.render('pokemon/show.ejs', {poke: pokemon[req.params.id]});
 })
