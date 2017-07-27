@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <link rel="stylesheet" href="./public/css/app.css" type="text/css">
+    <meta charset="utf-8">
+    <title>Friends</title>
+  </head>
+  <style>
+    img {
+      width: 50%;
+      height: auto;
+    }
+    </style>
+  <body>
+    <img src="https://images-production.global.ssl.fastly.net/uploads/photos/file/87041/friends-cast.jpg" alt="Friends Cast, 1994"/>
+
+    <ul>
+    <% for (let i=0; i < friends.length; i++){ let x = i; %>
+    <li> <a href="/friends/<%= x %>">
+     <%= friends[i].name %> </a>
+     <form action="/friends/<%=i; %>?_method=DELETE" method="post">
+       <input type="submit" value="delete"/>
+     </form>
+     </li>
+    <% } %>
+    </ul>
+    <br>
+
+  </body>
+</html>
