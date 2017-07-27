@@ -1,10 +1,20 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <%#----CSS---%>
+    <link rel="stylesheet" href="style.css"/>
     <meta charset="utf-8">
     <title>Pokédex</title>
   </head>
   <body>
     <h1>Pokédex</h1>
+    <div>
+      <section>
+          <% for (let i=0; i < pokemon.length; i++){ %>
+            <img src=<%= pokemon[i].img %> />
+          <% } %>
+
+    </section>
+  </div>
   </body>
 </html>

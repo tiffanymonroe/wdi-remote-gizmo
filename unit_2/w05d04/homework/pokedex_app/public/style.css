@@ -1,0 +1,19 @@
+
+
+/*totally stole Kristyn's image style*/
+img {
+  height: 60px;
+  width: 60px;
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 1px rgba(211, 211, 211, 0.2);
+  transition: 300ms ease all;
+  border: 1px solid white;
+}
+
+img:hover {
+  box-shadow: 1px 1px 3px 1px rgba(211, 211, 211, 0.5);
+  border: 1px solid rgba(95, 218, 138, 0.5);
+}
