@@ -14,8 +14,8 @@
 
       <!-- CSS
       –––––––––––––––––––––––––––––––––––––––––––––––––– -->
-      <link rel="stylesheet" href="public/normalize.css">
-      <link rel="stylesheet" href="public/skeleton.css">
+      <link rel="stylesheet" href="/public/normalize.css">
+      <link rel="stylesheet" href="/public/skeleton.css">
 
   </head>
   <style>
@@ -29,21 +29,28 @@
         <img class="two columns" src= <%= pokemon.img %> >
         <h2> <%= pokemon.name %> </h2>
       </div>
-      <div class="row">
-        <ul class="six columns"><h3>Type</h3>
-          <li> <%= pokemon.type %> </li>
-        </ul>
-      </div>
-      <div class="row">
-        <ul class="six columns"><h3>Stats</h3>
-            <li>Hit Points: <%= pokemon.stats.hp %>
-            <li>Attack: <%= pokemon.stats.attack %>
-            <li>Defense: <%= pokemon.stats.defense %>
-            <li>Speed Attack: <%= pokemon.stats.spattack %>
-            <li>Speed Defense: <%= pokemon.stats.spdefense %>
-            <li>Speed: <%= pokemon.stats.speed %>
-        <ul>
-      </div>
+      <table>
+        <table>
+          <tr>
+          <h3>Type</h3>
+
+
+          <% for (let i=0; i < pokemon.type.length; i++){ %>
+            <td> <%= pokemon.type[i] %> </td>
+          <% } %>
+          </tr>
+        </table>
+
+      <table>
+        <tr><h3>Stats</h3>
+            <td>Hit Points: <%= pokemon.stats.hp %></td>
+            <td>Attack: <%= pokemon.stats.attack %></td>
+            <td>Defense: <%= pokemon.stats.defense %></td>
+            <td>Speed Attack: <%= pokemon.stats.spattack %></td>
+            <td>Speed Defense: <%= pokemon.stats.spdefense %></td>
+            <td>Speed: <%= pokemon.stats.speed %></td>
+        </tr>
+      </table>
     </div>
   </body>
 </html>

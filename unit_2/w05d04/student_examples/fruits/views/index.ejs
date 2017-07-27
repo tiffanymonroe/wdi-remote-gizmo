@@ -17,6 +17,10 @@
                     <% } else { %>
                         It is not ready to eat
                     <% } %>
+                    <form action="/fruits/<%=i; %>?_method=DELETE" method="post">
+                        <input type="submit" value="delete"/>
+                    </form>
+                    <a href="/fruits/<%= i; %>/edit">edit</a>
                 </li>
             <% } %>
         </ul>

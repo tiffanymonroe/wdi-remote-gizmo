@@ -21,7 +21,7 @@ const friends = [
     name: "Chandler",
     age: 24,
     home: "Apartment 19",
-    job: "no one remembers"
+    job: "no-one-remembers-what-his-job-is"
   },
   {
     name: "Ross",

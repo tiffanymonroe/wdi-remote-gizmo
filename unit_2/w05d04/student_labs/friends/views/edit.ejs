@@ -8,7 +8,13 @@
     <title>Friends</title>
   </head>
   <body>
-    <h1> All About <%= friends.name %></h1>
-    <p><%= friends.name %> is a <%= friends.age %> year old <%= friends.job %>, and lives in <%= friends.home %>.</p>
+    <h1> Edit the Friends </h1>
+    <form action="/friends/<%=index%>?_method=PUT" method="post">
+      Name: <input type="text" name="name" value="<%=friends.name%>"/><br>
+      Age: <input type="number" name="age" value="<%=friends.age%>"/><br>
+      Home: <input type="text" name="home" value="<%=friends.home%>"/><br>
+      Job: <input type="text" name="job" value="<%=friends.job%>"/><br>
+      <input type="submit" name="" value="Submit Changes"/>
+    </form>
   </body>
 </html>

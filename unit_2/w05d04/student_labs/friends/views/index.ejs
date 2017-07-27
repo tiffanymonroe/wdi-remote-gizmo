@@ -1,30 +1,42 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <link rel="stylesheet" href="./public/css/app.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Permanent+Marker" rel="stylesheet">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/app.css" type="text/css">
+
     <meta charset="utf-8">
     <title>Friends</title>
   </head>
-  <style>
-    img {
-      width: 50%;
-      height: auto;
-    }
-    </style>
+
   <body>
-    <img src="https://images-production.global.ssl.fastly.net/uploads/photos/file/87041/friends-cast.jpg" alt="Friends Cast, 1994"/>
+    <div class="container">
+      <div class="row">
+        <h1>F R I E N D S</h1>
+        <img class="img-responsive center-block" src="https://images-production.global.ssl.fastly.net/uploads/photos/file/87041/friends-cast.jpg" alt="Friends Cast, 1994"/>
+      <div>
 
-    <ul>
-    <% for (let i=0; i < friends.length; i++){ let x = i; %>
-    <li> <a href="/friends/<%= x %>">
-     <%= friends[i].name %> </a>
-     <form action="/friends/<%=i; %>?_method=DELETE" method="post">
-       <input type="submit" value="delete"/>
-     </form>
-     </li>
-    <% } %>
-    </ul>
-    <br>
+      <table class="row col-xs-6">
+        <tr class="col-xs-6"><h3>Learn more about our friends:</h3>
 
+            <% for (let i=0; i < friends.length; i++){ let x = i; %>
+            <td class="col-xs-4"> <a href="/friends/<%= x %>">
+                  <%= friends[i].name %> </a>
+            </td>
+
+
+            <td class="col-xs-4">
+              <form action="/friends/<%=i; %>?_method=DELETE" method="post">
+                  <input class='btn' type="submit" value="delete"/>
+              </form>
+            </td>
+
+            <td class="col-xs-4">
+                  <a class="btn" href="/friends/<%=i; %>/edit">edit</a>
+             </td>
+      <% } %>
+       </tr>
+    </table>
+  <div>
   </body>
 </html>

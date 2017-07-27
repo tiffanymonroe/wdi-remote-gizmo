@@ -1,7 +1,17 @@
 body {
-  background-color: hotpink;
+  background-color: white;
 }
 img {
   width: 50%;
   height: auto;
+}
+
+h1, h3 {
+  font-family: 'Permanent Marker', cursive;
+  font-size: 5rem;
+  text-align: center;
+}
+
+table {
+  font-size: 2rem;
 }
