@@ -1,0 +1,76 @@
+body {
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background: #fbfbfb;
+  color: #525252;
+}
+
+h1 {
+  max-width: 1080px;
+  width: 100%;
+  flex-grow: 1;
+  display: flex;
+  font-weight: 200;
+  font-size: 24px;
+  justify-content: space-between;
+  align-items: center;
+}
+
+img {
+  height: 60px;
+  width: 60px;
+  padding: 20px;
+  margin: 10px;
+  background: white;
+  border-radius: 8px;
+  box-shadow: 1px 1px 3px 1px rgba(211, 211, 211, 0.2);
+  transition: 300ms ease all;
+  border: 1px solid white;
+}
+
+img:hover {
+  box-shadow: 1px 1px 3px 1px rgba(211, 211, 211, 0.5);
+  border: 1px solid rgba(95, 218, 138, 0.5);
+}
+
+section {
+    max-width: 1080px;
+     display: flex;
+     align-items: center;
+     flex-direction: row;
+     flex-wrap: wrap;
+     flex-flow: row wrap;
+     align-content: center;
+}
+
+li {
+  list-style: none;
+}
+
+.link-as-button {
+  background: #5bc3ef;
+  color: white;
+  padding: 10px 30px;
+  font-size: 16px;
+  text-decoration: none;
+  border-radius: 3px;
+  border: none;
+  font-family: inherit;
+}
+
+form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  min-width: 200px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+}
