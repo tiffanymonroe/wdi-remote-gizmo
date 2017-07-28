@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+  </head>
+  <body>
+    <div id="container">
+      <h1><a href="/pokemon"> Back to the Pokedex!</a></h1>
+      <form action="/pokemon" method="POST">
+        <input type="hidden" name="id" value ="<%=pokemon[pokemon.length -1].id + 1%>" />
+        <label for="name">Name :</label>
+        <input type="text" name="name" placeholder="name" required="" />
+        <label for="img">img :</label>
+        <input type="text" name="img" placeholder="image href: http:// or https://" pattern="http[s]*://.+"/>
+
+        <h4> Type</h4>
+        <label for="hp">Add all types here, seperated by a comma :</label>
+        <input type="text" name="type" placeholder="type(s)" />
+
+        <h4> Stats</h4>
+        <label for="hp">HP :</label>
+        <input type="text" name="hp" placeholder="hp" />
+        <label for="attack">Attack :</label>
+        <input type="text" name="attack" placeholder="attack"  />
+        <label for="defense">Defense :</label>
+        <input type="text" name="defense" placeholder="defense"  />
+        <label for="spattack">Spattack :</label>
+        <input type="text" name="spattack" placeholder="spattack"  />
+        <label for="spdefense">Spdefense :</label>
+        <input type="text" name="spdefense" placeholder="spdefense"  />
+        <label for="speed">Speed :</label>
+        <input type="text" name="speed" placeholder="speed"  />
+        <h4> Damages</h4>
+        <label for="normal">Normal :</label>
+        <input type="text" name="normal" placeholder="normal"  />
+        <label for="fire">Fire :</label>
+        <input type="text" name="fire" placeholder="fire" />
+        <label for="water">Water :</label>
+        <input type="text" name="water" placeholder="water"  />
+        <label for="electric">Electric :</label>
+        <input type="text" name="electric" placeholder="electric"  />
+        <label for="grass">Grass :</label>
+        <input type="text" name="grass" placeholder="grass"  />
+        <label for="ice">Ice :</label>
+        <input type="text" name="ice" placeholder="ice"  />
+        <label for="fight">Fight :</label>
+        <input type="text" name="fight" placeholder="fight"  />
+        <label for="poison">Poison :</label>
+        <input type="text" name="poison" placeholder="poison"  />
+        <label for="ground">Ground :</label>
+        <input type="text" name="ground" placeholder="ground"  />
+        <label for="flying">Flying :</label>
+        <input type="text" name="flying" placeholder="flying"  />
+        <label for="psychic">Psychic :</label>
+        <input type="text" name="psychic" placeholder="psychic"  />
+        <label for="bug">Bug :</label>
+        <input type="text" name="bug" placeholder="bug"  />
+        <label for="rock">Rock :</label>
+        <input type="text" name="rock" placeholder="rock"  />
+        <label for="ghost">Ghost :</label>
+        <input type="text" name="ghost" placeholder="ghost"  />
+        <label for="dragon">Dragon :</label>
+        <input type="text" name="dragon" placeholder="dragon"  />
+        <label for="dark">Dark :</label>
+        <input type="text" name="dark" placeholder="dark"  />
+        <label for="steel">Steel :</label>
+        <input type="text" name="steel" placeholder="steel"  />
+        <button type="submit">Add Pokemon!</button>
+      </form>
+    </div>
+  </body>
+</html>

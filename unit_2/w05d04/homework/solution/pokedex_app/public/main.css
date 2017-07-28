@@ -1,0 +1,127 @@
+/***********************************************
+* General
+************************************************/
+body {
+  background-color: #555B6E;
+  font-family: 'Josefin Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+#container {
+  color:#faf9f9;
+  margin: auto;
+  padding: 5px  5px 5px 8vmax;
+  max-width: 90%;
+}
+
+a{
+  text-decoration: none;
+  color:  #BEE3DB;
+  text-shadow: 1px 1px 1px #89B0AE;
+}
+
+a:hover {
+  color: #89B0AE;
+}
+
+h1 , h2 {
+  text-align: center;
+}
+
+h3{
+  display: inline-block;
+  font-size: 1.5vmax;
+  color: #FAF9F9;
+  text-shadow: 1px 1px 1px black;
+}
+
+/***********************************************
+* Index
+************************************************/
+.card {
+  padding: 2px;
+  margin: 5px;
+  border: 1px solid #89B0AE;;
+  text-align: center;
+  box-shadow: 1px 1px 1px 1px #BEE3DB;
+  background-color: #464b5b;
+}
+
+img {
+  height:12vmax;
+  width:12vmax;
+  display: block;
+  box-shadow: 1px 1px 1px 1px #FAF9F9;
+}
+
+#pokemon-images {
+  display: flex;
+  flex-wrap: wrap;
+  margin:auto;
+}
+
+/***********************************************
+* Show One
+************************************************/
+li {
+  list-style-type: none;
+}
+
+#one-pokemon {
+ margin:auto;
+ text-align: center;
+}
+
+#one-pokemon h3 {
+ color: #faf9f9;
+ font-size: 5vmax;
+ margin-top: 1vmax;
+ margin-bottom: 1vmax;
+}
+
+#one-pokemon img{
+  width:20vmax;
+  height:auto;
+  margin:auto;
+  box-shadow: 2px 2px 2px 2px black;
+}
+#one-pokemon a {
+ font-size: 2vmax;
+ font-weight: normal;
+ margin-top: 1vmax;
+ margin-bottom: 1vmax;
+ text-shadow: none;
+}
+/***********************************************
+* Edit/New
+************************************************/
+form {
+  margin-top: 40px;
+  display: flex;
+  flex-direction: column;
+  color: #555B6E;
+}
+
+input {
+  padding: 10px;
+  font-size: 14px;
+  border-radius: 3px;
+  min-width: 200px;
+  margin-bottom: 10px;
+  border: 1px solid #eee;
+  color: #555B6E;
+}
+
+label {
+  color: #FAF9F9;
+}
+#delete {
+  background:inherit;
+  border: none;  font-size: 1.5vmax;
+  text-decoration: none;
+  color:  #BEE3DB;
+  font-size: 2vmax;
+
+}
