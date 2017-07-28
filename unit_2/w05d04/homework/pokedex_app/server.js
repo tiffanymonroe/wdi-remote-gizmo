@@ -41,7 +41,7 @@ app.get('/pokemon/new', (req, res) => {
 //--------Create Route-------
 //from Homework solutions
 
-app.post('pokemon/', (req, res) => {
+app.post('pokemon', (req, res) => {
   const newPokemon = req.body;
   console.log(newPokemon);
 
@@ -60,9 +60,9 @@ const formatDamages = (damages) => {
   const finalDamages = [];
   for (const damage in damageArray){
     finalDamages.push(damageArray[damage].split(":"));
-    formattedDamages[finalDamages[damage][0]] = finalDamages[damage][1]
+    damageObject[finalDamages[damage][0]] = finalDamages[damage][1]
   }
-  return formattedDamages;
+  return damageObject;
 }
 
 newPokemon.type = formatType(newPokemon.type);
@@ -78,4 +78,18 @@ app.get('/pokemon/:id', (req, res) => {
   res.render('show.ejs', {
     poke: pokemon[req.params.id]
   });
+});
+
+
+//-------Edit Route -------
+app.get('/pokemon/:id/edit', (req, res) => {
+  res.render('edit.ejs', ()=> {
+    poke: pokemon[req.params.id] //,
+    // id req.params.id
+  });
+});
+
+app.put('pokemon/:id', (req, res) => {
+  pokemon[req.params.id] = req.body;
+  res.redirect('/pokemon');
 });

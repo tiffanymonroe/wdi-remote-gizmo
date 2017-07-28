@@ -12,14 +12,19 @@
     <h1>Pokédex</h1>
     <h2><a href="/pokemon/new">Make Your Own</a></h2>
 
-      <section>
-          <% for (let i=0; i < pokemon.length; i++){ %>
-            <a href="/pokemon/<%=i%>">
-            <img src=<%= pokemon[i].img %>>
-            </a>
+      <table class="images">
+        <tr class="images">
+          <td>
+            <% for (let i=0; i < pokemon.length; i++){ %>
+              <a href="/pokemon/<%=i%>">
+              <img src=<%= pokemon[i].img %>>
+              </a>
           <% } %>
-
+        </td>
+      </tr>
+    </table>
     </section>
+
   </div>
   </body>
 </html>

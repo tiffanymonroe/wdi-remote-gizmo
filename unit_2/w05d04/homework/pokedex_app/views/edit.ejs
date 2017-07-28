@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <%#----CSS---%>
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+    <link rel="stylesheet" href="../style.css"/>
+    <meta charset="utf-8">
+    <title>Pokédex</title>
+  </head>
+  <body>
+    <div class="container">
+    <h1>Make Your Own Pokemon</h1>
+    <div class="form">
+        <form action="/pokemon/<%=id%>?_method=PUT" method="post">
+          <input type="text" name="name" value="<%=poke.name%>" placeholder="Name"/><br/>
+          <input type="text" name="img" value="<%=poke.img%>" placeholder="Image address"/><br/>
+          <input type="number" name="id" value="<%=poke.id%>" placeholder="id (ex. 201)"/><br/>
+          <input type="text" name="type" value="<%=poke.type%>" placeholder="Type (ex. grass, rock)" /><br/>
+          <input type="text" name="damages" value="<%=poke.moves.damages%>" placeholder="Damages (ex. wind: 4, fire: 3)"/><br/>
+          <input type="submit" name="" value="Make My Changes"/>
+       </form>
+     </div>
+  </div>
+  </body>
+</html>
