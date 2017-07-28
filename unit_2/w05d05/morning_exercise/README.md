@@ -186,7 +186,7 @@ For the modal to display, we need to change the css property of the modal's `dis
 
 ```javascript
 // Event handler to open the modal
-var openModal = function(){
+var openModal = () => {
   $modal.css('display', 'block');
 }
 ```
@@ -211,7 +211,7 @@ For the modal to close, we need to change the css property of the modal's `displ
 
 ```javascript
 // Event handler to close the modal
-var closeModal = function(){
+var closeModal = () => {
   $modal.css('display', 'none');
 }
 ```
