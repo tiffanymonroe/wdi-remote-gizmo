@@ -8,13 +8,18 @@
     <title>Pokédex</title>
   </head>
   <body>
+    <div class="container">
     <h1>Make Your Own Pokemon</h1>
-    <div>
-      <section>
-      
-
-
-      </section>
+    <div class="form">
+        <form action="/pokemon" method="post">
+          <input type="text" name="name" placeholder="Name"/><br/>
+          <input type="text" name="img" placeholder="Image address"/><br/>
+          <input type="number" name="id" placeholder="id (ex. 201)"/><br/>
+          <input type="text" name="type" placeholder="Type (ex. grass, rock)" /><br/>
+          <input type="text" name="damages" placeholder="Damages (ex. wind: 4, fire: 3)"/><br/>
+          <button class="link-as-button" type="submit">Make My Pokemon</>
+       </form>
+     </div>
   </div>
   </body>
 </html>
