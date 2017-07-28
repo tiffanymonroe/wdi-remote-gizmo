@@ -37,6 +37,8 @@ Utilize the following resources to research the commands you will need:
 **Comment out your database commands** as you get them working so that you're only running **one at a time**. This is where we will be looking for your work after you turn it in.
 - A file called `populateVampires.js` that includes data on vampires that you will add (later).
 
+5. Install and require `mongoose`
+
 ## What is a schema
 
 A schema is a way to organize, ahead of time, what a group of data is going to look like. This can be at various levels of a database depending on what kind of databases you are using.
