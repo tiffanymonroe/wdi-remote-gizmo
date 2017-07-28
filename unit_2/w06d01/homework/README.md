@@ -1,13 +1,14 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Mongoose Store<br>
 Type: Homework<br>
 Duration: Two days <br>
 Creator: Thom Page for WDIr-Panthalassa <br>
-Course: WDIR-Hopper<br>
+Updated by: Kristyn Bryan <br>
+Course: Gizmo<br>
 Competencies: Full CRUD in Express with Mongoose <br>
 
 ---
@@ -18,10 +19,11 @@ Competencies: Full CRUD in Express with Mongoose <br>
 Make a product inventory manager with full CRUD using Mongoose.
 
 
-## APP
+## Your App
 
 ### Index page
-Your app should have an index page where
+
+1. Your app should have an index page where
 
 - all the products are displayed
 - the images link to the product's **show** page
@@ -30,26 +32,29 @@ Your app should have an index page where
 ![index](http://i.imgur.com/CRJd6Hg.png)
 
 ### Show page
-Your show page should display a product with
+
+1. Your show page should display a product with
 
 - a link back to the products
 - a link to edit the product (goes to the edit page)
 - a delete button that deletes
 - and the number of items remaining in stock.
 
-There will be a BUY button. The BUY button will reduce the number of items in stock by 1 each time it's pressed.
+2. There should be a BUY button. The BUY button will reduce the number of items in stock by 1 each time it's pressed.
 
 ![show](http://i.imgur.com/sp9DGtd.png)
 ![bins](http://i.imgur.com/EADp0We.png)
 
-If the quantity of your item is zero, the show page should say 'OUT OF STOCK' instead of saying how many are remaining. (Hint: conditionals in `ejs`). On the edit page, make sure you can set the quantity to zero if you want so that you can test if this is working.
+3. If the quantity of your item is zero, the show page should say 'OUT OF STOCK' instead of saying how many are remaining. (Hint: conditionals in `ejs`).
 
-The BUY button should also not be rendered if the quantity of the item is zero.
+4. On the edit page, make sure you can set the quantity to zero if you want so that you can test if this is working.
+
+5. The BUY button should also **not** be rendered if the quantity of the item is zero.
 
 ![no-show](http://i.imgur.com/5FZKyly.png)
 
 ### Edit page and New page
-These views should render forms and submit to the appropriate routes.
+1. These views should render forms and submit to the appropriate routes.
 
 ### Redirects:
 - The *create* route should redirect to the index
@@ -78,7 +83,7 @@ These views should render forms and submit to the appropriate routes.
 
 - Create a model and export it.
 
-- Make sure you connect to your Mongo server in server.js
+- Make sure you connect to your Mongo server in `server.js`
 
 ```
 mongoose.connect('mongodb://localhost/mongoose_store');
@@ -157,11 +162,14 @@ The commit message should read: <br>
 
 # Add Some Data
 
-### SEED
-You can use these seeds to get starting data if you so choose. Handy hint:  Make a route in your products controller `/seed/newproducts`, and to seed your database, just visit the route **once** in your browser.
+## Seed Your Data
+
+You can use these seeds to get some starting data if you so choose.
+
+Handy hint:  Make a route in your products controller `/seed/newproducts` (you can do that by pasting the code below into your controller), and to seed your database, just visit the route **once** in your browser.
 
 ```
-router.get('/seed/newproducts', function(req, res) {
+router.get('/seed/newproducts', (req, res) => {
 
 	var newProducts = [
 		{
@@ -185,7 +193,7 @@ router.get('/seed/newproducts', function(req, res) {
 	  }
 	];
 
-	Product.create(newProducts, function(err) {
+	Product.create(newProducts, (err) => {
 		  console.log("SEED: NEW PRODUCTS CREATED!");
 		  res.redirect('/products');
 	});
@@ -196,13 +204,13 @@ router.get('/seed/newproducts', function(req, res) {
 # Hungry for more?
 ## 2nd Model
 
-Make *another* model, this time for a User. The User will have:
+1. Make *another* model, this time for a User. The User will have:
 
 ```
 username: String,
 shopping_cart: Array
 ```
 
-On the product **show** page, when a user presses `BUY`, the product will be added to the User's shopping cart.
+2. On the product **show** page, when a user presses `BUY`, the product will be added to the User's shopping cart.
 
-View the shopping cart on the User's **show** page. (The User will need only a show page and none of the other routes).
+3. View the shopping cart on the User's **show** page. (The User will need only a show page and none of the other routes).
