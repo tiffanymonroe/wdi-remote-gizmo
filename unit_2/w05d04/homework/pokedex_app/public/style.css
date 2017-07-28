@@ -1,7 +1,14 @@
 body {
   background: white;
   font-family: 'Open Sans', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+}
 
+.container {
+  width: 90%;
+  margin: 0 auto;
 }
 
 /*totally stole Kristyn's image style*/
@@ -17,7 +24,12 @@ img {
   border: 1px solid white;
 }
 
+
 img:hover {
   box-shadow: 1px 1px 3px 1px rgba(211, 211, 211, 0.5);
-  border: 1px solid rgba(95, 218, 138, 0.5);
+  border: 1px solid rgba(255, 203, 9, 0.5);
+}
+
+a {
+  text-decoration: none;
 }

@@ -8,17 +8,48 @@
     <title>Pokédex</title>
   </head>
   <body>
-    <h1>Pokédex</h1>
-    <div>
-      <section>
+
+    <div class="container">
+
         <img src=<%= poke.img%>>
 
-        <%=poke.id%>
-        <% for (let i=0; i < poke.type.length; i++){ %>
-          <%=poke.type[i]%>
-        <% } %>
+        <h1> <%= poke.name %> </h1>
 
-      </section>
+            <h3>id</h3>
+            <%=poke.id%>
+            <h3>Type</h3>
+            <table>
+              <% for (let i=0; i < poke.type.length; i++){ %>
+                <tr>
+                  <td><%=poke.type[i]%></td>
+                </tr>
+              <% } %>
+            </table>
+
+            <h3>Stats</h3>
+            <% const statsObj = poke.stats %>
+            <table>
+              <% for (let key in statsObj){%>
+                <tr>
+                  <td><%=key%>:</td>
+                  <td><%=statsObj[key]%></td>
+                </tr>
+              <% } %>
+            </table>
+
+        <h3>Damages</h3>
+        <% const damageObj = poke.damages || poke.moves.damages  %>
+
+
+        <table>
+          <% for (let key in damageObj) { %>
+            <tr>
+              <td><%= key %>:</td>
+              <td><%= damageObj[key] %></td>
+            </tr>
+          <% } %>
+        </table>
+
   </div>
   </body>
 </html>
