@@ -8,13 +8,13 @@ var $modal = $('#modal');
 var $closeBtn = $('#close');
 
 // Event handler to open the modal
-var openModal = function(){
+var openModal = () => {
   console.log("open clicked");
   $modal.css('display', 'block');
 }
 
 // Event handler to close the modal
-var closeModal = function(){
+var closeModal = () => {
   console.log("close clicked");
   $modal.css('display', 'none');
 }
