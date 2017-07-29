@@ -1,0 +1,25 @@
+{
+  "name": "pokedex_app",
+  "version": "1.0.0",
+  "description": "WDIR-Matrix W5D5 Homework",
+  "main": "server.js",
+  "dependencies": {
+    "body-parser": "^1.15.2",
+    "ejs": "^2.5.3",
+    "express": "^4.14.0",
+    "method-override": "^2.3.7"
+  },
+  "devDependencies": {},
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
+  },
+  "keywords": [
+    "pokemon",
+    "wdir",
+    "matrix",
+    "crud"
+  ],
+  "author": "K. Rafalski",
+  "license": "ISC"
+}

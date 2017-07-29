@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Pokedex</title>
+     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="/normalize.css">
+    <link rel="stylesheet" type="text/css" href="/main.css">
+  </head>
+  <body>
+    <div id="container">
+    <h1><a href="/pokemon"> Back to the Pokedex!</a></h1>
+    <div id="one-pokemon">
+      <h3><a href="/pokemon/<%= index %>"><%= pokemon.name  %></h3>
+      <img src="<%= pokemon.img %>" alt="<%= pokemon.name  %>"/></a>
+    </div>
+    <br>
+    <form action="/pokemon/<%= index %>?_method=PUT" method="POST">
+        <label for="ID">ID :</label>
+        <input type="text" name="id" placeholder="ID" value="<%= pokemon.id %>" />
+        <label for="Name">NAME :</label>
+        <input type="text" name="name" placeholder="name" value="<%= pokemon.name %>" />
+        <label for="IMG">IMG :</label>
+        <input type="text" name="img" placeholder="image href" value="<%= pokemon.img %>" />
+        <h4> Type</h4>
+        <% console.log(pokemon.type.length); %>
+          <label for="TYPE">TYPE :</label>
+          <% for(var i = 0; i < pokemon.type.length; i ++){ %>
+            <input type="text" name="type" placeholder="<%=pokemon.type[i]%>" />
+          <% }; %>
+        <h4> Stats</h4>
+          <% Object.keys(pokemon.stats).forEach(function(oneStat) { %>
+            <label for="<%=oneStat%>"><%=oneStat.toUpperCase()%> :</label>
+            <input type="text" name="<%=oneStat%>" placeholder="<%=oneStat%>" value="<%=pokemon.stats[oneStat] %>" />
+          <% }); %>
+        <h4> Damages</h4>
+          <% Object.keys(pokemon.damages).forEach(function(oneDamage) { %>
+              <label for="<%=oneDamage%>"><%=oneDamage.toUpperCase()%> :</label>
+              <input type="text" name="<%=oneDamage%>" placeholder="<%=oneDamage%>" value="<%=pokemon.damages[oneDamage] %>" />
+            <% }); %>
+        <br>
+        <br>
+        <button type="submit">Edit Pokemon!</button>
+      </form>
+      <h2><a href="/pokemon/<%= index %>">Nevermind! </a></h2>
+    </div>
+  </body>
+</html>
