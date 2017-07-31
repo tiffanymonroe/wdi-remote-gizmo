@@ -1,6 +1,4 @@
 //IMPORTANT NOTES ABOUT THIS HW SOLUTION:
-//Some of the queries/questions were slightly modified to better match the provided data
-//the commented out text in this file should match the query demonstrated (again may not match the initial hw)
 
 //to test out these answers only comment in/out exactly what you want- one at a time, otherwise you may populate your db with duplicates, or confound your console.logs
 
