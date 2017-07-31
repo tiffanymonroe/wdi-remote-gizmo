@@ -1,4 +1,4 @@
-()=># CRUD App with Mongoose - Create and Read
+# CRUD App with Mongoose - Create and Read
 
 ## Lesson Objectives
 
