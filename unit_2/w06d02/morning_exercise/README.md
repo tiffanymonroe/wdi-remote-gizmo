@@ -1,13 +1,13 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Data Scraping with Cheerio & Request <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
 Creator: Kristyn Bryan<br>
-Course: WDIR-Hopper<br>
+Course: WDIR-Gizmo<br>
 Competencies: Data Scraping with Node <br>
 Prerequisites: Node, JavaScript <br>
 
