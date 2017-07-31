@@ -2,7 +2,7 @@
 
 ## Lesson Objectives
 
-1. Initialise a directory
+1. Initialize a directory
 1. Start express
 1. Create New Route
 1. Create Create Route
@@ -16,7 +16,7 @@
 1. Have Index Page Link to Show Route
 1. Create show.ejs
 
-## Initialise a directory
+## Initialize a directory
 
 1. Create a directory for the app in `student_examples` and `cd` into it
 1. `npm init`
