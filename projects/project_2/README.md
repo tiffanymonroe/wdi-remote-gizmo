@@ -159,13 +159,12 @@ The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
 ## Project 2 Inspiration:
 
 - Cheerups: https://warm-beach-18335.herokuapp.com/cheerups
-
+- Mixtapes: https://project-mixtapes.herokuapp.com/
 - Tink & Frog: https://tink-and-frog.herokuapp.com/
-
+- CodeSnips: https://stark-plateau-60254.herokuapp.com/
 - flyerPole: https://flyerpole.herokuapp.com/
-
+- LeagueManager: https://aqueous-harbor-40707.herokuapp.com/
 - Yarn: https://thawing-chamber-93915.herokuapp.com/
-
 - Crammer: https://study-tool.herokuapp.com/
-
+- GitFit: https://salty-springs-24805.herokuapp.com/
 - Civilized Coffee: https://infinite-shelf-28534.herokuapp.com/
