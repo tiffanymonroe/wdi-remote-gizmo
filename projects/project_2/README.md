@@ -155,3 +155,17 @@ The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
 
 5. **QUESTION**
   - After going through all this what is your questions specifically, more specifically than how can I make this work?
+
+## Project 2 Inspiration:
+
+- Cheerups: https://warm-beach-18335.herokuapp.com/cheerups
+
+- Tink & Frog: https://tink-and-frog.herokuapp.com/
+
+- flyerPole: https://flyerpole.herokuapp.com/
+
+- Yarn: https://thawing-chamber-93915.herokuapp.com/
+
+- Crammer: https://study-tool.herokuapp.com/
+
+- Civilized Coffee: https://infinite-shelf-28534.herokuapp.com/
