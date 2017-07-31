@@ -21,11 +21,12 @@ db.once('open', ()=>{
 /////////////////////////////////////////////////
 // INSERT USING MONGOOSE
 // ### Add the vampire data that we gave you
-Vampire.collection.insertMany(vampireData,(err, data) => {
-    console.log("added provided vampire data")
+// Vampire.collection.insertMany(vampireData,(err, data) => {
+//     console.log("added provided vampire data")
 
 // ### Add some new vampire data
-Vampire.create({
+Vampire.create([
+  {
   name: 'Angelus',
   hair_color: 'brown',
   eye_color: 'brown',
@@ -34,9 +35,9 @@ Vampire.create({
   location: "Europe and the US",
   gender: 'm',
   victims: 100000
-}),
+},
 
-Vampire.create({
+{
   name: 'Darla',
   hair_color: 'blonde',
   eye_color: 'blue',
@@ -45,9 +46,9 @@ Vampire.create({
   location: "Europe and the US",
   gender: 'f',
   victims: 90000
-}),
+},
 
-Vampire.create({
+{
   name: 'Drusilla',
   hair_color: 'brown',
   eye_color: 'blue',
@@ -56,9 +57,9 @@ Vampire.create({
   location: "Europe and the US",
   gender: 'f',
   victims: 80000
-}),
+},
 
-Vampire.create({
+{
   name: 'Spike',
   hair_color: 'Billy Idol blonde',
   eye_color: 'blue',
@@ -67,67 +68,62 @@ Vampire.create({
   location: "Europe and the US",
   gender: 'm',
   victims: 100000
-}), (error, vampire) => {
-      if (error) {
-        console.log(error);
-      } else {
-        console.log(vampire);
-      }
+}],
       mongoose.connection.close();
-    }
-  });
-});
+);
+
+
 /////////////////////////////////////////////////
 // ## QUERYING
 /////////////////////////////////////////////////
 // ### Select by comparison
 
-Vampires.find(
-  {gender: 'f'},
-  (error, vampires)=>{
-    console.log(vampires);
-  },
-  {multi: true}
-);
-
-Vampires.find(
-  {victims:
-      {
-        $gt: 500
-      }
-  },
-  (error, vampires)=>{
-    console.log(vampires);
-  },
-  {multi: true}
-);
-
-Vampires.find(
-  {victims:
-      {
-        $lt: 150
-      },
-      {
-        $gt: 500
-      }
-  },
-  (error, vampires)=>{
-    console.log(vampires);
-  },
-  {multi: true}
-);
-
-Vampires.find(
-  {victims:
-      {
-        $gt: 500
-      }
-  },
-  (error, vampires)=>{
-    console.log(vampires);
-  },
-  {multi: true}
-);
+// Vampires.find(
+//   {gender: 'f'},
+//   (error, vampires)=>{
+//     console.log(vampires);
+//   },
+//   {multi: true}
+// );
+//
+// Vampires.find(
+//   {victims:
+//       {
+//         $gt: 500
+//       }
+//   },
+//   (error, vampires)=>{
+//     console.log(vampires);
+//   },
+//   {multi: true}
+// );
+//
+// Vampires.find(
+//   {victims:
+//       {
+//         $lt: 150
+//       },
+//       {
+//         $gt: 500
+//       }
+//   },
+//   (error, vampires)=>{
+//     console.log(vampires);
+//   },
+//   {multi: true}
+// );
+//
+// Vampires.find(
+//   {victims:
+//       {
+//         $gt: 500
+//       }
+//   },
+//   (error, vampires)=>{
+//     console.log(vampires);
+//   },
+//   {multi: true}
+// );
 
 
 
@@ -135,107 +131,109 @@ Vampires.find(
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
-Vampires.find(
-  {title: {
-    $exists: true
-    }
-  },
-  (error, vampires)=>{
-    console.log(vampires);
-  },
-  {multi: true}
-);
-
-Vampires.find(
-  {victims:
-    {
-      $eq: 0
-    }
-  },
-  (error, vampires)=>{
-    console.log(vampires);
-  },
-  {multi: true}
-);
-
-Vampires.find(
-  { $and:[
-    {title: {
-      $exists: true
-      }
-    },
-    {victims: {
-      $equal: 0
-      }
-  }
-  ]
-};
-
-Vampires.find (
-  { $and:[
-      {
-        victims: {$exists: true}
-      },
-      {
-        victims: {$gt: 1000}
-      }
-    ]
-  },
-
-  (error, vampires)=>{
-    console.log(vampires);
-  },
-  {multi: true}
-);
+// Vampires.find(
+//   {title: {
+//     $exists: true
+//     }
+//   },
+//   (error, vampires)=>{
+//     console.log(vampires);
+//   },
+//   {multi: true}
+// );
+//
+// Vampires.find(
+//   {victims:
+//     {
+//       $eq: 0
+//     }
+//   },
+//   (error, vampires)=>{
+//     console.log(vampires);
+//   },
+//   {multi: true}
+// );
+//
+// Vampires.find(
+//   { $and:[
+//     {title: {
+//       $exists: true
+//       }
+//     },
+//     {victims: {
+//       $equal: 0
+//       }
+//   }
+//   ]
+// };
+//
+// Vampires.find (
+//   { $and:[
+//       {
+//         victims: {$exists: true}
+//       },
+//       {
+//         victims: {$gt: 1000}
+//       }
+//     ]
+//   },
+//
+//   (error, vampires)=>{
+//     console.log(vampires);
+//   },
+//   {multi: true}
+// );
 
 
 /////////////////////////////////////////////////
 // ### Select with OR
-Vampires.find(
-{   $or: [
-      {location:
-        {$eq: 'New York, New York, US'}
-      }, {location:
-        {$eq: 'New Orleans, Louisiana, US'}
-      }
-    ]
-}
-);
-
-Vampires.find(
-{   $or: [
-      {loves:
-        {$eq: 'brooding'}
-      }, {loves:
-        {$eq: 'being tragic'}
-      }
-    ]
-}
-);
-
-Vampires.find(
-{   $or: [
-      {victims:
-        {$gt: 1000}
-      }, {loves:
-        {$eq: 'marshmallows'}
-      }
-    ]
-}
-);
-
-Vampires.find(
-{   $or: [
-      {hair_color:
-        {$eq: 'red'}
-      }, {eye_color:
-        {$eq: 'green'}
-      }
-    ]
-}
-);
+// Vampires.find(
+// {   $or: [
+//       {location:
+//         {$eq: 'New York, New York, US'}
+//       }, {location:
+//         {$eq: 'New Orleans, Louisiana, US'}
+//       }
+//     ]
+// }
+// );
+//
+// Vampires.find(
+// {   $or: [
+//       {loves:
+//         {$eq: 'brooding'}
+//       }, {loves:
+//         {$eq: 'being tragic'}
+//       }
+//     ]
+// }
+// );
+//
+// Vampires.find(
+// {   $or: [
+//       {victims:
+//         {$gt: 1000}
+//       }, {loves:
+//         {$eq: 'marshmallows'}
+//       }
+//     ]
+// }
+// );
+//
+// Vampires.find(
+// {   $or: [
+//       {hair_color:
+//         {$eq: 'red'}
+//       }, {eye_color:
+//         {$eq: 'green'}
+//       }
+//     ]
+// }
+// );
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
+
+
 
 /////////////////////////////////////////////////
 //### Negative Selection
