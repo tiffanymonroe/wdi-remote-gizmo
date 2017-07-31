@@ -21,6 +21,8 @@ Make a product inventory manager with full CRUD using Mongoose.
 
 ## Your App
 
+This is a **2-day** homework. We recommend that you start with getting the app setup, the database connected, the index and show page (at the very least) done tonight. 
+
 ### Index page
 
 1. Your app should have an index page where
