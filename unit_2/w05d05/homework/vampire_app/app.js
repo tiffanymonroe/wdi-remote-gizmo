@@ -3,14 +3,16 @@ const mongoose = require('mongoose');
 
 
 // 2. Require your model (and possibly your extra data source);
-const db = mongoose.connection;
+
 const Vampire = require('./models/vampire.js');
 const vampireData = require('./models/populateVampires.js')
 // 3. Connect your database and collection name
 
 
 // 4. Open your mongoose connection
+const db = mongoose.connection;
 
+db.once('open', ()=>{
 /////////////////////////////////////////////////
 //Write your answers to add, query, update, remove, and Hungry for More below.
 
@@ -65,19 +67,77 @@ Vampire.create({
   location: "Europe and the US",
   gender: 'm',
   victims: 100000
-})
-mongoose.connection.close();
+}), (error, vampire) => {
+      if (error) {
+        console.log(error);
+      } else {
+        console.log(vampire);
+      }
+      mongoose.connection.close();
+    }
+  });
 });
 /////////////////////////////////////////////////
 // ## QUERYING
 /////////////////////////////////////////////////
 // ### Select by comparison
 
+Vampires.find(
+  {gender: 'f'},
+  (error, vampires)=>{
+    console.log(vampires);
+  },
+  {multi: true}
+);
+
+Vampires.find(
+  {victims:
+      {
+        $gt: 500
+      }
+  },
+  {multi: true}
+);
+
+Vampires.find(
+  {victims:
+      {
+        $lt: 150
+      },
+      {
+        $gt: 500
+      }
+  },
+  {multi: true}
+);
+
+Vampires.find(
+  {victims:
+      {
+        $gt: 500
+      },
+  },
+  {multi: true}
+);
+
+
+
+
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
+
+
 /////////////////////////////////////////////////
 // ### Select with OR
+
+// { $or: [
+//       {location:
+//         {$eq: 'New York, New York, US'}
+//       }, {location:
+//         {$eq: 'New Orleans, Louisiana, US'}
+//       }
+// ]}
 
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
