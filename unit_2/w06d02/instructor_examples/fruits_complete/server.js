@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const db = mongoose.connection;
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
 
@@ -12,7 +11,7 @@ const fruitsController = require('./controllers/fruits.js');
 app.use('/fruits', fruitsController);
 
 mongoose.connect('mongodb://localhost:27017/basiccrud');
-db.once('open', ()=> {
+mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 
