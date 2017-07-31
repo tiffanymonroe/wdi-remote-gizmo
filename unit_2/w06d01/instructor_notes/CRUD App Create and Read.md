@@ -120,11 +120,10 @@ app.post('/fruits/', (req, res)=>{
 
 ```javascript
 const mongoose = require('mongoose');
-const db = mongoose.connection;
 
 //... and then farther down the file
 mongoose.connect('mongodb://localhost:27017/basiccrud');
-db.once('open', ()=> {
+mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 ```
