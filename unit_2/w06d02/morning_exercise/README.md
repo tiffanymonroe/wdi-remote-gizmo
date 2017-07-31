@@ -18,6 +18,10 @@ Prerequisites: Node, JavaScript <br>
  
 We scraping is the act of fetching and extracting data from a website or data source. Why might we want to scrape data? Perhaps we want to compare prices from multiple pages at once (think Travelocity or Skiplagged who compare airplane or hotel prices from multiple sites and display it in one place). Or sometimes we may come across data on the web that we want to use, but there's not an API available (the stats on sports players, the schedule for your favorite bands). Today we are going to practice fetching and parsing data by using two Node packages: `request` and `cheerio`.
 
+- [Cheerio Documentation]
+(https://www.npmjs.com/package/cheerio)
+- [Request Documentation](https://www.npmjs.com/package/request)
+
 ## Setup
 
 1) Navigate to your `student_examples` folder and create a new directory called `data_scraping`.
@@ -30,7 +34,8 @@ We scraping is the act of fetching and extracting data from a website or data so
 `npm install cheerio request --save`
 
 4) Open your `data_scraping.js` file and require the packages.
-https://i.imgur.com/IbzrO0R.png
+
+![require](https://i.imgur.com/IbzrO0R.png)
 
 
 ## Cheerio
