@@ -6,7 +6,7 @@ You will be creating a full stack application using everything you've learned in
 
 ## Project due date
 
-**Friday, August 11,**<br>
+**Friday, August 11**<br>
 1. Submit an issue to our class repo (as you normally do for homework) but with the following:
 - the title for your issue should be `Your Name - Project 2`
 - a link to your repo
