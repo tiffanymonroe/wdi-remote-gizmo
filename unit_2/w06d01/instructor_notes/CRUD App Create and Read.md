@@ -136,9 +136,8 @@ mongoose.connection.once('open', ()=> {
 
 ```javascript
 const mongoose = require('mongoose');
-const Schema = mongoose.Schema;
 
-const fruitSchema = new Schema({
+const fruitSchema = new mongoose.Schema({
     name:  { type: String, required: true },
     color:  { type: String, required: true },
     readyToEat: Boolean
