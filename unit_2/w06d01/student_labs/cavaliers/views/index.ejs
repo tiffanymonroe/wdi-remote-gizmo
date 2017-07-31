@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <%# css%>
+    <link rel="stylesheet" href="../style.css" type="text/css"/>
+    <title>OC Cavaliers</title>
+  </head>
+  <img src="http://www.yourpurebredpuppy.com/dogbreeds/photos-CD/cavalierkingcharlesspanielsf5.jpg" alt="Four Colors"/>
+  <body>
+    <h1>It's Pawty Time!</h1>
+    <h2>Guest List</h2>
+    <table>
+      <tr>
+      <% for(let i = 0; i < cavs.length; i++){ %>
+        <td>Human: <%=cavs[i].human_name; %></td>
+        <td>Pup(s): <%=cavs[i].cav_name; %></td>
+        <td>Color: <%=cavs[i].color; %></td>
+        <td>Sex: <%=cavs[i].sex; %></td>
+        <td>Is spayed/neutered:
+          <% if(cavs[i].altered === true){%>
+                yes
+              <%  } else { %>
+                no
+              <%  } %>
+        </td>
+        <% } %>
+      </tr>
+    </table>
+    <br>
+    <br>
+    <nav>
+    <a href="/cavs/new">Register Your Cavalier</a>
+    </nav>
+  <body>
+</html>
+</html>
