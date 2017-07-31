@@ -45,7 +45,7 @@ We scraping is the act of fetching and extracting data from a website or data so
 
 - Require Cheerio
 
-`var cheerio = require('cheerio');
+`const cheerio = require('cheerio');
 `
 
 - Load the HTML into Cheerio for parsing.
