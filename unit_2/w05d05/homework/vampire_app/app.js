@@ -172,14 +172,16 @@ Vampires.find(
 };
 
 Vampires.find (
-  {$and:
-    {
-      victims: {$exists: true}
-    },
-    {
-      victims: {$gt: 1000}
-    }
+  { $and:[
+      {
+        victims: {$exists: true}
+      },
+      {
+        victims: {$gt: 1000}
+      }
+    ]
   },
+
   (error, vampires)=>{
     console.log(vampires);
   },
@@ -189,15 +191,49 @@ Vampires.find (
 
 /////////////////////////////////////////////////
 // ### Select with OR
+Vampires.find(
+{   $or: [
+      {location:
+        {$eq: 'New York, New York, US'}
+      }, {location:
+        {$eq: 'New Orleans, Louisiana, US'}
+      }
+    ]
+}
+);
 
-// { $or: [
-//       {location:
-//         {$eq: 'New York, New York, US'}
-//       }, {location:
-//         {$eq: 'New Orleans, Louisiana, US'}
-//       }
-// ]}
+Vampires.find(
+{   $or: [
+      {loves:
+        {$eq: 'brooding'}
+      }, {loves:
+        {$eq: 'being tragic'}
+      }
+    ]
+}
+);
 
+Vampires.find(
+{   $or: [
+      {victims:
+        {$gt: 1000}
+      }, {loves:
+        {$eq: 'marshmallows'}
+      }
+    ]
+}
+);
+
+Vampires.find(
+{   $or: [
+      {hair_color:
+        {$eq: 'red'}
+      }, {eye_color:
+        {$eq: 'green'}
+      }
+    ]
+}
+);
 /////////////////////////////////////////////////
 //### Select objects that match one of several values
 
