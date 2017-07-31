@@ -96,6 +96,9 @@ Vampires.find(
         $gt: 500
       }
   },
+  (error, vampires)=>{
+    console.log(vampires);
+  },
   {multi: true}
 );
 
@@ -108,6 +111,9 @@ Vampires.find(
         $gt: 500
       }
   },
+  (error, vampires)=>{
+    console.log(vampires);
+  },
   {multi: true}
 );
 
@@ -115,7 +121,10 @@ Vampires.find(
   {victims:
       {
         $gt: 500
-      },
+      }
+  },
+  (error, vampires)=>{
+    console.log(vampires);
   },
   {multi: true}
 );
@@ -126,6 +135,56 @@ Vampires.find(
 /////////////////////////////////////////////////
 // ### Select by exists or does not exist
 
+Vampires.find(
+  {title: {
+    $exists: true
+    }
+  },
+  (error, vampires)=>{
+    console.log(vampires);
+  },
+  {multi: true}
+);
+
+Vampires.find(
+  {victims:
+    {
+      $eq: 0
+    }
+  },
+  (error, vampires)=>{
+    console.log(vampires);
+  },
+  {multi: true}
+);
+
+Vampires.find(
+  { $and:[
+    {title: {
+      $exists: true
+      }
+    },
+    {victims: {
+      $equal: 0
+      }
+  }
+  ]
+};
+
+Vampires.find (
+  {$and:
+    {
+      victims: {$exists: true}
+    },
+    {
+      victims: {$gt: 1000}
+    }
+  },
+  (error, vampires)=>{
+    console.log(vampires);
+  },
+  {multi: true}
+);
 
 
 /////////////////////////////////////////////////
