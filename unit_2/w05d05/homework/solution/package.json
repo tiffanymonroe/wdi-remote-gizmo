@@ -1,0 +1,14 @@
+{
+  "name": "vampires",
+  "version": "1.0.0",
+  "description": "homework solution",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "K. Rafalski",
+  "license": "ISC",
+  "dependencies": {
+    "mongoose": "^4.7.2"
+  }
+}
