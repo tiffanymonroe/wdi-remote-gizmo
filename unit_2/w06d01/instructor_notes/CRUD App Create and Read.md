@@ -2,7 +2,7 @@
 
 ## Lesson Objectives
 
-1. Initialise a directory
+1. Initialize a directory
 1. Start express
 1. Create New Route
 1. Create Create Route
@@ -16,7 +16,7 @@
 1. Have Index Page Link to Show Route
 1. Create show.ejs
 
-## Initialise a directory
+## Initialize a directory
 
 1. Create a directory for the app in `student_examples` and `cd` into it
 1. `npm init`
@@ -153,7 +153,7 @@ module.exports = Fruit;
 Inside server.js:
 
 ```javascript
-const Fruits = require('./models/fruits.js');
+const Fruit = require('./models/fruits.js');
 //... and then farther down the file
 app.post('/fruits/', (req, res)=>{
     if(req.body.readyToEat === 'on'){ //if checked, req.body.readyToEat is set to 'on'
@@ -161,8 +161,8 @@ app.post('/fruits/', (req, res)=>{
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.readyToEat = false;
     }
-    Fruits.create(req.body, ()=>{
-        res.send('fruit created');
+    Fruit.create(req.body, (error, createdFruit)=>{
+        res.send(createdFruit);
     });
 });
 ```
@@ -202,7 +202,7 @@ app.get('/fruits', (req, res)=>{
 
 ```javascript
 app.get('/fruits', (req, res)=>{
-    Fruits.find({}, (error, allFruits)=>{
+    Fruit.find({}, (error, allFruits)=>{
         res.render('index.ejs', {
             fruits: allFruits
         });
@@ -250,7 +250,7 @@ Add a link to the create page:
 Inside the create route
 
 ```javascript
-Fruits.create(req.body, ()=>{
+Fruit.create(req.body, (error, createdFruit)=>{
     res.redirect('/fruits');
 });
 ```
@@ -259,7 +259,7 @@ Fruits.create(req.body, ()=>{
 
 ```javascript
 app.get('/fruits/:id', (req, res)=>{
-    Fruits.findById(req.params.id, (err, fruit)=>{
+    Fruit.findById(req.params.id, (err, fruit)=>{
         res.send(fruit);
     });
 });
@@ -309,7 +309,7 @@ Render the ejs
 
 ```javascript
 app.get('/fruits/:id', (req, res)=>{
-    Fruits.findById(req.params.id, (err, foundFruit)=>{
+    Fruit.findById(req.params.id, (err, foundFruit)=>{
         res.render('show.ejs', {
             fruit:foundFruit
         });
