@@ -99,6 +99,13 @@ Let's load in a web page using Request and parse the data with Cheerio...
 
 ### Example Using Cheerio & Request
 
+- Require Cheerio & Request
+
+```
+const cheerio = require('cheerio');
+const request = require('request');
+```
+
 Let's scape the news from Google's news page `https://news.google.com`
 
 - Request takes a web address followed by a callback function. The function takes three parameters: `err`, `res`, `body`.
