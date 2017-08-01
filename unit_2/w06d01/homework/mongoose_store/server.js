@@ -2,6 +2,9 @@
 const express = require('express');
 const app = express();
 const Product = require('./models/products.js');
+const productData = require('./models/portola.js');
+console.log(productData);
+
 
 //Middleware
 const bodyParser = require('body-parser');
@@ -11,7 +14,11 @@ app.use(express.static('public'));
 //Index Route
 
 app.get('/shop', (req, res) => {
-  res.render('index.ejs');
+  Product.find({}, (error, allProducts) => {
+    res.render('index.ejs', {
+      products: allProducts
+    });
+  });
 });
 
 //New Route
@@ -21,14 +28,18 @@ app.get('/shop/new', (req, res) => {
 
 // Create Route
 app.post('/shop/', (req, res) => {
-  res.send(req.body);
+  Product.create(req.body, (error, createdProduct) => {
+    res.redirect('/shop');
+  });
 });
 
 //Show Route
 
 app.get('/shop/:id', (req, res) => {
-  Product.findById(req.params.id, (error, product) => {
-    res.send(product)
+  Product.findById(req.params.id, (error, foundProduct) => {
+    res.render('show.ejs', {
+      product: foundProduct
+    });
   });
 });
 
@@ -38,6 +49,12 @@ mongoose.connect('mongodb://localhost:27017/shop');
 mongoose.connection.once('open', () => {
   console.log('connected to mongo');
 })
+
+//Add products
+// Product.collection.insertMany(productData, (error, data) => {
+//   console.log('added real Portola coffee');
+//   mongoose.connection.close();
+// })
 
 //Listener
 app.listen(3000, () => {

@@ -31,24 +31,11 @@
   align-content: space-around;
 }
 
-
-
-.left {
+.images {
   width: 30%;
   height: auto;
   padding: 1.5%;
-}
 
-.center {
-  width: 30%;
-  height: auto;
-  padding: 1.5%;
-}
-
-.right {
-  width: 30%;
-  height: auto;
-  padding: 1.5%;
 }
 
 .new-info {
