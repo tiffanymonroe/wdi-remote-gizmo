@@ -1,13 +1,13 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Data Scraping with Cheerio & Request <br>
 Type: Morning Exercise<br>
 Duration: "0:45"<br>
 Creator: Kristyn Bryan<br>
-Course: WDIR-Hopper<br>
+Course: WDIR-Gizmo<br>
 Competencies: Data Scraping with Node <br>
 Prerequisites: Node, JavaScript <br>
 
@@ -17,6 +17,9 @@ Prerequisites: Node, JavaScript <br>
 ## Data Scraping with Node
  
 We scraping is the act of fetching and extracting data from a website or data source. Why might we want to scrape data? Perhaps we want to compare prices from multiple pages at once (think Travelocity or Skiplagged who compare airplane or hotel prices from multiple sites and display it in one place). Or sometimes we may come across data on the web that we want to use, but there's not an API available (the stats on sports players, the schedule for your favorite bands). Today we are going to practice fetching and parsing data by using two Node packages: `request` and `cheerio`.
+
+- [Cheerio Documentation](https://www.npmjs.com/package/cheerio)
+- [Request Documentation](https://www.npmjs.com/package/request)
 
 ## Setup
 
@@ -29,8 +32,7 @@ We scraping is the act of fetching and extracting data from a website or data so
 3) Install the `request` and `cheerio` packages
 `npm install cheerio request --save`
 
-4) Open your `data_scraping.js` file and require the packages.
-https://i.imgur.com/IbzrO0R.png
+4) Open your `data_scraping.js` file.
 
 
 ## Cheerio
@@ -41,7 +43,7 @@ https://i.imgur.com/IbzrO0R.png
 
 - Require Cheerio
 
-`var cheerio = require('cheerio');
+`const cheerio = require('cheerio');
 `
 
 - Load the HTML into Cheerio for parsing.
@@ -82,6 +84,8 @@ $('ul .pear').attr('class')
 
 If there are multiple values that will be coming back, we can use the jQuery `.each` method to do something to each value.
 
+NOTE: In order to use `.each` with cheerio, you have to use the es5 syntax for an anonymous function.
+
 ```
 $('ul').each(function(){
   console.log($(this).attr('id'));
@@ -96,6 +100,13 @@ Let's load in a web page using Request and parse the data with Cheerio...
 [Request](https://www.npmjs.com/package/request) allows you to make http requests. We can use these requests, in conjunction with Cheerio, to parse data from web pages.
 
 ### Example Using Cheerio & Request
+
+- Require Cheerio & Request
+
+```
+const cheerio = require('cheerio');
+const request = require('request');
+```
 
 Let's scape the news from Google's news page `https://news.google.com`
 
