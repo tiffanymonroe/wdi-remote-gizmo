@@ -32,9 +32,7 @@ We scraping is the act of fetching and extracting data from a website or data so
 3) Install the `request` and `cheerio` packages
 `npm install cheerio request --save`
 
-4) Open your `data_scraping.js` file and require the packages.
-
-![require](https://i.imgur.com/IbzrO0R.png)
+4) Open your `data_scraping.js` file.
 
 
 ## Cheerio
