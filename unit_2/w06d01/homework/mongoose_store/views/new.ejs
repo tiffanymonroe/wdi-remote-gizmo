@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
+    <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
+    <title>Mongoose Store</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="banner">
+        <img class="logo" src="http://static1.squarespace.com/static/563903b0e4b0c30c71cf516a/t/563903fce4b0aea7317b07d0/1500739168444/?format=1500w" alt="Portola"/>
+      </div>
+      <div class="nav">
+        <h1>STORE</h1>
+      </div>
+      <div class="new-info">
+        <h1>Add Coffee</h1>
+        <form action="/shop" method="post">
+            <input type="text" name="name" placeholder="Name"/>
+            <input class="description" type="text" name="description" placeholder="Description"/>
+            <input type="text" name="img" placeholder="URL"/>
+            <input type="number" name="price" placeholder="Price"/>
+            <input type="number" name="qty" placeholder="Quantity"/>
+          <br/>
+          <br/>
+            <input class="btn" type="submit" value="submit"/>
+          <br/>
+          <br/>
+      </div>
+  </div>
+  </body>
+</html>

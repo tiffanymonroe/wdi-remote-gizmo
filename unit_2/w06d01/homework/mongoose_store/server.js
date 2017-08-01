@@ -1,6 +1,7 @@
 //Dependencies
 const express = require('express');
 const app = express();
+const Product = require('./models/products.js');
 
 //Middleware
 const bodyParser = require('body-parser');
@@ -11,6 +12,24 @@ app.use(express.static('public'));
 
 app.get('/shop', (req, res) => {
   res.render('index.ejs');
+});
+
+//New Route
+app.get('/shop/new', (req, res) => {
+  res.render('new.ejs');
+});
+
+// Create Route
+app.post('/shop/', (req, res) => {
+  res.send(req.body);
+});
+
+//Show Route
+
+app.get('/shop/:id', (req, res) => {
+  Product.findById(req.params.id, (error, product) => {
+    res.send(product)
+  });
 });
 
 //Connect to MongoDB
