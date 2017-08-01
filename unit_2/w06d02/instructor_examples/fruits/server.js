@@ -1,7 +1,6 @@
 const express = require('express');
 const app = express();
 const mongoose = require('mongoose');
-const db = mongoose.connection;
 const bodyParser = require('body-parser');
 const Fruit = require('./models/fruits.js');
 
@@ -48,7 +47,7 @@ app.get('/fruits/:id', (req, res)=>{
 });
 
 mongoose.connect('mongodb://localhost:27017/basiccrud');
-db.once('open', ()=> {
+mongoose.connection.once('open', ()=> {
     console.log('connected to mongo');
 });
 

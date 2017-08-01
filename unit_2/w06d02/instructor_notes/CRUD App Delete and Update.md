@@ -1,4 +1,4 @@
-(req, res)=># CRUD App with Mongoose - Delete and Update
+# CRUD App with Mongoose - Delete and Update
 
 ## Lesson Objectives
 
@@ -78,7 +78,7 @@ Also, have it redirect back to the fruits index page when deletion is complete
 
 ```javascript
 app.delete('/fruits/:id', (req, res)=>{
-    Fruits.findByIdAndRemove(req.params.id, (err, data)=>{
+    Fruit.findByIdAndRemove(req.params.id, (err, data)=>{
         res.redirect('/fruits');//redirect back to fruits index
     });
 });
@@ -98,7 +98,7 @@ First the route:
 
 ```javascript
 app.get('/fruits/:id/edit', (req, res)=>{
-    Fruits.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
+    Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
         res.render(
     		'edit.ejs',
     		{
@@ -168,7 +168,7 @@ app.put('/fruits/:id', (req, res)=>{
         req.body.readyToEat = false;
     }
     //{new: true} tells mongoose to send the updated model into the callback
-    Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
+    Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
         res.send(updatedModel);
     });
 });
@@ -179,7 +179,7 @@ We need to pass in {new: true} to tell mongoose to send the updated model into t
 ## Make the PUT Route Redirect Back to the Index Page
 
 ```javascript
-Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
+Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
     res.redirect('/fruits');
 });
 ```
