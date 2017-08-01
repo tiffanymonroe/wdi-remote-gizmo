@@ -3,7 +3,7 @@ const express = require('express');
 const app = express();
 const Product = require('./models/products.js');
 const productData = require('./models/portola.js');
-console.log(productData);
+
 
 
 //Middleware

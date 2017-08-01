@@ -2,7 +2,7 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="style.css"/>
+    <link rel="stylesheet" type="text/css" href="../style.css"/>
     <link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet">
     <title>Mongoose Store</title>
   </head>
@@ -15,8 +15,25 @@
         <h1>STORE</h1>
       </div>
       <div class="product-info">
-        <%=product%>
+        <%# <img src="<%= product.img %>" />%>
+        <table>
+        <tr>
+          <td><h1><%=product.name%></h1></td>
+        </tr>
+
+        <tr>
+          <td><h3>Flavor Notes: <%=product.description%></h3></td>
+        </tr>
+        <tr>
+          <td><h3>$<%=product.price%></h3></td>
+        </tr>
+      </table>
       </div>
+      <div class="input">
+        <input type="submit" value="Edit"/>
+        <input type="submit" value="Delete"/>
+      </div>
+
   </div>
   </body>
 </html>
