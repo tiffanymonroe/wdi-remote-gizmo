@@ -84,6 +84,8 @@ $('ul .pear').attr('class')
 
 If there are multiple values that will be coming back, we can use the jQuery `.each` method to do something to each value.
 
+NOTE: In order to use `.each` with cheerio, you have to use the es5 syntax for an anonymous function.
+
 ```
 $('ul').each(function(){
   console.log($(this).attr('id'));
