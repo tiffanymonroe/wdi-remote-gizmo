@@ -173,8 +173,6 @@ app.put('/fruits/:id', (req, res)=>{
 });
 ```
 
-We need to pass in {new: true} to tell mongoose to send the updated model into the callback
-
 ## Make the PUT Route Redirect Back to the Index Page
 
 ```javascript
