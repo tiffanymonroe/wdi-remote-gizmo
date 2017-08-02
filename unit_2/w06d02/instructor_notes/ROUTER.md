@@ -45,13 +45,13 @@ router.post('/fruits/', (req, res)=>{
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.readyToEat = false;
     }
-    Fruits.create(req.body, ()=>{
+    Fruit.create(req.body, ()=>{
         res.redirect('/fruits');
     });
 });
 
 router.get('/fruits', (req, res)=>{
-    Fruits.find({}, (error, allFruits)=>{
+    Fruit.find({}, (error, allFruits)=>{
         res.render('index.ejs', {
             fruits: allFruits
         });
@@ -59,7 +59,7 @@ router.get('/fruits', (req, res)=>{
 });
 
 router.get('/fruits/:id', (req, res)=>{
-    Fruits.findById(req.params.id, (err, foundFruit)=>{
+    Fruit.findById(req.params.id, (err, foundFruit)=>{
         res.render('show.ejs', {
             fruit:foundFruit
         });
@@ -67,13 +67,13 @@ router.get('/fruits/:id', (req, res)=>{
 });
 
 router.delete('/fruits/:id', (req, res)=>{
-    Fruits.findByIdAndRemove(req.params.id, (err, data)=>{
+    Fruit.findByIdAndRemove(req.params.id, (err, data)=>{
         res.redirect('/fruits')
     });
 });
 
 router.get('/fruits/:id/edit', (req, res)=>{
-    Fruits.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
+    Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
         res.render(
     		'edit.ejs',
     		{
@@ -90,7 +90,7 @@ router.put('/fruits/:id', (req, res)=>{
         req.body.readyToEat = false;
     }
     //{new: true} tells mongoose to send the updated model into the callback
-    Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
+    Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
         res.redirect('/fruits');
     });
 });
@@ -98,16 +98,16 @@ router.put('/fruits/:id', (req, res)=>{
 module.exports = router;
 ```
 
-## Require Fruits Model in Controller File
+## Require Fruit Model in Controller File
 
 ```javascript
 const express = require('express');
 const router = express.Router();
-const Fruits = require('../models/fruits.js')
+const Fruit = require('../models/fruits.js')
 //...
 ```
 
-The `Fruits` model is no longer needed in `server.js`.  Remove it:
+The `Fruit` model is no longer needed in `server.js`.  Remove it:
 
 ```javascript
 const express = require('express');
@@ -143,13 +143,13 @@ router.post('/', (req, res)=>{
     } else { //if not checked, req.body.readyToEat is undefined
         req.body.readyToEat = false;
     }
-    Fruits.create(req.body, ()=>{
+    Fruit.create(req.body, ()=>{
         res.redirect('/fruits');
     });
 });
 
 router.get('/', (req, res)=>{
-    Fruits.find({}, (error, allFruits)=>{
+    Fruit.find({}, (error, allFruits)=>{
         res.render('index.ejs', {
             fruits: allFruits
         });
@@ -157,7 +157,7 @@ router.get('/', (req, res)=>{
 });
 
 router.get('/:id', (req, res)=>{
-    Fruits.findById(req.params.id, (err, foundFruit)=>{
+    Fruit.findById(req.params.id, (err, foundFruit)=>{
         res.render('show.ejs', {
             fruit:foundFruit
         });
@@ -165,13 +165,13 @@ router.get('/:id', (req, res)=>{
 });
 
 router.delete('/:id', (req, res)=>{
-    Fruits.findByIdAndRemove(req.params.id, (err, data)=>{
+    Fruit.findByIdAndRemove(req.params.id, (err, data)=>{
         res.redirect('/fruits')
     });
 });
 
 router.get('/:id/edit', (req, res)=>{
-    Fruits.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
+    Fruit.findById(req.params.id, (err, foundFruit)=>{ //find the fruit
         res.render(
     		'edit.ejs',
     		{
@@ -188,7 +188,7 @@ router.put('/:id', (req, res)=>{
         req.body.readyToEat = false;
     }
     //{new: true} tells mongoose to send the updated model into the callback
-    Fruits.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
+    Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
         res.redirect('/fruits');
     });
 });

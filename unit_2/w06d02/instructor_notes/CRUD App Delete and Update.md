@@ -167,19 +167,16 @@ app.put('/fruits/:id', (req, res)=>{
     } else {
         req.body.readyToEat = false;
     }
-    //{new: true} tells mongoose to send the updated model into the callback
-    Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
+    Fruit.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel)=>{
         res.send(updatedModel);
     });
 });
 ```
 
-We need to pass in {new: true} to tell mongoose to send the updated model into the callback
-
 ## Make the PUT Route Redirect Back to the Index Page
 
 ```javascript
-Fruit.findByIdAndUpdate(req.params.id, req.body, {new: true}, (err, updatedModel)=>{
+Fruit.findByIdAndUpdate(req.params.id, req.body, (err, updatedModel)=>{
     res.redirect('/fruits');
 });
 ```

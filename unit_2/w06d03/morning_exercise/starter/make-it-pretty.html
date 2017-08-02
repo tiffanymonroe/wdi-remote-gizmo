@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Form</title>
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+  </head>
+  <body>
+    <div class="container">
+    <!-- start form -->
+    <form>
+      <!-- fieldset is used for grouping parts of a form together -->
+      <fieldset class="first">
+        <!-- legend is for describing the fieldset it is important for accessibility/screen readers -->
+        <legend>Basic Info</legend>
+        <!-- using label and `for`, then inside the input tag, adding an `id` that matches the `for` value is also best practice for screen readers -->
+        <label for="first-name" >First Name</label>
+        <!-- input is self-closing -->
+        <!-- name is for req.body -->
+        <!-- placeholder is text that won't be 'captured by form submission' -->
+        <input type="text" name="firstname" placeholder="First Name"value="" id="first-name" />
+        <!-- autocomplete exits but is broswer specific -->
+        <label for="last-name" >Last Name</label>
+        <input type="text" name="lastname" placeholder="Last Name"  autocomplete  id="first-name" />
+        <label for="city">City</label>
+        <!-- value is a default value and if not changed, will be caputred by the form-->
+        <input type="text" name="city" value="New York" id="city" />
+        <label for="state">State</label>
+        <!-- required is a required field an error will pop up on pressing the submit button -->
+        <!-- there is no built in way to do states, but there are free sites where you can copy paste what you need -->
+        <!-- this one is from : http://www.freeformatter.com/usa-state-list-html-select.html -->
+        <select id="state">
+        	<option value="AL">Alabama</option>
+        	<option value="AK">Alaska</option>
+        	<option value="AZ">Arizona</option>
+        	<option value="AR">Arkansas</option>
+        	<option value="CA">California</option>
+        	<option value="CO">Colorado</option>
+        	<option value="CT">Connecticut</option>
+        	<option value="DE">Delaware</option>
+        	<option value="DC">District Of Columbia</option>
+        	<option value="FL">Florida</option>
+        	<option value="GA">Georgia</option>
+        	<option value="HI">Hawaii</option>
+        	<option value="ID">Idaho</option>
+        	<option value="IL">Illinois</option>
+        	<option value="IN">Indiana</option>
+        	<option value="IA">Iowa</option>
+        	<option value="KS">Kansas</option>
+        	<option value="KY">Kentucky</option>
+        	<option value="LA">Louisiana</option>
+        	<option value="ME">Maine</option>
+        	<option value="MD">Maryland</option>
+        	<option value="MA">Massachusetts</option>
+        	<option value="MI">Michigan</option>
+        	<option value="MN">Minnesota</option>
+        	<option value="MS">Mississippi</option>
+        	<option value="MO">Missouri</option>
+        	<option value="MT">Montana</option>
+        	<option value="NE">Nebraska</option>
+        	<option value="NV">Nevada</option>
+        	<option value="NH">New Hampshire</option>
+        	<option value="NJ">New Jersey</option>
+        	<option value="NM">New Mexico</option>
+        	<option value="NY">New York</option>
+        	<option value="NC">North Carolina</option>
+        	<option value="ND">North Dakota</option>
+        	<option value="OH">Ohio</option>
+        	<option value="OK">Oklahoma</option>
+        	<option value="OR">Oregon</option>
+        	<option value="PA">Pennsylvania</option>
+        	<option value="RI">Rhode Island</option>
+        	<option value="SC">South Carolina</option>
+        	<option value="SD">South Dakota</option>
+        	<option value="TN">Tennessee</option>
+        	<option value="TX">Texas</option>
+        	<option value="UT">Utah</option>
+        	<option value="VT">Vermont</option>
+        	<option value="VA">Virginia</option>
+        	<option value="WA">Washington</option>
+        	<option value="WV">West Virginia</option>
+        	<option value="WI">Wisconsin</option>
+        	<option value="WY">Wyoming</option>
+        </select>
+        <br>
+        <!-- input for email -->
+        <!-- browser support may check if address is valid, on smartphones - the .com option can be added to the keyboard -->
+        <label for="email">Email</label>
+        <!-- the autofocus attribute sets this one to be focues on first upon page load -->
+        <input type="email" name="state" autofocus id="email" />
+        <!-- input for password -->
+        <!-- pattern is for regular expressions, the one included means that there needs to be 6 or more characters -->
+        <label for="password">Password</label>
+        <input type="password" name="password" pattern=".{6,}" id="password" />
+        <!-- input for date -->
+        <label for="birthday">Birthday</label>
+        <input type="date" name="birthday" value="" id="birthday" />
+      </fieldset>
+      <fieldset class="second">
+        <legend>Tell Me More</legend>
+        <!-- sometimes you need to pass some data via form but you don't need the user to fill it out or see it -->
+        <!-- notably, you probably wouldn't include text inside the label or perhaps even a label at all for this kind of data -->
+        <label for="secret"></label>
+        <input type="hidden" name="hidden" value="" id="secret" />
+        <!-- Sometimes you need a user to only choose one thing -->
+        <!-- radio buttons that go together MUST have the same name in order to be read properly. Radio buttons with different names will not be considered part of a set -->
+        <span>Favorite Beverage</span><br>
+        <div class="radios">
+          <div class="radio">Water<input type="radio" name="fav-bev" value="water" /></div>
+
+          <div class="radio">  Hot chocolcate<input type="radio" name="fav-bev" value="hot chocolate" /></div>
+
+          <div class="radio">Tea<input type="radio" name="fav-bev" value="tea" /></div>
+
+          <div class="radio">Juice<input type="radio" name="fav-bev" value="juice" /></div>
+
+          <div class="radio">Protein Shake<input type="radio" name="fav-bev" value="protien-shake" /></div>
+
+          <div class="radio">Coffee<input type="radio" name="fav-bev" value="coffee" /></div>
+
+          <div class="radio">Beer<input type="radio" name="fav-bev" value="beer" /></div>
+
+          <div class="radio">Wine<input type="radio" name="fav-bev" value="wine" /></div>
+
+          <div class="radio">Kombucha<input type="radio" name="fav-bev" value="kombucha" /></div>
+
+          <div class="radio">Horchata<input type="radio" name="fav-bev" value="horchata"/></div>
+
+          <div class="radio">Tonic Water<input type="radio" name="fav-bev" value="tonic water" /></div>
+
+          <div class="radio">Milk<input type="radio" name="fav-bev" value="milk" /></div>
+
+          <div class="radio">Other<input type="radio" name="fav-bev" value="other" /></div>
+
+          <!-- since this has a different name it doesn't go with the first set  -->
+          <!-- WRONG way to do one set of radio buttons, but demos how you would do more than one set of radio buttons -->
+          <div class="radio">Please don't tell me it is asparagus water<input type="radio" name="ugh-bev" value="other" /></div>
+
+        </div>
+<!--
+        On the other hand, checkboxes let you choose many values, so they need a unique value/name -->
+        <hr>
+        <span>What kind of pets do you love?</span>
+        <div class="checkboxes">
+          <div class="pets">
+
+            <label for="pets">Dogs
+              <input type="checkbox" id="dogs" value="dogs" name="dogs" />
+            </label>
+
+            <label for="pets">Cats
+              <input type="checkbox" id="cats" value="cats" name="cats"/>
+            </label>
+
+            <label for="pets">Hedgehogs
+              <input type="checkbox" id="hedgehogs" value="hedgehogs" name="hedgehogs"/>
+            </label>
+
+            <label for="pets">Horses
+              <input type="checkbox" id="horses" value="horses" name="horses"/>
+            </label>
+
+          </div>
+          <div class="pets">
+            <label for="pets">Ferrets
+              <input type="checkbox" id="ferrets" value="ferrets" name="ferrets"/>
+            </label>
+
+            <label for="pets">Ant Farm
+              <input type="checkbox" id="ant-farm" value="ant-farm" name="ant-farm"/>
+            </label>
+
+            <label for="pets">Fish
+              <input type="checkbox" id="fish" value="fish" name="fish"/>
+            </label>
+
+            <label for="pets">Reptiles
+              <input type="checkbox" id="reptiles" value="reptiles" name="reptiles"/>
+            </label>
+          </div>
+          <div class="pets">
+            <label for="pets">Birds
+              <input type="checkbox" id="birds" value="birds" name="birds"/>
+            </label>
+            <label for="pets">Chincillas
+              <input type="checkbox" id="chincillas" value="chincillas" name="chincillas"/>
+            </label>
+          </div>
+        </div>
+        <hr>
+        <label for="color">Favorite Color</label>
+        <input type="color" id="color" name="fav-color"/>
+        <hr>
+        <label for="file">Fav File</label>
+        <input type="file" id="file" name="file"/>
+        <hr>
+        <label for="range">Pick a number, 1 - 10</label>
+        <input type="range" id="range" min="0" max="10" name="range"/>
+        <hr>
+        <!-- choose min and max also step - default is 1 -->
+        <label for="integer">Pick an integer, 1 - 100</label>
+        <input type="number" id="integer" min="0" max="10" step=".5" name="file"/>
+        <hr>
+        <!-- text area allows for larger text inputs -->
+        <label for="bio"><span>Tell me everything about you. From the very begining</span></label><br>
+        <textarea type="number" id="bio"  name="bio"/> Your Bio</textarea>
+        <hr>
+        <!-- buttons exist but don't have a default behavoir -->
+        <label for="button"></label><input type="button" name="" value="button" id="button">
+
+        <!-- input type submit submits the form -->
+        <label for="submit"</label><input type="submit" name="" value="submit" id="submit">
+       <hr>
+       <label for="code-style">Select your foot apparel for while coding, multiple choices accepted. Press and hold ⌘ while making your choices. To select a block choose the first one then press shift and choose the last one</label><br>
+        <select name="code-style" multiple>
+          <option value="barefoot">Barefoot</option>
+          <option value="slippers">Slippers</option>
+          <option value="sneakers">Sneakers</option>
+          <option value="socks">Socks</option>
+          <option value="crocs">Crocs</option>
+          <option value="flip-flops">Flip Flops</option>
+          <option value="boots">Boots</option>
+          <option value="loafers">Loafers</option>
+          <option value="clogs">Clogs</option>
+          <option value="sandals">Sandals</option>
+          <option value="high heels">High heels</option>
+        </select>
+      </fieldset>
+    </form>
+
+<!-- quick demo of autofocus - should use an external stylesheet for this exercise -->
+    <style>
+      input:focus{
+        background-color: #effedf;
+      }
+    </style>
+    </div>
+  </body>
+</html>
