@@ -105,7 +105,7 @@ Your task is to create an app that will allow people to create and share "cheeru
 ## Your Application Files
 ### Make a New Repo & Setup for Heroku Deployment
 
-Take the following steps to ensure you have the right file structure/set up in order to deploy your site to Heroku ( more details on how to deploy later):
+Take the following steps to ensure you have the right file structure/set up in order to deploy your site to Heroku. Note that you will have a walkthrough lesson on how to deply to Heroku, but your files will need to be structured properly:
 
 1. make a new github repo for your project **outside** of our class repo.
 
