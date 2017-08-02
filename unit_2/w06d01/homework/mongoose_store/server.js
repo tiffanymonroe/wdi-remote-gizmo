@@ -78,7 +78,7 @@ mongoose.connection.once('open', () => {
   console.log('connected to mongo');
 })
 
-// Add products
+// Add products from Vampire homework, I think
 // Product.collection.insertMany(productData, (error, data) => {
 //   console.log('added real Portola coffee');
 //   mongoose.connection.close();
