@@ -12,7 +12,7 @@
 
 img {
   width: 400px;
-  height: 266;
+  height: 266px;
 }
 
 .banner {
@@ -130,9 +130,23 @@ input {
   text-align: center;
 }
 
-#submit {
+#delete {
   width: 100%;
   align-items: center;
+}
+
+#submit {
+  text-align: center;
+  align-items: center;
+  width: 30%;
+  justify-content: flex-end;
+  display: inline-flex;
+
+}
+
+#buy {
+  text-decoration: none;
+  color: white;
 }
 
 .show-h1 {
