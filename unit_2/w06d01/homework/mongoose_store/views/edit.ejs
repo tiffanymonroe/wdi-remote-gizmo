@@ -16,7 +16,7 @@
       </div>
       <div class="new-info">
         <h1>Edit</h1>
-        <form action="/shop" method="post">
+        <form action ="/shop/<%=product.id;%>?_method=PUT" method="post">
             <input type="text" name="name" placeholder="Name"/>
             <input class="description" type="text" name="description" placeholder="Description"/>
             <input type="text" name="img" placeholder="Image URL"/>
@@ -24,7 +24,6 @@
             <input type="number" name="qty" placeholder="Quantity"/>
           <br/>
           <br/>
-          <form action ="/shop/<%=product.id;%>?_method=PUT" method="post">
             <input class="crud" id="submit" type="submit" value="Submit"/>
           </form>
           <br/>

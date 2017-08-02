@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"><link href="https://fonts.googleapis.com/css?family=Quicksand|The+Girl+Next+Door" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../main.css"/>
+    <title>Show</title>
+  </head>
+  <nav class="main-nav">
+    <a href="#">Portfolio</a>
+    <a href="/">Blog</a>
+    <a href="#">About</a>
+    <a href="#">Contact</a>
+  </nav>
+  <body>
+    <div class="container">
+      <h1>Articles by: <%=author.name%></h1>
+      <div>
+        <form action="/authors/<%=author._id%>?_method=PUT" method="post">
+				<input type="text" name="name" value="<%=author.name%>"/><br/>
+				<input type="submit" value="Update Author"/>
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

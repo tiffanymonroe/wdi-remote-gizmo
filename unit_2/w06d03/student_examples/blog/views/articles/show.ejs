@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8"><link href="https://fonts.googleapis.com/css?family=Quicksand|The+Girl+Next+Door" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../main.css"/>
+    <title>Show</title>
+  </head>
+  <body>
+    <nav class="main-nav">
+      <a href="#">Portfolio</a>
+      <a href="/">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <div class="container">
+    <h1>Title: <%=article.title%></h1>
+    <p><%=article.body%></p>
+    <a href="/articles/<%=article.id%>/edit">Edit</a>
+
+      <div>
+        <form action="/articles/<%-article.id%>?_method=DELETE" method="post">
+          <input type="submit" value="Delete">
+        </form>
+
+      </div>
+    </div>
+  </body>
+</html>

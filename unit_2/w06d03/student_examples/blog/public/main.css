@@ -1,0 +1,39 @@
+/** {
+  border: 1px solid hotpink;
+}*/
+
+body {
+  font-family: 'Quicksand', sans-serif;
+}
+
+.container {
+  display: flex;
+  width: 100%;
+  flex-flow: wrap;
+}
+
+.main-nav, .main-nav > a {
+  width: 100%;
+  padding: 1em;
+  font-size: 18px;
+  text-align: right;
+  color: black;
+}
+
+.main-nav > a:hover {
+  text-shadow: 1px 1px black;
+
+}
+
+h1, h2, h3, h4 {
+  font-family: 'The Girl Next Door', cursive;
+}
+
+a {
+  text-decoration: none;
+}
+
+main {
+  width: 90%;
+  padding: 1em;
+}

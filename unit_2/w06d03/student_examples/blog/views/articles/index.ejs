@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link href="https://fonts.googleapis.com/css?family=Quicksand|The+Girl+Next+Door" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="../../main.css"/>
+    <title>Authors Index</title>
+  </head>
+  <body>
+    <div class="container">
+    <nav class="main-nav">
+      <a href="#">Portfolio</a>
+      <a href="/">Blog</a>
+      <a href="#">About</a>
+      <a href="#">Contact</a>
+    </nav>
+    <main>
+        <h1>Articles:</h1>
+        <ul>
+          <% for(let i = 0; i < articles.length; i++){ %>
+        			<li>
+        				<a href="/articles/<%=articles[i]._id%>"><%=articles[i].title%></a>
+        			</li>
+		       <% } %>
+
+          <li>
+            <a href="/articles/new">Add New Article</a>
+          </li>
+        </ul>
+    </main>
+    </div>
+  </body>
+</html>
