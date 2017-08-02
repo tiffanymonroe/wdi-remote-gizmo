@@ -159,7 +159,7 @@ app.use('/authors', authorsController);
 			</nav>
 		</header>
 		<main>
-			<form action="/authors" method="post">
+			<form action="/authors" method="POST">
 				<input type="text" name="name" />
 			</form>
 		</main>
