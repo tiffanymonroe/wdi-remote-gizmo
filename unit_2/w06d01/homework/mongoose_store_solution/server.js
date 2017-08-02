@@ -1,26 +1,28 @@
 //___________________
 //Dependencies
 //___________________
-var express         = require ( 'express' );
-var bodyParser      = require ( 'body-parser' );
-var methodOverride  = require ( 'method-override' );
-var mongoose        = require ( 'mongoose' );
-var app             = express ();
+const express         = require ( 'express' );
+const bodyParser      = require ( 'body-parser' );
+const methodOverride  = require ( 'method-override' );
+const mongoose        = require ( 'mongoose' );
+const app             = express ();
 
 //___________________
 //Port
 //___________________
-var PORT            = 3000;
+const PORT            = process.env.PORT || 3000;
 
 //___________________
 //Database
 //___________________
 
-//connect to this database - don't forget to start `mongod`
-mongoose.connect( 'mongodb://localhost/mongoose_store' );
+mongoURI = process.env.MONGOURI ||'mongodb://localhost/mongoose_store'
 
-//set the connection to variable for easy access`
-var db = mongoose.connection;
+//connect to this database - don't forget to start `mongod`
+mongoose.connect( mongoURI );
+
+//set the connection to constiable for easy access`
+const db = mongoose.connection;
 
 //  use this fancy looking stuff to get more useful error messages in your console
 db.on( 'error' , console.error.bind( console , 'connection error: ' ));
@@ -32,7 +34,7 @@ db.once ( 'open' , function () {
 //Controllers
 //___________________
 //Step 1/3 require the controller to be able to use the products routes
-var productsController = require ( './controllers/products' );
+const productsController = require ( './controllers/products' );
 
 //___________________
 //Middleware

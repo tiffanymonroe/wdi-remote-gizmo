@@ -1,13 +1,13 @@
 //___________________
 //Dependencies
 //___________________
-var mongoose          = require ( 'mongoose' );
-var Schema            = mongoose.Schema;
+const mongoose          = require ( 'mongoose' );
+const Schema            = mongoose.Schema;
 
 //___________________
 //Set up Schema
 //___________________
-var productSchema     = new Schema ({
+const productSchema     = new Schema ({
   name        : {
       type    : String,
       required: [true, 'No one will buy it if it does not have a name']
@@ -27,7 +27,7 @@ var productSchema     = new Schema ({
 //___________________
 //Set up Model
 //___________________
-var Product          = mongoose.model('Product', productSchema );
+const Product          = mongoose.model('Product', productSchema );
 
 //___________________
 ////Module Exports - access Product in controllers/product.js
