@@ -77,7 +77,7 @@ Lastly, a **technical demonstration** of your app which:
 * Include **wireframes** that you designed during the planning process (uploaded to your github repo)
 * **A ``readme.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
 * Incorporate **Google Maps**
-* Research and implement **AJAX** [Our wiki on APIs](https://github.com/ga-students/wdi-remote-hopper/wiki/API-Aggregators)
+* Research and implement **AJAX** [Our wiki on APIs](https://github.com/ga-students/wdi-remote-gizmo/wiki/API-Aggregators)
 
 ## Potential Project Ideas
 
