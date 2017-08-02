@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Accordion Menu Walk-through <br>
@@ -9,7 +9,7 @@ Duration: "0:45"<br>
 Creator:<br>
     Original creators: WDI-Archer<br>
     Adapted by: Kristyn Bryan<br>
-    Course: WDIR-Hopper<br>
+    Course: WDIR-Gizmo<br>
 Competencies: CSS <br>
 Prerequisites: CSS, HTML <br>
 
@@ -25,14 +25,14 @@ This morning we are going to turn HTML check boxes into an accordion menu.
 
 ## Setup
 
-- Navigate to your `accordion_practice` folder in today's `morning_exercise` folder.
- as we code to create an accordion-style menu.
+- Navigate to your `student_example` folder for today.
+- Create a folder called `accordion_menu`
+- From inside your `accordion_menu` folder, copy the files from the `accordion_menu_practice_files` folder that's located in this morning's `morning_exercise` folder.
+- Open your `index.html` file in your browser and open both files in your text editor.
 
 ## HTML
 
-- Take a look at your HTML file inside the `accordion_practice` folder.
-
-- Inside the `body` of your HTML, you should have a `div` that is the main container of your accordion.
+- Take a look at your HTML file inside the. Inside the `body` of your HTML, you should have a `div` that is the main container of your accordion.
 
 - Inside the `div`, there are **three** sections: Appetizer, Entree, and Dessert.
 
