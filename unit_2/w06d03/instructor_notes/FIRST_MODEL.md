@@ -159,7 +159,7 @@ app.use('/authors', authorsController);
 			</nav>
 		</header>
 		<main>
-			<form action="/authors" method="post">
+			<form action="/authors" method="POST">
 				<input type="text" name="name" />
 			</form>
 		</main>
@@ -203,9 +203,9 @@ const authorSchema = mongoose.Schema({
 	name: String
 });
 
-const author = mongoose.model('Author', authorSchema);
+const Author = mongoose.model('Author', authorSchema);
 
-module.exports = author;
+module.exports = Author;
 ```
 
 ## Create Authors Create Route

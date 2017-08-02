@@ -1,0 +1,125 @@
+/*Imported Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+@import url(http://fonts.googleapis.com/css?family=Lato:400,700);
+
+/*Imported cross for opening / closing menu section*/
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+body {
+  font-family: 'Open Sans', sans-serif;
+  font-size: 100%;
+  margin: 0;
+  padding: 1em 0;
+  height: 100%;
+  width: 100%;
+  background-color: #AAA;
+  background-size: cover;
+}
+
+.accordion {
+  width: 30vw;
+  min-width: 320px;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion input:checked + label {
+  background: #3399cc;
+}
+
+.accordion input:checked + label:after {
+  -moz-transform: rotate(405deg);
+  -o-transform: rotate(405deg);
+  -webkit-transform: rotate(405deg);
+  transform: rotate(405deg);
+}
+
+.accordion input:checked + label:hover {
+  background: #3399cc;
+}
+
+.accordion input:checked + label + .section {
+  display: block;
+  overflow: auto;
+  height: 300px;
+  opacity: 1;
+  background: white;
+  color: #333;
+}
+
+.accordion input + label {
+  /*This is so that when the background color changes, it will happen happen slowly*/
+  -moz-transition: background 0.75s;
+  -o-transition: background 0.75s;
+  -webkit-transition: background 0.75s;
+  transition: background 0.75s;
+
+  /*Font*/
+  font-weight: bold;
+  color: white;
+
+  /*Pointer*/
+  cursor: pointer;
+
+  /*Display, color, position, layout*/
+  display: block;
+  border-bottom: 1px solid #3399cc;
+  position: relative;
+  background: #49b1e5;
+  padding: 10px;
+}
+
+.accordion input + label:after {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+  font-size: 12px;
+  content: '\f067';
+  font-family: 'FontAwesome';
+  -moz-transition: transform 0.75s;
+  -o-transition: transform 0.75s;
+  -webkit-transition: transform 0.75s;
+  transition: transform 0.75s;
+
+  /*Remove the "wobble" from the cross rotation*/
+  backface-visibility: hidden;
+}
+
+.accordion input + label:hover {
+  background: #3399cc;
+}
+
+.accordion .section {
+  padding: 0 10px;
+  background: white;
+  opacity: 0;
+  height: 0;
+  color: #AAA;
+  -moz-transition: height 0.75s, opacity 0.75s;
+  -o-transition: height 0.75s, opacity 0.75s;
+  -webkit-transition: height 0.75s, opacity 0.75s;
+  transition: height 0.75s, opacity 0.75s;
+}
+
+dl {
+  margin:0;
+  padding: 1em;
+}
+
+/**
+ * Scrollbar styling (only in webkit (Chrome and Safari))
+ */
+.accordion ::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+  background-color: #85c2e0;
+}
+
+.accordion ::-webkit-scrollbar-thumb {
+  background: rgba(255, 255, 255, 0.8);
+}
