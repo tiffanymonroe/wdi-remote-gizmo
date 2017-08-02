@@ -22,7 +22,11 @@
             <h2>List of Authors</h2>
             <ul>
                 <%for(let i=0; i < authors.length; i++){%>
-                    <li><%=authors[i].name%></li>
+                    <li>
+                        <a href="/authors/<%=authors[i].id%>">
+                            <%=authors[i].name%>
+                        </a>
+                    </li>
                 <% } %>
             </ul>
         </main>
