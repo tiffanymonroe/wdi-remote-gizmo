@@ -33,11 +33,11 @@ If you have ideas on how you can help a fellow-student with work that they are s
 ## Meetings with instructors
 _Your instructor will contact you to setup a meeting time_
 
-**Friday, August 4**
+**Friday, August 4**<br>
 Short meeting with your instructor to get your project idea approved.
 
 **Monday, August 7 - Thursday, August 10**<br>
-15 minute meetings to check in. We will do things like check overall progress and direct you to resources.
+Possible 15 minute meetings to check in (varies by instructor / your project progress). We will do things like check overall progress and direct you to resources.
 
 ## Technical Requirements
 ### &#x1F534; Mandatory to pass:
