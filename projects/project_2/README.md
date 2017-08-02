@@ -92,6 +92,19 @@ The world is a depressing place.
 
 Your task is to create an app that will allow people to create and share "cheerups" - happy little quips to brighten other peoples' days. Cheerups will be small - limited to 139 characters. Members will be able to promote Cheerups that they like and maybe even boost the reputation of the Cheerupper.
 
+## Project 2 Inspiration:
+
+- Cheerups: https://warm-beach-18335.herokuapp.com/cheerups
+- Mixtapes: https://project-mixtapes.herokuapp.com/
+- Tink & Frog: https://tink-and-frog.herokuapp.com/
+- CodeSnips: https://stark-plateau-60254.herokuapp.com/
+- flyerPole: https://flyerpole.herokuapp.com/
+- LeagueManager: https://aqueous-harbor-40707.herokuapp.com/
+- Yarn: https://thawing-chamber-93915.herokuapp.com/
+- Crammer: https://study-tool.herokuapp.com/
+- GitFit: https://salty-springs-24805.herokuapp.com/
+- Civilized Coffee: https://infinite-shelf-28534.herokuapp.com/
+
 ## Suggested Ways to Get Started
 
 * **Wireframe** Make a drawing of what your app will look like on each page of your application (what does it look like as soon as you log on to the site? What does it look like once a user logs in, etc.).
@@ -155,16 +168,3 @@ The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
 
 5. **QUESTION**
   - After going through all this what is your questions specifically, more specifically than how can I make this work?
-
-## Project 2 Inspiration:
-
-- Cheerups: https://warm-beach-18335.herokuapp.com/cheerups
-- Mixtapes: https://project-mixtapes.herokuapp.com/
-- Tink & Frog: https://tink-and-frog.herokuapp.com/
-- CodeSnips: https://stark-plateau-60254.herokuapp.com/
-- flyerPole: https://flyerpole.herokuapp.com/
-- LeagueManager: https://aqueous-harbor-40707.herokuapp.com/
-- Yarn: https://thawing-chamber-93915.herokuapp.com/
-- Crammer: https://study-tool.herokuapp.com/
-- GitFit: https://salty-springs-24805.herokuapp.com/
-- Civilized Coffee: https://infinite-shelf-28534.herokuapp.com/
