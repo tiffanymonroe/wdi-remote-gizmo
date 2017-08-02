@@ -43,17 +43,17 @@ Possible 15 minute meetings to check in (varies by instructor / your project pro
 ### &#x1F534; Mandatory to pass:
 #### MVP - minimum viable product
 
-* A **working full-stack application, built by you**
+* A working full-stack application, built by you
 * Adhere to the **MVC** file structure
 * Use **Node.js, Mongoose, Express and EJS**
-* **Have _at least_ 2 models** (more if they make sense)
-* **Have complete RESTful routes** for at least one of your resources with GET, POST, PUT, and DELETE
-* **Write Mongo queries using the Mongoose module** and interact with your document database
-* A **git repository not inside the class repo**. You will need to start your project in a specific way in order to be able to upload it to Heroku (host it live on the web) **see below for more details**.
+* Have _at least_ **2 models** (more if they make sense)
+* Have complete **RESTful routes** for at least one of your resources with GET, POST, PUT, and DELETE
+* Write Mongo queries using the **Mongoose module** and interact with your document database
+* A git repository **not inside the class repo**. You will need to start your project in a specific way in order to be able to upload it to Heroku (host it live on the web) **see below for more details**.
 * A **git repository hosted on Github**, with a link to your hosted project.
-* At **least** one Github commit per day. Commit early, commit often.
-* **Be deployed online** and accessible to the public via Heroku
-* Have a **link to your hosted working app** in the `README.md` file in your github repo
+* At **least one** Github commit per day. Commit early, commit often.
+* **Be deployed online** and accessible to the public via **Heroku**
+* Have a **link to your hosted working app** in the **`README.md`** file in your github repo
 
 Lastly, a **technical demonstration** of your app which:
 
@@ -65,17 +65,19 @@ Lastly, a **technical demonstration** of your app which:
 
 ---
 ### &#x1F535; Not mandatory:
-#### Recommended features (Choose any, this list is not in any order)
+#### Recommended features 
 
-* **Use EJS Partials**
-* **Include portfolio-quality styling**
-* **Use a CSS framework** like skeleton or bootstrap
-* **Include User Stories**
-* **Include wireframes** that you designed during the planning process (uploaded to your github repo)
+(Choose any, this list is not in any order)
+
+* Include **sign up/log in** functionality, with encrypted passwords & an authorization flow.
+* Use EJS Partials
+* Include portfolio-quality styling
+* Use a CSS framework like Skeleton or Bootstrap
+* Include User Stories
+* Include **wireframes** that you designed during the planning process (uploaded to your github repo)
 * **A ``readme.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
-* **Include sign up/log in functionality**, with encrypted passwords & an authorization flow.
-* **Research and implement AJAX** [Our wiki on APIs](https://github.com/ga-students/wdi-remote-hopper/wiki/API-Aggregators)
-* **Incorporate Google Maps**
+* Incorporate **Google Maps**
+* Research and implement **AJAX** [Our wiki on APIs](https://github.com/ga-students/wdi-remote-hopper/wiki/API-Aggregators)
 
 ## Potential Project Ideas
 
@@ -88,6 +90,7 @@ Lastly, a **technical demonstration** of your app which:
 A freelance client loves discussions with his friends and other people who share his interests, so he wants you to build a forum for people to post new topics and then comment on them.
 
 ### Cheerups
+
 The world is a depressing place.
 
 Your task is to create an app that will allow people to create and share "cheerups" - happy little quips to brighten other peoples' days. Cheerups will be small - limited to 139 characters. Members will be able to promote Cheerups that they like and maybe even boost the reputation of the Cheerupper.
@@ -108,7 +111,7 @@ Your task is to create an app that will allow people to create and share "cheeru
 ## Suggested Ways to Get Started
 
 * **Wireframe** Make a drawing of what your app will look like on each page of your application (what does it look like as soon as you log on to the site? What does it look like once a user logs in, etc.).
-* **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually.
+* **Break the project down** into different components (data, presentation, views, style, DOM manipulation) and brainstorm each component individually.
 * **Use your Development Tools** (console.log, inspector, alert statements, etc) to debug and solve problems
 * Work through the lessons in class for help and inspiration! Think about adding relevant code to your application each day - you are given several days so that you can work on it in small chunks, COMMIT OFTEN. We will be looking at your commit dates and comments are part of your scoring.
 * **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
