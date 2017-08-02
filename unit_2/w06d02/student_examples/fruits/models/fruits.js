@@ -8,6 +8,6 @@ const fruitSchema = new Schema({
 });
 
 //Creating an Article class -- will be stored in 'articles' collection.  Mongo does this for you automatically
-const Fruit = mongoose.model('Fruit', fruitSchema);
+const Fruits = mongoose.model('Fruits', fruitSchema);
 
-module.exports = Fruit;
+module.exports = Fruits;
