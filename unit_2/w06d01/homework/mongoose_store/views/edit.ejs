@@ -15,16 +15,18 @@
         <h1>SHOP</h1>
       </div>
       <div class="new-info">
-        <h1>Add Coffee</h1>
+        <h1>Edit <%=product.name%></h1>
         <form action="/shop" method="post">
             <input type="text" name="name" placeholder="Name"/>
             <input class="description" type="text" name="description" placeholder="Description"/>
-            <input type="text" name="img" placeholder="Image URL"/>
+            <input type="text" name="img" placeholder="URL"/>
             <input type="number" name="price" placeholder="Price"/>
             <input type="number" name="qty" placeholder="Quantity"/>
           <br/>
           <br/>
-            <input class="crud" type="submit" value="submit"/>
+          <form action ="/shop/<%=product.id;%>?_method=PUT" method="post">
+            <input class="crud" type="submit" value="Submit"/>
+          </form>
           <br/>
           <br/>
       </div>

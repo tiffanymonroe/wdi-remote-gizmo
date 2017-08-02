@@ -12,10 +12,10 @@
         <img class="logo" src="http://static1.squarespace.com/static/563903b0e4b0c30c71cf516a/t/563903fce4b0aea7317b07d0/1500739168444/?format=1500w" alt="Portola"/>
       </div>
       <div class="nav">
-        <h1>STORE</h1>
+        <h1>SHOP</h1>
       </div>
       <div class="product-info">
-        <%# <img src="<%= product.img %>" />%>
+
         <table>
         <tr>
           <td><h1><%=product.name%></h1></td>
@@ -29,11 +29,15 @@
         </tr>
       </table>
       </div>
-      <div class="input">
-        <input type="submit" value="Edit"/>
-        <input type="submit" value="Delete"/>
-      </div>
 
+      <div class="input">
+
+        <a class="crud" href="/shop/<%=product.id; %>/edit">Edit</a>
+        <form action="/shop/<%=product.id; %>?_method=DELETE" method="post">
+          <input class="crud" type="submit" value="Delete"/>
+        </form>
+
+      </div>
   </div>
   </body>
 </html>
