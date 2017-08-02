@@ -19,7 +19,7 @@ For the next two evenings, you will be creating a **two-model CRUD application**
 
 # Suggested breakdown
 
-- Day 1: Full CRUD for one of the models.
+- Day 1: Full CRUD for one of the models & seeding data.
 - Day 2: Create 2nd model and connect it to the first one.
 
 Use everything that you've been learning to accomplish the following:
