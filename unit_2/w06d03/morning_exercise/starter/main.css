@@ -1,0 +1,62 @@
+body {
+  background-color: #aaa;
+}
+
+.container {
+  margin: auto;
+  max-width: 90%;
+  margin-top: 1em;
+}
+
+form {
+  display:flex;
+}
+
+fieldset {
+  padding: 1em;
+  background-image: url("concrete_seamless.png");
+  max-width: 100%;
+  margin: 1em 0;
+}
+
+.first > input, .first > select {
+  display: block;
+  margin: auto;
+  padding: 0.3em;
+  margin-top: 0.3em;
+}
+
+.radio {
+  display: flex;
+  justify-content: space-between;
+}
+
+.radio:nth-child(odd){
+  background-color: #ddd;
+}
+
+legend, #button, #submit {
+    background-image: url("concrete_seamless.png");
+    padding: 0.5em;
+    border-radius: 0.5em;
+}
+
+.checkboxes {
+  display: table;
+  width: 100%;
+}
+
+.pets {
+  display: table-row;
+}
+
+.pets > label {
+  display:table-cell;
+  text-align: right;
+}
+
+@media (max-width: 660px){
+  form {
+    display: block;
+  }
+}
