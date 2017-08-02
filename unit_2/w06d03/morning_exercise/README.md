@@ -1,7 +1,7 @@
 
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: HTML Forms and CSS - Styling HTML Forms <br>
@@ -17,7 +17,12 @@ Prerequisites: basic HTML, CSS<br>
 ## HTML Forms
 
 ## Intro
-Forms can be tricky to style. Spend some time this morning just focusing on styling forms
+Forms can be tricky to style. Spend some time this morning just focusing on styling forms.
+
+### Options
+Work on your own and style the forms. Get inspired by the links below. Use `index.html` 
+
+Code along with Karolin. Go into the `starter` folder and work with `make-it-pretty.html`
 
 ## Quick note on Fieldset/Legend/Label tags
 The `<fieldset>`, `<legend>` and `<label>` tags are designed for web accessibility and aiding screen readers to properly interpret the form. Fieldset lets you group parts of a form together. Legend defines what a fieldset is for. Labels are for inputs. You can either nest your input inside a label or you can put the label first and then as a sibling put the corresponding input, if you do it this way the label must be a `for` attribute in the `label` tag and then the `input` tag must have an `id` that matches the value of `for`.
