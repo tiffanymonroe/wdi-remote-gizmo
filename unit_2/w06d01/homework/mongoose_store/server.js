@@ -66,7 +66,7 @@ app.get('/shop/:id/edit', (req, res) => {
 
 //Put Route
 app.put('/shop/:id', (req, res) => {
-  Product.findBrsyIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedModel) => {
+  Product.findByIdAndUpdate(req.params.id, req.body, {new: true}, (error, updatedModel) => {
     res.send(updatedModel);
   });
 });
