@@ -8,7 +8,7 @@ You will be creating a full stack application using everything you've learned in
 
 **Friday, August 11**<br>
 1. Submit an issue to our class repo (as you normally do for homework) but with the following:
-- the title for your issue should be `Your Name - Project 2`
+- the title for your issue should be `Your Name - Project 2` by 10 am Eastern.
 - a link to your repo
 - a link to your live site.
 
@@ -72,7 +72,7 @@ Lastly, a **technical demonstration** of your app which:
 * **Use a CSS framework** like skeleton or bootstrap
 * **Include User Stories**
 * **Include wireframes** that you designed during the planning process (uploaded to your github repo)
-* **A ``readme.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
+* **A ``readme.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, user stories, and notes to yourself so you can come back to your project later in the course and be able to pick up your train of thought, etc
 * **Include sign up/log in functionality**, with encrypted passwords & an authorization flow.
 * **Research and implement AJAX** [Our wiki on APIs](https://github.com/ga-students/wdi-remote-hopper/wiki/API-Aggregators)
 * **Incorporate Google Maps**
