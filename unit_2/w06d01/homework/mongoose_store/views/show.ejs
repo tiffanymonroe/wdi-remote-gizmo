@@ -15,10 +15,12 @@
         <h1>SHOP</h1>
       </div>
       <div class="product-info">
-        <%=product.img%>
+        <div class="images">
+            <img src="<%=product.img%>" />
+        </div>
         <table>
         <tr>
-          <td><h1><%=product.name%></h1></td>
+          <td><h1 class="show-h1"><%=product.name%></h1></td>
         </tr>
 
         <tr>
@@ -27,14 +29,25 @@
         <tr>
           <td><h3>$<%=product.price%></h3></td>
         </tr>
+        <tr>
+          <td><h3>Quantity: <%=product.qty%></h3></td>
+        </tr>
+        <tr>
+
+          <td class="crud" id='buy'>Buy</td>
+           <% if (<%product.qty%> > 0){ %>
+               document.getElementById('buy').addEventListener('click', () =>
+               <%{  <%product.qty%> -=1  })   %>
+          <% } %>
+        </tr>
       </table>
       </div>
 
-      <div class="input">
+      <div class="input-container">
 
         <a class="crud" href="/shop/<%=product.id; %>/edit">Edit</a>
         <form action="/shop/<%=product.id; %>?_method=DELETE" method="post">
-          <input class="crud" type="submit" value="Delete"/>
+          <input class="crud" id="submit" type="submit" value="Delete"/>
         </form>
 
       </div>

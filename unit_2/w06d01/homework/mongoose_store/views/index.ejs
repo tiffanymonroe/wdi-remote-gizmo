@@ -17,9 +17,16 @@
       </div>
       <div class="image-container">
         <% for (let i=0; i < products.length; i++) { %>
-        <a href="/shop/<%=products[i].id%>">
-        <img class="images" src="<%= products[i].img %>"/>
-        </a>
+
+        <div class="single-img">
+            <a href="/shop/<%=products[i].id%>">
+              <img class="images" src="<%= products[i].img %>"/>
+            </a>
+            <br/>
+            <%=products[i].name%>
+
+        </div>
+
         <% } %>
      </div>
     </div>

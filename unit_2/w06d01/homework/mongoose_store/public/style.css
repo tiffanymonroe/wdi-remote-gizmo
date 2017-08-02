@@ -1,15 +1,24 @@
+/** {
+  border: 1px solid hotpink;
+}*/
+
 .container {
   display: flex;
   flex-wrap: wrap;
   font-family: 'Raleway', sans-serif;
   width: 100%;
+
+}
+
+img {
+  width: 400px;
+  height: 266;
 }
 
 .banner {
   background-image: url("https://static1.squarespace.com/static/563903b0e4b0c30c71cf516a/t/566bafaf69a91af72b2db086/1449897905819/shop_page_banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
-
   width: 100%;
   height: 668px;
 }
@@ -21,18 +30,16 @@
   display: block;
 }
 
-
 .nav {
   background-color: #eeeeee;
   line-height: 3em;
-  letter-spacing: 1em;
   text-align: center;
   width: 100%;
 }
 
-
-
-
+a {
+  text-decoration: none;
+}
 .image-container {
   display: flex;
   clear: both;
@@ -40,16 +47,26 @@
   width: 100%;
   margin: 0 auto;
   align-content: space-between;
+
 }
 
-.images {
-  width: 400px;
-  height: auto;
+.single-img {
+  font-weight: bold;
+  color: #c98702;
+  text-transform: uppercase;
+  text-align: center;
+  display: inline-block;
+  clear: both;
+  flex-direction: column;
   padding: 5px;
-  margin: 5px;
+  margin-top: 2px;
+  padding-bottom: 3px;
+  margin: 3px;
 }
-.images:hover{
-  opacity: .5;
+
+
+.single-img:hover {
+  opacity: .7;
 }
 
 .new-info {
@@ -60,6 +77,12 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
+}
+
+.input-container {
+  margin-right: 15%;
+  margin-left: 3%;
+  margin-top: 46%;
 }
 
 input {
@@ -79,20 +102,12 @@ input {
   vertical-align: top;
 }
 
-.btn {
-  font-family: 'Raleway', sans-serif;
-  font-size: 1em;
-  padding 1%;
-  width: 5vw;
-  height: auto;
-  margin: 0 auto;
-}
 
 .product-info {
-  width: 100%;
+  width: 50%;
   padding: 5%;
   height: auto;
-  margin: 0 auto;
+  margin-left: 10%;
 }
 
 .crud {
@@ -111,6 +126,15 @@ input {
   border-radius: 4px;
   text-decoration: none;
   letter-spacing: normal;
-  line-height: normal
+  line-height: normal;
   text-align: center;
+}
+
+#submit {
+  width: 100%;
+  align-items: center;
+}
+
+.show-h1 {
+  color: #c98702;
 }
