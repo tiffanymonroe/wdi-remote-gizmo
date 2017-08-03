@@ -25,7 +25,16 @@ body {
   background-color: teal;
 }
 
-h1, h2, h3, h4 {
+.col-xs-12 {
+  padding: 1em;
+  text-align: center;
+}
+
+h1 {
+  font-family: 'Pacifico', cursive;
+}
+
+h2, h3, h4 {
   color: teal;
   font-weight: bold;
   font-variant: small-caps;

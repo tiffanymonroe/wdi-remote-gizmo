@@ -1,7 +1,8 @@
 const express = require('express');
-const mongoose = require('mongoose');
 const router = express.Router();
-const User = require('../models/users.js')
+const mongoose = require('mongoose');
+const User = require('../models/users.js');
+const Photo = require('../models/photos.js');
 
 //Index Route
 router.get('/', (req, res)=>{
