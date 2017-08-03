@@ -48,7 +48,7 @@ router.delete('/:id', (req, res)=>{
 
 router.get('/:id/edit', (req, res)=>{
   User.findById(req.params.id, (err, foundUser)=>{
-    res.render('user/edit.ejs', {
+    res.render('users/edit.ejs', {
       user: foundUser
     });
   });

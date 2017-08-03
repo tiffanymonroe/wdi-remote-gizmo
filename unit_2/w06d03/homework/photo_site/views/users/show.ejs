@@ -2,9 +2,44 @@
 <html>
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <!-- Normalize CSS -->
+    <link rel="stylesheet" type="text/css" href="normalize.css">
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!--Fonts-->
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
+
+    <!-- CSS -->
+    <link rel="stylesheet" type="text/css" href="../main.css">
+    <title>Photo Album</title>
   </head>
   <body>
-    <%=user%>
+    <div class="container">
+        <!--Nav Bar-->
+        <nav class="navbar">
+          <p class="navbar-brand">Photo Site</p>
+          <a href="/users" class="btn btn-default navbar-btn">Sign in</a>
+        </nav>
+           <!--User info-->
+
+        <div class="welcome">
+            <h1> Welcome, <%=user.name%> </h1>
+        </div>
+
+        <div class="account-info">
+        <h3>Account Info</h3>
+            <ul>
+                  <li>Username: <%=user.username%></li>
+                  <li>Email address: <%=user.email%></li>
+                  <li>
+                    <a href="/users/<%=user._id%>/edit">Edit</a>
+                  </li>
+                  <li>
+                  <form action="/users/<%=user._id%>?_method=DELETE" method="post">
+                  <input type="submit" value="Delete Account"/></form></li>
+            </ul>
+        </div>
+
+    </div>
   </body>
 </html>

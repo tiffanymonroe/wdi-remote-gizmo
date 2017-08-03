@@ -1,5 +1,7 @@
+
 body {
   font-family: 'Josefin Sans', sans-serif;
+  font-size: 18px;
 }
 navbar, .navbar-brand {
   font-size: 36px;
@@ -17,4 +19,12 @@ form {
 
 .form-control {
   width: 30%;
+}
+
+.welcome, .account-info {
+  display: flex;
+}
+
+li {
+  list-style: none;
 }
