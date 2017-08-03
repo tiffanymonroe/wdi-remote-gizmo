@@ -83,7 +83,7 @@ Traversing the array and doing the correct swaps is just a single pass: the enti
 
 **You will need a loop within a loop to solve it.**
 
-```
+```javascript
 bubbleSort([10, 0, 99, 100, 8, 55, 2, 17, 16, 15, 1000, 1]);
 
 =>
