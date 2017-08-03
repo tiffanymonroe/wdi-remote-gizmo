@@ -189,12 +189,6 @@ References can be found [here](https://en.wikipedia.org/wiki/Planning_poker)
 
 Planning poker, also called Scrum poker, is a consensus-based, gamified technique for estimating, mostly used to estimate effort or relative size of development goals in software development. In planning poker, members of the group make estimates by playing numbered cards face-down to the table, instead of speaking them aloud. The cards are revealed, and the estimates are then discussed.
 
-If you are doing this remotely, you will count to three and then hold up your cards OR use the calculator on your smartphone to display your number to show your number estimation (kind of like rock, paper, scissors).
-
-![phone](http://media.boingboing.net/wp-content/uploads/2017/05/screenshot-5.jpg)
-
-By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.
-
 ### How to play
 Planning poker is based on a list of features to be delivered, several copies of a deck of cards and optionally, an egg timer that can be used to limit time spent in discussion of each item.
 
@@ -203,6 +197,12 @@ The feature list, often a list of user stories, describes some software that nee
 The cards in the deck have numbers on them. A typical deck has cards showing the [Fibonacci sequence](https://en.wikipedia.org/wiki/Fibonacci_number) including a zero: 0, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89.
 
 Why is the Fibonacci sequence used? There are many [opinions on this](http://stackoverflow.com/questions/9362286/why-is-the-fibonacci-series-used-in-agile-planning-poker) and I've linked them here. Ultimately, I think that it's because it helps to represent the hours that it might take to complete the work. Something that might be a 1 would take you 2 hours while something that is a 3 would take you 6 hours... not just 1 extra hour, etc.
+
+If you are doing this remotely, you will count to three and then hold up your cards OR use the calculator on your smartphone to display your number to show your number estimation (kind of like rock, paper, scissors).
+
+![phone](http://media.boingboing.net/wp-content/uploads/2017/05/screenshot-5.jpg)
+
+By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.
 
 Doing planning poker will help you figure out how long your overall plan will take, sets time aside to discuss any unforseen problems before coding begins, and also might help you figure out who to assign to which task.
 
