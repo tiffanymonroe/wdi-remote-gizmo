@@ -1,6 +1,5 @@
 const express = require('express');
 const Author = require('../models/authors.js');
-const Article = require('../models/articles.js');
 const router = express.Router();
 
 router.get('/', (req, res)=>{
@@ -30,21 +29,8 @@ router.get('/:id', (req, res)=>{
 });
 
 router.delete('/:id', (req, res)=>{
-	Author.findByIdAndRemove(req.params.id, (err, foundAuthor)=>{
-		const articleIds = [];
-		for(let i = 0; i < foundAuthor.articles.length; i++){
-			articleIds.push(foundAuthor.articles[i]._id);
-		}
-		Article.remove(
-			{
-				_id: {
-					$in: articleIds
-				}
-			},
-			(err, data)=>{
-				res.redirect('/authors');
-			}
-		);
+	Author.findByIdAndRemove(req.params.id, ()=>{
+		res.redirect('/authors');
 	});
 });
 
