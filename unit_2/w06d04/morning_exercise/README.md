@@ -20,6 +20,8 @@ Topics: sorting algorithms, nested loops<br>
 
 # SORTING ALGORITHMS
 
+[Algorithms documentary - 51 mins](https://www.youtube.com/watch?v=T1os88EvPc4)
+
 A sorting algorithm is an algorithm that puts elements of a list in order. 
 
 If you give the algorithm an unsorted array that looks like this:
@@ -81,7 +83,7 @@ Traversing the array and doing the correct swaps is just a single pass: the enti
 
 **You will need a loop within a loop to solve it.**
 
-```
+```javascript
 bubbleSort([10, 0, 99, 100, 8, 55, 2, 17, 16, 15, 1000, 1]);
 
 =>
@@ -110,7 +112,7 @@ The outer loop for Bubble Sort should be a `while` loop that runs _while_ swaps 
 
 &#x1F535; **Setup**
 
-In `morning_exercises`, make a file `bubble_sort.js`
+In `morning_exercise`, make a file `bubble_sort.js`
 
 Run it in node: `node bubble_sort.js`
 	
