@@ -191,7 +191,7 @@ Planning poker, also called Scrum poker, is a consensus-based, gamified techniqu
 
 If you are doing this remotely, you will count to three and then hold up your cards OR use the calculator on your smartphone to display your number to show your number estimation (kind of like rock, paper, scissors).
 
-![phone](http://thesweetsetup.com/wp-content/uploads/2015/12/apple-calculator-portrait.jpg)
+![phone](http://media.boingboing.net/wp-content/uploads/2017/05/screenshot-5.jpg)
 
 By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.
 
