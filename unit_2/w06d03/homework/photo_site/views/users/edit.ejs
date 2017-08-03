@@ -10,13 +10,20 @@
     <link href="https://fonts.googleapis.com/css?family=Josefin+Sans|Pacifico" rel="stylesheet">
 
     <!-- CSS -->
-    <link rel="stylesheet" type="text/css" href="../main.css">
+    <link rel="stylesheet" type="text/css" href="../../main.css">
 
-    <title>New Member Sign Up</title>
+    <title>Edit Account Info</title>
   </head>
   <body>
     <div class="container">
-      <form action="/users/<%=user._id>?_method=PUT" method="post">
+      <!--Nav Bar-->
+      <nav class="navbar">
+        <p class="navbar-brand">Photo Site</p>
+        <a href="/" class="btn btn-default navbar-btn navbar-right">Home</a>
+      </nav>
+
+      <!---Edit User-->
+      <form action="/users/<%=user._id%>?_method=PUT" method="post">
         <div class="form-group">
           <label for="username">username</label>
           <input type="text" class="form-control" name="username" placeholder="username">

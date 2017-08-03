@@ -28,5 +28,7 @@ const userData = [
     name: "Jane",
     email: "janeeedoe@hotmail.com",
     password: String
-  },  
+  },
 ]
+
+module.exports = userData;
