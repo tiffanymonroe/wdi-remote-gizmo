@@ -157,7 +157,8 @@ Right now, only the `index` route has the CSS linked. Let's cut that code out of
 
 
 #### Editing a partial
-Whoops! Our footer says `all rights reversed` it should say `all rights reserved`
+Whoops! Our footer says `all rights reversed` it should say `all rights reserved`.
+
 Let's update our `footer.ejs` file
 - click around the mongoose store, did the footer change on all your pages now? 
 - If so sweet! If not, let's troubleshoot
