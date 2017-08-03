@@ -189,7 +189,9 @@ References can be found [here](https://en.wikipedia.org/wiki/Planning_poker)
 
 Planning poker, also called Scrum poker, is a consensus-based, gamified technique for estimating, mostly used to estimate effort or relative size of development goals in software development. In planning poker, members of the group make estimates by playing numbered cards face-down to the table, instead of speaking them aloud. The cards are revealed, and the estimates are then discussed.
 
-If you are doing this remotely, you will count to three and then throw up your fingers (or hold up your cards OR use the calculator on your smartphone to display your number) to show your number estimation (kind of like rock, paper, scissors).
+If you are doing this remotely, you will count to three and then hold up your cards OR use the calculator on your smartphone to display your number to show your number estimation (kind of like rock, paper, scissors).
+
+![phone](http://thesweetsetup.com/wp-content/uploads/2015/12/apple-calculator-portrait.jpg)
 
 By hiding the figures in this way, the group can avoid the cognitive bias of anchoring, where the first number spoken aloud sets a precedent for subsequent estimates.
 
