@@ -79,7 +79,7 @@ You'll see a green `Submit Final` button. This allows you to clean up your code 
 We'll go back to Mongoose Store.
 -  `cd` into the directory `ejs-partials-mognoose-store` that is in the morning exercise folder for today
 - `npm install`
-- open two more Terminal tabs (one for `mongod` and one for `nodemon`
+- open two more Terminal tabs (one for `mongod` and one for `nodemon`)
 - start `mongod` in a new terminal window
 - start `nodemon`
 - `atom .` in the last tab
