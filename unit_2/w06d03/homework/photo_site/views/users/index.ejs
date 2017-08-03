@@ -20,25 +20,29 @@
         <p class="navbar-brand">Photo Site</p>
         <a href="/" class="btn btn-default navbar-btn navbar-right">Home</a>
       </nav>
-    <h1>User Info</h1>
-    <form action="/users/:id" method="post">
-      <div class="form-group">
-        <label for="username">username</label>
-        <input type="text" class="form-control" name="username" placeholder="username">
-      </div>
-      <div class="form-group">
-        <label for="password">password</label>
-        <input type="password" class="form-control" name="password" placeholder="password">
-      </div>
-      <button type="submit" class="btn btn-default">Submit</button>
-    </form>
-    <a href="/users/new" class="btn btn-default">Not a member? Sign up.</a>
-      <h2>Active Users: </h2>
-        <ul>
-                  <% for (let i=0; i < users.length; i++){ %>
-                    <a href="/users/<%=users[i]._id%>"> <li><%=users[i].username%></a></li>
-                  <% } %>
-        </ul>
+      <div class="col-xs-6">
+      <h2>User Info</h2>
+      <form>
+        <div class="form-group">
+          <label for="username">username</label>
+          <input type="text" class="form-control" name="username" placeholder="username">
+        </div>
+        <div class="form-group">
+          <label for="password">password</label>
+          <input type="password" class="form-control" name="password" placeholder="password">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+      <a href="/users/new" class="btn btn-default">Not a member? Sign up.</a>
+    </div>
+    <div class="col-xs-6">
+        <h2>Active Users: </h2>
+          <ul>
+                    <% for (let i=0; i < users.length; i++){ %>
+                      <a href="/users/<%=users[i]._id%>"> <li><%=users[i].username%></a></li>
+                    <% } %>
+          </ul>
+    </div>
   </div>
   </body>
 </html>

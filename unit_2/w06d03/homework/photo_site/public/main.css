@@ -1,25 +1,49 @@
+/**{
+  border: 1px solid hotpink;
+}*/
 
 body {
   font-family: 'Josefin Sans', sans-serif;
   font-size: 18px;
 }
-navbar, .navbar-brand {
-  font-size: 36px;
+.navbar-brand {
+  font-size: 40px;
   font-family: 'Pacifico', cursive;
   color: black;
   padding: 1em;
   vertical-align: bottom;
 }
 
+.btn, .btn-default, .navbar-btn{
+  margin-top: 1.5em;
+  margin-left: 1em;
+  font-size: 18px;
+}
 
+.btn-default:hover{
+  color: white;
+  background-color: teal;
+}
+
+h1, h2, h3, h4 {
+  color: teal;
+  font-weight: bold;
+  font-variant: small-caps;
+}
+
+.thumbnail:hover,  {
+  border-color: none;
+  box-shadow: 2px 2px #fff;
+
+}
 
 form {
   margin: auto;
 }
 
-.form-control {
+/*.form-control {
   width: 30%;
-}
+}*/
 
 .welcome, .account-info {
   display: flex;
@@ -27,4 +51,10 @@ form {
 
 li {
   list-style: none;
+}
+
+a {
+  text-decoration: none;
+  font-size: 18px;
+  color: inherit;
 }

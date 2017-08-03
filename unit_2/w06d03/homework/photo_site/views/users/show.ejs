@@ -22,12 +22,13 @@
         </nav>
            <!--User info-->
 
-        <div class="welcome">
-            <h1> Welcome, <%=user.name%> </h1>
-        </div>
+        <div class="welcome row">
+            <h2 class="col-xs-8"> Welcome, <%=user.name%> </h2>
 
-        <div class="account-info">
-        <h3>Account Info</h3>
+
+        <div class="account-info col-xs-4">
+        <h2>Account Info</h2>
+
             <ul>
                   <li>Username: <%=user.username%></li>
                   <li>Email address: <%=user.email%></li>
@@ -38,8 +39,9 @@
                   <form action="/users/<%=user._id%>?_method=DELETE" method="post">
                   <input type="submit" value="Delete Account"/></form></li>
             </ul>
-        </div>
 
+        </div>
+        </div>
     </div>
   </body>
 </html>
