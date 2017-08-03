@@ -212,9 +212,9 @@ Doing planning poker will help you figure out how long your overall plan will ta
 
 1. Decide with your partners whether to create Github Issues (with or without Waffle.io or Zenhub) OR create a Trello account.
 
-    **Github:** If you want to use Github issues, one person should create a repo (or use an old one) and add your partners as a Collaborators.
+    - **Github:** If you want to use Github issues, one person should create a repo (or use an old one) and add your partners as a Collaborators.
 
-    **Trello:** When making your Trello account, be sure to take note of your screenname OR update the screenname that they automatically assign to you to something that you will remember (and that is at least semi-professional).
+    - **Trello:** When making your Trello account, be sure to take note of your screenname OR update the screenname that they automatically assign to you to something that you will remember (and that is at least semi-professional).
 
 2. Create the lists for "To-Do", "In Progress", "In Review", and "Done" (or the names that most make sense to you from the ones listed above).
 
