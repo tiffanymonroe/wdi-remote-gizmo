@@ -63,7 +63,7 @@ And the challenge is completed when all the tests pass!
 
 ![All tests passed](https://i.imgur.com/8UgMeDZ.png)
 
-You'll see a green 'Submit Final' button. This allows you to clean up your code before submitting to the community
+You'll see a green `Submit Final` button. This allows you to clean up your code before submitting to the community
 
 #### Recommended challenges
 - [Bob's Short Forms](https://www.codewars.com/kata/bobs-short-forms)
