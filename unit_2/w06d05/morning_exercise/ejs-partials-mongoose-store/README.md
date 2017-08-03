@@ -99,7 +99,7 @@ EJS partials let you create reusable EJS that you only have to edit in one place
 - in the views folder: `mkdir partials`
 - then in the partials folder: `touch head.ejs`
 
-Right now, only the `new` route has the CSS linked. Let's cut that code out of the head and paste it into our `head.ejs` file (don't forget to save all the files!) 
+Right now, only the `index` route has the CSS linked. Let's cut that code out of the head and paste it into our `head.ejs` file (don't forget to save all the files!) 
 ```
     <meta charset="utf-8">
     <title>Mongoose Store</title>
