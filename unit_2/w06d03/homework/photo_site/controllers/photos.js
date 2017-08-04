@@ -51,8 +51,13 @@ router.get('/:id', (req, res)=>{
 
 //Delete Route
 router.delete('/:id', (req, res)=>{
-  Photo.findByIdAndRemove(req.params.id, ()=>{
-    res.redirect('/photos')
+  Photo.findByIdAndRemove(req.params.id, (err, foundPhoto)=>{
+    User.findOne({'photos._id':req.params.id}, (err, foundUser)=>{
+      foundUser.articles.id(req.params.id).remove();
+      foundUser.save((err, data)=>{
+          res.redirect('/photos');
+      });
+    });
   });
 });
 
@@ -70,6 +75,18 @@ router.get('/:id', (req, res)=>{
   Photo.findByIdAndUpdate(req.params.id, req.body, ()=>{
     res.redirect('/photos')
   });
+});
+
+router.put('/:id', (req, res)=>{
+    Photo.findByIdAndUpdate(req.params.id, req.body, { new: true }, (err, updatedPhoto)=>{
+        Photo.findOne({'photos._id': req.params.id }, (err, foundPhoto)=>{
+            foundUser.photos.id(req.params.id).remove();
+            foundUser.photos.push(updatedPhoto);
+            foundAuthor.save((err, data)=>{
+                res.redirect('/photos/'+req.params.id);
+            });
+        });
+    });
 });
 
 

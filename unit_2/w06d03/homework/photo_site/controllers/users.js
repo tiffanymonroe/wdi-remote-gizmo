@@ -43,8 +43,21 @@ router.post('/', (req, res) =>{
 
 //Delete Route
 router.delete('/:id', (req, res)=>{
-  User.findByIdAndRemove(req.params.id, ()=>{
-    res.redirect('/users');
+  User.findByIdAndRemove(req.params.id, (err, foundUser)=>{
+    const photoIds = [];
+    for (let i = 0; i < foundUser.photos.length; i++){
+      photoIds.push(foundUser.photos[i]._id);
+    }
+    Photo.remove(
+      {
+          _id: {
+              $in: photoIds
+          }
+      },
+      (err, data)=>{
+        res.redirect('/users');
+      }
+    );
   });
 });
 
