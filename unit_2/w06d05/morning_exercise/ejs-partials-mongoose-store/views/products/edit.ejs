@@ -1,11 +1,11 @@
 <!DOCTYPE html>
 <html>
   <head>
-
+      <% include ../partials/head.ejs %>
   </head>
   <body>
     <nav>
-
+      <% include ../partials/nav.ejs %>
     </nav>
     <div class="container">
       <h2>Improve this item</h2>
@@ -28,5 +28,6 @@
             <img src="<%= product.img %>" alt="An image of <%= product.name %>" />
         </div>
     </div>
+    <% include ../partials/footer.ejs %>
   </body>
 </html>
