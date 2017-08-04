@@ -10,7 +10,7 @@
 
     <!-- CSS -->
     <link rel="stylesheet" type="text/css" href="../main.css">
-    <title>Sign In</title>
+    <title>Photo Info</title>
   </head>
   <body>
     <div class="container">
@@ -28,10 +28,13 @@
             </a>
           </div>
           <form  action="/photos/<%=photo._id%>?_method=DELETE" method="post">
-          <input type="submit" value="Delete"/>
+          <input class="btn btn-default" type="submit" value="Delete"/>
         </form>
         <div>
-          <a href="/photos/<%=photo._id%>/edit"><span class="glyphicon glyphicon-pencil"><span></a>
+        <div class="col-xs-6">
+            <h2>Photos by: <a href="/users/<%=user._id%>"><%=user.username%></a></h2>
+            <a href="/photos/<%=photo._id%>/edit"><span class="glyphicon glyphicon-pencil"><span></a>
+        </div>
       </div>
 
     </div>

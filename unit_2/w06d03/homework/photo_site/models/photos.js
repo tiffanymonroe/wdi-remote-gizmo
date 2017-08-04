@@ -3,7 +3,7 @@ const User = require('../models/users.js');
 
 const photoSchema = mongoose.Schema({
   img: String,
-  username: User.schema
+  username: String
 });
 
 const Photo = mongoose.model('Photo', photoSchema);

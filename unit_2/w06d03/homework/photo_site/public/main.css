@@ -68,7 +68,21 @@ a {
   color: inherit;
 }
 
-.img-rounded {
+.img-rounded, {
  width: 282.5;
  height: 187.578px;
+}
+
+select {
+  margin-bottom: 1em;
+}
+
+.glyphicon {
+  padding: 1em;
+}
+
+.user-photos {
+
+  width: 282.5;
+  height: 187.578px;
 }
