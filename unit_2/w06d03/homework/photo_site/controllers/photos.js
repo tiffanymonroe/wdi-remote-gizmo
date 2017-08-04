@@ -20,7 +20,12 @@ router.get('/new', (req, res)=>{
 
 //Show Route
 router.get('/:id', (req, res)=>{
+  console.log("=============Show Route++++++++");
   Photo.findById(req.params.id, (err, foundPhoto)=>{
+    console.log("========================");
+    console.log(err);
+    console.log(req.params.id);
+    console.log("This is the photo" + foundPhoto);
     res.render('photos/show.ejs', {
       photo: foundPhoto
     });
