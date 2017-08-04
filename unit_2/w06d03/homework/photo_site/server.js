@@ -42,10 +42,10 @@ mongoose.connection.once('open', ()=>{
 
 // Add products from Vampire homework, I think
 // User.collection.insertMany(userData, (error, data) => {
-//   console.log('seeded users');
+//   console.log('seeded data');
 //   mongoose.connection.close();
 // })
-
+//
 app.listen(3000, ()=>{
   console.log("What's new? I'm listening.");
 })

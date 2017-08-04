@@ -12,6 +12,10 @@ body {
   color: black;
   padding: 1em;
   vertical-align: bottom;
+  animation: animated_div 5s 1;
+  -moz-animation: animated_div 5s 1;
+  -webkit-animation: animated_div 5s 1;
+  -o-animation: animated_div 5s 1;
 }
 
 .btn, .btn-default, .navbar-btn{
@@ -22,7 +26,7 @@ body {
 
 .btn-default:hover{
   color: white;
-  background-color: teal;
+  background-color: black;
 }
 
 .col-xs-12 {
@@ -73,11 +77,11 @@ a {
  height: 187.578px;
 }
 
-select {
+select, .add {
   margin-bottom: 1em;
 }
 
-.glyphicon {
+.glyphicon, {
   padding: 1em;
 }
 
@@ -85,4 +89,46 @@ select {
 
   width: 282.5;
   height: 187.578px;
+}
+
+/*from https://www.w3schools.com/css/css3_animations.asp*/
+
+@keyframes animated_div
+{
+0% {transform: rotate(0deg);left:0px;}
+25% {transform: rotate(20deg);left:0px;}
+50% {transform: rotate(0deg);left:500px;}
+55% {transform: rotate(0deg);left:500px;}
+70% {transform: rotate(0deg);left:500px;}
+100% {transform: rotate(-360deg);left:0px;}
+}
+
+@-webkit-keyframes animated_div
+{
+0% {-webkit-transform: rotate(0deg);left:0px;}
+25% {-webkit-transform: rotate(20deg);left:0px;}
+50% {-webkit-transform: rotate(0deg);left:500px;}
+55% {-webkit-transform: rotate(0deg);left:500px;}
+70% {-webkit-transform: rotate(0deg);left:500px}
+100% {-webkit-transform: rotate(-360deg);left:0px;}
+}
+
+@-moz-keyframes animated_div
+{
+0%  {-moz-transform: rotate(0deg);left:0px;}
+25% {-moz-transform: rotate(20deg);left:0px;}
+50%  {-moz-transform: rotate(0deg);left:500px;}
+55%  {-moz-transform: rotate(0deg);left:500px;}
+70%  {-moz-transform: rotate(0deg);left:500px;}
+100% {-moz-transform: rotate(-360deg);left:0px;}
+}
+
+@-o-keyframes animated_div
+{
+0% {transform: rotate(0deg);left:0px;}
+25% {transform: rotate(20deg);left:0px;}
+50%  {transform: rotate(0deg);left:500px;}
+55%  {transform: rotate(0deg);left:500px;}
+70%  {transform: rotate(0deg);left:500px;}
+100% {transform: rotate(-360deg);left:0px;}
 }
