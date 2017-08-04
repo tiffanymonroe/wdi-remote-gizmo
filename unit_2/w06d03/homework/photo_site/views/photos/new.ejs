@@ -21,7 +21,22 @@
         <a href="/" class="btn btn-default navbar-btn navbar-right">Home</a>
       </nav>
 
-      <!--- insert new html --->
+      <!--- Add Photos --->
+      <div class="col-xs-6 col-xs-offset-3">
+      <form action="/photos" method="post">
+        <div class="form-group">
+          <label for="username">username</label>
+          <input type="text" class="form-control" name="username">
+        </div>
+        <div class="form-group">
+          <label for="img">add image</label>
+          <input type="text" class="form-control" name="img" placeholder="Image URL">
+        </div>
+        <button type="submit" class="btn btn-default">Submit</button>
+      </form>
+    </div>
+
+    
 
     </div>
   </body>

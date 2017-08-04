@@ -20,11 +20,18 @@
         <p class="navbar-brand">WikiPhoto</p>
         <a href="/" class="btn btn-default navbar-btn navbar-right">Home</a>
       </nav>
+      <div class="row">
+        <a class="btn btn-default" href="photos/new">Add</a>
+      </div>
+      <div class="row">
 
-      <!--- insert new html --->
-      <a href="photos/new">Add</a>
+            <% for(let i=0; i < photos.length; i++){ %>
+            <a href="/photos/<%=photos[i].id%>">
+            <img class="thumbnail img-rounded col-xs-3" src="<%=photos[i].img%>"/></a>
 
+            <% } %>
 
+      </div>
     </div>
   </body>
 </html>

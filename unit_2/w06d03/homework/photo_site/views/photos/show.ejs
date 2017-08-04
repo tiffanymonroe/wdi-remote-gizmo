@@ -21,7 +21,19 @@
         <a href="/" class="btn btn-default navbar-btn navbar-right">Home</a>
       </nav>
 
-      <!--- insert new html --->
+      <!--Images-->
+      <div class="row">
+          <div class="col-xs-6">
+            <a href="#" class="thumbnail">
+              <img src="<%=photo.img%>"/>
+            </a>
+          </div>
+          <form  action="/photos/<%=photo._id%>?_method=DELETE" method="post">
+          <input type="submit" value="Delete"/>
+        </form>
+        <div>
+          <a href="/photos/<%=photo._id%>/edit"><span class="glyphicon glyphicon-pencil"><span></a>
+      </div>
 
     </div>
   </body>

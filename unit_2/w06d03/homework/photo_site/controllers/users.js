@@ -4,6 +4,8 @@ const mongoose = require('mongoose');
 const User = require('../models/users.js');
 const Photo = require('../models/photos.js');
 
+
+
 //Index Route
 router.get('/', (req, res)=>{
     User.find({}, (err, foundUsers)=>{
@@ -55,14 +57,12 @@ router.get('/:id/edit', (req, res)=>{
   });
 });
 
-
-
 //Update Route
-
 router.put('/:id', (req, res)=>{
   User.findByIdAndUpdate(req.params.id, req.body, ()=>{
     res.redirect('/users')
   });
 });
+
 
 module.exports = router;
