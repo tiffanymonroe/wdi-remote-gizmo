@@ -4,12 +4,14 @@ const app = express();
 const mongoose = require('mongoose');
 const bodyParser = require('body-parser');
 const methodOverride = require('method-override');
+const session = require('express-session');
 
 
 //User Dependancies
 const User = require('./models/users.js')
 const usersController = require('./controllers/users.js');
 const userData = require('./models/data.js');
+
 
 
 //Photo Dependancies
@@ -21,8 +23,15 @@ const photosController = require('./controllers/photos.js');
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(methodOverride('_method'));
 
+app.use(session({
+  secret: "this is a random secret string",
+  resave: false,
+  saveUninitialized: false
+}))
+
 app.use('/users', usersController);
 app.use('/photos', photosController)
+
 
 app.use(express.static('public'));
 
