@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		<header>
+			<h1>Create an Article</h1>
+			<nav>
+				<ul>
+					<li>
+						<a href="/">Home</a>
+					</li>
+					<li>
+						<a href="/articles">Articles Index</a>
+					</li>
+				</ul>
+			</nav>
+		</header>
+		<main>
+			<form action="/articles" method="post">
+				<select name="authorId">
+                    <% for(let i = 0; i < authors.length; i++) { %>
+                        <option value="<%=authors[i]._id%>"><%=authors[i].name%></option>
+                    <% } %>
+                </select><br/>
+				<input type="text" name="title" /><br/>
+				<textarea name="body"></textarea><br/>
+				<input type="submit" value="Publish Article"/>
+			</form>
+		</main>
+	</body>
+</html>
