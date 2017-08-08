@@ -7,7 +7,7 @@ Title: Happy Fun Ball: Introduction to Git Branching and Merging <br>
 Type: Morning Exercise<br>
 Duration: "0:45" - As code along + "0:30" - Finish on own for homework<br>
 Creator: Karolin Rafalski<br>
-    Course: WDIR-Matrixr<br>
+    Course: WDIR-Matrix<br>
 Prerequisites: Fundamentals of Git, CSS, HTML<br>
 
 ---
