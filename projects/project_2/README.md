@@ -157,19 +157,19 @@ Take the following steps to ensure you have the right file structure/set up in o
 1. **ALERT YOUR INSTRUCTOR**
 - You must do @your_instructors_github_handle, inside the comment area of your issue, to notify your instructor that you have created an issue.
 
-1. **LINKS**
+2. **LINKS**
 - Links to your code and your live site.
 
-1. **WHAT YOU ARE TRYING TO SOLVE:**
+3. **WHAT YOU ARE TRYING TO SOLVE:**
   - Write a detailed explanation of the feature or user story you're working on.
 
-1. **DETAILED DESCRIPTION OF THE BUG/ERROR:**
+4. **DETAILED DESCRIPTION OF THE BUG/ERROR:**
   - A detailed description of the problem, the bug, and/or the error. This means: the full steps to reproduce, a link to the file on github, and the line number of where the relevant code is.
 The error(s) returned, copy and pasted/typed out/screenshot, not paraphrased.
   - If there is other code in a different file that is also essential to the functioning of the code that currently works point us to that and explain the relationship.
 
-1. **WHAT I'VE TRIED**
+5. **WHAT I'VE TRIED**
   - List everything you've done to solve the bug on your own in detail. list all resources you've looked up and tried to implement and provide links. Providing code if you have it surrounded by the md syntax to display nicely is very helpful.
 
-1. **QUESTION**
+6. **QUESTION**
   - After going through all this what is your questions specifically, more specifically than how can I make this work?
