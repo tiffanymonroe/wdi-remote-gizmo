@@ -4,6 +4,7 @@ const Article = require('../models/articles.js');
 const router = express.Router();
 
 router.get('/', (req, res)=>{
+  console.log(req.session, ' this is req.session in the the route /authors')
 	Author.find({}, (err, foundAuthors)=>{
 		res.render('authors/index.ejs', {
 			authors: foundAuthors

@@ -1,14 +1,22 @@
-const express = require('express');
+ const express = require('express');
 const router = express.Router();
 const Article = require('../models/articles.js');
 const Author = require('../models/authors.js')
 
 router.get('/', (req, res)=>{
-	Article.find({}, (err, foundArticles)=>{
-		res.render('articles/index.ejs', {
-			articles: foundArticles
-		});
-	})
+
+  if(req.session.logged){
+
+      Article.find({}, (err, foundArticles)=>{
+        res.render('articles/index.ejs', {
+          articles: foundArticles
+        });
+      })
+
+  } else {
+    res.redirect('/sessions/login')
+  }
+
 });
 
 router.get('/new', (req, res)=>{
