@@ -1,5 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 # WDIR-Gizmo
+
 ---
 Title: Collaboration with GitHub <br>
 Type: Morning Exercise<br>
@@ -8,6 +9,7 @@ Creator: Karolin Rafalski<br>
 Course: WDIR-Gizmo <br>
 Competencies: GitHub, Git, git branching, GitHub pull request, git push <br>
 Prerequisites: Basic Git, HTML, CSS, JS<br>
+
 ---
 ## Collaborating with GitHub
 ## Intro
