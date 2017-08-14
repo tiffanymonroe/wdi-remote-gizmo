@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html ng-app="ToDo">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+	  <script src="app.js"></script>
+
+  </head>
+  <body ng-controller='ToDoController as ctrl'>
+    <h1>To Do</h1>
+    <ul>
+      <li ng-repeat='item in ctrl.list'>{{item}}</li>
+    </ul>
+    <form ng-submit="ctrl.add()">
+      Add to the list: <input type="text" />
+      <button type="submit" ng-show="ctrl.add.showNewItem()">submit</button>
+  </body>
+</html>
