@@ -102,7 +102,7 @@ Using collaboration via GitHub, each pair (or occasional group of 3) will create
 - Agree on what your app will be about
 - Plan how you will tackle this project together 
 ### Resources
-- [Class Wiki]()
-- [Happy Fun Ball]()
+- [Class Wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Git-Cheatsheet)
+- [Happy Fun Ball](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_3/w08d03/morning_exercise/README.md)
 - [GitHub Guides](https://guides.GitHub.com/introduction/flow/?utm_source=onboarding-series&utm_medium=email&utm_content=read-the-guide-cta&utm_campaign=learn-GitHub-flow-email)
 - [Another GitHub cheatsheet](https://education.GitHub.com/git-cheat-sheet-education.pdf)
