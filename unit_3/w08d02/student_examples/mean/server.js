@@ -7,6 +7,7 @@ const bodyParser = require('body-parser');
 
 //Middleware
 app.use(bodyParser.json()); //always put bodyParser first!!!//
+app.use(express.static('public'));
 app.use('/todos', todosController);
 
 
