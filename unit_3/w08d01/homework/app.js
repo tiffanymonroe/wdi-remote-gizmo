@@ -6,3 +6,7 @@ app.controller('CarsController', [function(){
   this.types = ["Honda", "Ford", "Chevy", "Tesla"];
   this.colors = ["gold", "blue", "silver", "white", "black", "grey"];
 }]);
+
+app.controller('DriversController', [function(){
+
+}]);
