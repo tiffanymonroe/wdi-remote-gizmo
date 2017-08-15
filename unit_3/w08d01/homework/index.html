@@ -6,17 +6,24 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-controller="CarsController as ctrl">
+  <body>
 
+  <div ng-controller="CarsController as carsCtrl">
     <ul>
       <h1>Car Types</h1>
-      <li ng-repeat="type in ctrl.types">{{type}}</li>
+      <li ng-repeat="type in carsCtrl.types">{{type}}</li>
     </ul>
 
     <ul>
       <h1>Car Colors</h1>
-      <li ng-repeat="color in ctrl.colors">{{color}}</li>
+      <li ng-repeat="color in carsCtrl.colors">{{color}}</li>
     </ul>
+  </div>
+  <div ng-controller="DriversController as driverCtrl">
+    <h1>The driver is: </h1>
+    <h2>{{driverCtrl.name}}</h2>
+    <img ng-hide="driverCtrl.isShy" src='{{driverCtrl.driverImg}}' style="width: 500px"/>
+  </div>
 
   </body>
 </html>
