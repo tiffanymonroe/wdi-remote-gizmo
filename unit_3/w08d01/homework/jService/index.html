@@ -6,8 +6,11 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body ng-controller ="TriviaController as ctrl">
-    <button ng-click="ctrl.question()">Random Trivia Question</button>
-    <div></div>
+  <body ng-controller="QuestionController as qCtrl">
+    <div>{{qCtrl.foundQuestion}}</div>
+    <br/>
+    <button ng-click="qCtrl.question()">Random Trivia Question</button>
+    <br/>
+
   </body>
 </html>
