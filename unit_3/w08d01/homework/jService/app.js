@@ -3,7 +3,8 @@
 const app = angular.module("TriviaApp", [function(){
 }]);
 
-app.controller("QuestionController", ['$http', function($http){
+app.controller("TriviaController", ['$http', function($http){
+  this.hide = false;
   const controller = this;
   this.question = function(){
   $http({
@@ -13,7 +14,6 @@ app.controller("QuestionController", ['$http', function($http){
       function(response){
         console.log(response);
         controller.foundQuestion = response.data[0].question;
-        
         controller.foundAnswer =
         response.data[0].answer;
       },
