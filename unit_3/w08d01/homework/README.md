@@ -3,7 +3,7 @@
 # WDIR-Gizmo
 
 ---
-Title: Angular Basics - Fast Lane, Cipher & Shuffler <br>
+Title: Angular Basics - Fast Lane & jService <br>
 Type: Homework <br>
 Duration: "4:00"<br>
 Creator:<br>
@@ -11,7 +11,7 @@ Creator:<br>
     Modified by: Kristyn Bryan <br>
     Course: WDIR-Gizmo<br>
 Competencies: Basic Angular <br>
-Prerequisites: Angular, Javascript, HTML, CSS <br>
+Prerequisites: Angular, Javascript, HTML, CSS, AJAX <br>
 
 ---
 # Angular Basics
