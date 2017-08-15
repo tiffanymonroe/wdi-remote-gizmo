@@ -6,7 +6,17 @@
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
     <script src="app.js"></script>
   </head>
-  <body>
+  <body ng-controller="CarsController as ctrl">
+    <h1>Cars</h1>
+    <ul>
+      <h2>Types</h2>
+      <li ng-repeat="type in ctrl.types">{{type}}</li>
+    </ul>
+
+    <ul>
+      <h2>Colors</h2>
+      <li ng-repeat="color in ctrl.colors">{{color}}</li>
+    </ul>
 
   </body>
 </html>
