@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html ng-app="FastLane">
+  <head>
+    <meta charset="utf-8">
+    <title>Fast Lane</title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src='app.js'></script>
+  </head>
+  <body ng-controller="CarsController as cars">
+    <h1>Car Types</h1>
+    <ul>
+      <li ng-repeat='car in cars.types'>{{car}}</li>
+    </ul>
+    <h1>Car Colors</h1>
+    <ul>
+      <li ng-repeat='color in cars.colors'>{{color}}</li>
+    </ul>
+    <div ng-controller="DriversController as driver">
+      <h1>The Driver is:</h1>
+      <br/>
+      <h2>{{driver.name}}</h2>
+      <br/>
+      <img ng-src="{{driver.driverImg}}" alt="Cole Trickle" ng-hide="driver.isShy">
+    </div>
+  </body>
+</html>

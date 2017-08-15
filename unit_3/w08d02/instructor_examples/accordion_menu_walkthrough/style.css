@@ -1,0 +1,88 @@
+/*Imported Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+
+body {
+  background-color: #AAA;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.accordion {
+  width: 30vw;
+  min-width: 320px;
+  margin: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+  overflow: hidden;
+}
+
+.accordion input:checked + label {
+  background-color: #3399cc;
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion input + label {
+  display: block;
+  border-bottom: 1px solid #3399cc;
+  position: relative;
+  background-color: #49b1e5;
+  padding: 10px;
+
+  font-weight: bold;
+  color: white;
+
+  cursor: pointer;
+
+  transition: background-color 0.75s;
+  -moz-transition: background-color 0.75s;
+  -o-transition: background-color 0.75s;
+  -webkit-transition: background-color 0.75s;
+}
+
+.accordion input + label:hover {
+  background-color: #3399cc;
+}
+
+.accordion .section {
+  color: #AAA;
+  background-color: white;
+  padding: 0 10px;
+
+  opacity: 0;
+  height: 0;
+
+  transition: height 0.75s, opacity 0.75s;
+  -moz-transition: height 0.75s, opacity 0.75s;
+  -o-transition: height 0.75s, opacity 0.75s;
+  -webkit-transition: height 0.75s, opacity 0.75s;
+}
+
+dl {
+  margin: 0;
+}
+
+.accordion input:checked + label + .section {
+  display: block;
+  opacity: 1;
+  background: white;
+  height: 300px;
+  color: #333;
+  overflow: auto;
+}
+
+.accordion input + label:after {
+  position: absolute;
+  top: 13px;
+  right: 10px;
+
+  content: "\f067";
+  font-family: "FontAwesome";
+  font-size: 12px;
+
+  transition: transform 0.75s;
+}
+
+.accordion input:checked + label:after {
+  transform: rotate(405deg);
+}
