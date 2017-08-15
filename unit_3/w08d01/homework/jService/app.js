@@ -13,6 +13,9 @@ app.controller("QuestionController", ['$http', function($http){
       function(response){
         console.log(response);
         controller.foundQuestion = response.data[0].question;
+        
+        controller.foundAnswer =
+        response.data[0].answer;
       },
       function(err){
         console.log(err);
