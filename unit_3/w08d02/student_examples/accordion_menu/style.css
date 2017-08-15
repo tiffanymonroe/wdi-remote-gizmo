@@ -1,0 +1,103 @@
+/*Imported Fonts*/
+@import url(http://fonts.googleapis.com/css?family=Open+Sans:300);
+/*Imported cross for opening / closing menu section*/
+@import url(//maxcdn.bootstrapcdn.com/font-awesome/4.2.0/css/font-awesome.min.css);
+
+body {
+  background-color: #AAA;
+  font-family: 'Open Sans', sans-serif;
+}
+
+.accordion {
+  width: 30vw;
+  min-width: 320px;
+  overflow: hidden;
+  margin: auto;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.2);
+}
+
+.accordion input:checked + label {
+   background: #3399cc;
+}
+
+.accordion input {
+  display: none;
+}
+
+.accordion input + label {
+  /*transitions slowly*/
+  -moz-transition: background 0.75s;
+  -o-transition: background 0.75s;
+  -webkit-transition: background 0.75s;
+  transition: background 0.75s;
+  /*font*/
+  font-weight: bold;
+  color: white;
+
+  /*pointer*/
+  cursor: pointer;
+
+  /*Display, color, position, layout*/
+  display: block;
+  border-bottom: 1px solid #3399cc;
+  position: relative;
+  background: #49b1e5;
+  padding: 10px;
+}
+
+.accordion input + label:hover {
+  background: #3399cc;
+}
+
+.accordion .section {
+  padding: 0 10px;
+  background: white;
+  color: #AAA;
+  /*transition*/
+  -moz-transition: height 0.75s, opacity 0.75s;
+  -o-transition: height 0.75s, opacity 0.75s;
+  -webkit-transition: height 0.75s, opacity 0.75s;
+  transition: height 0.75s, opacity 0.75s;
+  /*hide*/
+  opacity: 0;
+  height: 0;
+}
+
+dl {
+  margin: 0;
+}
+
+.accordion input:checked + label + .section {
+  display: block;
+  overflow: auto;
+  height: 300px;
+  opacity: 1;
+  background: white;
+  color: #333;
+}
+
+.accordion input + label:after {
+  /*position cross*/
+  position: absolute;
+  top: 13px;
+  right: 10px;
+
+  /*font and size*/
+  font-size: 12px;
+  content: '\f067';
+  font-family: 'FontAwesome';
+}
+
+.accordion input:checked + label:after {
+  -moz-transform: rotate(405deg);
+  -o-transform: rotate(405deg);
+  -webkit-transform: rotate(405deg);
+  transform: rotate(405deg);
+}
+
+.accordion input + label:after {
+  -moz-transition: transform 0.75s;
+ -o-transition: transform 0.75s;
+ -webkit-transition: transform 0.75s;
+ transition: transform 0.75s;
+}
