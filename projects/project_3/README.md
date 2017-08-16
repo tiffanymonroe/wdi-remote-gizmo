@@ -33,6 +33,9 @@ The class Zoom room will close around 10:30 am each day during project week (eno
 
 Note: Your personal Zoom rooms only stay open for about 40 minutes at a time. You will have to make a new room after 40 minutes, so just prepare for this.
 
+## TA Hours
+There will **not** be daytime TA hours during project week. TAs will be available for help in the evenings during their regularly scheduled hours. During group project weeks, it is important to work together to solve problems.
+
 ## Meetings with instructors
 _Your instructor will contact you to setup a meeting time_
 
