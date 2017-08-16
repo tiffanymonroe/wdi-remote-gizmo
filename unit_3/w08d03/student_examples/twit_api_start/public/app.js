@@ -17,4 +17,5 @@ app.controller('BaseCtrl', ['$http', function($http){
             }
         );
     }
+    this.getTweets();
 }])
