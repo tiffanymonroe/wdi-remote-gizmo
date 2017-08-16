@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html ng-app="myApp">
+  <head>
+    <meta charset="utf-8">
+    <title>JService Homework Answer</title>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+    <script src="app.js"></script>
+  </head>
+  <body ng-controller="BaseCtrl as base">
+
+    <!-- ---------------------- -->
+    <!-- This is the button that will call to get a random trivia question -->
+    <button>
+      <a ng-click="base.jservice()">Get a Radom Trivia Question</a>
+    </button>
+
+    <!-- ---------------------- -->
+    <!-- This displays the random trivia question out in the open -->
+    <div>
+      Question: {{base.foundJServiceInfo[0].question}}
+    </div>
+
+    <!-- ---------------------- -->
+    <!-- This is the answer out in the open -->
+    <!-- <div>
+      Answer: {{base.foundJServiceInfo[0].answer}}
+    </div> -->
+
+    <!-- ---------------------- -->
+    <!-- This is the button that will show the hidden answer -->
+    <button ng-click="base.showAnswer()">
+      Show me the answer!
+    </button>
+
+    <!-- ---------------------- -->
+    <!-- This displays the answer after the button is clicked (it's currently hidden) -->
+    <div ng-hide="base.hideAnswer">
+        Answer: {{base.foundJServiceInfo[0].answer}}
+    </div>
+
+    <hr>
+
+    <!-- ---------------------- -->
+    <!-- This is the button to get 10 random trivia questions -->
+    <button ng-click="base.jserviceTen()">
+      Get 10 Questions
+    </button>
+
+    <!-- ---------------------- -->
+    <!-- Display the 10 random trivia questions -->
+    <div ng-repeat="questions in base.data">
+      - Question: {{questions.question}}
+      <br>
+
+      <!-- ---------------------- -->
+      <!-- Display the buttons to show the answer -->
+      <button ng-click="base.showAnswer()">
+        Show me the answer!
+      </button>
+
+      <!-- ---------------------- -->
+      <!-- Hide the answer until the button is clicked -->
+      <div ng-hide="base.hideAnswer">
+        Answer: {{questions.answer}}
+      </div>
+      <hr>
+    </div>
+
+    <!-- NOTE: This button will show ALL of the answers - not just the individual answer (we'll learn more in the next few days) -->
+
+    <hr>
+
+    <!-- ---------------------- -->
+    <!-- Made a request for a category -->
+    <button ng-click="base.jserviceAnimals()">
+      Get Animal Questions
+    </button>
+
+    <table >
+      <th>Question</th>
+      <th>Answer</th>
+      <tr ng-repeat="animals in base.data.clues">
+        <td>{{animals.question}}</td>
+        <td>{{animals.answer}}</td>
+      </tr>
+    </table>
+  </body>
+</html>
