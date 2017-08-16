@@ -105,6 +105,7 @@ This is especially true when working with Amazon Web Services (AWS). Here's an e
 ### Suggested Ways to Get Started
 
 <details><summary>List of ways to get started</summary>
+
 * **Wireframe** Make a drawing of what your app will look like on each page of your application (what does it look like as soon as you log on to the site? What does it look like once a user logs in, etc.).
 <br>
 * **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually.
