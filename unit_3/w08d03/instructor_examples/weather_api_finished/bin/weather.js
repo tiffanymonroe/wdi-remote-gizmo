@@ -1,6 +1,6 @@
 const request = require('request');
 
-const apiKey = '4507ec27b0a5b32877e856da0ceca6c9'
+const apiKey = process.env.API_KEY
 
 const getWeather = (res, city) => {
 

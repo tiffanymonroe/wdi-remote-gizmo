@@ -22,13 +22,12 @@ app.use(session({
 
 
 
-const instagram = require('./controllers/instagram.js');
-app.use('/insta', instagram);
+const weather = require('./controllers/weather.js');
+app.use('/weather', twitter);
 
 
 
 app.get('/', (req, res)=>{
-  console.log('loaded')
 	res.render('index.ejs', {});
 });
 

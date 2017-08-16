@@ -16,18 +16,13 @@ app.use(session({
 
 }));
 
-
-
-
-
-
-
-const twitter = require('./controllers/twitter.js');
-app.use('/tweets', twitter);
+const photos = require('./controllers/photos.js');
+app.use('/photos', photos);
 
 
 
 app.get('/', (req, res)=>{
+  console.log('loaded')
 	res.render('index.ejs', {});
 });
 

@@ -25,21 +25,18 @@ app.controller('BaseCtrl', ['$http', function($http){
     this.postWeather = function() {
       console.log('called')
       const data = {
-        message: controller.query
+        city: controller.query
       }
       console.log(controller.query, 'post')
         $http({
             method: 'POST',
             url: '/weather',
-            data: '{"username":"matt","password":"matty"}',
-            headers: {
-                "Content-Type: application/json"
-              }
+            data: data
 
         }).then(
             function(response){
                 console.log(response, ' this is response from post')
-
+                controller.message = response.data.main.temp + " in " + response.data.name
                 // $scope.photos = response
 
             },

@@ -4,10 +4,8 @@ const mongoose       = require('mongoose');
 const bodyParser     = require('body-parser');
 const methodOverride = require('method-override');
 const session        = require('express-session');
-require('dotenv').config()
 
 app.use(methodOverride('_method'));
-app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
 
@@ -24,8 +22,8 @@ app.use(session({
 
 
 
-const weather = require('./controllers/weather.js');
-app.use('/weather', weather);
+const flickr = require('./controllers/flickr.js');
+app.use('/photos', flickr);
 
 
 

@@ -7,15 +7,10 @@ router.get('/', (req, res) => {
 })
 
 router.post('/', (req, res) => {
-  console.log(req.body, 'req.body')
-  console.log(req.params)
-  const obj = {
-    body: req.params,
-    message: 'hello'
-  }
-  res.send(obj)
-  // getWeather(res)
-  // res.redirect('/weather')
+  console.log(req.body.city, 'req.body')
+
+  getWeather(res, req.body.city)
+
 })
 
 
