@@ -67,7 +67,7 @@ Lastly, a **technical demonstration** of your app which:
   * Explains the technical challenges
   * Explains which improvements you might make
 
-Additionally, we would like each group member to answer **at least at least one** of the following questions:
+Additionally, we would like each group member to answer **at least one** of the following questions:
 
 1) What went well for your group?
 2) What was your groups biggest struggle?
