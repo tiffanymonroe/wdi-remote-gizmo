@@ -1,0 +1,19 @@
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+
+    </head>
+    <body ng-controller="BaseCtrl as base">
+
+    <input type="text" ng-model="base.query">
+    <button ng-click="base.postWeather()">Search Weather for City</button>
+
+    <h1>{{base.message}}</h1>
+    <button ng-click="base.getWeather()">Get Weather</button>
+
+
+         <script src="/app.js" charset="utf-8"></script>
+    </body>
+</html>

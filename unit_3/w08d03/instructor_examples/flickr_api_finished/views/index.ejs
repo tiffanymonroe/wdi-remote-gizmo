@@ -1,0 +1,28 @@
+<html ng-app="myApp">
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="/style.css">
+    </head>
+   <style>
+
+   body {
+    background-image: url(https://www.flickr.com/photos/25114742@N07/36428878572/);
+   }
+   </style>
+
+
+    <body ng-controller="BaseCtrl as base">
+<!--   [{"id":"36460613371","owner":"14904436@N00","secret":"168c7ec7b7",
+  "server":"4442","farm":5,"title":"Gracie climbing on rocks",
+  "ispublic":1,"isfriend":0,"isfamily":0}] -->
+      <div ng-repeat="photo in base.photos">
+        <img src="http://farm{{photo.farm}}.static.flickr.com/{{photo.server}}/{{photo.id}}_{{photo.secret}}_m.jpg" alt="">
+      </div>
+
+
+
+         <script src="/app.js" charset="utf-8"></script>
+    </body>
+</html>
