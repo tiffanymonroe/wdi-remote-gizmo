@@ -13,6 +13,19 @@ app.controller('mainController', ['$http', function($http){
         console.log(err);
       }
     );
+  },
+  this.displayRegions = function(){
+      $http({
+        method: 'GET',
+        url: '/wbinfo/uniqueRegions'
+      }).then(function(response){
+        controller.regions = response.data;
+        console.log(response);
+      }, function(err){
+        console.log(err);
+      }
+    );
   }
   this.displayData();
+  this.displayRegions();
 }]);
