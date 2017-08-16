@@ -18,7 +18,8 @@ Also, be sure to add your project to the google doc that will become available W
 You are required to be present at 10:00 am EDT each day during the project. We will be taking attendance - this will count for both morning and afternoon attendance.
 
 ## Standups
-We will have student-run stand-ups each morning at 10:00 am EDT where you will answer the following questions:
+We will have student-run stand-ups each morning at 10:00 am EDT **with your group** where you will answer the following questions:
+
 - What did I work on yesterday
 - What am I trying to get done today
 - What is preventing me from getting this done.
@@ -26,6 +27,11 @@ We will have student-run stand-ups each morning at 10:00 am EDT where you will a
 This meeting should take no longer than 15 minutes.
 
 If you have ideas on how you can help a fellow-student with work that they are stuck on, please follow-up with information AFTER the stand up.
+
+## Zoom
+The class Zoom room will close around 10:30 am each day during project week (enough time for attendance and standup). Your group must decide how and when they would like to work together. Some groups choose to make a Zoom room of their own and work together (sometimes silently, sometimes in a pair-programming fashion to solve problems). Other groups decide to skip the Zoom hangouts and just work on their own. As a team, it is up to you all to come to an agreement on how you would like to work - feel free to adjust throughout the project.
+
+Note: Your personal Zoom rooms only stay open for about 40 minutes at a time. You will have to make a new room after 40 minutes, so just prepare for this.
 
 ## Meetings with instructors
 _Your instructor will contact you to setup a meeting time_
@@ -43,7 +49,7 @@ This varies depending on instructor, but you will have check-in meetings via Sla
 - Write what features will meet MVP and then list out other features as stretch goals
 - Make wireframes and add them to your `README.md` (or put images and add links)
 - Create your daily tracker
-- Read the [working in groups.md](working-in-groups.md) document in this project folder.
+- Read the [working in groups](working_in_groups.md) document in this project folder.
 
 ## Technical Requirements
 ### &#x1F534; Mandatory to pass:
