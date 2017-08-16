@@ -1,0 +1,19 @@
+/** {
+  border: 1px solid red;
+}*/
+body {
+  font-family: 'IM Fell English', serif;
+
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'IM Fell English SC', serif;
+}
+
+li {
+  list-style: none;
+}
+
+.header {
+  text-align: center;
+}

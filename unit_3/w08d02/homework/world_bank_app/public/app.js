@@ -25,7 +25,19 @@ app.controller('mainController', ['$http', function($http){
         console.log(err);
       }
     );
+  },
+  this.linkRegions = function(){
+    $http({
+      method: 'GET',
+      url: '/wbinfo/byName/ + (region)'
+    }).then(function(response){
+      console.log(response);
+    }, function(err){
+      console.log(err);
+    }
+  );
   }
   this.displayData();
   this.displayRegions();
+  this.linkRegions();
 }]);

@@ -3,20 +3,46 @@
   <head>
     <meta charset="utf-8">
     <title>World Bank</title>
+
     <!--Anglular-->
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+
     <!--JS-->
     <script type="text/javascript" src="app.js">
     </script>
+
+    <!-- Latest compiled and minified CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <!--fonts-->
+    <link href="https://fonts.googleapis.com/css?family=IM+Fell+English|IM+Fell+English+SC" rel="stylesheet">
+
+    <!--CSS-->
+    <link href="/css/style.css" rel="stylesheet">
+
   </head>
   <body ng-controller="mainController as ctrl">
-    <div>
-      Number of records: {{ctrl.count}}
-    </div>
-    <div>Regions:
-      <ul>
-        <li ng-repeat="region in ctrl.regions">{{region}}</li>
-      </ul>
+    <div class="container">
+      <div class="header row">
+        <h1>World Bank Loan Records Finder</h1>
+        <h4>Number of records: {{ctrl.count}}</h4>
+      </div>
+      <div class="row">
+        <div class="top-left col-xs-6">
+          Region Info Here
+        </div>
+
+        <div class="top-right col-xs-6">
+            <h3>Regions</h3>
+              <ul>
+                <li ng-repeat="region in ctrl.regions">{{region}}</li>
+              </ul>
+        </div>
+      </div>
+      <div class="row">
+      </div>
+
+      
     </div>
   </body>
 </html>
