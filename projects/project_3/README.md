@@ -116,16 +116,9 @@ This is especially true when working with Amazon Web Services (AWS). Here's an e
 </details>
 
 ## Make a new repo and set up your files for Heroku Deployment
-Take the following steps to ensure you have the right file structure/set up in order to deploy your site to Heroku
+Take the following steps to ensure you have the right file structure/set up in order to deploy your site to Heroku:
 
-- One group member will make the github repo (This will be the owner). This group member will then add other members as collaborators. Collaborators will clone the repo.
-
-
-### Make a New Repo & Setup for Heroku Deployment
-
-Take the following steps to ensure you have the right file structure/set up in order to deploy your site to Heroku. Note that you will have a walkthrough lesson on how to deply to Heroku, but your files will need to be structured properly:
-
-1. make a new github repo for your project **outside** of our class repo.
+1. One group member will make the github repo **outside** of our class repo (this will be the *owner*). 
 
 2. Inside this new repo, create a `.gitignore` file in the root of the repository directory. Put `node_modules` as the content of this file. Do this *BEFORE* the first `git add .` `git commit -m ''`
 
@@ -133,7 +126,11 @@ Take the following steps to ensure you have the right file structure/set up in o
 
 4. if you did not set up your `entry point` in `package.json` correctly, make sure that you edit your `pacakge.json` so that `main` is set to `server.js`
 
-5. Make sure your `server.js` and `package.json` are in the **root** of your project repository
+5. Make sure your `server.js` and `package.json` are in the **root** of your project repository.
+
+6. The *owner* should add other members of the group as *collaborators* under the `Settings` tab of the repo. 
+
+7. Collaborators should clone the repo.
 
 <details><summary> Expected File Structure </summary>
 
