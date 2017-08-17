@@ -107,17 +107,29 @@ This is especially true when working with Amazon Web Services (AWS). Here's an e
 <details><summary>List of ways to get started</summary>
 
 * **Wireframe** Make a drawing of what your app will look like on each page of your application (what does it look like as soon as you log on to the site? What does it look like once a user logs in, etc.).
+
 <br>
+
 * **Break the project down into different components** (data, presentation, views, style, DOM manipulation) and brainstorm each component individually.
+
 <br>
+
 * **Use your Development Tools** (console.log, inspector, alert statements, etc) to debug and solve problems
+
 <br>
+
 * Work through the lessons in class for help and inspiration! Think about adding relevant code to your application each day - you are given several days so that you can work on it in small chunks, COMMIT OFTEN. We will be looking at your commit dates and comments are part of your scoring.
+
 <br>
+
 * **Commit early, commit often.** Don’t be afraid to break something because you can always go back in time to a previous version.
+
 <br>
+
 * **Consult documentation resources** (MDN, jQuery, etc.) to better understand what you’ll be getting into.
+
 <br>
+
 * **Don’t be afraid to write code that you know you will have to remove later.** Create temporary elements (buttons, links, etc) that trigger events if real data is not available.
 
 </details>
