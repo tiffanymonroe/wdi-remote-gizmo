@@ -12,7 +12,7 @@ Submit an issue (as you normally do for homework) with a link to your repo AND a
 
 NOTE: Only one person will need to submit the issue. The title for your issue should be `Your Names - Project 3`.
 
-Also, be sure to add your project to the google doc that will become available Wed/Thurs of project week.
+Also, be sure to add your project to the [Project 3 Google Doc](https://docs.google.com/spreadsheets/d/1BDYu_h-ejdhGK7OExtKRv8nO5drGDS91jAgs3rkzMNU/edit#gid=0).
 
 ## Attendance
 You are required to be present at 10:00 am EDT each day during the project. We will be taking attendance - this will count for both morning and afternoon attendance.
