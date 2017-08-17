@@ -2,6 +2,7 @@
 const app = angular.module('worldbank', []);
 
 app.controller('mainController', ['$http', function($http){
+  this.formdata = {};
   const controller = this;
   this.displayData = function(){
       $http({
@@ -31,13 +32,23 @@ app.controller('mainController', ['$http', function($http){
       method: 'GET',
       url: '/wbinfo/byName/' + region
     }).then(function(response){
-      controller.info = response.data;
-      console.log(controller.info);
+        controller.info = response.data;
+        console.log(controller.info);
     }, function(err){
-      console.log(err);
-    }
-  );
+        console.log(err);
+       }
+    );
+  },
+  this.processForm = function(model){
+    $http({
+      method: 'POST',
+      url: '/wbinfo',
+      data: this.formdata
+    }).then(function(data){
+      console.log("This is the data ", data);
+    });
   }
+
   this.displayData();
   this.displayRegions();
 }]);
