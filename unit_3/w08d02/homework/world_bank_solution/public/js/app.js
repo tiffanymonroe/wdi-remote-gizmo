@@ -150,6 +150,7 @@ app.controller ( 'mainController' , [ '$http' , function ( $http ){
              loanamnt        : record.loanamnt,
              id              : record._id
           };
+          console.log(this.showOne.id);
         }
 
 
@@ -169,15 +170,20 @@ app.controller ( 'mainController' , [ '$http' , function ( $http ){
           data      : controller.formdataUpdate
         }).then (  ( response ) => {
           //update front end to represent updated record
-          const frontEndUpdate =  ( recordObject ) => {
+          const frontEndUpdate =  function ( recordObject ) {
              let compare = Object.values( this ).join( '' );
              return recordObject._id === compare;
           }
 
+          console.log('current recored', currentRecord);
+          console.log(frontEndUpdate);
           let updateThisRecord = controller.records.find( frontEndUpdate, currentRecord._id );
+
+
             for ( value in currentRecord ){
               if ( response.data[ value ] ){
-                updateThisRecord[ value ] = response.data[ value ];
+                updateThisRecord[ value ] =
+                 response.data[ value ];
               }
             }
 
