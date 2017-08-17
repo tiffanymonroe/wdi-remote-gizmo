@@ -17,3 +17,11 @@ li {
 .header {
   text-align: center;
 }
+
+.region-header {
+  color: red;
+}
+.regions:hover {
+  cursor: pointer;
+  color: red;
+}

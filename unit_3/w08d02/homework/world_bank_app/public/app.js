@@ -17,21 +17,22 @@ app.controller('mainController', ['$http', function($http){
   this.displayRegions = function(){
       $http({
         method: 'GET',
-        url: '/wbinfo/uniqueRegions'
+        url: '/wbinfo/uniqueRegions/'
       }).then(function(response){
         controller.regions = response.data;
-        console.log(response);
+        // console.log(response);
       }, function(err){
         console.log(err);
       }
     );
   },
-  this.linkRegions = function(){
+  this.showInfo = function(region){
     $http({
       method: 'GET',
-      url: '/wbinfo/byName/ + (region)'
+      url: '/wbinfo/byName/' + region
     }).then(function(response){
-      console.log(response);
+      controller.info = response.data;
+      console.log(controller.info);
     }, function(err){
       console.log(err);
     }
@@ -39,5 +40,4 @@ app.controller('mainController', ['$http', function($http){
   }
   this.displayData();
   this.displayRegions();
-  this.linkRegions();
 }]);

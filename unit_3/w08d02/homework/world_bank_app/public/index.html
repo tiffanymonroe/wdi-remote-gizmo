@@ -29,20 +29,25 @@
       </div>
       <div class="row">
         <div class="top-left col-xs-6">
-          Region Info Here
+          <ul ng-repeat="info in ctrl.info">
+            <li> <h3 class="region-header">{{info.region}}</h3></li>
+            <li> <h4>{{info.projectname}}</h4></li>
+            <li> <p>{{info.projectabstract}}</p></li>
+            <li> <h4>Year Approved: {{info.year}}</h4></li>
+          <ul>
         </div>
 
         <div class="top-right col-xs-6">
             <h3>Regions</h3>
               <ul>
-                <li ng-repeat="region in ctrl.regions">{{region}}</li>
+                <li class="regions" ng-repeat="region in ctrl.regions" ng-click="ctrl.showInfo(region)">{{region}}</li>
               </ul>
         </div>
       </div>
       <div class="row">
       </div>
 
-      
+
     </div>
   </body>
 </html>
