@@ -7,6 +7,7 @@ const session        = require('express-session');
 const dotenv         = require('dotenv').config();
 
 app.use(methodOverride('_method'));
+app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended:false}));
 app.use(express.static('public'));
 

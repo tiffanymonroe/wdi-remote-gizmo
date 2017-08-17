@@ -8,5 +8,9 @@ router.get('/getWeather', (req, res)=>{
   getWeather(res);
 })
 
+router.post('/', (req, res)=>{
+  console.log(req.body.city, 'req.body');
+  getWeather(res, req.body.city);
+})
+
 module.exports = router;
-// module.exports = getTweets;

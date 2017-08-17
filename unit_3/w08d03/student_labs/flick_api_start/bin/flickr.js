@@ -2,8 +2,8 @@
 const Flickr = require('flickr-sdk');
 
 const flickr = new Flickr({
-	"apiKey":            "6c2a970900789813c1796ae944b004f7",
-	"apiSecret":         "69bdffb902982fce"
+	"apiKey": process.env.API_KEY,
+	"apiSecret": process.env.API_SECRET
 	// you can optionally include these values for testing
 	// with your own account, but DO NOT use them for authenticating
 	// users, see Authentication section below.
@@ -13,18 +13,20 @@ const flickr = new Flickr({
 
 
 //need to add to this?
-const getPhotos = () =>{
-  const response = (res, data) =>{
-    res.send(data)
-  }
-  flickr.photos.search({
-		text: "puppies"
-	}, function(err, result){
-				console.log(err);
-				console.log(result);
-			}
-	);
+const getPhotos = (res) =>{
+  // const responseToClient (res, data) =>{
+  //   res.send(data)
+  // },
+	flickr
+		.request()
+		.media()
+		.search("puppies")
+		.get()
+		.then(function(response) {
+		    // An array of media objects matching the search term
+				
+				res.send(response)
+})
 }
-
 
 module.exports = getPhotos;
