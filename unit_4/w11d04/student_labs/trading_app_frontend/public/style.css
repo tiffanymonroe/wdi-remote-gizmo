@@ -1,0 +1,28 @@
+/* for development only - check layout */
+header, div, main, nav, aside, footer {
+  border: 1px solid red;
+}
+
+body {
+  background-color: Ivory;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+main {
+  flex: 1;
+}
+
+nav {
+  order: -1;
+}
+
+nav, aside {
+  flex: 1.5;
+}
