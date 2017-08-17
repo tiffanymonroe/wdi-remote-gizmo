@@ -48,6 +48,7 @@ Using collaboration via GitHub, each pair (or occasional group of 3) will create
 - add them and wait 
 - GitHub will send them an email and they must respond in order to gain access to the repo
 - make sure your collaborator(s) have accepted your invite and let them clone the repo
+- don't forget to `git clone` to get your own local version 
 #### The Collaborator's tasks (if there is more than one collaborator - _have one person do these steps at a time and then move on to the next collaborator_)
 - Go to a location in your terminal that is OUTSIDE of the class repo in preparation for cloning the owner's repo 
     note: you do not need to make a subfolder. Cloning will make your repo folder at the level where you're at
