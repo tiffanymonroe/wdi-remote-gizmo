@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+    <script src="/js/app.js"></script>
+  </head>
+  <body ng-controller="MyController as ctrl">
+    <ul>
+      <li ng-repeat="todo in ctrl.todos">{{todo.description}}: {{todo.complete}}</li>
+    </ul>
+    <form ng-submit="ctrl.createToDo()">
+      
+      <input type="text" ng-model="ctrl.description" placeholder="description"/>
+      Complete: <input ng-model="ctrl.complete" type="checkbox"/>
+      <input type="submit" value="Create New To Do Item"/>
+    </form>
+
+  </body>
+</html>
