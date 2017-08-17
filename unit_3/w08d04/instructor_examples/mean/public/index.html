@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='MyApp'>
+    <head>
+        <meta charset="utf-8">
+        <title></title>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
+        <script src="/js/app.js" charset="utf-8"></script>
+        <link rel="stylesheet" href="/css/app.css" />
+    </head>
+    <body ng-controller="MyController as ctrl">
+        <h1>Todo App</h1>
+        <h2>Current Todos</h2>
+        <ul>
+            <li
+                ng-class=" (todo.complete) ? 'complete' : 'incomplete' "
+                ng-repeat="todo in ctrl.todos">
+                    <span ng-click="ctrl.updateTodo(todo);">{{todo.description}}</span>
+                    <button ng-click="ctrl.deleteTodo(todo)">Delete This Todo</button>
+                    <a href="#" ng-click="ctrl.indexOfEditFormToShow = $index">Edit This Todo</a>
+                    <form ng-if="$index === ctrl.indexOfEditFormToShow" ng-submit="ctrl.editTodo(todo);">
+                        <input type="text" ng-model="ctrl.updatedDescription" placeholder="description" />
+                        <input type="submit" value="Update Description">
+                    </form>
+            </li>
+        </ul>
+        <form ng-submit="ctrl.createTodo();">
+            <h2>Create a new Todo</h2>
+            <input type="text" ng-model="ctrl.description" placeholder="description" />
+            Complete: <input type="checkbox" ng-model="ctrl.complete"/>
+            <input type="submit" value="Create New Todo Item">
+        </form>
+    </body>
+</html>
