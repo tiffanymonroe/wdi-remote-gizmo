@@ -81,6 +81,7 @@ Using collaboration via GitHub, each pair (or occasional group of 3) will create
     
 - Write a very basic `server.js`
   - Your server should be able to `res.send('Hello World')` to a `/` route at `localhost:3000`
+    - *DO NOT* try to add more modules, create more routes etc. in an effort to 'get ahead' on the hw right now - Morning Exercise is for helping make sure everyone can collaborate on git/github - new group work always starts a little slow. Be patient and make sure you get things right and squash the little bugs before they become big headaches! 
   - `git add`
   - `git commit`
   - `git push origin dev` - this will send your changes to the dev branch
@@ -95,6 +96,7 @@ Using collaboration via GitHub, each pair (or occasional group of 3) will create
  - only the person who created the server and had it running should have `node_modules`
  - other collaborators should `npm install` and THEN should get the `node_modules` that way
  - everyone should now be able to run `nodemon` and have their `localhost:3000` display `Hello World`
+ 
 ### Workflow
 - Try to abide by the below workflow. You will make mistakes that's ok - figure out how to move forward rather than to start over or do really hard to understand git commands we haven't covered. Keep practicing to get the work flow right! 
 ![git/GitHub workflow](https://i.imgur.com/aAmxC0G.png)
@@ -103,6 +105,7 @@ Using collaboration via GitHub, each pair (or occasional group of 3) will create
 ### Next Steps
 - Agree on what your app will be about
 - Plan how you will tackle this project together 
+- Remember this is a one night homework, keep it simple but make it watertight and polish it ,rather than trying to add another model or some other big feature
 ### Resources
 - [Class Wiki](https://github.com/ga-students/wdi-remote-gizmo/wiki/Git-Cheatsheet)
 - [Happy Fun Ball](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_3/w08d03/morning_exercise/README.md)

@@ -14,6 +14,8 @@ for a key
 const apiKey = '4507ec27b0a5b32877e856da0ceca6c9'
 ```
 
+- install the npm module request 
+
 3.  Lets test out the request
 
 ```
