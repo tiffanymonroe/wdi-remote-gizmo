@@ -1,0 +1,170 @@
+/**{
+  border: 1px solid gold;
+}*/
+
+.container {
+  display: flex;
+  width: 90%;
+  margin:auto;
+}
+
+h1:hover {
+  opacity:0.5;
+}
+
+label {
+  margin: auto;
+  margin-right: 3em;
+}
+
+hr ,h3 {
+  text-align: center;
+}
+
+body {
+  font-family: 'Asar', serif;
+}
+
+#header, #subheader, h2 {
+	font-family: 'Old Standard TT', serif;
+	text-align: center;
+}
+
+#header {
+	/*font-size: 50px;*/
+}
+
+#subheader {
+	font-size: 20px;
+}
+
+#container {
+	width: 95%;
+	margin: 0 auto;
+}
+
+#left {
+	display: inline-block;
+	width: 39%;
+  padding: .5em;
+}
+
+#search , label {
+
+  margin-left: 12.5%;
+}
+
+#right {
+	display: inline-block;
+	width: 58%;
+	vertical-align: top;
+	margin-top: 35px;
+}
+
+li {
+  list-style: none;
+}
+
+input:focus, select:focus,textarea:focus, button:focus {
+    outline: none;
+}
+
+textarea {
+	resize: none;
+}
+
+.region-search {
+	height: 30px; width: 320px;
+	border: 1px solid black;
+}
+
+.search-text {
+	font-size: 20px;
+}
+
+ul{
+  text-align: justify;
+}
+
+.right-content {
+  width : 100%;
+  margin: auto;
+}
+
+strong {
+  font-size:1em;
+  color: #555;
+  text-decoration: underline;
+}
+
+#right ul {
+  display: block;
+  width: 96%;
+  padding: 1em;
+  font-size:.8em;
+  box-shadow: 0 0 4px silver;
+  padding-bottom: 1em;
+}
+.region-select {
+	cursor: pointer;
+}
+
+span  {
+  margin: auto .1em;
+  font-size: .75em;
+}
+
+#left span:hover, .region-title {
+	color: red;
+}
+
+
+#new-record-container {
+	margin: 0 auto;
+	width: 100%;
+	text-align: center;
+}
+
+#new-record-title {
+  font-family: 'Old Standard TT', serif;
+	font-size: 1.3em;
+}
+
+.new-record-input {
+	height: 2em; width: 50%;
+  padding: .4em;
+	margin-bottom: 5px;
+	border: 1px solid black;
+	text-align: center;
+}
+
+.search-input {
+	height: 2em; width: 50%;
+  padding: .4em;
+	margin-bottom: 5px;
+	border: 1px solid black;
+	text-align: center;
+  margin: auto;
+}
+
+
+#new-record-submit {
+	height: 3em; width: 50%;
+  margin: auto;
+  margin-bottom: 1em;
+	background-color: black;
+	color: white;
+	border: none;
+	cursor: pointer;
+
+}
+#delete-btn {
+  	height: 3em; width: 50%;
+  	background-color: black;
+  	color: white;
+  	border: none;
+  	cursor: pointer;
+    margin: auto;
+    margin-bottom: 1em;
+
+}
