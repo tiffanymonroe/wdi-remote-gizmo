@@ -33,7 +33,7 @@ He has often said that he is “trying to make Ruby natural, not simple,” in a
 
 [About Ruby](https://www.ruby-lang.org/en/about/)
 
-## Hello World
+# Hello World
 
 ```ruby
 p 'Hello World'
@@ -44,6 +44,17 @@ Run it in Terminal with
 ```
 $ ruby filename.rb
 ```
+
+**String templates**
+Must be within double quotes
+
+```ruby
+"some string text #{some_var} some string text"
+```
+
+**Datatypes**
+
+
 > "Hello World"
 
 # Methods
@@ -76,13 +87,109 @@ p sum 4, 5
 
 ### scope
 
+**Variables scope locally**
+
+``` ruby
+outside = true
+
+def scope_test
+  outside
+end
+
+p scope_test
+```
+> undefined local variable or method `outside'
+
+This also means we must pass a method into a method
+
+
+**Methods are available to each other in any order**
+
+```ruby
+def add_words input
+  mutate "#{input} inner bongolia"
+end
+
+def mutate words
+  words.upcase.reverse
+end
+
+p add_words 'take a trip to'
+```
+
+> "AILOGNOB RENNI OT PIRT A EKAT"
+
+
+
+**Instance variables scope globally**
+
+```ruby
+@outside = true
+
+def scope_test
+  @outside
+end
+
+p scope_test
+```
+> true
+
+```ruby
+def assign_var
+  @glim = 'glum'
+end
+
+assign_var
+
+p @glim
+```
+> "glum"
+
+
+&#x1F535; **Check understanding**
+
+```ruby
+def add_two number
+  number + 2
+end
+
+p add_two 3
+p number
+```
+
+**passing a declared variable into a method**
+
+```ruby
+num = 10
+
+def count num 
+  num.times { |n| p n }
+end
+
+count num
+```
+
+### conditionals
 
 
 
 # Loops
 
 * longform block
+
+```ruby
+words = ['namu', 'dai', 'bosa']
+
+words.each do |w|
+  p w.upcase
+end
+```
+
 * shortform block
+
+```ruby
+words.each { |w| p w.upcase }
+```
 * scope
 
 # Hashes and symbols
