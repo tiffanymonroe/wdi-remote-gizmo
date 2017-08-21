@@ -2,54 +2,29 @@
 
 ## Ruby, SQL, Rails
 
+Week 1
 
-**Day 1** _Monday Aug 28_
+| Day   | Date               | Topics         |
+| :---: | :---:              | :-------------:| 
+| **1** | _Monday Aug 28_    | Intro to Ruby - methods, loops, etc. |
+| **2** | _Tuesday Aug 29_   | More Ruby - classes |
+| **3** | _Wednesday Aug 30_ | SQL |
+| **4** | _Thursday Aug 31_  | Intro to Rails - migrations, Active Record |
+| **5** | _Friday Sep 1_     | Rails CRUD - Controller actions |
 
-* Intro to Ruby (methods, loops, etc.)
+Week 2
 
+| Day   | Date                    | Topics         |
+| :---: | :---------------------: | :-------------:| 
+| **2** | _Tuesday September 5_   | Two servers - Rails and Angular |
+| **3** | _Wednesday September 6_ | Rails one-to-many |
+| **4** | _Thursday September 7_  | Rails many-to-many |
 
+Week 2 Thursday
 
-**Day 2** _Tuesday Aug 29_
+**Project Four** - Group Project
 
-* More Ruby (classes)
-
-
-**Day 3** _Wednesday Aug 30_
-
-* SQL
-
-**Day 4** _Thursday Aug 31_
-
-* Intro to Rails (migrations, Active Record)
-
-**Day 5** _Friday September 1_
-
-* Rails CRUD (Controller actions)
-
-<hr>
-
-**Day 6, 7, 8** - Homework
-
-<hr>
-
-**Day 9** _Tuesday September 5_
-
-* Two servers
-	* Backend server: Rails API with CORS config
-	* Frontend server: Express serving Angular
-
-**Day 10** _Wednesday September 6_
-
-* Two servers
-	* Backend server: Rails API one-to-many relationship
-	* Frontend server: Express serving Charts.js
-
-**Day 11** _Thursday September 7_
-
-* Rails API many-to-many-through relationship
-
-<hr>
-
-**Project Four** - Group Project, Rails API and Angular client
+* Rails API
+* Angular client
 	
 
