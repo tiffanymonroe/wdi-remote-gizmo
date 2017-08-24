@@ -57,4 +57,4 @@ Quit
 [Another install of postgres with brew](https://gist.github.com/sgnl/609557ebacd3378f3b72)
 
 
-[Installing rbenv, ruby, rails, and postgres]([Installing rbenv, ruby, rails, and postgres](https://gorails.com/setup/osx/10.12-sierra))
+[Installing rbenv, ruby, rails, and postgres](https://gorails.com/setup/osx/10.12-sierra)
