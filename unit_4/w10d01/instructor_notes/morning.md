@@ -9,34 +9,39 @@ Competencies: JS / basic programming<br>
 
 ---
 
-
-## Learning a second language
-
-* Abstraction
-* Documentation
-* Debugging
-
-
-## Ruby
+# Ruby
 
 Why Ruby?
 
-* Rails
+* Rails -- a second server framework, too
 * Great example of an OOP language
 * Elegant
+	* Created by Yukihiro “Matz” Matsumoto who has often said that he is “trying to make Ruby natural, not simple,” in a way that mirrors life
 * Useful scripting language
 * Active community
 
-Ruby is a language of created by Yukihiro “Matz” Matsumoto who blended parts of his favorite languages (Perl, Smalltalk, Eiffel, Ada, and Lisp) to form a new language.
-
-He has often said that he is “trying to make Ruby natural, not simple,” in a way that mirrors life.
-
 [About Ruby](https://www.ruby-lang.org/en/about/)
+
+# Learning a second language
+
+* Abstraction
+	* Does your programming language have any of [this stuff](http://www.cs.utah.edu/~germain/PPS/Topics/index.html)? 
+* Documentation
+	* How can you implement [that stuff](http://ruby-doc.org/core-2.4.1/) ?
+* Debugging
+	* What kind of stuff goes wrong? 
+
 
 # Hello World
 
+Beginning a second language: "Hello world". Print to the console.
+
+&#x1F535; In `student_examples` make a file `hello_world.rb`
+
+> A Ruby equivalent to `console.log()` is `p()`. This is just another way of running `.inspect`. You could also use `puts` or `print`. 
+
 ```ruby
-p 'Hello World'
+p 'Hello world'
 ```
 
 Run it in Terminal with
@@ -44,22 +49,59 @@ Run it in Terminal with
 ```
 $ ruby filename.rb
 ```
+> "Hello world"
 
-**String templates**
+**Basic datatypes**
+
+```ruby
+p 42
+p true
+p [1, 2, 3]
+p { name: "Timmy" }
+```
+
+**Variable assignment**
+
+```ruby
+adjective = "cruel"
+
+p adjective
+```
+> "cruel"
+
+**Interpolation with string templates** `#{ }`
+
 Must be within double quotes
 
 ```ruby
-"some string text #{some_var} some string text"
+p "Hello #{adjective} world"
 ```
+> "Hello cruel world"
 
-**Datatypes**
+**Arrays, built-in methods with dot notation**
 
+```ruby
+adjectives = ['cruel', 'lovely', 'ordinary']
 
-> "Hello World"
+p "Hello #{adjectives.sample} world"
+```
+> Hello ordinary world
+
 
 # Methods
 
-### syntax
+Abstraction: 
+
+> A cluster of reusable code that can take input and return a result.
+
+>A "self contained" module of code that accomplishes a specific task. "Takes in" data, process it, and "returns" a result. Can be used over and over and over again. Can be "called" from the inside of another module.
+
+[ref](http://www.cs.utah.edu/~germain/PPS/Topics/functions.html)
+
+In Javascript this is called a **function**. In Ruby it is called a **method**.
+
+
+### Syntax
 
 ```ruby
 def is_palindrome? inp
@@ -70,14 +112,18 @@ p is_palindrome? 'radar'
 ```
 > true
 
+`.reverse` and other [String methods](http://ruby-doc.org/core-2.4.1/String.html)
+
+&#x1F535; Find out how to make input lowercase.
+
 ```ruby
-def sum num1, num2
-  num1 + num2
+def get_area length, width
+  length * width
 end
 
-p sum 4, 5
+p get_area 4, 5
 ```
-> 9
+> 20
 
 * snake case
 * implicit return
@@ -100,10 +146,8 @@ p scope_test
 ```
 > undefined local variable or method `outside'
 
-This also means we must pass a method into a method
 
-
-**Methods are available to each other in any order**
+**Methods are not scaoped to variables like in JS. Methods are available to each other in any order.**
 
 ```ruby
 def add_words input
@@ -157,21 +201,120 @@ p add_two 3
 p number
 ```
 
-**passing a declared variable into a method**
+# Datatypes
+
+Abstraction: 
+
+> All programs are composed of two items: Data and Operations on that Data. Because, at their heart, computers are simple devices, they can only represent very simple pieces of information. All complex information must be built up from these basic Data Types. The data types can roughly be described as: numbers, booleans, characters, arrays, and structures. Some languages like ActionScript replace characters with "strings". Object oriented languages, such as C++ and Java replace "structures" with "objects".
+
+[ref](http://www.cs.utah.edu/~germain/PPS/Topics/data_types.html)
 
 ```ruby
-num = 10
+p "Hello World".class
+```
+> String
 
-def count num 
-  num.times { |n| p n }
-end
+```ruby
+p ['cruel', 'lovely', 'ordinary'].class
+```
+> Array
 
-count num
+* Integers: Fixnum and Bignum
+
+```
+p 100.class
+```
+> Fixnum
+
+* Integer division and Float
+
+Dividing integers returns an integer (rounded down)
+
+```ruby
+p 11 / 2
 ```
 
-### conditionals
+> 5
+
+```ruby
+p 2.0.class
+```
+> Float
+
+Including a float will return a float
+
+```ruby
+p 11 / 2.0
+```
+> 5.5
+
+```
+p 4611686018427387904.class
+```
+> Bignum
+
+[Fixnum and Bignum](http://patshaughnessy.net/2014/1/9/how-big-is-a-bignum)
+
+Fixnum and Bignum are both classes of the Integer class.
 
 
+```ruby
+p nil.class
+```
+> NilClass
+
+* Booleans
+
+```ruby
+p true.class
+```
+> TrueClass
+
+```ruby
+p false.class
+```
+> FalseClass
+
+```ruby
+p ['cruel', 'lovely', 'ordinary'].class
+```
+> Array
+
+**superclass**
+
+1.class #=> Fixnum
+
+1.class.superclass #=> Integer
+
+**Conversion**
+
+```ruby
+num.to_s
+
+num.to_f
+
+num.to_i
+```
+
+
+
+
+# Hashes and symbols
+
+```ruby
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925
+}
+
+p book
+```
+> {:title=>"The Great Gatsby", :author=>"F Scott Fitzgerald", :year=>1920}
+
+* passing a hash
+
+[symbols](https://stackoverflow.com/questions/8189416/why-use-symbols-as-hash-keys-in-ruby)
 
 # Loops
 
@@ -192,20 +335,18 @@ words.each { |w| p w.upcase }
 ```
 * scope
 
-# Hashes and symbols
+**passing a declared variable into a method**
 
 ```ruby
-book = {
-  title: 'The Great Gatsby',
-  author: 'F Scott Fitzgerald',
-  year: 1925
-}
+num = 10
 
-p book
+def count num 
+  num.times { |n| p n }
+end
+
+count num
 ```
-> {:title=>"The Great Gatsby", :author=>"F Scott Fitzgerald", :year=>1920}
 
-* passing a hash
-
+# Conditionals
 
 
