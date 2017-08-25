@@ -25,6 +25,8 @@ https://www.codecademy.com/learn/ruby
 1. Create or Log in to your codecademy account.
 2. Start the Ruby tutorial.
 
+NOTE: You do not need to "Upgrade". Only do the free portions of the tutorial (which should be all 10 sections - you won't be able to do the Unit 11 Unit Final Project).
+
 ## Take a screenshot of your badges & commit them
 
 - There are a total of 10 units for this tutorial. *Take a screen shot* of each badge that you receive as you finish the unit.
