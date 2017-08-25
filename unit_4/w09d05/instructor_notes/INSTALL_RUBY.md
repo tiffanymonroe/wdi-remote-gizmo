@@ -14,16 +14,20 @@ RVM and RBENV do NOT work well together, so having both installed will cause _we
 
 ## Homebrew
 
+1. See if brew is already installed (type `brew` and hit enter to see if it is). You should get a message about example usage, etc.
+
 1. If you haven't install Homebrew, do so by going to http://brew.sh/
 	- copy and paste this into the terminal `/usr/bin/ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"` and hit return
 	
-1. If brew is already installed (type `brew` and hit enter to see if it is)
-1. Run `brew upgrade` to upgrade to the latest version of homebrew
+
+1. If brew is installed, run `brew upgrade` to upgrade to the latest version of homebrew
 	* Might take a while, might upgrade stuff for postgres, node, heroku, etc. 
 1. Run `brew update` to update the list of installable programs by homebrew
 	* Might say Already up-to-date
 
 ## Install rbenv
+
+rbenv is a version manager for Ruby. We don't want to use our system Ruby because we can mess with it. Instead, let's get an up to date version of Ruby that is safe to mess with.
 
 0. Check if rbenv already installed: `rbenv`
 1. If already exists, upgrade with `brew upgrade rbenv ruby-build`
