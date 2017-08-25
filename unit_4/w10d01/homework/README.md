@@ -37,7 +37,7 @@ Load the following pages in your browser so that you can search for any useful R
 
 After you have printed Hello World:
 
-```
+```ruby
 adjective = "Big Bad"
 ```
 
@@ -45,7 +45,7 @@ adjective = "Big Bad"
 
 Expected output:
 
-```
+```ruby
 => Hello Big Bad World
 ```
 
@@ -60,7 +60,7 @@ The commit message should read: <br>
 ### Nums Array
 With the following array:
 
-```
+```ruby
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
 ```
 
@@ -71,8 +71,10 @@ nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
 3. Use `.include?` to check if the array contains the number 8
 
 ### Color Array
+
 With the following array:
-```
+
+```ruby
 colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
 ```
 
@@ -93,7 +95,7 @@ The commit message should read: <br>
 * Write a method that finds the area of a rectangle given values for width and height
 	* Remember, the keyword 'return' is implied and can be omitted
 
-```
+```ruby
 def findArea(height, width)
 
 end
@@ -102,11 +104,11 @@ end
 * Write a method that will loop over the `nums` array and print each number multipled by 5
 
 
-```
+```ruby
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
 ```
 
-```
+```ruby
 def multiplyEachByFive(arr)
 
 end
