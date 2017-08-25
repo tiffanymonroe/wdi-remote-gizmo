@@ -114,7 +114,7 @@ The commit message should read: <br>
 Use the following hashes to answer the questions below. 
 
 ```ruby
-Hashes
+# Hashes
 
 book = {
   title: 'The Great Gatsby',
@@ -140,7 +140,7 @@ table = {
 1. Write a method that will take in any hash and return the price of the item.
 
 ```ruby
-//Compete this method:
+# Compete this method:
 
 def printPrice
 
@@ -150,7 +150,7 @@ end
 2. Write a method that will take in multiple hashes and will print out all of the information from any hash that is sent in.
 
 ```ruby
-//Compete this method:
+# Compete this method:
 
 def printHashes
 
@@ -160,7 +160,7 @@ end
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 3: Methods with a Hash".
+"Commit 4: Methods with a Hash".
 <hr>
 
 <br>
@@ -176,7 +176,7 @@ Find the sum of all the multiples of 3 or 5 below 1000.
 <hr>
 &#x1F534; **Commit your work.** <br>
 The commit message should read: <br>
-"Commit 4: Euler problem 1".
+"Commit 5: Euler problem 1".
 <hr>
 
 
@@ -198,7 +198,7 @@ Check out Ruby's `Prime` class: http://ruby-doc.org/stdlib-1.9.3/libdoc/prime/rd
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 5: Primes".
+"Commit 6: Primes".
 <hr>
 
 
@@ -211,7 +211,7 @@ Find the word that appears in a given sentence with the greatest frequency. If t
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 6: Word Frequency".
+"Commit 7: Word Frequency".
 <hr>
 
 # Hungry For Even More?
@@ -233,7 +233,7 @@ Write a method that checks if a number is _1-to-n pandigital_.
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 7: Pandigital Numbers".
+"Commit 8: Pandigital Numbers".
 <hr>
 
 - Finish the labs from today.
