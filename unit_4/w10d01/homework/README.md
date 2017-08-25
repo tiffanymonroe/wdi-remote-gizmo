@@ -57,18 +57,30 @@ The commit message should read: <br>
 
 ## Arrays
 
+### Nums Array
 With the following array:
 
 ```
 nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
 ```
 
-* Use `.uniq` to print the array with all duplicate entries removed
+1. Use `.uniq` to print the array with all duplicate entries removed
 
-* Next, use `.push` and `.pop` and `.length` on the array as you would with javaScript
+2. Next, use `.push` and `.pop` and `.length` on the array as you would with javaScript
 
-* Use `.include?` to check if the array contains the number 8
+3. Use `.include?` to check if the array contains the number 8
 
+### Color Array
+With the following array:
+```
+colors = ['red', 'orange', 'yellow', 'green', 'blue', 'indigo', 'violet']
+```
+
+1. Print out a random color.
+
+2. Print out the `colors` array in reverse order.
+
+3. Print out all of the colors in the array with all capital letters.
 
 <hr>
 &#x1F534; **Commit your work** <br>
