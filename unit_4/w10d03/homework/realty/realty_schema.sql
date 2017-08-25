@@ -1,1 +1,0 @@
--- enter your schema for apartments, offices and storefronts below
