@@ -109,6 +109,63 @@ The commit message should read: <br>
 <br>
 <hr>
 
+## Methods with a Hash
+
+Use the following hashes to answer the questions below. 
+
+```ruby
+Hashes
+
+book = {
+  title: 'The Great Gatsby',
+  author: 'F Scott Fitzgerald',
+  year: 1925,
+  price: 10
+}
+
+lamp = {
+  type: 'reading',
+  brand: 'Ikea',
+  price: 25
+}
+
+table = {
+  type: 'bed side',
+  brand: 'Crate & Barrell',
+  color: 'birch',
+  price: 50
+}
+```
+
+1. Write a method that will take in any hash and return the price of the item.
+
+```ruby
+//Compete this method:
+
+def printPrice
+
+end
+```
+
+2. Write a method that will take in multiple hashes and will print out all of the information from any hash that is sent in.
+
+```ruby
+//Compete this method:
+
+def printHashes
+
+end
+```
+
+<hr>
+&#x1F534; **Commit your work** <br>
+The commit message should read: <br>
+"Commit 3: Methods with a Hash".
+<hr>
+
+<br>
+<hr>
+
 # PROBLEMS
 
 ## EULER PROBLEM 1
