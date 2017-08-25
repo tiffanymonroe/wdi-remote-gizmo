@@ -38,6 +38,13 @@ Access postgres
 $ psql
 ```
 
+If postgres is not running, start the server with
+
+```
+postgres -D /usr/local/var/postgres
+```
+
+
 Quit
 
 ```
