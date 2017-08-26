@@ -78,6 +78,9 @@ Get the version of Ruby before `-dev`
 1. `$ rbenv rehash` to tell computer we've switch versions of ruby
 	* Confirm switch again with `rbenv versions` `* 2.4.1`
 
+
+**CLOSE AND RESTART TERMINAL**
+
 ## Update Environment to use new Ruby
 
 1. Run `ruby -v` and confirm ruby version _now in use by the system_ is `2.4.1p111` or somesuch
