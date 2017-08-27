@@ -123,7 +123,7 @@ const nthFibonacciNumber = (num) => {
     fibs.push(nextFib);
   }
 
-  return fibs[fibs.length - 1] + " is the fibonacci number at position " + num);
+  return fibs[fibs.length - 1] + " is the fibonacci number at position " + num;
 };
 ```
 
