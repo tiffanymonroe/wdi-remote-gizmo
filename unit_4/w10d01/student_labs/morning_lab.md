@@ -128,8 +128,6 @@ convert_time 126
 
 You will not need any loops or advanced techniques to solve `convert_time`. All you'll need is a few lines of code, some math-thinking-pain and some built-in methods.
 
-
-
 # Hungry for More?
 
 Solve these Ruby problems:
