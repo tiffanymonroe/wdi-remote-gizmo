@@ -13,9 +13,9 @@ Competencies: JS / basic programming<br>
 
 Why Ruby?
 
-* Rails -- a second server framework, too
+* Rails
 * Great example of an OOP language
-* Elegant
+* "Naturalistic"
 	* Created by Yukihiro “Matz” Matsumoto who has often said that he is “trying to make Ruby natural, not simple,” in a way that mirrors life
 * Useful scripting language
 * Active community
@@ -34,6 +34,8 @@ Beginning a second language: "Hello world". Print to the console.
 ```ruby
 p 'Hello world'
 ```
+
+The parens for `p()` and all other methods are optional. When omitted, this is informally known as "poetry mode".
 
 Run it in Terminal with
 
@@ -131,6 +133,7 @@ p is_palindrome? 'radar'
 * no semicolons
 * no `let` or `const` or `var`
 * parentheses optional for arguments and parameters
+	* Rails leaves out parens for arguments 
 * Ruby methods that return a Boolean are sometimes written in question form
 
 &#x1F535; Account for case.
