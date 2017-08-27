@@ -15,12 +15,30 @@ Why Ruby?
 
 * Rails
 * Great example of an OOP language
-* "Naturalistic"
-	* Created by Yukihiro “Matz” Matsumoto who has often said that he is “trying to make Ruby natural, not simple,” in a way that mirrors life
 * Useful scripting language
 * Active community
 
+
+
+### Naturalism
+
+Yukihiro “Matz” Matsumoto, the creator of Ruby, has often said that he is “trying to make Ruby natural, not simple,” in a way that mirrors life.
+
 [About Ruby](https://www.ruby-lang.org/en/about/)
+
+There is a lack of visual adornments and superfluous quirks. The intention is to make Ruby closer to English, for humans, rather than for machines.
+
+However, if you have used Ruby for a while you'll discover that there are almost too many ways to achieve the same results: so many methods, so many helpful datatypes like Range, so many ways to iterate, and the question will arise, what's the best way?
+
+There is no best way. With Ruby it's up to you to discover your own way and form your own vocabulary. This is how Ruby was intended.
+
+Having said that, there are some idiomatic uses of Ruby that developers have "settled" on. But you don't have to live your life full of boring opinions. Whether you adopt these idiomatic uses between you and your employer.
+
+For example, one idiomatic use is Spaces over Tabs, that is, using two Spaces and **not** a Tab character. This rule can be "controversial". This gets a big yawn from me, I don't care either way. I'm more worried about my cat getting older. [ref](https://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104)
+
+Another is never to use for loops. Another is never to use `{ ... }` blocks unless the code nicely fits on one line.
+
+Ultimately, your Ruby "way" will be dictated by whoever is paying you to write Ruby. Until then, it's up to you to discover your own "way".
 
 
 # Hello World
@@ -267,6 +285,11 @@ end
 p get_root number
 p get_exp_five number
 ```
+
+* @instance_variable
+* global_variable
+* CONSTANT_VARIABLE
+
 12:09
 
 ## Case six
@@ -337,11 +360,28 @@ p book
 
 [symbols](https://stackoverflow.com/questions/8189416/why-use-symbols-as-hash-keys-in-ruby)
 
-**p()** requires parentheses when printing an anonymous hash
+**p()** requires parentheses when printing an anonymous hash. This is because the hash can get confused for a **block**.
 
 ```ruby
 p ({name: "Timmy", age: 44})
 ```
+
+**accessing values**
+
+The usual `book.title` will not work, because Ruby confuses properties for methods. Instead, we use bracket notation.
+
+If the keys are symbols:
+
+```ruby
+p book[:title]
+```
+
+If the keys are strings:
+
+```ruby
+p book["title"]
+```
+
 
 **passing a hash to a method**
 
@@ -357,9 +397,20 @@ end
 p shuffle_keys name: "Timmy", age: 45
 ```
 
-* hash curlies are optional when the method has one argument (the hash)
-* however, if you use the curlies, you also have to use parens
+* hash curlies are optional when the hash is passed as the last argument
+
+```ruby
+def return_num_and_hash num, hash
+	[num, hash]
+end
+
+p return_num_and_hash 5, name: "Timmy", age: 45
+```
+> [5, {:name=>"Timmy", :age=>45}]
+
+* however, if you pass only a hash, you also have to use parens (so that the hash is not confused for a block.
 
 ```ruby
 p shuffle_keys({ name: "Timmy", age: 45 })
 ```
+

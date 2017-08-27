@@ -52,7 +52,7 @@ Let's explore!
 
 What were the key components of a constructor function in javascript?
 
-- capitalized name
+- capitalized, **CamelCase** name
 - saving properties passed as arguments
 - methods
 - using the `new` keyword to instantiate an instance of that object
