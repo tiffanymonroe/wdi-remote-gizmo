@@ -19,13 +19,6 @@ Competencies: Basic Ruby<br>
 
 You can 'translate' these functions literally, line-by-line, but see if you can find a more 'Ruby' way rewrite them. Sometimes, Ruby will let you do complex operations with a single built-in method.
 
-### Get Name
-```javascript
-const getName = (name) => {
-  return name;
-};
-```
-
 ### Reverse It
 ```javascript
 const reverseIt = () => {
@@ -59,7 +52,6 @@ const multiplyArray = (ary) => {
   if (ary.length == 0) { return 1; };
 
   let total = 1;
-  // const total = ary[0];
 
   for (let i=0; i < ary.length; i++) {
     total = total * ary[i];
