@@ -247,27 +247,11 @@ p scope_test
 > undefined local variable or method `outside'
 
 
-```ruby
-number = 44
-
-def get_root
-  Math.sqrt number		
-end
-
-def get_exp_five
-  number ** 5
-end
-
-p get_root
-p get_exp_five
-```
-
-> get_root': undefined local variable or method `number'
  
-> Works:
+Works:
 
 ```ruby
-number = 44
+number = 64
 
 def get_root num
   Math.sqrt num		
@@ -286,12 +270,12 @@ p get_exp_five number
 
 **Methods calling on methods**
 
-Write method `mutate` that takes a string, converts it to uppercase, and reverses it.
+Write a method `mutate` that takes a string, converts it to uppercase, and reverses it.
 
-Write another method that takes a string and interpolates it into the string " inner bongolia", and sends the whole shebang to the `mutate` method.
+Write a method `weirdify_words` that takes a string and interpolates it into the beginning of the string " inner bongolia", and sends the whole shebang to the `mutate` method.
 
 ```ruby
-def add_words input
+def weirdify_words input
   mutate "#{input} inner bongolia"
 end
 
@@ -299,7 +283,7 @@ def mutate words
   words.upcase.reverse
 end
 
-p add_words 'take a trip to'
+p weirdify_words 'take a trip to'
 ```
 
 > "AILOGNOB RENNI OT PIRT A EKAT"
@@ -363,6 +347,16 @@ p ({name: "Timmy", age: 44})
 > Write a method that takes in a hash. The method should return a shuffled array of keys from the hash.
 
 ```
+def shuffle_keys hash
+	hash.keys.shuffle
+end
 
+p shuffle_keys name: "Timmy", age: 45
+```
 
+* hash curlies are optional when the method has one argument (the hash)
+* however, if you use the curlies, you also have to use parens
 
+```ruby
+p shuffle_keys({ name: "Timmy", age: 45 })
+```
