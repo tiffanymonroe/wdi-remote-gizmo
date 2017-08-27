@@ -13,9 +13,13 @@ Competencies: JS / basic programming<br>
 
 **Enumerables**
 
+> An enumeration is a complete, ordered listing of all the items in a collection. The term is commonly used in mathematics and computer science to refer to a listing of all of the elements of a set.
+
 Ruby has a module called Enumerable that provides a set of methods to iterate over collections, search through them, sort them, etc. They are comparable to JavaScript's `.forEach	` and `.map`, etc.
 
 It is standard practice to prefer an enumerable method over a for loop.
+
+ 
 
 ## `.each`
 The each method is Ruby's preferred way to iterate across a collection. 
@@ -52,37 +56,70 @@ If our operation takes more than one line, we use `do ... end` instead of curlie
 
 #### Longform block
 
+Iterate over an array and if the word is "cat", just print that word, but if the word is "hat", print that word in uppercase. Otherwise print 'neither cat nor hat'.
+
 **`current_word` is shorted to just `w`**
 
 ```ruby
 words = ['the', 'cat', 'in', 'the', 'hat']
 
 words.each do |w|
-  if w == 'the'
+  if w == 'cat'
 	p w
-  elsif w == 'cat'
+  elsif w == 'hat'
   	p w.upcase
   else
-   p 'neither the nor cat'
+   p 'neither cat nor hat'
   end
 end
 ```
 
 * conditionals begin with `if` and end with `end`, and use `elsif`
 
-&#x1F535; Iterate over this array of hashes and print each hash whose `title` property is greater than length 5.
+&#x1F535; Iterate over this array of hashes. Each hash is a book. If a book title is greater than length 15, print the title. Otherwise print "title length not greater than 15 chars".
 
+```ruby
+books = [
+	{ title: 'Madame Bovary', author: 'Gustave Flaubert' },
+	{ title: 'Gravity\'s Rainbow', author: 'Thomas Pynchon' },
+	{ title: 'Silence', author: 'Shusaku Endo' },
+	{ title: 'Radio Free Albemuth', author: 'Philip K Dick' },
+	{ title: 'The Goldfinch', author: 'Donna Tartt' },
+	{ title: 'Pilgrim at Tinker Creek', author: 'Annie Dillard' },
+	{ title: 'Too Much Happiness', author: 'Alice Munro' }
+]
+```
 
-
+```ruby
+books.each do |book| 
+	if book[:title].length > 15
+		p book[:title]
+	else
+		p "title length not greater than 15 chars"
+	end
+end
+```
 
 ## `.map()`
 
+Map is the same as the JavaScript map. It will perform an operation on each element and return a new collection of the mutated values.
+
 ```ruby
+numbers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10]
+
 squares = numbers.map { |x| x * x }
 
 p squares
 ```
 
+## Range and `.times`
+
+
+
+## `.select()`
+## `.reduce()`
+
+# Extra
 
 ## Passing a block to a method is like passing a callback to a function
 
@@ -211,38 +248,3 @@ num.to_i
 p (0..100).class
 ```
 > Range
-
-# Conditionals
-
-
-
-[ref](https://stackoverflow.com/questions/26532409/does-declaring-a-hash-with-curly-braces-require-assignment)
-
-
-
-
-
-
-**Instance variables scope globally**
-
-```ruby
-@outside = true
-
-def scope_test
-  @outside
-end
-
-p scope_test
-```
-> true
-
-```ruby
-def assign_var
-  @glim = 'glum'
-end
-
-assign_var
-
-p @glim
-```
-> "glum"

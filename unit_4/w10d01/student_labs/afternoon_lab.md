@@ -6,6 +6,7 @@
 Title: Ruby Intro<br>
 Type: Afternoon Lab<br>
 Creator: WDI-Funke <br>
+Modified by: Thom Page for WDIr-Gizmo<br>
 Competencies: Basic Ruby<br>
 
 ---
@@ -16,122 +17,79 @@ Competencies: Basic Ruby<br>
 
 ## Rewrite the following Javascript functions as Ruby methods
 
+You can 'translate' these functions literally, line-by-line, but see if you can find a more 'Ruby' way rewrite them. Sometimes, Ruby will let you do complex operations with a single built-in method.
+
 ### Get Name
 ```javascript
-const getName = function () {
-  const name = prompt("what is your name?");
+const getName = (name) => {
   return name;
 };
 ```
 
 ### Reverse It
 ```javascript
-const reverseIt = function () {
+const reverseIt = () => {
   const string = "a man, a plan, a canal, frenemies!";
-
-  const reverse = "";
-
-  for (const i=0; i < string.length; i++) {
+  let reverse = "";
+  for (let i=0; i < string.length; i++) {
     reverse += string[string.length - (i+1)];
   };
-
-  alert(reverse);
+  return reverse;
 };
 ```
 
 ### Swap Em
 ```javascript
-const swapEm = function () {
-  const a = 10;
-  const b = 30;
-  const temp;
+const swapEm = () => {
+  let a = 10;
+  let b = 30;
+  let temp;
 
   temp = b;
   b = a;
   a = temp;
 
-  alert("a is now " + a + ", and b is now " + b);
+  return "a is now " + a + ", and b is now " + b;
 };
 ```
+
 ### Multiply Array
 ```javascript
-const multiplyArray = function (ary) {
+const multiplyArray = (ary) => {
   if (ary.length == 0) { return 1; };
 
-  const total = 1;
+  let total = 1;
   // const total = ary[0];
 
-  for (const i=0; i < ary.length; i++) {
+  for (let i=0; i < ary.length; i++) {
     total = total * ary[i];
   };
 
   return total;
 };
 ```
+
 ### Fizz Buzzer
 ```javascript
-const fizzbuzzer = function(x){
-  if( x%(3*5) == 0 ) {
-    return 'fizzbuzz'
-  } else if( x%3 == 0 ) {
+const fizzbuzzer = (x) => {
+  if (x % 15 == 0) {
+    return 'fizzbuzz';
+  } else if (x % 3 == 0) {
     return 'fizz'
-  } else if ( x%5 == 0 ) {
+  } else if (x % 5 == 0) {
     return 'buzz'
   } else {
-    return 'archer'
+    return 'No fizz, no buzz, no fizzbuzz'
   }
 }
 ```
-### Nth Fibonacci
-```javascript
-const nthFibonacciNumber = function () {
-  const fibs = [1, 1];
-  const num = prompt("which fibonacci number do you want?");
 
-  while (fibs.length < parseInt(num)) {
-    const length = fibs.length;
-    const nextFib = fibs[length - 2] + fibs[length - 1];
-    fibs.push(nextFib);
-  }
-
-  alert(fibs[fibs.length - 1] + " is the fibonacci number at position " + num);
-};
-```
-
-### Search Array
-``` javascript
-const searchArray = function(array,value) {
-  for(const i = 0; i < array.length-1; i++) {
-    if(array[i] == value) {
-      return true;
-      break;
-    }
-  }
-  return -1;
-};
-```
-
-### Palindrome
-Write a method that checks whether or not a string is a palindrome.
-Here is the javascript:
-``` javascript
-const isPalindrome = function(str) {
-  for(const i = 0; i < str.length/2; i++){
-    if(str[i] != str[str.length-i-1]){
-      return false;
-      break;
-    }
-    return true;
-  }
-};
-```
 
 ### hasDupes
 Write a method that checks whether or not an array has any duplicates.
-Here is the javascript:
 
 ``` javascript
-const hasDupes = function(arr){
+const hasDupes = (arr){
   const obj = {};
   for (i = 0; i < arr.length; i++) {
     if(obj[arr[i]]) {
@@ -147,7 +105,37 @@ const hasDupes = function(arr){
 
 # Hungry for More?
 
+### Search Array
+
+```javascript
+const searchArray = (array,value) => {
+  for(let i = 0; i < array.length - 1; i++) {
+    if(array[i] == value) {
+      return true;
+      break;
+    }
+  }
+  return -1;
+};
+```
+
+### Nth Fibonacci
+
+```javascript
+const nthFibonacciNumber = (num) => {
+  const fibs = [1, 1];
+
+  while (fibs.length < parseInt(num)) {
+    let length = fibs.length;
+    let nextFib = fibs[length - 2] + fibs[length - 1];
+    fibs.push(nextFib);
+  }
+
+  return fibs[fibs.length - 1] + " is the fibonacci number at position " + num);
+};
+```
+
 Solve these Ruby problems (same as the Hungry for More from this morning's lab).
 
-1. https://coderbyte.com/editor/guest:Letter%20Changes:Ruby
-2. https://coderbyte.com/editor/guest:Simple%20Symbols:Ruby
+1. [Letter changes](https://coderbyte.com/editor/guest:Letter%20Changes:Ruby)
+2. [Simple symbols](https://coderbyte.com/editor/guest:Simple%20Symbols:Ruby)
