@@ -18,32 +18,33 @@ Competencies: Basic Ruby<br>
 
 ### Get Name
 ```javascript
-var getName = function () {
-  var name = prompt("what is your name?");
+const getName = function () {
+  const name = prompt("what is your name?");
   return name;
 };
 ```
 
 ### Reverse It
 ```javascript
-var reverseIt = function () {
-  var string = "a man, a plan, a canal, frenemies!";
+const reverseIt = function () {
+  const string = "a man, a plan, a canal, frenemies!";
 
-  var reverse = "";
+  const reverse = "";
 
-  for (var i=0; i < string.length; i++) {
+  for (const i=0; i < string.length; i++) {
     reverse += string[string.length - (i+1)];
   };
 
   alert(reverse);
 };
 ```
+
 ### Swap Em
 ```javascript
-var swapEm = function () {
-  var a = 10;
-  var b = 30;
-  var temp;
+const swapEm = function () {
+  const a = 10;
+  const b = 30;
+  const temp;
 
   temp = b;
   b = a;
@@ -54,13 +55,13 @@ var swapEm = function () {
 ```
 ### Multiply Array
 ```javascript
-var multiplyArray = function (ary) {
+const multiplyArray = function (ary) {
   if (ary.length == 0) { return 1; };
 
-  var total = 1;
-  // var total = ary[0];
+  const total = 1;
+  // const total = ary[0];
 
-  for (var i=0; i < ary.length; i++) {
+  for (const i=0; i < ary.length; i++) {
     total = total * ary[i];
   };
 
@@ -69,7 +70,7 @@ var multiplyArray = function (ary) {
 ```
 ### Fizz Buzzer
 ```javascript
-var fizzbuzzer = function(x){
+const fizzbuzzer = function(x){
   if( x%(3*5) == 0 ) {
     return 'fizzbuzz'
   } else if( x%3 == 0 ) {
@@ -83,13 +84,13 @@ var fizzbuzzer = function(x){
 ```
 ### Nth Fibonacci
 ```javascript
-var nthFibonacciNumber = function () {
-  var fibs = [1, 1];
-  var num = prompt("which fibonacci number do you want?");
+const nthFibonacciNumber = function () {
+  const fibs = [1, 1];
+  const num = prompt("which fibonacci number do you want?");
 
   while (fibs.length < parseInt(num)) {
-    var length = fibs.length;
-    var nextFib = fibs[length - 2] + fibs[length - 1];
+    const length = fibs.length;
+    const nextFib = fibs[length - 2] + fibs[length - 1];
     fibs.push(nextFib);
   }
 
@@ -99,8 +100,8 @@ var nthFibonacciNumber = function () {
 
 ### Search Array
 ``` javascript
-var searchArray = function(array,value) {
-  for(var i = 0; i < array.length-1; i++) {
+const searchArray = function(array,value) {
+  for(const i = 0; i < array.length-1; i++) {
     if(array[i] == value) {
       return true;
       break;
@@ -114,8 +115,8 @@ var searchArray = function(array,value) {
 Write a method that checks whether or not a string is a palindrome.
 Here is the javascript:
 ``` javascript
-var isPalindrome = function(str) {
-  for(var i = 0; i < str.length/2; i++){
+const isPalindrome = function(str) {
+  for(const i = 0; i < str.length/2; i++){
     if(str[i] != str[str.length-i-1]){
       return false;
       break;
@@ -128,9 +129,10 @@ var isPalindrome = function(str) {
 ### hasDupes
 Write a method that checks whether or not an array has any duplicates.
 Here is the javascript:
+
 ``` javascript
-var hasDupes = function(arr){
-  var obj = {};
+const hasDupes = function(arr){
+  const obj = {};
   for (i = 0; i < arr.length; i++) {
     if(obj[arr[i]]) {
       return true;
@@ -149,4 +151,3 @@ Solve these Ruby problems (same as the Hungry for More from this morning's lab).
 
 1. https://coderbyte.com/editor/guest:Letter%20Changes:Ruby
 2. https://coderbyte.com/editor/guest:Simple%20Symbols:Ruby
-3. https://coderbyte.com/editor/guest:Time%20Convert:Ruby
