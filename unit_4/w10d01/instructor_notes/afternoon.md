@@ -11,15 +11,36 @@ Competencies: JS / basic programming<br>
 
 # Loops
 
-**Enumerables**
+It is standard practice to prefer one of Ruby's built-in methods over a for loop.
+
+## `.times`
+
+`.times` is an [Integer method](https://ruby-doc.org/core-2.2.2/Integer.html). We can use it repeat an action <integer> number of times.
+
+To use `.times()`, we provide a **block** to the method.
+
+```ruby
+100.times { }
+```
+
+Withint the block, we instantiate a variable that represents the currently-iterated-element. We do this with pipes **`| variable |`**
+
+```ruby
+100.times { |num| p num }
+```
+
+Let's look at the same principle but with **iteration**.
+
+<br>
+
+## Enumerables
 
 > An enumeration is a complete, ordered listing of all the items in a collection. The term is commonly used in mathematics and computer science to refer to a listing of all of the elements of a set.
 
 Ruby has a module called Enumerable that provides a set of methods to iterate over collections, search through them, sort them, etc. They are comparable to JavaScript's `.forEach	` and `.map`, etc.
 
-It is standard practice to prefer an enumerable method over a for loop.
 
- 
+<br>
 
 ## `.each`
 The each method is Ruby's preferred way to iterate across a collection. 
@@ -33,9 +54,9 @@ words = ['the', 'cat', 'in', 'the', 'hat']
 words.each { }
 ```
 
-#### Block
+#### Block again
 
-A **block** is like a callback function. In it, we instantiate a variable that represents the currently-iterated-element. We do this with pipes **`| variable |`**
+Here we can see that a **block** is like a callback function. In it, we instantiate a variable that represents the currently-iterated-element. We do this with pipes as before **`| variable |`** ...
 
 
 ```ruby
@@ -44,7 +65,7 @@ words = ['the', 'cat', 'in', 'the', 'hat']
 words.each { |current_word| p current_word.upcase }
 ```
 
-And then we can perform some operation on that instantiated variable, such as printing to the console with `p()`
+And then we can perform some operation on that instantiated variable, such as printing to the console with `p()`.
 
 Compare to JS `.forEach`
 
@@ -76,7 +97,9 @@ end
 
 * conditionals begin with `if` and end with `end`, and use `elsif`
 
-&#x1F535; Iterate over this array of hashes. Each hash is a book. If a book title is greater than length 15, print the title. Otherwise print "title length not greater than 15 chars".
+&#x1F535; **Try this**
+
+Iterate over this array of hashes. Each hash is a book. If a book title is greater than length 15, print the title. Otherwise print "title length not greater than 15 chars".
 
 ```ruby
 books = [
@@ -99,6 +122,29 @@ books.each do |book|
 	end
 end
 ```
+
+### Ranges and datatypes
+
+```ruby
+p "Hello World".class
+```
+> String
+
+```ruby
+p ['cruel', 'lovely', 'ordinary'].class
+```
+> Array
+
+```ruby
+p (0..100).class
+```
+> Range
+
+```ruby
+(0..100).each { |num| p num }
+```
+
+<br>
 
 ## `.map()`
 
@@ -242,9 +288,3 @@ num.to_f
 num.to_i
 ```
 
-**Range class**
-
-```ruby
-p (0..100).class
-```
-> Range
