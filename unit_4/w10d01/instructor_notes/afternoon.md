@@ -9,13 +9,15 @@ Competencies: JS / basic programming<br>
 
 ---
 
+* Make a file `more_ruby.rb` in `student_examples` 
+
 # Loops
 
 It is standard practice to prefer one of Ruby's built-in methods over a for loop.
 
 ## `.times`
 
-`.times` is an [Integer method](https://ruby-doc.org/core-2.2.2/Integer.html). We can use it repeat an action <integer> number of times.
+`.times` is an [Integer method](https://ruby-doc.org/core-2.2.2/Integer.html). We can use it to repeat an action _integer_ number of times.
 
 To use `.times()`, we provide a **block** to the method.
 
@@ -45,7 +47,7 @@ Ruby has a module called Enumerable that provides a set of methods to iterate ov
 ## `.each`
 The each method is Ruby's preferred way to iterate across a collection. 
 
-To use an enumberable method, we provide a **block** to the method.
+To use an enumerable method, we provide a **block** to the method.
 
 
 ```ruby
@@ -73,9 +75,11 @@ Compare to JS `.forEach`
 words.forEach((currentWord) => console.log(currentWord.toUpperCase()));
 ```
 
-If our operation takes more than one line, we use `do ... end` instead of curlies:
+
 
 #### Longform block
+
+If our operation takes more than one line, we use `do ... end` instead of curlies:
 
 Iterate over an array and if the word is "cat", just print that word, but if the word is "hat", print that word in uppercase. Otherwise print 'neither cat nor hat'.
 
@@ -158,12 +162,102 @@ squares = numbers.map { |x| x * x }
 p squares
 ```
 
-## Range and `.times`
-
-
+<br>
 
 ## `.select()`
+
+``` ruby
+p [1,2,3,4,5].select { |i| i > 3 } 
+```
+
+> [4,5]
+
+
+<br>
+
 ## `.reduce()`
+
+Reduce takes a collection and reduces it down to a single element. It applies an operation to each element, maintaining a running “total.”  
+
+```ruby
+p (5..10).reduce(:+) 
+```
+
+> 45
+
+
+```ruby
+p (1..4).reduce(:*) 
+```
+
+> 24
+
+
+You can specify and initial value:
+
+```ruby
+p [5, 6, 7].reduce(5, :+) 
+```
+
+> 23
+
+<br>
+
+## Enumerable Sorting Methods
+
+### Sort and Sort_by
+
+* **Sorting With Strings**  
+
+``` ruby
+p ['squirtle', 'mew', 'charmeleon', 'pikachu'].sort
+```
+
+> ["charmeleon", "mew", "pikachu", "squirtle"]
+
+```ruby
+p ['squirtle', 'mew', 'charmeleon', 'pikachu'].sort_by { |word| word.length}
+```
+
+> ["mew", "pikachu", "squirtle", "charmeleon"]
+
+
+* **Sorting With Integers**  
+
+```ruby
+p [2, 5, 1, 3].sort 
+```
+
+> [1, 2, 3, 5]
+
+
+* **Sorting With Strings and Integers**  
+
+``` ruby
+p [2, "hello", 1, "what"].sort 
+```
+
+> ArgumentError: comparison of Fixnum with String failed
+
+
+Sort by the integer value:
+
+```ruby
+p [2, "hello", 1, "what"].sort_by(&:to_i) 
+```
+
+> ["hello", "what", 1, 2]
+
+
+Sort by the string value:
+
+```ruby
+p [2, "hello", 1, "what"].sort_by(&:to_s) 
+```
+
+> [1, 2, "hello", "what"]  
+
+<br>
 
 # Extra
 
@@ -192,6 +286,7 @@ p num_operation 20, 20 { |x, y| x * y }
 ```
 > 400
 
+<br>
 
 # Datatypes
 
