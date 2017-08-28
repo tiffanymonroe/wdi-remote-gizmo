@@ -163,12 +163,12 @@ def print_price
 end
 ```
 
-2. Write a method that will take in multiple hashes and will print out all of the information from any hash that is sent in.
+2. Write a method that will take in two hashes and will return the sum of the prices for the items in the hashes.
 
 ```ruby
 # Compete this method:
 
-def print_hashes
+def print_item_sums
 
 end
 ```
