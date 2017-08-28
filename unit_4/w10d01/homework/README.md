@@ -21,10 +21,10 @@ The Ruby documentation is excellent. Take advantage of it!
 
 Load the following pages in your browser so that you can search for any useful Ruby methods to help you solve the problems (look through the 'methods' column on the left):
 
-* [Arrays](http://ruby-doc.org/core-2.3.1/Array.html)
-* [Strings](http://ruby-doc.org/core-2.3.1/String.html)
-* [Enumerables](http://ruby-doc.org/core-2.3.1/Enumerator.html)
-* [Hashes](http://ruby-doc.org/core-2.3.1/Hash.html)
+* [Arrays](http://ruby-doc.org/core-2.4.1/Array.html)
+* [Strings](http://ruby-doc.org/core-2.4.1/String.html)
+* [Enumerables](http://ruby-doc.org/core-2.4.1/Enumerator.html)
+* [Hashes](http://ruby-doc.org/core-2.4.1/Hash.html)
 
 <br>
 <hr>
