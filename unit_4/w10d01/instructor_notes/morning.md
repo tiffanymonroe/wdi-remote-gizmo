@@ -357,8 +357,13 @@ p book
 * rocket syntax is the old way of writing Ruby hashes. We still have to use rocket syntax if we want the key to be anything other than a **symbol**.
 
 * A symbol is an "immutable string"
+	* A symbol is unique
 
-[symbols](https://stackoverflow.com/questions/8189416/why-use-symbols-as-hash-keys-in-ruby)
+> A Symbol is the most basic Ruby object you can create. It's just a name and an internal ID. Symbols are useful because a given symbol name refers to the same object throughout a Ruby program. Symbols are more efficient than strings. Two strings with the same contents are two different objects, but for any given name there is only one Symbol object. This can save both time and memory.
+
+[ref](http://rubylearning.com/satishtalim/ruby_symbols.html) 
+
+[symbols as hash keys](https://stackoverflow.com/questions/8189416/why-use-symbols-as-hash-keys-in-ruby)
 
 **p()** requires parentheses when printing an anonymous hash. This is because the hash can get confused for a **block**.
 
