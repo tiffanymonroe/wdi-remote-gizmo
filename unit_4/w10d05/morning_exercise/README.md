@@ -29,7 +29,7 @@ There are other Ruby gems out there that do a similar thing, but we decided to p
 2. From inside your `student_example` file, install the gem nokogiri:
   `gem install nokogiri` OR some of you might need to `sudo install gem nokogiri`. This will take a few minutes. To confirm that it was installed, you can run `gem list` to show all of your Ruby gems.
 
-3. At the top of your `scraper.rb` file, require `Nokogiri` and `open-uri`:
+3. At the top of your `scraper.rb` file, require Nokogiri and open-uri:
   - `require "open-uri"`
   - `require "Nokogiri"`
 
