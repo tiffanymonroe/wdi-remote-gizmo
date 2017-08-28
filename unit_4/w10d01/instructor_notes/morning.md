@@ -15,12 +15,30 @@ Why Ruby?
 
 * Rails
 * Great example of an OOP language
-* "Naturalistic"
-	* Created by Yukihiro “Matz” Matsumoto who has often said that he is “trying to make Ruby natural, not simple,” in a way that mirrors life
 * Useful scripting language
 * Active community
 
+
+
+### Naturalism
+
+Yukihiro “Matz” Matsumoto, the creator of Ruby, has often said that he is “trying to make Ruby natural, not simple,” in a way that mirrors life.
+
 [About Ruby](https://www.ruby-lang.org/en/about/)
+
+There is a lack of visual adornments and superfluous quirks. The intention is to make Ruby closer to English, for humans, rather than for machines.
+
+However, if you have used Ruby for a while you'll discover that there are almost too many ways to achieve the same results: so many methods, so many helpful datatypes like Range, so many ways to iterate, and the question will arise, what's the best way?
+
+There is no best way. With Ruby it's up to you to discover your own way and form your own vocabulary. This is how Ruby was intended.
+
+Having said that, there are some idiomatic uses of Ruby that developers have "settled" on. Whether you adopt these idiomatic uses between you and your employer.
+
+For example, one idiomatic use is Spaces over Tabs, that is, using two Spaces and **not** a Tab character. This rule can be "controversial". [ref](https://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104)
+
+Another is never to use for loops. Another is never to use `{ ... }` blocks unless the code nicely fits on one line.
+
+Ultimately, your Ruby "way" will be dictated by whoever is paying you to write Ruby. Until then, it's up to you to discover your own "way".
 
 
 # Hello World
@@ -267,6 +285,11 @@ end
 p get_root number
 p get_exp_five number
 ```
+
+* @instance_variable
+* global_variable
+* CONSTANT_VARIABLE
+
 12:09
 
 ## Case six
@@ -316,7 +339,7 @@ Abstraction:
 
 &#x1F535; What Javascript construct fits this pattern?
 
-In JavaScript this is called an **object**. A JavaScript object can have methods. In Ruby it's called a **hash**. A hash does not have methods.
+In JavaScript this is called an **object**. Ruby has **objects** too that behave similarly. But first, let's looks at Ruby's key-valie-pair data structure, called a **hash**. A hash does not have methods and is not accessed with dot notation.
 
 ```ruby
 book = {
@@ -334,14 +357,36 @@ p book
 * rocket syntax is the old way of writing Ruby hashes. We still have to use rocket syntax if we want the key to be anything other than a **symbol**.
 
 * A symbol is an "immutable string"
+	* A symbol is unique
 
-[symbols](https://stackoverflow.com/questions/8189416/why-use-symbols-as-hash-keys-in-ruby)
+> A Symbol is the most basic Ruby object you can create. It's just a name and an internal ID. Symbols are useful because a given symbol name refers to the same object throughout a Ruby program. Symbols are more efficient than strings. Two strings with the same contents are two different objects, but for any given name there is only one Symbol object. This can save both time and memory.
 
-**p()** requires parentheses when printing an anonymous hash
+[ref](http://rubylearning.com/satishtalim/ruby_symbols.html) 
+
+[symbols as hash keys](https://stackoverflow.com/questions/8189416/why-use-symbols-as-hash-keys-in-ruby)
+
+**p()** requires parentheses when printing an anonymous hash. This is because the hash can get confused for a **block**.
 
 ```ruby
 p ({name: "Timmy", age: 44})
 ```
+
+**accessing values**
+
+The usual `book.title` will not work, because Ruby confuses properties for methods. Instead, we use bracket notation.
+
+If the keys are symbols:
+
+```ruby
+p book[:title]
+```
+
+If the keys are strings:
+
+```ruby
+p book["title"]
+```
+
 
 **passing a hash to a method**
 
@@ -357,9 +402,20 @@ end
 p shuffle_keys name: "Timmy", age: 45
 ```
 
-* hash curlies are optional when the method has one argument (the hash)
-* however, if you use the curlies, you also have to use parens
+* hash curlies are optional when the hash is passed as the last argument
+
+```ruby
+def return_num_and_hash num, hash
+	[num, hash]
+end
+
+p return_num_and_hash 5, name: "Timmy", age: 45
+```
+> [5, {:name=>"Timmy", :age=>45}]
+
+* however, if you pass only a hash, you also have to use parens (so that the hash is not confused for a block.
 
 ```ruby
 p shuffle_keys({ name: "Timmy", age: 45 })
 ```
+

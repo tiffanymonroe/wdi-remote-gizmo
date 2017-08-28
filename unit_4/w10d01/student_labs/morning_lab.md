@@ -1,11 +1,10 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Ruby Intro<br>
 Type: Morning Lab<br>
-Creator: WDIR-Hopper <br>
 Competencies: Basic Ruby<br>
 
 ---
@@ -34,15 +33,13 @@ The methods are listed along the left hand side:
 
 Use `p` to print the answer to the console.
 
-1. Create a string that contains your favorite word.
+1. Create a string that contains your favorite word. Using a method built into ruby, capitalize every letter in the string you just created.
 
-2. Using a method built into ruby, capitalize every letter in the string you just created.
+2. Using a method, make all the characters lowercase in the string `"IM NOT SHOUTING"`
 
-3. Using a method, make all the characters lowercase in the string `"IM NOT SHOUTING"`
+3. Using a method, count how many letters are in the string `"supercalifragilisticexpialidocious"`
 
-4. Using a method, count how many letters are in the string `"supercalifragilisticexpialidocious"`
-
-5. Capitalize just the first letter of the sentence `"i really like programming"`
+4. Capitalize just the first letter of the sentence `"i really like programming"`
 
 <hr>
 
@@ -62,32 +59,26 @@ Print the return value of the method to the console:
 p some_method
 ```
 
-**Print hello**
 
-Write a method `hello` that returns the string "Hello World".
- 
-* Call the method with `p` and print "Hello World" to the console. 
-* _Note_ do you need to use `return` in your method?
+**1. help me**
 
-**Print greeting**
-
-Write a method `greeting` that returns an input interpolated into a string.
+Write a method `help me` that takes a string (a name) as input and interpolates it into another string as follows:
 
 ```ruby
-p greeting "help me"
+p help_me "Rhonda"
 ```
-> "help me Rhonda"
+> "help me Rhonda, help help me Rhonda"
 
-**Print sum**
+**2. Print sum**
 
-Write a method `sum_numbers` that returns the sum of two inputs.
+Write a method `sum_numbers` that returns the sum of three inputs.
 
 ```ruby
-p sum_numbers 20, 22
+p sum_numbers 20, 10, 12
 ```
 > 42
 
-**Print if key exists**
+**3. Print if key exists**
 
 Write a method `check_key` that takes two inputs: one is a symbol, the other is a hash.
 
@@ -98,7 +89,9 @@ p check_key :name, name: "Timmy"
 ```
 > true
 
-**Print if value exists**
+Remember to check the Ruby docs for useful Hash methods.
+
+**4. Print if value exists**
 
 Write a method `check_value` that takes two inputs, one which is a hash, and checks if the first input is a value in the hash.
 
@@ -107,9 +100,10 @@ p check_value "Timmy", { name: "Timmy", age: 100 }
 ```
 > true
 
+
 # Problem-solving
 
-**Convert Time**
+**1. Convert Time**
 
 Write a method `convert_time` that takes a parameter `num`. The method should return the number of hours and minutes within `num`. Return a string with the hours and minutes separated with a colon.
 
@@ -135,12 +129,15 @@ convert_time 126
 
 You will not need any loops or advanced techniques to solve `convert_time`. All you'll need is a few lines of code, some math-thinking-pain and some built-in methods.
 
-
-
 # Hungry for More?
 
 Solve these Ruby problems:
 
-1. [problem 1](https://coderbyte.com/editor/guest:Letter%20Changes:Ruby)
-2. [problem 2](https://coderbyte.com/editor/guest:Simple%20Symbols:Ruby)
+1. [Letter Changes](https://coderbyte.com/editor/guest:Letter%20Changes:Ruby)
+2. [Simple Symbols](https://coderbyte.com/editor/guest:Simple%20Symbols:Ruby)
+
+
+# Hungry for Even More??
+
+Do these [Ruby challenge problems](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_4/w10d01/instructor_notes/RUBY_CHALLENGE_PROBLEMS.md)
 
