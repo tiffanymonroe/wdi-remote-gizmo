@@ -4,17 +4,19 @@
 
 Methods
 
-**[String methods](https://ruby-doc.org/core-2.2.2/String.html)**
+**[String methods](https://ruby-doc.org/core-2.4.0/String.html)**
 
-**[Array methods](https://ruby-doc.org/core-2.2.2/Array.html)**
+**[Array methods](https://ruby-doc.org/core-2.4.0/Array.html)**
 
-**[Enumerator methods](https://ruby-doc.org/core-2.2.2/Enumerator.html)**
+**[Enumerator methods](https://ruby-doc.org/core-2.4.0/Enumerator.html)**
 
-**[Enumerable methods](https://ruby-doc.org/core-2.2.2/Enumerable.html)**
+**[Enumerable methods](https://ruby-doc.org/core-2.4.0/Enumerable.html)**
 
-**[Hash methods](https://ruby-doc.org/core-2.2.2/Hash.html)**
+**[Hash methods](https://ruby-doc.org/core-2.4.0/Hash.html)**
 
-**[Integer methods](https://ruby-doc.org/core-2.2.2/Integer.html)**
+**[Integer methods](https://ruby-doc.org/core-2.4.0/Integer.html)**
+
+**[Range methods](https://ruby-doc.org/core-2.4.0/Range.html)**
 
 
 <br>
