@@ -5,13 +5,24 @@
     <title></title>
     <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js" charset="utf-8"></script>
     <script src="/js/app.js"></script>
+    <link rel="stylesheet" href="/css/app.css">
   </head>
   <body ng-controller="MyController as ctrl">
+    <h1>To Do App</h1>
+    <h2>To Do:</h2>
     <ul>
-      <li ng-repeat="todo in ctrl.todos">{{todo.description}}: {{todo.complete}}</li>
+      <li ng-class="(todo.complete)?'complete':''" ng-repeat="todo in ctrl.todos">
+        <span ng-click="ctrl.updateTodo(todo)">{{todo.description}} </span>
+        <button ng-click="ctrl.deleteTodo(todo)">X</button>
+        <form ng-submit="ctrl.editTodo(todo)">
+          <input type="text" ng-model="updatedDescription"/>
+          <input type="submit" value="update"/>
+        </form>
+      </li>
     </ul>
+    <h2>Add a New To Do</h2>
     <form ng-submit="ctrl.createToDo()">
-      
+
       <input type="text" ng-model="ctrl.description" placeholder="description"/>
       Complete: <input ng-model="ctrl.complete" type="checkbox"/>
       <input type="submit" value="Create New To Do Item"/>

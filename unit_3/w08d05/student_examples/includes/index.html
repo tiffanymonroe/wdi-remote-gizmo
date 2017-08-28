@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html ng-app="MyApp">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+      <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.4/angular.min.js"></script>
+		<script src="app.js" charset="utf-8"></script>
+  </head>
+  <body ng-controller="BaseCtrl as ctrl">
+    <div ng-include="'included.html'"></div>
+    {{ctrl.text1 | uppercase}}<br/>
+    {{ctrl.text2 | limitTo:8}}<br/>
+    {{ctrl.date | date: 'MM/dd/yyyy @ h:mm:ssa'}}
+    <ul>
+      <li ng-repeat="product in ctrl.products | orderBy: '-price'">{{product.name}}: {{product.price | currency}}</li>
+  </body>
+</html>
