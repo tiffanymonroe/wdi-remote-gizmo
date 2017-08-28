@@ -241,6 +241,7 @@ def get_primes limit
 end
 
 get_primes 100
+p "++++++"
 
 # > A Prime number is a number that is not evenly divisible by another number except 1 and itself.
 #
@@ -248,6 +249,23 @@ get_primes 100
 #
 # Check out Ruby's `Prime` class: http://ruby-doc.org/stdlib-1.9.3/libdoc/prime/rdoc/Prime.html
 #
+# Ruby Class Prime
+def check_prime_w_class? num
+  require 'prime'
+  Prime.prime? num
+end
+
+p check_prime_w_class? 17
+p "++++++"
+
+def get_prime_w_class? num
+  require 'prime'
+  Prime.each num do |prime|
+    p prime
+  end
+end
+get_prime_w_class? 100
+
 p "---------------- Commit 7: Hungry for More - Word Frequency -------------------"
 
 #
@@ -257,6 +275,33 @@ p "---------------- Commit 7: Hungry for More - Word Frequency -----------------
 #
 # Find the word that appears in a given sentence with the greatest frequency. If there is a tie, either of the words will do as a result.
 #
+
+str = 'The  brown brown brown quick brown quick quick fox jumped over the lazy brown jumped dog jumped quick'
+
+def word_freq words
+
+  best_count = 0
+  most_word = nil
+  to_array = words.split(" ")
+  for i in 0..to_array.length
+  current_count = 0
+    for j in 0..to_array.length
+      if i != j
+        if to_array[i] == to_array[j]
+          current_count += 1
+        end
+      end
+      if current_count > best_count
+        best_count = current_count
+        most_word = to_array[i]
+      end
+    end
+  end
+  puts most_word
+end
+
+word_freq str
+
 p "---------------- Commit 8: Hungry for Even More - Pandigital Numbers -------------------"
 # # Hungry For Even More?
 #
@@ -273,3 +318,30 @@ p "---------------- Commit 8: Hungry for Even More - Pandigital Numbers --------
 # - The number `987654321` is _1-to-n pandigital_.
 #
 # Write a method that checks if a number is _1-to-n pandigital_.
+
+def pandigital num
+  is_pandigital = false
+  to_string = num.to_s
+  for i in 1..to_string.length
+    count = 0
+    for j in 0..to_string.length
+      if count > 1
+        false
+      end
+      if i.to_s == to_string[j]
+        count +=1
+      end
+    end
+    if count == 0
+      false
+    elsif count == 1
+      is_pandigital = true
+    end
+  end
+  is_pandigital
+end
+
+p pandigital 52431
+p pandigital 333
+p pandigital 0
+p pandigital 987654321
