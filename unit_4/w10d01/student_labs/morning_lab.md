@@ -1,11 +1,10 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-Hopper
+# WDIR-Gizmo
 
 ---
 Title: Ruby Intro<br>
 Type: Morning Lab<br>
-Creator: WDIR-Hopper <br>
 Competencies: Basic Ruby<br>
 
 ---
