@@ -37,6 +37,14 @@ Withint the block, we instantiate a variable that represents the currently-itera
 
 Let's look at the same principle but with **iteration**.
 
+We can use times to iterate:
+
+```
+arr = [1, 2, 3]
+
+arr.length.times { |num| p arr[num] }
+```
+
 <br>
 
 3:15
@@ -181,6 +189,10 @@ p (0..100).class
 ```ruby
 (0..100).each { |num| p num }
 ```
+
+Range also has `.step`
+
+
 
 4:00
 
