@@ -209,7 +209,7 @@ This method can call on the previous `check_prime?` method.
 
 > To test whether a number is Prime, you only need to test as far as the **square root** of that number. This is advisable for optimization and testing large numbers.
 
-Check out Ruby's `Prime` class: http://ruby-doc.org/stdlib-1.9.3/libdoc/prime/rdoc/Prime.html
+Check out Ruby's `Prime` class: http://ruby-doc.org/stdlib-2.4.1/libdoc/prime/rdoc/Prime.html
 
 <hr>
 &#x1F534; **Commit your work** <br>
