@@ -14,6 +14,11 @@ Adapted by: Thom Page<br>
 
 This was an interview coding challenge used by Microsoft to challenge its interviewees. It was called 100 Doors but this time, we're using sick Goblins.
 
+## What you should do once we read the problem:
+
+1. As pairs, pseudo-code the entire problem.
+2. Once your pseudo-code is written, write code _in Ruby_ that will solve each section of your pseudo-code.
+
 ![](https://i.imgur.com/Nq4qBwT.png)
 <hr>
 
