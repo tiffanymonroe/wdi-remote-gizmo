@@ -138,6 +138,17 @@ end
 
 3:50
 
+## `.each_with_index`
+
+```ruby
+arr = ["The", "cat", "in", "the", "hat"]
+
+arr.each_with_index do |item, index| 
+	p index
+	p item if index % 2 == 0
+end
+```
+
 ### Ranges and datatypes
 
 ```ruby
