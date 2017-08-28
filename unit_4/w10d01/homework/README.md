@@ -241,6 +241,7 @@ A number of length n is _1-to-n pandigital_ if it makes use of all the digits 1 
 - The number `333` is **not** _1-to-n pandigital_.
 
 - The number `0` is **not** _1-to-n pandigital_.
+- The number `10` is **not** _1-to-n pandigital_.
 
 - The number `987654321` is _1-to-n pandigital_.
 
