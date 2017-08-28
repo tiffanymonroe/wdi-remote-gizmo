@@ -71,7 +71,7 @@ p help_me "Rhonda"
 
 **2. Print sum**
 
-Write a method `sum_three` that returns the sum of three inputs.
+Write a method `sum_numbers` that returns the sum of three inputs.
 
 ```ruby
 p sum_numbers 20, 10, 12
@@ -88,6 +88,8 @@ The function should return **true** if the symbol is a key that exists in the ha
 p check_key :name, name: "Timmy"
 ```
 > true
+
+Remember to check the Ruby docs for useful Hash methods.
 
 **4. Print if value exists**
 
