@@ -135,3 +135,8 @@ Solve these Ruby problems:
 1. [Letter Changes](https://coderbyte.com/editor/guest:Letter%20Changes:Ruby)
 2. [Simple Symbols](https://coderbyte.com/editor/guest:Simple%20Symbols:Ruby)
 
+
+# Hungry for Even More??
+
+Do these [Ruby challenge problems](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_4/w10d01/instructor_notes/RUBY_CHALLENGE_PROBLEMS.md)
+

@@ -131,3 +131,7 @@ Solve these Ruby problems (same as the Hungry for More from this morning's lab).
 
 1. [Letter changes](https://coderbyte.com/editor/guest:Letter%20Changes:Ruby)
 2. [Simple symbols](https://coderbyte.com/editor/guest:Simple%20Symbols:Ruby)
+
+# Hungry for Even More??
+
+Do these [Ruby challenge problems](https://github.com/ga-students/wdi-remote-gizmo/blob/master/unit_4/w10d01/instructor_notes/RUBY_CHALLENGE_PROBLEMS.md) (as the Hungry for Even More from this morning's lab)
