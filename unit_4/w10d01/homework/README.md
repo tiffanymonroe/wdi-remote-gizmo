@@ -49,7 +49,7 @@ Expected output:
 => Hello Big Bad World
 ```
 
-3. Save "Hello World" to a variable. Without changing the letters in your code manually, perminantly change "Hello World" to uppercased letters.
+3. Save "Hello World" to a variable. Without changing the letters in your code manually, permanently change "Hello World" to uppercased letters.
 
 <hr>
 &#x1F534; **Commit your work** <br>
@@ -103,7 +103,7 @@ def findArea(height, width)
 end
 ```
 
-* Write a method that will loop over the `nums` array and print each number multipled by 5
+* Write a method that will loop over the `nums` array and print each number multiplied by 5
 
 
 ```ruby
@@ -127,7 +127,7 @@ The commit message should read: <br>
 
 ## Methods with a Hash
 
-Use the following hashes to answer the questions below. 
+Use the following hashes to answer the questions below.
 
 ```ruby
 # Hashes
@@ -147,7 +147,7 @@ lamp = {
 
 table = {
   type: 'bed side',
-  brand: 'Crate & Barrell',
+  brand: 'Crate & Barrel',
   color: 'birch',
   price: 50
 }
