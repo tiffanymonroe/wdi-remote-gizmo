@@ -32,9 +32,9 @@ However, if you have used Ruby for a while you'll discover that there are almost
 
 There is no best way. With Ruby it's up to you to discover your own way and form your own vocabulary. This is how Ruby was intended.
 
-Having said that, there are some idiomatic uses of Ruby that developers have "settled" on. But you don't have to live your life full of boring opinions. Whether you adopt these idiomatic uses between you and your employer.
+Having said that, there are some idiomatic uses of Ruby that developers have "settled" on. Whether you adopt these idiomatic uses between you and your employer.
 
-For example, one idiomatic use is Spaces over Tabs, that is, using two Spaces and **not** a Tab character. This rule can be "controversial". This gets a big yawn from me, I don't care either way. I'm more worried about my cat getting older. [ref](https://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104)
+For example, one idiomatic use is Spaces over Tabs, that is, using two Spaces and **not** a Tab character. This rule can be "controversial". [ref](https://www.amazon.com/Eloquent-Ruby-Addison-Wesley-Professional/dp/0321584104)
 
 Another is never to use for loops. Another is never to use `{ ... }` blocks unless the code nicely fits on one line.
 
@@ -339,7 +339,7 @@ Abstraction:
 
 &#x1F535; What Javascript construct fits this pattern?
 
-In JavaScript this is called an **object**. A JavaScript object can have methods. In Ruby it's called a **hash**. A hash does not have methods.
+In JavaScript this is called an **object**. Ruby has **objects** too that behave similarly. But first, let's looks at Ruby's key-valie-pair data structure, called a **hash**. A hash does not have methods and is not accessed with dot notation.
 
 ```ruby
 book = {
