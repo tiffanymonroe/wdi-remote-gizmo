@@ -33,7 +33,7 @@ Load the following pages in your browser so that you can search for any useful R
 
 ## Hello World
 
-* Print "Hello World" to the console
+1. Print "Hello World" to the console
 
 After you have printed Hello World:
 
@@ -41,13 +41,15 @@ After you have printed Hello World:
 adjective = "Big Bad"
 ```
 
-* Interpolate the `adjective` variable into the Hello World string using `#{}`
+2. Interpolate the `adjective` variable into the Hello World string using `#{}`
 
 Expected output:
 
 ```ruby
 => Hello Big Bad World
 ```
+
+3. Save "Hello World" to a variable. Without changing the letters in your code manually, perminantly change "Hello World" to uppercased letters.
 
 <hr>
 &#x1F534; **Commit your work** <br>
