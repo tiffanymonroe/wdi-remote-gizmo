@@ -98,7 +98,7 @@ The commit message should read: <br>
 	* Remember, the keyword 'return' is implied and can be omitted
 
 ```ruby
-def findArea(height, width)
+def find_area height, width
 
 end
 ```
@@ -111,7 +111,7 @@ nums = [5, 5, 6, 7, 2, 4, 3, 2, 1, 9, 7, 6, 0, 0]
 ```
 
 ```ruby
-def multiplyEachByFive(arr)
+def multiply_each_by_five arr
 
 end
 ```
@@ -158,7 +158,7 @@ table = {
 ```ruby
 # Compete this method:
 
-def printPrice
+def print_price
 
 end
 ```
@@ -168,7 +168,7 @@ end
 ```ruby
 # Compete this method:
 
-def printHashes
+def print_hashes
 
 end
 ```
@@ -200,7 +200,7 @@ The commit message should read: <br>
 
 * Write a method called `check_prime?` that will test whether a number is Prime. The method will return true if Prime, false if not.
 
-* Write another method called `get_primes` that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with `get_primes(100)`, it will print all the Prime numbers up to and including 100.
+* Write another method called `get_primes` that will print all the Primes up to an arbitrary limit. For example, if you invoke your method with `get_primes 100`, it will print all the Prime numbers up to and including 100.
 
 This method can call on the previous `check_prime?` method.
 
