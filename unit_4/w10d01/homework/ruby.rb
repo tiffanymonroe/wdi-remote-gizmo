@@ -42,36 +42,41 @@
 
 
 
-book = {
-  title: 'The Great Gatsby',
-  author: 'F Scott Fitzgerald',
-  year: 1925,
-  price: 10
-}
+# book = {
+#   title: 'The Great Gatsby',
+#   author: 'F Scott Fitzgerald',
+#   year: 1925,
+#   price: 10
+# }
+#
+# lamp = {
+#   type: 'reading',
+#   brand: 'Ikea',
+#   price: 25
+# }
+#
+# table = {
+#   type: 'bed side',
+#   brand: 'Crate & Barrel',
+#   color: 'birch',
+#   price: 50
+# }
+#
+# def print_price hash
+#   hash[:price]
+# end
+#
+# p print_price book
+# p print_price lamp
+# p print_price table
+#
+# def print_item_sums hash1, hash2
+#   hash1 + hash2
+# end
+#
+# p print_item_sums book[:price], lamp[:price]
 
-lamp = {
-  type: 'reading',
-  brand: 'Ikea',
-  price: 25
-}
 
-table = {
-  type: 'bed side',
-  brand: 'Crate & Barrel',
-  color: 'birch',
-  price: 50
-}
+euler = (1...1000).select {|i| i % 3 == 0 || i % 5 == 0}
 
-def print_price hash
-  hash[:price]
-end
-
-p print_price book
-p print_price lamp
-p print_price table
-
-def print_item_sums hash1, hash2
-  hash1 + hash2
-end
-
-p print_item_sums book[:price], lamp[:price]
+p euler.reduce(:+)
