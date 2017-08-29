@@ -1,3 +1,13 @@
+![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
+# WDIR-Gizmo
+
+---
+Title: Ruby Objects and Classes<br>
+Creator: Thom Page <br>
+Competencies: Basic Ruby<br>
+
+---
 
 # Objects
 
