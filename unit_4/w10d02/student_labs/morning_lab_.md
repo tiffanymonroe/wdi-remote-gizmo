@@ -12,6 +12,20 @@ Competencies: Ruby classes<br>
 
 ## RUBY CLASSES
 
+Remember:
+
+1. Ruby objects are created by Ruby classes
+
+2. A Ruby class is a template for creating a Ruby object
+
+3. A Ruby object contains methods from its class and maintains its own state
+
+Make an object from a class by using
+
+```ruby
+some_new_object = SomeClass.new (optional arguments)
+```
+
 # 1. Classes
 
 Watch the optional short video [here](https://www.youtube.com/watch?v=r6wVziWXYWI). 6 mins 23 seconds.
@@ -60,18 +74,20 @@ q.honk
 
 # 3. Person object
 
-Use a Ruby class to make a 'person' object. The person should meet the followng specs:
+Use a Ruby class to make a 'person' object. The person should meet the following specs:
 
 ### Object specs
 
 A Person should have a name and an age.
 
-A Person should be able to do squat-lunges. (A `squat_lunge` method). But, a person should only be able to do so many squat-lunges. Make it so there is is a limit to how many squat-lunges that person can do.
-
 <br>
 
-# 4. Objects within objects
+# 4. Objects communicating with objects
 
 Using your `World` object from before, make it so that when the `populate` method is called, a new `Person` object is added to the world. That is, a new person is made from the person class and added to the `@people` array (instead of just adding a hash to the array).
 
+### More person object specs
+
+Alter your Person class so that
+a person is able to do squat-thrusts. (A `squat_thrust` method). But, a person should only be able to do so many squat-thrust. Make it so there is is a limit to how many squat-thrusts that person can do. 
 

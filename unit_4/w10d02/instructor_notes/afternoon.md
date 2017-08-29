@@ -1,3 +1,14 @@
+![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
+# WDIR-Gizmo
+
+---
+Title: Ruby Console Game<br>
+Creator: Thom Page <br>
+Competencies: Basic Ruby and Classes<br>
+
+---
+
 # Ruby Console Game
 
 **Input and output**
