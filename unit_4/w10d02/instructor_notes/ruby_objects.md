@@ -222,6 +222,23 @@ p world4.name
 "Spiky hair ville"
 "Frosted tips ville"
 
+Add in `shape`. Add getters and setters.
+
+```ruby
+  def initialize name, shape
+    @shape = shape
+    @name = name
+    @people = []
+  end
+```
+
+# Remove getters and setters
+
+```ruby
+  attr_reader :people
+  attr_accessor :name, :shape
+```
+
 # Provide data to object method
 
 ```ruby
@@ -236,6 +253,8 @@ p world3.people
 ```
 
 > [{:name=>"Bart Simpson", :age=>10}]
+
+
 
 
 
