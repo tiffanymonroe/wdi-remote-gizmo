@@ -77,6 +77,12 @@
 # p print_item_sums book[:price], lamp[:price]
 
 
-euler = (1...1000).select {|i| i % 3 == 0 || i % 5 == 0}
+# euler = (1...1000).select {|i| i % 3 == 0 || i % 5 == 0}
+#
+# p euler.reduce(:+)
 
-p euler.reduce(:+)
+def check_prime?
+end
+
+def get_primes 
+end
