@@ -53,9 +53,9 @@ This is the same thing, but in Ruby.
 ```ruby
 class World
 
-	def name
-		"Panthalassa"
-	end
+  def name
+    "Panthalassa"
+  end
 
 end
 
@@ -94,13 +94,13 @@ We can make an **initialize** method in our class that will automatically run wh
 ```ruby
 class World
 
-	def initialize
-		@name = "Panthalassa"
-	end
+  def initialize
+    @name = "Panthalassa"
+  end
 
-	def name
-		@name
-	end
+  def name
+    @name
+  end
 
 end
 
@@ -116,17 +116,17 @@ Then, make a setter method with special
 ```ruby
 class World
 
-	def initialize
-		@name = "Panthalassa"
-	end
+  def initialize
+    @name = "Panthalassa"
+  end
 
-	def name
-		@name
-	end
+  def name
+    @name
+  end
 	
-	def name=value
-		@name = value
-	end
+  def name=value
+    @name = value
+  end
 
 end
 
@@ -150,26 +150,26 @@ Let's make it so a world can populate itself with people.
 ```ruby
 class World
 
-	def initialize
-		@name = "Panthalassa"
-		@people = []
-	end
+  def initialize
+    @name = "Panthalassa"
+    @people = []
+  end
 
-	def name
-		@name
-	end
+  def name
+    @name
+  end
 
-	def people
-		@people
-	end
+  def people
+    @people
+  end
 
-	def name=value
-		@name = value
-	end
+  def name=value
+    @name = value
+  end
 
-	def populate
-		@people << { name: "Lumpy", age: 20 }
-	end
+  def populate
+    @people << { name: "Lumpy", age: 20 }
+  end
 
 end
 
@@ -194,10 +194,10 @@ All the worlds we make will start out the same. What if we want to start off wit
 We can provide input to the **initialize** method:
 
 ```ruby
-	def initialize name
-		@name = name
-		@people = []
-	end
+  def initialize name
+    @name = name
+    @people = []
+  end
 ```
 
 ```
@@ -223,9 +223,9 @@ p world4.name
 # Provide data to object method
 
 ```ruby
-	def populate name, age
-		@people << { name: name, age: age }
-	end
+  def populate name, age
+    @people << { name: name, age: age }
+  end
 ```
 
 ```ruby
