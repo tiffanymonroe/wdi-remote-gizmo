@@ -10,11 +10,11 @@ A giveaway that something is an object is if it takes a method.
 "Hello World".upcase
 ```
 
-It looks suspiciously like "Hello World" is an object, ie. it exhibits behavior such as `upcase` and has a method attached.
+It looks suspiciously like "Hello World" is an object, ie. it exhibits behavior such as `upcase`.
 
 A **class** is a template for creating objects.
 
-The string "Hello World" is an _instance_ of the String class.
+The string "Hello World" is an _instance_ of the String class. Just like the string "Cherish the cabin" is an _instance_ of the String class. They are both different, but they are both strings.
 
 What if we make up our own method for every instance of the String class?
 
