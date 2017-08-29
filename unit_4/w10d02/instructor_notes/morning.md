@@ -1,8 +1,27 @@
+
+# Objects
+
+Abstraction
+
+> A Structure is one of the 5 data types in programming. A structure is used to represent information about something more complicated than a single number, character, or boolean can do (and more complicated than an array of the above data types can do). For example, a Student can be defined by his or her name, gpa, age, uid, etc. Each of these pieces of information should be labeled with an easily understood descriptive title, and then combined to form a whole (the structure).
+
+> We use the "DOT" notation to access a structure stored in a variable, thus, car.max_speed, car.number_of_doors, car.ac, are all valid references to a structure.
+
+Abstraction
+
+> A template by which Objects can be constructed
+> 
+> A blueprint (or recipe) of how to build an object and information about what defines an object.
+
+<br>
+
 # Everything is an object
 
 [Not quite](http://rubylearning.com/blog/2010/09/27/almost-everything-is-an-object-and-everything-is-almost-an-object/)
 
 [What is an object?](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/39-ruby-s-object-model/lessons/127-object-identity-what-is-an-object)
+
+Lets do a simple test. Let's look at a string. If a string is just text, how come we can use methods on it? When programming in Ruby, a string looks like text but is really an object. 
 
 A giveaway that something is an object is if it takes a method.
 
@@ -11,6 +30,27 @@ A giveaway that something is an object is if it takes a method.
 ```
 
 It looks suspiciously like "Hello World" is an object, ie. it exhibits behavior such as `upcase`.
+
+An even bigger giveaway is if that object belongs to a class. 
+
+```ruby
+"Hello World".class
+```
+> String
+
+Not only are we using a method but we are also looking at a class! Oh yeah, this guy's an object for sure.
+
+Even a **block** is an object. An anymous block is called a lambda, and it belongs to the Proc class:
+
+```ruby
+p lambda { |n| p n }.class
+```
+
+> `#<Proc:0x007fcacc1474b0@objects.rb:1 (lambda)>`
+
+[Proc docs](https://ruby-doc.org/core-2.4.1/Proc.html)
+
+## Classes
 
 A **class** is a template for creating objects.
 
@@ -26,7 +66,6 @@ class String
   end
 	
 end
-
 
 p "Hello World".class
 p "Hello World".zumpledeboop
@@ -46,6 +85,8 @@ From one class, you can make myriad objects all with the same methods.
 11:20
 
 # Make our own objects
+
+* create a file `objects.rb` in `student_examples`
 
 We can make our _own_ objects. They will be very similar to the JavaScript ones we are used to, the ones that have properties and methods that can be accessed and altered with **dot notation**.
 
