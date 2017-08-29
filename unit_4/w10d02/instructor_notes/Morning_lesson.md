@@ -1,96 +1,309 @@
-![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+# Everything is an object
 
-# WDIR-Gizmo
+[Not quite](http://rubylearning.com/blog/2010/09/27/almost-everything-is-an-object-and-everything-is-almost-an-object/)
 
-<hr>
-Title: Ruby II - Exploring Methods<br>
-Type: Exploration & Presentation<br>
-Duration: 1.5 hrs<br>
-Creator: Kristyn Bryan<br>
-Topics: Ruby methods<br>
-<hr>
+[What is an object?](https://rubymonk.com/learning/books/4-ruby-primer-ascent/chapters/39-ruby-s-object-model/lessons/127-object-identity-what-is-an-object)
 
-# Explore Ruby's Methods
+A giveaway that something is an object is if it takes a method.
 
-### Lesson Objectives
-_During this lesson, students will be:_
-- Use the ruby docs to find methods
-- Use and explain ruby methods
-
-<br>
-<hr>
-
-![explorers](http://www.thewrap.com/wp-content/uploads/2016/05/explorersmovie.jpg)
-
-This morning you will each get a method to explore. Your job is to look in the Ruby documentation to read about the method, come up with an explanation of what it is, and show an example of it in use.
-
-You'll have 15 minutes to research and prepare. You will then take turns sharing your screen and presenting your findings to the class. When you are not presenting, it's your job to listen, learn, take notes, and ask questions.
-
-[String](http://ruby-doc.org/core-2.3.0/String.html)
-
-1. `!` An
-2. `rstrip` /`rstrip!` Todd
-3. `reverse` /`reverse!` Mark
-4. `gsub` / `gsub!` Jim
-
-Example string: `"we researched ruby methods"`
-
-[Array](http://ruby-doc.org/core-2.3.0/Array.html)
-
-1. `compact` / `compact!` Cathleen
-2. `delete_at` /`delete_if` Ky
-3. `fetch` Biren
-4. `flatten` / `flatten!` Geraldine
-5. `sample` Hanna
-6. `select` / `select!` Dylan
-7. `zip`  Sheila
-8. `<<` Stanley
-9. `first` / `last` Soniya
-10. `each_with_index` Amanda
-11. `step` (note, you'll be doing the `.step` on a range of numbers, but it can then be used with an array) Mark
-
-Example array:
 ```ruby
-students = ["An", "Todd", "Mark", "Jim", "Cathleen", "Ky", "Biren", "Geraldine", "Hanna", "Dylan", "Sheila", "Charles", "Soniya", "Jerrica", "Ellen", "Lenin", "Adam", "Stanley", "Matthew", "Anthony", "Joe", "Emily", "Amanda"]
+"Hello World".upcase
 ```
 
-[Hash](http://ruby-doc.org/core-2.3.0/Hash.html)
+It looks suspiciously like "Hello World" is an object, ie. it exhibits behavior such as `upcase`.
 
-1. `has_key?` Jerrica
-2. `keys` Ellen
-4. `to_a` Emily
-5. `merge` / `merge!` Adam
-6. `flatten` Charles
-7. `invert` Matthew
+A **class** is a template for creating objects.
 
-Example hash:
+The string "Hello World" is an object that is an _instance_ of the String class. Just like the string "Cherish the cabin" is an object that is an _instance_ of the String class. They are both different objects, but they are both strings.
+
+What if we make up our own method for every instance of the String class?
+
 ```ruby
-cohort = {name: "Hopper", instructors: 4, "never_gonna_give_you_up" => "favorite song", most_played_song: "Freebird", instructors: ["Matt", "Thom", "Karolin", "Kristyn"], 100 => 200}
+class String
+
+  def zumpledeboop
+    self.upcase.reverse
+  end
+	
+end
+
+
+p "Hello World".class
+p "Hello World".zumpledeboop
+p "Cherish the cabin".zumbledeboop
 ```
 
-[Integer](http://ruby-doc.org/core-2.3.0/Integer.html)
+> "DLROW OLLEH"
 
-1. `odd?` / `even?` Anthony
-2. `floor` / `next` Joe
-3. `times` Lenin
+[Self in Ruby](https://hackhands.com/three-golden-rules-understand-self-ruby/)
 
-Example integers:
+If you've ever wondered how a string can take a method, it's because a string is secretly an **object** with **methods**.
+
+An **object** is an _instance_ of a **class**.
+
+From one class, you can make myriad objects all with the same methods.
+
+11:20
+
+# Make our own objects
+
+We can make our _own_ objects. They will be very similar to the JavaScript ones we are used to, the ones that have properties and methods that can be accessed and altered with **dot notation**.
+
+Let's make a template for our objects. The template is called a **class**. Remember how in JavaScript we used classes to create objects?
+
+This is the same thing, but in Ruby.
+
 ```ruby
-1
-28
-12_345_678
+class World
+
+  def name
+    "Panthalassa"
+  end
+
+end
+
+
+world1 = World.new
+
+p world1
+p world1.name
+p world1.class
 ```
 
-[Method](http://www.skorks.com/2009/08/method-arguments-in-ruby/)
-1. Default values in parameters - Amanda
+> `#<World:0x007ff2f90277b0>`
+> 
+> `"Panthalassa"`
+> 
+> `World`
 
-## Post your notes and example in Slack
+The first thing we see is the object itself. It looks strange, but that's OK.
 
-When it's your turn to present, post your topic, notes, and comment in Slack so that others can put it into their notes.
+The next thing is the name of that world.
 
-### Formatting for Slack:
-![formatting](https://i.imgur.com/R1J1OOg.png)
+Last, we see that `world1` is an object created by the **World** class.
 
-### Example
+11:33
 
-![slack](https://i.imgur.com/jd2Xg3y.png)
+# Make it so we can update properties
+
+```ruby
+world1.name = "Booger-town"
+```
+
+Does not work, instead we have to make a **setter method** in the class.
+
+First, abstract `name` into an **instance variable** that will have scope over all methods in the class.
+
+We can make an **initialize** method in our class that will automatically run when we instantiate an object.
+
+```ruby
+class World
+
+  def initialize
+    @name = "Panthalassa"
+  end
+
+  def name
+    @name
+  end
+
+end
+
+world1 = World.new
+p world1.name
+```
+
+The **initialize** method is just like the **constructor** method we used in JavaScript classes.
+
+Then, make a setter method with special
+`something=input` syntax:
+
+```ruby
+class World
+
+  def initialize
+    @name = "Panthalassa"
+  end
+
+  def name
+    @name
+  end
+	
+  def name=value
+    @name = value
+  end
+
+end
+
+
+world1 = World.new
+world1.name = "Booger-town"
+p world1.name
+```
+
+We are getting closer to making objects that behave like JS objects.
+
+11:52
+
+# Behavior
+
+Let's make it so the worlds we make will do something.
+
+Let's make it so a world can populate itself with people.
+
+**Object Specs:**
+
+* A world can have many people, but starts with none
+	* This means initialize the object with an empty array to hold the people in.
+
+* World can populate itself with one person at a time. A person has properties.
+	* Make a method `populate` that will push a hash into the people array.
+
+```ruby
+class World
+
+  def initialize
+    @name = "Panthalassa"
+    @people = []
+  end
+
+  def name
+    @name
+  end
+
+  def people
+    @people
+  end
+
+  def name=value
+    @name = value
+  end
+
+  def populate
+    @people << { name: "Lumpy", age: 20 }
+  end
+
+end
+
+
+world1 = World.new
+
+p world1.people
+
+world1.populate
+world1.populate
+world1.populate
+
+p world1.people
+```
+
+> [{:name=>"Lumpy", :age=>20}, {:name=>"Lumpy", :age=>20}, {:name=>"Lumpy", :age=>20}]
+
+12:05
+
+# Provide data to new object
+
+All the worlds we make will start out the same. What if we want to start off with different worlds?
+
+We can provide input to the **initialize** method:
+
+```ruby
+  def initialize name
+    @name = name
+    @people = []
+  end
+```
+
+```
+world1 = World.new "Panthalassa"
+world2 = World.new "Booger-town"
+world3 = World.new "Spiky hair ville"
+world4 = World.new "Frosted tips ville"
+```
+
+```
+p world1.name
+p world2.name
+p world3.name
+p world4.name
+```
+
+
+>"Panthalassa"
+"Booger-town"
+"Spiky hair ville"
+"Frosted tips ville"
+
+Add in `shape`. Add getters and setters.
+
+```ruby
+  def initialize name, shape
+    @shape = shape
+    @name = name
+    @people = []
+  end
+```
+
+12:13
+
+# Provide data to object method
+
+```ruby
+  def populate name, age
+    @people << { name: name, age: age }
+  end
+```
+
+```ruby
+world3.populate "Bart Simpson", 10
+p world3.people
+```
+
+> [{:name=>"Bart Simpson", :age=>10}]
+
+12:16
+
+# Remove getters and setters
+
+```ruby
+class World
+
+	attr_reader :people
+	attr_accessor :name, :shape
+
+	def initialize name, shape
+		@shape = shape
+		@name = name
+		@people = []
+	end
+
+	def populate name, age
+		@people << { name: name, age: age }
+	end
+
+end
+```
+
+# Extra
+
+Another class
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

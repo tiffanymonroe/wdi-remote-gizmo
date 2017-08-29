@@ -13,6 +13,10 @@ Competencies: JS / basic programming<br>
 
 # Loops
 
+Abstraction
+
+> to repeat a single (or several) lines of code over and over again. This allows us to "write once" and then "execute many times"
+
 It is standard practice to prefer one of Ruby's built-in methods over a for loop.
 
 ## `.times`
@@ -33,14 +37,25 @@ Withint the block, we instantiate a variable that represents the currently-itera
 
 Let's look at the same principle but with **iteration**.
 
+We can use times to iterate:
+
+```
+arr = [1, 2, 3]
+
+arr.length.times { |num| p arr[num] }
+```
+
 <br>
 
-## Enumerables
+3:15
+
+## Iteration
+
+**Ruby enumerables**
 
 > An enumeration is a complete, ordered listing of all the items in a collection. The term is commonly used in mathematics and computer science to refer to a listing of all of the elements of a set.
 
 Ruby has a module called Enumerable that provides a set of methods to iterate over collections, search through them, sort them, etc. They are comparable to JavaScript's `.forEach	` and `.map`, etc.
-
 
 <br>
 
@@ -75,7 +90,7 @@ Compare to JS `.forEach`
 words.forEach((currentWord) => console.log(currentWord.toUpperCase()));
 ```
 
-
+3:25
 
 #### Longform block
 
@@ -100,6 +115,8 @@ end
 ```
 
 * conditionals begin with `if` and end with `end`, and use `elsif`
+
+3:35
 
 &#x1F535; **Try this**
 
@@ -127,6 +144,19 @@ books.each do |book|
 end
 ```
 
+3:50
+
+## `.each_with_index`
+
+```ruby
+arr = ["The", "cat", "in", "the", "hat"]
+
+arr.each_with_index do |item, index| 
+	p index
+	p item if index % 2 == 0
+end
+```
+
 ### Ranges and datatypes
 
 ```ruby
@@ -140,14 +170,33 @@ p ['cruel', 'lovely', 'ordinary'].class
 > Array
 
 ```ruby
+p({ name: "Timmy", age: 45 }.class)
+```
+> Hash
+
+```
+p :what.class
+```
+> Symbol
+
+```ruby
 p (0..100).class
 ```
 > Range
+
+[Range methods](https://ruby-doc.org/core-2.4.0/Range.html)
 
 ```ruby
 (0..100).each { |num| p num }
 ```
 
+Range also has `.step`
+
+
+
+4:00
+
+4:10
 <br>
 
 ## `.map()`
@@ -166,6 +215,8 @@ p squares
 
 ## `.select()`
 
+Returns a new array with the elements that match the selection criteria.
+
 ``` ruby
 p [1,2,3,4,5].select { |i| i > 3 } 
 ```
@@ -180,6 +231,10 @@ p [1,2,3,4,5].select { |i| i > 3 }
 Reduce takes a collection and reduces it down to a single element. It applies an operation to each element, maintaining a running “total.”  
 
 ```ruby
+p [1, 2, 3, 4, 5, 6].reduce(:+)
+```
+
+```ruby
 p (5..10).reduce(:+) 
 ```
 
@@ -192,14 +247,13 @@ p (1..4).reduce(:*)
 
 > 24
 
-
-You can specify and initial value:
+Strings can be "added" together
 
 ```ruby
-p [5, 6, 7].reduce(5, :+) 
+p ["The", "cat", "in", "the", "hat"].reduce(:+)
 ```
 
-> 23
+> "Thecatinthehat"
 
 <br>
 

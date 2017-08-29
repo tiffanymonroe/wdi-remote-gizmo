@@ -2,139 +2,76 @@
 
 # WDI-GIZMO
 
-<hr>
-Title: Ruby Lab - Morning <br>
-Type: Lab<br>
-Duration: 1 hr<br>
-Creator: Thom Page<br>
-<hr>
+---
+Title: Ruby classes <br>
+Creator: Thom Page <br>
+Modified by: Karolin Rafalski <br>
+Competencies: Ruby classes<br>
 
-### SETUP
+---
 
-* In `student_labs` make a file `morning_lab.rb`
-* Work inside this file. Run it with `pry morning_lab.rb` or `ruby morning_lab.rb`
+## RUBY CLASSES
 
-# RESEARCH
+# 1. Classes
 
-## Basic Stuff! Strings
+Watch the optional short video [here](https://www.youtube.com/watch?v=r6wVziWXYWI). 6 mins 23 seconds.
 
-Perform the following tasks using string methods:
+**Create Muppets**
 
-1. Reverse the string, `"sarcophagus"`.
-2. Return the substring, `"undulating"`, from the string, `"Are these artichokes undulating?"`.
-3. Convert the string, `"90210"`, to an integer.
-4. Capitalize the letter `"m"` in the string `"meeseeks"`.
-5. Capitalize all of the letters in the string `"Capitalize all of the letters in the string"`.
+1. Create a Muppet class that takes in a `name` and puts `"This muppet is called #{name}!"` on  `initialize`.   
+  - Assign the muppet a random color on `initialize`. Hint: make a small array and use `.sample` 
+ 
+**Create Birds**
+ 
+2. Create a Bird class that takes in an `adjective` and a `name` and  puts `"#{name} is a(n) #{adjective} bird!"` on  `initialize`.   
+  - Assign the bird a species at random on `initialize`.  Hint: make a small array and use `.sample` 
+  - Here is an array of bird species, for your convenience
+ 
+```
+  ['Belted Kingfisher', 'Yellow-Billed Cuckoo', 'White-Cheeked Pintail', 'Cinnamon Teal', 'Lesser Scaup', 'Bufflehead', 'Common Goldeneye', 'Fulvous Whistling Duck', 'Hooded Merganser', 'White-Winged Scoter', 'Chimney Swift', 'Rufous Hummingbird', 'Chuck-Wills-Widow', 'Whip-Poor-Will', 'Albatross', 'Ruddy Turnstone', 'Piping Plover', 'Killdeer', 'Laughing Gull', 'Marbled Godwit', 'Least Tern', 'New World Warbler']
+```
+<br>
 
+# 2. Methods
+
+Watch the optional short video here [here](https://www.youtube.com/watch?v=c2a2bZf3LH4). 8 mins 22 seconds.
+
+**Muppet methods**
+
+* Add **methods** to your Muppet
+  - Add a `honk` method to your muppet that puts `"#{name} is making a honking sound!"`. Test that it works, comment out your test code. 
+  - Example test the following that it gives the expected output:
+  
+```
+q = Muppet.new("K-Rad")
+q.honk
+```
+
+- Add a `flail` method that puts `"#{name} is flailing its arms!"`. Test that it works.
+
+**Bird methods**
+
+* Add methods to your Bird
+  - Add a `hungry` method that puts `"#{name} wants some regurgitated worms!"`. Test that it works.
+  - Add a `fly` method that puts `"Flap! #{name} is taking flight!"`. Test that it works.
+4. Make your bird's `adjective` and `name` accessible. Test that this works.
 
 <br>
-<hr>
 
+# 3. Person object
 
-# BUILT-IN RUBY METHODS
+Use a Ruby class to make a 'person' object. The person should meet the followng specs:
 
-One of the great things about Ruby is the plethora of useful methods. Many complicated operations can be done just by finding the right method.
+### Object specs
 
-Here are some exercises to become more acquainted with the following Ruby methods:
+A Person should have a name and an age.
 
-1. `.each`
-2. `.class`
-3. `.select`
-4. `.reject`
-5. `.flatten`
-6. `.permutation.to_a`
-7. `.first`
-8. `.last`
-9. `.count`
-10. `.reduce`
-11. `.uniq`
-12. `.shuffle`
-13. `.each_slice`
-14. `.sample`
-15. `.each_cons`
+A Person should be able to do squat-lunges. (A `squat_lunge` method). But, a person should only be able to do so many squat-lunges. Make it so there is is a limit to how many squat-lunges that person can do.
 
 <br>
-<hr>
 
-## PART ONE
-Given the following array
+# 4. Objects within objects
 
-```
-arr = [["Live", "Laugh", "Love"], {hello: 'hi back'}, false, 333.333, nil, nil, ["Joy", "Joke", "Jerk"]]
-```
+Using your `World` object from before, make it so that when the `populate` method is called, a new `Person` object is added to the world. That is, a new person is made from the person class and added to the `@people` array (instead of just adding a hash to the array).
 
-1. Use `.each` and `.class` to print the class of each array element to the console
 
-2. Use `.select` and `.class` to return an array of only those elements whose class is Array. http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-select
-
-3. Use `.reject` and `.class` to return an array of only those elements whose class is not Hash. http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-reject
-
-4. Use `.flatten` on the result of your previous `.select` operation to flatten out the array
-
-5. Use `.permutation.to_a` on the flattened result to return all possible permutations of all the items within the inner arrays.
-
-6. Use `.count` to get the number of those permutations.
-
-<br>
-<hr>
-
-## PART TWO
-
-Given the following array
-
-```
-numbers = [4, 7, 8, 7, 9, 0, 4]
-```
-
-1. Use `.permutation.to_a` and `.count` to return a count of all permutations
-
-2. `.select` only those permutations where the `.first` number is 7 and the `.last` number is also 7, and return a `.count` of those permutations.
-
-3. Use `.reduce` to get the sum of the array.
-
-4. Use `.reduce` to get the product of the array.
-
-<br>
-<hr>
-
-## PART THREE
-
-Given the following array
-
-```
-strings = ["Paloma", "Grits", "Ziti", "Carbohydrates", "Grits", "Corn", "Wizard_robe", "Ziti", "Corn", "Corn", "Maize"]
-```
-
-and the empty hash
-
-```
-hash = {}
-```
-
-1. Using `.each` and `.uniq`, populate the hash using the elements in the array as keys. Remember that keys must be unique, so don't include any double-ups. Set the values of those keys to "Fun" except for Maize, which is "Not Fun".
-
-<br>
-<hr>
-
-## PART FOUR
-
-```
-students = ["An", "Todd", "Mark", "Jim", "Cathleen", "Ky", "Biren", "Geraldine", "Hanna", "Dylan", "Sheila", "Charles", "Soniya", "Jerrica", "Ellen", "Lenin", "Adam", "Stanley", "Matthew", "Anthony", "Joe", "Emily", "Amanda"]
-```
-
-1. Pretend that group projects are coming up again, and you have to split the class up into random pairs. Use `.shuffle` and `.each_slice` to generate groups of two. http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-each_slice.
-
-2. Use `.sample` to return a single random student who will win a prize! http://ruby-doc.org/core-2.1.4/Array.html#method-i-sample
-
-3. Use `.sample` to return four random students to be taken on vacation (use an argument with the .sample method)
-
-<br>
-<hr>
-
-## PART FIVE
-
-**MAKE YOUR OWN PROBLEM**
-
-Look into the Ruby method `.each_cons`, http://ruby-doc.org/core-2.3.0/Enumerable.html#method-i-each_cons
-
-Make your own problem where the answer should use `.each_cons`.
