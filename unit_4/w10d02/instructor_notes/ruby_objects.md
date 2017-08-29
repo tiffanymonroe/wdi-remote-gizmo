@@ -21,9 +21,9 @@ What if we make up our own method for every instance of the String class?
 ```ruby
 class String
 
-	def zumpledeboop
-		self.upcase.reverse
-	end
+  def zumpledeboop
+    self.upcase.reverse
+  end
 	
 end
 
