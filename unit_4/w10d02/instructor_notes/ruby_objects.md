@@ -147,6 +147,8 @@ Let's make it so a world can populate itself with people.
 * A world can have many people, but starts with none
 	* This means initialize the object with an empty array to hold the people in.
 
+* Make a method `populate` that will push a hash into the people array.
+
 ```ruby
 class World
 
