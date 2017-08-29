@@ -1,6 +1,3 @@
-# crispy-disco
-Happy Tails Reboot
-
 # Happy Tails
 
 ![HAPPY TAILS](http://www.htpet.net/i/Logo.jpg)
