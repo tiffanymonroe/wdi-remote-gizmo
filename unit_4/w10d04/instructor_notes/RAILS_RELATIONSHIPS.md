@@ -81,7 +81,6 @@ User.find(22).todos.all
 <br>
 <hr>
 
-2:37
 
 ## &#x1F449; Run a migration to create a user table
 
@@ -321,6 +320,7 @@ Todo.all
 <hr>
 
 3:45 Break until 3:55
+
 
 # &#x2600; BLOG APP II
 

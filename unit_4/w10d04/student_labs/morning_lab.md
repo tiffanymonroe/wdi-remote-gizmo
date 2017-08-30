@@ -11,11 +11,13 @@ If we want to alter our database tables, columns, datatypes, etc. We **do not ch
 
 To change any of these things you must run **another migration**.
 
+* Commands that begin with `rails` are written in Terminal.
+
 <br>
 
 ## 1. Adding Columns
 
-Add a column called `description` to our Todo table.
+**Goal:** Add a column called `description` to our Todo table.
 
 `rails g migration AddDescriptionToTodos`
 

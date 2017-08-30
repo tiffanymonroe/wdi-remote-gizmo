@@ -6,7 +6,7 @@
 Title: Rails New<br>
 Type: Lesson<br>
 Creator: Thom Page<br>
-Duration: 2.5 hrs<br>
+Duration: 1.5 hr<br>
 Topics: Migrations and ActiveRecord<br>
 <hr>
 
