@@ -1,0 +1,96 @@
+arr1 = [10,20,30,40,50,60,70,-80,90]
+arr2 = [[10,20,30],
+        [40,50,60],
+        [70,-80,90]];
+        
+arr3 = [ [ 887, -541, -430, -590, 117, 172, -319, -18 ],
+  [ -269, 964, 209, 840, -456, 156, 365, -568 ],
+  [ 289, -41, 488, 198, 240, 124, -427, 214 ],
+  [ 452, 894, 968, -149, 683, 977, 741, -805 ],
+  [ 181, -714, -950, 107, 800, 751, -143, 380 ],
+  [ 152, 493, 707, 914, 37, 356, -625, 608 ],
+  [ -345, 906, 83, 676, 723, 381, 557, -183 ],
+  [ 199, -943, -710, 565, 193, 315, 281, 245 ] ];        
+
+## Simple one level array
+sum = 0
+
+arr1.each do |x|
+  sum += x
+end
+
+
+
+## multilevel array
+## push each row sum into an array
+## push each column sum into an array
+## push the two diagnol sums into an array
+def greatestSum arr
+  rows_sums = []
+  cols_sums = []
+  diag_sums = []
+
+  ## Set variables for diagnol sums
+  diag_sum_1 = 0
+  diag_sum_2 = 0
+  
+  ## Loop the rows and columns
+  for row in 0..arr.length-1
+   ## set the variables for row and col sums
+   row_sum = 0
+    col_sum = 0
+
+ ##Sum the columns and rows
+ for col in 0..arr.length-1
+  row_sum += arr[row][col]
+  col_sum += arr[col][row]
+ end
+ 
+ ## push the sums of each row and colum to compare 
+ rows_sums.push(row_sum)
+ cols_sums.push(col_sum)
+ 
+ #diagnol 1
+
+ diag_sum_1 += arr[row][row]
+
+ #diagnol 2
+
+  diag_sum_2 += arr[row][arr[row].length - row-1]
+ 
+  end
+ #push the sums of the diagnols into an array to compare
+ diag_sums.push(diag_sum_1,diag_sum_2 )
+
+ 
+ ## now that all sums have been gathred it is time to compare them
+ 
+ puts 'biggest row'
+ biggest_row  = rows_sums.max
+ puts biggest_row
+ puts 'biggest col'
+ biggest_col  = cols_sums.max
+ puts biggest_col
+ puts 'biggest diag'
+ biggest_diag = diag_sums.max
+ puts biggest_diag
+ 
+ ##put the biggest numbers in an array
+ biggest_biggest = [biggest_row, biggest_col, biggest_diag]
+ 
+ puts "biggest sum is"
+ puts biggest_biggest.max
+ puts "which is a"
+ 
+
+   if biggest_biggest.max == biggest_row
+      p "row"
+     elsif biggest_biggest.max == biggest_col
+      p "column"
+   else
+     p  "diagnol"
+  end
+ end
+greatestSum(arr2)
+p "====="
+greatestSum(arr3)

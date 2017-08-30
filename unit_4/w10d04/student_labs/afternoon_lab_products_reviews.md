@@ -30,7 +30,7 @@ Answer these questions to the satisfaction of everyone in the group:
 
 ## Build together
 
-You'll have plenty opportunity in the weekend to do Rails stuff on your own. For now, build something together. Each person should have completed the step before the group moves on to the next step.
+You'll have plenty opportunity to do Rails stuff on your own. For now, build something together. Each person should have completed the step before the group moves on to the next step.
 
 Answer any questions amongst yourselves along the way, before moving on to the next step.
 
