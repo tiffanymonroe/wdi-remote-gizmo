@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-HOPPER
+# WDIR-GIZMO
 
 ---
 Title:Loop the Loop! Two Dimensional Sums<br>
