@@ -1,6 +1,6 @@
 ![ga](http://mobbook.generalassemb.ly/ga_cog.png)
 
-# WDIR-HOPPER
+# WDIR-GIZMO
 
 ---
 Title: Introduction to Sass (Semantically Awesome Style Sheets)<br>
