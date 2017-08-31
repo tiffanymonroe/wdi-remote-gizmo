@@ -20,5 +20,5 @@ CREATE TABLE storefront (
   kitchen boolean,
   sqft integer,
   owner varchar(255),
-  outdoor_seating boolean default false,
+  outdoor_seating boolean default false
 );
