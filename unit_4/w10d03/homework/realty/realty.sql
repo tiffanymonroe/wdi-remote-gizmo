@@ -1,3 +1,5 @@
+-- 00. Create realty_db
+
 -- 1. The average square footage of all offices.
 
 
