@@ -80,23 +80,127 @@ SELECT head_coach FROM teams WHERE division = 'South' AND conference = 'AFC';
 
 SELECT COUNT(*) FROM players;
 
---  count 
+--  count
 -- -------
 --   1532
 
 -- 5. The team names and head coaches of the NFC North and AFC East
 
+SELECT name, head_coach FROM teams WHERE division = 'East' AND conference = 'AFC' OR  division = 'North' AND conference = 'NFC';
+
+--          name         |   head_coach
+-- ----------------------+----------------
+--  Buffalo Bills        | Doug Marrone
+--  Miami Dolphins       | Joe Philbin
+--  New England Patriots | Bill Belichick
+--  New York Jets        | Rex Ryan
+--  Chicago Bears        | Marc Trestman
+--  Detroit Lions        | Jim Caldwell
+--  Green Bay Packers    | Mike McCarthy
+--  Minnesota Vikings    | Mike Zimmer
+
 
 -- 6. The 50 players with the highest salaries
 
+SELECT name FROM players ORDER BY salary DESC LIMIT 50;
+
+--           name
+-- -------------------------
+ -- Peyton Manning
+ -- Drew Brees
+ -- Dwight Freeney
+ -- Elvis Dumervil
+ -- Michael Vick
+ -- Sam Bradford
+ -- Jared Allen
+ -- Matt Ryan
+ -- Matthew Stafford
+ -- Tamba Hali
+ -- Jake Long
+ -- Trent Williams
+ -- Nnamdi Asomugha
+ -- Vincent Jackson
+ -- Cliff Avril
+ -- Calais Campbell
+ -- Joe Thomas
+ -- Brent Grimes
+ -- Peyton Manning (buyout)
+ -- Chris Long
+ -- Philip Rivers
+ -- Jason Smith
+ -- David Harris
+ -- Wes Welker
+ -- Davin Joseph
+ -- Dwayne Bowe
+ -- Asante Samuel
+ -- Brandon Marshall
+ -- Ndamukong Suh
+ -- Tony Romo
+ -- Julius Peppers
+ -- Anthony Spencer
+ -- Karlos Dansby
+ -- Jordan Gross
+ -- Tyson Jackson
+ -- Adrian Peterson
+ -- Champ Bailey
+ -- Aaron Rodgers
+ -- Chris Johnson
+ -- Jason Peters
+ -- Santonio Holmes
+ -- Eric Wright
+ -- Steve Smith
+ -- Jay Cutler
+ -- Matt Forte
+ -- Ray Rice
+ -- Brian Urlacher
+ -- Johnathan Joseph
+ -- Gary Brackett
+ -- Ed Reed
 
 -- 7. The average salary of all NFL players
+
+SELECT AVG(salary) FROM players;
+
+--          avg
+-- ----------------------
+--  1579692.539817232376
 
 
 -- 8. The names and positions of players with a salary above 10_000_000
 
+SELECT name, position FROM players  WHERE salary > 10000000;
+
+--           name           | position
+-- -------------------------+----------
+--  Jake Long               | T
+--  Joe Thomas              | T
+--  Dwight Freeney          | DE
+--  Peyton Manning (buyout) | QB
+--  Peyton Manning          | QB
+--  Elvis Dumervil          | DE
+--  Tamba Hali              | DE
+--  Philip Rivers           | QB
+--  Michael Vick            | QB
+--  Nnamdi Asomugha         | CB
+--  Trent Williams          | T
+--  Matthew Stafford        | QB
+--  Cliff Avril             | DE
+--  Jared Allen             | DE
+--  Matt Ryan               | QB
+--  Brent Grimes            | CB
+--  Drew Brees              | QB
+--  Vincent Jackson         | WR
+--  Calais Campbell         | DE
+--  Sam Bradford            | QB
+--  Chris Long              | DE
 
 -- 9. The player with the highest salary in the NFL
+
+SELECT name FROM players ORDER BY salary DESC LIMIT 1;
+
+--       name
+-- ----------------
+--  Peyton Manning
 
 
 -- 10. The name and position of the first 100 players with the lowest salaries
