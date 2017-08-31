@@ -43,12 +43,46 @@ SELECT name FROM teams;
 
 -- 2. List the stadium name and head coach of all NFC teams
 
+SELECT stadium, head_coach FROM teams WHERE conference = 'NFC';
+
+--             stadium            |  head_coach
+-- -------------------------------+---------------
+--  AT&T Stadium                  | Jason Garrett
+--  MetLife Stadium               | Tom Coughlin
+--  Lincoln Financial Field       | Chip Kelly
+--  FedExField                    | Jay Gruden
+--  Soldier Field                 | Marc Trestman
+--  Ford Field                    | Jim Caldwell
+--  Lambeau Field                 | Mike McCarthy
+--  TCF Bank Stadium              | Mike Zimmer
+--  Georgia Dome                  | Mike Smith
+--  Bank of America Stadium       | Ron Rivera
+--  Mercedes-Benz Superdome       | Sean Payton
+--  Raymond James Stadium         | Lovie Smith
+--  University of Phoenix Stadium | Bruce Arians
+--  Edward Jones Dome             | Jeff Fisher
+--  Levis Stadium                 | Jim Harbaugh
+--  CenturyLink Field             | Pete Carroll
 
 -- 3. List the head coaches of the AFC South
+
+SELECT head_coach FROM teams WHERE division = 'South' AND conference = 'AFC';
+
+--    head_coach
+-- ----------------
+--  Bill OBrien
+--  Chuck Pagano
+--  Gus Bradley
+--  Ken Whisenhunt
 
 
 -- 4. The total number of players in the NFL
 
+SELECT COUNT(*) FROM players;
+
+--  count 
+-- -------
+--   1532
 
 -- 5. The team names and head coaches of the NFC North and AFC East
 
