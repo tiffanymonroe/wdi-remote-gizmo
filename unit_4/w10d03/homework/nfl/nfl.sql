@@ -205,14 +205,221 @@ SELECT name FROM players ORDER BY salary DESC LIMIT 1;
 
 -- 10. The name and position of the first 100 players with the lowest salaries
 
+SELECT name, position FROM players ORDER BY salary ASC LIMIT 100;
+
+--           name          | position
+-- ------------------------+----------
+--  Phillip Dillard        |
+--  Eric Kettani           | RB
+--  Greg Orton             | WR
+--  Jeremy Beal            | DE
+--  Jamie McCoy            | TE
+--  Kevin Cone             | WR
+--  Caleb King             | RB
+--  Travon Bellamy         | CB
+--  Derrick Jones          | WR
+--  Sealver Siliga         | DT
+--  Ricky Sapp             | DE
+--  Tyler Beiler           |
+--  Corbin Bryant          | DT
+--  Nathan Bussey          | LB
+--  Markell Carter         | DE
+--  Armando Allen          | RB
+--  Garrett Chisolm        | G
+--  Jonathan Crompton      | QB
+--  McLeod Bethel-Thompson | QB
+--  Dontavia Bogan         | WR
+--  Shaun Draughn          | RB
+--  Curtis Holcomb         | CB
+--  Konrad Reuland         | TE
+--  Michael Wilhoite       | LB
+--  Marshall McFadden      | LB
+--  Joe Hastings           | WR
+--  Mike Hartline          | QB
+--  Chad Spann             | RB
+--  Ben Guidugli           | TE
+--  Justin Medlock         | KR
+--  Mark Dell              | WR
+--  Shaky Smithson         | WR
+--  DAndre Goodwin         | WR
+--  Austin Sylvester       | RB
+--  Jimmy Young            | WR
+--  Mike Mohamed           | LB
+--  Ronald Johnson         | WR
+--  Brett Brackett         | TE
+--  John Clay              | RB
+--  Tristan Davis          | RB
+--  Armon Binns            | WR
+--  Jerrod Johnson         | QB
+--  Robert James           | LB
+--  Derek Hall             | T
+--  Chase Beeler           | C
+--  Cory Nelms             | CB
+--  Juamorris Stewart      | WR
+--  Kenny Wiggins          | T
+--  Mark LeGree            | S
+--  John Malecki           | G
+--  Kyle Hix               | T
+--  Kade Weston            | DT
+--  Kyle Nelson            | LS
+--  Jameson Konz           | WR
+--  Mike Rivera            | LB
+--  Trevis Turner          | T
+--  Aaron Lavarias         | DT
+--  Michael Jasper         | DT
+--  Mike Blanc             | DT
+--  Pat Devlin             | QB
+--  Jerome Messam          | RB
+--  David Gilreath         | WR
+--  Malcolm Williams       | CB
+--  Lestar Jean            | WR
+--  Rashad Carmichael      | CB
+--  Doug Worthington       | DT
+--  Alex Silvestro         | DT
+--  Jammie Kirlew          | DE
+--  Adam Grant             | T
+--  Adam Weber             | QB
+--  Joe Reitz              | T
+--  Brandon Browner        | CB
+--  Jeff Byers             | C
+--  Jed Collins            | TE
+--  Marcus Sherels         | CB
+--  Emmanuel Stephens      | DT
+--  Aaron Berry            | CB
+--  Logan Payne            | WR
+--  Cameron Sheffield      | LB
+--  T.J. Conley            | PR
+--  Kyle Bosworth          | LB
+--  John Estes             | C
+--  Thomas Austin          | G
+--  Garrett McIntyre       | DT
+--  Markus White           | DE
+--  Ricardo Matthews       | DT
+--  Quinten Lawrence       | WR
+--  Jimmy Wilson           | CB
+--  Nick Bellore           | LB
+--  Taylor Boggs           | C
+--  Kamar Aiken            | WR
+--  Justin Rogers          | CB
+--  Johnny White           | RB
+--  Dexter Jackson         | WR
+--  DaNorris Searcy        | S
+--  Chris White            | LB
+--  Sterling Moore         | CB
+--  Chris Hairston         | T
+--  Brett Hartmann         | P
+--  Caleb Schlauderaff     | G
 
 -- 11. The average salary for a DE in the nfl
 
+SELECT AVG(salary) FROM players WHERE position = 'DE';
+
+--          avg
+-- ----------------------
+--  2161326.377049180328
 
 -- 12. The names of all the players on the Buffalo Bills
 
+--couldn't figure this one out in one query
+
+SELECT * FROM teams WHERE name = 'Buffalo Bills';
+
+--  id |     name      |       stadium        | division | conference |  head_coach  | active
+-- ----+---------------+----------------------+----------+------------+--------------+--------
+--   1 | Buffalo Bills | Ralph Wilson Stadium | East     | AFC        | Doug Marrone | t
+-- (1 row)
+
+nfl=# SELECT players.name FROM players WHERE team_id = 1;
+
+--         name
+-- --------------------
+--  Mario Williams
+--  Drayton Florence
+--  Shawne Merriman
+--  Dwan Edwards
+--  Chris Kelsay
+--  Kyle Williams
+--  Nick Barnett
+--  Spencer Johnson
+--  Ryan Fitzpatrick
+--  Steve Johnson
+--  Tyler Thigpen
+--  Lee Evans (Buyout)
+--  Brad Smith
+--  Fred Jackson
+--  Scott Chandler
+--  George Wilson
+--  Erik Pears
+--  Leodis McKelvin
+--  Brian Moorman
+--  Terrence McGee
+--  Marcell Dareus
+--  Chad Rinehart
+--  Kraig Urbik
+--  Rian Lindell
+--  Kirk Morrison
+--  Corey McIntyre
+--  C.J. Spiller
+--  Garrison Sanborn
+--  Eric Wood
+--  Lionel Dotson
+--  Ruvell Martin
+--  Andy Levitre
+--  Jairus Byrd
+--  Jarron Gilbert
+--  Kyle Moore
+--  Aaron Williams
+--  Donald Jones
+--  Fendi Onobun
+--  Kellen Heard
+--  Mike Caussin
+--  Naaman Roosevelt
+--  Alex Carrington
+--  Arthur Moats
+--  Colin Brown
+--  Cordaro Howard
+--  Dan Batten
+--  David Nelson
+--  Marcus Easley
+--  Sam Young
+--  Torell Troup
+--  Kelvin Sheppard
+--  Lee Smith
+--  Chris Hairston
+--  Chris White
+--  DaNorris Searcy
+--  Johnny White
+--  Justin Rogers
+--  Kamar Aiken
+--  Michael Jasper
 
 -- 13. The total salary of all players on the New York Giants
 
+SELECT id FROM teams WHERE name = 'New York Giants';
+
+--  id
+-- ----
+--  18
+
+
+nfl=# SELECT SUM(salary) from players WHERE team_id = 18;
+
+--    sum
+-- ----------
+--  74179466
 
 -- 14. The player with the lowest salary on the Green Bay Packers
+
+SELECT id FROM teams WHERE name = 'Green Bay Packers';
+
+--  id
+-- ----
+--  23
+
+
+
+nfl=# SELECT name FROM players WHERE team_id = 23 ORDER BY salary ASC LIMIT 1;
+
+--       name      
+-- ----------------
+--  Shaky Smithson
