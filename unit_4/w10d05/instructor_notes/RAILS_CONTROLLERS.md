@@ -36,7 +36,13 @@ This will be a single-model app that serves json data for songs.
 rails new songs_app_api --api -d postgresql
 ```
 
-**Start the server:** Run `rails s` to start the server. We should all get an error in the browser.
+**Start the server:** 
+
+* Run `rails s` to start the server on port 3000 
+* `rails s` is short for `rails server`
+* Go to `localhost:3000` in the browser.
+
+We should all get an error in the browser.
 
 ```
 FATAL: database \"____________\" does not exist
@@ -45,6 +51,10 @@ FATAL: database \"____________\" does not exist
 JSON response:
 
 ![](https://i.imgur.com/Ru5nXsI.png)
+
+
+[To format JSON nicely, use JSON Formatter Chrome extension](https://chrome.google.com/webstore/detail/json-formatter/bcjindcccaagfpapjjmafapmmgkkhgoa?hl=en)
+
 
 * Quit the server: `ctrl + c`
 
@@ -204,7 +214,7 @@ The Controller#Action is `songs#index`. This means that for this route, we will 
 
 So, for our index route, there will will be uri `/songs` (that has no params or anything) according to the usual RESTFul conventions.
 
-Ignore `(.:format)` for now.
+[Explanation of .:format](https://stackoverflow.com/a/20320286) can be ignored.
 
 **Let's look at the other lines**
 
