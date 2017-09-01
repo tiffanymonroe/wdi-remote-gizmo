@@ -6,7 +6,6 @@
 
 Title: Glitch in the Matrix <br>
 Type: 4 hour<br>
-Duration: Weekend<br>
 Creator: Thom Page <br>
 Topics: Rails Migrations and ActiveRecord
 
