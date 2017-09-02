@@ -22,8 +22,15 @@ class TweetsController < ApplicationController
     end
   end
 
-  #private method
+  #update route
+  def update
+    tweet = Tweet.find(params[:id])
+    tweet.update(tweet_params)
+    render json: {status: 204}
+  end
 
+  #private method
+  private
   def tweet_params
     params.require(:tweet).permit(:title, :content, :author)
   end
