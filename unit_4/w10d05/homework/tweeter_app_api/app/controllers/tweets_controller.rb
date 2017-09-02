@@ -11,4 +11,21 @@ class TweetsController < ApplicationController
     render json: {status: 200, tweet: one_tweet}
   end
 
+  #create route
+  def create
+    tweet = Tweet.new(tweet_params)
+
+    if tweet.save
+      render json: {status: 200, tweet: tweet}
+    else
+      render json: {status: 422, tweet: tweet}
+    end
+  end
+
+  #private method
+
+  def tweet_params
+    params.require(:tweet).permit(:title, :content, :author)
+  end
+
 end
