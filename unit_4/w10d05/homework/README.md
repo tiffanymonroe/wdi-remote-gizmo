@@ -533,3 +533,6 @@ Adjust the show page so that a Tweet *show* also displays the json of the Replie
 The commit message should read: <br>
 "Commit 16: The show pages shows the tweets and their replies".
 <hr>
+
+## Hungry for Even More (Sass)?
+- Head inside the [Brook Lyn](Brook_Lyn) folder that is inside this `homework` folder for a small mockup. You can use this as a chance to practice your Sass skills.
