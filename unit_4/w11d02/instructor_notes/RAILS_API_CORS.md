@@ -103,7 +103,13 @@ Inside this directory we will put our two servers. We are only putting them toge
 
 Inside `noticeboard_app` make the rails server:
 
-* `Rails new noticeboard_app_api --api -d postgresql`
+Remember to add flags for
+	
+* api option
+* database option
+* skip git option (Rails 5.1 and above)
+
+* `rails new noticeboard_app_api --api -d postgresql --skip-git`
 
 ![](https://i.imgur.com/CUsW0By.png)
 
@@ -118,7 +124,7 @@ Tree structure: The `noticeboard_app` directory contains both the `api` and `fro
 
 ![](https://i.imgur.com/3rGxbEe.png)
 
-* Open up the entire `noticeboard_app` directory in atom. You should see both `noticeboard_app_api` and `noticeboard_app_frontend` in there.
+* Open up the entire `noticeboard_app` directory in your text editor. You should see both `noticeboard_app_api` and `noticeboard_app_frontend` in there.
 
 11:25
 
@@ -126,7 +132,7 @@ Tree structure: The `noticeboard_app` directory contains both the `api` and `fro
 
 Let's see how fast we can make our Rails API. (Aim: 15 minutes with explanations)
 
-This morning we will use the `scaffold` command to generate boilerplate code for a given resource. Our app will be a noticeboard, and the resource will be notices.
+This morning we will use the `generate scaffold` command to generate boilerplate code for a given resource. Our app will be a noticeboard, and the resource will be notices.
 
 * First, go into the Rails directory on the command line.
 
@@ -138,15 +144,37 @@ This will generate all the folder, files, and code needed for a model called `No
 
 ![](https://i.imgur.com/Ctfxp4F.png)
 
-* Take a look at the controller file: `notices_controller.rb`. It has provided most the of the stuff we have already seen, plus some new stuff. All of the relevant routes are there. Let's leave it like that for now.
+## What did `generate scaffold do`?
+
+**Created files for migration, model, controller, and routes**
+
+* `db/migrate`. Scaffold has created a migration file/folder for our Notice resource. There is a boilerplate method for creating the **notices** table. Title, author, and content columns (strings) are ready to go.
+
+* `models/notice.rb`. Scafoold has created a file our Notice resource. The model has been set up for us.
+
+* Look in `config/routes`. Scaffold has set our resources for us. The `rails routes` command will tell us what controllers and actions we should use:
+
+```bash
+ Prefix Verb   URI Pattern            Controller#Action
+notices GET    /notices(.:format)     notices#index
+        POST   /notices(.:format)     notices#create
+ notice GET    /notices/:id(.:format) notices#show
+        PATCH  /notices/:id(.:format) notices#update
+        PUT    /notices/:id(.:format) notices#update
+        DELETE /notices/:id(.:format) notices#destroy
+```
+
+* `notices_controller.rb`. Scaffold has provided all of the relevant routes for our CRUD actions.
+**index**, **show**, **create**, **update**, and **delete**.
+
+* Scaffold has placed **instance variables** such as `@notices = Notice.all` for scoping. Helper methods such as `set_notice` can operate on the more globally available `@notice` variable.
 
 * There is a new helper method `set_notice` invoked with a `before_action` method. All it does is find a notice according to its id before specific routes are hit.
 
-* Look in `config/routes`. Scaffold has set our resources for us.
+* The controller is functionally exactly the same as what we have seen before.
 
-* Look in `models/notice.rb`. The model has been set up for us.
+* remove `location: @notice` from the **create** action. **location** is an option for redirecting the page by setting the **Location** option in the response object. We probably just want the JSON and don't want our server to try to perform a redirect on the client (we might run into errors too).
 
-* Take a look at the migration file. Title, author, and content columns (strings) are ready to go.
 
 11:35
 
@@ -191,9 +219,15 @@ end
 
 **DONE**
 
-11:45
+12:00
 
 # FRONTEND APP
+
+Remember, our Rails API is just that, an API. Our Rails server is a giant data farm. This data farm can be made accessible to any client or platform.
+
+For now, we are done with our API. Let's make a frontend that can interact with it.
+
+![](https://i.imgur.com/zm4EeFX.png)
 
 ## &#x1F684; BOILERPLATE EXPRESS PROJECT
 
@@ -207,45 +241,48 @@ end
 
 * Entry point `server.js` as usual. `touch server.js`
 
-* `npm install express --save` as usual
+* `npm i express` (if using npm 5 or greater. Otherwise, `npm i express --save`)
 
 * Add express boilerplate:
 
+server.js
 ```javascript
-var express = require('express');
-var app     = express();
+const express = require('express');
+const app     = express();
 ```
 
-![](https://i.imgur.com/cTDJ253.png)
+![](https://i.imgur.com/ptMITck.png)
 
 * Set the port to something other than 3000 (Rails is running on 3000 for now).
 
 * Port 3001:
 
 ```javascript
-var express = require('express');
-var app     = express();
-var port    = 3001;
+const express = require('express');
+const app     = express();
+const PORT    = 3001;
 
-app.listen(3001, function() {
-  console.log("Noticeboard Frontend running on port: ", port);
-});
+app.listen(PORT, () => console.log('noticeboard frontend, port: ', PORT)); 
 ```
 
-![](https://i.imgur.com/BaVxRSW.png)
+![](https://i.imgur.com/Sj0Gq09.png)
 
 
 > We do not need any routes on our frontend app for now. All we want to do is use the server's static assets.
 
 * Add middleware config `app.use(express.static('public'));`
 
-![](https://i.imgur.com/2BUv3US.png)
+![](https://i.imgur.com/amdgstk.png)
 
-* Make `public` folder, make `index.html`, `app.js`, and `style.css`. Fill out `index.html` boilerplate.
+* Make `public` folder, make `index.html`, `app.js`, and `style.css`. Fill out `index.html` boilerplate, and write a hello in there.
 
-![](https://i.imgur.com/TiVGI6q.png)
+![](https://i.imgur.com/qnveFTF.png)
 
-* Add your script:
+* Run the server `nodemon`
+
+* check it out in the browser at localhost:3001
+
+* Add your JS:
 
 ```html
 <script type="text/javascript" src="/app.js"></script>
@@ -253,25 +290,23 @@ app.listen(3001, function() {
 
 * Add a console.log to the script
 
-* Run the server `nodemon`
-
-* Go to `localhost:3001` in the browser to check your console log appears
+* Go to `localhost:3001` in the browser to check your console log appears.
 
 **We're Ready To Go!**
 
 <br>
 <hr>
-12:00 break until 12:10
+12:20
 
 ## ANGULAR
 
-Remember, we could use any frontend library or framework. (At least, one that can make AJAX requests).
+Remember, we could use any frontend library or framework. (At least, one that can work with HTTP requests).
 
 For now let's stick with Angular. Let's just start by making a regular-old AJAX request. We will make the request to our running Rails server.
 
 ### Boilerplate Angular Setup
 
-Add Angular 1.5 to index.html:
+Add Angular 1.6 to index.html:
 
 ```javascript
 <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
@@ -280,12 +315,31 @@ Add Angular 1.5 to index.html:
 ![](https://i.imgur.com/ymfD8Tw.png)
 
 ##### &#x1F449; MODULE
-* Set ng-app in index.html: `<html ng-app="noticeboard">`
-* Set module in app.js: `var app = angular.module('noticeboard', []);`
+* Set ng-app in index.html
+
+```html
+<html ng-app="noticeboard">
+```
+
+* Set module in app.js:
+
+```javascript
+const app = angular.module('noticeboard', []);
+```
 
 ##### &#x1F449; CONTROLLER
-* Set ng-controller in index.html: `<body ng-controller="mainController as ctrl">`
-* Set app.controller in app.js _with_ the `$http` module: `app.controller('mainController', ['$http', function($http) { }]);`
+* Set ng-controller in index.html 
+
+```html
+<body ng-controller="mainController as ctrl">
+```
+
+* Set app.controller in app.js _with_ the `$http` module: 
+
+```javascript
+app.controller('mainController', ['$http', function($http) { }]);
+```
+
 * Add test message to controller: `this.message = "controller works"`
 
 ![](https://i.imgur.com/hV0AYq6.png)
@@ -298,7 +352,7 @@ Add Angular 1.5 to index.html:
 
 ![](https://i.imgur.com/eggPK0T.png)
 
-12:25
+12:45
 
 ### Angular AJAX Request
 
@@ -309,18 +363,18 @@ Two things to keep in mind:
 1. Make sure your Rails server is running.
 2. This AJAX request **should not** work. This is due to CORS, a basic security feature. We will talk about CORS specifically later.
 
-Make a request to the Rails server and console log the response:
+Make a request to the Rails server and console log the response. Note that the URL is not relative, it is an absolute path. Our API is on a different origin therefore the path cannot be relative:
 
 ```javascript
   $http({
     method: 'GET',
     url: 'http://localhost:3000/notices',
-  }).then(function(response) {
-    console.log(response);
-  });
+  }).then(response => console.log(response))
+    .catch(err => console.log(err));
+    
 ```
 
-![](https://i.imgur.com/aDckYfg.png)
+![](https://i.imgur.com/9Plr6rL.png)
 
 If you get this:
 
@@ -341,8 +395,6 @@ No 'Access-Control-Allow-Origin' header is present on the request resource.
 > Try emptying your cache and see what happens.
 
 <br>
-
-12:30
 
 # &#x1F34E; CORS
 
@@ -378,8 +430,6 @@ So even if your Rails data showed up in your frontend app, you are likely at som
 
 <br>
 <hr>
-
-12:40
 
 # &#x1F527; CONFIGURE RAILS FOR CORS
 
@@ -426,7 +476,7 @@ For now let's keep all of the methods (:get, :post, :put, etc.). In future, we m
 The changes will not apply if the server does not restart
 
 
-12:50
+
 
 ## MAKE AJAX REQUEST
 
@@ -438,14 +488,11 @@ The request should work:
 
 ![](https://i.imgur.com/Xw7hghT.png)
 
+The data will be in the **data** object (100 notices).
+
 If it does not, you might have to start your browser with **same-origin policy** disabled:
 
 `open -a Google\ Chrome --args --disable-web-security --user-data-dir`
-
-
-<br>
-<hr>
-1:00 - lab
 
 <br>
 <hr>
