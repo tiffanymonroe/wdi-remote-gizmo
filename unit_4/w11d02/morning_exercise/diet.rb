@@ -1,5 +1,5 @@
 
-# 1. Write a method called no_donuts that takes in a number of donuts as an argument. If the number of donuts is greater than zero then this method should return "Get back on your diet!" otherwise it should return "Good job, Homer!"
+# 1. Write a method called no_donuts that takes in a number of donuts as an argument. If the number of donuts is greater than zero then this method should return "Get back on your diet!" otherwise it should return "Good job, Rick!"
 
 #----Write code here for #1----
 
@@ -11,7 +11,7 @@
 
 #------------------------------
 
-# 3. We've decided to give Rick a little more control over his diet. Write a method called some_donuts that takes in two arguments - the number of donuts he has eaten and a maximum donut intake. This method should tell Homer good job if he eats less than half his maximum intake and to get back on his diet when he exceeds his maximum it.
+# 3. We've decided to give Rick a little more control over his diet. Write a method called some_donuts that takes in two arguments - the number of donuts he has eaten and a maximum donut intake. This method should tell Rick good job if he eats less than half his maximum intake and to get back on his diet when he exceeds his maximum it.
 
 #----Write code here for #3----
 
