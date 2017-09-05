@@ -12,9 +12,6 @@ Submit an issue (as you normally do for homework) with a link to your repo AND a
 
 NOTE: Only one person will need to submit the issue. The title for your issue should be `Your Names - Project 4`.
 
-Also, be sure to add your project to the [Project 4 Google Doc]().
-
-
 ## Attendance
 You are required to be present at 10:00 am EDT each day during the project. We will be taking attendance - this will count for both morning and afternoon attendance.
 
@@ -76,7 +73,7 @@ _Your instructor will contact you to setup a meeting time for project approval_
 * **Be deployed online** and accessible to the public via Heroku
 * Have a **link to your hosted working app** in the `README.md` file in your github repo
 * **A ``readme.md`` file** with explanations of the technologies used, the approach was taken, unsolved problems, and notes to yourself/group members so you can come back to your project later and be able to pick up your train of thought, etc
-* **Info filled out in the google sheet** - will be made available a day or two before the project due date
+* **Info filled out in the google sheet** - you can add it [here](https://docs.google.com/spreadsheets/d/11aBR4u3N_qLqB4EH3GnCgV9zg-JTAMixkMQayYXFkck/edit?usp=sharing).
 
 ALSO, don't forget: a **technical demonstration** of your app which:
 
@@ -99,7 +96,7 @@ Additionally, we would like each group member to answer at least at least one of
 #### Recommended features
 
 * **third party API** with a gem
-* authentication with [**Javascript Web Tokens**](https://github.com/ga-students/wdi-remote-hopper/tree/master/unit_4/w11d04/instructor_notes)
+* authentication with [**Javascript Web Tokens**](https://github.com/ga-students/wdi-remote-gizmo/tree/master/unit_4/w11d04/instructor_notes)
 * **[Versioned API](http://sourcey.com/building-the-prefect-rails-5-api-only-app/)**
 * Authentication with [**API key**](http://sourcey.com/building-the-prefect-rails-5-api-only-app/)
 * A **second front end app** using either jQuery, React, Vue, Swift, etc.
