@@ -60,7 +60,7 @@ Note that step-by-step directions are below. Refer to the *Start Here* section t
 
 * Open up the directory in atom
 
-* In the `dating_app` directory in Terminal, make a new rails app `dating_app_api` with the `--api` flag and postgresql as the db, and go into it
+* In the `dating_app` directory in Terminal, make a new rails app `dating_app_api` with the `--api` flag and postgresql as the db **and** `--skip-git`, and go into it
 
 * Create the db
 
