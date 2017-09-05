@@ -84,7 +84,7 @@ _Your instructor will contact you to setup a meeting time_
 **Thursday, September 14**
 - You will have a 15 minute meeting with an instructor to get your project approved.
 
-**Thursday, May 25 through Friday, June 2**<br>
+**Friday, September 15 through Monday, September 25**<br>
 
 - There will be optional topics taught during some of the remaining mornings (schedule to be announced).
 
