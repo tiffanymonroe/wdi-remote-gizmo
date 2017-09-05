@@ -297,6 +297,10 @@ The commit message should read: <br>
 
 <br><br>
 
+# &#x1F354; HUNGRY FOR MORE?
+
+## FINISH THE APP
+
 ## &#x1F4D0; Angular - Add A User
 
 Put a form in the footer for adding a new user/dater. A dater has a `name`, `age`, `gender`, and `img`.
@@ -354,12 +358,6 @@ The commit message should read: <br>
 <hr>
 
 <br><br>
-
-# &#x1F354; HUNGRY FOR MORE?
-
-## FINISH THE APP
-
-<br>
 
 ## &#x1F4D0; Angular - Hover
 
