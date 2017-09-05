@@ -54,7 +54,7 @@ Your final project should be an app that
 <hr>
 
 ## Project due date
-**Wednesday, Wednesday 27**<br>
+**Wednesday, September 27**<br>
 Submit an issue (as you normally do for homework) with links to your repos AND links to your live sites. You will be presenting your projects in front of the class. The title for your issue should be `Your Name - Final Projects`
 
 ## Attendance
