@@ -33,130 +33,6 @@ Inside it should be `noticeboard_app_api` and `noticeboard_app_frontend`.
 
 2:30
 
-# &#x1F3CB; &#x1F371; FLEXBOX
-
-With Angular now 'consuming' our API, let's make a webpage.
-
-### In our `noticeboard_app_frontend`
-
-We'll make a basic [Holy Grail](https://en.wikipedia.org/wiki/Holy_Grail_(web_design)) layout using Flexbox.
-
-Link the CSS to your index.html: `<link rel="stylesheet" href="style.css"/>`
-
-In style.css, make all of our elements red so we can see how they lay-out:
-
-```css
-/* for development only - check layout */
-header, div, main, nav, aside, footer {
-  border: 1px solid red;
-}
-```
-
-![](https://i.imgur.com/RH8vbss.png)
-
-HTML structure: header, container, footer
-Inside container put main, nav, aside
-
-```html
-  <header>…</header>
-  <div class="container">
-     <main>…</main>
-     <nav>…</nav>
-     <aside>…</aside>
-  </div>
-  <footer>…</footer>
-```
-
-![](https://i.imgur.com/QOAGLZS.png)
-
-## &#x1F34D; Result
-
-![](https://i.imgur.com/yiX2EEa.png)
-
-CSS for `body` and `.container`
-
-```css
-body {
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-
-.container {
-  display: flex;
-  flex: 1;
-}
-```
-
-![](https://i.imgur.com/LC1q8rc.png)
-
-## &#x1F34D; Result
-
-![](https://i.imgur.com/INH2L9u.png)
-
-CSS for `main`, `nav` and `aside`
-
-```css
-main {
-  flex: 1;
-}
-
-nav {
-  order: -1;
-}
-
-nav, aside {
-  flex: 0 0 12em;
-}
-```
-
-![](https://i.imgur.com/4ficIcJ.png)
-
-## &#x1F34D; Result
-
-![](https://i.imgur.com/QXrAbUv.png)
-
-All done! Let's change it so that it's "mobile-first".
-
-Add `flex-direction: column` to `.container`
-
-```css
-.container {
-  display: flex;
-  flex: 1;
-  flex-direction: column;
-}
-```
-
-Cut `nav, aside` out and add it to the following media query that also changes the flex-direction of the container to row:
-
-Media query:
-
-```css
-@media (min-width: 768px) {
-  .container {
-    flex-direction: row;
-    flex: 1;
-  }
-  nav, aside {
-    flex: 0 0 12em;
-  }
-}
-```
-
-![](https://i.imgur.com/lLUx9jF.png)
-
-
-## &#x1F34D; Result for Mobile
-
-![](https://i.imgur.com/06fRxM3.png)
-
-[Real cool Flexbox reference](https://css-tricks.com/snippets/css/a-guide-to-flexbox/)
-<br>
-<hr>
-
-3:05
-
 # &#x1F4D0; ANGULAR
 
 * Let's format our data on our page
@@ -165,7 +41,7 @@ Media query:
 
 The Angular so far should look like this:
 
-![](https://i.imgur.com/oWEanwb.png)
+![](https://i.imgur.com/oFGvnz1.png)
 
 * Give our returned data place to live (note that this step is not strictly necessary, but makes the code more explicit): `this.notices = [];`
 
@@ -180,26 +56,14 @@ console.log(response);
 this.notices = response.data;
 ```
 
-![](https://i.imgur.com/k0U5nQV.png)
+![](https://i.imgur.com/cwff0po.png)
 
-Bind the `context` of `this` to the `$http` callback: `.bind(this)` (note: this is the same as setting `var self = this` but is a bit more 'proper', and you get to keep the keyword `this`).
+
+> Side note: If you are not using ES6 arrow functions you can either set `const self = this` or bind the context to the callback:
+
+> Bind the `context` of `this` to the `$http` callback: `.bind(this)` (note: this is the same as setting `const self = this`.
 
 ![](https://i.imgur.com/nVaWIVv.png)
-
-* console.log the notices
-
-```javascript
-  $http({
-    method: 'GET',
-    url: 'http://localhost:3000/notices',
-  }).then(function(response) {
-    console.log(response);
-    this.notices = response.data;
-    console.log(this.notices);
-  }.bind(this));
-```
-
-![](https://i.imgur.com/H6xgQS0.png)
 
 3:10
 
@@ -223,13 +87,21 @@ Inside `main`, Make an `ng-repeat`ing div with the stuff in it. Give it a class 
 
 ## &#x1F34D; Result
 
-![](https://i.imgur.com/usHZocm.png)
+![](https://i.imgur.com/r2UZHW2.png)
 
-Add a little bit of styling, why not?
+<br>
+<hr>
 
-![](https://i.imgur.com/V8iqh8J.png)
 
-style.css
+# &#x1F3CB; &#x1F371; STYLE
+
+With Angular now 'consuming' our API, let's make a webpage.
+
+## CSS 
+
+Link the CSS to your index.html: `<link rel="stylesheet" href="style.css"/>`
+
+Use the following **Flexbox** CSS:
 
 ```css
 /* for development only - check layout */
@@ -289,10 +161,46 @@ nav, aside {
 }
 ```
 
+### HTML
+
+HTML structure: header, container, footer
+Inside container put main, nav, aside
+
+```html
+  <header>…</header>
+  <div class="container">
+     <main>…</main>
+     <nav>…</nav>
+     <aside>…</aside>
+  </div>
+  <footer>…</footer>
+```
+
+Paste over your html withint the body tags with this:
+
+```
+  <header>NOTICES :-)</header>
+  <div class="container">
+    <main>
+      <div ng-repeat="notice in ctrl.notices" class="notice">
+        <h3>{{ notice.title }}</h3>
+        <p>{{ notice.content }}</p>
+        <small>{{ notice.author }}</small>
+      </div>
+    </main>
+    <nav>...</nav>
+    <aside>...</aside>
+  </div>
+  <footer>...</footer>
+```
+
+## RESULT
+
+![](https://i.imgur.com/LkKCrPl.png)
+
+
 <br>
 <hr>
-
-3:20
 
 ## POST REQUEST
 ### Add a Notice to the Database
@@ -362,30 +270,12 @@ Example form data return:
   } // end processForm
 ```
 
-![](https://i.imgur.com/NFkP5rr.png)
-
-
-Response from Rails API server:
-![](https://i.imgur.com/xYvwN5N.png)
-
-![](https://i.imgur.com/XwVn4By.png)
-
 3:45
 
-## TWEAKS
 
-### Clear out the formdata
-* Bind `this` to the request callback.
-* Set `this.formdata = {}` inside the callback.
-
-![](https://i.imgur.com/LDT1lp6.png)
-
-
-### No request
-We want the new notice automatically to appear on the page without an http request to re-get all the notices, AND we want the newest notice to appear first.
+# New notices at the top
 
 * Rails: Change the Notice index controller to `reverse` the array
-* Angular: Avoid making another `$http` request by just unshifting the new data to the front of the array
 
 We want newer notices to show first. `reverse` the result server side.
 
@@ -400,7 +290,11 @@ Rails server:
   end
 ```
 
-![](https://i.imgur.com/qnHJdyZ.png)
+# Magical update
+
+AJAX requests are **heavy** and somewhat go against the _lightness_ of using a single page format. Single pages are light, because when a user clicks on stuff, new pages are not loaded (requests to server are minimal, un-burdening the app).
+
+We want the **new notice** automatically to appear on the page without an http request.
 
 Make Angular's digest loop do the work of updating the index page rather than making another http request:
 
@@ -408,24 +302,17 @@ Make Angular's digest loop do the work of updating the index page rather than ma
   this.notices.unshift(result.data);
 ```
 
-![](https://i.imgur.com/mSrdfKp.png)
+Because we just **unshifted** the new notice into the `this.notices` array, notices are automatically added to the page **without** an extra `$http` request.
 
-Newer notices appear at the top:
-
-![](https://i.imgur.com/jo5tqzL.png)
-
-Becayse we just **unshifted** the new notice into the `this.notices` array, notices are automatically added to the page **without** an extra `$http` request.
-
-Angular can't listen for changes in the database, but it listens for any changes to its own models. All we had to do was get the digest loop to update with the new notice. We already know that it's in the db.
+Angular can't listen for changes in the database, but it listens for any changes to its own models. All we had to do was get the digest loop to update with the new notice. We already know that it's in the db, because we had a successful response.
 
 Thanks, Angular digest loop.
 
 [Angular digest loop and data binding](http://angular-tips.com/blog/2013/08/watch-how-the-apply-runs-a-digest/)
 
-<br>
-<hr>
 
-4:00 - deployment lab
+### Clear out the formdata
+* Set `this.formdata = {}` inside the callback.
 
 <hr>
 License

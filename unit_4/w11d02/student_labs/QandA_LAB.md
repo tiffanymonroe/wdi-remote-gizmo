@@ -46,7 +46,7 @@ Why would we want to separate our app like this into two separate repos and serv
 
 #### EXTRA
 
-* Scaffold a Rails API for **Mousses**
+* Scaffold a Rails API for **Cats**
 * Make a frontend server that can query the index route
 
 <br>
