@@ -205,6 +205,8 @@ Paste over your html withint the body tags with this:
 ## POST REQUEST
 ### Add a Notice to the Database
 
+Note: the remainder of these notes are written in ES5. Translate them to ES6 if you have been using ES6.
+
 index.html -- add a form to the left nav
 
 ```
