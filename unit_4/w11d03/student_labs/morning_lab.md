@@ -1,4 +1,17 @@
-## MORNING LAB
+![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
+# WDI-GIZMO
+
+---
+Title: Rails API one-to-many lab<br>
+Type: Lab<br>
+Duration: 45+ mins<br>
+Creator: Thom Page <br>
+Topics: Rails 5 API, One-to-many relationships<br>
+
+---
+
+## Rails API one-to-many lab
 
 * **PLAN A BACKEND API THAT HAS A ONE-TO-MANY RELATIONSHIP**
 
