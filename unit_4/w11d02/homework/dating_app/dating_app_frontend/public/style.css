@@ -1,6 +1,6 @@
-* {
+/** {
   border: 1px solid hotpink;
-}
+}*/
 body {
   display: flex;
   min-height: 100vh;

@@ -11,9 +11,24 @@
 </head>
 <body ng-controller="mainController as ctrl">
   <div class="container">
-    <main class="main"></main>
-    <nav class="nav"></nav>
-    <aside class="aside"></aside>
+    <main class="main">MAIN</main>
+    <nav class="nav">
+      <div ng-repeat="user in ctrl.users | limitTo: 3 : 0">
+        <img src="{{user.img}}" alt="{{user.name}}"/>
+        <h3>{{user.name}}</h3>
+        <h5>{{user.gender}}</h5>
+        <br>
+      </div>
+    </nav>
+    <aside class="aside">
+      <div ng-repeat="user in ctrl.users | limitTo: 3 : 3">
+        <img src="{{user.img}}" alt="{{user.name}}"/>
+        <h3>{{user.name}}</h3>
+        <h5>{{user.gender}}</h5>
+        <br>
+      </div>
+    </aside>
+
   </div>
 </body>
 </html>
