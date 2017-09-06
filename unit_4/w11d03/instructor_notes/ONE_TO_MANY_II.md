@@ -381,7 +381,60 @@ Result:
 <br>
 <hr>
 
-# BONUS / Extra reading
+
+
+
+## Datasets options
+
+Each 'datasets' object can have more options than just `label` and `data`. You can choose how to display each dataset. And as you might have guessed, you can have more than one dataset on a chart.
+
+Try hardcoding each one of these into your chartData options separately and seeing the results
+
+Example:
+
+![](https://i.imgur.com/sD21kGI.png)
+
+Result:
+
+![](https://i.imgur.com/C71r4FA.png)
+
+
+## Change the chart type
+
+Bar chart
+
+![](https://i.imgur.com/xD2IKNJ.png)
+
+Result:
+
+![](https://i.imgur.com/FSnnmBW.png)
+
+
+
+## Chart options
+
+```
+  {
+      fill: false,
+      lineTension: 0,
+      backgroundColor: "rgba(75,192,192,0.4)",
+      borderColor: "rgba(75,192,192,1)",
+      borderCapStyle: 'butt',
+      borderDash: [],
+      borderDashOffset: 0.0,
+      borderJoinStyle: 'miter',
+      pointBorderColor: "rgba(75,192,192,1)",
+      pointBackgroundColor: "#fff",
+      pointBorderWidth: 1,
+      pointHoverRadius: 5,
+      pointHoverBackgroundColor: "rgba(75,192,192,1)",
+      pointHoverBorderColor: "rgba(220,220,220,1)",
+      pointHoverBorderWidth: 2,
+      pointRadius: 1,
+      pointHitRadius: 10,
+      spanGaps: false,
+  }
+```
 
 ## Fetch POST Request
 
@@ -566,58 +619,6 @@ window.onload = function() {
 <br>
 <hr>
 
-
-## Datasets options
-
-Each 'datasets' object can have more options than just `label` and `data`. You can choose how to display each dataset. And as you might have guessed, you can have more than one dataset on a chart.
-
-Try hardcoding each one of these into your chartData options separately and seeing the results
-
-Example:
-
-![](https://i.imgur.com/sD21kGI.png)
-
-Result:
-
-![](https://i.imgur.com/C71r4FA.png)
-
-
-## Change the chart type
-
-Bar chart
-
-![](https://i.imgur.com/xD2IKNJ.png)
-
-Result:
-
-![](https://i.imgur.com/FSnnmBW.png)
-
-
-
-## Chart options
-
-```
-  {
-      fill: false,
-      lineTension: 0,
-      backgroundColor: "rgba(75,192,192,0.4)",
-      borderColor: "rgba(75,192,192,1)",
-      borderCapStyle: 'butt',
-      borderDash: [],
-      borderDashOffset: 0.0,
-      borderJoinStyle: 'miter',
-      pointBorderColor: "rgba(75,192,192,1)",
-      pointBackgroundColor: "#fff",
-      pointBorderWidth: 1,
-      pointHoverRadius: 5,
-      pointHoverBackgroundColor: "rgba(75,192,192,1)",
-      pointHoverBorderColor: "rgba(220,220,220,1)",
-      pointHoverBorderWidth: 2,
-      pointRadius: 1,
-      pointHitRadius: 10,
-      spanGaps: false,
-  }
-```
 
 ## Other things our app could do:
 * show all of a location's data on a single chart
