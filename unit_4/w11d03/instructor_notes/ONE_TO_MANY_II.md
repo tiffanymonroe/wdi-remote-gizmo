@@ -17,19 +17,19 @@ Let's make the front-end for our Temperatures app.
 
 ### OUR GOAL IS TO:
 
-* Display all of a location's **average high temperatures** on a chart.
+* Interact with our Rails API
+
+* Display all of a single location's **average high temperatures** on a chart.
 
 ### Lesson objectives
 
 At the end of this lesson, students will be able to:
 
-* Use Chrome's **fetch** for AJAX requests
+* Use **fetch** for AJAX requests
 * Configure CORS
 * Make a line graph with Chart.js
 
 ---
-
-2:30
 
 # SETUP
 
@@ -43,15 +43,17 @@ Name the frontend directory:
 
 You will need:
 
-* Express
+* Express `npm i express`
+	* Boilerplate express code
+* Listener 
 * Public folder with `index.html`, `app.js`, `style.css`
 
 **Get a message displayed in the browser from your index.html**
 
+**Get a console.log showing in the browser**
+
 <br>
 <hr>
-
-2:45
 
 # FETCH
 
@@ -59,17 +61,24 @@ Using Chrome's **fetch** command we can make AJAX requests with 'vanilla' javaSc
 
 **fetch** is also a popular way to make AJAX requests in React, another front-end framework like Angular. (React does not have an in-built http service).
 
-[fetch() documentation](https://developers.google.com/web/updates/2015/03/introduction-to-fetch)
+[Great article on using Fetch](https://css-tricks.com/using-fetch/)
+
+Let's get all of our locations from our Rails API.
 
 app.js - make an AJAX request to get locations
 
-![](https://i.imgur.com/ujcvxQp.png)
+```javascript
+fetch('http://localhost:3000/locations')                                        
+  .then(response => response.json())                                            
+  .then(json => console.log(json))                                              
+  .catch(err => console.log(err));  
+```
+
+![](https://i.imgur.com/azGbynf.png)
 
 As expected, we get our single-origin policy obstruction.
 
 ![](https://i.imgur.com/GzmHqb3.png)
-
-2:47
 
 # CORS
 
@@ -91,15 +100,11 @@ Allow all origins `*`
 
 <br>
 
-2:49
-
 # CONFIGURE FETCH
 
 Let's change our `fetch` to get a **single location** and also to console.log it. We want a single location so that we can display a chart of climate data just for that location.
 
-* Change the URL to get `locations/1`
-
-* We could also query `locations/1/temperatures` if we did not want location data (a feature of our API).
+* Change the URL to get `locations/1`:
 
 In the developer console:
 
@@ -108,8 +113,6 @@ In the developer console:
 Cool man cool. **fetch** worked. We received location 1 with along that location's temperatures.
 
 <br>
-
-2:55
 
 # CHART.JS
 
@@ -123,7 +126,7 @@ Chart.js can do all the heavy lifting with Canvas. All we have to do is plug in 
 
 Use a chart.js cdn:
 
-`<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.3.0/Chart.min.js"></script>`
+`<script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.4.0/Chart.min.js"></script>`
 
 
 ![](https://i.imgur.com/UNchygE.png)
@@ -141,51 +144,73 @@ Use a chart.js cdn:
  
 *  P.S. the canvas element is called the "context" and so you'll see canvas variables called `ctx`.
 
-![](https://i.imgur.com/vZvGGaG.png)
+![](https://i.imgur.com/winRkEf.png)
 
 * Instantiate a new Chart object. The Chart constructor takes the canvas context and an options object as arguments.
 
-![](https://i.imgur.com/KDIC26i.png)
+```javascript
+window.onload = function() {
+  const ctx = document.querySelector('#temperatures');
+  console.log(ctx);
+
+  const tempsChart = new Chart(ctx, {})
+}
+```
 
 * The simplest options we can give our chart are just chart type and data (an empty object for now). Let's make a **line chart:**
 
-![](https://i.imgur.com/ffc25xC.png)
+```javascript
+window.onload = function() {
+  const ctx = document.querySelector('#temperatures');
+  console.log(ctx);
 
+  const tempsChart = new Chart(ctx, {
+  	type: 'line',
+  	data: {}
+  })
+}
+```
 
-2:58
 
 * Our data object could potentially be enormous. Let's configure our data object elsewhere to separate it from the options.
 
-![](https://i.imgur.com/42BcykA.png)
-
 ```javascript
-  var chartData = {}
+window.onload = function() {
+  const ctx = document.querySelector('#temperatures');
+  console.log(ctx);
 
-  var tempsChart = new Chart(ctx, {
-    type: 'line',
-    data: chartData
-  });
+  const chartData = {};
+
+  const tempsChart = new Chart(ctx, {
+  	type: 'line',
+  	data: chartData
+  })
+}
 ```
+
+## Test with some dummy data
 
 * Let's load in some dummy data for our chart. We will need an array of `labels` and an array of `datasets`.
 
-![](https://i.imgur.com/xqFEv89.png)
-
 ```javascript
-  var chartData = {
-    labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
-    datasets: [
-      {
-        label: 'Avg high temps',
-        data: [54, 32, 78, 90, 10]
-      }
-    ]
-  }
+window.onload = function() {
+  const ctx = document.querySelector('#temperatures');
 
-  var tempsChart = new Chart(ctx, {
-    type: 'line',
-    data: chartData
-  });
+  const chartData = {
+  	labels: ['Jan', 'Feb', 'Mar', 'Apr', 'May'],
+  	datasets: [
+  		{ 
+  			label: 'Avg high temps',
+  			data: [54, 32, 78, 90, 10]
+  		}
+  	]
+  };
+
+  const tempsChart = new Chart(ctx, {
+  	type: 'line',
+  	data: chartData
+  })
+}
 ```
 
 Our data object at minimum should have two arrays:
@@ -197,7 +222,6 @@ Load up the dummy data and see what you can see.
 
 ![](https://i.imgur.com/E5le9t7.png)
 
-3:00
 
 
 ## Populate data from Rails API
@@ -209,44 +233,159 @@ Load up the dummy data and see what you can see.
 
 * empty out the dummy data.
 
-![](https://i.imgur.com/odRvDlx.png)
+```javascript
+  const chartData = {
+  	labels: [],
+  	datasets: [
+  		{ 
+  			label: 'Avg high temps',
+  			data: []
+  		}
+  	]
+  };
+```
 
 The Chart is generated when the Chart constructor is run. So, let's put that inside the **fetch promise** so that it will run after we get the data from the API.
 
-![](https://i.imgur.com/YWef2dp.png)
+```javascript
+	fetch('http://localhost:3000/locations/1')
+	  .then(response => response.json())
+	  .then(json => {
+	     console.log(json); 
+	  	  const tempsChart = new Chart(ctx, {
+	  	    type: 'line',
+	  	    data: chartData
+	  	  });
+	  })
+	  .catch(err => console.log(err));
+```
 
-![](https://i.imgur.com/R1shHU5.png)
+```javascript
+window.onload = function() {
+  const ctx = document.querySelector('#temperatures');
 
-3:05
-
-*****HERE*********
+  const chartData = {
+  	labels: [],
+  	datasets: [
+  		{ 
+  			label: 'Avg high temps',
+  			data: []
+  		}
+  	]
+  };
+	
+	fetch('http://localhost:3000/locations/1')
+	  .then(response => response.json())
+	  .then(json => { 
+	  	  console.log(json);
+	     const tempsChart = new Chart(ctx, {
+	  	    type: 'line',
+	  		 data: chartData
+	     });
+	  })
+	  .catch(err => console.log(err));
+}
+```
 
 
 ### Push fetched data into chartData fields
 
+The data we received from the server for location 1 has an array of temperatures.
+
 We want to loop over all the temperatures and push their values into the **labels** and **datasets** arrays.
 
 ```javascript
-data.temperatures.forEach(function(temperature) {
+json.temperatures.forEach((temperature) => {
         chartData.labels.push(temperature.id);
         chartData.datasets[0].data.push(temperature.average_high_f);
       });
 ```
 
-3:10
 
-![](https://i.imgur.com/DKqPT5T.png)
+```javascript
+window.onload = function() {
+  const ctx = document.querySelector('#temperatures');
+
+  const chartData = {
+  	labels: [],
+  	datasets: [
+  		{ 
+  			label: 'Avg high temps',
+  			data: []
+  		}
+  	]
+  };
+
+	fetch('http://localhost:3000/locations/1')
+	  .then(response => response.json())
+	  .then(json => { 
+	  	console.log(json);
+
+	  	json.temperatures.forEach((temperature) => {
+        chartData.labels.push(temperature.id);
+        chartData.datasets[0].data.push(temperature.average_high_f);
+      });
+
+	  	const tempsChart = new Chart(ctx, {
+	  		type: 'line',
+	  		data: chartData
+	  	})
+	  })
+	  .catch(err => console.log(err))
+}
+```
 
 If it looks like it's working, then that's exciting.
 
-Let's **create** temperatures through our RAILS API.
+![](https://i.imgur.com/ndle1zg.png)
+
+
+## Second dataset
+
+Add in a second dataset for `Avg low temps`. 
+We'll push in the `average_low_f` data.
+
+```javascript
+  const chartData = {
+  	labels: [],
+  	datasets: [
+  		{ 
+  			label: 'Avg high temps',
+  			data: []
+  		},
+  		{
+  			label: 'Avg low temps',
+  			data: []
+  		}
+  	]
+  };
+```
+
+Push in the low temps:
+
+```javascript
+  json.temperatures.forEach((temperature) => {
+    chartData.labels.push(temperature.id);
+    chartData.datasets[0].data.push(temperature.average_high_f);
+    chartData.datasets[1].data.push(temperature.average_low_f);
+  });
+```
+
+![](https://i.imgur.com/xiFfSb1.png)
+
+Result:
+
+![](https://i.imgur.com/fT9xDmV.png)
+
 
 <br>
-
+<hr>
 
 # Fetch POST Request
 
-We're going to make a **test input** that will send requests to create climate data for location 1.
+Below this line is in ES5 -- needs to be updated to ES6
+
+We're going to make a **test input** that will send requests to create temperature data for location 1.
 
 Add an input box and a submit button
 
@@ -274,7 +413,6 @@ Within the window.onload, use 'vanilla' JavaScript to get elements and set an ev
   });
 ```
 
-3:15
 
 When the button is clicked, send a POST request using **fetch**:
 
@@ -295,7 +433,6 @@ When the button is clicked, send a POST request using **fetch**:
       });
 ```
 
-3:20
 
 Check that the data was created in rails console:
 
@@ -317,22 +454,6 @@ Check that the data was created in rails console:
 <br>
 <hr>
 
-## Second dataset
-
-Add in a second dataset for `Avg low temps`. 
-We'll push in the `average_low_f` data.
-
-![](https://i.imgur.com/BKhgh2R.png)
-
-Push in the low temps:
-
-![](https://i.imgur.com/xiFfSb1.png)
-
-Result:
-
-![](https://i.imgur.com/fT9xDmV.png)
-
-3:24
 
 # EXTRA
 
@@ -361,7 +482,6 @@ Result:
 
 ![](https://i.imgur.com/FSnnmBW.png)
 
-3:30
 
 
 ## Chart options

@@ -5,7 +5,7 @@
 ---
 Title: Science App - one to many <br>
 Type: Lesson<br>
-Duration: 2.5 hrs<br>
+Duration: 1.5 hrs<br>
 Creator: Thom Page <br>
 Topics: Rails 5 API, One-to-many relationships<br>
 
@@ -77,8 +77,6 @@ This has added boilerplate files and code to
 * `app/models`
 * `config/routes.rb`
 * `app/controllers`
-
-
 
 
 Check that the **migration files** are correct.

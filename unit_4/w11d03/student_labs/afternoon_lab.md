@@ -1,3 +1,16 @@
+![ga](http://mobbook.generalassemb.ly/ga_cog.png)
+
+# WDI-GIZMO
+
+---
+Title: Rails API one-to-many lab<br>
+Type: Lab<br>
+Duration: 45+ mins<br>
+Creator: Thom Page <br>
+Topics: Rails 5 API, One-to-many relationships, Chart.js<br>
+
+---
+
 # AFTERNOON LAB
 
 ![](https://i.imgur.com/mS4bLMs.png)
