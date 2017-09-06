@@ -51,7 +51,7 @@ describe "RICK DIET" do
       end
 
       it "tells RICK that he's not going to let his mom down" do
-        expect(motivation("fans")).to eq('Never gonna give you up.')
+        expect(motivation("fans")).to eq('Never gonna let you down.')
       end
     end
 end

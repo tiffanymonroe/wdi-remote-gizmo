@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html ng-app='noticeboard'>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.6.1/angular.min.js"></script>
+  <script src="app.js"></script>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body ng-controller="mainController as ctrl">
+  <header>NOTICES :-)</header>
+  <div class="container">
+    <main>
+      <div ng-repeat="notice in ctrl.notices" class="notice">
+        <h3>{{ notice.title }}</h3>
+        <p>{{ notice.content }}</p>
+        <small>{{ notice.author }}</small>
+      </div>
+    </main>
+    <nav>
+      <h4>POST A NOTICE</h4>
+      <form ng-submit="ctrl.processForm()">
+        <input type="text" ng-model="ctrl.formdata.author"placeholder="author"/>
+        <input type="text" ng-model="ctrl.formdata.title" placeholder="title"/>
+        <input type="text" ng-model="ctrl.formdata.content" placeholder="content"/>
+        <input class="submit" type="submit"/>
+      </form>
+    </nav>
+    <aside>...</aside>
+  </div>
+  <footer>...</footer>
+</body>
+</html>
