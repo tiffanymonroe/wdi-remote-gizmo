@@ -385,34 +385,31 @@ Result:
 
 ## Fetch POST Request
 
-Below this line is in ES5 -- needs to be updated to ES6
-
 We're going to make a **test input** that will send requests to create temperature data for location 1.
 
 Add an input box and a submit button
 
 ```html
-    <input id="temp-input" type="text" placeholder="new temperature" />
+    <input id="temp-input-high" type="text" placeholder="high temperature" />
+    <input id="temp-input-low" type="text" placeholder="low temperature" />
     <button id="temp-submit">SUBMIT</button>
 ```
 
 ![](https://i.imgur.com/W6Idvx6.png)
-
-![](https://i.imgur.com/vmC4kmN.png)
-
 3:12
 
 Within the window.onload, use 'vanilla' JavaScript to get elements and set an event listener.
 
-![](https://i.imgur.com/tlZLFDW.png)
 
 ```javascript
-  var inp = document.querySelector('#temp-input');
-  var btn = document.querySelector('#temp-submit');
+  const inpHigh = document.querySelector('#temp-input-high');
+  const inpLow = document.querySelector('#temp-input-low');
+  const btn = document.querySelector('#temp-submit');
 
-  btn.addEventListener('click', function() {
-    console.log('cliicked');
-  });
+	btn.addEventListener('click', () => {
+	  console.log('high: ', inpHigh.value);
+	  console.log('low: ', inpLow.value);
+	});
 ```
 
 
@@ -420,20 +417,26 @@ When the button is clicked, send a POST request using **fetch**:
 
 ![](https://i.imgur.com/T7KL2Jy.png)
 
-```javascript
-    fetch('http://localhost:3000/locations/1/temperatures', {
-        method: 'post',
-        headers: {
-          "Content-type": "application/x-www-form-urlencoded; charset=UTF-8"
-        },
-        body: "temperature[average_high_f]=" + inp.value
-      })
-      .then(function(response) {
-        return response.json()
-      }).then(function(data) {
-        console.log('Request succeeded with JSON response: ', data);
-      });
 ```
+    let body = {
+      average_high_f: inpHigh.value,
+      average_low_f: inpLow.value
+    }
+    
+    fetch('http://localhost:3000/locations/1/temperatures', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log('returned from server: ', json);
+      })
+      .catch(ex => console.log(ex));
+```
+
 
 
 Check that the data was created in rails console:
@@ -446,15 +449,123 @@ Check that the data was created in rails console:
 
 * Call it to get the initial chart on the page
 
-![](https://i.imgur.com/OsSK9Ff.png)
-
 * Inside the POST request success callback, call `renderChart()`
 
-![](https://i.imgur.com/nZTB9PR.png)
+```javascript
+  const renderChart = () => {
+    const chartData = {
+    	labels: [],
+    	datasets: [
+    		{ 
+    			label: 'Avg high temps',
+    			data: []
+    		},
+    		{
+    			label: 'Avg low temps',
+    			data: []
+    		}
+    	]
+    };
+
+  	fetch('http://localhost:3000/locations/1')
+  	  .then(response => response.json())
+  	  .then(json => { 
+  	  	console.log(json);
+
+  	  	json.temperatures.forEach((temperature) => {
+          chartData.labels.push(temperature.id);
+          chartData.datasets[0].data.push(temperature.average_high_f);
+          chartData.datasets[1].data.push(temperature.average_low_f);
+        });
+
+  	  	const tempsChart = new Chart(ctx, {
+  	  		type: 'line',
+  	  		data: chartData
+  	  	})
+  	  })
+  	  .catch(err => console.log(err))
+  }
+  
+  renderChart();
+```
+
+A better way would be to push the new data into the chartData instead, and then re-make the chart.
+
+```javascript
+window.onload = function() {
+  
+  const inpHigh = document.querySelector('#temp-input-high');
+  const inpLow = document.querySelector('#temp-input-low');
+  const btn = document.querySelector('#temp-submit');
+  const ctx = document.querySelector('#temperatures');
+
+  const renderChart = () => {
+    
+    const chartData = {
+      labels: [],
+      datasets: [
+        { 
+          label: 'Avg high temps',
+          data: []
+        },
+        {
+          label: 'Avg low temps',
+          data: []
+        }
+      ]
+    };
+    
+  	fetch('http://localhost:3000/locations/1')
+  	  .then(response => response.json())
+  	  .then(json => { 
+
+  	  	json.temperatures.forEach((temperature) => {
+          chartData.labels.push(temperature.id);
+          chartData.datasets[0].data.push(temperature.average_high_f);
+          chartData.datasets[1].data.push(temperature.average_low_f);
+        });
+
+  	  	const tempsChart = new Chart(ctx, {
+  	  		type: 'line',
+  	  		data: chartData
+  	  	})
+  	  })
+  	  .catch(err => console.log(err))
+  } // end renderChart
+  
+  renderChart();
+
+
+  btn.addEventListener('click', () => {
+    console.log('high: ', inpHigh.value);
+    console.log('low: ', inpLow.value);
+    let body = {
+      average_high_f: inpHigh.value,
+      average_low_f: inpLow.value
+    }
+    
+    fetch('http://localhost:3000/locations/1/temperatures', {
+      method: 'post',
+      headers: {
+        'Content-Type': 'application/json'
+      },
+      body: JSON.stringify(body)
+    })
+      .then(response => response.json())
+      .then(json => {
+        console.log('returned from server: ', json);
+        renderChart();
+      })
+      .catch(ex => console.log(ex));
+  });
+
+}
+```
 
 
 <br>
 <hr>
+
 
 ## Datasets options
 
