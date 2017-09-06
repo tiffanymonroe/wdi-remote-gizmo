@@ -46,6 +46,8 @@ Topics: Rails 5 API, CORS, One-to-many associations, Express and Angular 1.5
 # &#x1F4EF; START HERE
 
 ## MAKE RAILS API
+Rember to include the `--skip-git` flag.
+
 ![](https://i.imgur.com/u7bYsQy.png)
 
 <br>
