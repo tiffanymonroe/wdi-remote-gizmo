@@ -468,8 +468,6 @@ Within the window.onload, use 'vanilla' JavaScript to get elements and set an ev
 
 When the button is clicked, send a POST request using **fetch**:
 
-![](https://i.imgur.com/T7KL2Jy.png)
-
 ```
     let body = {
       average_high_f: inpHigh.value,
@@ -542,7 +540,7 @@ Check that the data was created in rails console:
   renderChart();
 ```
 
-A better way would be to push the new data into the chartData instead, and then re-make the chart.
+All of the code:
 
 ```javascript
 window.onload = function() {
