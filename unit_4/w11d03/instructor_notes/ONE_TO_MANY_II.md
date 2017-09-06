@@ -29,6 +29,8 @@ At the end of this lesson, students will be able to:
 * Configure CORS
 * Make a line graph with Chart.js
 
+**Temperatures for Location 1**
+![](https://i.imgur.com/OC4GolP.png)
 ---
 
 # SETUP
@@ -371,17 +373,17 @@ Push in the low temps:
   });
 ```
 
-![](https://i.imgur.com/xiFfSb1.png)
-
 Result:
 
-![](https://i.imgur.com/fT9xDmV.png)
+![](https://i.imgur.com/OC4GolP.png)
 
 
 <br>
 <hr>
 
-# Fetch POST Request
+# BONUS / Extra reading
+
+## Fetch POST Request
 
 Below this line is in ES5 -- needs to be updated to ES6
 
@@ -453,9 +455,6 @@ Check that the data was created in rails console:
 
 <br>
 <hr>
-
-
-# EXTRA
 
 ## Datasets options
 
