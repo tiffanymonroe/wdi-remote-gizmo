@@ -468,7 +468,7 @@ Within the window.onload, use 'vanilla' JavaScript to get elements and set an ev
 
 When the button is clicked, send a POST request using **fetch**:
 
-```
+```javascript
     let body = {
       average_high_f: inpHigh.value,
       average_low_f: inpLow.value
