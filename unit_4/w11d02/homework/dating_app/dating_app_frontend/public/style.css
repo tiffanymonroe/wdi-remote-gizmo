@@ -1,0 +1,40 @@
+* {
+  border: 1px solid hotpink;
+}
+body {
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+
+.container {
+  display: flex;
+  flex: 1;
+}
+
+.main {
+  flex: 1;
+}
+
+.nav, .aside {
+  flex: 0 0 12em;
+}
+
+.nav {
+  /*puts the nav on the left*/
+  order: -1;
+}
+
+/* making it responsive */
+@media (min-width: 768px) {
+  .container {
+    flex-direction: row;
+    flex: 1;
+  }
+  .main {
+    flex: 1;
+  }
+  .nav, .aside {
+    flex: 0 0 12em;
+  }
+}
