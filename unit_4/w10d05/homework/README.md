@@ -379,7 +379,7 @@ curl -X POST -d "tweet[title]=Crentist" -d "tweet[author]=Dwight" -d tweet[conte
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 9: Can POST new Tweets".
+"Commit 8: Can POST new Tweets".
 <hr>
 
 <br>
@@ -404,7 +404,7 @@ Then, it will render the json of that tweet along with a status code of 200.
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 10: Tweets update".
+"Commit 9: Tweets update".
 <hr>
 
 <br>
@@ -426,7 +426,7 @@ Then, it will render a status code of 204.
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 11: Tweets delete".
+"Commit 10: Tweets delete".
 <hr>
 
 <br>
@@ -457,7 +457,7 @@ render json: { author: "President Kool-chair", last_updated: "10 Jan 2017" }
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 12: Added an extra controller".
+"Commit 11: Added an extra controller".
 <hr>
 
 <br>
@@ -476,7 +476,7 @@ Add validations for
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 13: Added validations".
+"Commit 12: Added validations".
 <hr>
 
 <br>
@@ -503,7 +503,7 @@ Note: defaults will not be added to existing data entries. New ones will have to
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 14: Added default data".
+"Commit 13: Added default data".
 <hr>
 
 <br>
@@ -516,7 +516,7 @@ Add a second model for Replies. A Tweet has many replies, a reply belongs to a t
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 15: Added a second model".
+"Commit 14: Added a second model".
 <hr>
 
 <br>
@@ -531,7 +531,7 @@ Adjust the show page so that a Tweet *show* also displays the json of the Replie
 <hr>
 &#x1F534; **Commit your work** <br>
 The commit message should read: <br>
-"Commit 16: The show pages shows the tweets and their replies".
+"Commit 15: The show pages shows the tweets and their replies".
 <hr>
 
 ## Hungry for Even More (Sass)?
