@@ -24,13 +24,15 @@ Answer the following questions:
 
 * What **controllers** will you need?
 * What **routes** do you want your API to have?
-* Do you want nested routes?
 * What **actions** will your controller need, given your routes?
 
 <br>
 
 * Can you make your API 'self-evident'? Meaning, your API requires little explanation for an end-user?
 
+**Bonus research:**
+
+* Do you want nested routes?
 <br>
 
 **When you think you know the answers to these questions, build your API.**
