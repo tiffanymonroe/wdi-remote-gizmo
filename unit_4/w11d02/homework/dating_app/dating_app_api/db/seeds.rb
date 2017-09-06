@@ -14,7 +14,7 @@ User.create([
 		{ name: 'Idris Elba', age: 43, gender: 'm', img: 'http://www.ramascreen.com/wp-content/uploads/2015/01/Idris-Elba-Luther-150x150.jpg'},
 		{ name: 'The Trash Heap of Fraggle Rock', age: 1000, gender: 'f', img: 'http://www.toughpigs.com/wp-content/uploads/2009/12/trasheap-150x150.jpg'},
 		{ name: 'Homeless guy', age: 60, gender: 'm', img: 'https://s-media-cache-ak0.pinimg.com/236x/03/d1/53/03d153c14b49a88cab97d58a5bedb6e8.jpg'},
-		{ name: 'Raisin', age: 20, gender: 'f', img: 'http://cdn.lifeinthefastlane.com/wp-content/uploads/2010/09/raisin.jpg'},
+		{ name: 'Raisin', age: 20, gender: 'f', img: 'http://www.hairessentials.com/blog/wp-content/uploads/2013/04/raisins-multivu.com_-150x150.jpg'},
 		{ name: 'Jim', age: 49, gender: 'm', img: 'http://www.argylejournal.com/wp-content/uploads/2012/10/Jim-Ellinghausen-e1349993531939-150x150.jpg'},
 		{ name: 'Muttley', age: 2, gender: 'm', img: 'http://gifrific.com/wp-content/uploads/2012/08/Cartoon-Character-Mutley-Laughing-150x150.gif'},
 		{ name: 'Slimer', age: 90, gender: 'f', img: 'http://orig13.deviantart.net/ef48/f/2014/309/1/5/slimer_by_bbjeg-d85exys.png'},

@@ -30,5 +30,13 @@
     </aside>
 
   </div>
+  <footer class="footer">
+    <form ng-submit="ctrl.processForm()">
+      <input type="text" ng-model="ctrl.formdata.name" placeholder="name">
+      <input type="text" ng-model="ctrl.formdata.age" placeholder="age">
+      <input type="text" ng-model="ctrl.formdata.gender" placeholder="gender">
+      <input type="text" ng-model="ctrl.formdata.img" placeholder="img">
+      <input type="submit">
+  </footer>
 </body>
 </html>

@@ -12,7 +12,7 @@ body {
   flex: 1;
 }
 
-.main {
+.main, .footer {
   flex: 1;
 }
 
@@ -31,7 +31,7 @@ body {
     flex-direction: row;
     flex: 1;
   }
-  .main {
+  .main, .footer {
     flex: 1;
   }
   .nav, .aside {
