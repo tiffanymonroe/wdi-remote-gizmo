@@ -345,6 +345,8 @@ How do we get it in rails? There is no params in rails routes for our temperatur
 
 # SECOND PART OF THE ANSWER
 
+### Nested routes
+
 We will want to **nest** our create action inside the `locations` routes.
 
 ```ruby
@@ -399,9 +401,16 @@ Remove `location: @temperature`, it's a pain that will try to force a redirect a
  Succesful Postman request:
 
  ![](https://i.imgur.com/h1j6Rlg.png)
+ 
+ Note that the temperature was saved with a `location_id` as intended.
 
+**Location 2 in the browser has the new temperature:**
 
-Note that the temperature was saved with a `location_id` as intended.
+![](https://i.imgur.com/HNtmSWz.png)
+
+**Temperatures index in the browser has the new temperature:**
+
+![](https://i.imgur.com/qt0d7p0.png)
 
 ### under the hood: params hash again
 
