@@ -5,7 +5,7 @@
 ---
 Title: Many-to-many through <br>
 Type: Lesson<br>
-Duration: 2.5 hrs <br>
+Duration: 2 - 2.5 hrs <br>
 Creator: Thom Page <br>
 Topics: Rails 5 API, many-to-many through association, join table <br>
 
@@ -35,6 +35,8 @@ We're going to make a trading app where many traders can buy and sell commoditie
 
 ![](https://i.imgur.com/NTF229o.png)
 
+... and `--skip-git` if using >= Rails 5.1
+
 ```
 rails db:create
 ```
@@ -55,19 +57,21 @@ Schema
 
 ### Seed data
 
-
-Gemfile
-
-![](https://i.imgur.com/ej3ekYz.png)
-
-![](https://i.imgur.com/DHe9BLd.png)
-
 seeds.rb
 
 ```
-10.times do
-  Trader.create({ name: Faker::Name.name, money: 1000 })
-end
+Trader.create([
+  { name: 'Slimer', money: 1000 },
+  { name: 'Skeletor', money: 1000 },
+  { name: 'Dame Edna', money: 1000 },
+  { name: 'Cousin It', money: 1000 },
+  { name: 'Boomhauer', money: 1000 },
+  { name: 'Molly Ringwald', money: 1000 },
+  { name: 'Ursula', money: 1000 },
+  { name: 'James A. Garfield', money: 1000 },
+  { name: 'Krang', money: 1000 },
+  { name: 'Carl Sagan', money: 1000 }
+])
 
 Commodity.create([
   { name: "Oil", price: 53.28 },
@@ -91,7 +95,7 @@ Commodity.create([
 
 `localhost:3000/traders`
 
-![](https://i.imgur.com/NPKonzc.png)
+![](https://i.imgur.com/ZqYYZ3r.png)
 
 <br>
 
@@ -104,6 +108,8 @@ Commodity.create([
 10:15
 
 ## Many-to-many
+
+**Traders** and **Commodities** are two independently existing models. These models will remain independent.
 
 To relate **traders** and **commodities** we will not use foreign keys.
 
@@ -139,7 +145,7 @@ We can make a join table a couple of ways.
 
 * `has_many_and_belongs_to` relation which makes a table that does not have its own model. It's kind of an anonymous table and looks exactly like the image above. The table itself can't be expanded. This is the simpler relation.
 
-* `has_many through` makes a new model for the join table. This way, you can name the join table and add columns and validation to the table if you need to. We will use this way.
+* `has_many :through` makes a new model for the join table. This way, you can name the join table and add columns and validation to the table if you need to. We will use this way.
 
 
 **Construct a new resource called Ledger.**
@@ -179,6 +185,10 @@ schema:
 11:25
 
 Don't worry that it all looks funny. Just imagine it's doing the same thing as if the foreign key columns were just integers.
+
+You can see they are just integers in dbconsole:
+
+![](https://i.imgur.com/foqDWOH.png)
 
 Add the relations to the two main models:
 
@@ -319,11 +329,11 @@ What we can we say _about_ Playlist 6's relationship to that same song? We can s
 
 <br>
 <hr>
-10:50
+11:00
 
 ![](https://i.imgur.com/mS4bLMs.png)
 
-# MORNING LAB (40 mins)
+# MORNING LAB (45 - 60 mins)
 
 ### Playlist and Song - Many to Many Through
 
@@ -378,7 +388,7 @@ BONUS
 
 <br>
 
-11:30
+11:45 / 12:00
 
 ## VALIDATIONS - Duplicates
 
@@ -420,7 +430,7 @@ We can destroy ledgers we don't want:
 
 <br>
 
-11:45
+12:15
 
 PLAYLISTS APP activity
 
