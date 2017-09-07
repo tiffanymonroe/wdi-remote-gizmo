@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <link rel="stylesheet" href="normalize.css">
+    <link rel="stylesheet" href="main.css">
+    <title>Bar Graph</title>
+  </head>
+  <body>
+    <div id="container">
+      <h1> Is the Student Randomizer Truly Random?</h1>
+      <h2> Enter an integer to determine how many times to run the function:</h2>
+      <h5>
+        <form>
+        <input type="text" name="" value="" pattern="\d+$" id="input">
+        <input type="submit"  value="Test It!" id="submit">
+        </form>
+      </h5>
+      </h5>
+      <div class="graph">
+      </div>
+    <script src="https://d3js.org/d3.v4.min.js"></script>
+    <script src="generate-data.js"></script>
+    <script type="text/javascript" src="d3-bar-graph.js">
+    </script>
+  </body>
+</html>
