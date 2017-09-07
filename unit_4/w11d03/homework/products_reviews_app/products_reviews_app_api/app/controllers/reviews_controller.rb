@@ -3,9 +3,9 @@ class ReviewsController < ApplicationController
 
   # GET /reviews
   def index
-    @reviews = Review.all
+    reviews = Review.where(product_id: params[:product_id])
 
-    render json: @reviews
+    render json: reviews
   end
 
   # GET /reviews/1
