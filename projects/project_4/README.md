@@ -54,7 +54,7 @@ _Your instructor will contact you to setup a meeting time for project approval_
 - Each of you, locally, should create a new folder to house your Project_4. This folder should be outside of your class repo.
 - One person should create two new Github repositories. One will be for your front end and one will be for your backend.
 - Everyone should clone these two repos from Github into the new Project_4 folder that they've created.
-- Everyone should go inside of each of their new local repo folders and create `.gitignore` files. [Here is a list of useful .gitignores](https://github.com/github/gitignore) )
+- Everyone should go inside of each of their new local repo folders and create `.gitignore` files. [Here is a list of useful .gitignores](https://github.com/github/gitignore) 
 
 ## Technical Requirements
 ### &#x1F534; Mandatory to pass:
@@ -97,8 +97,6 @@ Additionally, we would like each group member to answer at least at least one of
 
 * **third party API** with a gem
 * authentication with [**Javascript Web Tokens**](https://github.com/ga-students/wdi-remote-gizmo/tree/master/unit_4/w11d04/instructor_notes)
-* **[Versioned API](http://sourcey.com/building-the-prefect-rails-5-api-only-app/)**
-* Authentication with [**API key**](http://sourcey.com/building-the-prefect-rails-5-api-only-app/)
 * A **second front end app** using either jQuery, React, Vue, Swift, etc.
 * A **second front end app for a mobile device** using [Ionic](https://ionicframework.com/) or [React Native](https://facebook.github.io/react-native/releases/next/)
 * What about using **graphs or visuals** on your data? Chart.js , D3.js
