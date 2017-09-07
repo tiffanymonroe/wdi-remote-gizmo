@@ -1,0 +1,41 @@
+* {
+  /*border: 1px solid hotpink;*/
+  padding: .2em;
+}
+
+#container  {
+  width: 90%;
+  margin: auto;
+
+}
+
+h1 {
+  text-align: center;
+}
+
+h5{
+  text-align: center;
+}
+
+.graph {
+  display: flex;
+  justify-content: center;
+}
+
+svg {
+  border: 1px solid gold;
+
+}
+
+table, tr, td {
+  border: 1px solid blanchedalmond;
+}
+
+table {
+  margin: auto;
+}
+
+td {
+  padding: 5px;
+  text-align: center;
+}
