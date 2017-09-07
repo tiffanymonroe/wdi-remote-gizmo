@@ -6,6 +6,8 @@ app.controller('mainController', ['$http', function($http){
 
   this.message = 'under control!';
   this.products = [];
+  this.reviews = false;
+
   $http({
     method: 'get',
     url: 'http://localhost:3000/products',
@@ -17,4 +19,11 @@ app.controller('mainController', ['$http', function($http){
 
   }).catch(err => console.log(err))
 
+  this.getReviews = function(id){
+    console.log('the image was clicked');
+    this.reviews = true;
+  $http({
+    method: 'get',
+    url: 'http://localhost:3000/products/' + id + '/reviews'
+  })}
 }]); //end controller
