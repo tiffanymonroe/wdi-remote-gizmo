@@ -36,7 +36,7 @@ But React does this very differently than Angular. First, there is no two-way da
 Make a directory called `react-profile` and go in.
 
 * Make an `index.html` and scaffold the boilerplate.
-* We will only be using the `index.html`.
+* Make an `app.js` where we will write the React code.
 
 ### React scripts
 
@@ -58,15 +58,15 @@ There are three scripts to include.
 <script src="http://fb.me/JSXTransformer-0.12.1.js"></script>
 ```
 
-React is **compartmentalized** via **separation of concerns** so we use only the pieces we want to use. 
+The first script is **React core**.
 
-We are using **React core**.
+We are also using **React DOM** which is specifically for rendering React stuff in a web browser. You can render React stuff in other places too, which is why React DOM is separate from the core React library.
 
-We are using **React DOM** which is specifically for rendering React stuff in a web browser. The idea is that you can render React stuff in other places too (not just a web browser, like mobile device), which is why React DOM is separate from the core React library.
+And we are using, **JSX** a library like jQuery that will allow us to write shorthand JavaScript code (more later).
 
-**JSX** is a library, like jQuery, that will allow us to write shorthand JavaScript code (more later).
+### Application script
 
-We could use React without ReactDOM and use a different renderer (say, for Mobile), or use React and ReactDOM without JSX (more on JSX later) and write JS objects rather than XML. Let's include all three.
+Underneath these scripts, link up your application script, but make sure it is of type `text/jsx` so that it will be interpreted for our JSX transformer.
 
 ![](https://i.imgur.com/GTqrRmA.png)
 
