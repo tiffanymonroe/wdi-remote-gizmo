@@ -18,7 +18,7 @@ Create a site that shows off your work
 - Suggested to be created with HTML, CSS, and Javascript
 - No templates are permitted. Frameworks like Bootstrap, Materialize, Bourbon, etc. are okay, but templates like WordPress, Hugo, Wix, Weebly, Squarespace etc. are **not** okay. If you aren't sure about it, ask an instructor.
 - Deployed to github pages or hosted somewhere else
-- Contains a list of your current projects
+- Contains a list of your current projects (with links to the live sites)
 - Contains your resume
 - Contains your bio
 - Contains a link to your github profile
