@@ -338,7 +338,7 @@ Let's make a more advanced frontend app with **data**. Our components will manag
 
 Let's make a Todo app that lists some todo items. The app will have a 'CLEAR' button that empties the todo list. When we click on an individual todo, the todo will get a line-through.
 
-![](https://i.imgur.com/C1kInff.png)
+![](https://i.imgur.com/3nXTZjk.png)
 
 Exit the portfolio directory, and create a new React app called `todo_app`:
 
@@ -1049,12 +1049,17 @@ Include `index.css` back in to `index.js`
 
 <br> 
 
+**End of Todo app**
 
-# NEW APP!
+Next: Questions and Answers app.
 
-# AJAX with 'index' and 'show' pages
+<br>
+<hr>
 
-## Questions-Answers app
+# Questions and Answers app
+
+## AJAX with 'index' and 'show' pages
+
 
 Let's make an app that does the kinds of RESTFul app-y stuff we've seen already:
 
@@ -1255,16 +1260,17 @@ Our **index page** of questions should render.
 
 ## Update the state again
 
-* The state of our app lives in the **App** component. The **App** component will have state to display either the index page or the show page.
+* The state of our app lives in the **App** component. The **App** component will decide whether to display index or show. It manages the state of the page (with a boolean or some other stateful datum).
 
-* When we click on an individual question in the **Question** component, we want the state of the **App** component to update.
+* When we click on an individual question in the **Question** component, we want the state of the parent **App** component to change.
 
 * To do this, we can make an event handler in our **App** component. We can then pass this event handler as **props** to the **Questions** component. 
 
 * We can use this event handler in the **Questions** child component. When it is triggered, it will trigger in the parent.
 
+"Data flows down, actions flow up".
 
-### Make an event handler
+## Make an event handler
 
 Our event handler will decide, on the **App** level, whether to display the index or show page.
 
