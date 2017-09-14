@@ -163,7 +163,7 @@ You can avoid JSX if you like, but writing in the arguments for `.createElement(
 
 The beauty of React is that every meaningful part of your single-page-application can be deconstructed into **components**. 
 
-Since each **component** deals with its own specific part of the app, amd will ultimately live in its own file, the app is easier to edit and maintain.
+Since each **component** deals with its own specific part of the app, and will ultimately live in its own file, the app is easier to edit and maintain.
 
 **Components** are also useful for reusability across your app.
  
@@ -245,7 +245,7 @@ We have one big ole component that serves as the container for our site. Logical
 
 # Child Components
 
-We have four distinct parts of our App component.
+We have three distinct parts of our App component.
 These can be further compartmentalized into child components. 
 
 Make an **AboutMe** component:
@@ -332,6 +332,8 @@ Global install:
 npm i -g create-react-app
 ```
 
+Let's make a more advanced frontend app with **data**. Our components will manage data and the **state** of that data.
+
 ## Todo App
 
 Let's make a Todo app that lists some todo items. The app will have a 'CLEAR' button that empties the todo list. When we click on an individual todo, the todo will get a line-through.
@@ -344,7 +346,10 @@ Exit the portfolio directory, and create a new React app called `todo_app`:
 create-react-app todo_app
 ```
 
+create-react-app will generate the todo_app directory. `cd` into the new directory.
+
 <br>
+
 ## Directory structure
 
 ![](https://i.imgur.com/4WUtf2V.png)
@@ -360,7 +365,7 @@ This is typical boilerplate React setup that you'll see in a lot of React apps.
 
 ## `src/index.js`
 
-Your `ReactDOM.render()` is in its own file, `index.js`.
+Your React entry point, the `ReactDOM.render()`, is in its own file, `index.js`.
 
 It's rendering the **App** component to the div with id `root`, just like we saw before.
 
@@ -374,7 +379,7 @@ ReactDOM.render(<App />, document.getElementById('root'));
 
 Instead of including the React dependencies from script tags and CDNs, React and ReactDOM are installed as Node modules (`npm`), and imported into our files. 
 
-The `import` syntax is a replacement for `require`. 
+The `import` syntax is an ES6 replacement for `require`. 
 
 ![](https://i.imgur.com/UE86jjQ.png)
 
@@ -388,43 +393,59 @@ We can run our React boilerplate app with `npm start`.
 
 **Note:** You can make custom `npm` commands in your package.json under "scripts". In this case, `npm start` will execute the command "react-scripts start", which is just running another package.
 
+> Note: if your directory contains a `yarn.lock` file you should also be able to use `yarn` instead of `npm`. `yarn start`.
+
 ![](https://i.imgur.com/kL46oV6.png)
 
-When you run the server, you should see this in your browser:
+When you run the server, the **webpack** config will open up your browser and start hot reloading. If you make changes to your code, the page should refresh. This is just one of the development tools that webpack gives you. You should see this in your browser:
 
 ![](https://i.imgur.com/iOtZJZE.png)
 
-<br>
+In **index.js** let's mess with the file a bit so we know it's OK to do so, and just space out the code. When you hit save, check out the browser refresh.
 
-The component that we see rendered to the page is the **App** component that was passed to `ReactDOM.render()`
+![](https://i.imgur.com/y4tN6ZZ.png)
 
-Let's look in `App.js` to see that component.
-
+[What is a "service worker" and why "register" one?](https://developers.google.com/web/fundamentals/getting-started/primers/service-workers)
 <br>
 
 ## `App.js` component
 
+The component that we see rendered to the page is the **App** component that was passed to `ReactDOM.render()`
+
+**There is just one component so far, App**
+
+Let's look in `App.js` to see that component.
+
+
 App.js
 
-![](https://i.imgur.com/05k1nFm.png)
-
-**This app has just one component so far, App**
+![](https://i.imgur.com/9cUrO73.png)
 
 There's quite alotta stuff happening in this component, so let's remove that stuff for now and just have a single hello world div.
 
 * Delete all of the JSX within the **return**.
 * Add a hello world div element to the return.
 
-![](https://i.imgur.com/1iVbVVw.png)
+![](https://i.imgur.com/kmD2DIA.png)
 
 Our webpage should automatically update to show us our App component.
+
+Notice in that in your console you might see:
+
+![](https://i.imgur.com/l3IcBV5.png)
+
+Helpful! Let's delete that. We also won't be using any CSS files, so delete those too. In fact, we can delete the service worker stuff too deom index.js.
+
+![](https://i.imgur.com/WgExFtv.png)
+
+![](https://i.imgur.com/5YVsqw7.png)
 
 <br>
 
 
 ## Expressions in JSX
 
-React is **javascript heavy**, and we'll want to use Javascript expressions to be evaluated on our page (in our JSX).
+React is **javascript heavy**. This means all of the fancy stuff, all of the conditional rendering will be done with JavaScript expressions to be evaluated on our page (in our JSX). 
 
 We do this with single-curlies: `{ expression }`
 
@@ -445,33 +466,36 @@ There are two kinds of components.
 * Functional components
 * Class components
 
-**App** is not a **functional component** like we used before, but rather a **class component**. It's a class that inherits from `React.Component`. A class component is the same as a functional component, it just gives us additional functionality for managing **state** that we will see later.
+**App** is not a **functional component** like we used before, but rather a **class component**. It's a class that inherits from `React.Component`. A class component is the same as a functional component, it just gives us additional means for managing **state** that we will see later.
 
 For now, while we get our heads around where can write our code, let's just think of Classes as only containing **methods**. This class contains a **render** method. We can write in more methods. But a class component must contain a render method.
 
 ![](https://i.imgur.com/Ha1eCmz.png)
 
+Let's just write some dummy data, our array of todos, in above the class for now.
 
-Let's add in an array of todos. We'll need to write it in somewhere. Since the class can only take methods, for now let's just write our array into the render method (this is not good because the array will be generated each time the component re-renders, but later, we will see the proper way to add data).
 
 ```javascript
-const todosArray = ['chew', 'snipe', 'yawn', 'bloat', 'roll']
+const todos = ['shovel the driveway', 'karaoke duet', 'sun-dry my chiffon', 'pay off the mayor', 'hoedown', 'sip on gin and juice']
 ```
 
-![](https://i.imgur.com/l4iBgU9.png)
+![](https://i.imgur.com/B0G9uzo.png)
 
 
-Let's give our app some more "todo"-shape, and add our array to our JSX using the curlies.
-![](https://i.imgur.com/3aTFg6P.png)
+Let's give our app some more "todo"-shape, and add our array to our JSX using the curlies. Remember, with the curlies we can evalute any Javascript expression including anything saved to variables. Replace `2 + 2` with `todos`.
+
+![](https://i.imgur.com/n8nKn3y.png)
 
 Result:
 
-![](https://i.imgur.com/G5UhJC6.png)
+![](https://i.imgur.com/UimuYYk.png)
 
 <br>
 
 
 # Templating: repeat
+
+Our **data** is on the page but the display is terrible.
 
 What we need is a way to make our array elements individual `<li>` elements. 
 
@@ -484,7 +508,7 @@ React does not have its own Domain Specific Language or special directives like 
 Let's look at how we can turn our todo items into `li` elements. For this, we use JavaScripts regular old **`.map()`** method.
 
 ```javascript
-const listItems = todosArray.map(item => <li>{item}</li>)
+const listItems = todos.map(item => <li>{item}</li>)
 ```
 
 Go ahead and `console.log(listItems)` to see what's in there.
@@ -496,7 +520,7 @@ Render all the `<li>`s within `listItems` instead of `todoArray` by just passing
 <ul>{ listItems }</ul>
 ```
 
-![](https://i.imgur.com/jZkpO8k.png)
+![](https://i.imgur.com/fNU2xcg.png)
 
 You could also do the repeat straight in the JSX, but editing it might get more messy:
 
@@ -526,7 +550,7 @@ It's okay. It's an easy fix, but it'll just get in the way for now.
 
 Our list of todos is its own thing, distinct from other existing or potential parts of our page. Following the React paradigm, let's componentize the meaningful sections of our app.
 
-Let's put our list into its own **List** component.
+Let's put our list, `<ul>{ listItems }</ul>`, into its own **List** component.
 
 New file: `List.js` inside the `src` folder.
 
@@ -540,7 +564,7 @@ import React from 'react'
 const List = () => {
   return (
     <ul>
-      list component
+      list items will go here
     </ul>
   )
 }
@@ -549,7 +573,8 @@ export default List;
 ```
 
 * **Import** it into App.js
-* Replace your `<ul>` with the new component.
+* Replace your `<ul>` with the new component, `<List />`.
+* Might as well make the title an h1.
 
 > App.js
 
@@ -558,7 +583,7 @@ export default List;
 import List from './List.js'
 ```
 
-![](https://i.imgur.com/ndw408u.png)
+![](https://i.imgur.com/WbK0Zcm.png)
 
 > App.js
 
@@ -571,38 +596,39 @@ import List from './List.js'
     );
 ```
 
+![](https://i.imgur.com/6hcjdZ3.png)
 <br>
 <hr>
 
 # Passing data to child components
 
-Our global 'data' is our `todosArray` array. Let's keep that in the **App** component. 
+Our webpage now has no data showing on it. Let's pretend our data is globally defined or pulled in from an API on the level of the **App** component. Our mission then is to somehow pass it down to the **List** component.
 
-Let's put our list mapping functionality into our **List** component. After all, it's our **List** component that will deal with the templating of our list.
+Our global 'data' is our `todos` array. Let's keep that in the **App** file. 
 
-> App.js
+Let's put our list mapping functionality into our **List** component, A. 
 
-![](https://i.imgur.com/VZZvXVp.png)
+After all, it's our **List** part of our page that is responsible for list, for formatting and displaying our list, and that will deal with the templating of our list.
 
 > List.js
 
-![](https://i.imgur.com/9P2B7tZ.png)
+![](https://i.imgur.com/uVM0mW5.png)
 
 We should have an error:
 
-![](https://i.imgur.com/12sHoWq.png)
+![](https://i.imgur.com/7lv2r51.png)
 
-That's cool. All we have to do is pass our `todosArray` data from the **App parent component** to the **List child component**.
-
-> React is all about having many distinct Components. The big issue that arises from having all these components is: how do they communicate with each other? 
-> 
-> The primary means of communication is sending data that exists in a parent component down into the child components.
-> 
-> Let's see how we can get our components to communicate by sending data.
+That's cool. All we have to do is pass our `todos` data from the **App parent component** to the **List child component**.
 
 <br>
 
 # props
+
+React is all about having many distinct Components. The big issue that arises from having all these components is: how do they communicate with each other? 
+ 
+The primary means of communication is sending data that exists in a parent component down into the child components.
+
+Let's see how we can get our components to communicate by sending data.
 
 Let's look at how we can send and receive data to and from Components.
 
@@ -610,21 +636,23 @@ Let's look at how we can send and receive data to and from Components.
 
 What we want to do is pass data from the **App** component to the **List** component. All data sent from Component to Component is done with **key value pairs**. Key-value pairs that are passed from Component to Component in React are called **props**. 
 
-We add a **prop** to the List component call. The **prop** is just a key-value pair: `todosArray={todosArray}`
+We add a **prop** to the List component call. The **prop** is just a key-value pair: `someKey={ someValue }`
 
 This is added as a kind of attribute to our component call:
 
 ```javascript
-<List todosArray={todosArray} />
+<List todos={ todos } />
 ```
 
-The key name is whatever we want. We are sending the JS expression `todosArray` as a value wrapped in curlies.
+The key name is whatever we want. We are sending the JS expression `todos` as a value wrapped in curlies.
 
-![](https://i.imgur.com/U3DxAeN.png)
+![](https://i.imgur.com/yjytPcl.png)
 
 ## receiving props
 
-We can receive this key-value pair in the **List** by receiving the props as a param in the functional component.
+We can receive this key-value pair in the **List** component.
+
+All props will come in as a parameter. Let's call the parameter **props**.
 
 ```javascript
 const List = (props) => { ... }
@@ -632,21 +660,21 @@ const List = (props) => { ... }
 
 * Go ahead and `console.log(props)` to see the props object.
 
+![](https://i.imgur.com/yyHJ6Ia.png)
+
 We can then access the props within the function with `props.keyName`. In this case, `props.todosArray`.
 
 ```javascript
-const listItems = props.todosArray.map(item => <li>{item}</li>)
+const listItems = props.todos.map(item => <li>{item}</li>)
 ```
 
-![](https://i.imgur.com/1CXqieW.png)
+DONE!
 
-Then just include the mapped props in the JSX, and we're done!
-
-![](https://i.imgur.com/zRjiZiq.png)
+![](https://i.imgur.com/IW4lTtC.png)
 
 <br>
 
-### props are read-only
+## props are read-only
 
 We have passed data from parent to child, but this is just static data. Props are **read only** in that they ought never to be altered. They just get passed down via **unidirectional flow** from parents to children.
 
@@ -659,18 +687,46 @@ The data within our apps will change due to user interaction, ajax requests, or 
 <br>
 <hr>
 
-# Altering the state of data
+**Exercise**
 
-Now we'll find out why we'd want a **class component** rather than a **functional component**. Class components are **stateful components**, meaning that the state of the component can change, and React must then track these changes through Reconciliation in the Virtual DOM.
+Make a **Numbers** component and pass an array of numbers to it.
+In the Numbers component, display each number as an **h5**.
 
->Remember:
+```
+const numbers = [4, 8, 15, 16, 23, 42];
+```
+![](https://i.imgur.com/kVlIxqJ.png)
+
+![](https://i.imgur.com/DBvZjj3.png)
+
+![](https://i.imgur.com/IxCal1O.png)
+
+**Bonus**
+
+React is JavaScript-heavy, meaning that everything we want to do, we have to figure it out with JavaScript. In other words, instead of reyling on conventions, we have to be creative.
+
+* below the numbers, display the total in an h3.
+
+![](https://i.imgur.com/1mRsbkh.png)
+
+<br>
+<hr>
+
+# state
+
+Now we'll find out why we'd want a **class component** rather than a **functional component**. The data state of the component can change, and React must then track these changes through Reconciliation in the Virtual DOM. With classes, we can make **stateful components**.
+
+
 >**props** are immutable properties, they are not meant to be changed. 
->
->**props** are static data that gets passed from component to component.
 >
 >**state** is that which can be altered or changed by acting on the data.
 >
+>
+>**props** get passed from component to component.
+>
 >**state** exists only in its containing Component
+
+
 
 ### creating state
 
@@ -678,9 +734,19 @@ Let's add **state** to our List component. We'll make it so when we click on a C
 
 > Convert our List component from a stateless component to a stateful one.
 
+We saw that our **App** component is a Class, not a function. Let's see what that's about.
+
 * Comment out the functional component.
 
-* Write in a class with a render method.
+* Write in a class
+
+```javascript
+class List extends Component { 
+
+}
+```
+
+Add in a render method.
 
 ```javascript
 class List extends Component { 
@@ -694,9 +760,20 @@ class List extends Component {
 }
 ```
 
-This **stateful** Class component requires a render method. The render method is directly related to **state**, which is why we don't have one in a **stateless** functional component. When the state in a Class component is updated, the component re-renders by running the render method.
+The render method will run whenever we update the **state** of our data, and the data will magically re-render on the page.
+
+![](https://i.imgur.com/8RFj0j7.png)
+
+The render method must return something valid:
+
+![](https://i.imgur.com/QBqEJZf.png)
+
+To make this work, we will have to import the `Component` module from React. (note: it's short for React.Component)
+
+![](https://i.imgur.com/hQy1Aec.png)
 
 <br>
+<hr>
 
 ## constructor method
 
@@ -704,16 +781,22 @@ To add state, we explicitly define a constructor method within the class. (If we
 
 We pass in the incoming props and call on the superclass with `super()`:
 
-```javascipr
+```javascript
   constructor(props) {
-    super(props)
-    console.log('props coming into the constructor: ', props);
+    super()
+    console.log('List props: ', props);
   }
 ```
 
-![](https://i.imgur.com/G5njxC1.png)
+![](https://i.imgur.com/Eek73q7.png)
 
-What we want is a version of our props that we can change. We can't / shouldn't change the original props, but we could make a reference to them, and set them as state.
+See the props in the log:
+
+![](https://i.imgur.com/byqwp0E.png)
+
+So, we know we can bring data into our class component.
+
+What we want is a version of our props that we can change. We can't / shouldn't change the original props, but we could make a reference to them, and set them as stateful data.
 
 We can set the initial state with `this.state` in the constructor.
 
@@ -723,26 +806,22 @@ Let's make the state equal to the incoming props:
   constructor(props) {
     super()
     this.state = {
-      todosArray: props.todosArray
+      todos: props.todos
     }
   }
 ```
 
-We can then access a stateful version of our data through `this.state.todosArray`
+We can then access a stateful version of our data through `this.state.todos`
 
-Put our listItems map in the render method as we did before:
-
-![](https://i.imgur.com/g7C2MVS.png)
-
-Change our listItems to operate on the state instead of the props:
+* Put our listItems map in the render method, but instead of mapping the props, map the state:
 
 ```javascript
-const listItems = this.state.todosArray.map(item => <li>{item}</li>)
+const listItems = this.state.todos.map(item => <li>{item}</li>)
 ```
 
 And render the listItems.
 
-![](https://i.imgur.com/NCkTuyr.png)
+![](https://i.imgur.com/SQ1YyaY.png)
 
 Now, if we were to change the state of our array, those changes will be tracked and rendered.
 
@@ -753,38 +832,58 @@ Now, if we were to change the state of our array, those changes will be tracked 
 
 So far we have 
 
-* two components, **App** and **List**
+* two components, **App** and **List**, and extra component, **Numbers**.
 * **List** is a child component of **App**
-* a todosArray in the parent component
-* the child component receiving the todos array as **props**
-* the child component with a **state** taken from the incoming props
+* an array todos in the parent  **App** component
+* the child **List** component receiving the todos array as **props**
+* the child **List** component with **state** taken from the incoming props. We copied the props to the state.
 
-What we want now is some interactivity.
+What we want now is some interactivity so that when we change the state, the page will magically update with those changes.
 
 <br>
 <hr>
 
 # Event listeners
 
-To change the state, we'll click on a CLEAR button that will empty our `this.state.todosArray` in the **List** component.
+To change the state, we'll click on a CLEAR button that will empty our `todos` array in the **List** component. If the data changes, we want the page to automatically update to reflect that change (we will want the changes to re-render).
 
-Event listeners are written **inline** and reference methods within the class.
+Event listeners are written **inline** within JSX, and reference methods within the containing class.
 
-They are similar to an Angular `ng-click`.
-
-You add an `onClick` attribute, and it will run a function.
+They are similar to an Angular `ng-click`. Instead, you add an `onClick` attribute, and like Angular it will run a function.
 
 
 * Add a button to the **List** component. Remember to wrap the whole shebang in a parent div.
 
-```jsx
-<button onClick={}>CLEAR</button>
+![](https://i.imgur.com/gWXtnNT.png)
+
+
+* Add a method within the component that will handle our click functionality.
+
+```javascript
+handleClick() {
+  console.log('clicked');
+}
 ```
 
-![](https://i.imgur.com/Vbaddi7.png)
+![](https://i.imgur.com/eyKO9wU.png)
+
+On click, we want to run that method.
 
 
-On click, we want to run a method. Add a method to the class:
+
+* We will want this method to change the data (set it to null)
+
+```javaScript
+const handleClick = () => {
+	listItems = null
+}
+```
+
+```html
+<button onClick={ handleClick }>CLEAR</button>
+```
+
+* Add a method to the class that handles the click:
 
 ```javascript
 handleClick() {
@@ -792,24 +891,39 @@ handleClick() {
 }
 ```
 
-![](https://i.imgur.com/9zpf7Fw.png)
-
-
 Add our reference to the event handler: 
 
 ```javascript
-<button onClick={ this.handleClick.bind(this) }>CLEAR</button>
+<button onClick={ this.handleClick }>CLEAR</button>
 ```
 
-![](https://i.imgur.com/yDOjBSv.png)
+![](https://i.imgur.com/ReAWCAO.png)
 
-**Note:** Note that we have to bind **this** to the listener. This is because ES6 classes don't bind methods by default. There are a couple of other ways we can fix this lack of binding, either by passing an anonymous arrow function:
+<br>
+
+## Binding event methods
+
+**Note:** Note that we have to bind **this** to the listener. This is because ES6 classes don't bind methods by default. 
+
+![](https://i.imgur.com/ZDloD7M.png)
+
+We will get `null` in the browser.
+
+There are a few ways we can fix this lack of binding, either by passing an anonymous arrow function:
+
+**This way recommended for simplicity:**
+
+```javascript
+<button onClick={ this.handleClick.bind(this) }>Clear</button>
+```
+
+Another way (inefficient) that will come in useful another time:
 
 ```javascript
 onClick={ () => this.handleClick() }
 ```
 
-Or by declaring the binding in the constructor:
+Another way (cumbersome) declaring the binding in the constructor:
 
 ```javascript
 constructor() {
@@ -817,6 +931,8 @@ constructor() {
   this.handleClick = this.handleClick.bind(this)
 }
 ```
+
+Now `this` is the **List** component.
 
 <br>
 
@@ -829,15 +945,19 @@ In our `handleClick` method, we use `setState` to set the state of our data:
 ```javascript
   handleClick() {
     this.setState({
-      todosArray: []
+      todos: []
     })
   }
 ```
 
-![](https://i.imgur.com/PWuCubh.png)
+![](https://i.imgur.com/WE0QNsD.png)
 
 
-When the button is clicked, it will change the **state** of our todosArray. This state change will immediately register in the DOM.
+When the button is clicked, it will change the **state** of our todosArray. 
+	
+* When the state of the data changes, it triggers the **render** method. The render method triggers the task of Reconciliation, which diffs the old tree with the new tree.
+
+This state change will immediately register in the DOM.
 
 Note that we did not want to try to change the **props**. The **props** are immutable data coming in. What did is set the _initial state_ to the incoming props, and then changed the **state** instead, leaving the props untouched.
 
@@ -853,44 +973,52 @@ We also did not directly alter `this.state`.
 
 * **state** is internal to a component. It's a private **mutable** condition managed within a single component.
 
-* **props** is not internal to a component. It's a public **immutable** affliction that can spread through out the populace of components.
+* **props** are not internal to a component. They are shared public **immutable** data that can spread through out the populace of components.
 
 * A child component can set its **state** to the incoming **props** (we have seen)
 
-* All data is passed as props. A parent component can have a **state** that it passes to a child as **props**.
+Further ramifications: 
+
+* All data is passed as props. A parent component can have a **state** that it passes to a child as **props** too.
 
 * If a parent component's **state** changes, the **props** that it sends will also change.
 
-* Methods can be passed as **props**. A parent can pass an event handler as props to a child. Therefore, a child component can trigger a method that belongs to a parent, and update the state of the parent ("data flows down, actions flow up"). 
+* Methods can be passed as **props**. A parent can pass an event handler method as props to a child. Therefore, a child component can trigger a method in a parent, and update the state of the parent ("data flows down, actions flow up"). 
 
 <br>
 <hr>
 
 # Update the UI state
 
+**data state vs UI state**
+
 What if we wanted to operate on a _single list item_ rather than the entire list?
 
 Let's say, when we click on a list item, we add a strikethrough to that item, and only that item.
 
-If we wanted to set state on individual list items, it would make sense for those list items to be _their own component_ with their own internal state. 
-
-But, a rule of thumb is that you want to have as few **stateful** components as possible, because changing state, and therefore calling render, and therefore triggering Reconciliation is expensive.
+A rule of thumb is that you want to have as few **stateful** components as possible, because changing state, and therefore calling render, and therefore triggering Reconciliation is expensive.
 
 You want your components to be **stateless** where possible. **stateless functional components**. 
 
-We don't need to change the data state to display a line-through on a list item. Rather we can just change the UI state. So, we don't have to make an entirely new component with its own data state.
+We don't need to change the data state to display a line-through on a list item. Rather we can just change the UI. So, we don't have to make an entirely new component with its own data state.
 
-We can just set an event listener on each `<li>` element that targets the `<li>`.
+If we wanted to set state on individual list items, it would make sense for those list items to be _their own components_ with their own internal states. 
+
+But, we can just set an event listener on each `<li>` element that targets the `<li>` and updates its display on the DOM.
 
 First, add the event listener:
 
-![](https://i.imgur.com/jRc3ZuE.png)
+![](https://i.imgur.com/SiXlVjH.png)
 
 Our event listener will pass the entire click event implicitly to the event handler. We can use this **event** as a param in our handler, even though we didn't explicity pass it. (this is standard JS functionality -- to implicitly pass a DOM event).
 
 Our **event** has a **target**. The target is the thing that was clicked.
 
-Write the event handler just to alter the `.target` of the event:
+Write the event handler just to alter the **target** of the event. Alter the target either with inline styling:
+
+![](https://i.imgur.com/9yAQFoS.png)
+
+Or by adding a class:
 
 ![](https://i.imgur.com/eit57zm.png)
 
@@ -898,7 +1026,7 @@ Write the event handler just to alter the `.target` of the event:
 
 To add a class in JSX, we use camel-case `className`. 
 
-Write in the `strikeout` class to `App.css`:
+Write in the `strikeout` class to `index.css`:
 
 ```css
 .strikeout {
@@ -906,86 +1034,21 @@ Write in the `strikeout` class to `App.css`:
 }
 ```
 
+![](https://i.imgur.com/r71wKQg.png)
+
+Include `index.css` back in to `index.js`
+
+![](https://i.imgur.com/vQdYUHZ.png)
+
+
 ### Conceptual question:
 
-Does our **App** Component need to be a Class? Or can we simplify and make it a **functional component** instead? Remember, functional components are preferred as they are less expensive. 
+* Does our **App** Component need to be a Class?
 
-They key to this answer has to do with **state**.
+* Functional components are preferred as they are less "expensive". What does "expensive" mean?
 
-And why are functional components less expensive?
+<br> 
 
-<br>
-
-# Exercise and practice: Single list item with internal state
-
-If we _did_ want to make each separate list item a Component with internal state.
-
-* Make a new component for a single listItem.
-
-> New file: `SingleListItem.js`
-
-![](https://i.imgur.com/Ann1QG1.png)
-
-* import the component into **List**
-
-![](https://i.imgur.com/WnEQC49.png)
-
-Make it so our repeat template map uses the new **SingleListItem** component and passes in the props:
-
-```javascript
-const listItems = this.state.todosArray.map(item => <SingleListItem item={item} />)
-```
-
-![](https://i.imgur.com/ooqlI0t.png)
-
-<br>
-
-> File: **SingleListItem.js**
-
-### render the incoming item prop in the template
-
-![](https://i.imgur.com/XOqaBvn.png)
-
-### set the state for our single list item
-
-For our **SingleListItem** component, set state for a `completed` boolean.
-
-![](https://i.imgur.com/kVQ1hFv.png)
-
-Note that we are making a brand new piece of data for state, **completed**. We are not using props within our state, so we didn't need to use props as a parameter in our constructor.
-
-Add in a handler for the click that changes the state:
-
-![](https://i.imgur.com/uuYmz9M.png)
-
-<br>
-
-# Templating: conditional rendering
-
-Depending on the state, render either a crossed out item or a regular one.
-
-In Angular we would use `ng-if` to decide what to display. In React, it's all JavaScript, so we will use an if statement.
-
-![](https://i.imgur.com/yRM45F1.png)
-
-
-
-### refactor
-
-For the conditional statement, alternatively, use a **ternary** operator:
-
-```javascript
-className={ this.state.completed ? 'strikeout' : '' })
-```
-
-![](https://i.imgur.com/kilDKuM.png)
-
-Completed **SingleListItem** component
-
-![](https://i.imgur.com/WkDWGJu.png)
-
-<br>
-<hr>
 
 # NEW APP!
 
