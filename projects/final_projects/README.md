@@ -18,7 +18,7 @@ Create a site that shows off your work
 - Suggested to be created with HTML, CSS, and Javascript
 - No templates are permitted. Frameworks like Bootstrap, Materialize, Bourbon, etc. are okay, but templates like WordPress, Hugo, Wix, Weebly, Squarespace etc. are **not** okay. If you aren't sure about it, ask an instructor.
 - Deployed to github pages or hosted somewhere else
-- Contains a list of your current projects
+- Contains a list of your current projects (with links to the live sites)
 - Contains your resume
 - Contains your bio
 - Contains a link to your github profile
@@ -54,7 +54,7 @@ Your final project should be an app that
 <hr>
 
 ## Project due date
-**Wednesday, Wednesday 27**<br>
+**Wednesday, September 27**<br>
 Submit an issue (as you normally do for homework) with links to your repos AND links to your live sites. You will be presenting your projects in front of the class. The title for your issue should be `Your Name - Final Projects`
 
 ## Attendance
@@ -84,7 +84,7 @@ _Your instructor will contact you to setup a meeting time_
 **Thursday, September 14**
 - You will have a 15 minute meeting with an instructor to get your project approved.
 
-**Thursday, May 25 through Friday, June 2**<br>
+**Friday, September 15 through Monday, September 25**<br>
 
 - There will be optional topics taught during some of the remaining mornings (schedule to be announced).
 
