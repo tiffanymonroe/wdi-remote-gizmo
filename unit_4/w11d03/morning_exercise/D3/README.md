@@ -293,7 +293,7 @@ Make a fetch request to get the JSON.
 
 Instead of a bar graph, create a scatter plot:
 
-![Star Wars Character Heights Scatter Plot]('https://swapi.co/api/people/1?format=json')
+![Star Wars Character Heights Scatter Plot](https://i.imgur.com/GK6VU3Y.png)
 
 Making x and y axis takes a long while. For now, use `.append("svg:title").text(...)` (replace `...` with actual code`) to get a name of a character on hovering over their dot.   
 
