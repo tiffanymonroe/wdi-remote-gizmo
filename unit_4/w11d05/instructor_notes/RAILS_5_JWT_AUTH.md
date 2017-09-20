@@ -395,6 +395,21 @@ Add in the decode method and send a response with the decoded token stuff:
 
 ![](https://i.imgur.com/LYuxzyU.png)
 
+**NOTE** If you get an error like
+
+```bash
+JWT::IncorrectAlgorithm (An algorithm must be specified):
+  
+app/controllers/application_controller.rb:21:in `decode_token'
+app/controllers/application_controller.rb:8:in `authenticate_token'
+```
+
+You will need to pass a forth argument to the `JWT.decode()` method:
+
+```ruby
+    token = JWT.decode(token_input, ENV["JWT_SECRET"], true, { :algorithm => 'HS256'})
+```
+
 Postman response. The decoded token information looks like this:
 
 ![](https://i.imgur.com/NGXWngZ.png)

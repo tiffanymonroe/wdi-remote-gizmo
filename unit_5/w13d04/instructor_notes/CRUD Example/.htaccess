@@ -1,0 +1,6 @@
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^GET$
+RewriteRule ^coffee$ controllers/coffee.php?action=index
+RewriteRule ^coffee/new$ controllers/coffee.php?action=new
+RewriteCond %{REQUEST_METHOD} ^POST$
+RewriteRule ^coffee$ controllers/coffee.php?action=create
