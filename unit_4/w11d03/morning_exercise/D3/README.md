@@ -287,7 +287,7 @@ But we are out of time! Perhaps you can try to solve it on your own.
 
 ## Bonus Make Your Own Scatter plot
 
-Plans are in the works to buld a new Millinuim Falcon! The old one was great! But had way too much leg room for humans! You are in charge of presenting data on the heights of humans found in Star Wars. This data is available in JSON format at the [swapi.co api]('https://swapi.co/api/people/1?format=json')
+Plans are in the works to buld a new Millinuim Falcon! The old one was great! But had way too much leg room for humans! You are in charge of presenting data on the heights of humans found in Star Wars. This data is available in JSON format at the [swapi api]('https://swapi.co/api/people/1?format=json')
 
 Make a fetch request to get the JSON.
 
@@ -295,6 +295,6 @@ Instead of a bar graph, create a scatter plot:
 
 ![Star Wars Character Heights Scatter Plot](https://i.imgur.com/GK6VU3Y.png)
 
-Making x and y axis takes a long while. For now, use `.append("svg:title").text(...)` (replace `...` with actual code`) to get a name of a character on hovering over their dot.   
+Making x and y axis takes a long while. For now, use `.append("svg:title").text(...)` (replace `...` with actual code) to get a name of a character on hovering over their dot.   
 
 
