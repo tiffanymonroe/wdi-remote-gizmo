@@ -271,7 +271,7 @@ Since our data is no longer a simple array, we have to give the functions access
 
 ![refactored code bar graph](https://i.imgur.com/OFkz8YR.png)
 
-# Adding text
+## Adding text
 
 Our bars are looking really nice! But, they don't really mean anything when you look at them. Which bar belongs to which student?
 
@@ -284,3 +284,17 @@ Inside of our `makeGraph` function let's add some D3
 Nice work! It would be cool to make the names vertical, in case there are more students to be sure their names fit better on the bars...
 
 But we are out of time! Perhaps you can try to solve it on your own.
+
+## Bonus Make Your Own Scatter plot
+
+Plans are in the works to buld a new Millinuim Falcon! The old one was great! But had way too much leg room for humans! You are in charge of presenting data on the heights of humans found in Star Wars. This data is available in JSON format at the [swapi.co api]('https://swapi.co/api/people/1?format=json')
+
+Make a fetch request to get the JSON.
+
+Instead of a bar graph, create a scatter plot:
+
+!(Star Wars Character Heights Scatter Plot)['https://swapi.co/api/people/1?format=json']
+
+Making x and y axis takes a long while. For now, use `.append("svg:title").text(...)` (replace `...` with actual code`) to get a name of a character on hovering over their dot.   
+
+
