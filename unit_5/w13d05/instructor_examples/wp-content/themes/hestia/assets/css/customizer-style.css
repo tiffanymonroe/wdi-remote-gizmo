@@ -1,0 +1,29 @@
+.accordion-section-title .button {
+	font-weight: 400;
+}
+
+.hestia-notice {
+	position: relative;
+}
+
+#sub-accordion-section-sidebar-widgets-sidebar-top-bar .customize-control-radio-image label {
+	max-width: 50%;
+}
+
+#accordion-section-hestia_clients_bar:after,
+#accordion-section-hestia_ribbon:after {
+	position: absolute;
+	z-index: 10;
+	right: 50px;
+	padding: 1px 7px 2px;
+	border: 1px solid #bbb;
+	border-radius: 3px;
+	color: #bbb;
+	font-size: 11px;
+	text-transform: uppercase;
+	content: "new";
+	-webkit-transform: translateY(-34px);
+	-ms-transform: translateY(-34px);
+	transform: translateY(-34px);
+	pointer-events: none;
+}
