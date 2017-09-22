@@ -9,12 +9,18 @@
 			</h2>
 			<small><?php the_author(); ?></small>
 			<p><?php the_content(); ?></p>
-			<section>!
-				<?php
-					if ( comments_open() || get_comments_number() ) :
-						comments_template();
-					endif;
-				?>!
+			<section>
+				<?php if ( comments_open() || get_comments_number() ): $comments = get_comments();?>
+					<ul>
+						<?php foreach ($comments as $comment): ?>
+							<?php if($comment->comment_post_ID == get_the_id()): ?>
+								<li>
+									<?=$comment->comment_author;?> says: <?=$comment->comment_content;?>
+								</li>
+							<?php endif; ?>
+						<?php endforeach; ?>
+					</ul>
+				<?php endif; ?>
 			</section>
 			<section>
 				<?php comment_form(); ?>
