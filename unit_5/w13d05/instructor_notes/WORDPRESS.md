@@ -180,3 +180,21 @@ Functions that start with `the_` can usually be prepended with or replaced by `g
 	- display permalink for the article
 1. `get_template_part()`
 	- use a sub template for some chunk of data
+
+Basic comment listing:
+
+```php
+<section>
+	<?php if ( comments_open() || get_comments_number() ): $comments = get_comments();?>
+		<ul>
+			<?php foreach ($comments as $comment): ?>
+				<?php if($comment->comment_post_ID == get_the_id()): ?>
+					<li>
+						<?=$comment->comment_author;?> says: <?=$comment->comment_content;?>
+					</li>
+				<?php endif; ?>
+			<?php endforeach; ?>
+		</ul>
+	<?php endif; ?>
+</section>
+```
