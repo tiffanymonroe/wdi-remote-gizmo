@@ -33,7 +33,7 @@ class Letter = {
   }
 }
 
-class Word = {
+c Word = {
   letters: [],
   isFound(){},
   test(letter){
