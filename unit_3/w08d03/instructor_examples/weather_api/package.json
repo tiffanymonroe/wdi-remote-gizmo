@@ -16,7 +16,7 @@
     "express": "^4.15.3",
     "express-session": "^1.15.5",
     "method-override": "^2.3.9",
-    "mongoose": "^4.11.3",
+    "mongoose": "^5.7.5",
     "request": "^2.81.0",
     "twit": "^2.2.9"
   }
