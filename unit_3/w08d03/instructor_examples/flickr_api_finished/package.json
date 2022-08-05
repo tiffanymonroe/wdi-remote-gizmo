@@ -17,7 +17,7 @@
     "express-session": "^1.15.5",
     "flickr-sdk": "^2.1.0",
     "method-override": "^2.3.9",
-    "mongoose": "^4.11.3",
+    "mongoose": "^5.7.5",
     "node-instagram": "^3.0.0",
     "twit": "^2.2.9"
   }
